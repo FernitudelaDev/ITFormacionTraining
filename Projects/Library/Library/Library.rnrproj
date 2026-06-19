@@ -15,10 +15,11 @@
     <ProjectGuid>{8ba7e476-089c-455a-8113-93d0d5298b28}</ProjectGuid>
     <Name>Library</Name>
     <RootNamespace>Library</RootNamespace>
+    <StartupType>Class</StartupType>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|AnyCPU'">
     <Configuration>Debug</Configuration>
-    <DBSyncInBuild>True</DBSyncInBuild>
+    <DBSyncInBuild>False</DBSyncInBuild>
     <GenerateFormAdaptors>False</GenerateFormAdaptors>
     <Company>
     </Company>
@@ -31,6 +32,67 @@
     <DebugSymbols>true</DebugSymbols>
     <EnableUnmanagedDebugging>false</EnableUnmanagedDebugging>
   </PropertyGroup>
+  <ItemGroup>
+    <Folder Include="Display Menu Items\" />
+    <Folder Include="EDT Strings\" />
+    <Folder Include="Forms\" />
+    <Folder Include="Label Files\" />
+    <Folder Include="Menu Extensions\" />
+    <Folder Include="Menus\" />
+    <Folder Include="Tables\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="AxEdt\AIBId">
+      <SubType>Content</SubType>
+      <Name>AIBId</Name>
+      <Link>EDT Strings\AIBId</Link>
+    </Content>
+    <Content Include="AxForm\AIBBook">
+      <SubType>Content</SubType>
+      <Name>AIBBook</Name>
+      <Link>Forms\AIBBook</Link>
+    </Content>
+    <Content Include="AxLabelFile\ITFormacion_en-US">
+      <SubType>Content</SubType>
+      <Name>ITFormacion_en-US</Name>
+      <Link>Label Files\ITFormacion_en-US</Link>
+    </Content>
+    <Content Include="AxLabelFile\ITFormacion_es-ES">
+      <SubType>Content</SubType>
+      <Name>ITFormacion_es-ES</Name>
+      <Link>Label Files\ITFormacion_es-ES</Link>
+    </Content>
+    <Content Include="AxMenuExtension\MainMenu.ITFormacion">
+      <SubType>Content</SubType>
+      <Name>MainMenu.ITFormacion</Name>
+      <Link>Menu Extensions\MainMenu.ITFormacion</Link>
+    </Content>
+    <Content Include="AxMenuItemDisplay\AIBBook">
+      <SubType>Content</SubType>
+      <Name>AIBBook</Name>
+      <Link>Display Menu Items\AIBBook</Link>
+    </Content>
+    <Content Include="AxMenu\AIBLibrary">
+      <SubType>Content</SubType>
+      <Name>AIBLibrary</Name>
+      <Link>Menus\AIBLibrary</Link>
+    </Content>
+    <Content Include="AxTable\AIBBookTable">
+      <SubType>Content</SubType>
+      <Name>AIBBookTable</Name>
+      <Link>Tables\AIBBookTable</Link>
+    </Content>
+    <Content Include="ITFormacion.en-US.label.txt">
+      <SubType>Content</SubType>
+      <Name>ITFormacion.en-US.label.txt</Name>
+      <DependentUpon>AxLabelFile\ITFormacion_en-US</DependentUpon>
+    </Content>
+    <Content Include="ITFormacion.es-ES.label.txt">
+      <SubType>Content</SubType>
+      <Name>ITFormacion.es-ES.label.txt</Name>
+      <DependentUpon>AxLabelFile\ITFormacion_es-ES</DependentUpon>
+    </Content>
+  </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.Common.targets" />
   <Import Project="$(BuildTasksDirectory)\Microsoft.Dynamics.Framework.Tools.BuildTasks.17.0.targets" />
 </Project>
