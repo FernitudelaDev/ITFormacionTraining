@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Diagnostics
+  GenerationTime="2026-06-19T11:33:18.929784+00:00">
+  <Items>
+    <Diagnostic>
+      <DiagnosticType>VisualStudioIntegration</DiagnosticType>
+      <Severity>Informational</Severity>
+      <Path>C:\AOSService\PackagesLocalDirectory\Bin\labelc.exe</Path>
+      <Moniker>C:\AOSService\PackagesLocalDirectory\Bin\labelc.exe -metadata="C:\AOSService\PackagesLocalDirectory" -output="C:\AOSService\PackagesLocalDirectory\ITFormacion\Resources" -modelmodule="ITFormacion" </Moniker>
+      <Message>C:\AOSService\PackagesLocalDirectory\Bin\labelc.exe -metadata="C:\AOSService\PackagesLocalDirectory" -output="C:\AOSService\PackagesLocalDirectory\ITFormacion\Resources" -modelmodule="ITFormacion" </Message>
+    </Diagnostic>
+    <Diagnostic>
+      <DiagnosticType>Unspecified</DiagnosticType>
+      <Severity>Informational</Severity>
+      <Path>labelc.exe</Path>
+      <Moniker>Starting label compilation...</Moniker>
+      <Message>Starting label compilation...</Message>
+    </Diagnostic>
+    <Diagnostic>
+      <DiagnosticType>Unspecified</DiagnosticType>
+      <Severity>Informational</Severity>
+      <Path>labelc.exe</Path>
+      <Moniker>- Module name    </Moniker>
+      <Message>ITFormacion</Message>
+    </Diagnostic>
+    <Diagnostic>
+      <DiagnosticType>Unspecified</DiagnosticType>
+      <Severity>Informational</Severity>
+      <Path>labelc.exe</Path>
+      <Moniker>- Metadata path  </Moniker>
+      <Message>C:\AOSService\PackagesLocalDirectory\</Message>
+    </Diagnostic>
+    <Diagnostic>
+      <DiagnosticType>Unspecified</DiagnosticType>
+      <Severity>Informational</Severity>
+      <Path>labelc.exe</Path>
+      <Moniker>- Output path    </Moniker>
+      <Message>C:\AOSService\PackagesLocalDirectory\ITFormacion\Resources\</Message>
+    </Diagnostic>
+    <Diagnostic>
+      <DiagnosticType>Unspecified</DiagnosticType>
+      <Severity>Informational</Severity>
+      <Path>labelc.exe</Path>
+      <Moniker>- Maximum DoP    </Moniker>
+      <Message>0 (Logical Processors: 10)</Message>
+    </Diagnostic>
+    <Diagnostic>
+      <DiagnosticType>Unspecified</DiagnosticType>
+      <Severity>Informational</Severity>
+      <Path>labelc.exe</Path>
+      <Moniker>Compiling Primary Resource file for ITFormacion</Moniker>
+      <Message>Compiling Primary Resource file for ITFormacion</Message>
+    </Diagnostic>
+    <Diagnostic>
+      <DiagnosticType>Unspecified</DiagnosticType>
+      <Severity>Informational</Severity>
+      <Path>labelc.exe</Path>
+      <Moniker>Generating Primary resource assembly for ITFormacion</Moniker>
+      <Message>Generating Primary resource assembly for ITFormacion</Message>
+    </Diagnostic>
+    <Diagnostic>
+      <DiagnosticType>Unspecified</DiagnosticType>
+      <Severity>Informational</Severity>
+      <Path>labelc.exe</Path>
+      <Moniker>Compiling label file ITFormacion for language en-US</Moniker>
+      <Message>Compiling label file ITFormacion for language en-US</Message>
+    </Diagnostic>
+    <Diagnostic>
+      <DiagnosticType>Unspecified</DiagnosticType>
+      <Severity>Informational</Severity>
+      <Path>labelc.exe</Path>
+      <Moniker>Compiling label file ITFormacion for language es-ES</Moniker>
+      <Message>Compiling label file ITFormacion for language es-ES</Message>
+    </Diagnostic>
+    <Diagnostic>
+      <DiagnosticType>Unspecified</DiagnosticType>
+      <Severity>Informational</Severity>
+      <Path>labelc.exe</Path>
+      <Moniker>Generating satellite resource assembly for label file ITFormacion, language en-US</Moniker>
+      <Message>Generating satellite resource assembly for label file ITFormacion, language en-US</Message>
+    </Diagnostic>
+    <Diagnostic>
+      <DiagnosticType>Unspecified</DiagnosticType>
+      <Severity>Informational</Severity>
+      <Path>labelc.exe</Path>
+      <Moniker>Generating satellite resource assembly for label file ITFormacion, language es-ES</Moniker>
+      <Message>Generating satellite resource assembly for label file ITFormacion, language es-ES</Message>
+    </Diagnostic>
+    <Diagnostic>
+      <DiagnosticType>Unspecified</DiagnosticType>
+      <Severity>Informational</Severity>
+      <Path>labelc.exe</Path>
+      <Moniker>Done compiling 2 label files!</Moniker>
+      <Message>Done compiling 2 label files!</Message>
+    </Diagnostic>
+    <Diagnostic>
+      <DiagnosticType>Unspecified</DiagnosticType>
+      <Severity>Informational</Severity>
+      <Path>labelc.exe</Path>
+      <Moniker>Model store query time 00:00:00.6847587.</Moniker>
+      <Message>Model store query time 00:00:00.6847587.</Message>
+    </Diagnostic>
+    <Diagnostic>
+      <DiagnosticType>Unspecified</DiagnosticType>
+      <Severity>Informational</Severity>
+      <Path>labelc.exe</Path>
+      <Moniker>Label compilation time 00:00:00.6037434.</Moniker>
+      <Message>Label compilation time 00:00:00.6037434.</Message>
+    </Diagnostic>
+    <Diagnostic>
+      <DiagnosticType>Unspecified</DiagnosticType>
+      <Severity>Informational</Severity>
+      <Path>labelc.exe</Path>
+      <Moniker>Completed label compilation in 1 seconds with exit code 0.</Moniker>
+      <Message>Completed label compilation in 1 seconds with exit code 0.</Message>
+    </Diagnostic>
+  </Items>
+  <Aliases />
+</Diagnostics>

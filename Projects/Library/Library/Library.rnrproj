@@ -31,6 +31,67 @@
     <DebugSymbols>true</DebugSymbols>
     <EnableUnmanagedDebugging>false</EnableUnmanagedDebugging>
   </PropertyGroup>
+  <ItemGroup>
+    <Folder Include="Display Menu Items\" />
+    <Folder Include="EDT Strings\" />
+    <Folder Include="Forms\" />
+    <Folder Include="Label Files\" />
+    <Folder Include="Menu Extensions\" />
+    <Folder Include="Menus\" />
+    <Folder Include="Tables\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="AxEdt\RRBId">
+      <SubType>Content</SubType>
+      <Name>RRBId</Name>
+      <Link>EDT Strings\RRBId</Link>
+    </Content>
+    <Content Include="AxForm\RRBBook">
+      <SubType>Content</SubType>
+      <Name>RRBBook</Name>
+      <Link>Forms\RRBBook</Link>
+    </Content>
+    <Content Include="AxLabelFile\ITFormacion_en-US">
+      <SubType>Content</SubType>
+      <Name>ITFormacion_en-US</Name>
+      <Link>Label Files\ITFormacion_en-US</Link>
+    </Content>
+    <Content Include="AxLabelFile\ITFormacion_es-ES">
+      <SubType>Content</SubType>
+      <Name>ITFormacion_es-ES</Name>
+      <Link>Label Files\ITFormacion_es-ES</Link>
+    </Content>
+    <Content Include="AxMenuExtension\MainMenu.ITFormacion">
+      <SubType>Content</SubType>
+      <Name>MainMenu.ITFormacion</Name>
+      <Link>Menu Extensions\MainMenu.ITFormacion</Link>
+    </Content>
+    <Content Include="AxMenuItemDisplay\RRBBook">
+      <SubType>Content</SubType>
+      <Name>RRBBook</Name>
+      <Link>Display Menu Items\RRBBook</Link>
+    </Content>
+    <Content Include="AxMenu\RRBLibrary">
+      <SubType>Content</SubType>
+      <Name>RRBLibrary</Name>
+      <Link>Menus\RRBLibrary</Link>
+    </Content>
+    <Content Include="AxTable\RRBBookTable">
+      <SubType>Content</SubType>
+      <Name>RRBBookTable</Name>
+      <Link>Tables\RRBBookTable</Link>
+    </Content>
+    <Content Include="ITFormacion.en-US.label.txt">
+      <SubType>Content</SubType>
+      <Name>ITFormacion.en-US.label.txt</Name>
+      <DependentUpon>AxLabelFile\ITFormacion_en-US</DependentUpon>
+    </Content>
+    <Content Include="ITFormacion.es-ES.label.txt">
+      <SubType>Content</SubType>
+      <Name>ITFormacion.es-ES.label.txt</Name>
+      <DependentUpon>AxLabelFile\ITFormacion_es-ES</DependentUpon>
+    </Content>
+  </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.Common.targets" />
   <Import Project="$(BuildTasksDirectory)\Microsoft.Dynamics.Framework.Tools.BuildTasks.17.0.targets" />
 </Project>
