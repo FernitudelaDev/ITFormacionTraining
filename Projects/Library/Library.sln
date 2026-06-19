@@ -1,0 +1,22 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.13.36105.23 d17.13
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FC65038C-1B2F-41E1-A629-BED71D161FFF}") = "Library (VAR) [ITFormacion]", "Library\Library.rnrproj", "{8BA7E476-089C-455A-8113-93D0D5298B28}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{8BA7E476-089C-455A-8113-93D0D5298B28}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8BA7E476-089C-455A-8113-93D0D5298B28}.Debug|Any CPU.Build.0 = Debug|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {503579A1-0A22-4BC9-A8F7-3FCDCBEF1D1C}
+	EndGlobalSection
+EndGlobal
