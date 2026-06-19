@@ -31,6 +31,87 @@
     <DebugSymbols>true</DebugSymbols>
     <EnableUnmanagedDebugging>false</EnableUnmanagedDebugging>
   </PropertyGroup>
+  <ItemGroup>
+    <Folder Include="Display Menu Items\" />
+    <Folder Include="Extended Data Types\" />
+    <Folder Include="Forms\" />
+    <Folder Include="Label Files\" />
+    <Folder Include="Menu Extensions\" />
+    <Folder Include="Menus\" />
+    <Folder Include="Tables\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="ACItFormacionLabels.en-US.label.txt">
+      <SubType>Content</SubType>
+      <Name>ACItFormacionLabels.en-US.label.txt</Name>
+      <DependentUpon>AxLabelFile\ACItFormacionLabels_en-US</DependentUpon>
+    </Content>
+    <Content Include="ACItFormacionLabels.es-ES.label.txt">
+      <SubType>Content</SubType>
+      <Name>ACItFormacionLabels.es-ES.label.txt</Name>
+      <DependentUpon>AxLabelFile\ACItFormacionLabels_es-ES</DependentUpon>
+    </Content>
+    <Content Include="AxEdt\ACId">
+      <SubType>Content</SubType>
+      <Name>ACId</Name>
+      <Link>Extended Data Types\ACId</Link>
+    </Content>
+    <Content Include="AxForm\ACBook">
+      <SubType>Content</SubType>
+      <Name>ACBook</Name>
+      <Link>Forms\ACBook</Link>
+    </Content>
+    <Content Include="AxLabelFile\ACItFormacionLabels_en-US">
+      <SubType>Content</SubType>
+      <Name>ACItFormacionLabels_en-US</Name>
+      <Link>Label Files\ACItFormacionLabels_en-US</Link>
+    </Content>
+    <Content Include="AxLabelFile\ACItFormacionLabels_es-ES">
+      <SubType>Content</SubType>
+      <Name>ACItFormacionLabels_es-ES</Name>
+      <Link>Label Files\ACItFormacionLabels_es-ES</Link>
+    </Content>
+    <Content Include="AxLabelFile\Id_en-US">
+      <SubType>Content</SubType>
+      <Name>Id_en-US</Name>
+      <Link>Label Files\Id_en-US</Link>
+    </Content>
+    <Content Include="AxLabelFile\Id_es">
+      <SubType>Content</SubType>
+      <Name>Id_es</Name>
+      <Link>Label Files\Id_es</Link>
+    </Content>
+    <Content Include="AxMenuExtension\MainMenu.ITFormacion">
+      <SubType>Content</SubType>
+      <Name>MainMenu.ITFormacion</Name>
+      <Link>Menu Extensions\MainMenu.ITFormacion</Link>
+    </Content>
+    <Content Include="AxMenuItemDisplay\ACBook">
+      <SubType>Content</SubType>
+      <Name>ACBook</Name>
+      <Link>Display Menu Items\ACBook</Link>
+    </Content>
+    <Content Include="AxMenu\ACLibrary">
+      <SubType>Content</SubType>
+      <Name>ACLibrary</Name>
+      <Link>Menus\ACLibrary</Link>
+    </Content>
+    <Content Include="AxTable\ACBookTable">
+      <SubType>Content</SubType>
+      <Name>ACBookTable</Name>
+      <Link>Tables\ACBookTable</Link>
+    </Content>
+    <Content Include="Id.en-US.label.txt">
+      <SubType>Content</SubType>
+      <Name>Id.en-US.label.txt</Name>
+      <DependentUpon>AxLabelFile\Id_en-US</DependentUpon>
+    </Content>
+    <Content Include="Id.es.label.txt">
+      <SubType>Content</SubType>
+      <Name>Id.es.label.txt</Name>
+      <DependentUpon>AxLabelFile\Id_es</DependentUpon>
+    </Content>
+  </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.Common.targets" />
   <Import Project="$(BuildTasksDirectory)\Microsoft.Dynamics.Framework.Tools.BuildTasks.17.0.targets" />
 </Project>

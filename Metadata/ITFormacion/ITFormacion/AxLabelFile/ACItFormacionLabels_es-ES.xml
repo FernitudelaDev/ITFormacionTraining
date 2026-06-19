@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<AxLabelFile xmlns:i="http://www.w3.org/2001/XMLSchema-instance">
+	<Name>ACItFormacionLabels_es-ES</Name>
+	<LabelContentFileName>ACItFormacionLabels.es-ES.label.txt</LabelContentFileName>
+	<LabelFileId>ACItFormacionLabels</LabelFileId>
+	<Language>es-ES</Language>
+	<RelativeUriInModelStore>ITFormacion\ITFormacion\AxLabelFile\LabelResources\es-ES\ACItFormacionLabels.es-ES.label.txt</RelativeUriInModelStore>
+</AxLabelFile>

@@ -1,0 +1,6 @@
+﻿Books=Libros
+BookTable=Libro
+Library=Biblioteca
+Master=Master
+NewLabel0=Label files created on 06/19/2026 09:49:02 for label file Id ACItFormacionLabels and language es-ES
+ ;Label file comment - see above label
