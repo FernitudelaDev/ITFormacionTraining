@@ -5,3 +5,6 @@
 /.vs
 /Projects/Library/.vs/Library/v17
 /Projects/Library/Library/obj/Debug
+/Metadata/ITFormacion/bin
+/Metadata/ITFormacion/BuildProjectResult.xml
+/Metadata/ITFormacion/BuildProjectResult.log
