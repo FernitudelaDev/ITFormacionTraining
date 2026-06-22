@@ -13,7 +13,51 @@ public class SMHAuthor extends FormRun
 ]]></Source>
 			</Method>
 		</Methods>
-		<DataSources xmlns="" />
+		<DataSources xmlns="">
+			<DataSource>
+				<Name>SMHAuthorTable</Name>
+				<Methods>
+					<Method>
+						<Name>setDeathDateEditable</Name>
+						<Source><![CDATA[
+        public void setDeathDateEditable(boolean _isEditable)
+        {
+            // Navegando desde el DataSource
+            // FormControl deathDateControl = this.formRun().design().controlName(formControlStr(SMHAuthor, SimpleListGrid_DeathDate));
+
+            // Navegando desde element
+            // FormControl deathDateControl = element.design().controlName(formControlStr(SMHAuthor, SimpleListGrid_DeathDate));
+
+            // deathDateControl.allowEdit(_isEditable);
+
+            SimpleListGrid_DeathDate.allowEdit(_isEditable);
+        }
+
+]]></Source>
+					</Method>
+					<Method>
+						<Name>active</Name>
+						<Source><![CDATA[
+        public int active()
+        {
+            int ret;
+
+            ret = super();
+
+            /// Importante entender el método cursor para extensiones.
+            // SMHAuthorTable author = this.cursor();
+
+            this.setDeathDateEditable(SMHAuthorTable.IsDead == NoYes::Yes);
+
+            return ret;
+        }
+
+]]></Source>
+					</Method>
+				</Methods>
+				<Fields />
+			</DataSource>
+		</DataSources>
 		<DataControls xmlns="" />
 		<Members xmlns="" />
 	</SourceCode>
@@ -53,6 +97,7 @@ public class SMHAuthor extends FormRun
 		</AxFormDataSource>
 	</DataSources>
 	<Design>
+		<Caption xmlns="">@ITFormacion:Author</Caption>
 		<Pattern xmlns="">SimpleList</Pattern>
 		<PatternVersion xmlns="">1.1</PatternVersion>
 		<Style xmlns="">SimpleList</Style>
@@ -120,12 +165,30 @@ public class SMHAuthor extends FormRun
 						<DataSource>SMHAuthorTable</DataSource>
 					</AxFormControl>
 					<AxFormControl xmlns=""
+						i:type="AxFormStringControl">
+						<Name>SimpleListGrid_FirstName</Name>
+						<Type>String</Type>
+						<FormControlExtension
+							i:nil="true" />
+						<DataField>FirstName</DataField>
+						<DataSource>SMHAuthorTable</DataSource>
+					</AxFormControl>
+					<AxFormControl xmlns=""
+						i:type="AxFormStringControl">
+						<Name>SimpleListGrid_LastName</Name>
+						<Type>String</Type>
+						<FormControlExtension
+							i:nil="true" />
+						<DataField>LastName</DataField>
+						<DataSource>SMHAuthorTable</DataSource>
+					</AxFormControl>
+					<AxFormControl xmlns=""
 						i:type="AxFormDateControl">
-						<Name>SimpleListGrid_DeathDate</Name>
+						<Name>SimpleListGrid_BirthDate</Name>
 						<Type>Date</Type>
 						<FormControlExtension
 							i:nil="true" />
-						<DataField>DeathDate</DataField>
+						<DataField>BirthDate</DataField>
 						<DataSource>SMHAuthorTable</DataSource>
 					</AxFormControl>
 					<AxFormControl xmlns=""
@@ -139,29 +202,12 @@ public class SMHAuthor extends FormRun
 					</AxFormControl>
 					<AxFormControl xmlns=""
 						i:type="AxFormDateControl">
-						<Name>SimpleListGrid_BirthDate</Name>
+						<Name>SimpleListGrid_DeathDate</Name>
+						<AutoDeclaration>Yes</AutoDeclaration>
 						<Type>Date</Type>
 						<FormControlExtension
 							i:nil="true" />
-						<DataField>BirthDate</DataField>
-						<DataSource>SMHAuthorTable</DataSource>
-					</AxFormControl>
-					<AxFormControl xmlns=""
-						i:type="AxFormStringControl">
-						<Name>SimpleListGrid_LastName</Name>
-						<Type>String</Type>
-						<FormControlExtension
-							i:nil="true" />
-						<DataField>LastName</DataField>
-						<DataSource>SMHAuthorTable</DataSource>
-					</AxFormControl>
-					<AxFormControl xmlns=""
-						i:type="AxFormStringControl">
-						<Name>SimpleListGrid_FirstName</Name>
-						<Type>String</Type>
-						<FormControlExtension
-							i:nil="true" />
-						<DataField>FirstName</DataField>
+						<DataField>DeathDate</DataField>
 						<DataSource>SMHAuthorTable</DataSource>
 					</AxFormControl>
 				</Controls>

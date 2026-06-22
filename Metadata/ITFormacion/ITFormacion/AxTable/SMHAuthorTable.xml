@@ -5,9 +5,52 @@
 		<Declaration><![CDATA[
 public class SMHAuthorTable extends common
 {
+   
 }
 ]]></Declaration>
-		<Methods />
+		<Methods>
+			<Method>
+				<Name>validateWrite</Name>
+				<Source><![CDATA[
+    public boolean validateWrite()
+    {
+        boolean ret;
+    
+        ret = super();
+
+
+        /*if (ret 
+            && this.DeathDate > dateNull()
+            && this.BirthDate > this.DeathDate)
+        {
+            ret = checkFailed("@ITFormacion:ValidateDeathDateError");
+        }*/
+
+        ret = ret
+                && this.validateBirthAndDeathDate();
+
+        return ret;
+    }
+
+]]></Source>
+			</Method>
+			<Method>
+				<Name>validateBirthAndDeathDate</Name>
+				<Source><![CDATA[
+    public boolean validateBirthAndDeathDate()
+    {
+        if (this.DeathDate > dateNull()
+        && this.BirthDate > this.DeathDate)
+        {
+            return checkFailed("@ITFormacion:ValidateDeathDateError");
+        }
+
+        return true;
+    }
+
+]]></Source>
+			</Method>
+		</Methods>
 	</SourceCode>
 	<FormRef>FTDBook</FormRef>
 	<Label>@ITFormacion:Author</Label>
@@ -52,19 +95,19 @@ public class SMHAuthorTable extends common
 					<DataField>Id</DataField>
 				</AxTableFieldGroupField>
 				<AxTableFieldGroupField>
-					<DataField>DeathDate</DataField>
-				</AxTableFieldGroupField>
-				<AxTableFieldGroupField>
-					<DataField>IsDead</DataField>
-				</AxTableFieldGroupField>
-				<AxTableFieldGroupField>
-					<DataField>BirthDate</DataField>
+					<DataField>FirstName</DataField>
 				</AxTableFieldGroupField>
 				<AxTableFieldGroupField>
 					<DataField>LastName</DataField>
 				</AxTableFieldGroupField>
 				<AxTableFieldGroupField>
-					<DataField>FirstName</DataField>
+					<DataField>BirthDate</DataField>
+				</AxTableFieldGroupField>
+				<AxTableFieldGroupField>
+					<DataField>IsDead</DataField>
+				</AxTableFieldGroupField>
+				<AxTableFieldGroupField>
+					<DataField>DeathDate</DataField>
 				</AxTableFieldGroupField>
 			</Fields>
 		</AxTableFieldGroup>
