@@ -13,3 +13,4 @@ NewLabel0=Label files created on 06/19/2026 09:49:02 for label file Id ACItForma
  ;Label file comment - see above label
 Science=Científica
 Thirller=Suspense
+ValidateDeathDateError=La fecha de muerte no puede ser menor que la fecha de nacimiento

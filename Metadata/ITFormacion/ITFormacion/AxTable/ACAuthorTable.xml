@@ -7,7 +7,45 @@ public class ACAuthorTable extends common
 {
 }
 ]]></Declaration>
-		<Methods />
+		<Methods>
+			<Method>
+				<Name>validateWrite</Name>
+				<Source><![CDATA[
+    /// <summary>
+    ///
+    /// </summary>
+    /// <returns></returns>
+    public boolean validateWrite()
+    {
+        boolean ret;
+    
+        ret = super();
+        
+        ret = ret
+            && this.validateBirthAndDeathDate();
+
+        return ret;
+    }
+
+]]></Source>
+			</Method>
+			<Method>
+				<Name>validateBirthAndDeathDate</Name>
+				<Source><![CDATA[
+    public boolean validateBirthAndDeathDate()
+    {
+        if (this.DeathDate > dateNull()
+            && this.BirthDate > this.DeathDate)
+        {
+            return checkFailed("@ACItFormacionLabels:ValidateDeathDateError");
+        };
+
+        return true;
+    }
+
+]]></Source>
+			</Method>
+		</Methods>
 	</SourceCode>
 	<Label>@ACItFormacionLabels:Author</Label>
 	<SubscriberAccessLevel>
