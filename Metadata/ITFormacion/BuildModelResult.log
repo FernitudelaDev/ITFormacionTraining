@@ -1,0 +1,6 @@
+==================================
+ExternalReference Warning: dynamics://Reference/Microsoft.Dynamics___vices.PricingEngine: Assembly 'Microsoft.Dynamics.Commerce.Runtime.Entities.AttributeBasedPricing, Version=7.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35' failed to load because it was not found.
+ExternalReference Warning: dynamics://Reference/Azure.Core: Assembly 'System.Memory.Data, Version=1.0.2.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51' failed to load because it was not found.
+==================================
+Errors: 0
+Warnings: 2

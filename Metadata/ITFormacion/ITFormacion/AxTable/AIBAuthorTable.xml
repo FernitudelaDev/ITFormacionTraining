@@ -1,0 +1,203 @@
+<?xml version="1.0" encoding="utf-8"?>
+<AxTable xmlns:i="http://www.w3.org/2001/XMLSchema-instance">
+	<Name>AIBAuthorTable</Name>
+	<SourceCode>
+		<Declaration><![CDATA[
+public class AIBAuthorTable extends common
+{
+}
+]]></Declaration>
+		<Methods>
+			<Method>
+				<Name>validateWrite</Name>
+				<Source><![CDATA[
+    public boolean validateWrite()
+    {
+        boolean ret;
+
+        ret = super();
+
+        if(ret 
+            && this.DeathDate > dateNull()
+            && this.BirthDate > this.DeathDate)
+        {
+            ret = checkFailed('@ITFormacion:ValidateDeathDateError');
+        }
+
+        return ret;
+    }
+
+]]></Source>
+			</Method>
+			<Method>
+				<Name>setDeathDateEditableInForm</Name>
+				<Source><![CDATA[
+    public void setDeathDateEditableInForm()
+    {
+        FormDataSource formDataSource = FormDataUtil::getFormDataSource(this);
+
+        if(formDataSource)
+        {
+            formDataSource.object(fieldNum(AIBAuthorTable, DeathDate)).allowEdit(this.IsDead);
+        }
+
+    }
+
+]]></Source>
+			</Method>
+			<Method>
+				<Name>modifiedIsDead</Name>
+				<Source><![CDATA[
+    public void modifiedIsDead()
+    {
+        if(!this.IsDead)
+        {
+            this.DeathDate = dateNull();
+        }
+
+        this.setDeathDateEditableInForm();
+    }
+
+]]></Source>
+			</Method>
+			<Method>
+				<Name>modifiedField</Name>
+				<Source><![CDATA[
+    public void modifiedField(FieldId _fieldId)
+    {
+        super(_fieldId);
+
+        switch(_fieldId)
+        {
+            case fieldNum(AIBAuthorTable, IsDead):
+                this.modifiedIsDead();
+                break;
+            case fieldNum(AIBAuthorTable, BirthDate):
+                //this.modifiedBirthDate;
+                //break;
+        }
+
+    }
+
+]]></Source>
+			</Method>
+		</Methods>
+	</SourceCode>
+	<FormRef>AIBAuthor</FormRef>
+	<Label>@ITFormacion:AuthorTable</Label>
+	<SubscriberAccessLevel>
+		<Read>Allow</Read>
+	</SubscriberAccessLevel>
+	<TitleField1>FirstName</TitleField1>
+	<TitleField2>LastName</TitleField2>
+	<AllowRowVersionChangeTracking>Yes</AllowRowVersionChangeTracking>
+	<ReplacementKey>AuthorIdx</ReplacementKey>
+	<DeleteActions />
+	<FieldGroups>
+		<AxTableFieldGroup>
+			<Name>AutoReport</Name>
+			<Fields />
+		</AxTableFieldGroup>
+		<AxTableFieldGroup>
+			<Name>AutoLookup</Name>
+			<Fields />
+		</AxTableFieldGroup>
+		<AxTableFieldGroup>
+			<Name>AutoIdentification</Name>
+			<AutoPopulate>Yes</AutoPopulate>
+			<Fields>
+				<AxTableFieldGroupField>
+					<DataField>Id</DataField>
+				</AxTableFieldGroupField>
+			</Fields>
+		</AxTableFieldGroup>
+		<AxTableFieldGroup>
+			<Name>AutoSummary</Name>
+			<Fields />
+		</AxTableFieldGroup>
+		<AxTableFieldGroup>
+			<Name>AutoBrowse</Name>
+			<Fields />
+		</AxTableFieldGroup>
+		<AxTableFieldGroup>
+			<Name>Grid</Name>
+			<Fields>
+				<AxTableFieldGroupField>
+					<DataField>DeathDate</DataField>
+				</AxTableFieldGroupField>
+				<AxTableFieldGroupField>
+					<DataField>IsDead</DataField>
+				</AxTableFieldGroupField>
+				<AxTableFieldGroupField>
+					<DataField>BirthDate</DataField>
+				</AxTableFieldGroupField>
+				<AxTableFieldGroupField>
+					<DataField>LastName</DataField>
+				</AxTableFieldGroupField>
+				<AxTableFieldGroupField>
+					<DataField>FirstName</DataField>
+				</AxTableFieldGroupField>
+				<AxTableFieldGroupField>
+					<DataField>Id</DataField>
+				</AxTableFieldGroupField>
+			</Fields>
+		</AxTableFieldGroup>
+	</FieldGroups>
+	<Fields>
+		<AxTableField xmlns=""
+			i:type="AxTableFieldString">
+			<Name>Id</Name>
+			<AllowEdit>No</AllowEdit>
+			<ExtendedDataType>AIBId</ExtendedDataType>
+			<IgnoreEDTRelation>Yes</IgnoreEDTRelation>
+			<Mandatory>Yes</Mandatory>
+		</AxTableField>
+		<AxTableField xmlns=""
+			i:type="AxTableFieldString">
+			<Name>FirstName</Name>
+			<ExtendedDataType>FirstName</ExtendedDataType>
+			<IgnoreEDTRelation>Yes</IgnoreEDTRelation>
+		</AxTableField>
+		<AxTableField xmlns=""
+			i:type="AxTableFieldString">
+			<Name>LastName</Name>
+			<ExtendedDataType>LastName</ExtendedDataType>
+			<IgnoreEDTRelation>Yes</IgnoreEDTRelation>
+		</AxTableField>
+		<AxTableField xmlns=""
+			i:type="AxTableFieldDate">
+			<Name>BirthDate</Name>
+			<ExtendedDataType>BirthDate</ExtendedDataType>
+			<IgnoreEDTRelation>Yes</IgnoreEDTRelation>
+		</AxTableField>
+		<AxTableField xmlns=""
+			i:type="AxTableFieldEnum">
+			<Name>IsDead</Name>
+			<ExtendedDataType>NoYesId</ExtendedDataType>
+			<IgnoreEDTRelation>Yes</IgnoreEDTRelation>
+			<Label>@ITFormacion:IsDead</Label>
+			<EnumType>NoYes</EnumType>
+		</AxTableField>
+		<AxTableField xmlns=""
+			i:type="AxTableFieldDate">
+			<Name>DeathDate</Name>
+			<ExtendedDataType>AIBDeathDate</ExtendedDataType>
+			<IgnoreEDTRelation>Yes</IgnoreEDTRelation>
+		</AxTableField>
+	</Fields>
+	<FullTextIndexes />
+	<Indexes>
+		<AxTableIndex>
+			<Name>AuthorIdx</Name>
+			<AlternateKey>Yes</AlternateKey>
+			<Fields>
+				<AxTableIndexField>
+					<DataField>Id</DataField>
+				</AxTableIndexField>
+			</Fields>
+		</AxTableIndex>
+	</Indexes>
+	<Mappings />
+	<Relations />
+	<StateMachines />
+</AxTable>

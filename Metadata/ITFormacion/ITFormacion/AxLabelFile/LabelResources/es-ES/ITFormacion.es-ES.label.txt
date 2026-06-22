@@ -1,2 +1,12 @@
-﻿NewLabel0=Label files created on 06/19/2026 09:50:52 for label file Id ITFormacion and language es-ES
+﻿Books=Libros
+BookTable=Libro
+Fantasy=Fantasia
+Genre=Genero
+HistoryNovel=Novela historica
+Id=Id
+Library=Biblioteca
+Master=Master
+NewLabel0=Label files created on 06/19/2026 09:50:52 for label file Id ITFormacion and language es-ES
  ;Label file comment - see above label
+Science=Ciencia
+Thriller=Suspense

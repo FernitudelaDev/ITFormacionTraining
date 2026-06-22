@@ -13,6 +13,11 @@
 					<Name>AIBBook</Name>
 					<MenuItemName>AIBBook</MenuItemName>
 				</AxMenuElement>
+				<AxMenuElement xmlns=""
+					i:type="AxMenuElementMenuItem">
+					<Name>AIBAuthor</Name>
+					<MenuItemName>AIBAuthor</MenuItemName>
+				</AxMenuElement>
 			</Elements>
 		</AxMenuElement>
 	</Elements>

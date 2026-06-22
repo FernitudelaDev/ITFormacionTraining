@@ -131,6 +131,16 @@ public class AIBBook extends FormRun
 								<DataField>Name</DataField>
 								<DataSource>AIBBookTable</DataSource>
 							</AxFormControl>
+							<AxFormControl xmlns=""
+								i:type="AxFormComboBoxControl">
+								<Name>GroupGrid_Genre</Name>
+								<Type>ComboBox</Type>
+								<FormControlExtension
+									i:nil="true" />
+								<DataField>Genre</DataField>
+								<DataSource>AIBBookTable</DataSource>
+								<Items />
+							</AxFormControl>
 						</Controls>
 						<DataGroup>Grid</DataGroup>
 						<DataSource>AIBBookTable</DataSource>

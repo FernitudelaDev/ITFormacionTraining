@@ -33,12 +33,31 @@ public class AIBBookTable extends common
 
 ]]></Source>
 			</Method>
+			<Method>
+				<Name>selectCountByGenre</Name>
+				<Source><![CDATA[
+    public static int selectCountByGenre(AIBGenreEnum _genre)
+    {
+        AIBBookTable bookTable;
+
+        select count(RecId) from bookTable
+            group by Genre
+            where bookTable.Genre == _genre;
+
+        return bookTable.RecId;
+    }
+
+]]></Source>
+			</Method>
 		</Methods>
 	</SourceCode>
+	<FormRef>AIBBook</FormRef>
 	<Label>@ITFormacion:BookTable</Label>
 	<SubscriberAccessLevel>
 		<Read>Allow</Read>
 	</SubscriberAccessLevel>
+	<TitleField1>Id</TitleField1>
+	<TitleField2>Name</TitleField2>
 	<AllowRowVersionChangeTracking>Yes</AllowRowVersionChangeTracking>
 	<ModifiedDateTime>Yes</ModifiedDateTime>
 	<ReplacementKey>BookTableIdx</ReplacementKey>
@@ -78,6 +97,9 @@ public class AIBBookTable extends common
 				<AxTableFieldGroupField>
 					<DataField>Name</DataField>
 				</AxTableFieldGroupField>
+				<AxTableFieldGroupField>
+					<DataField>Genre</DataField>
+				</AxTableFieldGroupField>
 			</Fields>
 		</AxTableFieldGroup>
 	</FieldGroups>
@@ -95,6 +117,11 @@ public class AIBBookTable extends common
 			<Name>Name</Name>
 			<ExtendedDataType>Name</ExtendedDataType>
 			<IgnoreEDTRelation>Yes</IgnoreEDTRelation>
+		</AxTableField>
+		<AxTableField xmlns=""
+			i:type="AxTableFieldEnum">
+			<Name>Genre</Name>
+			<EnumType>AIBGenreEnum</EnumType>
 		</AxTableField>
 	</Fields>
 	<FullTextIndexes />

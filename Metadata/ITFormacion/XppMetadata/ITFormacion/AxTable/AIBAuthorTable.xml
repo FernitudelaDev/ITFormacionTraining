@@ -3,7 +3,7 @@
 	i:type="AxPropertyCollection" xmlns:z="http://schemas.microsoft.com/2003/10/Serialization/">
 	<Methods>
 		<Method>
-			<Name>shouldThrowExceptionOneZeroDelte</Name>
+			<Name>validateWrite</Name>
 			<Visibility>Public</Visibility>
 			<ReturnType>
 				<Tags></Tags>
@@ -12,38 +12,34 @@
 			</ReturnType>
 		</Method>
 		<Method>
-			<Name>findRecId</Name>
-			<IsStatic>true</IsStatic>
+			<Name>setDeathDateEditableInForm</Name>
+			<Visibility>Public</Visibility>
+			<ReturnType>
+				<Tags></Tags>
+				<TypeName></TypeName>
+			</ReturnType>
+		</Method>
+		<Method>
+			<Name>modifiedIsDead</Name>
+			<Visibility>Public</Visibility>
+			<ReturnType>
+				<Tags></Tags>
+				<TypeName></TypeName>
+			</ReturnType>
+		</Method>
+		<Method>
+			<Name>modifiedField</Name>
 			<Visibility>Public</Visibility>
 			<Parameters>
 				<AxMethodParameter>
 					<Tags></Tags>
 					<Type>ExtendedDataType</Type>
-					<TypeName>RecId</TypeName>
-					<Name>_recid</Name>
+					<TypeName>FieldId</TypeName>
+					<Name>_fieldId</Name>
 				</AxMethodParameter>
 			</Parameters>
 			<ReturnType>
 				<Tags></Tags>
-				<Type>Record</Type>
-				<TypeName>AIBBookTable</TypeName>
-			</ReturnType>
-		</Method>
-		<Method>
-			<Name>selectCountByGenre</Name>
-			<IsStatic>true</IsStatic>
-			<Visibility>Public</Visibility>
-			<Parameters>
-				<AxMethodParameter>
-					<Tags></Tags>
-					<Type>Enum</Type>
-					<TypeName>AIBGenreEnum</TypeName>
-					<Name>_genre</Name>
-				</AxMethodParameter>
-			</Parameters>
-			<ReturnType>
-				<Tags></Tags>
-				<Type>Int32</Type>
 				<TypeName></TypeName>
 			</ReturnType>
 		</Method>

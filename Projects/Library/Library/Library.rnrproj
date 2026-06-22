@@ -33,7 +33,10 @@
     <EnableUnmanagedDebugging>false</EnableUnmanagedDebugging>
   </PropertyGroup>
   <ItemGroup>
+    <Folder Include="Base Enums\" />
+    <Folder Include="Classes\" />
     <Folder Include="Display Menu Items\" />
+    <Folder Include="EDT Dates\" />
     <Folder Include="EDT Strings\" />
     <Folder Include="Forms\" />
     <Folder Include="Label Files\" />
@@ -42,10 +45,30 @@
     <Folder Include="Tables\" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="AxClass\AIBRunnableClassExample">
+      <SubType>Content</SubType>
+      <Name>AIBRunnableClassExample</Name>
+      <Link>Classes\AIBRunnableClassExample</Link>
+    </Content>
+    <Content Include="AxEdt\AIBDeathDate">
+      <SubType>Content</SubType>
+      <Name>AIBDeathDate</Name>
+      <Link>EDT Dates\AIBDeathDate</Link>
+    </Content>
     <Content Include="AxEdt\AIBId">
       <SubType>Content</SubType>
       <Name>AIBId</Name>
       <Link>EDT Strings\AIBId</Link>
+    </Content>
+    <Content Include="AxEnum\AIBGenreEnum">
+      <SubType>Content</SubType>
+      <Name>AIBGenreEnum</Name>
+      <Link>Base Enums\AIBGenreEnum</Link>
+    </Content>
+    <Content Include="AxForm\AIBAuthor">
+      <SubType>Content</SubType>
+      <Name>AIBAuthor</Name>
+      <Link>Forms\AIBAuthor</Link>
     </Content>
     <Content Include="AxForm\AIBBook">
       <SubType>Content</SubType>
@@ -67,6 +90,11 @@
       <Name>MainMenu.ITFormacion</Name>
       <Link>Menu Extensions\MainMenu.ITFormacion</Link>
     </Content>
+    <Content Include="AxMenuItemDisplay\AIBAuthor">
+      <SubType>Content</SubType>
+      <Name>AIBAuthor</Name>
+      <Link>Display Menu Items\AIBAuthor</Link>
+    </Content>
     <Content Include="AxMenuItemDisplay\AIBBook">
       <SubType>Content</SubType>
       <Name>AIBBook</Name>
@@ -76,6 +104,11 @@
       <SubType>Content</SubType>
       <Name>AIBLibrary</Name>
       <Link>Menus\AIBLibrary</Link>
+    </Content>
+    <Content Include="AxTable\AIBAuthorTable">
+      <SubType>Content</SubType>
+      <Name>AIBAuthorTable</Name>
+      <Link>Tables\AIBAuthorTable</Link>
     </Content>
     <Content Include="AxTable\AIBBookTable">
       <SubType>Content</SubType>
