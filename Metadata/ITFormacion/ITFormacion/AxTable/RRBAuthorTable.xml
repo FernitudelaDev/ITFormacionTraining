@@ -7,7 +7,103 @@ public class RRBAuthorTable extends common
 {
 }
 ]]></Declaration>
-		<Methods />
+		<Methods>
+			<Method>
+				<Name>Method1</Name>
+				<Source><![CDATA[
+    /// <summary>
+    ///
+    /// </summary>
+    private void Method1()
+    {
+    }
+
+]]></Source>
+			</Method>
+			<Method>
+				<Name>validateWrite</Name>
+				<Source><![CDATA[
+    public boolean validateWrite()
+    {
+        boolean ret;
+    
+        ret = super();
+
+        ret = ret 
+            && this.validateBirthAndDeathDate();
+    
+        return ret;
+    }
+
+]]></Source>
+			</Method>
+			<Method>
+				<Name>validateBirthAndDeathDate</Name>
+				<Source><![CDATA[
+    public boolean validateBirthAndDeathDate()
+    {
+        if(this.DeathDate > dateNull()
+            && this.BirthDate > this.DeathDate)
+        {
+            return checkFailed("@ITFormacion:ValidateDeathDateError");
+        }
+        return true;
+    }
+
+]]></Source>
+			</Method>
+			<Method>
+				<Name>modifiedField</Name>
+				<Source><![CDATA[
+    public void modifiedField(FieldId _fieldId)
+    {
+        super(_fieldId);
+
+        switch(_fieldId)
+        {
+            case fieldNum(RRBAuthorTable, IsDead):
+                this.modifiedIsDate();
+                break;
+            case fieldNum(RRBAuthorTable, BirthDate):
+        }
+
+        
+    }
+
+]]></Source>
+			</Method>
+			<Method>
+				<Name>modifiedIsDate</Name>
+				<Source><![CDATA[
+    public void modifiedIsDate()
+    {
+        if(!this.IsDead)
+        {
+            this.DeathDate = dateNull();
+        }
+
+        this.setDeathDateEditableInForm();        
+    }
+
+]]></Source>
+			</Method>
+			<Method>
+				<Name>setDeathDateEditableInForm</Name>
+				<Source><![CDATA[
+    public void setDeathDateEditableInForm()
+    {
+        FormDataSource formDataSource = FormDataUtil::getFormDataSource(this);
+
+        if(formDataSource)
+        {
+            formDataSource.object(fieldNum(RRBAuthorTable, DeathDate)).allowEdit(this.IsDead);
+
+        }
+    }
+
+]]></Source>
+			</Method>
+		</Methods>
 	</SourceCode>
 	<FormRef>RRBAuthor</FormRef>
 	<Label>@ITFormacion:Author</Label>

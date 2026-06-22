@@ -9,12 +9,47 @@
 [Form]
 public class RRBAuthor extends FormRun
 {
-}
+    //public void setDeathDateEditable(boolean _isEditable)
+    //{
+    //    //navegando desde el datasource
+    //    //FormControl deathDateControl = this.formRun().design().controlName(formControlStr(RRBAuthor, SimpleListGrid_DeathDate));
 
+    //    //yendo desde element
+    //    //FormControl deathDateControl = element.design().controlName(formControlStr(RRBAuthor, SimpleListGrid_DeathDate));
+
+    //    //deathDateControl.allowEdit(_isEditable);
+
+    //    RRBAuthorTable_ds.object(fieldNum(RRBAuthorTable, DeathDate)) .allowEdit(_isEditable);
+    //}
+
+}
 ]]></Source>
 			</Method>
 		</Methods>
-		<DataSources xmlns="" />
+		<DataSources xmlns="">
+			<DataSource>
+				<Name>RRBAuthorTable</Name>
+				<Methods>
+					<Method>
+						<Name>active</Name>
+						<Source><![CDATA[
+        public int active()
+        {
+            int ret;
+        
+            ret = super();
+     
+            RRBAuthorTable.setDeathDateEditableInForm();
+        
+            return ret;
+        }
+
+]]></Source>
+					</Method>
+				</Methods>
+				<Fields />
+			</DataSource>
+		</DataSources>
 		<DataControls xmlns="" />
 		<Members xmlns="" />
 	</SourceCode>
@@ -168,6 +203,7 @@ public class RRBAuthor extends FormRun
 					<AxFormControl xmlns=""
 						i:type="AxFormDateControl">
 						<Name>SimpleListGrid_DeathDate</Name>
+						<AutoDeclaration>Yes</AutoDeclaration>
 						<Type>Date</Type>
 						<FormControlExtension
 							i:nil="true" />
