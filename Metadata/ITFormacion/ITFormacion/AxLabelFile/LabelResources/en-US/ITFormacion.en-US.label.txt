@@ -2,6 +2,7 @@
 Books=Books
 BookTable=Book
 DeathDate=Death date
+DeathDateMustBeLaterThanBirthDate=Death date must be later than Birth date
 Fantasy=Fantasy
 Genre=Genre
 HistoryNovel=History novel

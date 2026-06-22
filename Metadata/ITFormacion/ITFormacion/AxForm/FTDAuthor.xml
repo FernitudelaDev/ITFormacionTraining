@@ -9,11 +9,48 @@
 [Form]
 public class FTDAuthor extends FormRun
 {
+    //public void setDeathDateEditable(boolean _isEditable)
+    //{
+    //    //navegando desde el ds
+    //    //FormControl deathDateControl = this.formRun().design().controlName(formControlStr(FTDAuthor, SimpleListGrid_DeathDate));
+
+    //    //yendo desde element
+    //    //FormControl deathDateControl = element.design().controlName(formControlStr(FTDAuthor, SimpleListGrid_DeathDate));
+
+    //    //deathDateControl.allowEdit(_isEditable);
+
+    //    FTDAuthorTable_ds.object(fieldNum(FTDAuthorTable, DeathDate)).allowEdit(_isEditable);
+
+    //}
+
 }
 ]]></Source>
 			</Method>
 		</Methods>
-		<DataSources xmlns="" />
+		<DataSources xmlns="">
+			<DataSource>
+				<Name>FTDAuthorTable</Name>
+				<Methods>
+					<Method>
+						<Name>active</Name>
+						<Source><![CDATA[
+        public int active()
+        {
+            int ret;
+        
+            ret = super();
+
+            FTDAuthorTable.setDeathDateEditableInForm();
+
+            return ret;
+        }
+
+]]></Source>
+					</Method>
+				</Methods>
+				<Fields />
+			</DataSource>
+		</DataSources>
 		<DataControls xmlns="" />
 		<Members xmlns="" />
 	</SourceCode>
@@ -167,6 +204,7 @@ public class FTDAuthor extends FormRun
 					<AxFormControl xmlns=""
 						i:type="AxFormDateControl">
 						<Name>SimpleListGrid_DeathDate</Name>
+						<AutoDeclaration>Yes</AutoDeclaration>
 						<Type>Date</Type>
 						<FormControlExtension
 							i:nil="true" />
