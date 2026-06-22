@@ -33,7 +33,10 @@
     <EnableUnmanagedDebugging>false</EnableUnmanagedDebugging>
   </PropertyGroup>
   <ItemGroup>
+    <Folder Include="Base Enums\" />
+    <Folder Include="Classes\" />
     <Folder Include="Display Menu Items\" />
+    <Folder Include="EDT Dates\" />
     <Folder Include="EDT Strings\" />
     <Folder Include="Forms\" />
     <Folder Include="Label Files\" />
@@ -42,15 +45,35 @@
     <Folder Include="Tables\" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="AxClass\RunnableClassExample">
+      <SubType>Content</SubType>
+      <Name>RunnableClassExample</Name>
+      <Link>Classes\RunnableClassExample</Link>
+    </Content>
     <Content Include="AxEdt\FTDId">
       <SubType>Content</SubType>
       <Name>FTDId</Name>
       <Link>EDT Strings\FTDId</Link>
     </Content>
+    <Content Include="AxEdt\SMHDeathDate">
+      <SubType>Content</SubType>
+      <Name>SMHDeathDate</Name>
+      <Link>EDT Dates\SMHDeathDate</Link>
+    </Content>
+    <Content Include="AxEnum\SMHGenreEnum">
+      <SubType>Content</SubType>
+      <Name>SMHGenreEnum</Name>
+      <Link>Base Enums\SMHGenreEnum</Link>
+    </Content>
     <Content Include="AxForm\FTDBook">
       <SubType>Content</SubType>
       <Name>FTDBook</Name>
       <Link>Forms\FTDBook</Link>
+    </Content>
+    <Content Include="AxForm\SMHAuthor">
+      <SubType>Content</SubType>
+      <Name>SMHAuthor</Name>
+      <Link>Forms\SMHAuthor</Link>
     </Content>
     <Content Include="AxLabelFile\ITFormacion_en-US">
       <SubType>Content</SubType>
@@ -72,6 +95,11 @@
       <Name>FTDBook</Name>
       <Link>Display Menu Items\FTDBook</Link>
     </Content>
+    <Content Include="AxMenuItemDisplay\SMHAutor">
+      <SubType>Content</SubType>
+      <Name>SMHAutor</Name>
+      <Link>Display Menu Items\SMHAutor</Link>
+    </Content>
     <Content Include="AxMenu\FTDLibrary">
       <SubType>Content</SubType>
       <Name>FTDLibrary</Name>
@@ -81,6 +109,11 @@
       <SubType>Content</SubType>
       <Name>FTDBookTable</Name>
       <Link>Tables\FTDBookTable</Link>
+    </Content>
+    <Content Include="AxTable\SMHAuthorTable">
+      <SubType>Content</SubType>
+      <Name>SMHAuthorTable</Name>
+      <Link>Tables\SMHAuthorTable</Link>
     </Content>
     <Content Include="ITFormacion.en-US.label.txt">
       <SubType>Content</SubType>

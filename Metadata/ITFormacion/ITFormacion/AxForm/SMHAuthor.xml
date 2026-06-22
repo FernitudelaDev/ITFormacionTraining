@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
 <AxForm xmlns:i="http://www.w3.org/2001/XMLSchema-instance" xmlns="Microsoft.Dynamics.AX.Metadata.V6">
-	<Name>FTDBook</Name>
+	<Name>SMHAuthor</Name>
 	<SourceCode>
 		<Methods xmlns="">
 			<Method>
 				<Name>classDeclaration</Name>
 				<Source><![CDATA[
 [Form]
-public class FTDBook extends FormRun
+public class SMHAuthor extends FormRun
 {
 }
 ]]></Source>
@@ -19,20 +19,23 @@ public class FTDBook extends FormRun
 	</SourceCode>
 	<DataSources>
 		<AxFormDataSource xmlns="">
-			<Name>FTDBookTable</Name>
-			<Table>FTDBookTable</Table>
+			<Name>SMHAuthorTable</Name>
+			<Table>SMHAuthorTable</Table>
 			<Fields>
 				<AxFormDataSourceField>
+					<DataField>BirthDate</DataField>
+				</AxFormDataSourceField>
+				<AxFormDataSourceField>
 					<DataField>DataAreaId</DataField>
+				</AxFormDataSourceField>
+				<AxFormDataSourceField>
+					<DataField>FirstName</DataField>
 				</AxFormDataSourceField>
 				<AxFormDataSourceField>
 					<DataField>Id</DataField>
 				</AxFormDataSourceField>
 				<AxFormDataSourceField>
-					<DataField>ModifiedDateTime</DataField>
-				</AxFormDataSourceField>
-				<AxFormDataSourceField>
-					<DataField>Name</DataField>
+					<DataField>LastName</DataField>
 				</AxFormDataSourceField>
 				<AxFormDataSourceField>
 					<DataField>Partition</DataField>
@@ -50,14 +53,13 @@ public class FTDBook extends FormRun
 		</AxFormDataSource>
 	</DataSources>
 	<Design>
-		<Caption xmlns="">@ITFormacion:Books</Caption>
 		<Pattern xmlns="">SimpleList</Pattern>
 		<PatternVersion xmlns="">1.1</PatternVersion>
 		<Style xmlns="">SimpleList</Style>
 		<Controls xmlns="">
 			<AxFormControl xmlns=""
 				i:type="AxFormActionPaneControl">
-				<Name>ApplicationBar</Name>
+				<Name>AplicationBar</Name>
 				<Type>ActionPane</Type>
 				<FormControlExtension
 					i:nil="true" />
@@ -91,7 +93,6 @@ public class FTDBook extends FormRun
 								<AxFormControlExtensionProperty>
 									<Name>defaultColumnName</Name>
 									<Type>String</Type>
-									<Value>Grid_Id</Value>
 								</AxFormControlExtensionProperty>
 							</ExtensionProperties>
 						</FormControlExtension>
@@ -110,55 +111,62 @@ public class FTDBook extends FormRun
 					i:nil="true" />
 				<Controls>
 					<AxFormControl xmlns=""
-						i:type="AxFormGroupControl">
-						<Name>GroupGrid</Name>
-						<Type>Group</Type>
+						i:type="AxFormStringControl">
+						<Name>SimpleListGrid_Id</Name>
+						<Type>String</Type>
 						<FormControlExtension
 							i:nil="true" />
-						<Controls>
-							<AxFormControl xmlns=""
-								i:type="AxFormStringControl">
-								<Name>Grid_Id</Name>
-								<Type>String</Type>
-								<FormControlExtension
-									i:nil="true" />
-								<DataField>Id</DataField>
-								<DataSource>FTDBookTable</DataSource>
-							</AxFormControl>
-							<AxFormControl xmlns=""
-								i:type="AxFormStringControl">
-								<Name>Grid_Name</Name>
-								<Type>String</Type>
-								<FormControlExtension
-									i:nil="true" />
-								<DataField>Name</DataField>
-								<DataSource>FTDBookTable</DataSource>
-							</AxFormControl>
-							<AxFormControl xmlns=""
-								i:type="AxFormComboBoxControl">
-								<Name>GroupGrid_Genre</Name>
-								<Type>ComboBox</Type>
-								<FormControlExtension
-									i:nil="true" />
-								<DataField>Genre</DataField>
-								<DataSource>FTDBookTable</DataSource>
-								<Items />
-							</AxFormControl>
-						</Controls>
-						<DataGroup>Grid</DataGroup>
-						<DataSource>FTDBookTable</DataSource>
+						<DataField>Id</DataField>
+						<DataSource>SMHAuthorTable</DataSource>
 					</AxFormControl>
 					<AxFormControl xmlns=""
-						i:type="AxFormDateTimeControl">
-						<Name>FTDBookTable_ModifiedDateTime</Name>
-						<Type>DateTime</Type>
+						i:type="AxFormDateControl">
+						<Name>SimpleListGrid_DeathDate</Name>
+						<Type>Date</Type>
 						<FormControlExtension
 							i:nil="true" />
-						<DataField>ModifiedDateTime</DataField>
-						<DataSource>FTDBookTable</DataSource>
+						<DataField>DeathDate</DataField>
+						<DataSource>SMHAuthorTable</DataSource>
+					</AxFormControl>
+					<AxFormControl xmlns=""
+						i:type="AxFormCheckBoxControl">
+						<Name>SimpleListGrid_IsDead</Name>
+						<Type>CheckBox</Type>
+						<FormControlExtension
+							i:nil="true" />
+						<DataField>IsDead</DataField>
+						<DataSource>SMHAuthorTable</DataSource>
+					</AxFormControl>
+					<AxFormControl xmlns=""
+						i:type="AxFormDateControl">
+						<Name>SimpleListGrid_BirthDate</Name>
+						<Type>Date</Type>
+						<FormControlExtension
+							i:nil="true" />
+						<DataField>BirthDate</DataField>
+						<DataSource>SMHAuthorTable</DataSource>
+					</AxFormControl>
+					<AxFormControl xmlns=""
+						i:type="AxFormStringControl">
+						<Name>SimpleListGrid_LastName</Name>
+						<Type>String</Type>
+						<FormControlExtension
+							i:nil="true" />
+						<DataField>LastName</DataField>
+						<DataSource>SMHAuthorTable</DataSource>
+					</AxFormControl>
+					<AxFormControl xmlns=""
+						i:type="AxFormStringControl">
+						<Name>SimpleListGrid_FirstName</Name>
+						<Type>String</Type>
+						<FormControlExtension
+							i:nil="true" />
+						<DataField>FirstName</DataField>
+						<DataSource>SMHAuthorTable</DataSource>
 					</AxFormControl>
 				</Controls>
-				<DataSource>FTDBookTable</DataSource>
+				<DataGroup>Grid</DataGroup>
+				<DataSource>SMHAuthorTable</DataSource>
 				<Style>Tabular</Style>
 			</AxFormControl>
 		</Controls>

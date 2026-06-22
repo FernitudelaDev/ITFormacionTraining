@@ -1,69 +1,23 @@
 <?xml version="1.0" encoding="utf-8"?>
 <AxTable xmlns:i="http://www.w3.org/2001/XMLSchema-instance">
-	<Name>FTDBookTable</Name>
+	<Name>SMHAuthorTable</Name>
 	<SourceCode>
 		<Declaration><![CDATA[
-public class FTDBookTable extends common
+public class SMHAuthorTable extends common
 {
 }
 ]]></Declaration>
-		<Methods>
-			<Method>
-				<Name>shouldThrowExceptionOnZeroDelete</Name>
-				<Source><![CDATA[
-    /// <summary>
-    /// Determines if concurrent deletes should throw exception.
-    /// </summary>
-    /// <returns>true, if exception should be thrown; otherwise, false.</returns>
-    public boolean shouldThrowExceptionOnZeroDelete()
-    {
-        return true;
-    }
-
-]]></Source>
-			</Method>
-			<Method>
-				<Name>findRecId</Name>
-				<Source><![CDATA[
-    public static FTDBookTable findRecId(RecId _recId)
-    {
-        FTDBookTable bookTable;
-
-        select firstonly bookTable
-            where bookTable.RecId == _recId;
-
-        return bookTable;
-    }
-
-]]></Source>
-			</Method>
-			<Method>
-				<Name>SelectCountByGenre</Name>
-				<Source><![CDATA[
-    public static int SelectCountByGenre(SMHGenreEnum _genre)
-    {
-        FTDbookTable bookTable;
-
-        select count(RecId) from bookTable
-        group by Genre
-        where bookTable.Genre == _genre;
-
-        return bookTable.RecId;
-    }
-
-]]></Source>
-			</Method>
-		</Methods>
+		<Methods />
 	</SourceCode>
-	<Label>@ITFormacion:BookTable</Label>
+	<FormRef>FTDBook</FormRef>
+	<Label>@ITFormacion:Author</Label>
 	<SubscriberAccessLevel>
 		<Read>Allow</Read>
 	</SubscriberAccessLevel>
 	<TitleField1>Id</TitleField1>
-	<TitleField2>Name</TitleField2>
+	<TitleField2>FirstName</TitleField2>
 	<AllowRowVersionChangeTracking>Yes</AllowRowVersionChangeTracking>
-	<ModifiedDateTime>Yes</ModifiedDateTime>
-	<ReplacementKey>BookTableIdx</ReplacementKey>
+	<ReplacementKey>AuthorIdx</ReplacementKey>
 	<DeleteActions />
 	<FieldGroups>
 		<AxTableFieldGroup>
@@ -98,10 +52,19 @@ public class FTDBookTable extends common
 					<DataField>Id</DataField>
 				</AxTableFieldGroupField>
 				<AxTableFieldGroupField>
-					<DataField>Name</DataField>
+					<DataField>DeathDate</DataField>
 				</AxTableFieldGroupField>
 				<AxTableFieldGroupField>
-					<DataField>Genre</DataField>
+					<DataField>IsDead</DataField>
+				</AxTableFieldGroupField>
+				<AxTableFieldGroupField>
+					<DataField>BirthDate</DataField>
+				</AxTableFieldGroupField>
+				<AxTableFieldGroupField>
+					<DataField>LastName</DataField>
+				</AxTableFieldGroupField>
+				<AxTableFieldGroupField>
+					<DataField>FirstName</DataField>
 				</AxTableFieldGroupField>
 			</Fields>
 		</AxTableFieldGroup>
@@ -117,20 +80,40 @@ public class FTDBookTable extends common
 		</AxTableField>
 		<AxTableField xmlns=""
 			i:type="AxTableFieldString">
-			<Name>Name</Name>
-			<ExtendedDataType>Name</ExtendedDataType>
+			<Name>FirstName</Name>
+			<ExtendedDataType>FirstName</ExtendedDataType>
+			<IgnoreEDTRelation>Yes</IgnoreEDTRelation>
+		</AxTableField>
+		<AxTableField xmlns=""
+			i:type="AxTableFieldString">
+			<Name>LastName</Name>
+			<ExtendedDataType>LastName</ExtendedDataType>
+			<IgnoreEDTRelation>Yes</IgnoreEDTRelation>
+		</AxTableField>
+		<AxTableField xmlns=""
+			i:type="AxTableFieldDate">
+			<Name>BirthDate</Name>
+			<ExtendedDataType>BirthDate</ExtendedDataType>
 			<IgnoreEDTRelation>Yes</IgnoreEDTRelation>
 		</AxTableField>
 		<AxTableField xmlns=""
 			i:type="AxTableFieldEnum">
-			<Name>Genre</Name>
-			<EnumType>SMHGenreEnum</EnumType>
+			<Name>IsDead</Name>
+			<ExtendedDataType>NoYesId</ExtendedDataType>
+			<IgnoreEDTRelation>Yes</IgnoreEDTRelation>
+			<EnumType>NoYes</EnumType>
+		</AxTableField>
+		<AxTableField xmlns=""
+			i:type="AxTableFieldDate">
+			<Name>DeathDate</Name>
+			<ExtendedDataType>SMHDeathDate</ExtendedDataType>
+			<IgnoreEDTRelation>Yes</IgnoreEDTRelation>
 		</AxTableField>
 	</Fields>
 	<FullTextIndexes />
 	<Indexes>
 		<AxTableIndex>
-			<Name>BookTableIdx</Name>
+			<Name>AuthorIdx</Name>
 			<AlternateKey>Yes</AlternateKey>
 			<Fields>
 				<AxTableIndexField>
