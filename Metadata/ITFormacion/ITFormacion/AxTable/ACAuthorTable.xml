@@ -5,6 +5,7 @@
 		<Declaration><![CDATA[
 public class ACAuthorTable extends common
 {
+
 }
 ]]></Declaration>
 		<Methods>
@@ -15,6 +16,7 @@ public class ACAuthorTable extends common
     ///
     /// </summary>
     /// <returns></returns>
+    /// 
     public boolean validateWrite()
     {
         boolean ret;
@@ -41,6 +43,54 @@ public class ACAuthorTable extends common
         };
 
         return true;
+    }
+
+]]></Source>
+			</Method>
+			<Method>
+				<Name>setDeathDateEditableInForm</Name>
+				<Source><![CDATA[
+    public void setDeathDateEditableInForm()
+    {
+        FormDataSource formDataSource = FormDataUtil::getFormDataSource(this);
+
+        if (formDataSource)
+        {
+            formDataSource.object(fieldNum(ACAuthorTable, DeathDate)).allowEdit(this.IsDead);
+        }
+    }
+
+]]></Source>
+			</Method>
+			<Method>
+				<Name>modifiedField</Name>
+				<Source><![CDATA[
+    public void modifiedField(FieldId _fieldId)
+    {
+        super(_fieldId);
+        
+        switch (_fieldId)
+        {
+            case fieldNum(ACAuthorTable, IsDead):
+                this.modifiedIsDead();
+                break;
+            case fieldNum(ACAuthorTable, BirthDate):
+                break;
+        }
+    }
+
+]]></Source>
+			</Method>
+			<Method>
+				<Name>modifiedIsDead</Name>
+				<Source><![CDATA[
+    public void modifiedIsDead()
+    {
+        if(!this.IsDead)
+        {
+            this.DeathDate = dateNull();
+        }
+        this.setDeathDateEditableInForm();
     }
 
 ]]></Source>

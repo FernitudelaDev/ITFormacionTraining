@@ -6,8 +6,50 @@
 			<Name>classDeclaration</Name>
 			<ReturnType />
 		</Method>
+		<Method>
+			<Name>setDeathDateEditable</Name>
+			<Visibility>Public</Visibility>
+			<Parameters>
+				<AxMethodParameter>
+					<Type>Enum</Type>
+					<TypeName>boolean</TypeName>
+					<Name>_isEditable</Name>
+				</AxMethodParameter>
+			</Parameters>
+			<ReturnType>
+				<TypeName></TypeName>
+			</ReturnType>
+		</Method>
 	</Methods>
-	<DataSources />
+	<DataSources>
+		<DataSource>
+			<Name>ACAuthorTable</Name>
+			<Methods>
+				<Method>
+					<Name>active</Name>
+					<Visibility>Public</Visibility>
+					<ReturnType>
+						<Type>Int32</Type>
+						<TypeName></TypeName>
+					</ReturnType>
+				</Method>
+			</Methods>
+			<Fields>
+				<Field>
+					<DataField>IsDead</DataField>
+					<Methods>
+						<Method>
+							<Name>modified</Name>
+							<Visibility>Public</Visibility>
+							<ReturnType>
+								<TypeName></TypeName>
+							</ReturnType>
+						</Method>
+					</Methods>
+				</Field>
+			</Fields>
+		</DataSource>
+	</DataSources>
 	<DataControls />
 	<Members />
 </z:anyType>

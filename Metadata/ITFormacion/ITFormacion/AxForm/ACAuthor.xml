@@ -12,8 +12,73 @@ public class ACAuthor extends FormRun
 }
 ]]></Source>
 			</Method>
+			<Method>
+				<Name>setDeathDateEditable</Name>
+				<Source><![CDATA[
+    public void setDeathDateEditable(boolean _isEditable)
+    {
+        //Navegando desde el datasource
+        //FormControl _deathDateControl =  this.formRun().design().controlName(formControlStr(ACAuthorTable, SimpleListGrid_DeathDate));
+        //FormControl _deathDateControl = element.design().controlName(formControlStr(ACAuthorTable, SimpleListGrid_DeathDate));
+
+        //SimpleListGrid_DeathDate.allowEdit(_isEditable);
+
+        ACAuthorTable_ds.object(fieldNum(ACAuthorTable, DeathDate)).allowEdit(_isEditable);
+    }
+
+]]></Source>
+			</Method>
 		</Methods>
-		<DataSources xmlns="" />
+		<DataSources xmlns="">
+			<DataSource>
+				<Name>ACAuthorTable</Name>
+				<Methods>
+					<Method>
+						<Name>active</Name>
+						<Source><![CDATA[
+        public int active()
+        {
+            int ret;
+        
+            ret = super();
+
+            //importante entender cursor para extensiones
+            ACAuthorTable author = this.cursor();
+
+            element.setDeathDateEditable(ACAuthorTable.IsDead == NoYes::Yes);
+
+            return ret;
+        }
+
+]]></Source>
+					</Method>
+				</Methods>
+				<Fields>
+					<Field>
+						<DataField>IsDead</DataField>
+						<Methods>
+							<Method>
+								<Name>modified</Name>
+								<Source><![CDATA[
+            /// <summary>
+            ///
+            /// </summary>
+            public void modified()
+            {
+                super();
+
+                FormDataSource formDataSource;
+
+                element.setDeathDateEditable(ACAuthorTable.IsDead == NoYes::Yes);
+            }
+
+]]></Source>
+							</Method>
+						</Methods>
+					</Field>
+				</Fields>
+			</DataSource>
+		</DataSources>
 		<DataControls xmlns="" />
 		<Members xmlns="" />
 	</SourceCode>
@@ -165,6 +230,7 @@ public class ACAuthor extends FormRun
 					<AxFormControl xmlns=""
 						i:type="AxFormDateControl">
 						<Name>SimpleListGrid_DeathDate</Name>
+						<AutoDeclaration>Yes</AutoDeclaration>
 						<Type>Date</Type>
 						<FormControlExtension
 							i:nil="true" />
