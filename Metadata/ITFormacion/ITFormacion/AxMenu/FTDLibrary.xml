@@ -13,6 +13,11 @@
 					<Name>FTDBook</Name>
 					<MenuItemName>FTDBook</MenuItemName>
 				</AxMenuElement>
+				<AxMenuElement xmlns=""
+					i:type="AxMenuElementMenuItem">
+					<Name>FTDAuthor</Name>
+					<MenuItemName>FTDAuthor</MenuItemName>
+				</AxMenuElement>
 			</Elements>
 		</AxMenuElement>
 	</Elements>

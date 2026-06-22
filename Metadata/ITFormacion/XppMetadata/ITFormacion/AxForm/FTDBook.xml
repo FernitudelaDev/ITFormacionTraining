@@ -7,7 +7,29 @@
 			<ReturnType />
 		</Method>
 	</Methods>
-	<DataSources />
+	<DataSources>
+		<DataSource>
+			<Name>FTDBookTable</Name>
+			<Methods>
+				<Method>
+					<Name>active</Name>
+					<Visibility>Public</Visibility>
+					<ReturnType>
+						<Type>Int32</Type>
+						<TypeName></TypeName>
+					</ReturnType>
+					<Variables>
+						<AxMethodVariable>
+							<Type>Int32</Type>
+							<TypeName></TypeName>
+							<Name>ret</Name>
+						</AxMethodVariable>
+					</Variables>
+				</Method>
+			</Methods>
+			<Fields />
+		</DataSource>
+	</DataSources>
 	<DataControls />
 	<Members />
 </z:anyType>

@@ -33,7 +33,10 @@
     <EnableUnmanagedDebugging>false</EnableUnmanagedDebugging>
   </PropertyGroup>
   <ItemGroup>
+    <Folder Include="Base Enums\" />
+    <Folder Include="Classes\" />
     <Folder Include="Display Menu Items\" />
+    <Folder Include="EDT Dates\" />
     <Folder Include="EDT Strings\" />
     <Folder Include="Forms\" />
     <Folder Include="Label Files\" />
@@ -42,10 +45,30 @@
     <Folder Include="Tables\" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="AxClass\FTDRunnableClassExample">
+      <SubType>Content</SubType>
+      <Name>FTDRunnableClassExample</Name>
+      <Link>Classes\FTDRunnableClassExample</Link>
+    </Content>
+    <Content Include="AxEdt\FTDDeathDate">
+      <SubType>Content</SubType>
+      <Name>FTDDeathDate</Name>
+      <Link>EDT Dates\FTDDeathDate</Link>
+    </Content>
     <Content Include="AxEdt\FTDId">
       <SubType>Content</SubType>
       <Name>FTDId</Name>
       <Link>EDT Strings\FTDId</Link>
+    </Content>
+    <Content Include="AxEnum\FTDGenreEnum">
+      <SubType>Content</SubType>
+      <Name>FTDGenreEnum</Name>
+      <Link>Base Enums\FTDGenreEnum</Link>
+    </Content>
+    <Content Include="AxForm\FTDAuthor">
+      <SubType>Content</SubType>
+      <Name>FTDAuthor</Name>
+      <Link>Forms\FTDAuthor</Link>
     </Content>
     <Content Include="AxForm\FTDBook">
       <SubType>Content</SubType>
@@ -67,6 +90,11 @@
       <Name>MainMenu.ITFormacion</Name>
       <Link>Menu Extensions\MainMenu.ITFormacion</Link>
     </Content>
+    <Content Include="AxMenuItemDisplay\FTDAuthor">
+      <SubType>Content</SubType>
+      <Name>FTDAuthor</Name>
+      <Link>Display Menu Items\FTDAuthor</Link>
+    </Content>
     <Content Include="AxMenuItemDisplay\FTDBook">
       <SubType>Content</SubType>
       <Name>FTDBook</Name>
@@ -76,6 +104,11 @@
       <SubType>Content</SubType>
       <Name>FTDLibrary</Name>
       <Link>Menus\FTDLibrary</Link>
+    </Content>
+    <Content Include="AxTable\FTDAuthorTable">
+      <SubType>Content</SubType>
+      <Name>FTDAuthorTable</Name>
+      <Link>Tables\FTDAuthorTable</Link>
     </Content>
     <Content Include="AxTable\FTDBookTable">
       <SubType>Content</SubType>

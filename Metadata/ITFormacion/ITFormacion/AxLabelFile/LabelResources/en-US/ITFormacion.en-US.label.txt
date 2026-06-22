@@ -1,7 +1,16 @@
-﻿Books=Books
+﻿Author=Author
+Books=Books
 BookTable=Book
+DeathDate=Death date
+Fantasy=Fantasy
+Genre=Genre
+HistoryNovel=History novel
 Id=Id
+IsDead=Is dead
 Library=Library
 Master=Master
 NewLabel0=Label files created on 06/19/2026 09:49:00 for label file Id ITFormacion and language en-US
  ;Label file comment - see above label
+NumberOfBooksByGenre=there are %1 fantasy books, %2 history books and %3 science books
+Science=Science
+Thriller=Thriller

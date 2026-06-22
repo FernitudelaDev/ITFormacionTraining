@@ -13,3 +13,6 @@
 *.dll
 /Metadata/ITFormacion/Resources/ITFormacion.dllay3nqjoj.2zg.delete
 /Metadata/ITFormacion/Resources
+/Metadata/ITFormacion/BuildModelResult.log
+/Metadata/ITFormacion/BuildModelResult.xml
+/Metadata/ITFormacion/CompileLabels.xml
