@@ -32,7 +32,10 @@
     <EnableUnmanagedDebugging>false</EnableUnmanagedDebugging>
   </PropertyGroup>
   <ItemGroup>
+    <Folder Include="Base Enums\" />
+    <Folder Include="Classes\" />
     <Folder Include="Display Menu Items\" />
+    <Folder Include="EDT Dates\" />
     <Folder Include="EDT Strings\" />
     <Folder Include="Forms\" />
     <Folder Include="Label Files\" />
@@ -41,10 +44,30 @@
     <Folder Include="Tables\" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="AxClass\RRBRunnableClassExample">
+      <SubType>Content</SubType>
+      <Name>RRBRunnableClassExample</Name>
+      <Link>Classes\RRBRunnableClassExample</Link>
+    </Content>
+    <Content Include="AxEdt\RRBDeathDate">
+      <SubType>Content</SubType>
+      <Name>RRBDeathDate</Name>
+      <Link>EDT Dates\RRBDeathDate</Link>
+    </Content>
     <Content Include="AxEdt\RRBId">
       <SubType>Content</SubType>
       <Name>RRBId</Name>
       <Link>EDT Strings\RRBId</Link>
+    </Content>
+    <Content Include="AxEnum\RRBGenreEnum">
+      <SubType>Content</SubType>
+      <Name>RRBGenreEnum</Name>
+      <Link>Base Enums\RRBGenreEnum</Link>
+    </Content>
+    <Content Include="AxForm\RRBAuthor">
+      <SubType>Content</SubType>
+      <Name>RRBAuthor</Name>
+      <Link>Forms\RRBAuthor</Link>
     </Content>
     <Content Include="AxForm\RRBBook">
       <SubType>Content</SubType>
@@ -66,6 +89,11 @@
       <Name>MainMenu.ITFormacion</Name>
       <Link>Menu Extensions\MainMenu.ITFormacion</Link>
     </Content>
+    <Content Include="AxMenuItemDisplay\RRBAuthor">
+      <SubType>Content</SubType>
+      <Name>RRBAuthor</Name>
+      <Link>Display Menu Items\RRBAuthor</Link>
+    </Content>
     <Content Include="AxMenuItemDisplay\RRBBook">
       <SubType>Content</SubType>
       <Name>RRBBook</Name>
@@ -75,6 +103,11 @@
       <SubType>Content</SubType>
       <Name>RRBLibrary</Name>
       <Link>Menus\RRBLibrary</Link>
+    </Content>
+    <Content Include="AxTable\RRBAuthorTable">
+      <SubType>Content</SubType>
+      <Name>RRBAuthorTable</Name>
+      <Link>Tables\RRBAuthorTable</Link>
     </Content>
     <Content Include="AxTable\RRBBookTable">
       <SubType>Content</SubType>

@@ -1,7 +1,16 @@
-﻿Books=Libros
+﻿Author=Autor
+Books=Libros
 BookTable=Libro
+DeathDate=Fecha de muerte
+Fantasy=Fantasia
+Genre=Genero
+HistoryNovel=Novela Historica
 Id=Id
+IsDead=Esta muerto/a
 Library=Biblioteca
 Master=Master
 NewLabel0=Label files created on 06/19/2026 09:49:04 for label file Id ITFormacion and language es-ES
  ;Label file comment - see above label
+NumberOfBooksByGenre=Hay %1 libros de Fantasia, %2 libros de Historia y %3 libros de Ciencia
+Science=Ciencia
+Thriller=Suspense

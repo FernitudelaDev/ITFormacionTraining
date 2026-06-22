@@ -13,6 +13,11 @@
 					<Name>RRBBook</Name>
 					<MenuItemName>RRBBook</MenuItemName>
 				</AxMenuElement>
+				<AxMenuElement xmlns=""
+					i:type="AxMenuElementMenuItem">
+					<Name>RRBAuthor</Name>
+					<MenuItemName>RRBAuthor</MenuItemName>
+				</AxMenuElement>
 			</Elements>
 		</AxMenuElement>
 	</Elements>

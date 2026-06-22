@@ -1,61 +1,23 @@
 <?xml version="1.0" encoding="utf-8"?>
 <AxTable xmlns:i="http://www.w3.org/2001/XMLSchema-instance">
-	<Name>RRBBookTable</Name>
+	<Name>RRBAuthorTable</Name>
 	<SourceCode>
 		<Declaration><![CDATA[
-public class RRBBookTable extends common
+public class RRBAuthorTable extends common
 {
-    /// <summary>
-    ///
-    /// </summary>
-    
-
 }
 ]]></Declaration>
-		<Methods>
-			<Method>
-				<Name>findRecId</Name>
-				<Source><![CDATA[
-    public static RRBBookTable findRecId(RecId _recId)
-    {
-        RRBBookTable bookTable;
-
-        select firstonly bookTable
-            where bookTable.RecId == _recId;
-
-        return bookTable;
-    }
-
-]]></Source>
-			</Method>
-			<Method>
-				<Name>selectCountByGenre</Name>
-				<Source><![CDATA[
-    public static int selectCountByGenre(RRBGenreEnum _genre)
-    {
-        RRBBookTable bookTable;
-
-        select count(RecId) from bookTable
-            group by Genre
-            where bookTable.Genre == _genre;
-
-        return bookTable.RecId;
-    }
-
-]]></Source>
-			</Method>
-		</Methods>
+		<Methods />
 	</SourceCode>
-	<FormRef>RRBBook</FormRef>
-	<Label>@ITFormacion:BookTable</Label>
+	<FormRef>RRBAuthor</FormRef>
+	<Label>@ITFormacion:Author</Label>
 	<SubscriberAccessLevel>
 		<Read>Allow</Read>
 	</SubscriberAccessLevel>
-	<TitleField1>Id</TitleField1>
-	<TitleField2>Name</TitleField2>
+	<TitleField1>FirstName</TitleField1>
+	<TitleField2>LastName</TitleField2>
 	<AllowRowVersionChangeTracking>Yes</AllowRowVersionChangeTracking>
-	<ModifiedDateTime>Yes</ModifiedDateTime>
-	<ReplacementKey>BookTableIdx</ReplacementKey>
+	<ReplacementKey>AuthorIdx</ReplacementKey>
 	<DeleteActions />
 	<FieldGroups>
 		<AxTableFieldGroup>
@@ -90,10 +52,19 @@ public class RRBBookTable extends common
 					<DataField>Id</DataField>
 				</AxTableFieldGroupField>
 				<AxTableFieldGroupField>
-					<DataField>Name</DataField>
+					<DataField>FirstName</DataField>
 				</AxTableFieldGroupField>
 				<AxTableFieldGroupField>
-					<DataField>Genre</DataField>
+					<DataField>LastName</DataField>
+				</AxTableFieldGroupField>
+				<AxTableFieldGroupField>
+					<DataField>BirthDate</DataField>
+				</AxTableFieldGroupField>
+				<AxTableFieldGroupField>
+					<DataField>IsDead</DataField>
+				</AxTableFieldGroupField>
+				<AxTableFieldGroupField>
+					<DataField>DeathDate</DataField>
 				</AxTableFieldGroupField>
 			</Fields>
 		</AxTableFieldGroup>
@@ -109,20 +80,41 @@ public class RRBBookTable extends common
 		</AxTableField>
 		<AxTableField xmlns=""
 			i:type="AxTableFieldString">
-			<Name>Name</Name>
-			<ExtendedDataType>Name</ExtendedDataType>
+			<Name>FirstName</Name>
+			<ExtendedDataType>FirstName</ExtendedDataType>
+			<IgnoreEDTRelation>Yes</IgnoreEDTRelation>
+		</AxTableField>
+		<AxTableField xmlns=""
+			i:type="AxTableFieldString">
+			<Name>LastName</Name>
+			<ExtendedDataType>LastName</ExtendedDataType>
+			<IgnoreEDTRelation>Yes</IgnoreEDTRelation>
+		</AxTableField>
+		<AxTableField xmlns=""
+			i:type="AxTableFieldDate">
+			<Name>BirthDate</Name>
+			<ExtendedDataType>BirthDate</ExtendedDataType>
 			<IgnoreEDTRelation>Yes</IgnoreEDTRelation>
 		</AxTableField>
 		<AxTableField xmlns=""
 			i:type="AxTableFieldEnum">
-			<Name>Genre</Name>
-			<EnumType>RRBGenreEnum</EnumType>
+			<Name>IsDead</Name>
+			<ExtendedDataType>NoYesId</ExtendedDataType>
+			<IgnoreEDTRelation>Yes</IgnoreEDTRelation>
+			<Label>@ITFormacion:IsDead</Label>
+			<EnumType>NoYes</EnumType>
+		</AxTableField>
+		<AxTableField xmlns=""
+			i:type="AxTableFieldDate">
+			<Name>DeathDate</Name>
+			<ExtendedDataType>RRBDeathDate</ExtendedDataType>
+			<IgnoreEDTRelation>Yes</IgnoreEDTRelation>
 		</AxTableField>
 	</Fields>
 	<FullTextIndexes />
 	<Indexes>
 		<AxTableIndex>
-			<Name>BookTableIdx</Name>
+			<Name>AuthorIdx</Name>
 			<AlternateKey>Yes</AlternateKey>
 			<Fields>
 				<AxTableIndexField>

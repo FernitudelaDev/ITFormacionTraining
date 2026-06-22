@@ -1,64 +1,48 @@
 <?xml version="1.0" encoding="utf-8"?>
 <AxForm xmlns:i="http://www.w3.org/2001/XMLSchema-instance" xmlns="Microsoft.Dynamics.AX.Metadata.V6">
-	<Name>RRBBook</Name>
+	<Name>RRBAuthor</Name>
 	<SourceCode>
 		<Methods xmlns="">
 			<Method>
 				<Name>classDeclaration</Name>
 				<Source><![CDATA[
 [Form]
-public class RRBBook extends FormRun
+public class RRBAuthor extends FormRun
 {
-
 }
+
 ]]></Source>
 			</Method>
 		</Methods>
-		<DataSources xmlns="">
-			<DataSource>
-				<Name>RRBBookTable</Name>
-				<Methods>
-					<Method>
-						<Name>active</Name>
-						<Source><![CDATA[
-        /// <summary>
-        ///
-        /// </summary>
-        /// <returns></returns>
-        public int active()
-        {
-            int ret;
-    
-            ret = super();
-    
-            return ret;
-        }
-
-]]></Source>
-					</Method>
-				</Methods>
-				<Fields />
-			</DataSource>
-		</DataSources>
+		<DataSources xmlns="" />
 		<DataControls xmlns="" />
 		<Members xmlns="" />
 	</SourceCode>
 	<DataSources>
 		<AxFormDataSource xmlns="">
-			<Name>RRBBookTable</Name>
-			<Table>RRBBookTable</Table>
+			<Name>RRBAuthorTable</Name>
+			<Table>RRBAuthorTable</Table>
 			<Fields>
 				<AxFormDataSourceField>
+					<DataField>BirthDate</DataField>
+				</AxFormDataSourceField>
+				<AxFormDataSourceField>
 					<DataField>DataAreaId</DataField>
+				</AxFormDataSourceField>
+				<AxFormDataSourceField>
+					<DataField>DeathDate</DataField>
+				</AxFormDataSourceField>
+				<AxFormDataSourceField>
+					<DataField>FirstName</DataField>
 				</AxFormDataSourceField>
 				<AxFormDataSourceField>
 					<DataField>Id</DataField>
 				</AxFormDataSourceField>
 				<AxFormDataSourceField>
-					<DataField>ModifiedDateTime</DataField>
+					<DataField>IsDead</DataField>
 				</AxFormDataSourceField>
 				<AxFormDataSourceField>
-					<DataField>Name</DataField>
+					<DataField>LastName</DataField>
 				</AxFormDataSourceField>
 				<AxFormDataSourceField>
 					<DataField>Partition</DataField>
@@ -71,12 +55,13 @@ public class RRBBook extends FormRun
 				</AxFormDataSourceField>
 			</Fields>
 			<ReferencedDataSources />
+			<InsertIfEmpty>No</InsertIfEmpty>
 			<DataSourceLinks />
 			<DerivedDataSources />
 		</AxFormDataSource>
 	</DataSources>
 	<Design>
-		<Caption xmlns="">@ITFormacion:Books</Caption>
+		<Caption xmlns="">@ITFormacion:Author</Caption>
 		<Pattern xmlns="">SimpleList</Pattern>
 		<PatternVersion xmlns="">1.1</PatternVersion>
 		<Style xmlns="">SimpleList</Style>
@@ -108,6 +93,7 @@ public class RRBBook extends FormRun
 								<AxFormControlExtensionProperty>
 									<Name>targetControlName</Name>
 									<Type>String</Type>
+									<Value>SimpleListGrid</Value>
 								</AxFormControlExtensionProperty>
 								<AxFormControlExtensionProperty>
 									<Name>placeholderText</Name>
@@ -116,6 +102,7 @@ public class RRBBook extends FormRun
 								<AxFormControlExtensionProperty>
 									<Name>defaultColumnName</Name>
 									<Type>String</Type>
+									<Value>SimpleListGrid_Id</Value>
 								</AxFormControlExtensionProperty>
 							</ExtensionProperties>
 						</FormControlExtension>
@@ -134,55 +121,62 @@ public class RRBBook extends FormRun
 					i:nil="true" />
 				<Controls>
 					<AxFormControl xmlns=""
-						i:type="AxFormGroupControl">
-						<Name>GroupGrid</Name>
-						<Type>Group</Type>
+						i:type="AxFormStringControl">
+						<Name>SimpleListGrid_Id</Name>
+						<Type>String</Type>
 						<FormControlExtension
 							i:nil="true" />
-						<Controls>
-							<AxFormControl xmlns=""
-								i:type="AxFormStringControl">
-								<Name>Grid_Id</Name>
-								<Type>String</Type>
-								<FormControlExtension
-									i:nil="true" />
-								<DataField>Id</DataField>
-								<DataSource>RRBBookTable</DataSource>
-							</AxFormControl>
-							<AxFormControl xmlns=""
-								i:type="AxFormStringControl">
-								<Name>Grid_Name</Name>
-								<Type>String</Type>
-								<FormControlExtension
-									i:nil="true" />
-								<DataField>Name</DataField>
-								<DataSource>RRBBookTable</DataSource>
-							</AxFormControl>
-							<AxFormControl xmlns=""
-								i:type="AxFormComboBoxControl">
-								<Name>GroupGrid_Genre</Name>
-								<Type>ComboBox</Type>
-								<FormControlExtension
-									i:nil="true" />
-								<DataField>Genre</DataField>
-								<DataSource>RRBBookTable</DataSource>
-								<Items />
-							</AxFormControl>
-						</Controls>
-						<DataGroup>Grid</DataGroup>
-						<DataSource>RRBBookTable</DataSource>
+						<DataField>Id</DataField>
+						<DataSource>RRBAuthorTable</DataSource>
 					</AxFormControl>
 					<AxFormControl xmlns=""
-						i:type="AxFormDateTimeControl">
-						<Name>RRBBookTable_ModifiedDateTime</Name>
-						<Type>DateTime</Type>
+						i:type="AxFormStringControl">
+						<Name>SimpleListGrid_FirstName</Name>
+						<Type>String</Type>
 						<FormControlExtension
 							i:nil="true" />
-						<DataField>ModifiedDateTime</DataField>
-						<DataSource>RRBBookTable</DataSource>
+						<DataField>FirstName</DataField>
+						<DataSource>RRBAuthorTable</DataSource>
+					</AxFormControl>
+					<AxFormControl xmlns=""
+						i:type="AxFormStringControl">
+						<Name>SimpleListGrid_LastName</Name>
+						<Type>String</Type>
+						<FormControlExtension
+							i:nil="true" />
+						<DataField>LastName</DataField>
+						<DataSource>RRBAuthorTable</DataSource>
+					</AxFormControl>
+					<AxFormControl xmlns=""
+						i:type="AxFormDateControl">
+						<Name>SimpleListGrid_BirthDate</Name>
+						<Type>Date</Type>
+						<FormControlExtension
+							i:nil="true" />
+						<DataField>BirthDate</DataField>
+						<DataSource>RRBAuthorTable</DataSource>
+					</AxFormControl>
+					<AxFormControl xmlns=""
+						i:type="AxFormCheckBoxControl">
+						<Name>SimpleListGrid_IsDead</Name>
+						<Type>CheckBox</Type>
+						<FormControlExtension
+							i:nil="true" />
+						<DataField>IsDead</DataField>
+						<DataSource>RRBAuthorTable</DataSource>
+					</AxFormControl>
+					<AxFormControl xmlns=""
+						i:type="AxFormDateControl">
+						<Name>SimpleListGrid_DeathDate</Name>
+						<Type>Date</Type>
+						<FormControlExtension
+							i:nil="true" />
+						<DataField>DeathDate</DataField>
+						<DataSource>RRBAuthorTable</DataSource>
 					</AxFormControl>
 				</Controls>
-				<DataSource>RRBBookTable</DataSource>
+				<DataGroup>Grid</DataGroup>
+				<DataSource>RRBAuthorTable</DataSource>
 				<Style>Tabular</Style>
 			</AxFormControl>
 		</Controls>

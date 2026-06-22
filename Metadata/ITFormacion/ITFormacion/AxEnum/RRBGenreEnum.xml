@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<AxEnum xmlns:i="http://www.w3.org/2001/XMLSchema-instance">
+	<Name>RRBGenreEnum</Name>
+	<Label>@ITFormacion:Genre</Label>
+	<EnumValues>
+		<AxEnumValue>
+			<Name>None</Name>
+		</AxEnumValue>
+		<AxEnumValue>
+			<Name>Thriller</Name>
+			<Label>@ITFormacion:Thriller</Label>
+			<Value>1</Value>
+		</AxEnumValue>
+		<AxEnumValue>
+			<Name>Fantasy</Name>
+			<Label>@ITFormacion:Fantasy</Label>
+			<Value>2</Value>
+		</AxEnumValue>
+		<AxEnumValue>
+			<Name>HistoryNovel</Name>
+			<Label>@ITFormacion:HistoryNovel</Label>
+			<Value>3</Value>
+		</AxEnumValue>
+		<AxEnumValue>
+			<Name>Science</Name>
+			<Label>@ITFormacion:Science</Label>
+			<Value>4</Value>
+		</AxEnumValue>
+	</EnumValues>
+</AxEnum>

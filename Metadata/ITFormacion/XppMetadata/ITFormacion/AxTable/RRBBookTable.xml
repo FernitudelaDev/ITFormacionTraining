@@ -21,9 +21,20 @@
 			</ReturnType>
 		</Method>
 		<Method>
-			<Name>Method1</Name>
+			<Name>selectCountByGenre</Name>
+			<IsStatic>true</IsStatic>
+			<Visibility>Public</Visibility>
+			<Parameters>
+				<AxMethodParameter>
+					<Tags></Tags>
+					<Type>Enum</Type>
+					<TypeName>RRBGenreEnum</TypeName>
+					<Name>_genre</Name>
+				</AxMethodParameter>
+			</Parameters>
 			<ReturnType>
 				<Tags></Tags>
+				<Type>Int32</Type>
 				<TypeName></TypeName>
 			</ReturnType>
 		</Method>

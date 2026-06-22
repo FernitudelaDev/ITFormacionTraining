@@ -7,22 +7,7 @@
 			<ReturnType />
 		</Method>
 	</Methods>
-	<DataSources>
-		<DataSource>
-			<Name>RRBBookTable</Name>
-			<Methods>
-				<Method>
-					<Name>active</Name>
-					<Visibility>Public</Visibility>
-					<ReturnType>
-						<Type>Int32</Type>
-						<TypeName></TypeName>
-					</ReturnType>
-				</Method>
-			</Methods>
-			<Fields />
-		</DataSource>
-	</DataSources>
+	<DataSources />
 	<DataControls />
 	<Members />
 </z:anyType>
