@@ -6,29 +6,42 @@
 public class ACBookTable extends common
 {
    
-    /// <summary>
-    ///
-    /// </summary>
-    /// 
-    
 }
 ]]></Declaration>
 		<Methods>
 			<Method>
-				<Name>Method1</Name>
+				<Name>shouldThrowExceptionOnZeroDelete</Name>
 				<Source><![CDATA[
-    private void Method1()
+    /// <summary>
+    ///
+    /// </summary>
+    /// 
+    public boolean shouldThrowExceptionOnZeroDelete()
     {
+        return true;
     }
+
+    //public static ACBookTable findRecId (RecId _recId)
+    //{  
+    //    ACBookTable bookTable;
+
+    //    select firstonly bookTable
+    //        where bookTable.RecId == _recId
+
+    //    return bookTable;
+    //}
 
 ]]></Source>
 			</Method>
 		</Methods>
 	</SourceCode>
+	<FormRef>ACBook</FormRef>
 	<Label>@ACItFormacionLabels:BookTable</Label>
 	<SubscriberAccessLevel>
 		<Read>Allow</Read>
 	</SubscriberAccessLevel>
+	<TitleField1>Id</TitleField1>
+	<TitleField2>Name</TitleField2>
 	<AllowRowVersionChangeTracking>Yes</AllowRowVersionChangeTracking>
 	<ModifiedDateTime>Yes</ModifiedDateTime>
 	<ReplacementKey>BookTableIdx</ReplacementKey>
@@ -68,6 +81,9 @@ public class ACBookTable extends common
 				<AxTableFieldGroupField>
 					<DataField>Id</DataField>
 				</AxTableFieldGroupField>
+				<AxTableFieldGroupField>
+					<DataField>Genre</DataField>
+				</AxTableFieldGroupField>
 			</Fields>
 		</AxTableFieldGroup>
 	</FieldGroups>
@@ -85,6 +101,11 @@ public class ACBookTable extends common
 			<Name>Name</Name>
 			<ExtendedDataType>Name</ExtendedDataType>
 			<IgnoreEDTRelation>Yes</IgnoreEDTRelation>
+		</AxTableField>
+		<AxTableField xmlns=""
+			i:type="AxTableFieldEnum">
+			<Name>Genre</Name>
+			<EnumType>ACGenreEnum</EnumType>
 		</AxTableField>
 	</Fields>
 	<FullTextIndexes />

@@ -1,6 +1,15 @@
-﻿Books=Books
+﻿Academic=Academic
+Author=Author
+Books=Books
 BookTable=Book
+DeathDate=Death date
+Fantasy=Fantasy
+Genre=Genre
+HistoryNovel=History novel
+IsDead=Is dead
 Library=Library
 Master=Master
 NewLabel0=Label files created on 06/19/2026 09:49:01 for label file Id ACItFormacionLabels and language en-US
  ;Label file comment - see above label
+Science=Science
+Thriller=Thriller

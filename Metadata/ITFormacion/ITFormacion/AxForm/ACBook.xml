@@ -131,6 +131,16 @@ public class ACBook extends FormRun
 								<DataField>Id</DataField>
 								<DataSource>ACBookTable</DataSource>
 							</AxFormControl>
+							<AxFormControl xmlns=""
+								i:type="AxFormComboBoxControl">
+								<Name>RenameGrid_Genre</Name>
+								<Type>ComboBox</Type>
+								<FormControlExtension
+									i:nil="true" />
+								<DataField>Genre</DataField>
+								<DataSource>ACBookTable</DataSource>
+								<Items />
+							</AxFormControl>
 						</Controls>
 						<DataGroup>Grid</DataGroup>
 						<DataSource>ACBookTable</DataSource>

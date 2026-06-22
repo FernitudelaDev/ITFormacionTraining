@@ -32,7 +32,9 @@
     <EnableUnmanagedDebugging>false</EnableUnmanagedDebugging>
   </PropertyGroup>
   <ItemGroup>
+    <Folder Include="Base Enums\" />
     <Folder Include="Display Menu Items\" />
+    <Folder Include="EDT Dates\" />
     <Folder Include="Extended Data Types\" />
     <Folder Include="Forms\" />
     <Folder Include="Label Files\" />
@@ -51,10 +53,25 @@
       <Name>ACItFormacionLabels.es-ES.label.txt</Name>
       <DependentUpon>AxLabelFile\ACItFormacionLabels_es-ES</DependentUpon>
     </Content>
+    <Content Include="AxEdt\ACDeathDate">
+      <SubType>Content</SubType>
+      <Name>ACDeathDate</Name>
+      <Link>EDT Dates\ACDeathDate</Link>
+    </Content>
     <Content Include="AxEdt\ACId">
       <SubType>Content</SubType>
       <Name>ACId</Name>
       <Link>Extended Data Types\ACId</Link>
+    </Content>
+    <Content Include="AxEnum\ACGenreEnum">
+      <SubType>Content</SubType>
+      <Name>ACGenreEnum</Name>
+      <Link>Base Enums\ACGenreEnum</Link>
+    </Content>
+    <Content Include="AxForm\ACAuthor">
+      <SubType>Content</SubType>
+      <Name>ACAuthor</Name>
+      <Link>Forms\ACAuthor</Link>
     </Content>
     <Content Include="AxForm\ACBook">
       <SubType>Content</SubType>
@@ -86,6 +103,11 @@
       <Name>MainMenu.ITFormacion</Name>
       <Link>Menu Extensions\MainMenu.ITFormacion</Link>
     </Content>
+    <Content Include="AxMenuItemDisplay\ACAuthor">
+      <SubType>Content</SubType>
+      <Name>ACAuthor</Name>
+      <Link>Display Menu Items\ACAuthor</Link>
+    </Content>
     <Content Include="AxMenuItemDisplay\ACBook">
       <SubType>Content</SubType>
       <Name>ACBook</Name>
@@ -95,6 +117,11 @@
       <SubType>Content</SubType>
       <Name>ACLibrary</Name>
       <Link>Menus\ACLibrary</Link>
+    </Content>
+    <Content Include="AxTable\ACAuthorTable">
+      <SubType>Content</SubType>
+      <Name>ACAuthorTable</Name>
+      <Link>Tables\ACAuthorTable</Link>
     </Content>
     <Content Include="AxTable\ACBookTable">
       <SubType>Content</SubType>

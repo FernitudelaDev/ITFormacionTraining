@@ -1,6 +1,15 @@
-﻿Books=Libros
+﻿Academic=Académica
+Author=Autor
+Books=Libros
 BookTable=Libro
+DeathDate=Fecha de muerte
+Fantasy=Fantasia
+Genre=Genero
+HistoryNovel=Novela histórica
+IsDead=Esta muerto
 Library=Biblioteca
 Master=Master
 NewLabel0=Label files created on 06/19/2026 09:49:02 for label file Id ACItFormacionLabels and language es-ES
  ;Label file comment - see above label
+Science=Científica
+Thirller=Suspense

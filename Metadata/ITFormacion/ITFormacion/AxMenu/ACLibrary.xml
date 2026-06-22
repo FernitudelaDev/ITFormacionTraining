@@ -13,6 +13,11 @@
 					<Name>ACBook</Name>
 					<MenuItemName>ACBook</MenuItemName>
 				</AxMenuElement>
+				<AxMenuElement xmlns=""
+					i:type="AxMenuElementMenuItem">
+					<Name>ACAuthor</Name>
+					<MenuItemName>ACAuthor</MenuItemName>
+				</AxMenuElement>
 			</Elements>
 		</AxMenuElement>
 	</Elements>

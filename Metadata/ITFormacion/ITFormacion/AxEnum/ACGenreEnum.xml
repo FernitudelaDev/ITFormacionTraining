@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<AxEnum xmlns:i="http://www.w3.org/2001/XMLSchema-instance">
+	<Name>ACGenreEnum</Name>
+	<Label>@ACItFormacionLabels:Genre</Label>
+	<EnumValues>
+		<AxEnumValue>
+			<Name>None</Name>
+		</AxEnumValue>
+		<AxEnumValue>
+			<Name>Thirller</Name>
+			<Label>@ACItFormacionLabels:Thriller</Label>
+			<Value>1</Value>
+		</AxEnumValue>
+		<AxEnumValue>
+			<Name>Fantasy</Name>
+			<Label>@ACItFormacionLabels:Fantasy</Label>
+			<Value>2</Value>
+		</AxEnumValue>
+		<AxEnumValue>
+			<Name>HistoryNovel</Name>
+			<Label>@ACItFormacionLabels:HistoryNovel</Label>
+			<Value>3</Value>
+		</AxEnumValue>
+		<AxEnumValue>
+			<Name>Academic</Name>
+			<Label>@ACItFormacionLabels:Academic</Label>
+			<Value>4</Value>
+		</AxEnumValue>
+		<AxEnumValue>
+			<Name>Science</Name>
+			<Label>@ACItFormacionLabels:Science</Label>
+			<Value>5</Value>
+		</AxEnumValue>
+	</EnumValues>
+</AxEnum>

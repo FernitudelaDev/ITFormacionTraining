@@ -3,10 +3,12 @@
 	i:type="AxPropertyCollection" xmlns:z="http://schemas.microsoft.com/2003/10/Serialization/">
 	<Methods>
 		<Method>
-			<Name>Method1</Name>
+			<Name>shouldThrowExceptionOnZeroDelete</Name>
+			<Visibility>Public</Visibility>
 			<ReturnType>
 				<Tags></Tags>
-				<TypeName></TypeName>
+				<Type>Enum</Type>
+				<TypeName>boolean</TypeName>
 			</ReturnType>
 		</Method>
 	</Methods>
