@@ -95,10 +95,10 @@
       <Name>FTDBook</Name>
       <Link>Display Menu Items\FTDBook</Link>
     </Content>
-    <Content Include="AxMenuItemDisplay\SMHAutor">
+    <Content Include="AxMenuItemDisplay\SMHAuthor">
       <SubType>Content</SubType>
-      <Name>SMHAutor</Name>
-      <Link>Display Menu Items\SMHAutor</Link>
+      <Name>SMHAuthor</Name>
+      <Link>Display Menu Items\SMHAuthor</Link>
     </Content>
     <Content Include="AxMenu\FTDLibrary">
       <SubType>Content</SubType>

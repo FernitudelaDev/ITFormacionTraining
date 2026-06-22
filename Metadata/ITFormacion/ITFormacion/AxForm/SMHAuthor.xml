@@ -9,6 +9,20 @@
 [Form]
 public class SMHAuthor extends FormRun
 {
+    
+    /*public void setDeathDateEditable(boolean _isEditable)
+    {
+        // Navegando desde el DataSource
+        // FormControl deathDateControl = this.formRun().design().controlName(formControlStr(SMHAuthor, SimpleListGrid_DeathDate));
+
+        // Navegando desde element
+        // FormControl deathDateControl = element.design().controlName(formControlStr(SMHAuthor, SimpleListGrid_DeathDate));
+
+        // deathDateControl.allowEdit(_isEditable);
+
+        SMHAuthorTable_ds.object(fieldNum(SMHAuthorTable, DeathDate)).allowEdit(_isEditable);
+    }*/
+
 }
 ]]></Source>
 			</Method>
@@ -17,24 +31,6 @@ public class SMHAuthor extends FormRun
 			<DataSource>
 				<Name>SMHAuthorTable</Name>
 				<Methods>
-					<Method>
-						<Name>setDeathDateEditable</Name>
-						<Source><![CDATA[
-        public void setDeathDateEditable(boolean _isEditable)
-        {
-            // Navegando desde el DataSource
-            // FormControl deathDateControl = this.formRun().design().controlName(formControlStr(SMHAuthor, SimpleListGrid_DeathDate));
-
-            // Navegando desde element
-            // FormControl deathDateControl = element.design().controlName(formControlStr(SMHAuthor, SimpleListGrid_DeathDate));
-
-            // deathDateControl.allowEdit(_isEditable);
-
-            SimpleListGrid_DeathDate.allowEdit(_isEditable);
-        }
-
-]]></Source>
-					</Method>
 					<Method>
 						<Name>active</Name>
 						<Source><![CDATA[
@@ -47,7 +43,9 @@ public class SMHAuthor extends FormRun
             /// Importante entender el método cursor para extensiones.
             // SMHAuthorTable author = this.cursor();
 
-            this.setDeathDateEditable(SMHAuthorTable.IsDead == NoYes::Yes);
+            //element.setDeathDateEditable(SMHAuthorTable.IsDead == NoYes::Yes);
+
+            SMHAuthorTable.setDeathDateEditableInForm();
 
             return ret;
         }
@@ -73,10 +71,16 @@ public class SMHAuthor extends FormRun
 					<DataField>DataAreaId</DataField>
 				</AxFormDataSourceField>
 				<AxFormDataSourceField>
+					<DataField>DeathDate</DataField>
+				</AxFormDataSourceField>
+				<AxFormDataSourceField>
 					<DataField>FirstName</DataField>
 				</AxFormDataSourceField>
 				<AxFormDataSourceField>
 					<DataField>Id</DataField>
+				</AxFormDataSourceField>
+				<AxFormDataSourceField>
+					<DataField>IsDead</DataField>
 				</AxFormDataSourceField>
 				<AxFormDataSourceField>
 					<DataField>LastName</DataField>

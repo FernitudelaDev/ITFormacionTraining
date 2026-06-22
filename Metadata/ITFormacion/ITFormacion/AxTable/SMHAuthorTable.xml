@@ -50,6 +50,58 @@ public class SMHAuthorTable extends common
 
 ]]></Source>
 			</Method>
+			<Method>
+				<Name>modifiedField</Name>
+				<Source><![CDATA[
+    public void modifiedField(FieldId _fieldId)
+    {
+        super(_fieldId);
+
+        switch (_fieldId)
+        {
+            case fieldNum(SMHAuthorTable, IsDead):
+                this.modifiedIsDead();
+                break;
+
+            case fieldNum(SMHAuthorTable, BirthDate):
+            //this.modifiedBirthDate();
+            //break;
+        }
+    }
+
+]]></Source>
+			</Method>
+			<Method>
+				<Name>modifiedIsDead</Name>
+				<Source><![CDATA[
+    public void modifiedIsDead()
+    {
+        if (!this.IsDead)
+        {
+            this.DeathDate = dateNull();
+        }
+
+        this.setDeathDateEditableInForm();
+    }
+
+]]></Source>
+			</Method>
+			<Method>
+				<Name>setDeathDateEditableInForm</Name>
+				<Source><![CDATA[
+    public void setDeathDateEditableInForm()
+    {
+        FormDataSource formDataSource = FormDataUtil::getFormDataSource(this);
+
+        if (formDataSource)
+        {
+            formDataSource.object(fieldNum(SMHAuthorTable, DeathDate)).allowEdit(this.IsDead);
+        }
+
+    }
+
+]]></Source>
+			</Method>
 		</Methods>
 	</SourceCode>
 	<FormRef>FTDBook</FormRef>

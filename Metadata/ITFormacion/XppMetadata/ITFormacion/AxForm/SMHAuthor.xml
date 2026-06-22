@@ -12,26 +12,19 @@
 			<Name>SMHAuthorTable</Name>
 			<Methods>
 				<Method>
-					<Name>setDeathDateEditable</Name>
-					<Visibility>Public</Visibility>
-					<Parameters>
-						<AxMethodParameter>
-							<Type>Enum</Type>
-							<TypeName>boolean</TypeName>
-							<Name>_isEditable</Name>
-						</AxMethodParameter>
-					</Parameters>
-					<ReturnType>
-						<TypeName></TypeName>
-					</ReturnType>
-				</Method>
-				<Method>
 					<Name>active</Name>
 					<Visibility>Public</Visibility>
 					<ReturnType>
 						<Type>Int32</Type>
 						<TypeName></TypeName>
 					</ReturnType>
+					<Variables>
+						<AxMethodVariable>
+							<Type>Int32</Type>
+							<TypeName></TypeName>
+							<Name>ret</Name>
+						</AxMethodVariable>
+					</Variables>
 				</Method>
 			</Methods>
 			<Fields />

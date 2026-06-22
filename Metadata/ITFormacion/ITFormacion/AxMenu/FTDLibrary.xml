@@ -15,8 +15,8 @@
 				</AxMenuElement>
 				<AxMenuElement xmlns=""
 					i:type="AxMenuElementMenuItem">
-					<Name>SMHAutor</Name>
-					<MenuItemName>SMHAutor</MenuItemName>
+					<Name>SMHAuthor</Name>
+					<MenuItemName>SMHAuthor</MenuItemName>
 				</AxMenuElement>
 			</Elements>
 		</AxMenuElement>
