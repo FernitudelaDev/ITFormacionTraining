@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="utf-8"?>
+<AxView xmlns:i="http://www.w3.org/2001/XMLSchema-instance">
+	<Name>AIBBookAuthorFantasyView</Name>
+	<SourceCode>
+		<Declaration><![CDATA[
+public class AIBBookAuthorFantasyView extends common
+{
+}
+
+]]></Declaration>
+		<Methods />
+	</SourceCode>
+	<SubscriberAccessLevel>
+		<Read>Allow</Read>
+	</SubscriberAccessLevel>
+	<Query>AIBBookAuthorFantasyQuery</Query>
+	<FieldGroups>
+		<AxTableFieldGroup>
+			<Name>AutoReport</Name>
+			<Fields />
+		</AxTableFieldGroup>
+		<AxTableFieldGroup>
+			<Name>AutoLookup</Name>
+			<Fields />
+		</AxTableFieldGroup>
+		<AxTableFieldGroup>
+			<Name>AutoIdentification</Name>
+			<AutoPopulate>Yes</AutoPopulate>
+			<Fields />
+		</AxTableFieldGroup>
+		<AxTableFieldGroup>
+			<Name>AutoSummary</Name>
+			<Fields />
+		</AxTableFieldGroup>
+		<AxTableFieldGroup>
+			<Name>AutoBrowse</Name>
+			<Fields />
+		</AxTableFieldGroup>
+		<AxTableFieldGroup>
+			<Name>Grid</Name>
+			<Fields>
+				<AxTableFieldGroupField>
+					<DataField>Genre</DataField>
+				</AxTableFieldGroupField>
+				<AxTableFieldGroupField>
+					<DataField>DeathDate</DataField>
+				</AxTableFieldGroupField>
+				<AxTableFieldGroupField>
+					<DataField>IsDead</DataField>
+				</AxTableFieldGroupField>
+				<AxTableFieldGroupField>
+					<DataField>BirthDate</DataField>
+				</AxTableFieldGroupField>
+				<AxTableFieldGroupField>
+					<DataField>LastName</DataField>
+				</AxTableFieldGroupField>
+				<AxTableFieldGroupField>
+					<DataField>FirstName</DataField>
+				</AxTableFieldGroupField>
+				<AxTableFieldGroupField>
+					<DataField>AuthorId</DataField>
+				</AxTableFieldGroupField>
+				<AxTableFieldGroupField>
+					<DataField>Name</DataField>
+				</AxTableFieldGroupField>
+				<AxTableFieldGroupField>
+					<DataField>ModifiedDateTime1</DataField>
+				</AxTableFieldGroupField>
+			</Fields>
+		</AxTableFieldGroup>
+	</FieldGroups>
+	<Fields>
+		<AxViewField xmlns=""
+			i:type="AxViewFieldBound">
+			<Name>Id</Name>
+			<DataField>Id</DataField>
+			<DataSource>AIBBookTable</DataSource>
+		</AxViewField>
+		<AxViewField xmlns=""
+			i:type="AxViewFieldBound">
+			<Name>Genre</Name>
+			<DataField>Genre</DataField>
+			<DataSource>AIBBookTable</DataSource>
+		</AxViewField>
+		<AxViewField xmlns=""
+			i:type="AxViewFieldBound">
+			<Name>ModifiedDateTime1</Name>
+			<DataField>ModifiedDateTime</DataField>
+			<DataSource>AIBBookTable</DataSource>
+		</AxViewField>
+		<AxViewField xmlns=""
+			i:type="AxViewFieldBound">
+			<Name>Name</Name>
+			<DataField>Name</DataField>
+			<DataSource>AIBBookTable</DataSource>
+		</AxViewField>
+		<AxViewField xmlns=""
+			i:type="AxViewFieldBound">
+			<Name>AuthorId</Name>
+			<Label>@ITFormacion:AuthorTable</Label>
+			<DataField>Id</DataField>
+			<DataSource>AIBAuthorTable</DataSource>
+		</AxViewField>
+		<AxViewField xmlns=""
+			i:type="AxViewFieldBound">
+			<Name>FirstName</Name>
+			<DataField>FirstName</DataField>
+			<DataSource>AIBAuthorTable</DataSource>
+		</AxViewField>
+		<AxViewField xmlns=""
+			i:type="AxViewFieldBound">
+			<Name>LastName</Name>
+			<DataField>LastName</DataField>
+			<DataSource>AIBAuthorTable</DataSource>
+		</AxViewField>
+		<AxViewField xmlns=""
+			i:type="AxViewFieldBound">
+			<Name>BirthDate</Name>
+			<DataField>BirthDate</DataField>
+			<DataSource>AIBAuthorTable</DataSource>
+		</AxViewField>
+		<AxViewField xmlns=""
+			i:type="AxViewFieldBound">
+			<Name>IsDead</Name>
+			<DataField>IsDead</DataField>
+			<DataSource>AIBAuthorTable</DataSource>
+		</AxViewField>
+		<AxViewField xmlns=""
+			i:type="AxViewFieldBound">
+			<Name>DeathDate</Name>
+			<DataField>DeathDate</DataField>
+			<DataSource>AIBAuthorTable</DataSource>
+		</AxViewField>
+	</Fields>
+	<Indexes />
+	<Mappings />
+	<Relations />
+	<StateMachines />
+	<ViewMetadata>
+		<Name>Metadata</Name>
+		<SourceCode>
+			<Methods />
+		</SourceCode>
+		<DataSources />
+	</ViewMetadata>
+</AxView>

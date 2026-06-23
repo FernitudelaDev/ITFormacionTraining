@@ -44,9 +44,23 @@
     <Folder Include="Menu Extensions\" />
     <Folder Include="Menus\" />
     <Folder Include="Security Privileges\" />
+    <Folder Include="Service Groups\" />
+    <Folder Include="Services\" />
+    <Folder Include="Simple Queries\" />
     <Folder Include="Tables\" />
+    <Folder Include="Views\" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="AxClass\AIBBookCreationService">
+      <SubType>Content</SubType>
+      <Name>AIBBookCreationService</Name>
+      <Link>Classes\AIBBookCreationService</Link>
+    </Content>
+    <Content Include="AxClass\AIBQueryVSSelect">
+      <SubType>Content</SubType>
+      <Name>AIBQueryVSSelect</Name>
+      <Link>Classes\AIBQueryVSSelect</Link>
+    </Content>
     <Content Include="AxClass\AIBRunnableClassExample">
       <SubType>Content</SubType>
       <Name>AIBRunnableClassExample</Name>
@@ -122,6 +136,11 @@
       <Name>AIBLibrary</Name>
       <Link>Menus\AIBLibrary</Link>
     </Content>
+    <Content Include="AxQuery\AIBBookAuthorFantasyQuery">
+      <SubType>Content</SubType>
+      <Name>AIBBookAuthorFantasyQuery</Name>
+      <Link>Simple Queries\AIBBookAuthorFantasyQuery</Link>
+    </Content>
     <Content Include="AxSecurityPrivilege\AIBAuthorEntityMaintain">
       <SubType>Content</SubType>
       <Name>AIBAuthorEntityMaintain</Name>
@@ -142,6 +161,16 @@
       <Name>AIBBookTableEntityView</Name>
       <Link>Security Privileges\AIBBookTableEntityView</Link>
     </Content>
+    <Content Include="AxServiceGroup\AIBBookCreationServiceGroup">
+      <SubType>Content</SubType>
+      <Name>AIBBookCreationServiceGroup</Name>
+      <Link>Service Groups\AIBBookCreationServiceGroup</Link>
+    </Content>
+    <Content Include="AxService\AIBBookCreationService">
+      <SubType>Content</SubType>
+      <Name>AIBBookCreationService</Name>
+      <Link>Services\AIBBookCreationService</Link>
+    </Content>
     <Content Include="AxTable\AIBAuthorStaging">
       <SubType>Content</SubType>
       <Name>AIBAuthorStaging</Name>
@@ -161,6 +190,11 @@
       <SubType>Content</SubType>
       <Name>AIBBookTable</Name>
       <Link>Tables\AIBBookTable</Link>
+    </Content>
+    <Content Include="AxView\AIBBookAuthorFantasyView">
+      <SubType>Content</SubType>
+      <Name>AIBBookAuthorFantasyView</Name>
+      <Link>Views\AIBBookAuthorFantasyView</Link>
     </Content>
     <Content Include="ITFormacion.en-US.label.txt">
       <SubType>Content</SubType>

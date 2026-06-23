@@ -95,6 +95,24 @@ public class AIBAuthorTable extends common
 
 ]]></Source>
 			</Method>
+			<Method>
+				<Name>sqlQueryinXpp</Name>
+				<Source><![CDATA[
+    public static void sqlQueryinXpp()
+    {
+        AIBBookTable bookTable;
+        AIBAuthorTable authorTable;
+
+        while select Id, Name, Genre from bookTable
+            join Id, FirstName, LastName from authorTable
+            where bookTable.Author == authorTable.RecId
+        {
+        
+        }
+    }
+
+]]></Source>
+			</Method>
 		</Methods>
 	</SourceCode>
 	<FormRef>AIBAuthor</FormRef>

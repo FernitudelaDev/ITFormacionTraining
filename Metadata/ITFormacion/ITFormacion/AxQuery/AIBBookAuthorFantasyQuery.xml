@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<AxQuery xmlns:i="http://www.w3.org/2001/XMLSchema-instance" xmlns=""
+	i:type="AxQuerySimple">
+	<Name>AIBBookAuthorFantasyQuery</Name>
+	<SourceCode>
+		<Methods>
+			<Method>
+				<Name>classDeclaration</Name>
+				<Source><![CDATA[
+[Query]
+public class AIBBookAuthorFantasyQuery extends QueryRun
+{
+}
+]]></Source>
+			</Method>
+		</Methods>
+	</SourceCode>
+	<DataSources>
+		<AxQuerySimpleRootDataSource>
+			<Name>AIBBookTable</Name>
+			<DynamicFields>Yes</DynamicFields>
+			<Table>AIBBookTable</Table>
+			<DataSources>
+				<AxQuerySimpleEmbeddedDataSource>
+					<Name>AIBAuthorTable</Name>
+					<DynamicFields>Yes</DynamicFields>
+					<Table>AIBAuthorTable</Table>
+					<DataSources />
+					<DerivedDataSources />
+					<Fields />
+					<Ranges />
+					<Relations>
+						<AxQuerySimpleDataSourceRelation>
+							<Name>QueryDataSourceRelation1</Name>
+							<JoinDataSource>AIBBookTable</JoinDataSource>
+							<JoinRelationName>AIBAuthorTable</JoinRelationName>
+						</AxQuerySimpleDataSourceRelation>
+					</Relations>
+				</AxQuerySimpleEmbeddedDataSource>
+			</DataSources>
+			<DerivedDataSources />
+			<Fields />
+			<Ranges>
+				<AxQuerySimpleDataSourceRange>
+					<Name>Genre</Name>
+					<Field>Genre</Field>
+					<Value>Fantasy</Value>
+				</AxQuerySimpleDataSourceRange>
+			</Ranges>
+			<GroupBy />
+			<Having />
+			<OrderBy />
+		</AxQuerySimpleRootDataSource>
+	</DataSources>
+</AxQuery>

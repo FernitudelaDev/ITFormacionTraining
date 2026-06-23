@@ -34,6 +34,21 @@ public class AIBBookTable extends common
 ]]></Source>
 			</Method>
 			<Method>
+				<Name>find</Name>
+				<Source><![CDATA[
+    public static AIBBookTable find(AIBId _id)
+    {
+        AIBBookTable bookTable;
+
+        select firstonly bookTable
+            where bookTable.Id == _id;
+
+        return bookTable;
+    }
+
+]]></Source>
+			</Method>
+			<Method>
 				<Name>selectCountByGenre</Name>
 				<Source><![CDATA[
     public static int selectCountByGenre(AIBGenreEnum _genre)
