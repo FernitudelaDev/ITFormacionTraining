@@ -38,5 +38,15 @@
 				<TypeName></TypeName>
 			</ReturnType>
 		</Method>
+		<Method>
+			<Name>dispAuthorFullName</Name>
+			<IsDisplay>true</IsDisplay>
+			<Visibility>Public</Visibility>
+			<ReturnType>
+				<Tags></Tags>
+				<Type>ExtendedDataType</Type>
+				<TypeName>RRBAuthorFullName</TypeName>
+			</ReturnType>
+		</Method>
 	</Methods>
 </z:anyType>

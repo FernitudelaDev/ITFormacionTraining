@@ -3,13 +3,6 @@
 	i:type="AxPropertyCollection" xmlns:z="http://schemas.microsoft.com/2003/10/Serialization/">
 	<Methods>
 		<Method>
-			<Name>Method1</Name>
-			<ReturnType>
-				<Tags></Tags>
-				<TypeName></TypeName>
-			</ReturnType>
-		</Method>
-		<Method>
 			<Name>validateWrite</Name>
 			<Visibility>Public</Visibility>
 			<ReturnType>
@@ -57,6 +50,24 @@
 			<ReturnType>
 				<Tags></Tags>
 				<TypeName></TypeName>
+			</ReturnType>
+		</Method>
+		<Method>
+			<Name>findRecId</Name>
+			<IsStatic>true</IsStatic>
+			<Visibility>Public</Visibility>
+			<Parameters>
+				<AxMethodParameter>
+					<Tags></Tags>
+					<Type>ExtendedDataType</Type>
+					<TypeName>RefRecId</TypeName>
+					<Name>_refRecId</Name>
+				</AxMethodParameter>
+			</Parameters>
+			<ReturnType>
+				<Tags></Tags>
+				<Type>Record</Type>
+				<TypeName>RRBAuthorTable</TypeName>
 			</ReturnType>
 		</Method>
 	</Methods>

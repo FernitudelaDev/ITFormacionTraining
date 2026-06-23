@@ -23,6 +23,8 @@ internal final class RRBRunnableClassExample
         int scienceBooks = RRBBookTable::selectCountByGenre(RRBGenreEnum::Science);
 
         Info(strFmt("@ITFormacion:NumberOfBooksByGenre", fantasyBooks, historyBooks, scienceBooks));
+
+                
     }
 
 ]]></Source>

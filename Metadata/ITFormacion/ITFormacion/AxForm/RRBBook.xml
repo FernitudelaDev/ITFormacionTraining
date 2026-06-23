@@ -49,7 +49,13 @@ public class RRBBook extends FormRun
 			<Table>RRBBookTable</Table>
 			<Fields>
 				<AxFormDataSourceField>
+					<DataField>Author</DataField>
+				</AxFormDataSourceField>
+				<AxFormDataSourceField>
 					<DataField>DataAreaId</DataField>
+				</AxFormDataSourceField>
+				<AxFormDataSourceField>
+					<DataField>Genre</DataField>
 				</AxFormDataSourceField>
 				<AxFormDataSourceField>
 					<DataField>Id</DataField>
@@ -167,6 +173,25 @@ public class RRBBook extends FormRun
 								<DataField>Genre</DataField>
 								<DataSource>RRBBookTable</DataSource>
 								<Items />
+							</AxFormControl>
+							<AxFormControl xmlns=""
+								i:type="AxFormReferenceGroupControl">
+								<Name>GroupGrid_Author</Name>
+								<Type>ReferenceGroup</Type>
+								<FormControlExtension
+									i:nil="true" />
+								<Controls />
+								<DataSource>RRBBookTable</DataSource>
+								<ReferenceField>Author</ReferenceField>
+							</AxFormControl>
+							<AxFormControl xmlns=""
+								i:type="AxFormStringControl">
+								<Name>GroupGrid_dispAuthorFullName</Name>
+								<Type>String</Type>
+								<FormControlExtension
+									i:nil="true" />
+								<DataMethod>dispAuthorFullName</DataMethod>
+								<DataSource>RRBBookTable</DataSource>
 							</AxFormControl>
 						</Controls>
 						<DataGroup>Grid</DataGroup>

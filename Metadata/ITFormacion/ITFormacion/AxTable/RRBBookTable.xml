@@ -44,6 +44,22 @@ public class RRBBookTable extends common
 
 ]]></Source>
 			</Method>
+			<Method>
+				<Name>dispAuthorFullName</Name>
+				<Source><![CDATA[
+    /// <summary>
+    ///
+    /// </summary>
+    /// 
+    public display RRBAuthorFullName dispAuthorFullName()
+    {
+        RRBAuthorTable authorTable = RRBAuthorTable::findRecId(this.Author);
+
+        return authorTable.FirstName + ' ' + authorTable.LastName;
+    }
+
+]]></Source>
+			</Method>
 		</Methods>
 	</SourceCode>
 	<FormRef>RRBBook</FormRef>
@@ -95,6 +111,12 @@ public class RRBBookTable extends common
 				<AxTableFieldGroupField>
 					<DataField>Genre</DataField>
 				</AxTableFieldGroupField>
+				<AxTableFieldGroupField>
+					<DataField>Author</DataField>
+				</AxTableFieldGroupField>
+				<AxTableFieldGroupField>
+					<DataField>dispAuthorFullName</DataField>
+				</AxTableFieldGroupField>
 			</Fields>
 		</AxTableFieldGroup>
 	</FieldGroups>
@@ -118,6 +140,14 @@ public class RRBBookTable extends common
 			<Name>Genre</Name>
 			<EnumType>RRBGenreEnum</EnumType>
 		</AxTableField>
+		<AxTableField xmlns=""
+			i:type="AxTableFieldInt64">
+			<Name>Author</Name>
+			<ExtendedDataType>RefRecId</ExtendedDataType>
+			<IgnoreEDTRelation>Yes</IgnoreEDTRelation>
+			<Label>@ITFormacion:Author</Label>
+			<Mandatory>Yes</Mandatory>
+		</AxTableField>
 	</Fields>
 	<FullTextIndexes />
 	<Indexes>
@@ -130,8 +160,36 @@ public class RRBBookTable extends common
 				</AxTableIndexField>
 			</Fields>
 		</AxTableIndex>
+		<AxTableIndex>
+			<Name>AuthorTableIdx</Name>
+			<AllowDuplicates>Yes</AllowDuplicates>
+			<Fields>
+				<AxTableIndexField>
+					<DataField>Author</DataField>
+				</AxTableIndexField>
+			</Fields>
+		</AxTableIndex>
 	</Indexes>
 	<Mappings />
-	<Relations />
+	<Relations>
+		<AxTableRelation xmlns=""
+			i:type="AxTableRelationForeignKey">
+			<Name>AuthorTable</Name>
+			<Cardinality>ZeroMore</Cardinality>
+			<OnDelete>Restricted</OnDelete>
+			<RelatedTable>RRBAuthorTable</RelatedTable>
+			<RelatedTableCardinality>ExactlyOne</RelatedTableCardinality>
+			<RelationshipType>Association</RelationshipType>
+			<Constraints>
+				<AxTableRelationConstraint xmlns=""
+					i:type="AxTableRelationConstraintField">
+					<Name>Author</Name>
+					<Field>Author</Field>
+					<RelatedField>RecId</RelatedField>
+				</AxTableRelationConstraint>
+			</Constraints>
+			<Index>RecId</Index>
+		</AxTableRelation>
+	</Relations>
 	<StateMachines />
 </AxTable>

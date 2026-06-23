@@ -34,6 +34,7 @@
   <ItemGroup>
     <Folder Include="Base Enums\" />
     <Folder Include="Classes\" />
+    <Folder Include="Data Entities\" />
     <Folder Include="Display Menu Items\" />
     <Folder Include="EDT Dates\" />
     <Folder Include="EDT Strings\" />
@@ -41,6 +42,7 @@
     <Folder Include="Label Files\" />
     <Folder Include="Menu Extensions\" />
     <Folder Include="Menus\" />
+    <Folder Include="Security Privileges\" />
     <Folder Include="Tables\" />
   </ItemGroup>
   <ItemGroup>
@@ -48,6 +50,21 @@
       <SubType>Content</SubType>
       <Name>RRBRunnableClassExample</Name>
       <Link>Classes\RRBRunnableClassExample</Link>
+    </Content>
+    <Content Include="AxDataEntityView\RRBAuthorEntity">
+      <SubType>Content</SubType>
+      <Name>RRBAuthorEntity</Name>
+      <Link>Data Entities\RRBAuthorEntity</Link>
+    </Content>
+    <Content Include="AxDataEntityView\RRBBookEntity">
+      <SubType>Content</SubType>
+      <Name>RRBBookEntity</Name>
+      <Link>Data Entities\RRBBookEntity</Link>
+    </Content>
+    <Content Include="AxEdt\RRBAuthorFullName">
+      <SubType>Content</SubType>
+      <Name>RRBAuthorFullName</Name>
+      <Link>EDT Strings\RRBAuthorFullName</Link>
     </Content>
     <Content Include="AxEdt\RRBDeathDate">
       <SubType>Content</SubType>
@@ -104,10 +121,40 @@
       <Name>RRBLibrary</Name>
       <Link>Menus\RRBLibrary</Link>
     </Content>
+    <Content Include="AxSecurityPrivilege\RRBAuthorEntityMaintain">
+      <SubType>Content</SubType>
+      <Name>RRBAuthorEntityMaintain</Name>
+      <Link>Security Privileges\RRBAuthorEntityMaintain</Link>
+    </Content>
+    <Content Include="AxSecurityPrivilege\RRBAuthorEntityView">
+      <SubType>Content</SubType>
+      <Name>RRBAuthorEntityView</Name>
+      <Link>Security Privileges\RRBAuthorEntityView</Link>
+    </Content>
+    <Content Include="AxSecurityPrivilege\RRBBookTableEntityMaintain">
+      <SubType>Content</SubType>
+      <Name>RRBBookTableEntityMaintain</Name>
+      <Link>Security Privileges\RRBBookTableEntityMaintain</Link>
+    </Content>
+    <Content Include="AxSecurityPrivilege\RRBBookTableEntityView">
+      <SubType>Content</SubType>
+      <Name>RRBBookTableEntityView</Name>
+      <Link>Security Privileges\RRBBookTableEntityView</Link>
+    </Content>
+    <Content Include="AxTable\RRBAuthorStaging">
+      <SubType>Content</SubType>
+      <Name>RRBAuthorStaging</Name>
+      <Link>Tables\RRBAuthorStaging</Link>
+    </Content>
     <Content Include="AxTable\RRBAuthorTable">
       <SubType>Content</SubType>
       <Name>RRBAuthorTable</Name>
       <Link>Tables\RRBAuthorTable</Link>
+    </Content>
+    <Content Include="AxTable\RRBBookStaging">
+      <SubType>Content</SubType>
+      <Name>RRBBookStaging</Name>
+      <Link>Tables\RRBBookStaging</Link>
     </Content>
     <Content Include="AxTable\RRBBookTable">
       <SubType>Content</SubType>

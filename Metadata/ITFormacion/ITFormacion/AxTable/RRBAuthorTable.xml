@@ -5,21 +5,13 @@
 		<Declaration><![CDATA[
 public class RRBAuthorTable extends common
 {
-}
-]]></Declaration>
-		<Methods>
-			<Method>
-				<Name>Method1</Name>
-				<Source><![CDATA[
     /// <summary>
     ///
     /// </summary>
-    private void Method1()
-    {
-    }
-
-]]></Source>
-			</Method>
+    
+}
+]]></Declaration>
+		<Methods>
 			<Method>
 				<Name>validateWrite</Name>
 				<Source><![CDATA[
@@ -97,8 +89,25 @@ public class RRBAuthorTable extends common
         if(formDataSource)
         {
             formDataSource.object(fieldNum(RRBAuthorTable, DeathDate)).allowEdit(this.IsDead);
-
         }
+    }
+
+]]></Source>
+			</Method>
+			<Method>
+				<Name>findRecId</Name>
+				<Source><![CDATA[
+    /// <summary>
+    ///
+    /// </summary>
+    public static RRBAuthorTable findRecId(RefRecId _refRecId)
+    {
+        RRBAuthorTable author;
+
+        select firstonly author
+            where author.RecId == _refRecId;
+
+        return author;
     }
 
 ]]></Source>
@@ -122,7 +131,17 @@ public class RRBAuthorTable extends common
 		</AxTableFieldGroup>
 		<AxTableFieldGroup>
 			<Name>AutoLookup</Name>
-			<Fields />
+			<Fields>
+				<AxTableFieldGroupField>
+					<DataField>Id</DataField>
+				</AxTableFieldGroupField>
+				<AxTableFieldGroupField>
+					<DataField>FirstName</DataField>
+				</AxTableFieldGroupField>
+				<AxTableFieldGroupField>
+					<DataField>LastName</DataField>
+				</AxTableFieldGroupField>
+			</Fields>
 		</AxTableFieldGroup>
 		<AxTableFieldGroup>
 			<Name>AutoIdentification</Name>
