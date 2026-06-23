@@ -35,6 +35,7 @@
   <ItemGroup>
     <Folder Include="Base Enums\" />
     <Folder Include="Classes\" />
+    <Folder Include="Data Entities\" />
     <Folder Include="Display Menu Items\" />
     <Folder Include="EDT Dates\" />
     <Folder Include="EDT Strings\" />
@@ -42,6 +43,7 @@
     <Folder Include="Label Files\" />
     <Folder Include="Menu Extensions\" />
     <Folder Include="Menus\" />
+    <Folder Include="Security Privileges\" />
     <Folder Include="Tables\" />
   </ItemGroup>
   <ItemGroup>
@@ -49,6 +51,16 @@
       <SubType>Content</SubType>
       <Name>RunnableClassExample</Name>
       <Link>Classes\RunnableClassExample</Link>
+    </Content>
+    <Content Include="AxDataEntityView\FTDBookEntity">
+      <SubType>Content</SubType>
+      <Name>FTDBookEntity</Name>
+      <Link>Data Entities\FTDBookEntity</Link>
+    </Content>
+    <Content Include="AxDataEntityView\SMHAuthorEntity">
+      <SubType>Content</SubType>
+      <Name>SMHAuthorEntity</Name>
+      <Link>Data Entities\SMHAuthorEntity</Link>
     </Content>
     <Content Include="AxEdt\FTDId">
       <SubType>Content</SubType>
@@ -110,10 +122,40 @@
       <Name>FTDLibrary</Name>
       <Link>Menus\FTDLibrary</Link>
     </Content>
+    <Content Include="AxSecurityPrivilege\FTDBookTableEntityMaintain">
+      <SubType>Content</SubType>
+      <Name>FTDBookTableEntityMaintain</Name>
+      <Link>Security Privileges\FTDBookTableEntityMaintain</Link>
+    </Content>
+    <Content Include="AxSecurityPrivilege\FTDBookTableEntityView">
+      <SubType>Content</SubType>
+      <Name>FTDBookTableEntityView</Name>
+      <Link>Security Privileges\FTDBookTableEntityView</Link>
+    </Content>
+    <Content Include="AxSecurityPrivilege\SMHAuthorEntityMaintain">
+      <SubType>Content</SubType>
+      <Name>SMHAuthorEntityMaintain</Name>
+      <Link>Security Privileges\SMHAuthorEntityMaintain</Link>
+    </Content>
+    <Content Include="AxSecurityPrivilege\SMHAuthorEntityView">
+      <SubType>Content</SubType>
+      <Name>SMHAuthorEntityView</Name>
+      <Link>Security Privileges\SMHAuthorEntityView</Link>
+    </Content>
+    <Content Include="AxTable\FTDBookStaging">
+      <SubType>Content</SubType>
+      <Name>FTDBookStaging</Name>
+      <Link>Tables\FTDBookStaging</Link>
+    </Content>
     <Content Include="AxTable\FTDBookTable">
       <SubType>Content</SubType>
       <Name>FTDBookTable</Name>
       <Link>Tables\FTDBookTable</Link>
+    </Content>
+    <Content Include="AxTable\SMHAuthorStaging">
+      <SubType>Content</SubType>
+      <Name>SMHAuthorStaging</Name>
+      <Link>Tables\SMHAuthorStaging</Link>
     </Content>
     <Content Include="AxTable\SMHAuthorTable">
       <SubType>Content</SubType>

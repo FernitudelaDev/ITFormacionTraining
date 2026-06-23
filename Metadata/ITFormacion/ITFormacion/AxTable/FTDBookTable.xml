@@ -178,8 +178,12 @@ public class FTDBookTable extends common
 	<Relations>
 		<AxTableRelation xmlns=""
 			i:type="AxTableRelationForeignKey">
-			<Name>RelationForeignKey1</Name>
+			<Name>AuthorTableFK</Name>
+			<Cardinality>ZeroMore</Cardinality>
+			<OnDelete>CascadeRestricted</OnDelete>
 			<RelatedTable>SMHAuthorTable</RelatedTable>
+			<RelatedTableCardinality>ExactlyOne</RelatedTableCardinality>
+			<RelationshipType>Association</RelationshipType>
 			<Constraints>
 				<AxTableRelationConstraint xmlns=""
 					i:type="AxTableRelationConstraintField">
