@@ -55,6 +55,11 @@
       <Name>FTDId</Name>
       <Link>EDT Strings\FTDId</Link>
     </Content>
+    <Content Include="AxEdt\SMHAuthorFullName">
+      <SubType>Content</SubType>
+      <Name>SMHAuthorFullName</Name>
+      <Link>EDT Strings\SMHAuthorFullName</Link>
+    </Content>
     <Content Include="AxEdt\SMHDeathDate">
       <SubType>Content</SubType>
       <Name>SMHDeathDate</Name>

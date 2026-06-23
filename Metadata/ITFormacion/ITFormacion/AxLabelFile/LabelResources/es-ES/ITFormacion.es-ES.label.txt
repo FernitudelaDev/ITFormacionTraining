@@ -1,4 +1,5 @@
-﻿Books=Libros
+﻿AuthorFullName=NombreAutorCompleto
+Books=Libros
 BookTable=Libro
 DeathDate=FechaFallecimiento
 Fantasy=Fantasia
@@ -10,9 +11,6 @@ Library=Biblioteca
 Master=Master
 NewLabel0=Label files created on 06/19/2026 09:49:00 for label file Id ITFormacion and language es-ES
  ;Label file comment - see above label
-NewLabel2=New Text
-NewLabel3=New Text
-NewLabel4=New Text
 NumeroDeLibrosPorGenero=Hay %1 libros de fantasia, %2 libros de historia and %3 libros de ciencia
 Science=Ciencia
 Thriller=Suspense
