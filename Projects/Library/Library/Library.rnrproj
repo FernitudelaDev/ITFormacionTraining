@@ -44,6 +44,9 @@
     <Folder Include="Menu Extensions\" />
     <Folder Include="Menus\" />
     <Folder Include="Security Privileges\" />
+    <Folder Include="Service Groups\" />
+    <Folder Include="Services\" />
+    <Folder Include="Simple Queries\" />
     <Folder Include="Tables\" />
   </ItemGroup>
   <ItemGroup>
@@ -51,6 +54,11 @@
       <SubType>Content</SubType>
       <Name>RunnableClassExample</Name>
       <Link>Classes\RunnableClassExample</Link>
+    </Content>
+    <Content Include="AxClass\SMHBookCreationService">
+      <SubType>Content</SubType>
+      <Name>SMHBookCreationService</Name>
+      <Link>Classes\SMHBookCreationService</Link>
     </Content>
     <Content Include="AxDataEntityView\FTDBookEntity">
       <SubType>Content</SubType>
@@ -122,6 +130,11 @@
       <Name>FTDLibrary</Name>
       <Link>Menus\FTDLibrary</Link>
     </Content>
+    <Content Include="AxQuery\SMHBookAuthorQuery">
+      <SubType>Content</SubType>
+      <Name>SMHBookAuthorQuery</Name>
+      <Link>Simple Queries\SMHBookAuthorQuery</Link>
+    </Content>
     <Content Include="AxSecurityPrivilege\FTDBookTableEntityMaintain">
       <SubType>Content</SubType>
       <Name>FTDBookTableEntityMaintain</Name>
@@ -141,6 +154,16 @@
       <SubType>Content</SubType>
       <Name>SMHAuthorEntityView</Name>
       <Link>Security Privileges\SMHAuthorEntityView</Link>
+    </Content>
+    <Content Include="AxServiceGroup\SMHBookCreationServiceGroup">
+      <SubType>Content</SubType>
+      <Name>SMHBookCreationServiceGroup</Name>
+      <Link>Service Groups\SMHBookCreationServiceGroup</Link>
+    </Content>
+    <Content Include="AxService\SMHBookCreationService">
+      <SubType>Content</SubType>
+      <Name>SMHBookCreationService</Name>
+      <Link>Services\SMHBookCreationService</Link>
     </Content>
     <Content Include="AxTable\FTDBookStaging">
       <SubType>Content</SubType>

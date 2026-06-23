@@ -70,5 +70,14 @@
 				<TypeName>SMHAuthorTable</TypeName>
 			</ReturnType>
 		</Method>
+		<Method>
+			<Name>sqlQueryinXpp</Name>
+			<IsStatic>true</IsStatic>
+			<Visibility>Public</Visibility>
+			<ReturnType>
+				<Tags></Tags>
+				<TypeName></TypeName>
+			</ReturnType>
+		</Method>
 	</Methods>
 </z:anyType>
