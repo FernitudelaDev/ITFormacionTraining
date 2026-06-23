@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Diagnostics
-  GenerationTime="2026-06-23T07:19:19.5174196+00:00">
+  GenerationTime="2026-06-23T22:57:44.384662+00:00">
   <Items>
     <Diagnostic>
       <DiagnosticType>VisualStudioIntegration</DiagnosticType>
@@ -111,13 +111,6 @@
       <DiagnosticType>Unspecified</DiagnosticType>
       <Severity>Informational</Severity>
       <Path>labelc.exe</Path>
-      <Moniker>Generating satellite resource assembly for label file Id, language es</Moniker>
-      <Message>Generating satellite resource assembly for label file Id, language es</Message>
-    </Diagnostic>
-    <Diagnostic>
-      <DiagnosticType>Unspecified</DiagnosticType>
-      <Severity>Informational</Severity>
-      <Path>labelc.exe</Path>
       <Moniker>Generating satellite resource assembly for label file ACItFormacionLabels, language es-ES</Moniker>
       <Message>Generating satellite resource assembly for label file ACItFormacionLabels, language es-ES</Message>
     </Diagnostic>
@@ -132,6 +125,13 @@
       <DiagnosticType>Unspecified</DiagnosticType>
       <Severity>Informational</Severity>
       <Path>labelc.exe</Path>
+      <Moniker>Generating satellite resource assembly for label file Id, language es</Moniker>
+      <Message>Generating satellite resource assembly for label file Id, language es</Message>
+    </Diagnostic>
+    <Diagnostic>
+      <DiagnosticType>Unspecified</DiagnosticType>
+      <Severity>Informational</Severity>
+      <Path>labelc.exe</Path>
       <Moniker>Done compiling 4 label files!</Moniker>
       <Message>Done compiling 4 label files!</Message>
     </Diagnostic>
@@ -139,22 +139,22 @@
       <DiagnosticType>Unspecified</DiagnosticType>
       <Severity>Informational</Severity>
       <Path>labelc.exe</Path>
-      <Moniker>Model store query time 00:00:02.0590518.</Moniker>
-      <Message>Model store query time 00:00:02.0590518.</Message>
+      <Moniker>Model store query time 00:00:01.4376014.</Moniker>
+      <Message>Model store query time 00:00:01.4376014.</Message>
     </Diagnostic>
     <Diagnostic>
       <DiagnosticType>Unspecified</DiagnosticType>
       <Severity>Informational</Severity>
       <Path>labelc.exe</Path>
-      <Moniker>Label compilation time 00:00:05.1805842.</Moniker>
-      <Message>Label compilation time 00:00:05.1805842.</Message>
+      <Moniker>Label compilation time 00:00:03.8665013.</Moniker>
+      <Message>Label compilation time 00:00:03.8665013.</Message>
     </Diagnostic>
     <Diagnostic>
       <DiagnosticType>Unspecified</DiagnosticType>
       <Severity>Informational</Severity>
       <Path>labelc.exe</Path>
-      <Moniker>Completed label compilation in 7 seconds with exit code 0.</Moniker>
-      <Message>Completed label compilation in 7 seconds with exit code 0.</Message>
+      <Moniker>Completed label compilation in 5 seconds with exit code 0.</Moniker>
+      <Message>Completed label compilation in 5 seconds with exit code 0.</Message>
     </Diagnostic>
   </Items>
   <Aliases />

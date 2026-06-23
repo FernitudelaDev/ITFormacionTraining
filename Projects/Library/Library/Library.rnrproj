@@ -33,6 +33,7 @@
   </PropertyGroup>
   <ItemGroup>
     <Folder Include="Base Enums\" />
+    <Folder Include="Data Entities\" />
     <Folder Include="Display Menu Items\" />
     <Folder Include="EDT Dates\" />
     <Folder Include="EDT Strings\" />
@@ -41,6 +42,7 @@
     <Folder Include="Label Files\" />
     <Folder Include="Menu Extensions\" />
     <Folder Include="Menus\" />
+    <Folder Include="Security Privileges\" />
     <Folder Include="Tables\" />
   </ItemGroup>
   <ItemGroup>
@@ -53,6 +55,16 @@
       <SubType>Content</SubType>
       <Name>ACItFormacionLabels.es-ES.label.txt</Name>
       <DependentUpon>AxLabelFile\ACItFormacionLabels_es-ES</DependentUpon>
+    </Content>
+    <Content Include="AxDataEntityView\ACAuthorEntity">
+      <SubType>Content</SubType>
+      <Name>ACAuthorEntity</Name>
+      <Link>Data Entities\ACAuthorEntity</Link>
+    </Content>
+    <Content Include="AxDataEntityView\ACBookEntity">
+      <SubType>Content</SubType>
+      <Name>ACBookEntity</Name>
+      <Link>Data Entities\ACBookEntity</Link>
     </Content>
     <Content Include="AxEdt\ACAuthorFullName">
       <SubType>Content</SubType>
@@ -124,10 +136,40 @@
       <Name>ACLibrary</Name>
       <Link>Menus\ACLibrary</Link>
     </Content>
+    <Content Include="AxSecurityPrivilege\ACAuthorEntityMaintain">
+      <SubType>Content</SubType>
+      <Name>ACAuthorEntityMaintain</Name>
+      <Link>Security Privileges\ACAuthorEntityMaintain</Link>
+    </Content>
+    <Content Include="AxSecurityPrivilege\ACAuthorEntityView">
+      <SubType>Content</SubType>
+      <Name>ACAuthorEntityView</Name>
+      <Link>Security Privileges\ACAuthorEntityView</Link>
+    </Content>
+    <Content Include="AxSecurityPrivilege\ACBookEntityMaintain">
+      <SubType>Content</SubType>
+      <Name>ACBookEntityMaintain</Name>
+      <Link>Security Privileges\ACBookEntityMaintain</Link>
+    </Content>
+    <Content Include="AxSecurityPrivilege\ACBookEntityView">
+      <SubType>Content</SubType>
+      <Name>ACBookEntityView</Name>
+      <Link>Security Privileges\ACBookEntityView</Link>
+    </Content>
+    <Content Include="AxTable\ACAuthorStaging">
+      <SubType>Content</SubType>
+      <Name>ACAuthorStaging</Name>
+      <Link>Tables\ACAuthorStaging</Link>
+    </Content>
     <Content Include="AxTable\ACAuthorTable">
       <SubType>Content</SubType>
       <Name>ACAuthorTable</Name>
       <Link>Tables\ACAuthorTable</Link>
+    </Content>
+    <Content Include="AxTable\ACBookStaging">
+      <SubType>Content</SubType>
+      <Name>ACBookStaging</Name>
+      <Link>Tables\ACBookStaging</Link>
     </Content>
     <Content Include="AxTable\ACBookTable">
       <SubType>Content</SubType>

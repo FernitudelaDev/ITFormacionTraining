@@ -161,7 +161,11 @@ public class ACBookTable extends common
 		<AxTableRelation xmlns=""
 			i:type="AxTableRelationForeignKey">
 			<Name>AuthorTable</Name>
+			<Cardinality>ZeroMore</Cardinality>
+			<OnDelete>Restricted</OnDelete>
 			<RelatedTable>ACAuthorTable</RelatedTable>
+			<RelatedTableCardinality>ExactlyOne</RelatedTableCardinality>
+			<RelationshipType>Association</RelationshipType>
 			<Constraints>
 				<AxTableRelationConstraint xmlns=""
 					i:type="AxTableRelationConstraintField">
