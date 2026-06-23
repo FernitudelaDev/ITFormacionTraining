@@ -1,4 +1,5 @@
 ﻿Author=Autor
+AuthorFullName=Nombre autor
 Books=Libros
 BookTable=Libro
 DeathDate=Fecha de muerte

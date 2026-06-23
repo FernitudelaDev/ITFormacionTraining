@@ -45,7 +45,13 @@ public class FTDBook extends FormRun
 			<Table>FTDBookTable</Table>
 			<Fields>
 				<AxFormDataSourceField>
+					<DataField>Author</DataField>
+				</AxFormDataSourceField>
+				<AxFormDataSourceField>
 					<DataField>DataAreaId</DataField>
+				</AxFormDataSourceField>
+				<AxFormDataSourceField>
+					<DataField>Genre</DataField>
 				</AxFormDataSourceField>
 				<AxFormDataSourceField>
 					<DataField>Id</DataField>
@@ -165,6 +171,25 @@ public class FTDBook extends FormRun
 								<DataField>Genre</DataField>
 								<DataSource>FTDBookTable</DataSource>
 								<Items />
+							</AxFormControl>
+							<AxFormControl xmlns=""
+								i:type="AxFormReferenceGroupControl">
+								<Name>GroupGrid_Author</Name>
+								<Type>ReferenceGroup</Type>
+								<FormControlExtension
+									i:nil="true" />
+								<Controls />
+								<DataSource>FTDBookTable</DataSource>
+								<ReferenceField>Author</ReferenceField>
+							</AxFormControl>
+							<AxFormControl xmlns=""
+								i:type="AxFormStringControl">
+								<Name>GroupGrid_dispAuthorFullName</Name>
+								<Type>String</Type>
+								<FormControlExtension
+									i:nil="true" />
+								<DataMethod>dispAuthorFullName</DataMethod>
+								<DataSource>FTDBookTable</DataSource>
 							</AxFormControl>
 						</Controls>
 						<DataGroup>Grid</DataGroup>

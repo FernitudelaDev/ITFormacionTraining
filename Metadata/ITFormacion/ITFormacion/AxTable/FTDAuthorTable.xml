@@ -106,6 +106,21 @@ public class FTDAuthorTable extends common
 
 ]]></Source>
 			</Method>
+			<Method>
+				<Name>findRecId</Name>
+				<Source><![CDATA[
+    public static FTDAuthorTable findRecId(RefRecId _refRecId)
+    {
+        FTDAuthorTable author;
+
+        select firstonly author
+            where author.RecId == _refRecId;
+
+        return author;
+    }
+
+]]></Source>
+			</Method>
 		</Methods>
 	</SourceCode>
 	<FormRef>FTDAuthor</FormRef>
@@ -125,7 +140,17 @@ public class FTDAuthorTable extends common
 		</AxTableFieldGroup>
 		<AxTableFieldGroup>
 			<Name>AutoLookup</Name>
-			<Fields />
+			<Fields>
+				<AxTableFieldGroupField>
+					<DataField>Id</DataField>
+				</AxTableFieldGroupField>
+				<AxTableFieldGroupField>
+					<DataField>FirstName</DataField>
+				</AxTableFieldGroupField>
+				<AxTableFieldGroupField>
+					<DataField>LastName</DataField>
+				</AxTableFieldGroupField>
+			</Fields>
 		</AxTableFieldGroup>
 		<AxTableFieldGroup>
 			<Name>AutoIdentification</Name>
