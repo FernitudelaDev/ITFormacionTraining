@@ -141,6 +141,16 @@ public class ACBook extends FormRun
 								<DataSource>ACBookTable</DataSource>
 								<Items />
 							</AxFormControl>
+							<AxFormControl xmlns=""
+								i:type="AxFormReferenceGroupControl">
+								<Name>RenameGrid_Author</Name>
+								<Type>ReferenceGroup</Type>
+								<FormControlExtension
+									i:nil="true" />
+								<Controls />
+								<DataSource>ACBookTable</DataSource>
+								<ReferenceField>Author</ReferenceField>
+							</AxFormControl>
 						</Controls>
 						<DataGroup>Grid</DataGroup>
 						<DataSource>ACBookTable</DataSource>

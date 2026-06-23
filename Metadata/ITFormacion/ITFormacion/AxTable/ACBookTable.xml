@@ -6,6 +6,7 @@
 public class ACBookTable extends common
 {
    
+
 }
 ]]></Declaration>
 		<Methods>
@@ -21,6 +22,11 @@ public class ACBookTable extends common
         return true;
     }
 
+]]></Source>
+			</Method>
+			<Method>
+				<Name>dispAuthorFullName</Name>
+				<Source><![CDATA[
     //public static ACBookTable findRecId (RecId _recId)
     //{  
     //    ACBookTable bookTable;
@@ -30,6 +36,14 @@ public class ACBookTable extends common
 
     //    return bookTable;
     //}
+
+    [SysClientCacheDataMethod(true)]
+    public display AcAuthorFullName dispAuthorFullName()
+    {
+        ACAuthorTable authorTable = ACAuthorTable::findRecId(this.Author);
+
+        return authorTable.FirstName + ' ' + authorTable.LastName;
+    }
 
 ]]></Source>
 			</Method>
@@ -84,6 +98,12 @@ public class ACBookTable extends common
 				<AxTableFieldGroupField>
 					<DataField>Genre</DataField>
 				</AxTableFieldGroupField>
+				<AxTableFieldGroupField>
+					<DataField>Author</DataField>
+				</AxTableFieldGroupField>
+				<AxTableFieldGroupField>
+					<DataField>dispAuthorFullName</DataField>
+				</AxTableFieldGroupField>
 			</Fields>
 		</AxTableFieldGroup>
 	</FieldGroups>
@@ -107,6 +127,13 @@ public class ACBookTable extends common
 			<Name>Genre</Name>
 			<EnumType>ACGenreEnum</EnumType>
 		</AxTableField>
+		<AxTableField xmlns=""
+			i:type="AxTableFieldInt64">
+			<Name>Author</Name>
+			<ExtendedDataType>RefRecId</ExtendedDataType>
+			<IgnoreEDTRelation>Yes</IgnoreEDTRelation>
+			<Label>@ACItFormacionLabels:Author</Label>
+		</AxTableField>
 	</Fields>
 	<FullTextIndexes />
 	<Indexes>
@@ -119,8 +146,32 @@ public class ACBookTable extends common
 				</AxTableIndexField>
 			</Fields>
 		</AxTableIndex>
+		<AxTableIndex>
+			<Name>AuthorTableIdx</Name>
+			<AllowDuplicates>Yes</AllowDuplicates>
+			<Fields>
+				<AxTableIndexField>
+					<DataField>Author</DataField>
+				</AxTableIndexField>
+			</Fields>
+		</AxTableIndex>
 	</Indexes>
 	<Mappings />
-	<Relations />
+	<Relations>
+		<AxTableRelation xmlns=""
+			i:type="AxTableRelationForeignKey">
+			<Name>AuthorTable</Name>
+			<RelatedTable>ACAuthorTable</RelatedTable>
+			<Constraints>
+				<AxTableRelationConstraint xmlns=""
+					i:type="AxTableRelationConstraintField">
+					<Name>Author</Name>
+					<Field>Author</Field>
+					<RelatedField>RecId</RelatedField>
+				</AxTableRelationConstraint>
+			</Constraints>
+			<Index>RecId</Index>
+		</AxTableRelation>
+	</Relations>
 	<StateMachines />
 </AxTable>

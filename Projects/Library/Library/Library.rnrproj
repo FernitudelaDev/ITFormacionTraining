@@ -35,6 +35,7 @@
     <Folder Include="Base Enums\" />
     <Folder Include="Display Menu Items\" />
     <Folder Include="EDT Dates\" />
+    <Folder Include="EDT Strings\" />
     <Folder Include="Extended Data Types\" />
     <Folder Include="Forms\" />
     <Folder Include="Label Files\" />
@@ -52,6 +53,11 @@
       <SubType>Content</SubType>
       <Name>ACItFormacionLabels.es-ES.label.txt</Name>
       <DependentUpon>AxLabelFile\ACItFormacionLabels_es-ES</DependentUpon>
+    </Content>
+    <Content Include="AxEdt\ACAuthorFullName">
+      <SubType>Content</SubType>
+      <Name>ACAuthorFullName</Name>
+      <Link>EDT Strings\ACAuthorFullName</Link>
     </Content>
     <Content Include="AxEdt\ACDeathDate">
       <SubType>Content</SubType>

@@ -5,18 +5,12 @@
 		<Declaration><![CDATA[
 public class ACAuthorTable extends common
 {
-
 }
 ]]></Declaration>
 		<Methods>
 			<Method>
 				<Name>validateWrite</Name>
 				<Source><![CDATA[
-    /// <summary>
-    ///
-    /// </summary>
-    /// <returns></returns>
-    /// 
     public boolean validateWrite()
     {
         boolean ret;
@@ -95,6 +89,21 @@ public class ACAuthorTable extends common
 
 ]]></Source>
 			</Method>
+			<Method>
+				<Name>findRecId</Name>
+				<Source><![CDATA[
+    public static ACAuthorTable findRecId(RefRecId _refRecId)
+    {
+        ACAuthorTable author;
+
+        select firstonly author 
+            where author.RecId == _refRecId;
+
+        return author;
+    }
+
+]]></Source>
+			</Method>
 		</Methods>
 	</SourceCode>
 	<Label>@ACItFormacionLabels:Author</Label>
@@ -111,7 +120,17 @@ public class ACAuthorTable extends common
 		</AxTableFieldGroup>
 		<AxTableFieldGroup>
 			<Name>AutoLookup</Name>
-			<Fields />
+			<Fields>
+				<AxTableFieldGroupField>
+					<DataField>Id</DataField>
+				</AxTableFieldGroupField>
+				<AxTableFieldGroupField>
+					<DataField>FirstName</DataField>
+				</AxTableFieldGroupField>
+				<AxTableFieldGroupField>
+					<DataField>LastName</DataField>
+				</AxTableFieldGroupField>
+			</Fields>
 		</AxTableFieldGroup>
 		<AxTableFieldGroup>
 			<Name>AutoIdentification</Name>

@@ -1,5 +1,6 @@
 ﻿Academic=Académica
 Author=Autor
+AuthorFullName=Nombre completo del autor
 Books=Libros
 BookTable=Libro
 DeathDate=Fecha de muerte
