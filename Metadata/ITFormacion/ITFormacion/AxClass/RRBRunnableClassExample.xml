@@ -5,26 +5,44 @@
 		<Declaration><![CDATA[
 internal final class RRBRunnableClassExample
 {
+    /// <summary>
+    /// Class entry point. The system will call this method when a designated menu 
+    /// is selected or when execution starts and this class is set as the startup class.
+    /// </summary>
+    /// <param name = "_args">The specified arguments.</param>
+    //public static void main(Args _args)
+    //{
+    //    int fantasyBooks = RRBBookTable::selectCountByGenre(RRBGenreEnum::Fantasy);
+    //    int historyBooks = RRBBookTable::selectCountByGenre(RRBGenreEnum::HistoryNovel);
+    //    int scienceBooks = RRBBookTable::selectCountByGenre(RRBGenreEnum::Science);
+
+    //    Info(strFmt("@ITFormacion:NumberOfBooksByGenre", fantasyBooks, historyBooks, scienceBooks));
+
+
+    //}
+
 }
 ]]></Declaration>
 		<Methods>
 			<Method>
 				<Name>main</Name>
 				<Source><![CDATA[
-    /// <summary>
-    /// Class entry point. The system will call this method when a designated menu 
-    /// is selected or when execution starts and this class is set as the startup class.
-    /// </summary>
-    /// <param name = "_args">The specified arguments.</param>
     public static void main(Args _args)
     {
-        int fantasyBooks = RRBBookTable::selectCountByGenre(RRBGenreEnum::Fantasy);
-        int historyBooks = RRBBookTable::selectCountByGenre(RRBGenreEnum::HistoryNovel);
-        int scienceBooks = RRBBookTable::selectCountByGenre(RRBGenreEnum::Science);
+        RRBQueryVSSelect queryVsSelect = new RRBQueryVSSelect();
+        
+        if(Box::yesNo('Do you want to run the select using the query', DialogButton::Yes) == DialogButton::Yes)
+        {
+            //queryVsSelect.reuseExistingQuery();
+            queryVsSelect.buildQueryFromCode();
+        }
+        else
+        {
+            queryVsSelect.selectExample();
+        }
 
-        Info(strFmt("@ITFormacion:NumberOfBooksByGenre", fantasyBooks, historyBooks, scienceBooks));
 
-                
+        
     }
 
 ]]></Source>

@@ -29,6 +29,21 @@ public class RRBBookTable extends common
 ]]></Source>
 			</Method>
 			<Method>
+				<Name>find</Name>
+				<Source><![CDATA[
+    public static RRBBookTable find(RRBId _id)
+    {
+        RRBBookTable bookTable;
+
+        select firstonly bookTable
+            where bookTable.Id == _id;
+
+        return bookTable;
+    }
+
+]]></Source>
+			</Method>
+			<Method>
 				<Name>selectCountByGenre</Name>
 				<Source><![CDATA[
     public static int selectCountByGenre(RRBGenreEnum _genre)

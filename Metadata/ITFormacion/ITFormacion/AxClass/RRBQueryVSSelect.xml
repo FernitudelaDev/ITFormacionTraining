@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<AxClass xmlns:i="http://www.w3.org/2001/XMLSchema-instance">
+	<Name>RRBQueryVSSelect</Name>
+	<SourceCode>
+		<Declaration><![CDATA[
+internal final class RRBQueryVSSelect
+{
+
+    //Ejercicio, query vs select: vamos a mostrar en un info, el id de los libros,
+    //y el nombre y apellido de los autores de los libros de fantasía.
+
+    
+
+}
+]]></Declaration>
+		<Methods>
+			<Method>
+				<Name>selectExample</Name>
+				<Source><![CDATA[
+    public void selectExample()
+    {
+        RRBAuthorTable authorTable;
+        RRBBookTable bookTable;
+
+        
+        while select FirstName, LastName from authorTable
+            join Id, Name from bookTable
+            where authorTable.RecId == bookTable.Author
+            && bookTable.Genre == RRBGenreEnum::Fantasy
+        {
+            Info(strFmt('%1 %2 %3 %4',
+                bookTable.Id,
+                bookTable.Name,
+                authorTable.FirstName,
+                authorTable.LastName));
+        }
+
+    }
+
+]]></Source>
+			</Method>
+			<Method>
+				<Name>reuseExistingQuery</Name>
+				<Source><![CDATA[
+    public void reuseExistingQuery()
+    {
+        Query rrbBookAuthorFantasyQuery = new Query(queryStr(rrbBookAuthorFantasyQuery));
+
+        this.runQuery(rrbBookAuthorFantasyQuery);
+    }
+
+]]></Source>
+			</Method>
+			<Method>
+				<Name>buildQueryFromCode</Name>
+				<Source><![CDATA[
+    public void buildQueryFromCode()
+    {
+        Query rrbBookAuthorsFantasyQuery = new Query();
+
+        //Añadimos los datasources
+        QueryBuildDataSource qbdsAuthorTable = rrbBookAuthorsFantasyQuery.addDataSource(tableNum(RRBAuthorTable));
+        QueryBuildDataSource qbdsBookTable = qbdsAuthorTable.addDataSource(tableNum(RRBBookTable));
+
+        //Hacemos el join
+        qbdsBookTable.joinMode(JoinMode::InnerJoin);
+        //qbdsBookTable.relations(true);
+
+        //Añadimos la relacion
+        qbdsBookTable.addLink(fieldNum(RRBAuthorTable, RecId),
+            fieldNum(RRBBookTable, Author),
+            qbdsAuthorTable.name());
+
+        //Añadimos el filtro
+        QueryBuildRange qbrGenre = qbdsBookTable.addRange(fieldNum(RRBBookTable, Genre));
+        qbrGenre.value(queryValue(RRBGenreEnum::Fantasy));
+
+        //Ejecutamos la query
+        this.runQuery(rrbBookAuthorsFantasyQuery);
+    }
+
+]]></Source>
+			</Method>
+			<Method>
+				<Name>runQuery</Name>
+				<Source><![CDATA[
+    public void runQuery(Query _q)
+    {
+        QueryRun qr = new QueryRun(_q);
+
+        while(qr.next())
+        {
+            RRBBookTable bookTable = qr.get(tableNum(RRBBookTable));
+            RRBAuthorTable authorTable = qr.get(tableNum(RRBAuthorTable));
+
+            Info(strFmt('%1 %2 %3 %4',
+                bookTable.Id,
+                bookTable.Name,
+                authorTable.FirstName,
+                authorTable.LastName));
+        }
+    }
+
+]]></Source>
+			</Method>
+		</Methods>
+	</SourceCode>
+</AxClass>

@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<AxClass xmlns:i="http://www.w3.org/2001/XMLSchema-instance">
+	<Name>RRBBookCreationService</Name>
+	<SourceCode>
+		<Declaration><![CDATA[
+internal final class RRBBookCreationService
+{
+
+}
+]]></Declaration>
+		<Methods>
+			<Method>
+				<Name>findBook</Name>
+				<Source><![CDATA[
+    [AifCollectionTypeAttribute('return', Types :: Record, tableStr(RRBBookTable))]
+    public RRBBookTable findBook(RRBId _id)
+    {
+        return RRBBookTable::find(_id);
+    }
+
+]]></Source>
+			</Method>
+		</Methods>
+	</SourceCode>
+</AxClass>

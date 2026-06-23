@@ -43,9 +43,23 @@
     <Folder Include="Menu Extensions\" />
     <Folder Include="Menus\" />
     <Folder Include="Security Privileges\" />
+    <Folder Include="Service Groups\" />
+    <Folder Include="Services\" />
+    <Folder Include="Simple Queries\" />
     <Folder Include="Tables\" />
+    <Folder Include="Views\" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="AxClass\RRBBookCreationService">
+      <SubType>Content</SubType>
+      <Name>RRBBookCreationService</Name>
+      <Link>Classes\RRBBookCreationService</Link>
+    </Content>
+    <Content Include="AxClass\RRBQueryVSSelect">
+      <SubType>Content</SubType>
+      <Name>RRBQueryVSSelect</Name>
+      <Link>Classes\RRBQueryVSSelect</Link>
+    </Content>
     <Content Include="AxClass\RRBRunnableClassExample">
       <SubType>Content</SubType>
       <Name>RRBRunnableClassExample</Name>
@@ -121,6 +135,11 @@
       <Name>RRBLibrary</Name>
       <Link>Menus\RRBLibrary</Link>
     </Content>
+    <Content Include="AxQuery\RRBBookAuthorFantasyQuery">
+      <SubType>Content</SubType>
+      <Name>RRBBookAuthorFantasyQuery</Name>
+      <Link>Simple Queries\RRBBookAuthorFantasyQuery</Link>
+    </Content>
     <Content Include="AxSecurityPrivilege\RRBAuthorEntityMaintain">
       <SubType>Content</SubType>
       <Name>RRBAuthorEntityMaintain</Name>
@@ -141,6 +160,16 @@
       <Name>RRBBookTableEntityView</Name>
       <Link>Security Privileges\RRBBookTableEntityView</Link>
     </Content>
+    <Content Include="AxServiceGroup\RRBBookCreationServiceGroup">
+      <SubType>Content</SubType>
+      <Name>RRBBookCreationServiceGroup</Name>
+      <Link>Service Groups\RRBBookCreationServiceGroup</Link>
+    </Content>
+    <Content Include="AxService\RRBBookCreationService">
+      <SubType>Content</SubType>
+      <Name>RRBBookCreationService</Name>
+      <Link>Services\RRBBookCreationService</Link>
+    </Content>
     <Content Include="AxTable\RRBAuthorStaging">
       <SubType>Content</SubType>
       <Name>RRBAuthorStaging</Name>
@@ -160,6 +189,11 @@
       <SubType>Content</SubType>
       <Name>RRBBookTable</Name>
       <Link>Tables\RRBBookTable</Link>
+    </Content>
+    <Content Include="AxView\RRBBookAuthorFantasyView">
+      <SubType>Content</SubType>
+      <Name>RRBBookAuthorFantasyView</Name>
+      <Link>Views\RRBBookAuthorFantasyView</Link>
     </Content>
     <Content Include="ITFormacion.en-US.label.txt">
       <SubType>Content</SubType>

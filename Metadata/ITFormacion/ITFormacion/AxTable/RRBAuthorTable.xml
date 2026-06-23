@@ -112,6 +112,32 @@ public class RRBAuthorTable extends common
 
 ]]></Source>
 			</Method>
+			<Method>
+				<Name>sqlQueryinXpp</Name>
+				<Source><![CDATA[
+    public static void sqlQueryinXpp()
+    {
+    
+        //SELECT * FROM RRBBOOKTABLE t1
+        //    inner join RRBAUTHORTABLE t2
+        //    on t1.AUTHOR = t2.RECID and t1.DATAAREAID = t2.DATAAREAID
+        //    where t1.DATAAREAID = 'usmf'
+
+        
+        RRBBookTable bookTable;
+        RRBAuthorTable authorTable;
+
+        while select Id, Name, Genre from bookTable
+            join authorTable
+            where bookTable.Author == authorTable.RecId
+        {
+         //loigica 1
+        }
+
+    }
+
+]]></Source>
+			</Method>
 		</Methods>
 	</SourceCode>
 	<FormRef>RRBAuthor</FormRef>

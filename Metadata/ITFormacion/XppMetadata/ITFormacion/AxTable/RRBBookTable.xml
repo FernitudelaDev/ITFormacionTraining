@@ -21,6 +21,24 @@
 			</ReturnType>
 		</Method>
 		<Method>
+			<Name>find</Name>
+			<IsStatic>true</IsStatic>
+			<Visibility>Public</Visibility>
+			<Parameters>
+				<AxMethodParameter>
+					<Tags></Tags>
+					<Type>ExtendedDataType</Type>
+					<TypeName>RRBId</TypeName>
+					<Name>_id</Name>
+				</AxMethodParameter>
+			</Parameters>
+			<ReturnType>
+				<Tags></Tags>
+				<Type>Record</Type>
+				<TypeName>RRBBookTable</TypeName>
+			</ReturnType>
+		</Method>
+		<Method>
 			<Name>selectCountByGenre</Name>
 			<IsStatic>true</IsStatic>
 			<Visibility>Public</Visibility>
