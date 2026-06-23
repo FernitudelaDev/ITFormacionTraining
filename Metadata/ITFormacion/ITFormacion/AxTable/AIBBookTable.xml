@@ -11,7 +11,7 @@ public class AIBBookTable extends common
 			<Method>
 				<Name>shouldThrowExceptionOneZeroDelte</Name>
 				<Source><![CDATA[
-    public boolean shouldThrowExceptionOneZeroDelte()
+        public boolean shouldThrowExceptionOneZeroDelte()
     {
         return true;
     }
@@ -45,6 +45,18 @@ public class AIBBookTable extends common
             where bookTable.Genre == _genre;
 
         return bookTable.RecId;
+    }
+
+]]></Source>
+			</Method>
+			<Method>
+				<Name>dispAuthorFullName</Name>
+				<Source><![CDATA[
+    [SysClientCacheDataMethod(true)]
+    public display AIBAuthorFullName dispAuthorFullName()
+    {
+        AIBAuthorTable authorTable = AIBAuthorTable::findRecId(this.Author);
+        return authorTable.FirstName + ' ' + authorTable.LastName;
     }
 
 ]]></Source>
@@ -100,6 +112,12 @@ public class AIBBookTable extends common
 				<AxTableFieldGroupField>
 					<DataField>Genre</DataField>
 				</AxTableFieldGroupField>
+				<AxTableFieldGroupField>
+					<DataField>Author</DataField>
+				</AxTableFieldGroupField>
+				<AxTableFieldGroupField>
+					<DataField>dispAuthorFullName</DataField>
+				</AxTableFieldGroupField>
 			</Fields>
 		</AxTableFieldGroup>
 	</FieldGroups>
@@ -123,6 +141,12 @@ public class AIBBookTable extends common
 			<Name>Genre</Name>
 			<EnumType>AIBGenreEnum</EnumType>
 		</AxTableField>
+		<AxTableField xmlns=""
+			i:type="AxTableFieldInt64">
+			<Name>Author</Name>
+			<ExtendedDataType>RefRecId</ExtendedDataType>
+			<IgnoreEDTRelation>Yes</IgnoreEDTRelation>
+		</AxTableField>
 	</Fields>
 	<FullTextIndexes />
 	<Indexes>
@@ -135,8 +159,36 @@ public class AIBBookTable extends common
 				</AxTableIndexField>
 			</Fields>
 		</AxTableIndex>
+		<AxTableIndex>
+			<Name>AIBAuthorTableIdx</Name>
+			<AllowDuplicates>Yes</AllowDuplicates>
+			<Fields>
+				<AxTableIndexField>
+					<DataField>Author</DataField>
+				</AxTableIndexField>
+			</Fields>
+		</AxTableIndex>
 	</Indexes>
 	<Mappings />
-	<Relations />
+	<Relations>
+		<AxTableRelation xmlns=""
+			i:type="AxTableRelationForeignKey">
+			<Name>AuthorTable</Name>
+			<Cardinality>ZeroMore</Cardinality>
+			<OnDelete>Restricted</OnDelete>
+			<RelatedTable>AIBAuthorTable</RelatedTable>
+			<RelatedTableCardinality>ExactlyOne</RelatedTableCardinality>
+			<RelationshipType>Association</RelationshipType>
+			<Constraints>
+				<AxTableRelationConstraint xmlns=""
+					i:type="AxTableRelationConstraintField">
+					<Name>Author</Name>
+					<Field>Author</Field>
+					<RelatedField>RecId</RelatedField>
+				</AxTableRelationConstraint>
+			</Constraints>
+			<Index>RecId</Index>
+		</AxTableRelation>
+	</Relations>
 	<StateMachines />
 </AxTable>

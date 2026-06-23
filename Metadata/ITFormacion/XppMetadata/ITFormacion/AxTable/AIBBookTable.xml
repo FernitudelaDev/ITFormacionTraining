@@ -47,5 +47,27 @@
 				<TypeName></TypeName>
 			</ReturnType>
 		</Method>
+		<Method>
+			<Name>dispAuthorFullName</Name>
+			<IsDisplay>true</IsDisplay>
+			<Visibility>Public</Visibility>
+			<Attributes>
+				<AxAttribute>
+					<Name>SysClientCacheDataMethod</Name>
+					<Parameters>
+						<AxAttributeParameter>
+							<Type>Boolean</Type>
+							<TypeValue>True</TypeValue>
+							<AdditionalData />
+						</AxAttributeParameter>
+					</Parameters>
+				</AxAttribute>
+			</Attributes>
+			<ReturnType>
+				<Tags></Tags>
+				<Type>ExtendedDataType</Type>
+				<TypeName>AIBAuthorFullName</TypeName>
+			</ReturnType>
+		</Method>
 	</Methods>
 </z:anyType>

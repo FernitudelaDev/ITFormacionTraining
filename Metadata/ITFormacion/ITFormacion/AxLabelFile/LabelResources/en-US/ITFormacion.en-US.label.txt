@@ -1,4 +1,5 @@
-﻿AuthorTable=AuthorTable
+﻿AuthorFullName=Author Full Name
+AuthorTable=AuthorTable
 Books=Books
 BookTable=Book
 DeathDate=DeathDate

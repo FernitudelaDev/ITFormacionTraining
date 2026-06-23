@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Diagnostics
-  GenerationTime="2026-06-22T08:13:15.9405484+00:00">
+  GenerationTime="2026-06-23T07:18:53.1110676+00:00">
   <Items>
     <Diagnostic>
       <DiagnosticType>ExternalReference</DiagnosticType>
@@ -15,6 +15,18 @@
       <Path>dynamics://Reference/Azure.Core</Path>
       <Moniker>AssemblyFileNotFound</Moniker>
       <Message>Assembly 'System.Memory.Data, Version=1.0.2.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51' failed to load because it was not found.</Message>
+    </Diagnostic>
+    <Diagnostic>
+      <DiagnosticType>Compile</DiagnosticType>
+      <Severity>Warning</Severity>
+      <Path>dynamics://Table/AIBBookTable/Method/selectCountByGenre</Path>
+      <ElementType>Table Method</ElementType>
+      <Moniker>TypeConversionLosesRange</Moniker>
+      <Line>26</Line>
+      <Column>9</Column>
+      <EndLine>26</EndLine>
+      <EndColumn>32</EndColumn>
+      <Message>The type conversion from 'int64' to 'int' loses range.</Message>
     </Diagnostic>
   </Items>
   <Aliases />

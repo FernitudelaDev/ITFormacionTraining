@@ -9,6 +9,18 @@
 [Form]
 public class AIBBook extends FormRun
 {
+    [DataField]
+    class Author
+    {
+        public Common lookupReference(FormReferenceControl _formReferenceControl)
+        {
+            Common ret;
+
+            ret = super(_formReferenceControl);
+
+            return ret;
+        }
+    }
 }
 ]]></Source>
 			</Method>
@@ -115,7 +127,7 @@ public class AIBBook extends FormRun
 						<Controls>
 							<AxFormControl xmlns=""
 								i:type="AxFormStringControl">
-								<Name>Grid_Id</Name>
+								<Name>GroupGrid_Id</Name>
 								<Type>String</Type>
 								<FormControlExtension
 									i:nil="true" />
@@ -124,7 +136,7 @@ public class AIBBook extends FormRun
 							</AxFormControl>
 							<AxFormControl xmlns=""
 								i:type="AxFormStringControl">
-								<Name>Grid_Name</Name>
+								<Name>GroupGrid_Name</Name>
 								<Type>String</Type>
 								<FormControlExtension
 									i:nil="true" />
@@ -140,6 +152,26 @@ public class AIBBook extends FormRun
 								<DataField>Genre</DataField>
 								<DataSource>AIBBookTable</DataSource>
 								<Items />
+							</AxFormControl>
+							<AxFormControl xmlns=""
+								i:type="AxFormReferenceGroupControl">
+								<Name>GroupGrid_Author</Name>
+								<Type>ReferenceGroup</Type>
+								<FormControlExtension
+									i:nil="true" />
+								<Controls />
+								<DataSource>AIBBookTable</DataSource>
+								<ReferenceField>Author</ReferenceField>
+								<ReplacementFieldGroup>AutoLookup</ReplacementFieldGroup>
+							</AxFormControl>
+							<AxFormControl xmlns=""
+								i:type="AxFormStringControl">
+								<Name>GroupGrid_dispAuthorFullName</Name>
+								<Type>String</Type>
+								<FormControlExtension
+									i:nil="true" />
+								<DataMethod>dispAuthorFullName</DataMethod>
+								<DataSource>AIBBookTable</DataSource>
 							</AxFormControl>
 						</Controls>
 						<DataGroup>Grid</DataGroup>

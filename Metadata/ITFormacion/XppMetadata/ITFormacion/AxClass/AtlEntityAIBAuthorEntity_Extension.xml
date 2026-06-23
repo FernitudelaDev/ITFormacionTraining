@@ -1,0 +1,430 @@
+<?xml version="1.0" encoding="utf-8"?>
+<z:anyType xmlns:i="http://www.w3.org/2001/XMLSchema-instance" xmlns=""
+	i:type="AxCompilerMetadata" xmlns:z="http://schemas.microsoft.com/2003/10/Serialization/">
+	<IsFinal>true</IsFinal>
+	<IsPublic>true</IsPublic>
+	<Attributes>
+		<AxAttribute>
+			<Name>ExtensionOf</Name>
+			<Parameters>
+				<AxAttributeParameter>
+					<Type>Intrinsic</Type>
+					<TypeValue>dataentityviewstr</TypeValue>
+					<AdditionalData>
+						<AxAttributeParameter>
+							<TypeValue>AIBAuthorEntity</TypeValue>
+							<AdditionalData />
+						</AxAttributeParameter>
+						<AxAttributeParameter>
+							<AdditionalData />
+						</AxAttributeParameter>
+						<AxAttributeParameter>
+							<AdditionalData />
+						</AxAttributeParameter>
+					</AdditionalData>
+				</AxAttributeParameter>
+			</Parameters>
+		</AxAttribute>
+		<AxAttribute>
+			<Name>AtlEntityGenerationDependentTable</Name>
+			<Parameters>
+				<AxAttributeParameter>
+					<Type>Intrinsic</Type>
+					<TypeValue>dataentityviewstr</TypeValue>
+					<AdditionalData>
+						<AxAttributeParameter>
+							<TypeValue>AIBAuthorEntity</TypeValue>
+							<AdditionalData />
+						</AxAttributeParameter>
+						<AxAttributeParameter>
+							<AdditionalData />
+						</AxAttributeParameter>
+						<AxAttributeParameter>
+							<AdditionalData />
+						</AxAttributeParameter>
+					</AdditionalData>
+				</AxAttributeParameter>
+			</Parameters>
+		</AxAttribute>
+	</Attributes>
+	<Methods>
+		<Method>
+			<Name>setId</Name>
+			<IsFinal>true</IsFinal>
+			<Visibility>Public</Visibility>
+			<Attributes>
+				<AxAttribute>
+					<Name>AtlDependentField</Name>
+					<Parameters>
+						<AxAttributeParameter>
+							<Type>Intrinsic</Type>
+							<TypeValue>fieldStr</TypeValue>
+							<AdditionalData>
+								<AxAttributeParameter>
+									<TypeValue>AIBAuthorEntity</TypeValue>
+									<AdditionalData />
+								</AxAttributeParameter>
+								<AxAttributeParameter>
+									<TypeValue>Id</TypeValue>
+									<AdditionalData />
+								</AxAttributeParameter>
+								<AxAttributeParameter>
+									<AdditionalData />
+								</AxAttributeParameter>
+							</AdditionalData>
+						</AxAttributeParameter>
+					</Parameters>
+				</AxAttribute>
+				<AxAttribute>
+					<Name>SysGeneratedCode</Name>
+					<Parameters>
+						<AxAttributeParameter>
+							<TypeValue>'AtlGenerator'</TypeValue>
+							<AdditionalData />
+						</AxAttributeParameter>
+						<AxAttributeParameter>
+							<TypeValue>'1.0.0.0'</TypeValue>
+							<AdditionalData />
+						</AxAttributeParameter>
+					</Parameters>
+				</AxAttribute>
+				<AxAttribute>
+					<Name>Hookable</Name>
+					<Parameters>
+						<AxAttributeParameter>
+							<Type>Boolean</Type>
+							<TypeValue>False</TypeValue>
+							<AdditionalData />
+						</AxAttributeParameter>
+					</Parameters>
+				</AxAttribute>
+			</Attributes>
+			<Parameters>
+				<AxMethodParameter>
+					<Type>ExtendedDataType</Type>
+					<TypeName>AIBId</TypeName>
+					<Name>_id</Name>
+				</AxMethodParameter>
+			</Parameters>
+			<ReturnType>
+				<Type>ExtendedDataType</Type>
+				<TypeName>AIBAuthorEntity</TypeName>
+			</ReturnType>
+		</Method>
+		<Method>
+			<Name>setFirstName</Name>
+			<IsFinal>true</IsFinal>
+			<Visibility>Public</Visibility>
+			<Attributes>
+				<AxAttribute>
+					<Name>AtlDependentField</Name>
+					<Parameters>
+						<AxAttributeParameter>
+							<Type>Intrinsic</Type>
+							<TypeValue>fieldStr</TypeValue>
+							<AdditionalData>
+								<AxAttributeParameter>
+									<TypeValue>AIBAuthorEntity</TypeValue>
+									<AdditionalData />
+								</AxAttributeParameter>
+								<AxAttributeParameter>
+									<TypeValue>FirstName</TypeValue>
+									<AdditionalData />
+								</AxAttributeParameter>
+								<AxAttributeParameter>
+									<AdditionalData />
+								</AxAttributeParameter>
+							</AdditionalData>
+						</AxAttributeParameter>
+					</Parameters>
+				</AxAttribute>
+				<AxAttribute>
+					<Name>SysGeneratedCode</Name>
+					<Parameters>
+						<AxAttributeParameter>
+							<TypeValue>'AtlGenerator'</TypeValue>
+							<AdditionalData />
+						</AxAttributeParameter>
+						<AxAttributeParameter>
+							<TypeValue>'1.0.0.0'</TypeValue>
+							<AdditionalData />
+						</AxAttributeParameter>
+					</Parameters>
+				</AxAttribute>
+				<AxAttribute>
+					<Name>Hookable</Name>
+					<Parameters>
+						<AxAttributeParameter>
+							<Type>Boolean</Type>
+							<TypeValue>False</TypeValue>
+							<AdditionalData />
+						</AxAttributeParameter>
+					</Parameters>
+				</AxAttribute>
+			</Attributes>
+			<Parameters>
+				<AxMethodParameter>
+					<Type>ExtendedDataType</Type>
+					<TypeName>FirstName</TypeName>
+					<Name>_firstName</Name>
+				</AxMethodParameter>
+			</Parameters>
+			<ReturnType>
+				<Type>ExtendedDataType</Type>
+				<TypeName>AIBAuthorEntity</TypeName>
+			</ReturnType>
+		</Method>
+		<Method>
+			<Name>setLastName</Name>
+			<IsFinal>true</IsFinal>
+			<Visibility>Public</Visibility>
+			<Attributes>
+				<AxAttribute>
+					<Name>AtlDependentField</Name>
+					<Parameters>
+						<AxAttributeParameter>
+							<Type>Intrinsic</Type>
+							<TypeValue>fieldStr</TypeValue>
+							<AdditionalData>
+								<AxAttributeParameter>
+									<TypeValue>AIBAuthorEntity</TypeValue>
+									<AdditionalData />
+								</AxAttributeParameter>
+								<AxAttributeParameter>
+									<TypeValue>LastName</TypeValue>
+									<AdditionalData />
+								</AxAttributeParameter>
+								<AxAttributeParameter>
+									<AdditionalData />
+								</AxAttributeParameter>
+							</AdditionalData>
+						</AxAttributeParameter>
+					</Parameters>
+				</AxAttribute>
+				<AxAttribute>
+					<Name>SysGeneratedCode</Name>
+					<Parameters>
+						<AxAttributeParameter>
+							<TypeValue>'AtlGenerator'</TypeValue>
+							<AdditionalData />
+						</AxAttributeParameter>
+						<AxAttributeParameter>
+							<TypeValue>'1.0.0.0'</TypeValue>
+							<AdditionalData />
+						</AxAttributeParameter>
+					</Parameters>
+				</AxAttribute>
+				<AxAttribute>
+					<Name>Hookable</Name>
+					<Parameters>
+						<AxAttributeParameter>
+							<Type>Boolean</Type>
+							<TypeValue>False</TypeValue>
+							<AdditionalData />
+						</AxAttributeParameter>
+					</Parameters>
+				</AxAttribute>
+			</Attributes>
+			<Parameters>
+				<AxMethodParameter>
+					<Type>ExtendedDataType</Type>
+					<TypeName>LastName</TypeName>
+					<Name>_lastName</Name>
+				</AxMethodParameter>
+			</Parameters>
+			<ReturnType>
+				<Type>ExtendedDataType</Type>
+				<TypeName>AIBAuthorEntity</TypeName>
+			</ReturnType>
+		</Method>
+		<Method>
+			<Name>setBirthDate</Name>
+			<IsFinal>true</IsFinal>
+			<Visibility>Public</Visibility>
+			<Attributes>
+				<AxAttribute>
+					<Name>AtlDependentField</Name>
+					<Parameters>
+						<AxAttributeParameter>
+							<Type>Intrinsic</Type>
+							<TypeValue>fieldStr</TypeValue>
+							<AdditionalData>
+								<AxAttributeParameter>
+									<TypeValue>AIBAuthorEntity</TypeValue>
+									<AdditionalData />
+								</AxAttributeParameter>
+								<AxAttributeParameter>
+									<TypeValue>BirthDate</TypeValue>
+									<AdditionalData />
+								</AxAttributeParameter>
+								<AxAttributeParameter>
+									<AdditionalData />
+								</AxAttributeParameter>
+							</AdditionalData>
+						</AxAttributeParameter>
+					</Parameters>
+				</AxAttribute>
+				<AxAttribute>
+					<Name>SysGeneratedCode</Name>
+					<Parameters>
+						<AxAttributeParameter>
+							<TypeValue>'AtlGenerator'</TypeValue>
+							<AdditionalData />
+						</AxAttributeParameter>
+						<AxAttributeParameter>
+							<TypeValue>'1.0.0.0'</TypeValue>
+							<AdditionalData />
+						</AxAttributeParameter>
+					</Parameters>
+				</AxAttribute>
+				<AxAttribute>
+					<Name>Hookable</Name>
+					<Parameters>
+						<AxAttributeParameter>
+							<Type>Boolean</Type>
+							<TypeValue>False</TypeValue>
+							<AdditionalData />
+						</AxAttributeParameter>
+					</Parameters>
+				</AxAttribute>
+			</Attributes>
+			<Parameters>
+				<AxMethodParameter>
+					<Type>ExtendedDataType</Type>
+					<TypeName>BirthDate</TypeName>
+					<Name>_birthDate</Name>
+				</AxMethodParameter>
+			</Parameters>
+			<ReturnType>
+				<Type>ExtendedDataType</Type>
+				<TypeName>AIBAuthorEntity</TypeName>
+			</ReturnType>
+		</Method>
+		<Method>
+			<Name>setIsDead</Name>
+			<IsFinal>true</IsFinal>
+			<Visibility>Public</Visibility>
+			<Attributes>
+				<AxAttribute>
+					<Name>AtlDependentField</Name>
+					<Parameters>
+						<AxAttributeParameter>
+							<Type>Intrinsic</Type>
+							<TypeValue>fieldStr</TypeValue>
+							<AdditionalData>
+								<AxAttributeParameter>
+									<TypeValue>AIBAuthorEntity</TypeValue>
+									<AdditionalData />
+								</AxAttributeParameter>
+								<AxAttributeParameter>
+									<TypeValue>IsDead</TypeValue>
+									<AdditionalData />
+								</AxAttributeParameter>
+								<AxAttributeParameter>
+									<AdditionalData />
+								</AxAttributeParameter>
+							</AdditionalData>
+						</AxAttributeParameter>
+					</Parameters>
+				</AxAttribute>
+				<AxAttribute>
+					<Name>SysGeneratedCode</Name>
+					<Parameters>
+						<AxAttributeParameter>
+							<TypeValue>'AtlGenerator'</TypeValue>
+							<AdditionalData />
+						</AxAttributeParameter>
+						<AxAttributeParameter>
+							<TypeValue>'1.0.0.0'</TypeValue>
+							<AdditionalData />
+						</AxAttributeParameter>
+					</Parameters>
+				</AxAttribute>
+				<AxAttribute>
+					<Name>Hookable</Name>
+					<Parameters>
+						<AxAttributeParameter>
+							<Type>Boolean</Type>
+							<TypeValue>False</TypeValue>
+							<AdditionalData />
+						</AxAttributeParameter>
+					</Parameters>
+				</AxAttribute>
+			</Attributes>
+			<Parameters>
+				<AxMethodParameter>
+					<Type>ExtendedDataType</Type>
+					<TypeName>NoYesId</TypeName>
+					<Name>_isDead</Name>
+				</AxMethodParameter>
+			</Parameters>
+			<ReturnType>
+				<Type>ExtendedDataType</Type>
+				<TypeName>AIBAuthorEntity</TypeName>
+			</ReturnType>
+		</Method>
+		<Method>
+			<Name>setDeathDate</Name>
+			<IsFinal>true</IsFinal>
+			<Visibility>Public</Visibility>
+			<Attributes>
+				<AxAttribute>
+					<Name>AtlDependentField</Name>
+					<Parameters>
+						<AxAttributeParameter>
+							<Type>Intrinsic</Type>
+							<TypeValue>fieldStr</TypeValue>
+							<AdditionalData>
+								<AxAttributeParameter>
+									<TypeValue>AIBAuthorEntity</TypeValue>
+									<AdditionalData />
+								</AxAttributeParameter>
+								<AxAttributeParameter>
+									<TypeValue>DeathDate</TypeValue>
+									<AdditionalData />
+								</AxAttributeParameter>
+								<AxAttributeParameter>
+									<AdditionalData />
+								</AxAttributeParameter>
+							</AdditionalData>
+						</AxAttributeParameter>
+					</Parameters>
+				</AxAttribute>
+				<AxAttribute>
+					<Name>SysGeneratedCode</Name>
+					<Parameters>
+						<AxAttributeParameter>
+							<TypeValue>'AtlGenerator'</TypeValue>
+							<AdditionalData />
+						</AxAttributeParameter>
+						<AxAttributeParameter>
+							<TypeValue>'1.0.0.0'</TypeValue>
+							<AdditionalData />
+						</AxAttributeParameter>
+					</Parameters>
+				</AxAttribute>
+				<AxAttribute>
+					<Name>Hookable</Name>
+					<Parameters>
+						<AxAttributeParameter>
+							<Type>Boolean</Type>
+							<TypeValue>False</TypeValue>
+							<AdditionalData />
+						</AxAttributeParameter>
+					</Parameters>
+				</AxAttribute>
+			</Attributes>
+			<Parameters>
+				<AxMethodParameter>
+					<Type>ExtendedDataType</Type>
+					<TypeName>AIBDeathDate</TypeName>
+					<Name>_deathDate</Name>
+				</AxMethodParameter>
+			</Parameters>
+			<ReturnType>
+				<Type>ExtendedDataType</Type>
+				<TypeName>AIBAuthorEntity</TypeName>
+			</ReturnType>
+		</Method>
+	</Methods>
+</z:anyType>

@@ -43,5 +43,23 @@
 				<TypeName></TypeName>
 			</ReturnType>
 		</Method>
+		<Method>
+			<Name>findRecId</Name>
+			<IsStatic>true</IsStatic>
+			<Visibility>Public</Visibility>
+			<Parameters>
+				<AxMethodParameter>
+					<Tags></Tags>
+					<Type>ExtendedDataType</Type>
+					<TypeName>RefRecId</TypeName>
+					<Name>_refRecId</Name>
+				</AxMethodParameter>
+			</Parameters>
+			<ReturnType>
+				<Tags></Tags>
+				<Type>Record</Type>
+				<TypeName>AIBAuthorTable</TypeName>
+			</ReturnType>
+		</Method>
 	</Methods>
 </z:anyType>

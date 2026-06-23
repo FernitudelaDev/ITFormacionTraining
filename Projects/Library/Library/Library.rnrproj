@@ -35,6 +35,7 @@
   <ItemGroup>
     <Folder Include="Base Enums\" />
     <Folder Include="Classes\" />
+    <Folder Include="Data Entities\" />
     <Folder Include="Display Menu Items\" />
     <Folder Include="EDT Dates\" />
     <Folder Include="EDT Strings\" />
@@ -42,6 +43,7 @@
     <Folder Include="Label Files\" />
     <Folder Include="Menu Extensions\" />
     <Folder Include="Menus\" />
+    <Folder Include="Security Privileges\" />
     <Folder Include="Tables\" />
   </ItemGroup>
   <ItemGroup>
@@ -49,6 +51,21 @@
       <SubType>Content</SubType>
       <Name>AIBRunnableClassExample</Name>
       <Link>Classes\AIBRunnableClassExample</Link>
+    </Content>
+    <Content Include="AxDataEntityView\AIBAuthorEntity">
+      <SubType>Content</SubType>
+      <Name>AIBAuthorEntity</Name>
+      <Link>Data Entities\AIBAuthorEntity</Link>
+    </Content>
+    <Content Include="AxDataEntityView\AIBBookEntity">
+      <SubType>Content</SubType>
+      <Name>AIBBookEntity</Name>
+      <Link>Data Entities\AIBBookEntity</Link>
+    </Content>
+    <Content Include="AxEdt\AIBAuthorFullName">
+      <SubType>Content</SubType>
+      <Name>AIBAuthorFullName</Name>
+      <Link>EDT Strings\AIBAuthorFullName</Link>
     </Content>
     <Content Include="AxEdt\AIBDeathDate">
       <SubType>Content</SubType>
@@ -105,10 +122,40 @@
       <Name>AIBLibrary</Name>
       <Link>Menus\AIBLibrary</Link>
     </Content>
+    <Content Include="AxSecurityPrivilege\AIBAuthorEntityMaintain">
+      <SubType>Content</SubType>
+      <Name>AIBAuthorEntityMaintain</Name>
+      <Link>Security Privileges\AIBAuthorEntityMaintain</Link>
+    </Content>
+    <Content Include="AxSecurityPrivilege\AIBAuthorEntityView">
+      <SubType>Content</SubType>
+      <Name>AIBAuthorEntityView</Name>
+      <Link>Security Privileges\AIBAuthorEntityView</Link>
+    </Content>
+    <Content Include="AxSecurityPrivilege\AIBBookTableEntityMaintain">
+      <SubType>Content</SubType>
+      <Name>AIBBookTableEntityMaintain</Name>
+      <Link>Security Privileges\AIBBookTableEntityMaintain</Link>
+    </Content>
+    <Content Include="AxSecurityPrivilege\AIBBookTableEntityView">
+      <SubType>Content</SubType>
+      <Name>AIBBookTableEntityView</Name>
+      <Link>Security Privileges\AIBBookTableEntityView</Link>
+    </Content>
+    <Content Include="AxTable\AIBAuthorStaging">
+      <SubType>Content</SubType>
+      <Name>AIBAuthorStaging</Name>
+      <Link>Tables\AIBAuthorStaging</Link>
+    </Content>
     <Content Include="AxTable\AIBAuthorTable">
       <SubType>Content</SubType>
       <Name>AIBAuthorTable</Name>
       <Link>Tables\AIBAuthorTable</Link>
+    </Content>
+    <Content Include="AxTable\AIBBookStaging">
+      <SubType>Content</SubType>
+      <Name>AIBBookStaging</Name>
+      <Link>Tables\AIBBookStaging</Link>
     </Content>
     <Content Include="AxTable\AIBBookTable">
       <SubType>Content</SubType>
