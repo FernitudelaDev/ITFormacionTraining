@@ -33,16 +33,10 @@ extends SysDataEntityPersister
     private void foreignKeyPropagation_DS1(DataEntityRuntimeContext _entityCtx, ACBookTable _aCBookTable)
     {
         ACAuthorTable authorTable_ = _entityCtx.getRuntimeContextByName('AuthorTable').getBuffer();
-        // FK propagation of references to an optional read-only PK data source will be done if
-        //   1. conflict detection has been invoked against the PK data source, or
-        //   2. the PK data source buffer is not null.
-        if(_entityCtx.getRuntimeContextByName('AuthorTable').conflictDetectionInvoked() || authorTable_)
+        // do not set foreign key values if they are same to make sure validation is not fired unless value changed
+        if(_aCBookTable.Author != authorTable_.RecId)
         {
-            // do not set foreign key values if they are same to make sure validation is not fired unless value changed
-            if(_aCBookTable.Author != authorTable_.RecId)
-            {
-                _aCBookTable.Author = authorTable_.RecId;
-            }
+            _aCBookTable.Author = authorTable_.RecId;
         }
         
         // foreign key value validation
@@ -114,7 +108,11 @@ extends SysDataEntityPersister
                 }
                 _dataSourceCtx.setDatabaseOperation(DataEntityDatabaseOperation::None);
                 // inserts/updates data source [AuthorTable].
-                this.saveDataSource(_entityCtx, _dataSourceCtx);
+                if(!this.saveDataSource(_entityCtx, _dataSourceCtx))
+                {
+                    // returns from here if an inner joined data source fails to be saved.
+                    return false;
+                }
                 this.postSaveDataSource();
             }
             // handle datasources which are part of extensions and need to be saved before [ACBookTable]
@@ -171,7 +169,11 @@ extends SysDataEntityPersister
                 _dataSourceCtx.setDataSaved(true);
                 _dataSourceCtx.setDatabaseOperation(DataEntityDatabaseOperation::None);
                 // deletes data source [AuthorTable].
-                this.saveDataSource(_entityCtx, _dataSourceCtx);
+                if(!this.saveDataSource(_entityCtx, _dataSourceCtx))
+                {
+                    // returns from here if an inner joined data source fails to be saved.
+                    return false;
+                }
                 this.postSaveDataSource();
             }
         }
@@ -382,7 +384,7 @@ extends SysDataEntityPersister
     protected void initializeDataSources(DataEntityRuntimeContext _entityCtx)
     {
         this.initializeDataSource(_entityCtx, 'ACBookTable', m_ACBookTable, this.getDataSourceId('ACBookTable'), this.getDataSourceRuntimeId('ACBookTable'), false/* optional */, false/* readonly */, false/* oneToMany */, false/* dateEffective */, false/* applyDateFilter */);
-        this.initializeDataSource(_entityCtx, 'AuthorTable', m_AuthorTable, this.getDataSourceId('AuthorTable'), this.getDataSourceRuntimeId('AuthorTable'), true/* optional */, true/* readonly */, true/* oneToMany */, false/* dateEffective */, false/* applyDateFilter */);
+        this.initializeDataSource(_entityCtx, 'AuthorTable', m_AuthorTable, this.getDataSourceId('AuthorTable'), this.getDataSourceRuntimeId('AuthorTable'), false/* optional */, true/* readonly */, true/* oneToMany */, false/* dateEffective */, false/* applyDateFilter */);
         this.initializeDataSourcesExtensions(_entityCtx);
     }
     private boolean hasDataSourceRecordChanged_DS2(ACAuthorTable _originalRecord, ACAuthorTable _updatedRecord)

@@ -3,6 +3,24 @@
 	i:type="AxPropertyCollection" xmlns:z="http://schemas.microsoft.com/2003/10/Serialization/">
 	<Methods>
 		<Method>
+			<Name>selectCountByGenre</Name>
+			<IsStatic>true</IsStatic>
+			<Visibility>Public</Visibility>
+			<Parameters>
+				<AxMethodParameter>
+					<Tags></Tags>
+					<Type>Enum</Type>
+					<TypeName>ACGenreEnum</TypeName>
+					<Name>_genre</Name>
+				</AxMethodParameter>
+			</Parameters>
+			<ReturnType>
+				<Tags></Tags>
+				<Type>Int32</Type>
+				<TypeName></TypeName>
+			</ReturnType>
+		</Method>
+		<Method>
 			<Name>shouldThrowExceptionOnZeroDelete</Name>
 			<Visibility>Public</Visibility>
 			<ReturnType>
@@ -30,7 +48,7 @@
 			<ReturnType>
 				<Tags></Tags>
 				<Type>ExtendedDataType</Type>
-				<TypeName>AcAuthorFullName</TypeName>
+				<TypeName>ACAuthorFullName</TypeName>
 			</ReturnType>
 		</Method>
 		<Method>

@@ -5,18 +5,28 @@
 		<Declaration><![CDATA[
 public class ACBookTable extends common
 {
-   
-
 }
 ]]></Declaration>
 		<Methods>
 			<Method>
+				<Name>selectCountByGenre</Name>
+				<Source><![CDATA[
+    public static int selectCountByGenre(ACGenreEnum _genre)
+    {
+        ACBookTable bookTable;
+
+        select count(RecId) from bookTable
+        group by Genre
+        where bookTable.Genre == _genre;
+
+        return bookTable.RecId;
+    }
+
+]]></Source>
+			</Method>
+			<Method>
 				<Name>shouldThrowExceptionOnZeroDelete</Name>
 				<Source><![CDATA[
-    /// <summary>
-    ///
-    /// </summary>
-    /// 
     public boolean shouldThrowExceptionOnZeroDelete()
     {
         return true;
@@ -27,18 +37,8 @@ public class ACBookTable extends common
 			<Method>
 				<Name>dispAuthorFullName</Name>
 				<Source><![CDATA[
-    //public static ACBookTable findRecId (RecId _recId)
-    //{  
-    //    ACBookTable bookTable;
-
-    //    select firstonly bookTable
-    //        where bookTable.RecId == _recId
-
-    //    return bookTable;
-    //}
-
     [SysClientCacheDataMethod(true)]
-    public display AcAuthorFullName dispAuthorFullName()
+    public display ACAuthorFullName dispAuthorFullName()
     {
         ACAuthorTable authorTable = ACAuthorTable::findRecId(this.Author);
 

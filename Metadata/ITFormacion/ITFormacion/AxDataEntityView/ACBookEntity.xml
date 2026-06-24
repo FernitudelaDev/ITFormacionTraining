@@ -9,7 +9,7 @@ public class ACBookEntity extends common
 ]]></Declaration>
 		<Methods />
 	</SourceCode>
-	<FormRef>ACBook</FormRef>
+	<FormRef>ACAuthor</FormRef>
 	<Label>@ACItFormacionLabels:BookTable</Label>
 	<SubscriberAccessLevel>
 		<Read>Allow</Read>
@@ -19,8 +19,9 @@ public class ACBookEntity extends common
 	<IsPublic>Yes</IsPublic>
 	<PrimaryCompanyContext>DataAreaId</PrimaryCompanyContext>
 	<PrimaryKey>EntityKey</PrimaryKey>
-	<PublicCollectionName>ACBooks</PublicCollectionName>
-	<PublicEntityName>ACBook</PublicEntityName>
+	<PublicCollectionName>ACBookTables</PublicCollectionName>
+	<PublicEntityName>ACBookTable</PublicEntityName>
+	<SupportsSetBasedSqlOperations>Yes</SupportsSetBasedSqlOperations>
 	<DeleteActions />
 	<FieldGroups>
 		<AxTableFieldGroup>
@@ -74,6 +75,7 @@ public class ACBookEntity extends common
 		<AxDataEntityViewField xmlns=""
 			i:type="AxDataEntityViewMappedField">
 			<Name>AuthorTable_Id</Name>
+			<Mandatory>Yes</Mandatory>
 			<DataField>Id</DataField>
 			<DataSource>AuthorTable</DataSource>
 		</AxDataEntityViewField>
@@ -122,7 +124,6 @@ public class Metadata extends QueryRun
 						<DerivedDataSources />
 						<Fields />
 						<Ranges />
-						<JoinMode>OuterJoin</JoinMode>
 						<Relations>
 							<AxQuerySimpleDataSourceRelation>
 								<Name>AuthorTable</Name>

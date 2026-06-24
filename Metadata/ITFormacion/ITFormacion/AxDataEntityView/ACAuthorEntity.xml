@@ -9,6 +9,7 @@ public class ACAuthorEntity extends common
 ]]></Declaration>
 		<Methods />
 	</SourceCode>
+	<FormRef>ACAuthor</FormRef>
 	<Label>@ACItFormacionLabels:Author</Label>
 	<SubscriberAccessLevel>
 		<Read>Allow</Read>
@@ -20,6 +21,7 @@ public class ACAuthorEntity extends common
 	<PrimaryKey>EntityKey</PrimaryKey>
 	<PublicCollectionName>ACAuthors</PublicCollectionName>
 	<PublicEntityName>ACAuthor</PublicEntityName>
+	<SupportsSetBasedSqlOperations>Yes</SupportsSetBasedSqlOperations>
 	<DeleteActions />
 	<FieldGroups>
 		<AxTableFieldGroup>

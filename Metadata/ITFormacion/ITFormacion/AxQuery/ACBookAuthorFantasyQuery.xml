@@ -32,6 +32,7 @@ public class ACBookAuthorFantasyQuery extends QueryRun
 					<Relations>
 						<AxQuerySimpleDataSourceRelation>
 							<Name>QueryDataSourceRelation1</Name>
+							<JoinDataSource>ACBookTable</JoinDataSource>
 							<JoinRelationName>ACAuthorTable</JoinRelationName>
 						</AxQuerySimpleDataSourceRelation>
 					</Relations>
