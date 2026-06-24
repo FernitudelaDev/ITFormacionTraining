@@ -106,10 +106,13 @@ public class ACAuthorTable extends common
 			</Method>
 		</Methods>
 	</SourceCode>
+	<FormRef>ACAuthor</FormRef>
 	<Label>@ACItFormacionLabels:Author</Label>
 	<SubscriberAccessLevel>
 		<Read>Allow</Read>
 	</SubscriberAccessLevel>
+	<TitleField1>FirstName</TitleField1>
+	<TitleField2>LastName</TitleField2>
 	<AllowRowVersionChangeTracking>Yes</AllowRowVersionChangeTracking>
 	<ReplacementKey>AuthorIdx</ReplacementKey>
 	<DeleteActions />

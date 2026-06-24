@@ -7,7 +7,22 @@
 			<ReturnType />
 		</Method>
 	</Methods>
-	<DataSources />
+	<DataSources>
+		<DataSource>
+			<Name>ACBookTable</Name>
+			<Methods>
+				<Method>
+					<Name>active</Name>
+					<Visibility>Public</Visibility>
+					<ReturnType>
+						<Type>Int32</Type>
+						<TypeName></TypeName>
+					</ReturnType>
+				</Method>
+			</Methods>
+			<Fields />
+		</DataSource>
+	</DataSources>
 	<DataControls />
 	<Members />
 </z:anyType>

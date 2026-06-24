@@ -13,7 +13,28 @@ public class ACBook extends FormRun
 ]]></Source>
 			</Method>
 		</Methods>
-		<DataSources xmlns="" />
+		<DataSources xmlns="">
+			<DataSource>
+				<Name>ACBookTable</Name>
+				<Methods>
+					<Method>
+						<Name>active</Name>
+						<Source><![CDATA[
+        public int active()
+        {
+            int ret;
+        
+            ret = super();
+        
+            return ret;
+        }
+
+]]></Source>
+					</Method>
+				</Methods>
+				<Fields />
+			</DataSource>
+		</DataSources>
 		<DataControls xmlns="" />
 		<Members xmlns="" />
 	</SourceCode>
@@ -73,7 +94,7 @@ public class ACBook extends FormRun
 					i:nil="true" />
 				<Controls>
 					<AxFormControl>
-						<Name>QuickFilterControl1</Name>
+						<Name>QuickFilter</Name>
 						<FormControlExtension>
 							<Name>QuickFilterControl</Name>
 							<ExtensionComponents />
@@ -108,7 +129,7 @@ public class ACBook extends FormRun
 				<Controls>
 					<AxFormControl xmlns=""
 						i:type="AxFormGroupControl">
-						<Name>RenameGrid</Name>
+						<Name>GroupId</Name>
 						<Type>Group</Type>
 						<FormControlExtension
 							i:nil="true" />
@@ -133,7 +154,7 @@ public class ACBook extends FormRun
 							</AxFormControl>
 							<AxFormControl xmlns=""
 								i:type="AxFormComboBoxControl">
-								<Name>RenameGrid_Genre</Name>
+								<Name>GroupId_Genre</Name>
 								<Type>ComboBox</Type>
 								<FormControlExtension
 									i:nil="true" />
@@ -143,7 +164,7 @@ public class ACBook extends FormRun
 							</AxFormControl>
 							<AxFormControl xmlns=""
 								i:type="AxFormReferenceGroupControl">
-								<Name>RenameGrid_Author</Name>
+								<Name>GroupGrid_Author</Name>
 								<Type>ReferenceGroup</Type>
 								<FormControlExtension
 									i:nil="true" />
