@@ -32,10 +32,16 @@
     <EnableUnmanagedDebugging>false</EnableUnmanagedDebugging>
   </PropertyGroup>
   <ItemGroup>
+    <Folder Include="EDT Strings\" />
     <Folder Include="Label Files\" />
     <Folder Include="Tables\" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="AxEdt\JGId">
+      <SubType>Content</SubType>
+      <Name>JGId</Name>
+      <Link>EDT Strings\JGId</Link>
+    </Content>
     <Content Include="AxLabelFile\ITFormacion_en-US">
       <SubType>Content</SubType>
       <Name>ITFormacion_en-US</Name>

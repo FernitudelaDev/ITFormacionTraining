@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Diagnostics
+  GenerationTime="2026-06-24T18:43:24.0994078+00:00">
+  <Items>
+    <Diagnostic>
+      <DiagnosticType>Compile</DiagnosticType>
+      <Severity>Error</Severity>
+      <Path>dynamics://Table/JGBookTable/Method/Method1</Path>
+      <ElementType>Table Method</ElementType>
+      <Moniker>ExpectedToken</Moniker>
+      <Line>8</Line>
+      <Column>44</Column>
+      <EndLine>8</EndLine>
+      <EndColumn>45</EndColumn>
+      <Message>';' expected.</Message>
+    </Diagnostic>
+    <Diagnostic>
+      <DiagnosticType>Compile</DiagnosticType>
+      <Severity>Error</Severity>
+      <Path>dynamics://Table/JGBookTable/Method/Method1</Path>
+      <ElementType>Table Method</ElementType>
+      <Moniker>IllegalToken</Moniker>
+      <Line>10</Line>
+      <Column>25</Column>
+      <EndLine>10</EndLine>
+      <EndColumn>34</EndColumn>
+      <Message>Invalid token 'bookTable'.</Message>
+    </Diagnostic>
+    <Diagnostic>
+      <DiagnosticType>Compile</DiagnosticType>
+      <Severity>Error</Severity>
+      <Path>dynamics://Table/JGBookTable/Method/Method1</Path>
+      <ElementType>Table Method</ElementType>
+      <Moniker>NotDeclared</Moniker>
+      <Line>11</Line>
+      <Column>13</Column>
+      <EndLine>12</EndLine>
+      <EndColumn>48</EndColumn>
+      <Message>'bookTable' is not declared.</Message>
+    </Diagnostic>
+    <Diagnostic>
+      <DiagnosticType>Compile</DiagnosticType>
+      <Severity>Error</Severity>
+      <Path>dynamics://Table/JGBookTable/Method/Method1</Path>
+      <ElementType>Table Method</ElementType>
+      <Moniker>NotDeclared</Moniker>
+      <Line>14</Line>
+      <Column>20</Column>
+      <EndLine>14</EndLine>
+      <EndColumn>29</EndColumn>
+      <Message>'bookTable' is not declared.</Message>
+    </Diagnostic>
+    <Diagnostic>
+      <DiagnosticType>Compile</DiagnosticType>
+      <Severity>Error</Severity>
+      <Path>dynamics://Table/JGBookTable/Method/Method1</Path>
+      <ElementType>Table Method</ElementType>
+      <Moniker>VoidMethodCannotReturnValue</Moniker>
+      <Line>14</Line>
+      <Column>13</Column>
+      <EndLine>14</EndLine>
+      <EndColumn>30</EndColumn>
+      <Message>A method body cannot return a value if the method is declared to return void.</Message>
+    </Diagnostic>
+  </Items>
+  <Aliases />
+</Diagnostics>

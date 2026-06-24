@@ -9,14 +9,16 @@ public class JGBookTable extends common
 ]]></Declaration>
 		<Methods>
 			<Method>
-				<Name>Method1</Name>
+				<Name>findRecId</Name>
 				<Source><![CDATA[
-    /// <summary>
-    ///
-    /// </summary>
-    private void Method1()
+    public static JGBookTable findRecId(RecId _recId)
     {
-        }
+        JGBookTable bookTable;
+        select firstonly bookTable
+                where bookTable.RecId == _recId;
+
+        return bookTable;
+    }
 
 ]]></Source>
 			</Method>
@@ -27,6 +29,7 @@ public class JGBookTable extends common
 		<Read>Allow</Read>
 	</SubscriberAccessLevel>
 	<AllowRowVersionChangeTracking>Yes</AllowRowVersionChangeTracking>
+	<ReplacementKey>BookTableIdx</ReplacementKey>
 	<DeleteActions />
 	<FieldGroups>
 		<AxTableFieldGroup>
@@ -40,7 +43,11 @@ public class JGBookTable extends common
 		<AxTableFieldGroup>
 			<Name>AutoIdentification</Name>
 			<AutoPopulate>Yes</AutoPopulate>
-			<Fields />
+			<Fields>
+				<AxTableFieldGroupField>
+					<DataField>JGId</DataField>
+				</AxTableFieldGroupField>
+			</Fields>
 		</AxTableFieldGroup>
 		<AxTableFieldGroup>
 			<Name>AutoSummary</Name>
@@ -51,9 +58,28 @@ public class JGBookTable extends common
 			<Fields />
 		</AxTableFieldGroup>
 	</FieldGroups>
-	<Fields />
+	<Fields>
+		<AxTableField xmlns=""
+			i:type="AxTableFieldString">
+			<Name>JGId</Name>
+			<AllowEdit>No</AllowEdit>
+			<ExtendedDataType>JGId</ExtendedDataType>
+			<IgnoreEDTRelation>Yes</IgnoreEDTRelation>
+			<Mandatory>Yes</Mandatory>
+		</AxTableField>
+	</Fields>
 	<FullTextIndexes />
-	<Indexes />
+	<Indexes>
+		<AxTableIndex>
+			<Name>BookTableIdx</Name>
+			<AlternateKey>Yes</AlternateKey>
+			<Fields>
+				<AxTableIndexField>
+					<DataField>JGId</DataField>
+				</AxTableIndexField>
+			</Fields>
+		</AxTableIndex>
+	</Indexes>
 	<Mappings />
 	<Relations />
 	<StateMachines />

@@ -3,10 +3,21 @@
 	i:type="AxPropertyCollection" xmlns:z="http://schemas.microsoft.com/2003/10/Serialization/">
 	<Methods>
 		<Method>
-			<Name>Method1</Name>
+			<Name>findRecId</Name>
+			<IsStatic>true</IsStatic>
+			<Visibility>Public</Visibility>
+			<Parameters>
+				<AxMethodParameter>
+					<Tags></Tags>
+					<Type>ExtendedDataType</Type>
+					<TypeName>RecId</TypeName>
+					<Name>_recId</Name>
+				</AxMethodParameter>
+			</Parameters>
 			<ReturnType>
 				<Tags></Tags>
-				<TypeName></TypeName>
+				<Type>Record</Type>
+				<TypeName>JGBookTable</TypeName>
 			</ReturnType>
 		</Method>
 	</Methods>
