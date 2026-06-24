@@ -33,5 +33,41 @@
 				<TypeName>AcAuthorFullName</TypeName>
 			</ReturnType>
 		</Method>
+		<Method>
+			<Name>find</Name>
+			<IsStatic>true</IsStatic>
+			<Visibility>Public</Visibility>
+			<Parameters>
+				<AxMethodParameter>
+					<Tags></Tags>
+					<Type>ExtendedDataType</Type>
+					<TypeName>ACId</TypeName>
+					<Name>_id</Name>
+				</AxMethodParameter>
+			</Parameters>
+			<ReturnType>
+				<Tags></Tags>
+				<Type>Record</Type>
+				<TypeName>ACBookTable</TypeName>
+			</ReturnType>
+		</Method>
+		<Method>
+			<Name>findRecId</Name>
+			<IsStatic>true</IsStatic>
+			<Visibility>Public</Visibility>
+			<Parameters>
+				<AxMethodParameter>
+					<Tags></Tags>
+					<Type>ExtendedDataType</Type>
+					<TypeName>RecId</TypeName>
+					<Name>_recId</Name>
+				</AxMethodParameter>
+			</Parameters>
+			<ReturnType>
+				<Tags></Tags>
+				<Type>Record</Type>
+				<TypeName>ACBookTable</TypeName>
+			</ReturnType>
+		</Method>
 	</Methods>
 </z:anyType>

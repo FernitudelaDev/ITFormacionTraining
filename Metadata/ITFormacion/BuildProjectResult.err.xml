@@ -1,18 +1,18 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Diagnostics
-  GenerationTime="2026-06-22T10:13:07.9839732+00:00">
+  GenerationTime="2026-06-24T00:06:27.8822369+00:00">
   <Items>
     <Diagnostic>
       <DiagnosticType>Compile</DiagnosticType>
       <Severity>Error</Severity>
-      <Path>dynamics://Table/ACAuthorTable</Path>
-      <ElementType>Table</ElementType>
-      <Moniker>UnderlyingFieldTypeNotFound</Moniker>
-      <Line>1</Line>
-      <Column>14</Column>
-      <EndLine>1</EndLine>
-      <EndColumn>27</EndColumn>
-      <Message>The underlying type 'DeathDate ' or its base type for table 'ACAuthorTable' field 'DeathDate' does not exist.</Message>
+      <Path>dynamics://Class/ACBookCreationService/Method/findBook</Path>
+      <ElementType>Class Method</ElementType>
+      <Moniker>ClassDoesNotContainStaticMethod</Moniker>
+      <Line>6</Line>
+      <Column>16</Column>
+      <EndLine>6</EndLine>
+      <EndColumn>38</EndColumn>
+      <Message>Table 'ACBookTable' does not contain the static method 'find'.</Message>
     </Diagnostic>
   </Items>
   <Aliases />

@@ -47,6 +47,36 @@ public class ACBookTable extends common
 
 ]]></Source>
 			</Method>
+			<Method>
+				<Name>find</Name>
+				<Source><![CDATA[
+    public static ACBookTable find(ACId _id)
+    {
+        ACBookTable bookTable;
+
+        select firstonly bookTable
+        where bookTable.Id == _id;
+
+        return bookTable;
+    }
+
+]]></Source>
+			</Method>
+			<Method>
+				<Name>findRecId</Name>
+				<Source><![CDATA[
+    public static ACBookTable findRecId(RecId _recId)
+    {
+        ACBookTable bookTable;
+
+        select firstonly bookTable
+        where bookTable.RecId == _recId;
+
+        return bookTable;
+    }
+
+]]></Source>
+			</Method>
 		</Methods>
 	</SourceCode>
 	<FormRef>ACBook</FormRef>

@@ -44,6 +44,8 @@
     <Folder Include="Menu Extensions\" />
     <Folder Include="Menus\" />
     <Folder Include="Security Privileges\" />
+    <Folder Include="Service Groups\" />
+    <Folder Include="Services\" />
     <Folder Include="Simple Queries\" />
     <Folder Include="Tables\" />
     <Folder Include="Views\" />
@@ -58,6 +60,11 @@
       <SubType>Content</SubType>
       <Name>ACItFormacionLabels.es-ES.label.txt</Name>
       <DependentUpon>AxLabelFile\ACItFormacionLabels_es-ES</DependentUpon>
+    </Content>
+    <Content Include="AxClass\ACBookCreationService">
+      <SubType>Content</SubType>
+      <Name>ACBookCreationService</Name>
+      <Link>Classes\ACBookCreationService</Link>
     </Content>
     <Content Include="AxClass\ACQueryVSSelect">
       <SubType>Content</SubType>
@@ -173,6 +180,16 @@
       <SubType>Content</SubType>
       <Name>ACBookEntityView</Name>
       <Link>Security Privileges\ACBookEntityView</Link>
+    </Content>
+    <Content Include="AxServiceGroup\ACBookCreationServiceGroup">
+      <SubType>Content</SubType>
+      <Name>ACBookCreationServiceGroup</Name>
+      <Link>Service Groups\ACBookCreationServiceGroup</Link>
+    </Content>
+    <Content Include="AxService\ACBookCreationService">
+      <SubType>Content</SubType>
+      <Name>ACBookCreationService</Name>
+      <Link>Services\ACBookCreationService</Link>
     </Content>
     <Content Include="AxTable\ACAuthorStaging">
       <SubType>Content</SubType>
