@@ -7,8 +7,22 @@ public class JGBookTable extends common
 {
 }
 ]]></Declaration>
-		<Methods />
+		<Methods>
+			<Method>
+				<Name>Method1</Name>
+				<Source><![CDATA[
+    /// <summary>
+    ///
+    /// </summary>
+    private void Method1()
+    {
+        }
+
+]]></Source>
+			</Method>
+		</Methods>
 	</SourceCode>
+	<Label>@ITFormacion:BookTable</Label>
 	<SubscriberAccessLevel>
 		<Read>Allow</Read>
 	</SubscriberAccessLevel>

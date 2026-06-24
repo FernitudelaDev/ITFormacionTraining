@@ -1,0 +1,3 @@
+﻿BookTable=Libro
+NewLabel0=Label files created on 06/24/2026 17:27:19 for label file Id ITFormacion and language es
+ ;Label file comment - see above label

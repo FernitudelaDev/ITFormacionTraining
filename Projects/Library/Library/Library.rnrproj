@@ -32,13 +32,34 @@
     <EnableUnmanagedDebugging>false</EnableUnmanagedDebugging>
   </PropertyGroup>
   <ItemGroup>
+    <Folder Include="Label Files\" />
     <Folder Include="Tables\" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="AxLabelFile\ITFormacion_en-US">
+      <SubType>Content</SubType>
+      <Name>ITFormacion_en-US</Name>
+      <Link>Label Files\ITFormacion_en-US</Link>
+    </Content>
+    <Content Include="AxLabelFile\ITFormacion_es">
+      <SubType>Content</SubType>
+      <Name>ITFormacion_es</Name>
+      <Link>Label Files\ITFormacion_es</Link>
+    </Content>
     <Content Include="AxTable\JGBookTable">
       <SubType>Content</SubType>
       <Name>JGBookTable</Name>
       <Link>Tables\JGBookTable</Link>
+    </Content>
+    <Content Include="ITFormacion.en-US.label.txt">
+      <SubType>Content</SubType>
+      <Name>ITFormacion.en-US.label.txt</Name>
+      <DependentUpon>AxLabelFile\ITFormacion_en-US</DependentUpon>
+    </Content>
+    <Content Include="ITFormacion.es.label.txt">
+      <SubType>Content</SubType>
+      <Name>ITFormacion.es.label.txt</Name>
+      <DependentUpon>AxLabelFile\ITFormacion_es</DependentUpon>
     </Content>
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.Common.targets" />
