@@ -9,7 +9,7 @@ public class ACBookEntity extends common
 ]]></Declaration>
 		<Methods />
 	</SourceCode>
-	<FormRef>ACAuthor</FormRef>
+	<FormRef>ACBook</FormRef>
 	<Label>@ACItFormacionLabels:BookTable</Label>
 	<SubscriberAccessLevel>
 		<Read>Allow</Read>

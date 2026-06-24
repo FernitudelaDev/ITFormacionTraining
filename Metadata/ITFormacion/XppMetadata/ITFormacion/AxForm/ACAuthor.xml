@@ -32,6 +32,18 @@
 						<Type>Int32</Type>
 						<TypeName></TypeName>
 					</ReturnType>
+					<Variables>
+						<AxMethodVariable>
+							<Type>Int32</Type>
+							<TypeName></TypeName>
+							<Name>ret</Name>
+						</AxMethodVariable>
+						<AxMethodVariable>
+							<Type>Record</Type>
+							<TypeName>ACAuthorTable</TypeName>
+							<Name>author</Name>
+						</AxMethodVariable>
+					</Variables>
 				</Method>
 			</Methods>
 			<Fields>
@@ -44,6 +56,13 @@
 							<ReturnType>
 								<TypeName></TypeName>
 							</ReturnType>
+							<Variables>
+								<AxMethodVariable>
+									<Type>Class</Type>
+									<TypeName>FormDataSource</TypeName>
+									<Name>formDataSource</Name>
+								</AxMethodVariable>
+							</Variables>
 						</Method>
 					</Methods>
 				</Field>

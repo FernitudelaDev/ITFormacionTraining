@@ -3,7 +3,7 @@
 	<Name>ACBookCreationServiceGroup</Name>
 	<Services>
 		<AxServiceGroupService>
-			<Name>ACBookCreationServiceGroup</Name>
+			<Name>ACBookCreationService</Name>
 			<Service>ACBookCreationService</Service>
 		</AxServiceGroupService>
 	</Services>
