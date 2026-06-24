@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<AxClass xmlns:i="http://www.w3.org/2001/XMLSchema-instance">
+	<Name>ACRunnableClassExample</Name>
+	<SourceCode>
+		<Declaration><![CDATA[
+internal final class ACRunnableClassExample
+{
+}
+]]></Declaration>
+		<Methods>
+			<Method>
+				<Name>main</Name>
+				<Source><![CDATA[
+    public static void main(Args _args)
+    {
+        ACQueryVSSelect queryVsSelect = new ACQueryVSSelect();
+
+        if(Box::yesNo('Do you want to run the select using the query', DialogButton::Yes) == DialogButton::Yes)
+        {
+            //queryVsSelect.reuseExistingQuery();
+            queryVsSelect.buildQueryFromCode();
+        }
+        else
+        {
+            queryVsSelect.selectExample();
+        }
+    }
+
+]]></Source>
+			</Method>
+		</Methods>
+	</SourceCode>
+</AxClass>

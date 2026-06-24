@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<AxClass xmlns:i="http://www.w3.org/2001/XMLSchema-instance">
+	<Name>ACQueryVSSelect</Name>
+	<SourceCode>
+		<Declaration><![CDATA[
+internal final class ACQueryVSSelect
+{
+    //Ejercicio, query vs select: vamos a mostrar en un info, el id de los libros,
+    //y el nombre y apellido de los autores de los libros de fantasía.
+
+}
+]]></Declaration>
+		<Methods>
+			<Method>
+				<Name>selectExample</Name>
+				<Source><![CDATA[
+    public void selectExample()
+    {
+        ACAuthorTable authorTable;
+        ACBookTable bookTable;
+
+        while select FirstName, LastName from authorTable
+        join Id, Name from bookTable
+        where authorTable.RecId == bookTable.Author
+        && bookTable.Genre == ACGenreEnum::Fantasy
+        {
+            Info(strFmt('%1 %2 %3 %4',
+            bookTable.Id,
+            bookTable.Name,
+            authorTable.FirstName,
+            authorTable.LastName));
+        }
+    }
+
+]]></Source>
+			</Method>
+			<Method>
+				<Name>reuseExistingQuery</Name>
+				<Source><![CDATA[
+    public void reuseExistingQuery()
+    {
+        Query acBookAuthorFantasyQuery = new Query(queryStr(ACBookAuthorFantasyQuery));
+
+        this.runQuery(acBookAuthorFantasyQuery);
+    }
+
+]]></Source>
+			</Method>
+			<Method>
+				<Name>buildQueryFromCode</Name>
+				<Source><![CDATA[
+    public void buildQueryFromCode()
+    {
+        Query acBookAuthorsFantasyQuery = new Query();
+
+        //Añadimos los datasources
+        QueryBuildDataSource qbdsAuthorTable = acBookAuthorsFantasyQuery.addDataSource(tableNum(ACAuthorTable));
+        QueryBuildDataSource qbdsBookTable = qbdsAuthorTable.addDataSource(tableNum(ACBookTable));
+
+        //Hacemos el join
+        qbdsBookTable.joinMode(JoinMode::InnerJoin);
+
+        //Añadimos la relacion
+        qbdsBookTable.addLink(fieldNum(ACAuthorTable, RecId),
+        fieldNum(ACBookTable, Author),
+        qbdsAuthorTable.name());
+
+        //Añadimos el filtro
+        QueryBuildRange qbrGenre = qbdsBookTable.addRange(fieldNum(ACBookTable, Genre));
+        qbrGenre.value(queryValue(ACGenreEnum::Fantasy));
+
+        //Ejecutamos la query
+        this.runQuery(acBookAuthorsFantasyQuery);
+    }
+
+]]></Source>
+			</Method>
+			<Method>
+				<Name>runQuery</Name>
+				<Source><![CDATA[
+    public void runQuery(Query _q)
+    {
+        QueryRun qr = new QueryRun(_q);
+
+        while(qr.next())
+        {
+            ACBookTable bookTable = qr.get(tableNum(ACBookTable));
+            ACAuthorTable authorTable = qr.get(tableNum(ACAuthorTable));
+
+            Info(strFmt('%1 %2 %3 %4',
+            bookTable.Id,
+            bookTable.Name,
+            authorTable.FirstName,
+            authorTable.LastName));
+        }
+    }
+
+]]></Source>
+			</Method>
+		</Methods>
+	</SourceCode>
+</AxClass>

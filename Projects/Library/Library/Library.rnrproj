@@ -33,6 +33,7 @@
   </PropertyGroup>
   <ItemGroup>
     <Folder Include="Base Enums\" />
+    <Folder Include="Classes\" />
     <Folder Include="Data Entities\" />
     <Folder Include="Display Menu Items\" />
     <Folder Include="EDT Dates\" />
@@ -43,7 +44,9 @@
     <Folder Include="Menu Extensions\" />
     <Folder Include="Menus\" />
     <Folder Include="Security Privileges\" />
+    <Folder Include="Simple Queries\" />
     <Folder Include="Tables\" />
+    <Folder Include="Views\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="ACItFormacionLabels.en-US.label.txt">
@@ -55,6 +58,16 @@
       <SubType>Content</SubType>
       <Name>ACItFormacionLabels.es-ES.label.txt</Name>
       <DependentUpon>AxLabelFile\ACItFormacionLabels_es-ES</DependentUpon>
+    </Content>
+    <Content Include="AxClass\ACQueryVSSelect">
+      <SubType>Content</SubType>
+      <Name>ACQueryVSSelect</Name>
+      <Link>Classes\ACQueryVSSelect</Link>
+    </Content>
+    <Content Include="AxClass\ACRunnableClassExample">
+      <SubType>Content</SubType>
+      <Name>ACRunnableClassExample</Name>
+      <Link>Classes\ACRunnableClassExample</Link>
     </Content>
     <Content Include="AxDataEntityView\ACAuthorEntity">
       <SubType>Content</SubType>
@@ -136,6 +149,11 @@
       <Name>ACLibrary</Name>
       <Link>Menus\ACLibrary</Link>
     </Content>
+    <Content Include="AxQuery\ACBookAuthorFantasyQuery">
+      <SubType>Content</SubType>
+      <Name>ACBookAuthorFantasyQuery</Name>
+      <Link>Simple Queries\ACBookAuthorFantasyQuery</Link>
+    </Content>
     <Content Include="AxSecurityPrivilege\ACAuthorEntityMaintain">
       <SubType>Content</SubType>
       <Name>ACAuthorEntityMaintain</Name>
@@ -175,6 +193,11 @@
       <SubType>Content</SubType>
       <Name>ACBookTable</Name>
       <Link>Tables\ACBookTable</Link>
+    </Content>
+    <Content Include="AxView\ACBookAuthorFantasyView">
+      <SubType>Content</SubType>
+      <Name>ACBookAuthorFantasyView</Name>
+      <Link>Views\ACBookAuthorFantasyView</Link>
     </Content>
     <Content Include="Id.en-US.label.txt">
       <SubType>Content</SubType>
