@@ -101,6 +101,11 @@
       <Name>ACId</Name>
       <Link>Extended Data Types\ACId</Link>
     </Content>
+    <Content Include="AxEdt\ACInventTransId">
+      <SubType>Content</SubType>
+      <Name>ACInventTransId</Name>
+      <Link>EDT Strings\ACInventTransId</Link>
+    </Content>
     <Content Include="AxEnum\ACGenreEnum">
       <SubType>Content</SubType>
       <Name>ACGenreEnum</Name>
@@ -205,6 +210,11 @@
       <SubType>Content</SubType>
       <Name>ACAuthorTable</Name>
       <Link>Tables\ACAuthorTable</Link>
+    </Content>
+    <Content Include="AxTable\ACBookInventoryTransaction">
+      <SubType>Content</SubType>
+      <Name>ACBookInventoryTransaction</Name>
+      <Link>Tables\ACBookInventoryTransaction</Link>
     </Content>
     <Content Include="AxTable\ACBookStaging">
       <SubType>Content</SubType>
