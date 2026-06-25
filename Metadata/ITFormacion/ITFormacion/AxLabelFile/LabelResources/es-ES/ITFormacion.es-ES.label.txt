@@ -1,6 +1,7 @@
 ﻿Author=Autor
 AuthorFullName=Nombre autor
 Books=Libros
+BooksFilteredByGenre=Libros filtrados por genero
 BookTable=Libro
 DeathDate=Fecha de muerte
 Fantasy=Fantasia

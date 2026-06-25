@@ -6,16 +6,41 @@
 			<Name>classDeclaration</Name>
 			<ReturnType />
 		</Method>
+		<Method>
+			<Name>init</Name>
+			<Visibility>Public</Visibility>
+			<ReturnType>
+				<TypeName></TypeName>
+			</ReturnType>
+		</Method>
+		<Method>
+			<Name>getParamsFormArgs</Name>
+			<ReturnType>
+				<TypeName></TypeName>
+			</ReturnType>
+		</Method>
 	</Methods>
 	<DataSources>
 		<DataSource>
 			<Name>RRBBookTable</Name>
 			<Methods>
 				<Method>
-					<Name>active</Name>
+					<Name>init</Name>
 					<Visibility>Public</Visibility>
 					<ReturnType>
-						<Type>Int32</Type>
+						<TypeName></TypeName>
+					</ReturnType>
+				</Method>
+				<Method>
+					<Name>clearExistingDynaLinksAndAddGenreRanges</Name>
+					<ReturnType>
+						<TypeName></TypeName>
+					</ReturnType>
+				</Method>
+				<Method>
+					<Name>executeQuery</Name>
+					<Visibility>Public</Visibility>
+					<ReturnType>
 						<TypeName></TypeName>
 					</ReturnType>
 				</Method>
@@ -24,5 +49,18 @@
 		</DataSource>
 	</DataSources>
 	<DataControls />
-	<Members />
+	<Members>
+		<AxClassMemberVariable>
+			<Type>Enum</Type>
+			<TypeName>RRBGenreEnum</TypeName>
+			<Name>genreFilter</Name>
+			<Attributes />
+		</AxClassMemberVariable>
+		<AxClassMemberVariable>
+			<Type>Enum</Type>
+			<TypeName>boolean</TypeName>
+			<Name>needGenreFilter</Name>
+			<Attributes />
+		</AxClassMemberVariable>
+	</Members>
 </z:anyType>

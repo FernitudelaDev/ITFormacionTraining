@@ -37,6 +37,7 @@
     <Folder Include="Data Entities\" />
     <Folder Include="Display Menu Items\" />
     <Folder Include="EDT Dates\" />
+    <Folder Include="EDT Reals\" />
     <Folder Include="EDT Strings\" />
     <Folder Include="Forms\" />
     <Folder Include="Label Files\" />
@@ -90,6 +91,16 @@
       <Name>RRBId</Name>
       <Link>EDT Strings\RRBId</Link>
     </Content>
+    <Content Include="AxEdt\RRBInventoryQty">
+      <SubType>Content</SubType>
+      <Name>RRBInventoryQty</Name>
+      <Link>EDT Reals\RRBInventoryQty</Link>
+    </Content>
+    <Content Include="AxEdt\RRBInventTransId">
+      <SubType>Content</SubType>
+      <Name>RRBInventTransId</Name>
+      <Link>EDT Strings\RRBInventTransId</Link>
+    </Content>
     <Content Include="AxEnum\RRBGenreEnum">
       <SubType>Content</SubType>
       <Name>RRBGenreEnum</Name>
@@ -104,6 +115,11 @@
       <SubType>Content</SubType>
       <Name>RRBBook</Name>
       <Link>Forms\RRBBook</Link>
+    </Content>
+    <Content Include="AxForm\RRBBookTransactions">
+      <SubType>Content</SubType>
+      <Name>RRBBookTransactions</Name>
+      <Link>Forms\RRBBookTransactions</Link>
     </Content>
     <Content Include="AxLabelFile\ITFormacion_en-US">
       <SubType>Content</SubType>
@@ -129,6 +145,16 @@
       <SubType>Content</SubType>
       <Name>RRBBook</Name>
       <Link>Display Menu Items\RRBBook</Link>
+    </Content>
+    <Content Include="AxMenuItemDisplay\RRBBookGenreFiltered">
+      <SubType>Content</SubType>
+      <Name>RRBBookGenreFiltered</Name>
+      <Link>Display Menu Items\RRBBookGenreFiltered</Link>
+    </Content>
+    <Content Include="AxMenuItemDisplay\RRBBookTransactions">
+      <SubType>Content</SubType>
+      <Name>RRBBookTransactions</Name>
+      <Link>Display Menu Items\RRBBookTransactions</Link>
     </Content>
     <Content Include="AxMenu\RRBLibrary">
       <SubType>Content</SubType>
@@ -179,6 +205,11 @@
       <SubType>Content</SubType>
       <Name>RRBAuthorTable</Name>
       <Link>Tables\RRBAuthorTable</Link>
+    </Content>
+    <Content Include="AxTable\RRBBookInventoryTransaction">
+      <SubType>Content</SubType>
+      <Name>RRBBookInventoryTransaction</Name>
+      <Link>Tables\RRBBookInventoryTransaction</Link>
     </Content>
     <Content Include="AxTable\RRBBookStaging">
       <SubType>Content</SubType>

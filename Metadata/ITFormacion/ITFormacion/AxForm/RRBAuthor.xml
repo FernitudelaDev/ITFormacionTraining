@@ -9,18 +9,8 @@
 [Form]
 public class RRBAuthor extends FormRun
 {
-    //public void setDeathDateEditable(boolean _isEditable)
-    //{
-    //    //navegando desde el datasource
-    //    //FormControl deathDateControl = this.formRun().design().controlName(formControlStr(RRBAuthor, SimpleListGrid_DeathDate));
+    QueryBuildRange qbrBirthDate, qbrDeathDate, qbrDeathDateNullCheck;
 
-    //    //yendo desde element
-    //    //FormControl deathDateControl = element.design().controlName(formControlStr(RRBAuthor, SimpleListGrid_DeathDate));
-
-    //    //deathDateControl.allowEdit(_isEditable);
-
-    //    RRBAuthorTable_ds.object(fieldNum(RRBAuthorTable, DeathDate)) .allowEdit(_isEditable);
-    //}
 
 }
 ]]></Source>
@@ -46,11 +36,72 @@ public class RRBAuthor extends FormRun
 
 ]]></Source>
 					</Method>
+					<Method>
+						<Name>init</Name>
+						<Source><![CDATA[
+        public void init()
+        {
+            super();
+
+            QueryBuildDataSource qbds = RRBAuthorTable_q.dataSourceTable(tableNum(RRBAuthorTable));
+
+            qbrBirthDate = qbds.addRange(fieldNum(RRBAuthorTable,BirthDate));
+            qbrDeathDate = qbds.addRange(fieldNum(RRBAuthorTable, DeathDate));
+            qbrDeathDateNullCheck = qbds.addRange(fieldNum(RRBAuthorTable, DeathDate));
+
+            qbrBirthDate.status(RangeStatus::Hidden);
+            qbrDeathDate.status(RangeStatus::Hidden);
+            qbrDeathDateNullCheck.status(RangeStatus::Hidden);
+
+        }
+
+]]></Source>
+					</Method>
 				</Methods>
 				<Fields />
 			</DataSource>
 		</DataSources>
-		<DataControls xmlns="" />
+		<DataControls xmlns="">
+			<Control>
+				<Name>FilterDateAlive</Name>
+				<Type>Date</Type>
+				<Methods>
+					<Method>
+						<Name>modified</Name>
+						<Source><![CDATA[
+        public boolean modified()
+        {
+            boolean ret;
+    
+            ret = super();
+
+            date filterDate = this.dateValue();
+
+            if(filterDate > dateNull())
+            {
+                qbrBirthDate.value(strFmt("<%1", filterDate));
+                qbrDeathDate.value(strFmt(">%1", filterDate));
+                qbrDeathDateNullCheck.value(queryValue(dateNull()));                
+            }
+            else
+            {
+                //limpiamos los rangos para que no filtre. SI quisieramos filtrar por valor vacio
+                //SysQueryRangeUtil::valueEmptyString();
+                qbrBirthDate.value('');
+                qbrDeathDate.value('');
+                qbrDeathDateNullCheck.value('');
+            }
+
+            RRBAuthorTable_ds.executeQuery();
+    
+            return ret;
+        }
+
+]]></Source>
+					</Method>
+				</Methods>
+			</Control>
+		</DataControls>
 		<Members xmlns="" />
 	</SourceCode>
 	<DataSources>
@@ -107,7 +158,36 @@ public class RRBAuthor extends FormRun
 				<Type>ActionPane</Type>
 				<FormControlExtension
 					i:nil="true" />
-				<Controls />
+				<Controls>
+					<AxFormControl xmlns=""
+						i:type="AxFormButtonGroupControl">
+						<Name>ApplicationBarButtonGroup</Name>
+						<Type>ButtonGroup</Type>
+						<FormControlExtension
+							i:nil="true" />
+						<Controls>
+							<AxFormControl xmlns=""
+								i:type="AxFormMenuFunctionButtonControl">
+								<Name>Book</Name>
+								<Type>MenuFunctionButton</Type>
+								<FormControlExtension
+									i:nil="true" />
+								<DataSource>RRBAuthorTable</DataSource>
+								<MenuItemName>RRBBook</MenuItemName>
+								<NeedsRecord>Yes</NeedsRecord>
+							</AxFormControl>
+							<AxFormControl xmlns=""
+								i:type="AxFormMenuFunctionButtonControl">
+								<Name>RRBBookGenreFiltered</Name>
+								<Type>MenuFunctionButton</Type>
+								<FormControlExtension
+									i:nil="true" />
+								<DataSource>RRBAuthorTable</DataSource>
+								<MenuItemName>RRBBookGenreFiltered</MenuItemName>
+							</AxFormControl>
+						</Controls>
+					</AxFormControl>
+				</Controls>
 			</AxFormControl>
 			<AxFormControl xmlns=""
 				i:type="AxFormGroupControl">
@@ -141,6 +221,14 @@ public class RRBAuthor extends FormRun
 								</AxFormControlExtensionProperty>
 							</ExtensionProperties>
 						</FormControlExtension>
+					</AxFormControl>
+					<AxFormControl xmlns=""
+						i:type="AxFormDateControl">
+						<Name>FilterDateAlive</Name>
+						<AutoDeclaration>Yes</AutoDeclaration>
+						<Type>Date</Type>
+						<FormControlExtension
+							i:nil="true" />
 					</AxFormControl>
 				</Controls>
 				<ArrangeMethod>HorizontalLeft</ArrangeMethod>

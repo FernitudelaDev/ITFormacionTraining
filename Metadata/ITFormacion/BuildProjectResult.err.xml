@@ -1,32 +1,19 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Diagnostics
-  GenerationTime="2026-06-22T12:13:37.7123266+00:00">
+  GenerationTime="2026-06-25T11:59:39.9164417+00:00">
   <Items>
     <Diagnostic>
       <DiagnosticType>Compile</DiagnosticType>
       <Severity>Error</Severity>
-      <Path>dynamics://Form/RRBAuthor/FormDataSourceRoot/RRBAuthorTable/Method/active</Path>
-      <ElementType>Form DataSource Method</ElementType>
-      <Moniker>ClassDoesNotContainMethod</Moniker>
-      <Line>29</Line>
-      <Column>13</Column>
-      <EndLine>29</EndLine>
-      <EndColumn>75</EndColumn>
-      <Message>ClassDoesNotContainMethod: DataSource 'RRBAuthorTable' does not contain a definition for method 'setDeathDateEditable' and no extension method 'setDeathDateEditable' accepting a first argument of type 'RRBAuthorTable' is found on any extension class.</Message>
-      <ItemSpecific>
-        <OriginatorType
-          alias="0">ClassDoesNotContainMethod</OriginatorType>
-        <Fields>
-          <elementTypeName>DataSource</elementTypeName>
-          <elementName>RRBAuthorTable</elementName>
-          <methodName>setDeathDateEditable</methodName>
-        </Fields>
-      </ItemSpecific>
+      <Path>dynamics://Table/RRBBookInventoryTransaction/Method/validateTotalQtyIsNotBellowZero</Path>
+      <ElementType>Table Method</ElementType>
+      <Moniker>NotAllPathsReturn</Moniker>
+      <Line>20</Line>
+      <Column>5</Column>
+      <EndLine>23</EndLine>
+      <EndColumn>6</EndColumn>
+      <Message>Not all paths return a value in 'validateTotalQtyIsNotBellowZero'.</Message>
     </Diagnostic>
   </Items>
-  <Aliases>
-    <Alias
-      assembly="Microsoft.Dynamics.AX.Framework.Xlnt.XppParser.Pass2, Version=7.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35"
-      ns="Microsoft.Dynamics.AX.Framework.Xlnt.XppParser.Pass2">0</Alias>
-  </Aliases>
+  <Aliases />
 </Diagnostics>

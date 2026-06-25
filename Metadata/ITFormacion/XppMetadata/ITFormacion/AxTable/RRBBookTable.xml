@@ -60,10 +60,62 @@
 			<Name>dispAuthorFullName</Name>
 			<IsDisplay>true</IsDisplay>
 			<Visibility>Public</Visibility>
+			<Attributes>
+				<AxAttribute>
+					<Name>SysClientCacheDataMethod</Name>
+					<Parameters>
+						<AxAttributeParameter>
+							<Type>Boolean</Type>
+							<TypeValue>True</TypeValue>
+							<AdditionalData />
+						</AxAttributeParameter>
+					</Parameters>
+				</AxAttribute>
+			</Attributes>
 			<ReturnType>
 				<Tags></Tags>
 				<Type>ExtendedDataType</Type>
 				<TypeName>RRBAuthorFullName</TypeName>
+			</ReturnType>
+		</Method>
+		<Method>
+			<Name>dispCurrentInventory</Name>
+			<IsDisplay>true</IsDisplay>
+			<Visibility>Public</Visibility>
+			<Attributes>
+				<AxAttribute>
+					<Name>SysClientCacheDataMethod</Name>
+					<Parameters>
+						<AxAttributeParameter>
+							<Type>Boolean</Type>
+							<TypeValue>True</TypeValue>
+							<AdditionalData />
+						</AxAttributeParameter>
+					</Parameters>
+				</AxAttribute>
+			</Attributes>
+			<ReturnType>
+				<Tags></Tags>
+				<Type>ExtendedDataType</Type>
+				<TypeName>RRBInventoryQty</TypeName>
+			</ReturnType>
+		</Method>
+		<Method>
+			<Name>currentInventory</Name>
+			<Visibility>Public</Visibility>
+			<Parameters>
+				<AxMethodParameter>
+					<Tags></Tags>
+					<Type>ExtendedDataType</Type>
+					<TypeName>RecId</TypeName>
+					<DefaultValue>0</DefaultValue>
+					<Name>_excludeTransactionRecId</Name>
+				</AxMethodParameter>
+			</Parameters>
+			<ReturnType>
+				<Tags></Tags>
+				<Type>ExtendedDataType</Type>
+				<TypeName>Qty</TypeName>
 			</ReturnType>
 		</Method>
 	</Methods>

@@ -9,8 +9,45 @@
 [Form]
 public class RRBBook extends FormRun
 {
+    RRBGenreEnum genreFilter;
+    boolean needGenreFilter;
 
 }
+]]></Source>
+			</Method>
+			<Method>
+				<Name>init</Name>
+				<Source><![CDATA[
+    public void init()
+    {
+        //Se ejecuta antes del super porque dentro del super se hace el init del datasource
+        element.getParamsFormArgs();
+
+        super();        
+
+        //FormRun callerFormRun = element.args().caller();       
+        
+    }
+
+]]></Source>
+			</Method>
+			<Method>
+				<Name>getParamsFormArgs</Name>
+				<Source><![CDATA[
+    private void getParamsFormArgs()
+    {
+        Common callerRecord = element.args().record();
+        MenuItemName callerItemName = element.args().menuItemName();
+
+        if(callerItemName == menuItemDisplayStr(RRBBookGenreFiltered)
+            && callerRecord.TableId == tableNum(RRBAuthorTable))
+        {
+            RRBAuthorTable authorTable = callerRecord;
+            genreFilter = authorTable.firstBookGenre();
+            needGenreFilter = true;
+        }
+    }
+
 ]]></Source>
 			</Method>
 		</Methods>
@@ -19,19 +56,44 @@ public class RRBBook extends FormRun
 				<Name>RRBBookTable</Name>
 				<Methods>
 					<Method>
-						<Name>active</Name>
+						<Name>init</Name>
 						<Source><![CDATA[
-        /// <summary>
-        ///
-        /// </summary>
-        /// <returns></returns>
-        public int active()
+        public void init()
         {
-            int ret;
-    
-            ret = super();
-    
-            return ret;
+            super();
+
+            if(needGenreFilter)
+            {
+                this.clearExistingDynaLinksAndAddGenreRanges();
+            }
+            
+        }
+
+]]></Source>
+					</Method>
+					<Method>
+						<Name>clearExistingDynaLinksAndAddGenreRanges</Name>
+						<Source><![CDATA[
+        private void clearExistingDynaLinksAndAddGenreRanges()
+        {
+            QueryBuildDataSource qbds = RRBBookTable_q.dataSourceTable(tableNum(RRBBookTable));
+
+            qbds.clearDynalinks();
+
+            QueryBuildRange qbrGenre = qbds.addRange(fieldNum(RRBBookTable, Genre));
+
+            qbrGenre.status(RangeStatus::Locked);
+            qbrGenre.value(queryValue(genreFilter));
+        }
+
+]]></Source>
+					</Method>
+					<Method>
+						<Name>executeQuery</Name>
+						<Source><![CDATA[
+        public void executeQuery()
+        {
+            super();
         }
 
 ]]></Source>
@@ -93,7 +155,26 @@ public class RRBBook extends FormRun
 				<Type>ActionPane</Type>
 				<FormControlExtension
 					i:nil="true" />
-				<Controls />
+				<Controls>
+					<AxFormControl xmlns=""
+						i:type="AxFormButtonGroupControl">
+						<Name>ButtonGroup</Name>
+						<Type>ButtonGroup</Type>
+						<FormControlExtension
+							i:nil="true" />
+						<Controls>
+							<AxFormControl xmlns=""
+								i:type="AxFormMenuFunctionButtonControl">
+								<Name>BookTransactions</Name>
+								<Type>MenuFunctionButton</Type>
+								<FormControlExtension
+									i:nil="true" />
+								<DataSource>RRBBookTable</DataSource>
+								<MenuItemName>RRBBookTransactions</MenuItemName>
+							</AxFormControl>
+						</Controls>
+					</AxFormControl>
+				</Controls>
 			</AxFormControl>
 			<AxFormControl xmlns=""
 				i:type="AxFormGroupControl">
@@ -191,6 +272,15 @@ public class RRBBook extends FormRun
 								<FormControlExtension
 									i:nil="true" />
 								<DataMethod>dispAuthorFullName</DataMethod>
+								<DataSource>RRBBookTable</DataSource>
+							</AxFormControl>
+							<AxFormControl xmlns=""
+								i:type="AxFormRealControl">
+								<Name>GroupGrid_dispCurrentInventory</Name>
+								<Type>Real</Type>
+								<FormControlExtension
+									i:nil="true" />
+								<DataMethod>dispCurrentInventory</DataMethod>
 								<DataSource>RRBBookTable</DataSource>
 							</AxFormControl>
 						</Controls>

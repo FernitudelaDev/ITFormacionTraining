@@ -62,15 +62,39 @@ public class RRBBookTable extends common
 			<Method>
 				<Name>dispAuthorFullName</Name>
 				<Source><![CDATA[
-    /// <summary>
-    ///
-    /// </summary>
-    /// 
+    [SysClientCacheDataMethod(true)]
     public display RRBAuthorFullName dispAuthorFullName()
     {
         RRBAuthorTable authorTable = RRBAuthorTable::findRecId(this.Author);
 
         return authorTable.FirstName + ' ' + authorTable.LastName;
+    }
+
+]]></Source>
+			</Method>
+			<Method>
+				<Name>dispCurrentInventory</Name>
+				<Source><![CDATA[
+    [SysClientCacheDataMethod(true)]
+    public display RRBInventoryQty dispCurrentInventory()
+    {
+        return this.currentInventory();
+    }
+
+]]></Source>
+			</Method>
+			<Method>
+				<Name>currentInventory</Name>
+				<Source><![CDATA[
+    public Qty currentInventory(RecId _excludeTransactionRecId = 0)
+    {
+        RRBBookInventoryTransaction transactions;
+
+        select sum(Qty) from transactions
+            where transactions.Book == this.RecId
+            && transactions.RecId != _excludeTransactionRecId;
+
+        return transactions.Qty;
     }
 
 ]]></Source>
@@ -131,6 +155,9 @@ public class RRBBookTable extends common
 				</AxTableFieldGroupField>
 				<AxTableFieldGroupField>
 					<DataField>dispAuthorFullName</DataField>
+				</AxTableFieldGroupField>
+				<AxTableFieldGroupField>
+					<DataField>dispCurrentInventory</DataField>
 				</AxTableFieldGroupField>
 			</Fields>
 		</AxTableFieldGroup>

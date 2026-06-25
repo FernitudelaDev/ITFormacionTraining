@@ -73,7 +73,9 @@ internal final class RRBQueryVSSelect
 
         //Añadimos el filtro
         QueryBuildRange qbrGenre = qbdsBookTable.addRange(fieldNum(RRBBookTable, Genre));
-        qbrGenre.value(queryValue(RRBGenreEnum::Fantasy));
+        qbrGenre.value(queryValue(RRBGenreEnum::Fantasy));        
+        //Si queremos añadir un valor nuevo a un rango existente (fantasia e historia):
+        qbrGenre.value(queryRangeConcat(qbrGenre.value(), queryValue(RRBGenreEnum::HistoryNovel)));
 
         //Ejecutamos la query
         this.runQuery(rrbBookAuthorsFantasyQuery);
