@@ -93,7 +93,7 @@ public class SMHBookInventoryTransaction extends common
 		<AxTableRelation xmlns=""
 			i:type="AxTableRelationForeignKey">
 			<Name>BookTableFK</Name>
-			<Cardinality>ZeroMore</Cardinality>
+			<Cardinality>OneMore</Cardinality>
 			<OnDelete>Restricted</OnDelete>
 			<RelatedTable>FTDBookTable</RelatedTable>
 			<RelatedTableCardinality>ExactlyOne</RelatedTableCardinality>
