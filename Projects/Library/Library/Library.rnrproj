@@ -38,6 +38,7 @@
     <Folder Include="Data Entities\" />
     <Folder Include="Display Menu Items\" />
     <Folder Include="EDT Dates\" />
+    <Folder Include="EDT Reals\" />
     <Folder Include="EDT Strings\" />
     <Folder Include="Forms\" />
     <Folder Include="Label Files\" />
@@ -91,6 +92,16 @@
       <Name>AIBId</Name>
       <Link>EDT Strings\AIBId</Link>
     </Content>
+    <Content Include="AxEdt\AIBInventoryQty">
+      <SubType>Content</SubType>
+      <Name>AIBInventoryQty</Name>
+      <Link>EDT Reals\AIBInventoryQty</Link>
+    </Content>
+    <Content Include="AxEdt\AIBInventTransId">
+      <SubType>Content</SubType>
+      <Name>AIBInventTransId</Name>
+      <Link>EDT Strings\AIBInventTransId</Link>
+    </Content>
     <Content Include="AxEnum\AIBGenreEnum">
       <SubType>Content</SubType>
       <Name>AIBGenreEnum</Name>
@@ -105,6 +116,11 @@
       <SubType>Content</SubType>
       <Name>AIBBook</Name>
       <Link>Forms\AIBBook</Link>
+    </Content>
+    <Content Include="AxForm\AIBBookTransactions">
+      <SubType>Content</SubType>
+      <Name>AIBBookTransactions</Name>
+      <Link>Forms\AIBBookTransactions</Link>
     </Content>
     <Content Include="AxLabelFile\ITFormacion_en-US">
       <SubType>Content</SubType>
@@ -130,6 +146,16 @@
       <SubType>Content</SubType>
       <Name>AIBBook</Name>
       <Link>Display Menu Items\AIBBook</Link>
+    </Content>
+    <Content Include="AxMenuItemDisplay\AIBBookGenreFilter">
+      <SubType>Content</SubType>
+      <Name>AIBBookGenreFilter</Name>
+      <Link>Display Menu Items\AIBBookGenreFilter</Link>
+    </Content>
+    <Content Include="AxMenuItemDisplay\AIBBookTransactions">
+      <SubType>Content</SubType>
+      <Name>AIBBookTransactions</Name>
+      <Link>Display Menu Items\AIBBookTransactions</Link>
     </Content>
     <Content Include="AxMenu\AIBLibrary">
       <SubType>Content</SubType>
@@ -180,6 +206,11 @@
       <SubType>Content</SubType>
       <Name>AIBAuthorTable</Name>
       <Link>Tables\AIBAuthorTable</Link>
+    </Content>
+    <Content Include="AxTable\AIBBookInventoryTransaction">
+      <SubType>Content</SubType>
+      <Name>AIBBookInventoryTransaction</Name>
+      <Link>Tables\AIBBookInventoryTransaction</Link>
     </Content>
     <Content Include="AxTable\AIBBookStaging">
       <SubType>Content</SubType>

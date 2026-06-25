@@ -9,17 +9,7 @@
 [Form]
 public class AIBAuthor extends FormRun
 {
-    /*public void setDeathDateEditable(boolean _isEditable)
-    {
-        //FormControl deathDateControl = this.formRun().design.controlName(formControlStr(AIBAuthor,SimpleListGrid_DeathDate ))
-        //deathDateControl.allowEdit(_isEditable);
-
-        //SimpleListGrid_DeathDate.allowEdit(_isEditable);
-
-        AIBAuthorTable_ds.object(fieldNum(AIBAuthorTable, DeathDate)).allowEdit(_isEditable);
-
-    }*/
-
+    QueryBuildRange qbrBirthDate, qbrDeathDate, qbrDeathDateNullCheck;
 }
 ]]></Source>
 			</Method>
@@ -44,11 +34,70 @@ public class AIBAuthor extends FormRun
 
 ]]></Source>
 					</Method>
+					<Method>
+						<Name>init</Name>
+						<Source><![CDATA[
+        public void init()
+        {
+            super();
+
+            Query authorQuery = AIBAuthorTable_ds.query();
+
+            QueryBuildDataSource qbds = authorQuery.dataSourceTable(tableNum(AIBAuthorTable));
+
+            qbrBirthDate = qbds.addRange(fieldNum(AIBAuthorTable,BirthDate));
+            qbrDeathDate = qbds.addRange(fieldNum(AIBAuthorTable,DeathDate));
+            qbrDeathDateNullCheck = qbds.addRange(fieldNum(AIBAuthorTable,DeathDate));
+
+        }
+
+]]></Source>
+					</Method>
 				</Methods>
 				<Fields />
 			</DataSource>
 		</DataSources>
-		<DataControls xmlns="" />
+		<DataControls xmlns="">
+			<Control>
+				<Name>FilterDateAlive</Name>
+				<Type>Date</Type>
+				<Methods>
+					<Method>
+						<Name>modified</Name>
+						<Source><![CDATA[
+        public boolean modified()
+        {
+            boolean ret;
+
+            ret = super();
+
+            date filterDate = this.dateValue();
+
+            if(filterDate > dateNull())
+            {
+                qbrBirthDate.value(strFmt("<%1", filterDate));
+                qbrDeathDate.value(strFmt(">%1", filterDate));
+                qbrDeathDateNullCheck.value(queryValue(dateNull()));
+
+                AIBAuthorTable_ds.executeQuery();
+            }
+            else
+            {
+                //SysQueryRangeUtil::valueEmptyString();
+                qbrBirthDate.value('');
+                qbrDeathDate.value('');
+                qbrDeathDateNullCheck.value('');
+            }
+
+
+            return ret;
+        }
+
+]]></Source>
+					</Method>
+				</Methods>
+			</Control>
+		</DataControls>
 		<Members xmlns="" />
 	</SourceCode>
 	<DataSources>
@@ -104,7 +153,36 @@ public class AIBAuthor extends FormRun
 				<Type>ActionPane</Type>
 				<FormControlExtension
 					i:nil="true" />
-				<Controls />
+				<Controls>
+					<AxFormControl xmlns=""
+						i:type="AxFormButtonGroupControl">
+						<Name>ApplicationBarButtonGroup</Name>
+						<Type>ButtonGroup</Type>
+						<FormControlExtension
+							i:nil="true" />
+						<Controls>
+							<AxFormControl xmlns=""
+								i:type="AxFormMenuFunctionButtonControl">
+								<Name>AIBBook</Name>
+								<Type>MenuFunctionButton</Type>
+								<FormControlExtension
+									i:nil="true" />
+								<DataSource>AIBAuthorTable</DataSource>
+								<MenuItemName>AIBBook</MenuItemName>
+								<NeedsRecord>Yes</NeedsRecord>
+							</AxFormControl>
+							<AxFormControl xmlns=""
+								i:type="AxFormMenuFunctionButtonControl">
+								<Name>AIBBookGenreFilter</Name>
+								<Type>MenuFunctionButton</Type>
+								<FormControlExtension
+									i:nil="true" />
+								<DataSource>AIBAuthorTable</DataSource>
+								<MenuItemName>AIBBookGenreFilter</MenuItemName>
+							</AxFormControl>
+						</Controls>
+					</AxFormControl>
+				</Controls>
 			</AxFormControl>
 			<AxFormControl xmlns=""
 				i:type="AxFormGroupControl">
@@ -138,6 +216,14 @@ public class AIBAuthor extends FormRun
 								</AxFormControlExtensionProperty>
 							</ExtensionProperties>
 						</FormControlExtension>
+					</AxFormControl>
+					<AxFormControl xmlns=""
+						i:type="AxFormDateControl">
+						<Name>FilterDateAlive</Name>
+						<AutoDeclaration>Yes</AutoDeclaration>
+						<Type>Date</Type>
+						<FormControlExtension
+							i:nil="true" />
 					</AxFormControl>
 				</Controls>
 				<ArrangeMethod>HorizontalLeft</ArrangeMethod>

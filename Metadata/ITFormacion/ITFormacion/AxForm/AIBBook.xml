@@ -21,11 +21,94 @@ public class AIBBook extends FormRun
             return ret;
         }
     }
+    AIBGenreEnum genreFilter;
+    boolean needGenreFilter;
 }
 ]]></Source>
 			</Method>
+			<Method>
+				<Name>init</Name>
+				<Source><![CDATA[
+    public void init()
+    {
+        super();
+
+        element.getParamsFromArgs();
+        //FormRun callerFormRun = element.args().caller();
+        
+    }
+
+]]></Source>
+			</Method>
+			<Method>
+				<Name>getParamsFromArgs</Name>
+				<Source><![CDATA[
+    public void getParamsFromArgs()
+    {
+        Common callerRecord = element.args().record();
+        MenuItemName callerItemName = element.args().menuItemName();
+
+        if(callerItemName == menuItemDisplayStr(AIBBookGenreFilter) && callerRecord.TableId == tableNum(AIBAuthorTable))
+        {
+            AIBAuthorTable authorTable = callerRecord;
+            authorTable.firstBookGenre();
+            needGenreFilter = true;
+        }
+    }
+
+]]></Source>
+			</Method>
 		</Methods>
-		<DataSources xmlns="" />
+		<DataSources xmlns="">
+			<DataSource>
+				<Name>AIBBookTable</Name>
+				<Methods>
+					<Method>
+						<Name>init</Name>
+						<Source><![CDATA[
+        public void init()
+        {
+            super();
+
+            if(needGenreFilter)
+            {
+                this.clearExistingLinksAndAddGenreRange();
+            }
+        }
+
+]]></Source>
+					</Method>
+					<Method>
+						<Name>clearExistingLinksAndAddGenreRange</Name>
+						<Source><![CDATA[
+        private void clearExistingLinksAndAddGenreRange()
+        {
+            QueryBuildDataSource qbds = AIBBookTable_q.dataSourceTable(tableNum(AIBBookTable));
+
+            qbds.clearDynalinks();
+
+            QueryBuildRange qbrGenre = qbds.addRange(fieldNum(AIBBookTable, Genre));
+
+            qbrGenre.status(RangeStatus::Locked);
+            qbrGenre.value(queryValue(genreFilter));
+        }
+
+]]></Source>
+					</Method>
+					<Method>
+						<Name>executeQuery</Name>
+						<Source><![CDATA[
+        public void executeQuery()
+        {
+            super();
+        }
+
+]]></Source>
+					</Method>
+				</Methods>
+				<Fields />
+			</DataSource>
+		</DataSources>
 		<DataControls xmlns="" />
 		<Members xmlns="" />
 	</SourceCode>
@@ -70,7 +153,26 @@ public class AIBBook extends FormRun
 				<Type>ActionPane</Type>
 				<FormControlExtension
 					i:nil="true" />
-				<Controls />
+				<Controls>
+					<AxFormControl xmlns=""
+						i:type="AxFormButtonGroupControl">
+						<Name>ButtonGroup</Name>
+						<Type>ButtonGroup</Type>
+						<FormControlExtension
+							i:nil="true" />
+						<Controls>
+							<AxFormControl xmlns=""
+								i:type="AxFormMenuFunctionButtonControl">
+								<Name>BookTransactions</Name>
+								<Type>MenuFunctionButton</Type>
+								<FormControlExtension
+									i:nil="true" />
+								<DataSource>AIBBookTable</DataSource>
+								<MenuItemName>AIBBookTransactions</MenuItemName>
+							</AxFormControl>
+						</Controls>
+					</AxFormControl>
+				</Controls>
 			</AxFormControl>
 			<AxFormControl xmlns=""
 				i:type="AxFormGroupControl">
@@ -171,6 +273,15 @@ public class AIBBook extends FormRun
 								<FormControlExtension
 									i:nil="true" />
 								<DataMethod>dispAuthorFullName</DataMethod>
+								<DataSource>AIBBookTable</DataSource>
+							</AxFormControl>
+							<AxFormControl xmlns=""
+								i:type="AxFormRealControl">
+								<Name>GroupGrid_displayCurrentInventory</Name>
+								<Type>Real</Type>
+								<FormControlExtension
+									i:nil="true" />
+								<DataMethod>displayCurrentInventory</DataMethod>
 								<DataSource>AIBBookTable</DataSource>
 							</AxFormControl>
 						</Controls>

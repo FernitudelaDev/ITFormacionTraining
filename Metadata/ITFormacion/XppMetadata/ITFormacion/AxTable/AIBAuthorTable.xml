@@ -70,5 +70,14 @@
 				<TypeName></TypeName>
 			</ReturnType>
 		</Method>
+		<Method>
+			<Name>firstBookGenre</Name>
+			<Visibility>Public</Visibility>
+			<ReturnType>
+				<Tags></Tags>
+				<Type>Enum</Type>
+				<TypeName>AIBGenreEnum</TypeName>
+			</ReturnType>
+		</Method>
 	</Methods>
 </z:anyType>

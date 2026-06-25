@@ -1,0 +1,171 @@
+<?xml version="1.0" encoding="utf-8"?>
+<AxTable xmlns:i="http://www.w3.org/2001/XMLSchema-instance">
+	<Name>AIBBookInventoryTransaction</Name>
+	<SourceCode>
+		<Declaration><![CDATA[
+public class AIBBookInventoryTransaction extends common
+{
+}
+]]></Declaration>
+		<Methods>
+			<Method>
+				<Name>shouldThrowExceptionOnZeroDelete</Name>
+				<Source><![CDATA[
+    public boolean shouldThrowExceptionOnZeroDelete(){return true;}
+
+]]></Source>
+			</Method>
+			<Method>
+				<Name>validateWrite</Name>
+				<Source><![CDATA[
+    public boolean validateWrite()
+    {
+        boolean ret;
+
+        ret = super();
+
+        ret = ret 
+            && this.validateTotalQtyIsNotBelowZero()
+            && this.validateTotalQtyIsPositive();
+
+        return ret;
+    }
+
+]]></Source>
+			</Method>
+			<Method>
+				<Name>validateTotalQtyIsNotBelowZero</Name>
+				<Source><![CDATA[
+    private boolean validateTotalQtyIsNotBelowZero()
+    {
+        Qty totalSavedPerBook = AIBBookTable::findRecId(this.Book).currentInventory(this.RecId);
+
+        if ((totalSavedPerBook + this.Qty) < 0)
+        {
+            return checkFailed("@ITFormacion:TransactionWouldMakeTheTotalNegatives");
+        }
+        else
+        {
+            return true;
+        }
+    }
+
+]]></Source>
+			</Method>
+			<Method>
+				<Name>validateTotalQtyIsPositive</Name>
+				<Source><![CDATA[
+    private boolean validateTotalQtyIsPositive()
+    {
+        if (this.Qty == 0)
+        {
+            return checkFailed("@ITFormacion:FieldQtyCannotBeZero");
+        }
+        else
+        {
+            return true;
+        }
+    }
+
+]]></Source>
+			</Method>
+		</Methods>
+	</SourceCode>
+	<FormRef>AIBBookTransactions</FormRef>
+	<Label>@ITFormacion:InventoryTransaction</Label>
+	<SubscriberAccessLevel>
+		<Read>Allow</Read>
+	</SubscriberAccessLevel>
+	<TitleField1>Book</TitleField1>
+	<TitleField2>Qty</TitleField2>
+	<AllowRowVersionChangeTracking>Yes</AllowRowVersionChangeTracking>
+	<DeleteActions />
+	<FieldGroups>
+		<AxTableFieldGroup>
+			<Name>AutoReport</Name>
+			<Fields />
+		</AxTableFieldGroup>
+		<AxTableFieldGroup>
+			<Name>AutoLookup</Name>
+			<Fields />
+		</AxTableFieldGroup>
+		<AxTableFieldGroup>
+			<Name>AutoIdentification</Name>
+			<AutoPopulate>Yes</AutoPopulate>
+			<Fields />
+		</AxTableFieldGroup>
+		<AxTableFieldGroup>
+			<Name>AutoSummary</Name>
+			<Fields />
+		</AxTableFieldGroup>
+		<AxTableFieldGroup>
+			<Name>AutoBrowse</Name>
+			<Fields />
+		</AxTableFieldGroup>
+	</FieldGroups>
+	<Fields>
+		<AxTableField xmlns=""
+			i:type="AxTableFieldString">
+			<Name>InventTransId</Name>
+			<AllowEdit>No</AllowEdit>
+			<ExtendedDataType>AIBInventTransId</ExtendedDataType>
+			<IgnoreEDTRelation>Yes</IgnoreEDTRelation>
+			<Mandatory>Yes</Mandatory>
+		</AxTableField>
+		<AxTableField xmlns=""
+			i:type="AxTableFieldInt64">
+			<Name>Book</Name>
+			<ExtendedDataType>RefRecId</ExtendedDataType>
+			<IgnoreEDTRelation>Yes</IgnoreEDTRelation>
+			<Mandatory>Yes</Mandatory>
+		</AxTableField>
+		<AxTableField xmlns=""
+			i:type="AxTableFieldReal">
+			<Name>Qty</Name>
+			<ExtendedDataType>Qty</ExtendedDataType>
+			<IgnoreEDTRelation>Yes</IgnoreEDTRelation>
+		</AxTableField>
+	</Fields>
+	<FullTextIndexes />
+	<Indexes>
+		<AxTableIndex>
+			<Name>BookInventoryTransactionIdx</Name>
+			<AllowDuplicates>Yes</AllowDuplicates>
+			<Fields>
+				<AxTableIndexField>
+					<DataField>InventTransId</DataField>
+				</AxTableIndexField>
+			</Fields>
+		</AxTableIndex>
+		<AxTableIndex>
+			<Name>AIBBookTableIdx</Name>
+			<AllowDuplicates>Yes</AllowDuplicates>
+			<Fields>
+				<AxTableIndexField>
+					<DataField>Book</DataField>
+				</AxTableIndexField>
+			</Fields>
+		</AxTableIndex>
+	</Indexes>
+	<Mappings />
+	<Relations>
+		<AxTableRelation xmlns=""
+			i:type="AxTableRelationForeignKey">
+			<Name>Book</Name>
+			<Cardinality>ZeroOne</Cardinality>
+			<RelatedTable>AIBBookTable</RelatedTable>
+			<RelatedTableCardinality>ExactlyOne</RelatedTableCardinality>
+			<RelationshipType>Association</RelationshipType>
+			<Constraints>
+				<AxTableRelationConstraint xmlns=""
+					i:type="AxTableRelationConstraintField">
+					<Name>Book</Name>
+					<Field>Book</Field>
+					<RelatedField>RecId</RelatedField>
+				</AxTableRelationConstraint>
+			</Constraints>
+			<Index>RecId</Index>
+		</AxTableRelation>
+	</Relations>
+	<StateMachines />
+</AxTable>

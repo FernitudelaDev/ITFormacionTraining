@@ -1,7 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Diagnostics
-  GenerationTime="2026-06-23T07:18:53.1110676+00:00">
+  GenerationTime="2026-06-25T07:12:09.4798794+00:00">
   <Items>
+    <Diagnostic>
+      <DiagnosticType>Generation</DiagnosticType>
+      <Severity>Informational</Severity>
+      <Path>dynamics://View/AIBAuthorEntity</Path>
+      <ElementType>View</ElementType>
+      <Moniker>IsRuntimeServicesMode</Moniker>
+      <Line>0</Line>
+      <Column>0</Column>
+      <Message>Is Runtime Services mode: False</Message>
+    </Diagnostic>
     <Diagnostic>
       <DiagnosticType>ExternalReference</DiagnosticType>
       <Severity>Warning</Severity>
@@ -22,9 +32,9 @@
       <Path>dynamics://Table/AIBBookTable/Method/selectCountByGenre</Path>
       <ElementType>Table Method</ElementType>
       <Moniker>TypeConversionLosesRange</Moniker>
-      <Line>26</Line>
+      <Line>36</Line>
       <Column>9</Column>
-      <EndLine>26</EndLine>
+      <EndLine>36</EndLine>
       <EndColumn>32</EndColumn>
       <Message>The type conversion from 'int64' to 'int' loses range.</Message>
     </Diagnostic>

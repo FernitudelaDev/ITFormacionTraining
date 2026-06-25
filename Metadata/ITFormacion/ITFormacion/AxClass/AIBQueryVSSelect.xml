@@ -55,6 +55,8 @@ internal final class AIBQueryVSSelect
 
         QueryBuildRange qbrGenre = qbdsBookTable.addRange(fieldNum(AIBBookTable, Genre));
         qbrGenre.value(queryValue(AIBGenreEnum::Fantasy));
+        // si queremos anadir un valor a un nuevo rango existente
+        qbrGenre.value(queryRangeConcat(qbrGenre.value(), queryValue(AIBGenreEnum::HistoryNovel)));
 
         this.runQuery(aibBookAuthorFantasyQuery);
     }

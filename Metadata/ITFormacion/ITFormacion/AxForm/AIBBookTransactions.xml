@@ -1,0 +1,385 @@
+<?xml version="1.0" encoding="utf-8"?>
+<AxForm xmlns:i="http://www.w3.org/2001/XMLSchema-instance" xmlns="Microsoft.Dynamics.AX.Metadata.V6">
+	<Name>AIBBookTransactions</Name>
+	<SourceCode>
+		<Methods xmlns="">
+			<Method>
+				<Name>classDeclaration</Name>
+				<Source><![CDATA[
+[Form]
+public class AIBBookTransactions extends FormRun
+{
+}
+]]></Source>
+			</Method>
+		</Methods>
+		<DataSources xmlns="" />
+		<DataControls xmlns="">
+			<Control>
+				<Name>Add</Name>
+				<Type>Button</Type>
+				<Methods>
+					<Method>
+						<Name>clicked</Name>
+						<Source><![CDATA[
+        public void clicked()
+        {
+            super();
+
+            AIBBookInventoryTransaction_ds.create();
+        }
+
+]]></Source>
+					</Method>
+				</Methods>
+			</Control>
+			<Control>
+				<Name>Delete</Name>
+				<Type>Button</Type>
+				<Methods>
+					<Method>
+						<Name>clicked</Name>
+						<Source><![CDATA[
+        public void clicked()
+        {
+            super();
+
+            if(AIBBookInventoryTransaction_ds.validateDelete())
+            {
+                AIBBookInventoryTransaction.delete();
+                    
+            }
+            AIBBookInventoryTransaction_ds.research(true);
+        }
+
+]]></Source>
+					</Method>
+				</Methods>
+			</Control>
+		</DataControls>
+		<Members xmlns="" />
+	</SourceCode>
+	<DataSources>
+		<AxFormDataSource xmlns="">
+			<Name>AIBBookTable</Name>
+			<Table>AIBBookTable</Table>
+			<Fields>
+				<AxFormDataSourceField>
+					<DataField>Author</DataField>
+				</AxFormDataSourceField>
+				<AxFormDataSourceField>
+					<DataField>DataAreaId</DataField>
+				</AxFormDataSourceField>
+				<AxFormDataSourceField>
+					<DataField>Genre</DataField>
+				</AxFormDataSourceField>
+				<AxFormDataSourceField>
+					<DataField>Id</DataField>
+				</AxFormDataSourceField>
+				<AxFormDataSourceField>
+					<DataField>ModifiedDateTime</DataField>
+				</AxFormDataSourceField>
+				<AxFormDataSourceField>
+					<DataField>Name</DataField>
+				</AxFormDataSourceField>
+				<AxFormDataSourceField>
+					<DataField>Partition</DataField>
+				</AxFormDataSourceField>
+				<AxFormDataSourceField>
+					<DataField>RecId</DataField>
+				</AxFormDataSourceField>
+				<AxFormDataSourceField>
+					<DataField>TableId</DataField>
+				</AxFormDataSourceField>
+			</Fields>
+			<ReferencedDataSources />
+			<DataSourceLinks />
+			<DerivedDataSources />
+		</AxFormDataSource>
+		<AxFormDataSource xmlns="">
+			<Name>AIBBookInventoryTransaction</Name>
+			<Table>AIBBookInventoryTransaction</Table>
+			<Fields>
+				<AxFormDataSourceField>
+					<DataField>Book</DataField>
+				</AxFormDataSourceField>
+				<AxFormDataSourceField>
+					<DataField>DataAreaId</DataField>
+				</AxFormDataSourceField>
+				<AxFormDataSourceField>
+					<DataField>InventTransId</DataField>
+				</AxFormDataSourceField>
+				<AxFormDataSourceField>
+					<DataField>Partition</DataField>
+				</AxFormDataSourceField>
+				<AxFormDataSourceField>
+					<DataField>Qty</DataField>
+				</AxFormDataSourceField>
+				<AxFormDataSourceField>
+					<DataField>RecId</DataField>
+				</AxFormDataSourceField>
+				<AxFormDataSourceField>
+					<DataField>TableId</DataField>
+				</AxFormDataSourceField>
+			</Fields>
+			<ReferencedDataSources />
+			<JoinSource>AIBBookTable</JoinSource>
+			<InsertIfEmpty>No</InsertIfEmpty>
+			<DataSourceLinks />
+			<DerivedDataSources />
+		</AxFormDataSource>
+	</DataSources>
+	<Design>
+		<Caption xmlns="">@ITFormacion:InventoryTransaction</Caption>
+		<Pattern xmlns="">SimpleListDetails</Pattern>
+		<PatternVersion xmlns="">1.3</PatternVersion>
+		<Style xmlns="">SimpleListDetails</Style>
+		<Controls xmlns="">
+			<AxFormControl xmlns=""
+				i:type="AxFormActionPaneControl">
+				<Name>ApplicationBar</Name>
+				<Type>ActionPane</Type>
+				<FormControlExtension
+					i:nil="true" />
+				<Controls />
+			</AxFormControl>
+			<AxFormControl xmlns=""
+				i:type="AxFormGroupControl">
+				<Name>NavigationListGroup</Name>
+				<HeightMode>SizeToAvailable</HeightMode>
+				<Type>Group</Type>
+				<FormControlExtension
+					i:nil="true" />
+				<Controls>
+					<AxFormControl>
+						<Name>QuickFilter</Name>
+						<WidthMode>SizeToAvailable</WidthMode>
+						<FormControlExtension>
+							<Name>QuickFilterControl</Name>
+							<ExtensionComponents />
+							<ExtensionProperties>
+								<AxFormControlExtensionProperty>
+									<Name>targetControlName</Name>
+									<Type>String</Type>
+								</AxFormControlExtensionProperty>
+								<AxFormControlExtensionProperty>
+									<Name>placeholderText</Name>
+									<Type>String</Type>
+								</AxFormControlExtensionProperty>
+								<AxFormControlExtensionProperty>
+									<Name>defaultColumnName</Name>
+									<Type>String</Type>
+								</AxFormControlExtensionProperty>
+							</ExtensionProperties>
+						</FormControlExtension>
+					</AxFormControl>
+					<AxFormControl xmlns=""
+						i:type="AxFormGridControl">
+						<Name>NavigationListGrid</Name>
+						<AllowEdit>No</AllowEdit>
+						<Type>Grid</Type>
+						<WidthMode>SizeToContent</WidthMode>
+						<FormControlExtension
+							i:nil="true" />
+						<Controls>
+							<AxFormControl xmlns=""
+								i:type="AxFormStringControl">
+								<Name>AIBBookTable_Id</Name>
+								<Type>String</Type>
+								<FormControlExtension
+									i:nil="true" />
+								<DataField>Id</DataField>
+								<DataSource>AIBBookTable</DataSource>
+							</AxFormControl>
+							<AxFormControl xmlns=""
+								i:type="AxFormStringControl">
+								<Name>AIBBookTable_Name</Name>
+								<Type>String</Type>
+								<FormControlExtension
+									i:nil="true" />
+								<DataField>Name</DataField>
+								<DataSource>AIBBookTable</DataSource>
+							</AxFormControl>
+							<AxFormControl xmlns=""
+								i:type="AxFormReferenceGroupControl">
+								<Name>AIBBookTable_Author</Name>
+								<Type>ReferenceGroup</Type>
+								<FormControlExtension
+									i:nil="true" />
+								<Controls />
+								<DataSource>AIBBookTable</DataSource>
+								<ReferenceField>Author</ReferenceField>
+							</AxFormControl>
+						</Controls>
+						<DataSource>AIBBookTable</DataSource>
+						<MultiSelect>No</MultiSelect>
+						<ShowRowLabels>No</ShowRowLabels>
+						<Style>List</Style>
+					</AxFormControl>
+				</Controls>
+				<FrameType>None</FrameType>
+				<Style>SidePanel</Style>
+			</AxFormControl>
+			<AxFormControl xmlns=""
+				i:type="AxFormGroupControl">
+				<Name>DetailsHeader</Name>
+				<Pattern>FieldsFieldGroups</Pattern>
+				<PatternVersion>1.1</PatternVersion>
+				<Type>Group</Type>
+				<WidthMode>SizeToAvailable</WidthMode>
+				<FormControlExtension
+					i:nil="true" />
+				<Controls>
+					<AxFormControl xmlns=""
+						i:type="AxFormGroupControl">
+						<Name>BookDetails</Name>
+						<Type>Group</Type>
+						<FormControlExtension
+							i:nil="true" />
+						<Controls>
+							<AxFormControl xmlns=""
+								i:type="AxFormStringControl">
+								<Name>BookDetails_Id</Name>
+								<Type>String</Type>
+								<FormControlExtension
+									i:nil="true" />
+								<DataField>Id</DataField>
+								<DataSource>AIBBookTable</DataSource>
+							</AxFormControl>
+							<AxFormControl xmlns=""
+								i:type="AxFormStringControl">
+								<Name>BookDetails_Name</Name>
+								<Type>String</Type>
+								<FormControlExtension
+									i:nil="true" />
+								<DataField>Name</DataField>
+								<DataSource>AIBBookTable</DataSource>
+							</AxFormControl>
+							<AxFormControl xmlns=""
+								i:type="AxFormComboBoxControl">
+								<Name>BookDetails_Genre</Name>
+								<Type>ComboBox</Type>
+								<FormControlExtension
+									i:nil="true" />
+								<DataField>Genre</DataField>
+								<DataSource>AIBBookTable</DataSource>
+								<Items />
+							</AxFormControl>
+							<AxFormControl xmlns=""
+								i:type="AxFormReferenceGroupControl">
+								<Name>BookDetails_Author</Name>
+								<Type>ReferenceGroup</Type>
+								<FormControlExtension
+									i:nil="true" />
+								<Controls />
+								<DataSource>AIBBookTable</DataSource>
+								<ReferenceField>Author</ReferenceField>
+							</AxFormControl>
+							<AxFormControl xmlns=""
+								i:type="AxFormStringControl">
+								<Name>BookDetails_dispAuthorFullName</Name>
+								<Type>String</Type>
+								<FormControlExtension
+									i:nil="true" />
+								<DataMethod>dispAuthorFullName</DataMethod>
+								<DataSource>AIBBookTable</DataSource>
+							</AxFormControl>
+						</Controls>
+						<DataGroup>Grid</DataGroup>
+						<DataSource>AIBBookTable</DataSource>
+					</AxFormControl>
+				</Controls>
+				<ColumnsMode>Fill</ColumnsMode>
+				<FrameType>None</FrameType>
+			</AxFormControl>
+			<AxFormControl xmlns=""
+				i:type="AxFormTabControl">
+				<Name>DetailsTab</Name>
+				<Type>Tab</Type>
+				<FormControlExtension
+					i:nil="true" />
+				<Controls>
+					<AxFormControl xmlns=""
+						i:type="AxFormTabPageControl">
+						<Name>TransactionTabPage</Name>
+						<Pattern>ToolbarList</Pattern>
+						<PatternVersion>1.2</PatternVersion>
+						<Type>TabPage</Type>
+						<FormControlExtension
+							i:nil="true" />
+						<Controls>
+							<AxFormControl xmlns=""
+								i:type="AxFormGridControl">
+								<Name>TransactionGrid</Name>
+								<Type>Grid</Type>
+								<FormControlExtension
+									i:nil="true" />
+								<Controls>
+									<AxFormControl xmlns=""
+										i:type="AxFormStringControl">
+										<Name>AIBBookInventoryTransaction_InventTransId</Name>
+										<Type>String</Type>
+										<FormControlExtension
+											i:nil="true" />
+										<DataField>InventTransId</DataField>
+										<DataSource>AIBBookInventoryTransaction</DataSource>
+									</AxFormControl>
+									<AxFormControl xmlns=""
+										i:type="AxFormRealControl">
+										<Name>AIBBookInventoryTransaction_Qty</Name>
+										<Type>Real</Type>
+										<FormControlExtension
+											i:nil="true" />
+										<DataField>Qty</DataField>
+										<DataSource>AIBBookInventoryTransaction</DataSource>
+									</AxFormControl>
+								</Controls>
+								<DataSource>AIBBookInventoryTransaction</DataSource>
+							</AxFormControl>
+							<AxFormControl xmlns=""
+								i:type="AxFormActionPaneControl">
+								<Name>TransactionActionPane</Name>
+								<Type>ActionPane</Type>
+								<FormControlExtension
+									i:nil="true" />
+								<Controls>
+									<AxFormControl xmlns=""
+										i:type="AxFormButtonGroupControl">
+										<Name>TransactionActionPaneGroup</Name>
+										<Type>ButtonGroup</Type>
+										<FormControlExtension
+											i:nil="true" />
+										<Controls>
+											<AxFormControl xmlns=""
+												i:type="AxFormButtonControl">
+												<Name>Add</Name>
+												<Type>Button</Type>
+												<FormControlExtension
+													i:nil="true" />
+												<NormalImage>Add</NormalImage>
+												<Text>@RET143</Text>
+											</AxFormControl>
+											<AxFormControl xmlns=""
+												i:type="AxFormButtonControl">
+												<Name>Delete</Name>
+												<Type>Button</Type>
+												<FormControlExtension
+													i:nil="true" />
+												<NormalImage>Delete</NormalImage>
+												<SaveRecord>No</SaveRecord>
+												<Text>@SYS112458</Text>
+											</AxFormControl>
+										</Controls>
+									</AxFormControl>
+								</Controls>
+							</AxFormControl>
+						</Controls>
+						<Caption>@ITFormacion:Transactions</Caption>
+					</AxFormControl>
+				</Controls>
+				<Style>FastTabs</Style>
+			</AxFormControl>
+		</Controls>
+	</Design>
+	<Parts />
+</AxForm>

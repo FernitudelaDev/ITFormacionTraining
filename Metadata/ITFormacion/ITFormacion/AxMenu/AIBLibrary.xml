@@ -20,5 +20,17 @@
 				</AxMenuElement>
 			</Elements>
 		</AxMenuElement>
+		<AxMenuElement xmlns=""
+			i:type="AxMenuElementSubMenu">
+			<Name>Transactions</Name>
+			<Label>@ITFormacion:Transactions</Label>
+			<Elements>
+				<AxMenuElement xmlns=""
+					i:type="AxMenuElementMenuItem">
+					<Name>AIBBookTransactions</Name>
+					<MenuItemName>AIBBookTransactions</MenuItemName>
+				</AxMenuElement>
+			</Elements>
+		</AxMenuElement>
 	</Elements>
 </AxMenu>
