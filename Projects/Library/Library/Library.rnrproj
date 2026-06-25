@@ -37,6 +37,7 @@
     <Folder Include="Data Entities\" />
     <Folder Include="Display Menu Items\" />
     <Folder Include="EDT Dates\" />
+    <Folder Include="EDT Reals\" />
     <Folder Include="EDT Strings\" />
     <Folder Include="Extended Data Types\" />
     <Folder Include="Forms\" />
@@ -100,6 +101,11 @@
       <SubType>Content</SubType>
       <Name>ACId</Name>
       <Link>Extended Data Types\ACId</Link>
+    </Content>
+    <Content Include="AxEdt\ACInventoryQty">
+      <SubType>Content</SubType>
+      <Name>ACInventoryQty</Name>
+      <Link>EDT Reals\ACInventoryQty</Link>
     </Content>
     <Content Include="AxEdt\ACInventTransId">
       <SubType>Content</SubType>

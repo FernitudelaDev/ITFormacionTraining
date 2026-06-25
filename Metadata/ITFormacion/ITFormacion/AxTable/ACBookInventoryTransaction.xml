@@ -42,20 +42,64 @@ public class ACBookInventoryTransaction extends common
 	<Fields>
 		<AxTableField xmlns=""
 			i:type="AxTableFieldString">
-			<Name>ACInventTransId</Name>
+			<Name>InventTransId</Name>
 			<ExtendedDataType>ACInventTransId</ExtendedDataType>
 			<IgnoreEDTRelation>Yes</IgnoreEDTRelation>
+		</AxTableField>
+		<AxTableField xmlns=""
+			i:type="AxTableFieldReal">
+			<Name>InventoryQty</Name>
+			<ExtendedDataType>ACInventoryQty</ExtendedDataType>
+			<IgnoreEDTRelation>Yes</IgnoreEDTRelation>
+		</AxTableField>
+		<AxTableField xmlns=""
+			i:type="AxTableFieldInt64">
+			<Name>Book</Name>
+			<ExtendedDataType>RefRecId</ExtendedDataType>
+			<IgnoreEDTRelation>Yes</IgnoreEDTRelation>
+			<Mandatory>Yes</Mandatory>
 		</AxTableField>
 	</Fields>
 	<FullTextIndexes />
 	<Indexes>
 		<AxTableIndex>
-			<Name>Index1</Name>
+			<Name>BookInventoryTransactionIdx</Name>
+			<AlternateKey>Yes</AlternateKey>
+			<Fields>
+				<AxTableIndexField>
+					<DataField>InventTransId</DataField>
+				</AxTableIndexField>
+			</Fields>
+		</AxTableIndex>
+		<AxTableIndex>
+			<Name>ACBookTableIdx</Name>
 			<AllowDuplicates>Yes</AllowDuplicates>
-			<Fields />
+			<Fields>
+				<AxTableIndexField>
+					<DataField>Book</DataField>
+				</AxTableIndexField>
+			</Fields>
 		</AxTableIndex>
 	</Indexes>
 	<Mappings />
-	<Relations />
+	<Relations>
+		<AxTableRelation xmlns=""
+			i:type="AxTableRelationForeignKey">
+			<Name>ACBookTable</Name>
+			<Cardinality>ZeroMore</Cardinality>
+			<OnDelete>Restricted</OnDelete>
+			<RelatedTable>ACBookTable</RelatedTable>
+			<RelatedTableCardinality>ExactlyOne</RelatedTableCardinality>
+			<RelationshipType>Association</RelationshipType>
+			<Constraints>
+				<AxTableRelationConstraint xmlns=""
+					i:type="AxTableRelationConstraintField">
+					<Name>Book</Name>
+					<Field>Book</Field>
+					<RelatedField>RecId</RelatedField>
+				</AxTableRelationConstraint>
+			</Constraints>
+		</AxTableRelation>
+	</Relations>
 	<StateMachines />
 </AxTable>

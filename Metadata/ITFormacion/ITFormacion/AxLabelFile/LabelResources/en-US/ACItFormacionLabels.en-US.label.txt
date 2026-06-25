@@ -8,6 +8,7 @@ DeathDate=Death date
 Fantasy=Fantasy
 Genre=Genre
 HistoryNovel=History novel
+InventoryQty=Inventory quantity
 InventoryTransaction=Inventory transaction
 InventTransId=Inventory transaction Id
 IsDead=Is dead

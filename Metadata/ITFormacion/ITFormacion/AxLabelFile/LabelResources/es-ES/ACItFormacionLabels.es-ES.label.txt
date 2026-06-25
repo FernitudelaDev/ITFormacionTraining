@@ -8,6 +8,7 @@ DeathDate=Fecha de muerte
 Fantasy=Fantasia
 Genre=Genero
 HistoryNovel=Novela histórica
+InventoryQty=Cantindad en inventario
 IsDead=Esta muerto
 Library=Biblioteca
 Master=Master
