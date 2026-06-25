@@ -6,16 +6,65 @@
 			<Name>classDeclaration</Name>
 			<ReturnType />
 		</Method>
+		<Method>
+			<Name>init</Name>
+			<Visibility>Public</Visibility>
+			<ReturnType>
+				<TypeName></TypeName>
+			</ReturnType>
+		</Method>
+		<Method>
+			<Name>getParamsFromArgs</Name>
+			<ReturnType>
+				<TypeName></TypeName>
+			</ReturnType>
+			<Variables>
+				<AxMethodVariable>
+					<Type>Record</Type>
+					<TypeName>Common</TypeName>
+					<Name>callerRecord</Name>
+				</AxMethodVariable>
+				<AxMethodVariable>
+					<Type>ExtendedDataType</Type>
+					<TypeName>MenuItemName</TypeName>
+					<Name>callerItemName</Name>
+				</AxMethodVariable>
+			</Variables>
+		</Method>
 	</Methods>
 	<DataSources>
 		<DataSource>
 			<Name>ACBookTable</Name>
 			<Methods>
 				<Method>
-					<Name>active</Name>
+					<Name>init</Name>
 					<Visibility>Public</Visibility>
 					<ReturnType>
-						<Type>Int32</Type>
+						<TypeName></TypeName>
+					</ReturnType>
+				</Method>
+				<Method>
+					<Name>clearAuthorAndAddGenreRanges</Name>
+					<ReturnType>
+						<TypeName></TypeName>
+					</ReturnType>
+					<Variables>
+						<AxMethodVariable>
+							<Type>Class</Type>
+							<TypeName>QueryBuildDataSource</TypeName>
+							<Name>qbds</Name>
+						</AxMethodVariable>
+						<AxMethodVariable>
+							<Type>Class</Type>
+							<TypeName>QueryBuildRange</TypeName>
+							<Name>qbrGenre</Name>
+						</AxMethodVariable>
+					</Variables>
+				</Method>
+				<Method>
+					<Name>executeQuery</Name>
+					<Visibility>Public</Visibility>
+					<ReturnType>
 						<TypeName></TypeName>
 					</ReturnType>
 				</Method>
@@ -24,5 +73,18 @@
 		</DataSource>
 	</DataSources>
 	<DataControls />
-	<Members />
+	<Members>
+		<AxClassMemberVariable>
+			<Type>Enum</Type>
+			<TypeName>ACGenreEnum</TypeName>
+			<Name>genreFilter</Name>
+			<Attributes />
+		</AxClassMemberVariable>
+		<AxClassMemberVariable>
+			<Type>Enum</Type>
+			<TypeName>boolean</TypeName>
+			<Name>needGenreFilter</Name>
+			<Attributes />
+		</AxClassMemberVariable>
+	</Members>
 </z:anyType>

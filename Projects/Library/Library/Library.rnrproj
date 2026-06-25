@@ -151,6 +151,11 @@
       <Name>ACBook</Name>
       <Link>Display Menu Items\ACBook</Link>
     </Content>
+    <Content Include="AxMenuItemDisplay\ACBookGenreFilter">
+      <SubType>Content</SubType>
+      <Name>ACBookGenreFilter</Name>
+      <Link>Display Menu Items\ACBookGenreFilter</Link>
+    </Content>
     <Content Include="AxMenu\ACLibrary">
       <SubType>Content</SubType>
       <Name>ACLibrary</Name>

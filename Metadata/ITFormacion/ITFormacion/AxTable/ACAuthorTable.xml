@@ -104,6 +104,22 @@ public class ACAuthorTable extends common
 
 ]]></Source>
 			</Method>
+			<Method>
+				<Name>firstBookGenre</Name>
+				<Source><![CDATA[
+    public ACGenreEnum firstBookGenre()
+    {
+        ACBookTable acbBookTable;
+
+        select firstonly Genre
+            from acbBookTable
+            where this.RecId == acbBookTable.Author;
+
+        return acbBookTable.Genre;
+    }
+
+]]></Source>
+			</Method>
 		</Methods>
 	</SourceCode>
 	<FormRef>ACAuthor</FormRef>

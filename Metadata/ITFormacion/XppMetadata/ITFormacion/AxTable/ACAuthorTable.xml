@@ -70,5 +70,14 @@
 				<TypeName>ACAuthorTable</TypeName>
 			</ReturnType>
 		</Method>
+		<Method>
+			<Name>firstBookGenre</Name>
+			<Visibility>Public</Visibility>
+			<ReturnType>
+				<Tags></Tags>
+				<Type>Enum</Type>
+				<TypeName>ACGenreEnum</TypeName>
+			</ReturnType>
+		</Method>
 	</Methods>
 </z:anyType>

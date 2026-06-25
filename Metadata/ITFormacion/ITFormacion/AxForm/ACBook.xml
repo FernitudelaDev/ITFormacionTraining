@@ -9,7 +9,47 @@
 [Form]
 public class ACBook extends FormRun
 {
+    ACGenreEnum genreFilter;
+    boolean needGenreFilter;
 }
+]]></Source>
+			</Method>
+			<Method>
+				<Name>init</Name>
+				<Source><![CDATA[
+    public void init()
+    {
+        this.getParamsFromArgs();
+
+        super();
+    }
+
+]]></Source>
+			</Method>
+			<Method>
+				<Name>getParamsFromArgs</Name>
+				<Source><![CDATA[
+    private void getParamsFromArgs()
+    {
+        //FormRun callerFormRun = element.args().caller();
+        Common callerRecord = element.args().record();
+        MenuItemName callerItemName = element.args().menuItemName();
+
+        //Forma de comprobar si esxiste un método
+        //if(formHasMethod(callerFormRun, formMethodStr(ACAuthor, MetodoRandom)))
+        //{
+        //    callerFormRun.MetodoRandom();
+        //}
+
+        if (callerItemName == menuItemDisplayStr(ACBookGenreFilter)
+            && callerRecord.TableId == tableNum(ACAuthorTable))
+        {
+            ACAuthorTable authorTable = callerRecord;
+            genreFilter = authorTable.firstBookGenre();
+            needGenreFilter = true;
+        }
+    }
+
 ]]></Source>
 			</Method>
 		</Methods>
@@ -18,15 +58,44 @@ public class ACBook extends FormRun
 				<Name>ACBookTable</Name>
 				<Methods>
 					<Method>
-						<Name>active</Name>
+						<Name>init</Name>
 						<Source><![CDATA[
-        public int active()
+        public void init()
         {
-            int ret;
-        
-            ret = super();
-        
-            return ret;
+            super();
+
+            //Query q = ACBookTable_ds.query();
+            if(needGenreFilter){
+                    this.clearAuthorAndAddGenreRanges();
+            }
+          
+        }
+
+]]></Source>
+					</Method>
+					<Method>
+						<Name>clearAuthorAndAddGenreRanges</Name>
+						<Source><![CDATA[
+        private void clearAuthorAndAddGenreRanges()
+        {
+            QueryBuildDataSource qbds =  ACBookTable_q.dataSourceTable(tableNum(ACBookTable));
+
+            qbds.clearDynalinks();
+
+            QueryBuildRange qbrGenre = qbds.addRange(fieldNum(ACBookTable, Genre));
+            qbrGenre.status(RangeStatus::Locked);
+            qbrGenre.value(queryValue(genreFilter));
+        }
+
+]]></Source>
+					</Method>
+					<Method>
+						<Name>executeQuery</Name>
+						<Source><![CDATA[
+        public void executeQuery()
+        {
+            super();
+
         }
 
 ]]></Source>

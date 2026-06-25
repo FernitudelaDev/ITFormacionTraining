@@ -134,7 +134,36 @@ public class ACAuthor extends FormRun
 				<Type>ActionPane</Type>
 				<FormControlExtension
 					i:nil="true" />
-				<Controls />
+				<Controls>
+					<AxFormControl xmlns=""
+						i:type="AxFormButtonGroupControl">
+						<Name>AppBarButtonGroup</Name>
+						<Type>ButtonGroup</Type>
+						<FormControlExtension
+							i:nil="true" />
+						<Controls>
+							<AxFormControl xmlns=""
+								i:type="AxFormMenuFunctionButtonControl">
+								<Name>Book</Name>
+								<Type>MenuFunctionButton</Type>
+								<FormControlExtension
+									i:nil="true" />
+								<DataSource>ACAuthorTable</DataSource>
+								<MenuItemName>ACBook</MenuItemName>
+								<NeedsRecord>Yes</NeedsRecord>
+							</AxFormControl>
+							<AxFormControl xmlns=""
+								i:type="AxFormMenuFunctionButtonControl">
+								<Name>BookGenreFilter</Name>
+								<Type>MenuFunctionButton</Type>
+								<FormControlExtension
+									i:nil="true" />
+								<DataSource>ACAuthorTable</DataSource>
+								<MenuItemName>ACBookGenreFilter</MenuItemName>
+							</AxFormControl>
+						</Controls>
+					</AxFormControl>
+				</Controls>
 			</AxFormControl>
 			<AxFormControl xmlns=""
 				i:type="AxFormGroupControl">
