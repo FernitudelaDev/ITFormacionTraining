@@ -9,6 +9,9 @@
 [Form]
 public class ACAuthor extends FormRun
 {
+    QueryBuildRange qbrBirthdate,qbrDeathdate, qbrDeathDateNullCheck;
+
+
 }
 ]]></Source>
 			</Method>
@@ -52,6 +55,24 @@ public class ACAuthor extends FormRun
 
 ]]></Source>
 					</Method>
+					<Method>
+						<Name>init</Name>
+						<Source><![CDATA[
+        public void init()
+        {
+            super();
+
+            Query authorQuery = ACAuthorTable_ds.query();
+
+            QueryBuildDataSource qbds = authorQuery.dataSourceTable(tableNum(ACAuthorTable));
+
+            qbrDeathdate = qbds.addRange(fieldNum(ACAuthorTable,DeathDate));
+            qbrBirthdate = qbds.addRange(fieldNum(ACAuthorTable,BirthDate));
+            qbrDeathDateNullCheck = qbds.addRange(fieldNum(ACAuthorTable, DeathDate));
+        }
+
+]]></Source>
+					</Method>
 				</Methods>
 				<Fields>
 					<Field>
@@ -60,9 +81,6 @@ public class ACAuthor extends FormRun
 							<Method>
 								<Name>modified</Name>
 								<Source><![CDATA[
-            /// <summary>
-            ///
-            /// </summary>
             public void modified()
             {
                 super();
@@ -79,7 +97,47 @@ public class ACAuthor extends FormRun
 				</Fields>
 			</DataSource>
 		</DataSources>
-		<DataControls xmlns="" />
+		<DataControls xmlns="">
+			<Control>
+				<Name>DateFilter</Name>
+				<Type>Date</Type>
+				<Methods>
+					<Method>
+						<Name>modified</Name>
+						<Source><![CDATA[
+        public boolean modified()
+        {
+            boolean ret;
+    
+            ret = super();
+
+            date filteredDate = this.dateValue();
+
+            if(filteredDate > dateNull())
+            {
+                qbrBirthdate.value(strFmt("<%1", filteredDate));
+                qbrDeathdate.value(strFmt(">%1", filteredDate));
+                qbrDeathDateNullCheck.value(queryValue(dateNull()));
+
+                ACAuthorTable_ds.executeQuery();
+            }
+            else
+            {
+                //limpiar rangos para que no filtren. Para filtrar por un valor vacío usamos la funcion 
+                //SysQueryRangeUtil::valueEmptyString
+                qbrBirthdate.value('');
+                qbrDeathdate.value('');
+                qbrDeathDateNullCheck.value('');
+            }
+    
+            return ret;
+        }
+
+]]></Source>
+					</Method>
+				</Methods>
+			</Control>
+		</DataControls>
 		<Members xmlns="" />
 	</SourceCode>
 	<DataSources>
@@ -197,6 +255,14 @@ public class ACAuthor extends FormRun
 								</AxFormControlExtensionProperty>
 							</ExtensionProperties>
 						</FormControlExtension>
+					</AxFormControl>
+					<AxFormControl xmlns=""
+						i:type="AxFormDateControl">
+						<Name>DateFilter</Name>
+						<AutoDeclaration>Yes</AutoDeclaration>
+						<Type>Date</Type>
+						<FormControlExtension
+							i:nil="true" />
 					</AxFormControl>
 				</Controls>
 				<ArrangeMethod>HorizontalLeft</ArrangeMethod>

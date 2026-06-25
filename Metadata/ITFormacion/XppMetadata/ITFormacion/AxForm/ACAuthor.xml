@@ -45,6 +45,25 @@
 						</AxMethodVariable>
 					</Variables>
 				</Method>
+				<Method>
+					<Name>init</Name>
+					<Visibility>Public</Visibility>
+					<ReturnType>
+						<TypeName></TypeName>
+					</ReturnType>
+					<Variables>
+						<AxMethodVariable>
+							<Type>Class</Type>
+							<TypeName>Query</TypeName>
+							<Name>authorQuery</Name>
+						</AxMethodVariable>
+						<AxMethodVariable>
+							<Type>Class</Type>
+							<TypeName>QueryBuildDataSource</TypeName>
+							<Name>qbds</Name>
+						</AxMethodVariable>
+					</Variables>
+				</Method>
 			</Methods>
 			<Fields>
 				<Field>
@@ -69,6 +88,52 @@
 			</Fields>
 		</DataSource>
 	</DataSources>
-	<DataControls />
-	<Members />
+	<DataControls>
+		<Control>
+			<Name>DateFilter</Name>
+			<Type>Date</Type>
+			<Methods>
+				<Method>
+					<Name>modified</Name>
+					<Visibility>Public</Visibility>
+					<ReturnType>
+						<Type>Enum</Type>
+						<TypeName>boolean</TypeName>
+					</ReturnType>
+					<Variables>
+						<AxMethodVariable>
+							<Type>Enum</Type>
+							<TypeName>boolean</TypeName>
+							<Name>ret</Name>
+						</AxMethodVariable>
+						<AxMethodVariable>
+							<Type>Date</Type>
+							<TypeName></TypeName>
+							<Name>filteredDate</Name>
+						</AxMethodVariable>
+					</Variables>
+				</Method>
+			</Methods>
+		</Control>
+	</DataControls>
+	<Members>
+		<AxClassMemberVariable>
+			<Type>Class</Type>
+			<TypeName>QueryBuildRange</TypeName>
+			<Name>qbrBirthdate</Name>
+			<Attributes />
+		</AxClassMemberVariable>
+		<AxClassMemberVariable>
+			<Type>Class</Type>
+			<TypeName>QueryBuildRange</TypeName>
+			<Name>qbrDeathdate</Name>
+			<Attributes />
+		</AxClassMemberVariable>
+		<AxClassMemberVariable>
+			<Type>Class</Type>
+			<TypeName>QueryBuildRange</TypeName>
+			<Name>qbrDeathDateNullCheck</Name>
+			<Attributes />
+		</AxClassMemberVariable>
+	</Members>
 </z:anyType>
