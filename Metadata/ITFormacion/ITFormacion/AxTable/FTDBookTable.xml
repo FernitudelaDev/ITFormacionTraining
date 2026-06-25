@@ -67,6 +67,33 @@ public class FTDBookTable extends common
 
 ]]></Source>
 			</Method>
+			<Method>
+				<Name>currentInventory</Name>
+				<Source><![CDATA[
+    public Qty currentInventory(RecId _excludeTransactionRecId = 0)
+    {
+        SMHBookInventoryTransaction transactions;
+
+        select sum(Qty) from transactions
+        where transactions.Book == this.RecId
+        && transactions.RecId != _excludeTransactionRecId;
+
+        return transactions.Qty;
+    }
+
+]]></Source>
+			</Method>
+			<Method>
+				<Name>dispCurrentInventory</Name>
+				<Source><![CDATA[
+    [SysClientCacheDataMethod(true)]
+    public display SMHInventoryQty dispCurrentInventory()
+    {
+        return this.currentInventory();
+    }
+
+]]></Source>
+			</Method>
 		</Methods>
 	</SourceCode>
 	<Label>@ITFormacion:BookTable</Label>
