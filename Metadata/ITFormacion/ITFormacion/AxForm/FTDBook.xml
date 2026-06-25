@@ -142,7 +142,27 @@ public class FTDBook extends FormRun
 				<Type>ActionPane</Type>
 				<FormControlExtension
 					i:nil="true" />
-				<Controls />
+				<Controls>
+					<AxFormControl xmlns=""
+						i:type="AxFormButtonGroupControl">
+						<Name>ApplicationBarButtonGroup</Name>
+						<Type>ButtonGroup</Type>
+						<FormControlExtension
+							i:nil="true" />
+						<Controls>
+							<AxFormControl xmlns=""
+								i:type="AxFormMenuFunctionButtonControl">
+								<Name>SMHBookTransactionsButton</Name>
+								<Type>MenuFunctionButton</Type>
+								<FormControlExtension
+									i:nil="true" />
+								<DataSource>FTDBookTable</DataSource>
+								<MenuItemName>SMHBookTransactionsMenuItem</MenuItemName>
+								<NeedsRecord>Yes</NeedsRecord>
+							</AxFormControl>
+						</Controls>
+					</AxFormControl>
+				</Controls>
 			</AxFormControl>
 			<AxFormControl xmlns=""
 				i:type="AxFormGroupControl">
@@ -242,6 +262,15 @@ public class FTDBook extends FormRun
 								<FormControlExtension
 									i:nil="true" />
 								<DataMethod>dispAuthorFullName</DataMethod>
+								<DataSource>FTDBookTable</DataSource>
+							</AxFormControl>
+							<AxFormControl xmlns=""
+								i:type="AxFormRealControl">
+								<Name>GroupGrid_dispCurrentInventory</Name>
+								<Type>Real</Type>
+								<FormControlExtension
+									i:nil="true" />
+								<DataMethod>dispCurrentInventory</DataMethod>
 								<DataSource>FTDBookTable</DataSource>
 							</AxFormControl>
 						</Controls>

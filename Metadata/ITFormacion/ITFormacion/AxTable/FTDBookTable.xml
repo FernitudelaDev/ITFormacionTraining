@@ -150,6 +150,9 @@ public class FTDBookTable extends common
 				<AxTableFieldGroupField>
 					<DataField>dispAuthorFullName</DataField>
 				</AxTableFieldGroupField>
+				<AxTableFieldGroupField>
+					<DataField>dispCurrentInventory</DataField>
+				</AxTableFieldGroupField>
 			</Fields>
 		</AxTableFieldGroup>
 	</FieldGroups>
