@@ -180,7 +180,18 @@ public class SMHAuthor extends FormRun
 						<Type>ButtonGroup</Type>
 						<FormControlExtension
 							i:nil="true" />
-						<Controls />
+						<Controls>
+							<AxFormControl xmlns=""
+								i:type="AxFormMenuFunctionButtonControl">
+								<Name>SMHBookGenreFilteredButton</Name>
+								<Type>MenuFunctionButton</Type>
+								<FormControlExtension
+									i:nil="true" />
+								<DataSource>SMHAuthorTable</DataSource>
+								<MenuItemName>SMHBookGenreFiltered</MenuItemName>
+								<NeedsRecord>Yes</NeedsRecord>
+							</AxFormControl>
+						</Controls>
 					</AxFormControl>
 				</Controls>
 			</AxFormControl>
