@@ -20,5 +20,17 @@
 				</AxMenuElement>
 			</Elements>
 		</AxMenuElement>
+		<AxMenuElement xmlns=""
+			i:type="AxMenuElementSubMenu">
+			<Name>Transactions</Name>
+			<Label>@ACItFormacionLabels:InventoryTransaction</Label>
+			<Elements>
+				<AxMenuElement xmlns=""
+					i:type="AxMenuElementMenuItem">
+					<Name>ACBookTransactions</Name>
+					<MenuItemName>ACBookTransactions</MenuItemName>
+				</AxMenuElement>
+			</Elements>
+		</AxMenuElement>
 	</Elements>
 </AxMenu>

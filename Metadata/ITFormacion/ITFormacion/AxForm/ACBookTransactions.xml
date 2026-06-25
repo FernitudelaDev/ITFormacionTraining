@@ -14,7 +14,53 @@ public class ACBookTransactions extends FormRun
 			</Method>
 		</Methods>
 		<DataSources xmlns="" />
-		<DataControls xmlns="" />
+		<DataControls xmlns="">
+			<Control>
+				<Name>Add</Name>
+				<Type>Button</Type>
+				<Methods>
+					<Method>
+						<Name>clicked</Name>
+						<Source><![CDATA[
+        /// <summary>
+        ///
+        /// </summary>
+        public void clicked()
+        {
+            super();
+            ACBookInventoryTransaction_ds.create();
+        }
+
+]]></Source>
+					</Method>
+				</Methods>
+			</Control>
+			<Control>
+				<Name>Delete</Name>
+				<Type>Button</Type>
+				<Methods>
+					<Method>
+						<Name>clicked</Name>
+						<Source><![CDATA[
+        /// <summary>
+        ///
+        /// </summary>
+        public void clicked()
+        {
+            super();
+
+            if (ACBookInventoryTransaction_ds.validateDelete())
+            {
+                ACBookInventoryTransaction.delete();
+            }
+            ACBookInventoryTransaction_ds.research(true);
+        }
+
+]]></Source>
+					</Method>
+				</Methods>
+			</Control>
+		</DataControls>
 		<Members xmlns="" />
 	</SourceCode>
 	<DataSources>
@@ -83,6 +129,7 @@ public class ACBookTransactions extends FormRun
 				</AxFormDataSourceField>
 			</Fields>
 			<ReferencedDataSources />
+			<LinkType>Active</LinkType>
 			<AllowCreate>No</AllowCreate>
 			<AllowDelete>No</AllowDelete>
 			<AllowEdit>No</AllowEdit>
@@ -173,6 +220,7 @@ public class ACBookTransactions extends FormRun
 								<ReferenceField>Author</ReferenceField>
 							</AxFormControl>
 						</Controls>
+						<DataSource>ACBookTable</DataSource>
 						<MultiSelect>No</MultiSelect>
 						<ShowRowLabels>No</ShowRowLabels>
 						<Style>List</Style>
