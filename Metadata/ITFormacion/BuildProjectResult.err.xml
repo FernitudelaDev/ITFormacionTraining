@@ -1,19 +1,32 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Diagnostics
-  GenerationTime="2026-06-24T00:06:27.8822369+00:00">
+  GenerationTime="2026-06-25T18:23:24.5872384+00:00">
   <Items>
     <Diagnostic>
       <DiagnosticType>Compile</DiagnosticType>
       <Severity>Error</Severity>
-      <Path>dynamics://Class/ACBookCreationService/Method/findBook</Path>
-      <ElementType>Class Method</ElementType>
-      <Moniker>ClassDoesNotContainStaticMethod</Moniker>
-      <Line>6</Line>
+      <Path>dynamics://Table/ACBookTable/Method/dispCurrentInventory</Path>
+      <ElementType>Table Method</ElementType>
+      <Moniker>ClassDoesNotContainMethod</Moniker>
+      <Line>61</Line>
       <Column>16</Column>
-      <EndLine>6</EndLine>
+      <EndLine>61</EndLine>
       <EndColumn>38</EndColumn>
-      <Message>Table 'ACBookTable' does not contain the static method 'find'.</Message>
+      <Message>ClassDoesNotContainMethod: Table 'ACBookTable' does not contain a definition for method 'currentInvetory' and no extension method 'currentInvetory' accepting a first argument of type 'ACBookTable' is found on any extension class.</Message>
+      <ItemSpecific>
+        <OriginatorType
+          alias="0">ClassDoesNotContainMethod</OriginatorType>
+        <Fields>
+          <elementTypeName>Table</elementTypeName>
+          <elementName>ACBookTable</elementName>
+          <methodName>currentInvetory</methodName>
+        </Fields>
+      </ItemSpecific>
     </Diagnostic>
   </Items>
-  <Aliases />
+  <Aliases>
+    <Alias
+      assembly="Microsoft.Dynamics.AX.Framework.Xlnt.XppParser.Pass2, Version=7.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35"
+      ns="Microsoft.Dynamics.AX.Framework.Xlnt.XppParser.Pass2">0</Alias>
+  </Aliases>
 </Diagnostics>

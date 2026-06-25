@@ -6,9 +6,69 @@
 public class ACBookInventoryTransaction extends common
 {
 }
-
 ]]></Declaration>
-		<Methods />
+		<Methods>
+			<Method>
+				<Name>shouldThrowExceptionOnZeroDelete</Name>
+				<Source><![CDATA[
+    public boolean shouldThrowExceptionOnZeroDelete()
+    {
+        return true;
+    }
+
+]]></Source>
+			</Method>
+			<Method>
+				<Name>validateQtyIsNotZero</Name>
+				<Source><![CDATA[
+    public boolean validateQtyIsNotZero()
+    {
+        if(this.InventoryQty == 0)
+        {
+            return checkFailed("@ACItFormacionLabels:FieldQtyCannotBeZero");
+        }
+
+            return true;
+    }
+
+]]></Source>
+			</Method>
+			<Method>
+				<Name>validateTotalQtyIsNotBelowZero</Name>
+				<Source><![CDATA[
+    public boolean validateTotalQtyIsNotBelowZero()
+    {
+        Qty totalSavedPerBook = ACBookTable::findRecId(this.Book).currentInventory(this.RecId);
+
+        if((totalSavedPerBook + this.InventoryQty) < 0)
+        {
+            return checkFailed("@ACItFormacionLabels:TransactionWouldMakeTheTotalNegative");
+        }
+
+        return true;
+    }
+
+]]></Source>
+			</Method>
+			<Method>
+				<Name>validateWrite</Name>
+				<Source><![CDATA[
+    public boolean validateWrite()
+    {
+        boolean ret;
+
+        ret = super();
+
+        ret = ret
+            && this.validateQtyIsNotZero()
+            && this.validateTotalQtyIsNotBelowZero();
+
+        return ret;
+    }
+
+]]></Source>
+			</Method>
+		</Methods>
 	</SourceCode>
 	<Label>@ACItFormacionLabels:InventoryTransaction</Label>
 	<SubscriberAccessLevel>

@@ -6,6 +6,7 @@ BooksFilterByGenre=Books filtered by genre
 BookTable=Book
 DeathDate=Death date
 Fantasy=Fantasy
+FieldQtyCannotBeZero=This field can't be zero
 Genre=Genre
 HistoryNovel=History novel
 InventoryQty=Inventory quantity
@@ -18,4 +19,6 @@ NewLabel0=Label files created on 06/19/2026 09:49:01 for label file Id ACItForma
  ;Label file comment - see above label
 Science=Science
 Thriller=Thriller
+Transactions=Transaction
+TransactionWouldMakeTheTotalNegative=This transaction would make the total negative
 ValidateDeathDateError=Death date cant be lower than birth date

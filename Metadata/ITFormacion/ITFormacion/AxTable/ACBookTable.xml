@@ -77,6 +77,33 @@ public class ACBookTable extends common
 
 ]]></Source>
 			</Method>
+			<Method>
+				<Name>currentInventory</Name>
+				<Source><![CDATA[
+    public Qty currentInventory(RecId _excludeTransactionRecId = 0)
+    {
+        ACBookInventoryTransaction transactions;
+
+        select sum(InventoryQty) from transactions
+            where transactions.Book == this.RecId
+            && transactions.RecId != _excludeTransactionRecId;
+
+        return transactions.InventoryQty;
+    }
+
+]]></Source>
+			</Method>
+			<Method>
+				<Name>dispCurrentInventory</Name>
+				<Source><![CDATA[
+    [SysClientCacheDataMethod(true)]
+    public display ACInventoryQty dispCurrentInventory()
+    {
+        return this.currentInventory();
+    }
+
+]]></Source>
+			</Method>
 		</Methods>
 	</SourceCode>
 	<FormRef>ACBook</FormRef>

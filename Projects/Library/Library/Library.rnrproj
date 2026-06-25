@@ -127,6 +127,11 @@
       <Name>ACBook</Name>
       <Link>Forms\ACBook</Link>
     </Content>
+    <Content Include="AxForm\ACBookTransactions">
+      <SubType>Content</SubType>
+      <Name>ACBookTransactions</Name>
+      <Link>Forms\ACBookTransactions</Link>
+    </Content>
     <Content Include="AxLabelFile\ACItFormacionLabels_en-US">
       <SubType>Content</SubType>
       <Name>ACItFormacionLabels_en-US</Name>
