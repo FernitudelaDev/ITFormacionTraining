@@ -23,6 +23,21 @@ public class FTDBookTable extends common
 ]]></Source>
 			</Method>
 			<Method>
+				<Name>find</Name>
+				<Source><![CDATA[
+    public static FTDBookTable find(FTDId _id)
+    {
+        FTDBookTable bookTable;
+
+        select firstonly bookTable
+            where bookTable.Id == _id;
+
+        return bookTable;
+    }
+
+]]></Source>
+			</Method>
+			<Method>
 				<Name>findRecId</Name>
 				<Source><![CDATA[
     public static FTDBookTable findRecId(RecId _recId)

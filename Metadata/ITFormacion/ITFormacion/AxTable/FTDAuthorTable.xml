@@ -121,6 +121,29 @@ public class FTDAuthorTable extends common
 
 ]]></Source>
 			</Method>
+			<Method>
+				<Name>sqlQueryinXpp</Name>
+				<Source><![CDATA[
+    public static void sqlQueryinXpp()
+    {
+        //select * from FTDBOOKTABLE t1
+        //    inner join FTDAUTHORTABLE t2
+        //    on t1.AUTHOR = t2.RECID and t1.DATAAREAID = t2.DATAAREAID
+        //    where t1.DATAAREAID = 'usrt'
+
+        FTDBookTable bookTable;
+        FTDAuthorTable authorTable;
+
+        while select Id, Name, Genre from bookTable
+            join Id, FirstName, LastName from authorTable
+            where bookTable.Author == authorTable.RecId
+        {
+            //logica 1
+        }
+    }
+
+]]></Source>
+			</Method>
 		</Methods>
 	</SourceCode>
 	<FormRef>FTDAuthor</FormRef>

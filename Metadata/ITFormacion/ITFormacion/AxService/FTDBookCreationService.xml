@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<AxService xmlns:i="http://www.w3.org/2001/XMLSchema-instance">
+	<Name>FTDBookCreationService</Name>
+	<Class>FTDBookCreationService</Class>
+	<ExternalName>FTDBookCrationService</ExternalName>
+	<ServiceOperations>
+		<AxServiceOperation>
+			<Name>findBook</Name>
+			<Method>findBook</Method>
+			<SubscriberAccessLevel>
+				<Read>Allow</Read>
+			</SubscriberAccessLevel>
+		</AxServiceOperation>
+	</ServiceOperations>
+</AxService>
