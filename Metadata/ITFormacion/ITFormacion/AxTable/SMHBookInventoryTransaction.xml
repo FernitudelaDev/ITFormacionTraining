@@ -60,6 +60,7 @@ public class SMHBookInventoryTransaction extends common
 			</Method>
 		</Methods>
 	</SourceCode>
+	<FormRef>SMHBookTransactionsForm</FormRef>
 	<Label>@ITFormacion:InventoryTransaction</Label>
 	<SubscriberAccessLevel>
 		<Read>Allow</Read>

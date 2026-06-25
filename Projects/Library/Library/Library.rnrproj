@@ -111,6 +111,11 @@
       <Name>SMHAuthor</Name>
       <Link>Forms\SMHAuthor</Link>
     </Content>
+    <Content Include="AxForm\SMHBookTransactionsForm">
+      <SubType>Content</SubType>
+      <Name>SMHBookTransactionsForm</Name>
+      <Link>Forms\SMHBookTransactionsForm</Link>
+    </Content>
     <Content Include="AxLabelFile\ITFormacion_en-US">
       <SubType>Content</SubType>
       <Name>ITFormacion_en-US</Name>
@@ -140,6 +145,11 @@
       <SubType>Content</SubType>
       <Name>SMHBookGenreFiltered</Name>
       <Link>Display Menu Items\SMHBookGenreFiltered</Link>
+    </Content>
+    <Content Include="AxMenuItemDisplay\SMHBookTransactionsMenuItem">
+      <SubType>Content</SubType>
+      <Name>SMHBookTransactionsMenuItem</Name>
+      <Link>Display Menu Items\SMHBookTransactionsMenuItem</Link>
     </Content>
     <Content Include="AxMenu\FTDLibrary">
       <SubType>Content</SubType>
