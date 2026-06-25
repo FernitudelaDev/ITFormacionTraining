@@ -38,6 +38,7 @@
     <Folder Include="Data Entities\" />
     <Folder Include="Display Menu Items\" />
     <Folder Include="EDT Dates\" />
+    <Folder Include="EDT Reals\" />
     <Folder Include="EDT Strings\" />
     <Folder Include="Forms\" />
     <Folder Include="Label Files\" />
@@ -84,6 +85,16 @@
       <SubType>Content</SubType>
       <Name>SMHDeathDate</Name>
       <Link>EDT Dates\SMHDeathDate</Link>
+    </Content>
+    <Content Include="AxEdt\SMHInventoryQty">
+      <SubType>Content</SubType>
+      <Name>SMHInventoryQty</Name>
+      <Link>EDT Reals\SMHInventoryQty</Link>
+    </Content>
+    <Content Include="AxEdt\SMHInventTransId">
+      <SubType>Content</SubType>
+      <Name>SMHInventTransId</Name>
+      <Link>EDT Strings\SMHInventTransId</Link>
     </Content>
     <Content Include="AxEnum\SMHGenreEnum">
       <SubType>Content</SubType>
@@ -189,6 +200,11 @@
       <SubType>Content</SubType>
       <Name>SMHAuthorTable</Name>
       <Link>Tables\SMHAuthorTable</Link>
+    </Content>
+    <Content Include="AxTable\SMHBookInventoryTransaction">
+      <SubType>Content</SubType>
+      <Name>SMHBookInventoryTransaction</Name>
+      <Link>Tables\SMHBookInventoryTransaction</Link>
     </Content>
     <Content Include="ITFormacion.en-US.label.txt">
       <SubType>Content</SubType>
