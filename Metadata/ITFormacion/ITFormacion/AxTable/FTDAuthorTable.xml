@@ -144,6 +144,22 @@ public class FTDAuthorTable extends common
 
 ]]></Source>
 			</Method>
+			<Method>
+				<Name>firstBookGenre</Name>
+				<Source><![CDATA[
+    public FTDGenreEnum firstBookGenre()
+    {
+        FTDBookTable book;
+
+        select firstonly Genre 
+            from book
+            where this.RecId == book.Author;
+
+        return book.Genre;
+    }
+
+]]></Source>
+			</Method>
 		</Methods>
 	</SourceCode>
 	<FormRef>FTDAuthor</FormRef>

@@ -38,6 +38,7 @@
     <Folder Include="Data Entities\" />
     <Folder Include="Display Menu Items\" />
     <Folder Include="EDT Dates\" />
+    <Folder Include="EDT Reals\" />
     <Folder Include="EDT Strings\" />
     <Folder Include="Forms\" />
     <Folder Include="Label Files\" />
@@ -91,6 +92,16 @@
       <Name>FTDId</Name>
       <Link>EDT Strings\FTDId</Link>
     </Content>
+    <Content Include="AxEdt\FTDInventoryQty">
+      <SubType>Content</SubType>
+      <Name>FTDInventoryQty</Name>
+      <Link>EDT Reals\FTDInventoryQty</Link>
+    </Content>
+    <Content Include="AxEdt\FTDInventTransId">
+      <SubType>Content</SubType>
+      <Name>FTDInventTransId</Name>
+      <Link>EDT Strings\FTDInventTransId</Link>
+    </Content>
     <Content Include="AxEnum\FTDGenreEnum">
       <SubType>Content</SubType>
       <Name>FTDGenreEnum</Name>
@@ -105,6 +116,11 @@
       <SubType>Content</SubType>
       <Name>FTDBook</Name>
       <Link>Forms\FTDBook</Link>
+    </Content>
+    <Content Include="AxForm\FTDBookTransactions">
+      <SubType>Content</SubType>
+      <Name>FTDBookTransactions</Name>
+      <Link>Forms\FTDBookTransactions</Link>
     </Content>
     <Content Include="AxLabelFile\ITFormacion_en-US">
       <SubType>Content</SubType>
@@ -130,6 +146,16 @@
       <SubType>Content</SubType>
       <Name>FTDBook</Name>
       <Link>Display Menu Items\FTDBook</Link>
+    </Content>
+    <Content Include="AxMenuItemDisplay\FTDBookGenreFiltered">
+      <SubType>Content</SubType>
+      <Name>FTDBookGenreFiltered</Name>
+      <Link>Display Menu Items\FTDBookGenreFiltered</Link>
+    </Content>
+    <Content Include="AxMenuItemDisplay\FTDBookTransactions">
+      <SubType>Content</SubType>
+      <Name>FTDBookTransactions</Name>
+      <Link>Display Menu Items\FTDBookTransactions</Link>
     </Content>
     <Content Include="AxMenu\FTDLibrary">
       <SubType>Content</SubType>
@@ -180,6 +206,11 @@
       <SubType>Content</SubType>
       <Name>FTDAuthorTable</Name>
       <Link>Tables\FTDAuthorTable</Link>
+    </Content>
+    <Content Include="AxTable\FTDBookInventoryTransaction">
+      <SubType>Content</SubType>
+      <Name>FTDBookInventoryTransaction</Name>
+      <Link>Tables\FTDBookInventoryTransaction</Link>
     </Content>
     <Content Include="AxTable\FTDBookStaging">
       <SubType>Content</SubType>

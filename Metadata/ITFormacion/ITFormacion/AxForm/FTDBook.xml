@@ -9,8 +9,42 @@
 [Form]
 public class FTDBook extends FormRun
 {
-
+    FTDGenreEnum    genreFilter;
+    boolean         needGenreFilter;
 }
+]]></Source>
+			</Method>
+			<Method>
+				<Name>init</Name>
+				<Source><![CDATA[
+    public void init()
+    {
+        element.getParamsFromArgs();
+
+        super();
+
+        //FormRun callerFormRun = element.args().caller();
+    }
+
+]]></Source>
+			</Method>
+			<Method>
+				<Name>getParamsFromArgs</Name>
+				<Source><![CDATA[
+    private void getParamsFromArgs()
+    {
+        Common          callerRecord = element.args().record();
+        MenuItemName    callerItemName = element.args().menuItemName();
+
+        if (callerItemName == menuItemDisplayStr(FTDBookGenreFiltered)
+            && callerRecord.TableId == tableNum(FTDAuthorTable))
+        {
+            FTDAuthorTable authorTable  = callerRecord;
+            genreFilter                 = authorTable.firstBookGenre();
+            needGenreFilter             = true;
+        }
+    }
+
 ]]></Source>
 			</Method>
 		</Methods>
@@ -19,15 +53,43 @@ public class FTDBook extends FormRun
 				<Name>FTDBookTable</Name>
 				<Methods>
 					<Method>
-						<Name>active</Name>
+						<Name>init</Name>
 						<Source><![CDATA[
-        public int active()
+        public void init()
         {
-            int ret;
-    
-            ret = super();
-    
-            return ret;
+            super();
+
+            if (needGenreFilter)
+            {
+                this.clearExistingLinksAndAddGenreRange();
+            }
+        }
+
+]]></Source>
+					</Method>
+					<Method>
+						<Name>clearExistingLinksAndAddGenreRange</Name>
+						<Source><![CDATA[
+        private void clearExistingLinksAndAddGenreRange()
+        {
+            QueryBuildDataSource qbds = FTDBookTable_q.dataSourceTable(tableNum(FTDBookTable));
+
+            qbds.clearDynalinks();
+
+            QuerybuildRange qbrGenre = qbds.addRange(fieldNum(FTDBookTable, Genre));
+
+            qbrGenre.status(RangeStatus::Locked);
+            qbrGenre.value(queryValue(genreFilter));
+        }
+
+]]></Source>
+					</Method>
+					<Method>
+						<Name>executeQuery</Name>
+						<Source><![CDATA[
+        public void executeQuery()
+        {
+            super();
         }
 
 ]]></Source>
@@ -89,7 +151,26 @@ public class FTDBook extends FormRun
 				<Type>ActionPane</Type>
 				<FormControlExtension
 					i:nil="true" />
-				<Controls />
+				<Controls>
+					<AxFormControl xmlns=""
+						i:type="AxFormButtonGroupControl">
+						<Name>ButtonGroup</Name>
+						<Type>ButtonGroup</Type>
+						<FormControlExtension
+							i:nil="true" />
+						<Controls>
+							<AxFormControl xmlns=""
+								i:type="AxFormMenuFunctionButtonControl">
+								<Name>BookTransactions</Name>
+								<Type>MenuFunctionButton</Type>
+								<FormControlExtension
+									i:nil="true" />
+								<DataSource>FTDBookTable</DataSource>
+								<MenuItemName>FTDBookTransactions</MenuItemName>
+							</AxFormControl>
+						</Controls>
+					</AxFormControl>
+				</Controls>
 			</AxFormControl>
 			<AxFormControl xmlns=""
 				i:type="AxFormGroupControl">
@@ -189,6 +270,15 @@ public class FTDBook extends FormRun
 								<FormControlExtension
 									i:nil="true" />
 								<DataMethod>dispAuthorFullName</DataMethod>
+								<DataSource>FTDBookTable</DataSource>
+							</AxFormControl>
+							<AxFormControl xmlns=""
+								i:type="AxFormRealControl">
+								<Name>GroupGrid_dispCurrentInventory</Name>
+								<Type>Real</Type>
+								<FormControlExtension
+									i:nil="true" />
+								<DataMethod>dispCurrentInventory</DataMethod>
 								<DataSource>FTDBookTable</DataSource>
 							</AxFormControl>
 						</Controls>

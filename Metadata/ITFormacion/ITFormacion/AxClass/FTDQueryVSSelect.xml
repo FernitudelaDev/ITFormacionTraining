@@ -65,6 +65,8 @@ internal final class FTDQueryVSSelect
 
         QueryBuildRange qbrGenre = qbdsBookTable.addRange(fieldNum(FTDBookTable, Genre));
         qbrGenre.value(queryValue(FTDGenreEnum::Fantasy));
+        //si queremos anadir un valor nuevo a un rango existente
+        qbrGenre.value(queryRangeConcat(qbrGenre.value(), queryValue(FTDGenreEnum::HistoryNovel)));
 
         this.runQuery(ftdBookAuthorFantasyQuery);
     }

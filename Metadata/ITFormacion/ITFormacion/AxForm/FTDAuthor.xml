@@ -9,6 +9,7 @@
 [Form]
 public class FTDAuthor extends FormRun
 {
+    QueryBuildRange qbrBirthDate, qbrDeathDate, qbrDeatDateNullCheck;
     //public void setDeathDateEditable(boolean _isEditable)
     //{
     //    //navegando desde el ds
@@ -47,11 +48,77 @@ public class FTDAuthor extends FormRun
 
 ]]></Source>
 					</Method>
+					<Method>
+						<Name>init</Name>
+						<Source><![CDATA[
+        /// <summary>
+        ///
+        /// </summary>
+        public void init()
+        {
+            super();
+            
+            QueryBuildDataSource qbdsAuthorTable = FTDAuthorTable_q.dataSourceTable(tableNum(FTDAuthorTable));
+            qbrBirthDate = qbdsAuthorTable.addRange(fieldNum(FTDAuthorTable, BirthDate));
+            qbrDeathDate = qbdsAuthorTable.addRange(fieldNum(FTDAuthorTable, DeathDate));
+            qbrDeatDateNullCheck = qbdsAuthorTable.addRange(fieldNum(FTDAuthorTable, DeathDate));
+
+            qbrBirthDate.status(RangeStatus::Hidden);
+            qbrDeathDate.status(RangeStatus::Hidden);
+            qbrDeatDateNullCheck.status(RangeStatus::Hidden);
+        }
+
+]]></Source>
+					</Method>
 				</Methods>
 				<Fields />
 			</DataSource>
 		</DataSources>
-		<DataControls xmlns="" />
+		<DataControls xmlns="">
+			<Control>
+				<Name>FilterDateAlive</Name>
+				<Type>Date</Type>
+				<Methods>
+					<Method>
+						<Name>modified</Name>
+						<Source><![CDATA[
+        /// <summary>
+        ///
+        /// </summary>
+        /// <returns></returns>
+        public boolean modified()
+        {
+            boolean ret;
+    
+            ret = super();
+
+            date filterDate = this.dateValue();
+
+            if (filterDate > dateNull())
+            {
+                qbrBirthDate.value(strFmt("<%1", filterDate));
+                qbrDeathDate.value(strFmt(">%1", filterDate));
+                qbrDeatDateNullCheck.value(queryValue(dateNull()));
+            }
+            else
+            {
+                //limpiamos los rangos, para que no filtren. Si quisieramos filtrar por valor vacio
+                //SysQueryRangeUtil::valueEmptyString();
+                qbrBirthDate.value('');
+                qbrDeathDate.value('');
+                qbrDeatDateNullCheck.value('');
+            }
+               
+            FTDAuthorTable_ds.executeQuery();
+    
+            return ret;
+        }
+
+]]></Source>
+					</Method>
+				</Methods>
+			</Control>
+		</DataControls>
 		<Members xmlns="" />
 	</SourceCode>
 	<DataSources>
@@ -108,7 +175,36 @@ public class FTDAuthor extends FormRun
 				<Type>ActionPane</Type>
 				<FormControlExtension
 					i:nil="true" />
-				<Controls />
+				<Controls>
+					<AxFormControl xmlns=""
+						i:type="AxFormButtonGroupControl">
+						<Name>ApplicationBarButtonGroup</Name>
+						<Type>ButtonGroup</Type>
+						<FormControlExtension
+							i:nil="true" />
+						<Controls>
+							<AxFormControl xmlns=""
+								i:type="AxFormMenuFunctionButtonControl">
+								<Name>Book</Name>
+								<Type>MenuFunctionButton</Type>
+								<FormControlExtension
+									i:nil="true" />
+								<DataSource>FTDAuthorTable</DataSource>
+								<MenuItemName>FTDBook</MenuItemName>
+								<NeedsRecord>Yes</NeedsRecord>
+							</AxFormControl>
+							<AxFormControl xmlns=""
+								i:type="AxFormMenuFunctionButtonControl">
+								<Name>BookGenreFiltered</Name>
+								<Type>MenuFunctionButton</Type>
+								<FormControlExtension
+									i:nil="true" />
+								<DataSource>FTDAuthorTable</DataSource>
+								<MenuItemName>FTDBookGenreFiltered</MenuItemName>
+							</AxFormControl>
+						</Controls>
+					</AxFormControl>
+				</Controls>
 			</AxFormControl>
 			<AxFormControl xmlns=""
 				i:type="AxFormGroupControl">
@@ -142,6 +238,13 @@ public class FTDAuthor extends FormRun
 								</AxFormControlExtensionProperty>
 							</ExtensionProperties>
 						</FormControlExtension>
+					</AxFormControl>
+					<AxFormControl xmlns=""
+						i:type="AxFormDateControl">
+						<Name>FilterDateAlive</Name>
+						<Type>Date</Type>
+						<FormControlExtension
+							i:nil="true" />
 					</AxFormControl>
 				</Controls>
 				<ArrangeMethod>HorizontalLeft</ArrangeMethod>
