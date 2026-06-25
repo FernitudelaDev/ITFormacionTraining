@@ -125,6 +125,11 @@
       <Name>SMHAuthor</Name>
       <Link>Display Menu Items\SMHAuthor</Link>
     </Content>
+    <Content Include="AxMenuItemDisplay\SMHBookGenreFiltered">
+      <SubType>Content</SubType>
+      <Name>SMHBookGenreFiltered</Name>
+      <Link>Display Menu Items\SMHBookGenreFiltered</Link>
+    </Content>
     <Content Include="AxMenu\FTDLibrary">
       <SubType>Content</SubType>
       <Name>FTDLibrary</Name>

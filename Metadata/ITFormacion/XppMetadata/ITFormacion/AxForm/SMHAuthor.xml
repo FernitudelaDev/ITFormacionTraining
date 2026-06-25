@@ -18,11 +18,78 @@
 						<Type>Int32</Type>
 						<TypeName></TypeName>
 					</ReturnType>
+					<Variables>
+						<AxMethodVariable>
+							<Type>Int32</Type>
+							<TypeName></TypeName>
+							<Name>ret</Name>
+						</AxMethodVariable>
+					</Variables>
+				</Method>
+				<Method>
+					<Name>init</Name>
+					<Visibility>Public</Visibility>
+					<ReturnType>
+						<TypeName></TypeName>
+					</ReturnType>
+					<Variables>
+						<AxMethodVariable>
+							<Type>Class</Type>
+							<TypeName>QueryBuildDataSource</TypeName>
+							<Name>qbds</Name>
+						</AxMethodVariable>
+					</Variables>
 				</Method>
 			</Methods>
 			<Fields />
 		</DataSource>
 	</DataSources>
-	<DataControls />
-	<Members />
+	<DataControls>
+		<Control>
+			<Name>FilterDateAlive</Name>
+			<Type>Date</Type>
+			<Methods>
+				<Method>
+					<Name>modified</Name>
+					<Visibility>Public</Visibility>
+					<ReturnType>
+						<Type>Enum</Type>
+						<TypeName>boolean</TypeName>
+					</ReturnType>
+					<Variables>
+						<AxMethodVariable>
+							<Type>Enum</Type>
+							<TypeName>boolean</TypeName>
+							<Name>ret</Name>
+						</AxMethodVariable>
+						<AxMethodVariable>
+							<Type>Date</Type>
+							<TypeName></TypeName>
+							<Name>filterDate</Name>
+						</AxMethodVariable>
+					</Variables>
+				</Method>
+			</Methods>
+		</Control>
+	</DataControls>
+	<Members>
+		<AxClassMemberVariable>
+			<Type>Class</Type>
+			<TypeName>QueryBuildRange</TypeName>
+			<Name>qbrBirthDate</Name>
+			<Attributes />
+		</AxClassMemberVariable>
+		<AxClassMemberVariable>
+			<Type>Class</Type>
+			<TypeName>QueryBuildRange</TypeName>
+			<Name>qbrDeathDate</Name>
+			<Attributes />
+		</AxClassMemberVariable>
+		<AxClassMemberVariable>
+			<Type>Class</Type>
+			<TypeName>QueryBuildRange</TypeName>
+			<Name>qbrDeathDateNullCheck</Name>
+			<Attributes />
+		</AxClassMemberVariable>
+	</Members>
 </z:anyType>

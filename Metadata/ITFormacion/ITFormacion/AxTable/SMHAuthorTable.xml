@@ -141,6 +141,22 @@ public class SMHAuthorTable extends common
 
 ]]></Source>
 			</Method>
+			<Method>
+				<Name>firstBookGenre</Name>
+				<Source><![CDATA[
+    public SMHGenreEnum firstBookGenre()
+    {
+        FTDBookTable book;
+
+        select firstOnly Genre
+        from book
+        where this.RecId == book.Author;
+
+        return book.Genre;
+    }
+
+]]></Source>
+			</Method>
 		</Methods>
 	</SourceCode>
 	<FormRef>FTDBook</FormRef>

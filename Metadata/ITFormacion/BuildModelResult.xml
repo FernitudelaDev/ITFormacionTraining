@@ -1,13 +1,16 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Diagnostics
-  GenerationTime="2026-06-23T07:19:09.1971782+00:00">
+  GenerationTime="2026-06-25T16:52:09.8733342+00:00">
   <Items>
     <Diagnostic>
-      <DiagnosticType>ExternalReference</DiagnosticType>
-      <Severity>Warning</Severity>
-      <Path>dynamics://Reference/Microsoft.Dynamics___vices.PricingEngine</Path>
-      <Moniker>AssemblyFileNotFound</Moniker>
-      <Message>Assembly 'Microsoft.Dynamics.Commerce.Runtime.Entities.AttributeBasedPricing, Version=7.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35' failed to load because it was not found.</Message>
+      <DiagnosticType>Generation</DiagnosticType>
+      <Severity>Informational</Severity>
+      <Path>dynamics://View/SMHAuthorEntity</Path>
+      <ElementType>View</ElementType>
+      <Moniker>IsRuntimeServicesMode</Moniker>
+      <Line>0</Line>
+      <Column>0</Column>
+      <Message>Is Runtime Services mode: False</Message>
     </Diagnostic>
     <Diagnostic>
       <DiagnosticType>ExternalReference</DiagnosticType>
@@ -17,14 +20,21 @@
       <Message>Assembly 'System.Memory.Data, Version=1.0.2.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51' failed to load because it was not found.</Message>
     </Diagnostic>
     <Diagnostic>
+      <DiagnosticType>ExternalReference</DiagnosticType>
+      <Severity>Warning</Severity>
+      <Path>dynamics://Reference/Microsoft.Dynamics___vices.PricingEngine</Path>
+      <Moniker>AssemblyFileNotFound</Moniker>
+      <Message>Assembly 'Microsoft.Dynamics.Commerce.Runtime.Entities.AttributeBasedPricing, Version=7.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35' failed to load because it was not found.</Message>
+    </Diagnostic>
+    <Diagnostic>
       <DiagnosticType>Compile</DiagnosticType>
       <Severity>Warning</Severity>
       <Path>dynamics://Table/FTDBookTable/Method/SelectCountByGenre</Path>
       <ElementType>Table Method</ElementType>
       <Moniker>TypeConversionLosesRange</Moniker>
-      <Line>30</Line>
+      <Line>31</Line>
       <Column>9</Column>
-      <EndLine>30</EndLine>
+      <EndLine>31</EndLine>
       <EndColumn>32</EndColumn>
       <Message>The type conversion from 'int64' to 'int' loses range.</Message>
     </Diagnostic>

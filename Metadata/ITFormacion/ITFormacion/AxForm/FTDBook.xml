@@ -9,11 +9,86 @@
 [Form]
 public class FTDBook extends FormRun
 {
+    SMHGenreEnum genreFilter;
+    boolean needGenreFilter;
+
 }
 ]]></Source>
 			</Method>
+			<Method>
+				<Name>init</Name>
+				<Source><![CDATA[
+    public void init()
+    {
+        element.getParamsFromArgs();
+
+        super();
+
+        //FormRun callerFormRun = element.args().caller();
+    }
+
+]]></Source>
+			</Method>
+			<Method>
+				<Name>getParamsFromArgs</Name>
+				<Source><![CDATA[
+    private void getParamsFromArgs()
+    {
+        Common callerRecord = element.args().record();
+        MenuItemName callerItemName = element.args().menuItemName();
+
+        if (callerItemName == menuItemDisplayStr(SMHBookGenreFiltered)
+        && callerRecord.TableId == tableNum(SMHAuthorTable))
+        {
+            SMHAuthorTable authorTable = callerRecord;
+            genreFilter = authorTable.firstBookGenre();
+            needGenreFilter = true;
+        }
+    }
+
+]]></Source>
+			</Method>
 		</Methods>
-		<DataSources xmlns="" />
+		<DataSources xmlns="">
+			<DataSource>
+				<Name>FTDBookTable</Name>
+				<Methods>
+					<Method>
+						<Name>init</Name>
+						<Source><![CDATA[
+        public void init()
+        {
+            super();
+
+            if (needGenreFilter)
+            {
+                this.clearExistingLinksAndAddGenreRange();
+            }
+        }
+
+]]></Source>
+					</Method>
+					<Method>
+						<Name>clearExistingLinksAndAddGenreRange</Name>
+						<Source><![CDATA[
+        private void clearExistingLinksAndAddGenreRange()
+        {
+            QueryBuildDataSource qbds = FTDBookTable_q.dataSourceTable(tableNum(FTDBookTable));
+
+            qbds.clearDynalinks();
+
+            QueryBuildRange qbrGenre = qbds.addRange(fieldNum(FTDBookTable, Genre));
+
+            qbrGenre.status(RangeStatus::Locked);
+            qbrGenre.value(queryValue(genreFilter));
+        }
+
+]]></Source>
+					</Method>
+				</Methods>
+				<Fields />
+			</DataSource>
+		</DataSources>
 		<DataControls xmlns="" />
 		<Members xmlns="" />
 	</SourceCode>

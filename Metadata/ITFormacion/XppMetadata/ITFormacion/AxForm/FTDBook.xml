@@ -6,8 +6,78 @@
 			<Name>classDeclaration</Name>
 			<ReturnType />
 		</Method>
+		<Method>
+			<Name>init</Name>
+			<Visibility>Public</Visibility>
+			<ReturnType>
+				<TypeName></TypeName>
+			</ReturnType>
+		</Method>
+		<Method>
+			<Name>getParamsFromArgs</Name>
+			<ReturnType>
+				<TypeName></TypeName>
+			</ReturnType>
+			<Variables>
+				<AxMethodVariable>
+					<Type>Record</Type>
+					<TypeName>Common</TypeName>
+					<Name>callerRecord</Name>
+				</AxMethodVariable>
+				<AxMethodVariable>
+					<Type>ExtendedDataType</Type>
+					<TypeName>MenuItemName</TypeName>
+					<Name>callerItemName</Name>
+				</AxMethodVariable>
+			</Variables>
+		</Method>
 	</Methods>
-	<DataSources />
+	<DataSources>
+		<DataSource>
+			<Name>FTDBookTable</Name>
+			<Methods>
+				<Method>
+					<Name>init</Name>
+					<Visibility>Public</Visibility>
+					<ReturnType>
+						<TypeName></TypeName>
+					</ReturnType>
+				</Method>
+				<Method>
+					<Name>clearExistingLinksAndAddGenreRange</Name>
+					<ReturnType>
+						<TypeName></TypeName>
+					</ReturnType>
+					<Variables>
+						<AxMethodVariable>
+							<Type>Class</Type>
+							<TypeName>QueryBuildDataSource</TypeName>
+							<Name>qbds</Name>
+						</AxMethodVariable>
+						<AxMethodVariable>
+							<Type>Class</Type>
+							<TypeName>QueryBuildRange</TypeName>
+							<Name>qbrGenre</Name>
+						</AxMethodVariable>
+					</Variables>
+				</Method>
+			</Methods>
+			<Fields />
+		</DataSource>
+	</DataSources>
 	<DataControls />
-	<Members />
+	<Members>
+		<AxClassMemberVariable>
+			<Type>Enum</Type>
+			<TypeName>SMHGenreEnum</TypeName>
+			<Name>genreFilter</Name>
+			<Attributes />
+		</AxClassMemberVariable>
+		<AxClassMemberVariable>
+			<Type>Enum</Type>
+			<TypeName>boolean</TypeName>
+			<Name>needGenreFilter</Name>
+			<Attributes />
+		</AxClassMemberVariable>
+	</Members>
 </z:anyType>

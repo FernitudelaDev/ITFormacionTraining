@@ -9,7 +9,10 @@
 [Form]
 public class SMHAuthor extends FormRun
 {
-    
+    QueryBuildRange qbrBirthDate;
+    QueryBuildRange qbrDeathDate;
+    QueryBuildRange qbrDeathDateNullCheck;
+
     /*public void setDeathDateEditable(boolean _isEditable)
     {
         // Navegando desde el DataSource
@@ -52,11 +55,69 @@ public class SMHAuthor extends FormRun
 
 ]]></Source>
 					</Method>
+					<Method>
+						<Name>init</Name>
+						<Source><![CDATA[
+        public void init()
+        {
+            super();
+
+            QueryBuildDataSource qbds = SMHAuthorTable_q.dataSourceTable(tableNum(SMHAuthorTable));
+
+            qbrBirthDate = qbds.addRange(fieldNum(SMHAuthorTable, BirthDate));
+            qbrDeathDate = qbds.addRange(fieldNum(SMHAuthorTable, DeathDate));
+            qbrDeathDateNullCheck = qbds.addRange(fieldNum(SMHAuthorTable, DeathDate));
+
+            qbrBirthDate.status(RangeStatus::Hidden);
+            qbrDeathDate.status(RangeStatus::Hidden);
+            qbrDeathDateNullCheck.status(RangeStatus::Hidden);
+        }
+
+]]></Source>
+					</Method>
 				</Methods>
 				<Fields />
 			</DataSource>
 		</DataSources>
-		<DataControls xmlns="" />
+		<DataControls xmlns="">
+			<Control>
+				<Name>FilterDateAlive</Name>
+				<Type>Date</Type>
+				<Methods>
+					<Method>
+						<Name>modified</Name>
+						<Source><![CDATA[
+        public boolean modified()
+        {
+            boolean ret;
+
+            ret = super();
+
+            date filterDate = this.dateValue();
+
+            if (filterDate > dateNull())
+            {
+                qbrBirthDate.value(strFmt("<%1", filterDate));
+                qbrDeathDate.value(strFmt(">%1", filterDate));
+                qbrDeathDateNullCheck.value(queryValue(dateNull()));
+            }
+            else
+            {
+                qbrBirthDate.value('');
+                qbrDeathDate.value('');
+                qbrDeathDateNullCheck.value('');
+            }
+
+            SMHAuthorTable_ds.executeQuery();
+
+            return ret;
+        }
+
+]]></Source>
+					</Method>
+				</Methods>
+			</Control>
+		</DataControls>
 		<Members xmlns="" />
 	</SourceCode>
 	<DataSources>
@@ -112,7 +173,16 @@ public class SMHAuthor extends FormRun
 				<Type>ActionPane</Type>
 				<FormControlExtension
 					i:nil="true" />
-				<Controls />
+				<Controls>
+					<AxFormControl xmlns=""
+						i:type="AxFormButtonGroupControl">
+						<Name>ApplicationBarButtonGroup</Name>
+						<Type>ButtonGroup</Type>
+						<FormControlExtension
+							i:nil="true" />
+						<Controls />
+					</AxFormControl>
+				</Controls>
 			</AxFormControl>
 			<AxFormControl xmlns=""
 				i:type="AxFormGroupControl">
@@ -145,6 +215,14 @@ public class SMHAuthor extends FormRun
 								</AxFormControlExtensionProperty>
 							</ExtensionProperties>
 						</FormControlExtension>
+					</AxFormControl>
+					<AxFormControl xmlns=""
+						i:type="AxFormDateControl">
+						<Name>FilterDateAlive</Name>
+						<AutoDeclaration>Yes</AutoDeclaration>
+						<Type>Date</Type>
+						<FormControlExtension
+							i:nil="true" />
 					</AxFormControl>
 				</Controls>
 				<ArrangeMethod>HorizontalLeft</ArrangeMethod>
