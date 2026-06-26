@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<AxClass xmlns:i="http://www.w3.org/2001/XMLSchema-instance">
+	<Name>SMHBookInventoryUpdationDataContract</Name>
+	<SourceCode>
+		<Declaration><![CDATA[
+[DataContract]
+final class SMHBookInventoryUpdationDataContract
+{
+    FTDId           bookId;
+    SMHInventoryQty newQty;
+
+}
+]]></Declaration>
+		<Methods>
+			<Method>
+				<Name>parmBookId</Name>
+				<Source><![CDATA[
+    [DataMember]
+    public FTDId parmBookId(FTDId _bookId = bookId)
+    {
+        bookId = _bookId;
+        return bookId;
+    }
+
+]]></Source>
+			</Method>
+			<Method>
+				<Name>parmNewQty</Name>
+				<Source><![CDATA[
+    [DataMember]
+    public SMHInventoryQty parmNewQty(SMHInventoryQty _newQty = newQty)
+    {
+        newQty = _newQty;
+        return newQty;
+    }
+
+]]></Source>
+			</Method>
+		</Methods>
+	</SourceCode>
+</AxClass>

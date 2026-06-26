@@ -18,6 +18,12 @@
 					<Name>SMHAuthor</Name>
 					<MenuItemName>SMHAuthor</MenuItemName>
 				</AxMenuElement>
+				<AxMenuElement xmlns=""
+					i:type="AxMenuElementSubMenu">
+					<Name>Processes</Name>
+					<Label>@ITFormacion:Processes</Label>
+					<Elements />
+				</AxMenuElement>
 			</Elements>
 		</AxMenuElement>
 	</Elements>

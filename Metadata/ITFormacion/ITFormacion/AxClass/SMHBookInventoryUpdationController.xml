@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<AxClass xmlns:i="http://www.w3.org/2001/XMLSchema-instance">
+	<Name>SMHBookInventoryUpdationController</Name>
+	<SourceCode>
+		<Declaration><![CDATA[
+internal final class SMHBookInventoryUpdationController extends SysOperationServiceController
+{
+}
+]]></Declaration>
+		<Methods>
+			<Method>
+				<Name>main</Name>
+				<Source><![CDATA[
+    public static void main(Args _args)
+    {
+        SMHBookInventoryUpdationController controller;
+
+        controller = SMHBookInventoryUpdationController::construct();
+        controller.parmArgs(_args);
+
+        if (controller.prompt())
+        {
+            controller.runOperation();
+        }
+    }
+
+]]></Source>
+			</Method>
+			<Method>
+				<Name>new</Name>
+				<Source><![CDATA[
+    private void new(
+        IdentifierName _className = '',
+        IdentifierName _methodName = '',
+        SysOperationExecutionMode _executionMode = SysOperationExecutionMode::Asynchronous)
+    {
+        super(_className, _methodName, _executionMode);
+    }
+
+]]></Source>
+			</Method>
+			<Method>
+				<Name>construct</Name>
+				<Source><![CDATA[
+    public static SMHBookInventoryUpdationController construct(
+        SysOperationExecutionMode _executionMode = SysOperationExecutionMode::Asynchronous)
+    {
+        return new SMHBookInventoryUpdationController(
+            classStr(SMHBookInventoryUpdationService),
+            methodStr(SMHBookInventoryUpdationService, runProcess),
+            _executionMode);
+    }
+
+]]></Source>
+			</Method>
+		</Methods>
+	</SourceCode>
+</AxClass>

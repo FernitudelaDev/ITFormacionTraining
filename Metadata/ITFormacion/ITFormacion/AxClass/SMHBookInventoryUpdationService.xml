@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<AxClass xmlns:i="http://www.w3.org/2001/XMLSchema-instance">
+	<Name>SMHBookInventoryUpdationService</Name>
+	<SourceCode>
+		<Declaration><![CDATA[
+final class SMHBookInventoryUpdationService extends SysOperationServiceBase
+{
+}
+]]></Declaration>
+		<Methods>
+			<Method>
+				<Name>runProcess</Name>
+				<Source><![CDATA[
+    public void runProcess(SMHBookInventoryUpdationDataContract _dataContract)
+    {
+        FTDBookTable book;
+        Qty currentInventory;
+        Qty newTransactionQtyNeeded;
+        SMHBookInventoryTransaction inventoryTransaction;
+
+        select firstonly book
+            where book.Id == _dataContract.parmBookId();
+
+        currentInventory = book.currentInventory();
+
+        newTransactionQtyNeeded = _dataContract.parmNewQty() - currentInventory;
+
+        inventoryTransaction.TransId = guid2Str(newGuid());
+        inventoryTransaction.Book = book.RecId;
+        inventoryTransaction.Qty = newTransactionQtyNeeded;
+
+        if (inventoryTransaction.validateWrite())
+        {
+            inventoryTransaction.insert();
+        }
+        else
+        {
+            throw Exception::Error;
+        }
+    }
+
+]]></Source>
+			</Method>
+		</Methods>
+	</SourceCode>
+</AxClass>

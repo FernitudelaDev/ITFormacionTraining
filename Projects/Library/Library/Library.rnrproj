@@ -33,6 +33,7 @@
     <EnableUnmanagedDebugging>false</EnableUnmanagedDebugging>
   </PropertyGroup>
   <ItemGroup>
+    <Folder Include="Action Menu Items\" />
     <Folder Include="Base Enums\" />
     <Folder Include="Classes\" />
     <Folder Include="Data Entities\" />
@@ -60,6 +61,21 @@
       <SubType>Content</SubType>
       <Name>SMHBookCreationService</Name>
       <Link>Classes\SMHBookCreationService</Link>
+    </Content>
+    <Content Include="AxClass\SMHBookInventoryUpdationController">
+      <SubType>Content</SubType>
+      <Name>SMHBookInventoryUpdationController</Name>
+      <Link>Classes\SMHBookInventoryUpdationController</Link>
+    </Content>
+    <Content Include="AxClass\SMHBookInventoryUpdationDataContract">
+      <SubType>Content</SubType>
+      <Name>SMHBookInventoryUpdationDataContract</Name>
+      <Link>Classes\SMHBookInventoryUpdationDataContract</Link>
+    </Content>
+    <Content Include="AxClass\SMHBookInventoryUpdationService">
+      <SubType>Content</SubType>
+      <Name>SMHBookInventoryUpdationService</Name>
+      <Link>Classes\SMHBookInventoryUpdationService</Link>
     </Content>
     <Content Include="AxDataEntityView\FTDBookEntity">
       <SubType>Content</SubType>
@@ -130,6 +146,11 @@
       <SubType>Content</SubType>
       <Name>MainMenu.ITFormacion</Name>
       <Link>Menu Extensions\MainMenu.ITFormacion</Link>
+    </Content>
+    <Content Include="AxMenuItemAction\SMHBookInventoryUpdationControllerActionMenuItem">
+      <SubType>Content</SubType>
+      <Name>SMHBookInventoryUpdationControllerActionMenuItem</Name>
+      <Link>Action Menu Items\SMHBookInventoryUpdationControllerActionMenuItem</Link>
     </Content>
     <Content Include="AxMenuItemDisplay\FTDBook">
       <SubType>Content</SubType>
