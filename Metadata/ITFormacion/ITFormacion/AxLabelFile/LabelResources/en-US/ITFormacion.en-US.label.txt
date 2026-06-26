@@ -1,5 +1,6 @@
 ﻿AuthorFullName=Author Full Name
 AuthorTable=AuthorTable
+Book1DoesNotExists=Book with id %1 does not exists.
 BookFilteredByGenre=Books filtered by genre
 Books=Books
 BookTable=Book
@@ -18,8 +19,10 @@ Master=Master
 NewLabel0=Label files created on 06/19/2026 09:50:52 for label file Id ITFormacion and language en-US
  ;Label file comment - see above label
 NumberOfBooksByGenre=there are %1 fantasy books, %2 history books and %3 science books.
+Processes=Processes
 Science=Science
 Thriller=Thriller
 Transactions=Transactions
 TransactionWouldMakeTheTotalNegative=Adding this transacition would make it negative
+UpdateBookInventory=Update book inventory
 ValidateDeathDateError=Death date must be greater than birth date

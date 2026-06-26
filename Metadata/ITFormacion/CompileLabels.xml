@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Diagnostics
-  GenerationTime="2026-06-25T07:12:23.0635899+00:00">
+  GenerationTime="2026-06-26T07:12:47.2565044+00:00">
   <Items>
     <Diagnostic>
       <DiagnosticType>VisualStudioIntegration</DiagnosticType>
@@ -97,15 +97,15 @@
       <DiagnosticType>Unspecified</DiagnosticType>
       <Severity>Informational</Severity>
       <Path>labelc.exe</Path>
-      <Moniker>Model store query time 00:00:02.0503960.</Moniker>
-      <Message>Model store query time 00:00:02.0503960.</Message>
+      <Moniker>Model store query time 00:00:01.3144861.</Moniker>
+      <Message>Model store query time 00:00:01.3144861.</Message>
     </Diagnostic>
     <Diagnostic>
       <DiagnosticType>Unspecified</DiagnosticType>
       <Severity>Informational</Severity>
       <Path>labelc.exe</Path>
-      <Moniker>Label compilation time 00:00:03.3977558.</Moniker>
-      <Message>Label compilation time 00:00:03.3977558.</Message>
+      <Moniker>Label compilation time 00:00:03.3424374.</Moniker>
+      <Message>Label compilation time 00:00:03.3424374.</Message>
     </Diagnostic>
     <Diagnostic>
       <DiagnosticType>Unspecified</DiagnosticType>

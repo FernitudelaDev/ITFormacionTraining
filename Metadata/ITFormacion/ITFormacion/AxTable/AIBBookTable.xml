@@ -19,6 +19,16 @@ public class AIBBookTable extends common
 ]]></Source>
 			</Method>
 			<Method>
+				<Name>exist</Name>
+				<Source><![CDATA[
+    public static boolean exist(AIBId _id)
+    {
+        return (select firstonly RecId from AIBBookTable where AIBBookTable.Id == _id).RecId != 0;
+    }
+
+]]></Source>
+			</Method>
+			<Method>
 				<Name>findRecId</Name>
 				<Source><![CDATA[
     public static AIBBookTable findRecId(RecId _recid)
@@ -100,6 +110,37 @@ public class AIBBookTable extends common
 
         return transactions.Qty;
 
+    }
+
+]]></Source>
+			</Method>
+			<Method>
+				<Name>AuthorTableLookup</Name>
+				<Source><![CDATA[
+    public Common AuthorTableLookup(FormReferenceControl _formReferenceControl)
+    {
+        SysReferenceTableLookup refTableLookup = SysReferenceTableLookup::newParameters(tableNum(AIBAuthorTable), _formReferenceControl);
+
+        refTableLookup.parmQuery(this.getLookupQuery());
+        refTableLookup.addSelectionField(fieldNum(AIBAuthorTable, Id));
+        refTableLookup.addSelectionField(fieldNum(AIBAuthorTable, FirstName));
+        refTableLookup.addSelectionField(fieldNum(AIBAuthorTable, LastName));
+        refTableLookup.addSelectionField(fieldNum(AIBAuthorTable, IsDead));
+            
+        return refTableLookup.performFormLookup();
+    }
+
+]]></Source>
+			</Method>
+			<Method>
+				<Name>getLookupQuery</Name>
+				<Source><![CDATA[
+    private Query getLookupQuery()
+    {
+        Query q = new Query();
+        QueryBuildDataSource qbds = q.addDataSource(tableNum(AIBAuthorTable));
+        qbds.addRange(fieldNum(AIBAuthorTable, IsDead)).value(queryVALUE(NoYes::No));
+        return q;
     }
 
 ]]></Source>

@@ -309,34 +309,6 @@ public class AIBBookTransactions extends FormRun
 							i:nil="true" />
 						<Controls>
 							<AxFormControl xmlns=""
-								i:type="AxFormGridControl">
-								<Name>TransactionGrid</Name>
-								<Type>Grid</Type>
-								<FormControlExtension
-									i:nil="true" />
-								<Controls>
-									<AxFormControl xmlns=""
-										i:type="AxFormStringControl">
-										<Name>AIBBookInventoryTransaction_InventTransId</Name>
-										<Type>String</Type>
-										<FormControlExtension
-											i:nil="true" />
-										<DataField>InventTransId</DataField>
-										<DataSource>AIBBookInventoryTransaction</DataSource>
-									</AxFormControl>
-									<AxFormControl xmlns=""
-										i:type="AxFormRealControl">
-										<Name>AIBBookInventoryTransaction_Qty</Name>
-										<Type>Real</Type>
-										<FormControlExtension
-											i:nil="true" />
-										<DataField>Qty</DataField>
-										<DataSource>AIBBookInventoryTransaction</DataSource>
-									</AxFormControl>
-								</Controls>
-								<DataSource>AIBBookInventoryTransaction</DataSource>
-							</AxFormControl>
-							<AxFormControl xmlns=""
 								i:type="AxFormActionPaneControl">
 								<Name>TransactionActionPane</Name>
 								<Type>ActionPane</Type>
@@ -372,6 +344,35 @@ public class AIBBookTransactions extends FormRun
 										</Controls>
 									</AxFormControl>
 								</Controls>
+								<Style>Strip</Style>
+							</AxFormControl>
+							<AxFormControl xmlns=""
+								i:type="AxFormGridControl">
+								<Name>TransactionGrid</Name>
+								<Type>Grid</Type>
+								<FormControlExtension
+									i:nil="true" />
+								<Controls>
+									<AxFormControl xmlns=""
+										i:type="AxFormStringControl">
+										<Name>AIBBookInventoryTransaction_InventTransId</Name>
+										<Type>String</Type>
+										<FormControlExtension
+											i:nil="true" />
+										<DataField>InventTransId</DataField>
+										<DataSource>AIBBookInventoryTransaction</DataSource>
+									</AxFormControl>
+									<AxFormControl xmlns=""
+										i:type="AxFormRealControl">
+										<Name>AIBBookInventoryTransaction_Qty</Name>
+										<Type>Real</Type>
+										<FormControlExtension
+											i:nil="true" />
+										<DataField>Qty</DataField>
+										<DataSource>AIBBookInventoryTransaction</DataSource>
+									</AxFormControl>
+								</Controls>
+								<DataSource>AIBBookInventoryTransaction</DataSource>
 							</AxFormControl>
 						</Controls>
 						<Caption>@ITFormacion:Transactions</Caption>

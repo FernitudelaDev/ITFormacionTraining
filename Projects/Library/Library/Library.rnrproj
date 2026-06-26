@@ -33,6 +33,7 @@
     <EnableUnmanagedDebugging>false</EnableUnmanagedDebugging>
   </PropertyGroup>
   <ItemGroup>
+    <Folder Include="Action Menu Items\" />
     <Folder Include="Base Enums\" />
     <Folder Include="Classes\" />
     <Folder Include="Data Entities\" />
@@ -44,7 +45,9 @@
     <Folder Include="Label Files\" />
     <Folder Include="Menu Extensions\" />
     <Folder Include="Menus\" />
+    <Folder Include="Security Duties\" />
     <Folder Include="Security Privileges\" />
+    <Folder Include="Security Roles\" />
     <Folder Include="Service Groups\" />
     <Folder Include="Services\" />
     <Folder Include="Simple Queries\" />
@@ -56,6 +59,21 @@
       <SubType>Content</SubType>
       <Name>AIBBookCreationService</Name>
       <Link>Classes\AIBBookCreationService</Link>
+    </Content>
+    <Content Include="AxClass\AIBBookInventoryUpdationController">
+      <SubType>Content</SubType>
+      <Name>AIBBookInventoryUpdationController</Name>
+      <Link>Classes\AIBBookInventoryUpdationController</Link>
+    </Content>
+    <Content Include="AxClass\AIBBookInventoryUpdationDataContract">
+      <SubType>Content</SubType>
+      <Name>AIBBookInventoryUpdationDataContract</Name>
+      <Link>Classes\AIBBookInventoryUpdationDataContract</Link>
+    </Content>
+    <Content Include="AxClass\AIBBookInventoryUpdationService">
+      <SubType>Content</SubType>
+      <Name>AIBBookInventoryUpdationService</Name>
+      <Link>Classes\AIBBookInventoryUpdationService</Link>
     </Content>
     <Content Include="AxClass\AIBQueryVSSelect">
       <SubType>Content</SubType>
@@ -122,6 +140,11 @@
       <Name>AIBBookTransactions</Name>
       <Link>Forms\AIBBookTransactions</Link>
     </Content>
+    <Content Include="AxForm\AIBtmpAuthor">
+      <SubType>Content</SubType>
+      <Name>AIBtmpAuthor</Name>
+      <Link>Forms\AIBtmpAuthor</Link>
+    </Content>
     <Content Include="AxLabelFile\ITFormacion_en-US">
       <SubType>Content</SubType>
       <Name>ITFormacion_en-US</Name>
@@ -136,6 +159,11 @@
       <SubType>Content</SubType>
       <Name>MainMenu.ITFormacion</Name>
       <Link>Menu Extensions\MainMenu.ITFormacion</Link>
+    </Content>
+    <Content Include="AxMenuItemAction\AIBBookInventoryUpdationController">
+      <SubType>Content</SubType>
+      <Name>AIBBookInventoryUpdationController</Name>
+      <Link>Action Menu Items\AIBBookInventoryUpdationController</Link>
     </Content>
     <Content Include="AxMenuItemDisplay\AIBAuthor">
       <SubType>Content</SubType>
@@ -157,6 +185,11 @@
       <Name>AIBBookTransactions</Name>
       <Link>Display Menu Items\AIBBookTransactions</Link>
     </Content>
+    <Content Include="AxMenuItemDisplay\AIBtmpAuthor">
+      <SubType>Content</SubType>
+      <Name>AIBtmpAuthor</Name>
+      <Link>Display Menu Items\AIBtmpAuthor</Link>
+    </Content>
     <Content Include="AxMenu\AIBLibrary">
       <SubType>Content</SubType>
       <Name>AIBLibrary</Name>
@@ -166,6 +199,21 @@
       <SubType>Content</SubType>
       <Name>AIBBookAuthorFantasyQuery</Name>
       <Link>Simple Queries\AIBBookAuthorFantasyQuery</Link>
+    </Content>
+    <Content Include="AxSecurityDuty\AIBLibraryFormsMaintain">
+      <SubType>Content</SubType>
+      <Name>AIBLibraryFormsMaintain</Name>
+      <Link>Security Duties\AIBLibraryFormsMaintain</Link>
+    </Content>
+    <Content Include="AxSecurityDuty\AIBLibraryFormsView">
+      <SubType>Content</SubType>
+      <Name>AIBLibraryFormsView</Name>
+      <Link>Security Duties\AIBLibraryFormsView</Link>
+    </Content>
+    <Content Include="AxSecurityDuty\AIBLibraryProcessesMaintain">
+      <SubType>Content</SubType>
+      <Name>AIBLibraryProcessesMaintain</Name>
+      <Link>Security Duties\AIBLibraryProcessesMaintain</Link>
     </Content>
     <Content Include="AxSecurityPrivilege\AIBAuthorEntityMaintain">
       <SubType>Content</SubType>
@@ -177,6 +225,36 @@
       <Name>AIBAuthorEntityView</Name>
       <Link>Security Privileges\AIBAuthorEntityView</Link>
     </Content>
+    <Content Include="AxSecurityPrivilege\AIBAuthorMaintain">
+      <SubType>Content</SubType>
+      <Name>AIBAuthorMaintain</Name>
+      <Link>Security Privileges\AIBAuthorMaintain</Link>
+    </Content>
+    <Content Include="AxSecurityPrivilege\AIBAuthorView">
+      <SubType>Content</SubType>
+      <Name>AIBAuthorView</Name>
+      <Link>Security Privileges\AIBAuthorView</Link>
+    </Content>
+    <Content Include="AxSecurityPrivilege\AIBBookGenreFilterMaintain">
+      <SubType>Content</SubType>
+      <Name>AIBBookGenreFilterMaintain</Name>
+      <Link>Security Privileges\AIBBookGenreFilterMaintain</Link>
+    </Content>
+    <Content Include="AxSecurityPrivilege\AIBBookGenreFilterView">
+      <SubType>Content</SubType>
+      <Name>AIBBookGenreFilterView</Name>
+      <Link>Security Privileges\AIBBookGenreFilterView</Link>
+    </Content>
+    <Content Include="AxSecurityPrivilege\AIBBookInventoryUpdationController">
+      <SubType>Content</SubType>
+      <Name>AIBBookInventoryUpdationController</Name>
+      <Link>Security Privileges\AIBBookInventoryUpdationController</Link>
+    </Content>
+    <Content Include="AxSecurityPrivilege\AIBBookMaintain">
+      <SubType>Content</SubType>
+      <Name>AIBBookMaintain</Name>
+      <Link>Security Privileges\AIBBookMaintain</Link>
+    </Content>
     <Content Include="AxSecurityPrivilege\AIBBookTableEntityMaintain">
       <SubType>Content</SubType>
       <Name>AIBBookTableEntityMaintain</Name>
@@ -186,6 +264,31 @@
       <SubType>Content</SubType>
       <Name>AIBBookTableEntityView</Name>
       <Link>Security Privileges\AIBBookTableEntityView</Link>
+    </Content>
+    <Content Include="AxSecurityPrivilege\AIBBookTransactionsMaintain">
+      <SubType>Content</SubType>
+      <Name>AIBBookTransactionsMaintain</Name>
+      <Link>Security Privileges\AIBBookTransactionsMaintain</Link>
+    </Content>
+    <Content Include="AxSecurityPrivilege\AIBBookTransactionsView">
+      <SubType>Content</SubType>
+      <Name>AIBBookTransactionsView</Name>
+      <Link>Security Privileges\AIBBookTransactionsView</Link>
+    </Content>
+    <Content Include="AxSecurityPrivilege\AIBBookView">
+      <SubType>Content</SubType>
+      <Name>AIBBookView</Name>
+      <Link>Security Privileges\AIBBookView</Link>
+    </Content>
+    <Content Include="AxSecurityRole\AIBLibraryMaintain">
+      <SubType>Content</SubType>
+      <Name>AIBLibraryMaintain</Name>
+      <Link>Security Roles\AIBLibraryMaintain</Link>
+    </Content>
+    <Content Include="AxSecurityRole\AIBLibraryView">
+      <SubType>Content</SubType>
+      <Name>AIBLibraryView</Name>
+      <Link>Security Roles\AIBLibraryView</Link>
     </Content>
     <Content Include="AxServiceGroup\AIBBookCreationServiceGroup">
       <SubType>Content</SubType>
@@ -221,6 +324,11 @@
       <SubType>Content</SubType>
       <Name>AIBBookTable</Name>
       <Link>Tables\AIBBookTable</Link>
+    </Content>
+    <Content Include="AxTable\AIBtmpAuthorTable">
+      <SubType>Content</SubType>
+      <Name>AIBtmpAuthorTable</Name>
+      <Link>Tables\AIBtmpAuthorTable</Link>
     </Content>
     <Content Include="AxView\AIBBookAuthorFantasyView">
       <SubType>Content</SubType>

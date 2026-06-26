@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Diagnostics
+  GenerationTime="2026-06-26T07:12:31.7453746+00:00">
+  <Items>
+    <Diagnostic>
+      <DiagnosticType>FormPatternValidation</DiagnosticType>
+      <Severity>Error</Severity>
+      <Path>AxForm/AIBBookTransactions/Design/Controls/DetailsTab/TransactionTabPage</Path>
+      <Moniker>PatternControlNotAllowed</Moniker>
+      <Message>Control 'AxForm/AIBBookTransactions/Design/Controls/DetailsTab/TransactionTabPage' has child 'TransactionActionPane' which is not allowed at its current location by pattern 'Toolbar and List'.</Message>
+    </Diagnostic>
+  </Items>
+  <Aliases />
+</Diagnostics>

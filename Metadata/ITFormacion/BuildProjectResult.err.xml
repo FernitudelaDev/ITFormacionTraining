@@ -1,32 +1,19 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Diagnostics
-  GenerationTime="2026-06-22T12:33:17.4212758+00:00">
+  GenerationTime="2026-06-26T11:51:24.5751415+00:00">
   <Items>
     <Diagnostic>
       <DiagnosticType>Compile</DiagnosticType>
       <Severity>Error</Severity>
-      <Path>dynamics://Form/AIBAuthor/FormDataSourceRoot/AIBAuthorTable/Method/active</Path>
-      <ElementType>Form DataSource Method</ElementType>
-      <Moniker>ClassDoesNotContainMethod</Moniker>
-      <Line>24</Line>
-      <Column>13</Column>
-      <EndLine>24</EndLine>
-      <EndColumn>57</EndColumn>
-      <Message>ClassDoesNotContainMethod: Table 'AIBAuthorTable' does not contain a definition for method 'setDeathDateEditableInForms' and no extension method 'setDeathDateEditableInForms' accepting a first argument of type 'AIBAuthorTable' is found on any extension class.</Message>
-      <ItemSpecific>
-        <OriginatorType
-          alias="0">ClassDoesNotContainMethod</OriginatorType>
-        <Fields>
-          <elementTypeName>Table</elementTypeName>
-          <elementName>AIBAuthorTable</elementName>
-          <methodName>setDeathDateEditableInForms</methodName>
-        </Fields>
-      </ItemSpecific>
+      <Path>dynamics://Form/AIBtmpAuthor/Method/loadtmpData</Path>
+      <ElementType>Form Method</ElementType>
+      <Moniker>ParameterMismatch</Moniker>
+      <Line>20</Line>
+      <Column>17</Column>
+      <EndLine>20</EndLine>
+      <EndColumn>64</EndColumn>
+      <Message>Type mismatch in 'AIBtmpAuthorTable.initFromAuthorTable' argument 1. The expected type is 'AIBtmpAuthorTable', but the actual type is 'AIBAuthorTable'.</Message>
     </Diagnostic>
   </Items>
-  <Aliases>
-    <Alias
-      assembly="Microsoft.Dynamics.AX.Framework.Xlnt.XppParser.Pass2, Version=7.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35"
-      ns="Microsoft.Dynamics.AX.Framework.Xlnt.XppParser.Pass2">0</Alias>
-  </Aliases>
+  <Aliases />
 </Diagnostics>

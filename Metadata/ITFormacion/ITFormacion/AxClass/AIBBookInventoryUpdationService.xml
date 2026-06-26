@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<AxClass xmlns:i="http://www.w3.org/2001/XMLSchema-instance">
+	<Name>AIBBookInventoryUpdationService</Name>
+	<SourceCode>
+		<Declaration><![CDATA[
+final class AIBBookInventoryUpdationService extends SysOperationServiceBase
+{
+}
+]]></Declaration>
+		<Methods>
+			<Method>
+				<Name>runProcess</Name>
+				<Source><![CDATA[
+    public void runProcess(AIBBookInventoryUpdationDataContract _dataContract)
+    {
+        AIBBookTable book = AIBBookTable::find(_dataContract.parmBookId());
+
+        Qty currentInventory = book.currentInventory();
+
+        Qty newTransactionQtyNeeded = _dataContract.parmNewQty() - currentInventory;
+
+        AIBBookInventoryTransaction inventoryTransaction;
+
+        inventoryTransaction.InventTransId = guid2Str(newGuid());
+        inventoryTransaction.Book = book.RecId;
+        inventoryTransaction.Qty = newTransactionQtyNeeded;
+
+        if(inventoryTransaction.validateWrite())
+        {
+            inventoryTransaction.insert();
+        }
+        else
+        {
+            throw Exception::Error;
+        }
+    }
+
+]]></Source>
+			</Method>
+		</Methods>
+	</SourceCode>
+</AxClass>
