@@ -20,9 +20,6 @@ public class ACtmpAuthor extends FormRun
 					<Method>
 						<Name>init</Name>
 						<Source><![CDATA[
-        /// <summary>
-        ///
-        /// </summary>
         public void init()
         {
             super();
