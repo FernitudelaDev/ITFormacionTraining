@@ -32,6 +32,7 @@
     <EnableUnmanagedDebugging>false</EnableUnmanagedDebugging>
   </PropertyGroup>
   <ItemGroup>
+    <Folder Include="Action Menu Items\" />
     <Folder Include="Base Enums\" />
     <Folder Include="Classes\" />
     <Folder Include="Data Entities\" />
@@ -43,7 +44,9 @@
     <Folder Include="Label Files\" />
     <Folder Include="Menu Extensions\" />
     <Folder Include="Menus\" />
+    <Folder Include="Security Duties\" />
     <Folder Include="Security Privileges\" />
+    <Folder Include="Security Roles\" />
     <Folder Include="Service Groups\" />
     <Folder Include="Services\" />
     <Folder Include="Simple Queries\" />
@@ -55,6 +58,21 @@
       <SubType>Content</SubType>
       <Name>RRBBookCreationService</Name>
       <Link>Classes\RRBBookCreationService</Link>
+    </Content>
+    <Content Include="AxClass\RRBBookInventoryUpdationController">
+      <SubType>Content</SubType>
+      <Name>RRBBookInventoryUpdationController</Name>
+      <Link>Classes\RRBBookInventoryUpdationController</Link>
+    </Content>
+    <Content Include="AxClass\RRBBookInventoryUpdationDataContract">
+      <SubType>Content</SubType>
+      <Name>RRBBookInventoryUpdationDataContract</Name>
+      <Link>Classes\RRBBookInventoryUpdationDataContract</Link>
+    </Content>
+    <Content Include="AxClass\RRBBookInventoryUpdationService">
+      <SubType>Content</SubType>
+      <Name>RRBBookInventoryUpdationService</Name>
+      <Link>Classes\RRBBookInventoryUpdationService</Link>
     </Content>
     <Content Include="AxClass\RRBQueryVSSelect">
       <SubType>Content</SubType>
@@ -121,6 +139,11 @@
       <Name>RRBBookTransactions</Name>
       <Link>Forms\RRBBookTransactions</Link>
     </Content>
+    <Content Include="AxForm\RRBtmpAuthor">
+      <SubType>Content</SubType>
+      <Name>RRBtmpAuthor</Name>
+      <Link>Forms\RRBtmpAuthor</Link>
+    </Content>
     <Content Include="AxLabelFile\ITFormacion_en-US">
       <SubType>Content</SubType>
       <Name>ITFormacion_en-US</Name>
@@ -135,6 +158,11 @@
       <SubType>Content</SubType>
       <Name>MainMenu.ITFormacion</Name>
       <Link>Menu Extensions\MainMenu.ITFormacion</Link>
+    </Content>
+    <Content Include="AxMenuItemAction\RRBBookInventoryUpdationController">
+      <SubType>Content</SubType>
+      <Name>RRBBookInventoryUpdationController</Name>
+      <Link>Action Menu Items\RRBBookInventoryUpdationController</Link>
     </Content>
     <Content Include="AxMenuItemDisplay\RRBAuthor">
       <SubType>Content</SubType>
@@ -156,6 +184,11 @@
       <Name>RRBBookTransactions</Name>
       <Link>Display Menu Items\RRBBookTransactions</Link>
     </Content>
+    <Content Include="AxMenuItemDisplay\RRBtmpAuthor">
+      <SubType>Content</SubType>
+      <Name>RRBtmpAuthor</Name>
+      <Link>Display Menu Items\RRBtmpAuthor</Link>
+    </Content>
     <Content Include="AxMenu\RRBLibrary">
       <SubType>Content</SubType>
       <Name>RRBLibrary</Name>
@@ -165,6 +198,21 @@
       <SubType>Content</SubType>
       <Name>RRBBookAuthorFantasyQuery</Name>
       <Link>Simple Queries\RRBBookAuthorFantasyQuery</Link>
+    </Content>
+    <Content Include="AxSecurityDuty\RRBLibraryFormsMaintain">
+      <SubType>Content</SubType>
+      <Name>RRBLibraryFormsMaintain</Name>
+      <Link>Security Duties\RRBLibraryFormsMaintain</Link>
+    </Content>
+    <Content Include="AxSecurityDuty\RRBLibraryFormsView">
+      <SubType>Content</SubType>
+      <Name>RRBLibraryFormsView</Name>
+      <Link>Security Duties\RRBLibraryFormsView</Link>
+    </Content>
+    <Content Include="AxSecurityDuty\RRBLibraryProccessesMaintain">
+      <SubType>Content</SubType>
+      <Name>RRBLibraryProccessesMaintain</Name>
+      <Link>Security Duties\RRBLibraryProccessesMaintain</Link>
     </Content>
     <Content Include="AxSecurityPrivilege\RRBAuthorEntityMaintain">
       <SubType>Content</SubType>
@@ -176,6 +224,36 @@
       <Name>RRBAuthorEntityView</Name>
       <Link>Security Privileges\RRBAuthorEntityView</Link>
     </Content>
+    <Content Include="AxSecurityPrivilege\RRBAuthorMaintain">
+      <SubType>Content</SubType>
+      <Name>RRBAuthorMaintain</Name>
+      <Link>Security Privileges\RRBAuthorMaintain</Link>
+    </Content>
+    <Content Include="AxSecurityPrivilege\RRBAuthorView">
+      <SubType>Content</SubType>
+      <Name>RRBAuthorView</Name>
+      <Link>Security Privileges\RRBAuthorView</Link>
+    </Content>
+    <Content Include="AxSecurityPrivilege\RRBBookGenreFilteredMaintain">
+      <SubType>Content</SubType>
+      <Name>RRBBookGenreFilteredMaintain</Name>
+      <Link>Security Privileges\RRBBookGenreFilteredMaintain</Link>
+    </Content>
+    <Content Include="AxSecurityPrivilege\RRBBookGenreFilteredView">
+      <SubType>Content</SubType>
+      <Name>RRBBookGenreFilteredView</Name>
+      <Link>Security Privileges\RRBBookGenreFilteredView</Link>
+    </Content>
+    <Content Include="AxSecurityPrivilege\RRBBookInventoryUpdationController">
+      <SubType>Content</SubType>
+      <Name>RRBBookInventoryUpdationController</Name>
+      <Link>Security Privileges\RRBBookInventoryUpdationController</Link>
+    </Content>
+    <Content Include="AxSecurityPrivilege\RRBBookMaintain">
+      <SubType>Content</SubType>
+      <Name>RRBBookMaintain</Name>
+      <Link>Security Privileges\RRBBookMaintain</Link>
+    </Content>
     <Content Include="AxSecurityPrivilege\RRBBookTableEntityMaintain">
       <SubType>Content</SubType>
       <Name>RRBBookTableEntityMaintain</Name>
@@ -185,6 +263,31 @@
       <SubType>Content</SubType>
       <Name>RRBBookTableEntityView</Name>
       <Link>Security Privileges\RRBBookTableEntityView</Link>
+    </Content>
+    <Content Include="AxSecurityPrivilege\RRBBookTransactionsMaintain">
+      <SubType>Content</SubType>
+      <Name>RRBBookTransactionsMaintain</Name>
+      <Link>Security Privileges\RRBBookTransactionsMaintain</Link>
+    </Content>
+    <Content Include="AxSecurityPrivilege\RRBBookTransactionsView">
+      <SubType>Content</SubType>
+      <Name>RRBBookTransactionsView</Name>
+      <Link>Security Privileges\RRBBookTransactionsView</Link>
+    </Content>
+    <Content Include="AxSecurityPrivilege\RRBBookView">
+      <SubType>Content</SubType>
+      <Name>RRBBookView</Name>
+      <Link>Security Privileges\RRBBookView</Link>
+    </Content>
+    <Content Include="AxSecurityRole\RRBLibraryMaintain">
+      <SubType>Content</SubType>
+      <Name>RRBLibraryMaintain</Name>
+      <Link>Security Roles\RRBLibraryMaintain</Link>
+    </Content>
+    <Content Include="AxSecurityRole\RRBLibraryView">
+      <SubType>Content</SubType>
+      <Name>RRBLibraryView</Name>
+      <Link>Security Roles\RRBLibraryView</Link>
     </Content>
     <Content Include="AxServiceGroup\RRBBookCreationServiceGroup">
       <SubType>Content</SubType>
@@ -220,6 +323,11 @@
       <SubType>Content</SubType>
       <Name>RRBBookTable</Name>
       <Link>Tables\RRBBookTable</Link>
+    </Content>
+    <Content Include="AxTable\RRBtmpAuthorTable">
+      <SubType>Content</SubType>
+      <Name>RRBtmpAuthorTable</Name>
+      <Link>Tables\RRBtmpAuthorTable</Link>
     </Content>
     <Content Include="AxView\RRBBookAuthorFantasyView">
       <SubType>Content</SubType>

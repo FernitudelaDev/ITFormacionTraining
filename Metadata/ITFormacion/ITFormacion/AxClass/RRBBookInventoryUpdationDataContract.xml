@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<AxClass xmlns:i="http://www.w3.org/2001/XMLSchema-instance">
+	<Name>RRBBookInventoryUpdationDataContract</Name>
+	<SourceCode>
+		<Declaration><![CDATA[
+[DataContract, SysOperationAlwaysInitialize]
+final class RRBBookInventoryUpdationDataContract
+{
+    RRBId bookId;
+    RRBInventoryQty newQty;
+
+
+
+}
+]]></Declaration>
+		<Methods>
+			<Method>
+				<Name>parmBookId</Name>
+				<Source><![CDATA[
+    //[DataMember ,SysOperationControlVisibility(false)]
+    [DataMember]
+    public RRBId parmBookId(RRBId _bookId = bookId)
+    {
+        bookId = _bookId;
+        return bookId;
+    }
+
+]]></Source>
+			</Method>
+			<Method>
+				<Name>parmNewQty</Name>
+				<Source><![CDATA[
+    [DataMember]
+    public RRBInventoryQty parmNewQty(RRBInventoryQty _newQty = newQty)
+    {
+        newQty = _newQty;
+        return newQty;
+    }
+
+]]></Source>
+			</Method>
+		</Methods>
+	</SourceCode>
+</AxClass>

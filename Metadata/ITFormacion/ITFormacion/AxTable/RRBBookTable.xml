@@ -5,14 +5,22 @@
 		<Declaration><![CDATA[
 public class RRBBookTable extends common
 {
-    /// <summary>
-    ///
-    /// </summary>
     
 
 }
 ]]></Declaration>
 		<Methods>
+			<Method>
+				<Name>exist</Name>
+				<Source><![CDATA[
+    public static boolean exist(RRBId _id)
+    {
+        return (select firstonly RecId from RRBBookTable
+            where RRBBookTable.Id == _id).RecId != 0;
+    }
+
+]]></Source>
+			</Method>
 			<Method>
 				<Name>findRecId</Name>
 				<Source><![CDATA[
@@ -95,6 +103,40 @@ public class RRBBookTable extends common
             && transactions.RecId != _excludeTransactionRecId;
 
         return transactions.Qty;
+    }
+
+]]></Source>
+			</Method>
+			<Method>
+				<Name>AuthorTableLookup</Name>
+				<Source><![CDATA[
+    public Common AuthorTableLookup(FormReferenceControl _formReferenceControl)
+    {
+        SysReferenceTableLookup refTableLookup = SysReferenceTableLookup::newParameters(tableNum(RRBAuthorTable), _formReferenceControl);
+                               
+
+        refTableLookup.parmQuery(this.getLookupQuery());
+        refTableLookup.addLookupfield(fieldNum(RRBAuthorTable,Id));
+        refTableLookup.addLookupfield(fieldNum(RRBAuthorTable,FirstName));
+        refTableLookup.addLookupfield(fieldNum(RRBAuthorTable,LastName));
+        refTableLookup.addLookupfield(fieldNum(RRBAuthorTable, IsDead));
+
+        return refTableLookup.performFormLookup();
+    }
+
+]]></Source>
+			</Method>
+			<Method>
+				<Name>getLookupQuery</Name>
+				<Source><![CDATA[
+    private Query getLookupQuery()
+    {
+        Query q = new Query();
+        QueryBuildDataSource qbds = q.addDataSource(tableNum(RRBAuthorTable));
+
+        qbds.addRange(fieldNum(RRBAuthorTable, IsDead)).value(queryValue(NoYes::No));
+
+        return q;
     }
 
 ]]></Source>

@@ -1,18 +1,18 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Diagnostics
-  GenerationTime="2026-06-25T11:59:39.9164417+00:00">
+  GenerationTime="2026-06-26T12:11:51.4105961+00:00">
   <Items>
     <Diagnostic>
       <DiagnosticType>Compile</DiagnosticType>
       <Severity>Error</Severity>
-      <Path>dynamics://Table/RRBBookInventoryTransaction/Method/validateTotalQtyIsNotBellowZero</Path>
-      <ElementType>Table Method</ElementType>
-      <Moniker>NotAllPathsReturn</Moniker>
-      <Line>20</Line>
-      <Column>5</Column>
-      <EndLine>23</EndLine>
-      <EndColumn>6</EndColumn>
-      <Message>Not all paths return a value in 'validateTotalQtyIsNotBellowZero'.</Message>
+      <Path>dynamics://Form/RRBtmpAuthor/Method/loadtmpData</Path>
+      <ElementType>Form Method</ElementType>
+      <Moniker>ParameterExtra</Moniker>
+      <Line>26</Line>
+      <Column>9</Column>
+      <EndLine>26</EndLine>
+      <EndColumn>43</EndColumn>
+      <Message>'RRBtmpAuthorTable.refresh' expects 0 argument(s), but 1 specified.</Message>
     </Diagnostic>
   </Items>
   <Aliases />

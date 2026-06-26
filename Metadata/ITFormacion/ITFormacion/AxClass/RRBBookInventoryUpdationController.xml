@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="utf-8"?>
+<AxClass xmlns:i="http://www.w3.org/2001/XMLSchema-instance">
+	<Name>RRBBookInventoryUpdationController</Name>
+	<SourceCode>
+		<Declaration><![CDATA[
+final class RRBBookInventoryUpdationController extends SysOperationServiceController
+{
+}
+]]></Declaration>
+		<Methods>
+			<Method>
+				<Name>Main</Name>
+				<Source><![CDATA[
+    public static void Main(Args _args)
+    {
+        RRBBookInventoryUpdationController controller = RRBBookInventoryUpdationController::Construct();                
+
+        controller.initFromFromBookFormIfNeeded(_args);
+
+        if(controller.prompt())
+        {
+            controller.runOperation();
+        }
+    }
+
+]]></Source>
+			</Method>
+			<Method>
+				<Name>new</Name>
+				<Source><![CDATA[
+    public void new(IdentifierName _className = '',
+        IdentifierName _methodName = '',
+        SysOperationExecutionMode _executionMode = SysOperationExecutionMode::Asynchronous)
+    {
+        super(_className, _methodName, _executionMode);
+    }
+
+]]></Source>
+			</Method>
+			<Method>
+				<Name>initFromFromBookFormIfNeeded</Name>
+				<Source><![CDATA[
+    public void initFromFromBookFormIfNeeded(Args _args)
+    {
+        FormRun callerformRun = _args.caller();
+
+        if(callerformRun
+            && callerformRun.name() == formStr(RRBBook))
+        {
+            RRBBookTable bookActiveRecord = callerformRun.dataSource(formDataSourceStr(RRBBook, RRBBookTable)).cursor();
+
+            RRBBookInventoryUpdationDataContract contract = this.getDataContract();
+
+            contract.parmBookId(bookActiveRecord.Id);
+        }
+    }
+
+]]></Source>
+			</Method>
+			<Method>
+				<Name>Construct</Name>
+				<Source><![CDATA[
+    public static RRBBookInventoryUpdationController Construct(SysOperationExecutionMode _executionMode = SysOperationExecutionMode::Asynchronous)
+    {
+        RRBBookInventoryUpdationController controller = new RRBBookInventoryUpdationController(classStr(RRBBookInventoryUpdationService),
+        methodStr(RRBBookInventoryUpdationService, runProcess),
+        _executionMode);
+
+        controller.parmDialogCaption("@ITFormacion:UpdateBookInventory");
+
+        return controller;
+    }
+
+]]></Source>
+			</Method>
+			<Method>
+				<Name>validateParameters</Name>
+				<Source><![CDATA[
+    public boolean validateParameters()
+    {
+        boolean ret;
+
+        ret = super();
+
+
+        if(ret)
+        {
+            RRBBookInventoryUpdationDataContract dataContract = this.getDataContract();
+            ret = this.validateBook(dataContract.parmBookId())
+                && this.validateNewQty(dataContract.parmNewQty());
+        }
+
+        return ret;
+    }
+
+]]></Source>
+			</Method>
+			<Method>
+				<Name>validateBook</Name>
+				<Source><![CDATA[
+    public boolean validateBook(RRBId _bookId)
+    {
+        if(!RRBBookTable::exist(_bookId))
+        {
+            return checkFailed(strFmt("@ITFormacion:Book1DoesNotExist", _bookId));
+        }
+
+        return true;
+    }
+
+]]></Source>
+			</Method>
+			<Method>
+				<Name>validateNewQty</Name>
+				<Source><![CDATA[
+    public boolean validateNewQty(Qty _newQty)
+    {
+        if(_newQty < 0)
+        {
+            return checkFailed("@ITFormacion:TransactionWouldMakeTheTotalNegative");
+        }
+
+        return true;
+    }
+
+]]></Source>
+			</Method>
+			<Method>
+				<Name>getDataContract</Name>
+				<Source><![CDATA[
+    public RRBBookInventoryUpdationDataContract getDataContract()
+    {
+        return this.getDataContractObject(identifierStr(_dataContract));
+    }
+
+]]></Source>
+			</Method>
+		</Methods>
+	</SourceCode>
+</AxClass>

@@ -99,7 +99,38 @@ public class RRBBook extends FormRun
 ]]></Source>
 					</Method>
 				</Methods>
-				<Fields />
+				<Fields>
+					<Field>
+						<DataField>Author</DataField>
+						<Methods>
+							<Method>
+								<Name>lookupReference</Name>
+								<Source><![CDATA[
+            public Common lookupReference(FormReferenceControl _formReferenceControl)
+            {
+                return RRBBookTable.AuthorTableLookup(_formReferenceControl);
+            }
+
+]]></Source>
+							</Method>
+							<Method>
+								<Name>validate</Name>
+								<Source><![CDATA[
+            public boolean validate()
+            {
+                boolean ret;
+            
+                ret = super()
+                    && RRBAuthorTable::findRecId(RRBBookTable.Author).IsDead == NoYes::No;
+            
+                return ret;
+            }
+
+]]></Source>
+							</Method>
+						</Methods>
+					</Field>
+				</Fields>
 			</DataSource>
 		</DataSources>
 		<DataControls xmlns="" />
@@ -171,6 +202,16 @@ public class RRBBook extends FormRun
 									i:nil="true" />
 								<DataSource>RRBBookTable</DataSource>
 								<MenuItemName>RRBBookTransactions</MenuItemName>
+							</AxFormControl>
+							<AxFormControl xmlns=""
+								i:type="AxFormMenuFunctionButtonControl">
+								<Name>RRBBookInventoryUpdationController</Name>
+								<Type>MenuFunctionButton</Type>
+								<FormControlExtension
+									i:nil="true" />
+								<MenuItemName>RRBBookInventoryUpdationController</MenuItemName>
+								<MenuItemType>Action</MenuItemType>
+								<Text>@ITFormacion:UpdateBookInventory</Text>
 							</AxFormControl>
 						</Controls>
 					</AxFormControl>

@@ -3,6 +3,24 @@
 	i:type="AxPropertyCollection" xmlns:z="http://schemas.microsoft.com/2003/10/Serialization/">
 	<Methods>
 		<Method>
+			<Name>exist</Name>
+			<IsStatic>true</IsStatic>
+			<Visibility>Public</Visibility>
+			<Parameters>
+				<AxMethodParameter>
+					<Tags></Tags>
+					<Type>ExtendedDataType</Type>
+					<TypeName>RRBId</TypeName>
+					<Name>_id</Name>
+				</AxMethodParameter>
+			</Parameters>
+			<ReturnType>
+				<Tags></Tags>
+				<Type>Enum</Type>
+				<TypeName>boolean</TypeName>
+			</ReturnType>
+		</Method>
+		<Method>
 			<Name>findRecId</Name>
 			<IsStatic>true</IsStatic>
 			<Visibility>Public</Visibility>
@@ -116,6 +134,31 @@
 				<Tags></Tags>
 				<Type>ExtendedDataType</Type>
 				<TypeName>Qty</TypeName>
+			</ReturnType>
+		</Method>
+		<Method>
+			<Name>AuthorTableLookup</Name>
+			<Visibility>Public</Visibility>
+			<Parameters>
+				<AxMethodParameter>
+					<Tags></Tags>
+					<Type>Class</Type>
+					<TypeName>FormReferenceControl</TypeName>
+					<Name>_formReferenceControl</Name>
+				</AxMethodParameter>
+			</Parameters>
+			<ReturnType>
+				<Tags></Tags>
+				<Type>Record</Type>
+				<TypeName>Common</TypeName>
+			</ReturnType>
+		</Method>
+		<Method>
+			<Name>getLookupQuery</Name>
+			<ReturnType>
+				<Tags></Tags>
+				<Type>Class</Type>
+				<TypeName>Query</TypeName>
 			</ReturnType>
 		</Method>
 	</Methods>
