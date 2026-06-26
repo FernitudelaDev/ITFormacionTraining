@@ -150,6 +150,11 @@
       <Name>ACBookTransactions</Name>
       <Link>Forms\ACBookTransactions</Link>
     </Content>
+    <Content Include="AxForm\ACtmpAuthor">
+      <SubType>Content</SubType>
+      <Name>ACtmpAuthor</Name>
+      <Link>Forms\ACtmpAuthor</Link>
+    </Content>
     <Content Include="AxLabelFile\ACItFormacionLabels_en-US">
       <SubType>Content</SubType>
       <Name>ACItFormacionLabels_en-US</Name>
@@ -199,6 +204,11 @@
       <SubType>Content</SubType>
       <Name>ACBookTransactions</Name>
       <Link>Display Menu Items\ACBookTransactions</Link>
+    </Content>
+    <Content Include="AxMenuItemDisplay\ACtmpAuthor">
+      <SubType>Content</SubType>
+      <Name>ACtmpAuthor</Name>
+      <Link>Display Menu Items\ACtmpAuthor</Link>
     </Content>
     <Content Include="AxMenu\ACLibrary">
       <SubType>Content</SubType>
@@ -329,6 +339,11 @@
       <SubType>Content</SubType>
       <Name>ACBookTable</Name>
       <Link>Tables\ACBookTable</Link>
+    </Content>
+    <Content Include="AxTable\ACtmpAuthorTable">
+      <SubType>Content</SubType>
+      <Name>ACtmpAuthorTable</Name>
+      <Link>Tables\ACtmpAuthorTable</Link>
     </Content>
     <Content Include="AxView\ACBookAuthorFantasyView">
       <SubType>Content</SubType>

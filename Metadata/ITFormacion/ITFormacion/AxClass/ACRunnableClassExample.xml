@@ -20,6 +20,29 @@ internal final class ACRunnableClassExample
     //    }
     //}
     
+    //public static void Main(Args _args)
+    //{
+    //    FormRun formRun = _args.caller();
+
+    //    try
+    //    {
+    //        info(strFmt("Esta clase ha sido llamada por el formulario %1 - %2",
+    //        formRun.name(),
+    //        formRun.design().caption()));
+    //    }
+    //    catch(Exception::CLRError)
+    //    {
+
+    //    }
+    //    catch
+    //    {
+    //        if(!formRun)
+    //        {
+    //            error("El proceso se ha llamado sin formulario");
+    //        }
+    //    }
+    //}
+
 }
 ]]></Declaration>
 		<Methods>
@@ -28,25 +51,7 @@ internal final class ACRunnableClassExample
 				<Source><![CDATA[
     public static void Main(Args _args)
     {
-        FormRun formRun = _args.caller();
-
-        try
-        {
-            info(strFmt("Esta clase ha sido llamada por el formulario %1 - %2",
-            formRun.name(),
-            formRun.design().caption()));
-        }
-        catch(Exception::CLRError)
-        {
-            
-        }
-        catch
-        {
-            if(!formRun)
-            {
-                error("El proceso se ha llamado sin formulario");
-            }
-        }
+        
     }
 
 ]]></Source>
