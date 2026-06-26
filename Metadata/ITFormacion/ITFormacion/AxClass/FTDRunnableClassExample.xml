@@ -19,25 +19,55 @@ internal final class FTDRunnableClassExample
     //    Info(strFmt("@ITFormacion:NumberOfBooksByGenre", fantasyBooks, historyBooks, scienceBooks));
     //}
 
+    //public static void main(Args _args)
+    //{
+    //    FTDQueryVSSelect queryVsSelect = new FTDQueryVSSelect();
+
+    //    if (Box::yesNo('Do you want to run the select using the query', DialogButton::Yes) == DialogButton::Yes)
+    //    {
+    //        //queryVsSelect.reuseExistingQuery();
+    //        queryVsSelect.buildQueryFromCode();
+    //    }
+    //    else
+    //    {
+    //        queryVsSelect.selectExample();
+    //    }
+    //}
+
+    //Force exception.
+    //public static void Main(Args _args)
+    //{
+    //    FormRun formRun = _args.caller();
+
+    //    try
+    //    {
+    //        info(strFmt("Esta clase ha sido llamada por el formulario %1 - %2", 
+    //            formRun.name(), 
+    //            formRun.design().caption()));
+    //    }
+    //    catch (Exception::DuplicateKeyException)
+    //    {
+
+    //    }
+    //    catch
+    //    {
+    //        if (!formRun)
+    //        {
+    //            error("el proceso se ha llamdo sin formulario");
+    //        }
+    //    }
+
+    //}
+
 }
 ]]></Declaration>
 		<Methods>
 			<Method>
-				<Name>main</Name>
+				<Name>Main</Name>
 				<Source><![CDATA[
-    public static void main(Args _args)
+    public static void Main(Args _args)
     {
-        FTDQueryVSSelect queryVsSelect = new FTDQueryVSSelect();
 
-        if (Box::yesNo('Do you want to run the select using the query', DialogButton::Yes) == DialogButton::Yes)
-        {
-            //queryVsSelect.reuseExistingQuery();
-            queryVsSelect.buildQueryFromCode();
-        }
-        else
-        {
-            queryVsSelect.selectExample();
-        }
     }
 
 ]]></Source>

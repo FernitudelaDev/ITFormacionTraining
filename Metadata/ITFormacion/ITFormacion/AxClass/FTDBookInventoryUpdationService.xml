@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<AxClass xmlns:i="http://www.w3.org/2001/XMLSchema-instance">
+	<Name>FTDBookInventoryUpdationService</Name>
+	<SourceCode>
+		<Declaration><![CDATA[
+final class FTDBookInventoryUpdationService extends SysOperationServiceBase
+{
+}
+]]></Declaration>
+		<Methods>
+			<Method>
+				<Name>runProcess</Name>
+				<Source><![CDATA[
+	public void runProcess(FTDBookInventoryUpdationDataContract _dataContract)
+    {
+        FTDBookTable book = FTDBookTable::find(_dataContract.parmBookId());
+
+        Qty currentInventory = book.currentInventory();
+
+        Qty newTransactionQtyNeeded = _dataContract.parmNewQty() - currentInventory;
+
+        FTDBookInventoryTransaction inventoryTransaction;
+
+        inventoryTransaction.TransId = guid2Str(newGuid());
+        inventoryTransaction.Book = book.RecId;
+        inventoryTransaction.Qty = newTransactionQtyNeeded;
+
+        if (inventoryTransaction.validateWrite())
+        {
+            inventoryTransaction.insert();
+        }
+        else
+        {
+            throw Exception::Error;
+        }
+    }
+
+]]></Source>
+			</Method>
+		</Methods>
+	</SourceCode>
+</AxClass>

@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<z:anyType xmlns:i="http://www.w3.org/2001/XMLSchema-instance" xmlns=""
+	i:type="AxCompilerMetadata" xmlns:z="http://schemas.microsoft.com/2003/10/Serialization/">
+	<IsFinal>true</IsFinal>
+	<IsPublic>true</IsPublic>
+	<Attributes>
+		<AxAttribute>
+			<Name>DataContract</Name>
+			<Parameters />
+		</AxAttribute>
+		<AxAttribute>
+			<Name>SysOperationAlwaysInitialize</Name>
+			<Parameters />
+		</AxAttribute>
+	</Attributes>
+	<Members>
+		<AxClassMemberVariable>
+			<Tags></Tags>
+			<Type>ExtendedDataType</Type>
+			<TypeName>FTDId</TypeName>
+			<Name>bookId</Name>
+			<Attributes />
+		</AxClassMemberVariable>
+		<AxClassMemberVariable>
+			<Tags></Tags>
+			<Type>ExtendedDataType</Type>
+			<TypeName>FTDInventoryQty</TypeName>
+			<Name>newQty</Name>
+			<Attributes />
+		</AxClassMemberVariable>
+	</Members>
+	<Methods>
+		<Method>
+			<Name>parmBookId</Name>
+			<Visibility>Public</Visibility>
+			<Attributes>
+				<AxAttribute>
+					<Name>DataMember</Name>
+					<Parameters />
+				</AxAttribute>
+			</Attributes>
+			<Parameters>
+				<AxMethodParameter>
+					<Tags></Tags>
+					<Type>ExtendedDataType</Type>
+					<TypeName>FTDId</TypeName>
+					<DefaultValue>bookId</DefaultValue>
+					<Name>_bookId</Name>
+				</AxMethodParameter>
+			</Parameters>
+			<ReturnType>
+				<Tags></Tags>
+				<Type>ExtendedDataType</Type>
+				<TypeName>FTDId</TypeName>
+			</ReturnType>
+		</Method>
+		<Method>
+			<Name>parmNewQty</Name>
+			<Visibility>Public</Visibility>
+			<Attributes>
+				<AxAttribute>
+					<Name>DataMember</Name>
+					<Parameters />
+				</AxAttribute>
+			</Attributes>
+			<Parameters>
+				<AxMethodParameter>
+					<Tags></Tags>
+					<Type>ExtendedDataType</Type>
+					<TypeName>FTDInventoryQty</TypeName>
+					<DefaultValue>newQty</DefaultValue>
+					<Name>_newQty</Name>
+				</AxMethodParameter>
+			</Parameters>
+			<ReturnType>
+				<Tags></Tags>
+				<Type>ExtendedDataType</Type>
+				<TypeName>FTDInventoryQty</TypeName>
+			</ReturnType>
+		</Method>
+	</Methods>
+</z:anyType>

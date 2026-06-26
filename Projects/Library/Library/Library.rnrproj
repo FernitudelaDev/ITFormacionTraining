@@ -33,6 +33,7 @@
     <EnableUnmanagedDebugging>false</EnableUnmanagedDebugging>
   </PropertyGroup>
   <ItemGroup>
+    <Folder Include="Action Menu Items\" />
     <Folder Include="Base Enums\" />
     <Folder Include="Classes\" />
     <Folder Include="Data Entities\" />
@@ -44,7 +45,9 @@
     <Folder Include="Label Files\" />
     <Folder Include="Menu Extensions\" />
     <Folder Include="Menus\" />
+    <Folder Include="Security Duties\" />
     <Folder Include="Security Privileges\" />
+    <Folder Include="Security Roles\" />
     <Folder Include="Service Groups\" />
     <Folder Include="Services\" />
     <Folder Include="Simple Queries\" />
@@ -56,6 +59,21 @@
       <SubType>Content</SubType>
       <Name>FTDBookCreationService</Name>
       <Link>Classes\FTDBookCreationService</Link>
+    </Content>
+    <Content Include="AxClass\FTDBookInventoryUpdationController">
+      <SubType>Content</SubType>
+      <Name>FTDBookInventoryUpdationController</Name>
+      <Link>Classes\FTDBookInventoryUpdationController</Link>
+    </Content>
+    <Content Include="AxClass\FTDBookInventoryUpdationDataContract">
+      <SubType>Content</SubType>
+      <Name>FTDBookInventoryUpdationDataContract</Name>
+      <Link>Classes\FTDBookInventoryUpdationDataContract</Link>
+    </Content>
+    <Content Include="AxClass\FTDBookInventoryUpdationService">
+      <SubType>Content</SubType>
+      <Name>FTDBookInventoryUpdationService</Name>
+      <Link>Classes\FTDBookInventoryUpdationService</Link>
     </Content>
     <Content Include="AxClass\FTDQueryVSSelect">
       <SubType>Content</SubType>
@@ -122,6 +140,11 @@
       <Name>FTDBookTransactions</Name>
       <Link>Forms\FTDBookTransactions</Link>
     </Content>
+    <Content Include="AxForm\FTDtmpAuthor">
+      <SubType>Content</SubType>
+      <Name>FTDtmpAuthor</Name>
+      <Link>Forms\FTDtmpAuthor</Link>
+    </Content>
     <Content Include="AxLabelFile\ITFormacion_en-US">
       <SubType>Content</SubType>
       <Name>ITFormacion_en-US</Name>
@@ -136,6 +159,11 @@
       <SubType>Content</SubType>
       <Name>MainMenu.ITFormacion</Name>
       <Link>Menu Extensions\MainMenu.ITFormacion</Link>
+    </Content>
+    <Content Include="AxMenuItemAction\FTDBookInventoryUpdationController">
+      <SubType>Content</SubType>
+      <Name>FTDBookInventoryUpdationController</Name>
+      <Link>Action Menu Items\FTDBookInventoryUpdationController</Link>
     </Content>
     <Content Include="AxMenuItemDisplay\FTDAuthor">
       <SubType>Content</SubType>
@@ -157,6 +185,11 @@
       <Name>FTDBookTransactions</Name>
       <Link>Display Menu Items\FTDBookTransactions</Link>
     </Content>
+    <Content Include="AxMenuItemDisplay\FTDtmpAuthor">
+      <SubType>Content</SubType>
+      <Name>FTDtmpAuthor</Name>
+      <Link>Display Menu Items\FTDtmpAuthor</Link>
+    </Content>
     <Content Include="AxMenu\FTDLibrary">
       <SubType>Content</SubType>
       <Name>FTDLibrary</Name>
@@ -166,6 +199,21 @@
       <SubType>Content</SubType>
       <Name>FTDBookAuthorFantasyQuery</Name>
       <Link>Simple Queries\FTDBookAuthorFantasyQuery</Link>
+    </Content>
+    <Content Include="AxSecurityDuty\FTDLibraryFormsMaintain">
+      <SubType>Content</SubType>
+      <Name>FTDLibraryFormsMaintain</Name>
+      <Link>Security Duties\FTDLibraryFormsMaintain</Link>
+    </Content>
+    <Content Include="AxSecurityDuty\FTDLibraryFormsView">
+      <SubType>Content</SubType>
+      <Name>FTDLibraryFormsView</Name>
+      <Link>Security Duties\FTDLibraryFormsView</Link>
+    </Content>
+    <Content Include="AxSecurityDuty\FTDLibraryProcessesMaintain">
+      <SubType>Content</SubType>
+      <Name>FTDLibraryProcessesMaintain</Name>
+      <Link>Security Duties\FTDLibraryProcessesMaintain</Link>
     </Content>
     <Content Include="AxSecurityPrivilege\FTDAuthorEntityMaintain">
       <SubType>Content</SubType>
@@ -177,6 +225,36 @@
       <Name>FTDAuthorEntityView</Name>
       <Link>Security Privileges\FTDAuthorEntityView</Link>
     </Content>
+    <Content Include="AxSecurityPrivilege\FTDAuthorMaintain">
+      <SubType>Content</SubType>
+      <Name>FTDAuthorMaintain</Name>
+      <Link>Security Privileges\FTDAuthorMaintain</Link>
+    </Content>
+    <Content Include="AxSecurityPrivilege\FTDAuthorView">
+      <SubType>Content</SubType>
+      <Name>FTDAuthorView</Name>
+      <Link>Security Privileges\FTDAuthorView</Link>
+    </Content>
+    <Content Include="AxSecurityPrivilege\FTDBookGenreFilteredMaintain">
+      <SubType>Content</SubType>
+      <Name>FTDBookGenreFilteredMaintain</Name>
+      <Link>Security Privileges\FTDBookGenreFilteredMaintain</Link>
+    </Content>
+    <Content Include="AxSecurityPrivilege\FTDBookGenreFilteredView">
+      <SubType>Content</SubType>
+      <Name>FTDBookGenreFilteredView</Name>
+      <Link>Security Privileges\FTDBookGenreFilteredView</Link>
+    </Content>
+    <Content Include="AxSecurityPrivilege\FTDBookInventoryUpdationController">
+      <SubType>Content</SubType>
+      <Name>FTDBookInventoryUpdationController</Name>
+      <Link>Security Privileges\FTDBookInventoryUpdationController</Link>
+    </Content>
+    <Content Include="AxSecurityPrivilege\FTDBookMaintain">
+      <SubType>Content</SubType>
+      <Name>FTDBookMaintain</Name>
+      <Link>Security Privileges\FTDBookMaintain</Link>
+    </Content>
     <Content Include="AxSecurityPrivilege\FTDBookTableEntityMaintain">
       <SubType>Content</SubType>
       <Name>FTDBookTableEntityMaintain</Name>
@@ -186,6 +264,31 @@
       <SubType>Content</SubType>
       <Name>FTDBookTableEntityView</Name>
       <Link>Security Privileges\FTDBookTableEntityView</Link>
+    </Content>
+    <Content Include="AxSecurityPrivilege\FTDBookTransactionsMaintain">
+      <SubType>Content</SubType>
+      <Name>FTDBookTransactionsMaintain</Name>
+      <Link>Security Privileges\FTDBookTransactionsMaintain</Link>
+    </Content>
+    <Content Include="AxSecurityPrivilege\FTDBookTransactionsView">
+      <SubType>Content</SubType>
+      <Name>FTDBookTransactionsView</Name>
+      <Link>Security Privileges\FTDBookTransactionsView</Link>
+    </Content>
+    <Content Include="AxSecurityPrivilege\FTDBookView">
+      <SubType>Content</SubType>
+      <Name>FTDBookView</Name>
+      <Link>Security Privileges\FTDBookView</Link>
+    </Content>
+    <Content Include="AxSecurityRole\FTDLibraryMaintain">
+      <SubType>Content</SubType>
+      <Name>FTDLibraryMaintain</Name>
+      <Link>Security Roles\FTDLibraryMaintain</Link>
+    </Content>
+    <Content Include="AxSecurityRole\FTDLibraryView">
+      <SubType>Content</SubType>
+      <Name>FTDLibraryView</Name>
+      <Link>Security Roles\FTDLibraryView</Link>
     </Content>
     <Content Include="AxServiceGroup\FTDBookCreationServiceGroup">
       <SubType>Content</SubType>
@@ -221,6 +324,11 @@
       <SubType>Content</SubType>
       <Name>FTDBookTable</Name>
       <Link>Tables\FTDBookTable</Link>
+    </Content>
+    <Content Include="AxTable\FTDtmpAuthorTable">
+      <SubType>Content</SubType>
+      <Name>FTDtmpAuthorTable</Name>
+      <Link>Tables\FTDtmpAuthorTable</Link>
     </Content>
     <Content Include="AxView\FTDBookAuthorFantasyView">
       <SubType>Content</SubType>

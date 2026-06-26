@@ -95,7 +95,43 @@ public class FTDBook extends FormRun
 ]]></Source>
 					</Method>
 				</Methods>
-				<Fields />
+				<Fields>
+					<Field>
+						<DataField>Author</DataField>
+						<Methods>
+							<Method>
+								<Name>lookupReference</Name>
+								<Source><![CDATA[
+            /// <summary>
+            ///
+            /// </summary>
+            /// <param name = "_formReferenceControl"></param>
+            /// <returns></returns>
+            public Common lookupReference(FormReferenceControl _formReferenceControl)
+            {
+                return FTDBookTable.AuthorTableLookup(_formReferenceControl);
+            }
+
+]]></Source>
+							</Method>
+							<Method>
+								<Name>validate</Name>
+								<Source><![CDATA[
+            public boolean validate()
+            {
+                boolean ret;
+            
+                ret = super()
+                    && FTDAuthorTable::findRecId(FTDBookTable.Author).IsDead == NoYes::No;
+            
+                return ret;
+            }
+
+]]></Source>
+							</Method>
+						</Methods>
+					</Field>
+				</Fields>
 			</DataSource>
 		</DataSources>
 		<DataControls xmlns="" />
@@ -167,6 +203,16 @@ public class FTDBook extends FormRun
 									i:nil="true" />
 								<DataSource>FTDBookTable</DataSource>
 								<MenuItemName>FTDBookTransactions</MenuItemName>
+							</AxFormControl>
+							<AxFormControl xmlns=""
+								i:type="AxFormMenuFunctionButtonControl">
+								<Name>BookInventoryUpdationController</Name>
+								<Type>MenuFunctionButton</Type>
+								<FormControlExtension
+									i:nil="true" />
+								<MenuItemName>FTDBookInventoryUpdationController</MenuItemName>
+								<MenuItemType>Action</MenuItemType>
+								<NeedsRecord>Yes</NeedsRecord>
 							</AxFormControl>
 						</Controls>
 					</AxFormControl>

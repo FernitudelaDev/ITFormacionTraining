@@ -23,6 +23,17 @@ public class FTDBookTable extends common
 ]]></Source>
 			</Method>
 			<Method>
+				<Name>exist</Name>
+				<Source><![CDATA[
+    public static boolean exist(FTDId _id)
+    {
+        return (select firstonly RecId from FTDBookTable
+            where FTDBookTable.Id == _id).RecId != 0;
+    }
+
+]]></Source>
+			</Method>
+			<Method>
 				<Name>find</Name>
 				<Source><![CDATA[
     public static FTDBookTable find(FTDId _id)
@@ -104,6 +115,39 @@ public class FTDBookTable extends common
             && transactions.RecId != _excludeTransactionRecId;
 
         return transactions.Qty;
+    }
+
+]]></Source>
+			</Method>
+			<Method>
+				<Name>AuthorTableLookup</Name>
+				<Source><![CDATA[
+    public Common AuthorTableLookup(FormReferenceControl _formReferenceControl)
+    {
+        SysReferenceTableLookup refTableLookup = SysReferenceTableLookup::newParameters(tableNum(FTDAuthorTable), _formReferenceControl);
+
+        refTableLookup.parmQuery(this.getLookupQuery());
+        refTableLookup.addLookupfield(fieldNum(FTDAuthorTable, Id));
+        refTableLookup.addLookupfield(fieldNum(FTDAuthorTable, FirstName));
+        refTableLookup.addLookupfield(fieldNum(FTDAuthorTable, LastName));
+        refTableLookup.addLookupfield(fieldNum(FTDAuthorTable, IsDead));
+                
+        return refTableLookup.performFormLookup();
+    }
+
+]]></Source>
+			</Method>
+			<Method>
+				<Name>getLookupQuery</Name>
+				<Source><![CDATA[
+    private Query getLookupQuery()
+    {
+        Query               q = new Query();
+        QuerybuildDataSource qbds = q.addDataSource(tableNum(FTDAuthorTable));
+                
+        qbds.addRange(fieldNum(FTDAuthorTable, IsDead)).value(queryValue(NoYes::No));
+
+        return q;
     }
 
 ]]></Source>

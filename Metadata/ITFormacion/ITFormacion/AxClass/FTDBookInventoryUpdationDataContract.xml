@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<AxClass xmlns:i="http://www.w3.org/2001/XMLSchema-instance">
+	<Name>FTDBookInventoryUpdationDataContract</Name>
+	<SourceCode>
+		<Declaration><![CDATA[
+[DataContract, SysOperationAlwaysInitialize]
+final class FTDBookInventoryUpdationDataContract
+{
+    FTDId           bookId;
+    FTDInventoryQty newQty;
+
+}
+]]></Declaration>
+		<Methods>
+			<Method>
+				<Name>parmBookId</Name>
+				<Source><![CDATA[
+    //[DataMember, SysOperationControlVisibility(false)]
+    [DataMember]
+    public FTDId parmBookId(FTDId _bookId = bookId)
+    {
+        bookId = _bookId;
+        return bookId;
+    }
+
+]]></Source>
+			</Method>
+			<Method>
+				<Name>parmNewQty</Name>
+				<Source><![CDATA[
+    [DataMember]
+    public FTDInventoryQty parmNewQty(FTDInventoryQty _newQty = newQty)
+    {
+        newQty = _newQty;
+        return newQty;
+    }
+
+]]></Source>
+			</Method>
+		</Methods>
+	</SourceCode>
+</AxClass>

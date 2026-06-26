@@ -32,5 +32,18 @@
 				</AxMenuElement>
 			</Elements>
 		</AxMenuElement>
+		<AxMenuElement xmlns=""
+			i:type="AxMenuElementSubMenu">
+			<Name>Processes</Name>
+			<Label>@ITFormacion:Processes</Label>
+			<Elements>
+				<AxMenuElement xmlns=""
+					i:type="AxMenuElementMenuItem">
+					<Name>BookInventoryUpdationController</Name>
+					<MenuItemName>FTDBookInventoryUpdationController</MenuItemName>
+					<MenuItemType>Action</MenuItemType>
+				</AxMenuElement>
+			</Elements>
+		</AxMenuElement>
 	</Elements>
 </AxMenu>
