@@ -3,8 +3,6 @@ Generation Information: View dynamics://View/ACAuthorEntity: Is Runtime Services
 ExternalReference Warning: dynamics://Reference/Microsoft.Dynamics___vices.PricingEngine: Assembly 'Microsoft.Dynamics.Commerce.Runtime.Entities.AttributeBasedPricing, Version=7.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35' failed to load because it was not found.
 ExternalReference Warning: dynamics://Reference/Azure.Core: Assembly 'System.Memory.Data, Version=1.0.2.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51' failed to load because it was not found.
 Compile Warning: Table Method dynamics://Table/ACBookTable/Method/selectCountByGenre: [(11,9),(11,32)]: The type conversion from 'int64' to 'int' loses range.
-Compile Error: Table Method dynamics://Table/ACBookTable/Method/dispCurrentInventory: [(61,16),(61,38)]: ClassDoesNotContainMethod: Table 'ACBookTable' does not contain a definition for method 'currentInvetory' and no extension method 'currentInvetory' accepting a first argument of type 'ACBookTable' is found on any extension class.
-Compile Fatal Error: Unable to restore the file 'C:\AOSService\PackagesLocalDirectory\ITFormacion\bin\Dynamics.AX.ITFormacion.Forms.ACAuthor.pdb' to its original state before compilation. A full build of the 'ITFormacion' module may be necessary to restore functionality. The error message given was: Could not find file 'C:\AOSService\PackagesLocalDirectory\ITFormacion\bin\Dynamics.AX.ITFormacion.Forms.ACAuthor.pdbm1d4coxh.bt5.delete'.
 ==================================
-Errors: 2
+Errors: 0
 Warnings: 3

@@ -25,6 +25,19 @@ public class ACBookTable extends common
 ]]></Source>
 			</Method>
 			<Method>
+				<Name>exists</Name>
+				<Source><![CDATA[
+    public static boolean exists(ACId _id)
+    {
+        ACBookTable booktable;
+
+        return (select firstonly RecId from AcBookTable
+            where AcBookTable.Id == _id).RecId != 0;
+    }
+
+]]></Source>
+			</Method>
+			<Method>
 				<Name>shouldThrowExceptionOnZeroDelete</Name>
 				<Source><![CDATA[
     public boolean shouldThrowExceptionOnZeroDelete()

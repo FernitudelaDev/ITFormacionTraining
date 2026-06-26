@@ -5,24 +5,47 @@
 		<Declaration><![CDATA[
 internal final class ACRunnableClassExample
 {
+    //public static void main(Args _args)
+    //{
+    //    ACQueryVSSelect queryVsSelect = new ACQueryVSSelect();
+
+    //    if(Box::yesNo('Do you want to run the select using the query', DialogButton::Yes) == DialogButton::Yes)
+    //    {
+    //        //queryVsSelect.reuseExistingQuery();
+    //        queryVsSelect.buildQueryFromCode();
+    //    }
+    //    else
+    //    {
+    //        queryVsSelect.selectExample();
+    //    }
+    //}
+    
 }
 ]]></Declaration>
 		<Methods>
 			<Method>
-				<Name>main</Name>
+				<Name>Main</Name>
 				<Source><![CDATA[
-    public static void main(Args _args)
+    public static void Main(Args _args)
     {
-        ACQueryVSSelect queryVsSelect = new ACQueryVSSelect();
+        FormRun formRun = _args.caller();
 
-        if(Box::yesNo('Do you want to run the select using the query', DialogButton::Yes) == DialogButton::Yes)
+        try
         {
-            //queryVsSelect.reuseExistingQuery();
-            queryVsSelect.buildQueryFromCode();
+            info(strFmt("Esta clase ha sido llamada por el formulario %1 - %2",
+            formRun.name(),
+            formRun.design().caption()));
         }
-        else
+        catch(Exception::CLRError)
         {
-            queryVsSelect.selectExample();
+            
+        }
+        catch
+        {
+            if(!formRun)
+            {
+                error("El proceso se ha llamado sin formulario");
+            }
         }
     }
 

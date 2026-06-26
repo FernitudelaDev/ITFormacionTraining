@@ -21,6 +21,24 @@
 			</ReturnType>
 		</Method>
 		<Method>
+			<Name>exists</Name>
+			<IsStatic>true</IsStatic>
+			<Visibility>Public</Visibility>
+			<Parameters>
+				<AxMethodParameter>
+					<Tags></Tags>
+					<Type>ExtendedDataType</Type>
+					<TypeName>ACId</TypeName>
+					<Name>_id</Name>
+				</AxMethodParameter>
+			</Parameters>
+			<ReturnType>
+				<Tags></Tags>
+				<Type>Enum</Type>
+				<TypeName>boolean</TypeName>
+			</ReturnType>
+		</Method>
+		<Method>
 			<Name>shouldThrowExceptionOnZeroDelete</Name>
 			<Visibility>Public</Visibility>
 			<ReturnType>

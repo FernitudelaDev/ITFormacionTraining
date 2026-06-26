@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="utf-8"?>
+<AxClass xmlns:i="http://www.w3.org/2001/XMLSchema-instance">
+	<Name>ACBookInventoryUpdationController</Name>
+	<SourceCode>
+		<Declaration><![CDATA[
+final class ACBookInventoryUpdationController extends SysOperationServiceController
+{
+}
+]]></Declaration>
+		<Methods>
+			<Method>
+				<Name>Main</Name>
+				<Source><![CDATA[
+    public static void Main(Args _args)
+    {
+        ACBookInventoryUpdationController controller = ACBookInventoryUpdationController::construct();
+
+        if (controller.prompt())
+        {
+            controller.runOperation();
+        }
+    }
+
+]]></Source>
+			</Method>
+			<Method>
+				<Name>initFromBookFormIfNeeded</Name>
+				<Source><![CDATA[
+    public void initFromBookFormIfNeeded(Args _args)
+    {
+        FormRun callerFormRun = _args.caller();
+
+        if(callerFormRun && callerFormRun.name() == formStr(ACBook))
+        {
+            ACBookTable bookActiveRecord = callerFormRun
+                .dataSource(formDataSourceStr(ACBook, ACBookTable))
+                .cursor();
+
+            ACBookInventoryUpdationDataContract contract = this.getDataContract();
+            contract.parmBookId(bookActiveRecord.Id);
+        }
+    }
+
+]]></Source>
+			</Method>
+			<Method>
+				<Name>new</Name>
+				<Source><![CDATA[
+    public void new(
+        IdentifierName             _className     = '',
+        IdentifierName             _methodName    = '',
+        SysOperationExecutionMode  _executionMode = SysOperationExecutionMode::Asynchronous)
+    {
+        super(_className, _methodName, _executionMode);
+    }
+
+]]></Source>
+			</Method>
+			<Method>
+				<Name>construct</Name>
+				<Source><![CDATA[
+    public static ACBookInventoryUpdationController construct(
+        SysOperationExecutionMode _executionMode = SysOperationExecutionMode::Asynchronous)
+    {
+        ACBookInventoryUpdationController controller = new ACBookInventoryUpdationController(
+            classStr(ACBookInventoryUpdationController),
+            methodStr(ACBookInventoryUpdationService, runProcess),
+            _executionMode);
+
+        controller.parmDialogCaption("@ACItFormacionLabels:UpdateBookInventory");
+
+        return controller;
+    }
+
+]]></Source>
+			</Method>
+			<Method>
+				<Name>validateParameters</Name>
+				<Source><![CDATA[
+    public boolean validateParameters()
+    {
+        boolean ret;
+
+        ret = super();
+        if(ret)
+        {
+            ACBookInventoryUpdationDataContract dataContract = this.getDataContract();
+            ret = this.validateBook(dataContract.parmBookId())
+                && this.validateNewQty(dataContract.parmNewQty());
+
+        }
+
+        return ret;
+    }
+
+]]></Source>
+			</Method>
+			<Method>
+				<Name>validateBook</Name>
+				<Source><![CDATA[
+    public boolean validateBook(ACId _bookId)
+    {
+        if(!ACBookTable::exists(_bookId))
+        {
+            return checkFailed(strFmt("@ACItFormacionLabels:BookDoesNotExist", _bookId));
+        }
+
+        return true;
+    }
+
+]]></Source>
+			</Method>
+			<Method>
+				<Name>validateNewQty</Name>
+				<Source><![CDATA[
+    public boolean validateNewQty(Qty _newQty)
+    {
+        if(_newQty < 0)
+        {
+            return checkFailed("@ACItFormacionLabels:FieldQtyCannotBeZero");
+        }
+
+        return true;
+    }
+
+]]></Source>
+			</Method>
+			<Method>
+				<Name>getDataContract</Name>
+				<Source><![CDATA[
+    public ACBookInventoryUpdationDataContract getDataContract()
+    {
+        return this.getDataContractObject(identifierStr(_dataContract));
+    }
+
+]]></Source>
+			</Method>
+		</Methods>
+	</SourceCode>
+</AxClass>

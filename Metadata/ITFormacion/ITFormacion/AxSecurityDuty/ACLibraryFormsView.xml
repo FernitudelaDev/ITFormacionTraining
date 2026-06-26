@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<AxSecurityDuty xmlns:i="http://www.w3.org/2001/XMLSchema-instance">
+	<Name>ACLibraryFormsView</Name>
+	<Privileges>
+		<AxSecurityPrivilegeReference>
+			<Name>ACBookGenreFilterView</Name>
+		</AxSecurityPrivilegeReference>
+		<AxSecurityPrivilegeReference>
+			<Name>ACBookTransactionsView</Name>
+		</AxSecurityPrivilegeReference>
+		<AxSecurityPrivilegeReference>
+			<Name>ACBookView</Name>
+		</AxSecurityPrivilegeReference>
+		<AxSecurityPrivilegeReference>
+			<Name>ACAuthorView</Name>
+		</AxSecurityPrivilegeReference>
+	</Privileges>
+</AxSecurityDuty>

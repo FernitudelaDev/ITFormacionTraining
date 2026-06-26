@@ -11,6 +11,7 @@ public class ACBook extends FormRun
 {
     ACGenreEnum genreFilter;
     boolean needGenreFilter;
+
 }
 ]]></Source>
 			</Method>
@@ -164,6 +165,16 @@ public class ACBook extends FormRun
 								<Type>MenuFunctionButton</Type>
 								<FormControlExtension
 									i:nil="true" />
+							</AxFormControl>
+							<AxFormControl xmlns=""
+								i:type="AxFormMenuFunctionButtonControl">
+								<Name>ACBookTransactionUpdation</Name>
+								<Type>MenuFunctionButton</Type>
+								<FormControlExtension
+									i:nil="true" />
+								<MenuItemName>ACBookTransactionUpdation</MenuItemName>
+								<MenuItemType>Action</MenuItemType>
+								<NeedsRecord>Yes</NeedsRecord>
 							</AxFormControl>
 						</Controls>
 					</AxFormControl>

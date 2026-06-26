@@ -1,3 +1,6 @@
-﻿ACBookCreationService	
+﻿ACBookInventoryUpdationController	SysOperationServiceController
+ACBookCreationService	
+ACBookInventoryUpdationService	SysOperationServiceBase
 ACQueryVSSelect	
 ACRunnableClassExample	
+ACBookInventoryUpdationDataContract	

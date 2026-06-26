@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<AxClass xmlns:i="http://www.w3.org/2001/XMLSchema-instance">
+	<Name>ACBookInventoryUpdationService</Name>
+	<SourceCode>
+		<Declaration><![CDATA[
+final class ACBookInventoryUpdationService extends SysOperationServiceBase
+{
+}
+]]></Declaration>
+		<Methods>
+			<Method>
+				<Name>runProcess</Name>
+				<Source><![CDATA[
+    public void runProcess(ACBookInventoryUpdationDataContract _dataContract)
+    {
+        ACBookTable book = ACBookTable::find(_dataContract.parmBookId());
+        Qty currentInventory = book.currentInventory();
+        Qty newTransactionQtyNeeded = _dataContract.parmNewQty() - currentInventory;
+
+        ACBookInventoryTransaction inventoryTransaction;
+
+        inventoryTransaction.Book = book.RecId;
+        inventoryTransaction.InventoryQty = newTransactionQtyNeeded;
+
+        if (inventoryTransaction.validateWrite())
+        {
+            inventoryTransaction.insert();
+        }
+        else
+        {
+            throw Exception::Error;
+        }
+    }
+
+]]></Source>
+			</Method>
+		</Methods>
+	</SourceCode>
+</AxClass>

@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<AxClass xmlns:i="http://www.w3.org/2001/XMLSchema-instance">
+	<Name>ACBookInventoryUpdationDataContract</Name>
+	<SourceCode>
+		<Declaration><![CDATA[
+[DataContract, SysOperationAlwaysInitialize]
+final class ACBookInventoryUpdationDataContract
+{
+    ACId bookId;
+    ACInventoryQty newQty;
+
+}
+]]></Declaration>
+		<Methods>
+			<Method>
+				<Name>parmBookId</Name>
+				<Source><![CDATA[
+    //[DataMember, SysOperationControlVisibility(false)]
+    [DataMember]
+    public ACId parmBookId(ACId _bookId = bookId)
+    {
+        bookId = _bookId;
+        return bookId;
+    }
+
+]]></Source>
+			</Method>
+			<Method>
+				<Name>parmNewQty</Name>
+				<Source><![CDATA[
+    [DataMember]
+    public ACInventoryQty parmNewQty(ACInventoryQty _newQty = newQty)
+    {
+        newQty = _newQty;
+        return newQty;
+    }
+
+]]></Source>
+			</Method>
+		</Methods>
+	</SourceCode>
+</AxClass>

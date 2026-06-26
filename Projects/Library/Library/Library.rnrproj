@@ -32,6 +32,7 @@
     <EnableUnmanagedDebugging>false</EnableUnmanagedDebugging>
   </PropertyGroup>
   <ItemGroup>
+    <Folder Include="Action Menu Items\" />
     <Folder Include="Base Enums\" />
     <Folder Include="Classes\" />
     <Folder Include="Data Entities\" />
@@ -44,7 +45,9 @@
     <Folder Include="Label Files\" />
     <Folder Include="Menu Extensions\" />
     <Folder Include="Menus\" />
+    <Folder Include="Security Duties\" />
     <Folder Include="Security Privileges\" />
+    <Folder Include="Security Roles\" />
     <Folder Include="Service Groups\" />
     <Folder Include="Services\" />
     <Folder Include="Simple Queries\" />
@@ -66,6 +69,21 @@
       <SubType>Content</SubType>
       <Name>ACBookCreationService</Name>
       <Link>Classes\ACBookCreationService</Link>
+    </Content>
+    <Content Include="AxClass\ACBookInventoryUpdationController">
+      <SubType>Content</SubType>
+      <Name>ACBookInventoryUpdationController</Name>
+      <Link>Classes\ACBookInventoryUpdationController</Link>
+    </Content>
+    <Content Include="AxClass\ACBookInventoryUpdationDataContract">
+      <SubType>Content</SubType>
+      <Name>ACBookInventoryUpdationDataContract</Name>
+      <Link>Classes\ACBookInventoryUpdationDataContract</Link>
+    </Content>
+    <Content Include="AxClass\ACBookInventoryUpdationService">
+      <SubType>Content</SubType>
+      <Name>ACBookInventoryUpdationService</Name>
+      <Link>Classes\ACBookInventoryUpdationService</Link>
     </Content>
     <Content Include="AxClass\ACQueryVSSelect">
       <SubType>Content</SubType>
@@ -157,6 +175,11 @@
       <Name>MainMenu.ITFormacion</Name>
       <Link>Menu Extensions\MainMenu.ITFormacion</Link>
     </Content>
+    <Content Include="AxMenuItemAction\ACBookTransactionUpdation">
+      <SubType>Content</SubType>
+      <Name>ACBookTransactionUpdation</Name>
+      <Link>Action Menu Items\ACBookTransactionUpdation</Link>
+    </Content>
     <Content Include="AxMenuItemDisplay\ACAuthor">
       <SubType>Content</SubType>
       <Name>ACAuthor</Name>
@@ -187,6 +210,21 @@
       <Name>ACBookAuthorFantasyQuery</Name>
       <Link>Simple Queries\ACBookAuthorFantasyQuery</Link>
     </Content>
+    <Content Include="AxSecurityDuty\ACLibraryFormsMantain">
+      <SubType>Content</SubType>
+      <Name>ACLibraryFormsMantain</Name>
+      <Link>Security Duties\ACLibraryFormsMantain</Link>
+    </Content>
+    <Content Include="AxSecurityDuty\ACLibraryFormsView">
+      <SubType>Content</SubType>
+      <Name>ACLibraryFormsView</Name>
+      <Link>Security Duties\ACLibraryFormsView</Link>
+    </Content>
+    <Content Include="AxSecurityDuty\ACLibraryProcessesMaintain">
+      <SubType>Content</SubType>
+      <Name>ACLibraryProcessesMaintain</Name>
+      <Link>Security Duties\ACLibraryProcessesMaintain</Link>
+    </Content>
     <Content Include="AxSecurityPrivilege\ACAuthorEntityMaintain">
       <SubType>Content</SubType>
       <Name>ACAuthorEntityMaintain</Name>
@@ -197,6 +235,16 @@
       <Name>ACAuthorEntityView</Name>
       <Link>Security Privileges\ACAuthorEntityView</Link>
     </Content>
+    <Content Include="AxSecurityPrivilege\ACAuthorMaintain">
+      <SubType>Content</SubType>
+      <Name>ACAuthorMaintain</Name>
+      <Link>Security Privileges\ACAuthorMaintain</Link>
+    </Content>
+    <Content Include="AxSecurityPrivilege\ACAuthorView">
+      <SubType>Content</SubType>
+      <Name>ACAuthorView</Name>
+      <Link>Security Privileges\ACAuthorView</Link>
+    </Content>
     <Content Include="AxSecurityPrivilege\ACBookEntityMaintain">
       <SubType>Content</SubType>
       <Name>ACBookEntityMaintain</Name>
@@ -206,6 +254,46 @@
       <SubType>Content</SubType>
       <Name>ACBookEntityView</Name>
       <Link>Security Privileges\ACBookEntityView</Link>
+    </Content>
+    <Content Include="AxSecurityPrivilege\ACBookGenreFilterMaintain">
+      <SubType>Content</SubType>
+      <Name>ACBookGenreFilterMaintain</Name>
+      <Link>Security Privileges\ACBookGenreFilterMaintain</Link>
+    </Content>
+    <Content Include="AxSecurityPrivilege\ACBookGenreFilterView">
+      <SubType>Content</SubType>
+      <Name>ACBookGenreFilterView</Name>
+      <Link>Security Privileges\ACBookGenreFilterView</Link>
+    </Content>
+    <Content Include="AxSecurityPrivilege\ACBookInventoryUpdationController">
+      <SubType>Content</SubType>
+      <Name>ACBookInventoryUpdationController</Name>
+      <Link>Security Privileges\ACBookInventoryUpdationController</Link>
+    </Content>
+    <Content Include="AxSecurityPrivilege\ACBookMaintain">
+      <SubType>Content</SubType>
+      <Name>ACBookMaintain</Name>
+      <Link>Security Privileges\ACBookMaintain</Link>
+    </Content>
+    <Content Include="AxSecurityPrivilege\ACBookTransactionsMaintain">
+      <SubType>Content</SubType>
+      <Name>ACBookTransactionsMaintain</Name>
+      <Link>Security Privileges\ACBookTransactionsMaintain</Link>
+    </Content>
+    <Content Include="AxSecurityPrivilege\ACBookTransactionsView">
+      <SubType>Content</SubType>
+      <Name>ACBookTransactionsView</Name>
+      <Link>Security Privileges\ACBookTransactionsView</Link>
+    </Content>
+    <Content Include="AxSecurityPrivilege\ACBookView">
+      <SubType>Content</SubType>
+      <Name>ACBookView</Name>
+      <Link>Security Privileges\ACBookView</Link>
+    </Content>
+    <Content Include="AxSecurityRole\ACLibraryMaintain">
+      <SubType>Content</SubType>
+      <Name>ACLibraryMaintain</Name>
+      <Link>Security Roles\ACLibraryMaintain</Link>
     </Content>
     <Content Include="AxServiceGroup\ACBookCreationServiceGroup">
       <SubType>Content</SubType>

@@ -5,7 +5,7 @@
 	<IsInternal>true</IsInternal>
 	<Methods>
 		<Method>
-			<Name>main</Name>
+			<Name>Main</Name>
 			<IsStatic>true</IsStatic>
 			<Visibility>Public</Visibility>
 			<Parameters>
