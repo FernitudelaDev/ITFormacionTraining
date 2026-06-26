@@ -11,60 +11,53 @@
 			<Visibility>Public</Visibility>
 			<Parameters>
 				<AxMethodParameter>
+					<Tags></Tags>
 					<Type>Class</Type>
 					<TypeName>Args</TypeName>
 					<Name>_args</Name>
 				</AxMethodParameter>
 			</Parameters>
 			<ReturnType>
+				<Tags></Tags>
 				<TypeName></TypeName>
 			</ReturnType>
-			<Variables>
-				<AxMethodVariable>
-					<Type>Class</Type>
-					<TypeName>ACBookInventoryUpdationController</TypeName>
-					<Name>controller</Name>
-				</AxMethodVariable>
-			</Variables>
 		</Method>
 		<Method>
 			<Name>initFromBookFormIfNeeded</Name>
 			<Visibility>Public</Visibility>
 			<Parameters>
 				<AxMethodParameter>
+					<Tags></Tags>
 					<Type>Class</Type>
 					<TypeName>Args</TypeName>
 					<Name>_args</Name>
 				</AxMethodParameter>
 			</Parameters>
 			<ReturnType>
+				<Tags></Tags>
 				<TypeName></TypeName>
 			</ReturnType>
-			<Variables>
-				<AxMethodVariable>
-					<Type>Class</Type>
-					<TypeName>FormRun</TypeName>
-					<Name>callerFormRun</Name>
-				</AxMethodVariable>
-			</Variables>
 		</Method>
 		<Method>
 			<Name>new</Name>
 			<Visibility>Public</Visibility>
 			<Parameters>
 				<AxMethodParameter>
+					<Tags></Tags>
 					<Type>ExtendedDataType</Type>
 					<TypeName>IdentifierName</TypeName>
 					<DefaultValue>''</DefaultValue>
 					<Name>_className</Name>
 				</AxMethodParameter>
 				<AxMethodParameter>
+					<Tags></Tags>
 					<Type>ExtendedDataType</Type>
 					<TypeName>IdentifierName</TypeName>
 					<DefaultValue>''</DefaultValue>
 					<Name>_methodName</Name>
 				</AxMethodParameter>
 				<AxMethodParameter>
+					<Tags></Tags>
 					<Type>Enum</Type>
 					<TypeName>SysOperationExecutionMode</TypeName>
 					<DefaultValue>SysOperationExecutionMode::Asynchronous</DefaultValue>
@@ -72,6 +65,7 @@
 				</AxMethodParameter>
 			</Parameters>
 			<ReturnType>
+				<Tags></Tags>
 				<TypeName></TypeName>
 			</ReturnType>
 		</Method>
@@ -81,6 +75,7 @@
 			<Visibility>Public</Visibility>
 			<Parameters>
 				<AxMethodParameter>
+					<Tags></Tags>
 					<Type>Enum</Type>
 					<TypeName>SysOperationExecutionMode</TypeName>
 					<DefaultValue>SysOperationExecutionMode::Asynchronous</DefaultValue>
@@ -88,43 +83,33 @@
 				</AxMethodParameter>
 			</Parameters>
 			<ReturnType>
+				<Tags></Tags>
 				<Type>Class</Type>
 				<TypeName>ACBookInventoryUpdationController</TypeName>
 			</ReturnType>
-			<Variables>
-				<AxMethodVariable>
-					<Type>Class</Type>
-					<TypeName>ACBookInventoryUpdationController</TypeName>
-					<Name>controller</Name>
-				</AxMethodVariable>
-			</Variables>
 		</Method>
 		<Method>
 			<Name>validateParameters</Name>
 			<Visibility>Public</Visibility>
 			<ReturnType>
+				<Tags></Tags>
 				<Type>Enum</Type>
 				<TypeName>boolean</TypeName>
 			</ReturnType>
-			<Variables>
-				<AxMethodVariable>
-					<Type>Enum</Type>
-					<TypeName>boolean</TypeName>
-					<Name>ret</Name>
-				</AxMethodVariable>
-			</Variables>
 		</Method>
 		<Method>
 			<Name>validateBook</Name>
 			<Visibility>Public</Visibility>
 			<Parameters>
 				<AxMethodParameter>
+					<Tags></Tags>
 					<Type>ExtendedDataType</Type>
 					<TypeName>ACId</TypeName>
 					<Name>_bookId</Name>
 				</AxMethodParameter>
 			</Parameters>
 			<ReturnType>
+				<Tags></Tags>
 				<Type>Enum</Type>
 				<TypeName>boolean</TypeName>
 			</ReturnType>
@@ -134,12 +119,14 @@
 			<Visibility>Public</Visibility>
 			<Parameters>
 				<AxMethodParameter>
+					<Tags></Tags>
 					<Type>ExtendedDataType</Type>
 					<TypeName>Qty</TypeName>
 					<Name>_newQty</Name>
 				</AxMethodParameter>
 			</Parameters>
 			<ReturnType>
+				<Tags></Tags>
 				<Type>Enum</Type>
 				<TypeName>boolean</TypeName>
 			</ReturnType>
@@ -148,6 +135,7 @@
 			<Name>getDataContract</Name>
 			<Visibility>Public</Visibility>
 			<ReturnType>
+				<Tags></Tags>
 				<Type>Class</Type>
 				<TypeName>ACBookInventoryUpdationDataContract</TypeName>
 			</ReturnType>

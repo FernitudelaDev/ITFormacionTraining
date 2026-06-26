@@ -32,6 +32,18 @@
 						<Type>Int32</Type>
 						<TypeName></TypeName>
 					</ReturnType>
+					<Variables>
+						<AxMethodVariable>
+							<Type>Int32</Type>
+							<TypeName></TypeName>
+							<Name>ret</Name>
+						</AxMethodVariable>
+						<AxMethodVariable>
+							<Type>Record</Type>
+							<TypeName>ACAuthorTable</TypeName>
+							<Name>author</Name>
+						</AxMethodVariable>
+					</Variables>
 				</Method>
 				<Method>
 					<Name>init</Name>
@@ -39,6 +51,18 @@
 					<ReturnType>
 						<TypeName></TypeName>
 					</ReturnType>
+					<Variables>
+						<AxMethodVariable>
+							<Type>Class</Type>
+							<TypeName>Query</TypeName>
+							<Name>authorQuery</Name>
+						</AxMethodVariable>
+						<AxMethodVariable>
+							<Type>Class</Type>
+							<TypeName>QueryBuildDataSource</TypeName>
+							<Name>qbds</Name>
+						</AxMethodVariable>
+					</Variables>
 				</Method>
 			</Methods>
 			<Fields>
@@ -51,6 +75,13 @@
 							<ReturnType>
 								<TypeName></TypeName>
 							</ReturnType>
+							<Variables>
+								<AxMethodVariable>
+									<Type>Class</Type>
+									<TypeName>FormDataSource</TypeName>
+									<Name>formDataSource</Name>
+								</AxMethodVariable>
+							</Variables>
 						</Method>
 					</Methods>
 				</Field>
@@ -69,6 +100,18 @@
 						<Type>Enum</Type>
 						<TypeName>boolean</TypeName>
 					</ReturnType>
+					<Variables>
+						<AxMethodVariable>
+							<Type>Enum</Type>
+							<TypeName>boolean</TypeName>
+							<Name>ret</Name>
+						</AxMethodVariable>
+						<AxMethodVariable>
+							<Type>Date</Type>
+							<TypeName></TypeName>
+							<Name>filteredDate</Name>
+						</AxMethodVariable>
+					</Variables>
 				</Method>
 			</Methods>
 		</Control>
