@@ -38,6 +38,7 @@ public class ACtmpAuthor extends FormRun
         private void loadTmpData()
         {
             ACtmpAuthorTable tmpAuthorTable;
+            ACtmpAuthorTable tmpAuthorTable2;
 
             ACAuthorTable authorTable;
 
@@ -49,9 +50,19 @@ public class ACtmpAuthor extends FormRun
                     tmpAuthorTable.insert();
                 }
             }
+
+            ACtmpAuthorTable.setTmpData(tmpAuthorTable);
+
             while select tmpAuthorTable
             {
                 info(tmpAuthorTable.Id);
+            }
+
+            tmpAuthorTable2.setTmpData(tmpAuthorTable);
+
+            while select tmpAuthorTable2
+            {
+                warning(tmpAuthorTable2.FirstName);
             }
         }
 
