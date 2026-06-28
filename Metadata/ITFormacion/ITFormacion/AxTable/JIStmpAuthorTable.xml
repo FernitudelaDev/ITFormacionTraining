@@ -6,7 +6,6 @@
 public class JIStmpAuthorTable extends common
 {
 }
-
 ]]></Declaration>
 		<Methods>
 			<Method>
@@ -65,10 +64,10 @@ public class JIStmpAuthorTable extends common
 
         switch (_fieldId)
         {
-            case fieldNum(FTDtmpAuthorTable, IsDead):
+            case fieldNum(JIStmpAuthorTable, IsDead):
                 this.modifiedIsDead();
                 break;
-            case fieldNum (FTDtmpAuthorTable, BirthDate):
+            case fieldNum (JIStmpAuthorTable, BirthDate):
                 //this.modifiedBirthDate();
                 //break
         }
@@ -101,7 +100,7 @@ public class JIStmpAuthorTable extends common
 
         if (formDataSource)
         {
-            formDataSource.object(fieldNum(FTDtmpAuthorTable, DeathDate)).allowEdit(this.IsDead);
+            formDataSource.object(fieldNum(JIStmpAuthorTable, DeathDate)).allowEdit(this.IsDead);
         }    
     }
 
@@ -110,7 +109,7 @@ public class JIStmpAuthorTable extends common
 			<Method>
 				<Name>initFromAuthorTable</Name>
 				<Source><![CDATA[
-    public void initFromAuthorTable(FTDAuthorTable _authorTable)
+    public void initFromAuthorTable(JISAuthorTable _authorTable)
     {
         this.Id         = _authorTable.Id;
         this.BirthDate  = _authorTable.BirthDate; 

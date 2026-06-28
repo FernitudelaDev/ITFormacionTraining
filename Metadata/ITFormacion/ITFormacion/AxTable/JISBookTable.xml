@@ -2,16 +2,10 @@
 <AxTable xmlns:i="http://www.w3.org/2001/XMLSchema-instance">
 	<Name>JISBookTable</Name>
 	<SourceCode>
-		<Declaration><![CDATA[
+		<Methods />
+		<UnparsableSource><![CDATA[
 public class JISBookTable extends common
 {
-}
-
-]]></Declaration>
-		<Methods>
-			<Method>
-				<Name>shouldThrowExceptionOnZeroDelete</Name>
-				<Source><![CDATA[
     /// <summary>
     /// Determines if concurrent deletes should throw exception.
     /// </summary>
@@ -21,25 +15,15 @@ public class JISBookTable extends common
         return true;
     }
 
-]]></Source>
-			</Method>
-			<Method>
-				<Name>exist</Name>
-				<Source><![CDATA[
-    public static boolean exist(FTDId _id)
+    public static boolean exist(JISId _id)
     {
-        return (select firstonly RecId from FTDBookTable
-            where FTDBookTable.Id == _id).RecId != 0;
+        return (select firstonly RecId from JISBookTable
+            where JISBookTable.Id == _id).RecId != 0;
     }
 
-]]></Source>
-			</Method>
-			<Method>
-				<Name>find</Name>
-				<Source><![CDATA[
-    public static FTDBookTable find(FTDId _id)
+    public static JISBookTable find(JISId _id)
     {
-        FTDBookTable bookTable;
+        JISBookTable bookTable;
 
         select firstonly bookTable
             where bookTable.Id == _id;
@@ -47,14 +31,9 @@ public class JISBookTable extends common
         return bookTable;
     }
 
-]]></Source>
-			</Method>
-			<Method>
-				<Name>findRecId</Name>
-				<Source><![CDATA[
-    public static FTDBookTable findRecId(RecId _recId)
+    public static JISBookTable findRecId(RecId _recId)
     {
-        FTDBookTable bookTable;
+        JISBookTable bookTable;
 
         select firstonly bookTable
             where bookTable.RecId == _recId;
@@ -62,14 +41,9 @@ public class JISBookTable extends common
         return bookTable;
     }
 
-]]></Source>
-			</Method>
-			<Method>
-				<Name>selectCountByGenre</Name>
-				<Source><![CDATA[
-    public static int selectCountByGenre(FTDGenreEnum _genre)
+    public static int selectCountByGenre(JISGenreEnum _genre)
     {
-        FTDBookTable bookTable;
+        JISBookTable bookTable;
 
         select count(RecId) from bookTable
             group by Genre
@@ -78,38 +52,23 @@ public class JISBookTable extends common
         return bookTable.RecId;
     }
 
-]]></Source>
-			</Method>
-			<Method>
-				<Name>dispAuthorFullName</Name>
-				<Source><![CDATA[
     [SysClientCacheDataMethod(true)]
-    public display FTDAuthorFullName dispAuthorFullName()
-    {
-        FTDAuthorTable authorTable = FTDAuthorTable::findRecId(this.Author);
+    public display JISAuthorFullName dispAuthorFullName()
+    
+        JISAuthorTable authorTable = JISAuthorTable::findRecId(this.Author);
 
         return authorTable.FirstName + ' ' + authorTable.LastName;
     }
 
-]]></Source>
-			</Method>
-			<Method>
-				<Name>dispCurrentInventory</Name>
-				<Source><![CDATA[
     [SysClientCacheDataMethod(true)]
-    public display FTDInventoryQty dispCurrentInventory()
+    public display JISInventoryQty dispCurrentInventory()
     {
         return this.currentInventory();
     }
 
-]]></Source>
-			</Method>
-			<Method>
-				<Name>currentInventory</Name>
-				<Source><![CDATA[
     public Qty currentInventory(RecId _excludeTransactionRecId = 0)
     {
-        FTDBookInventoryTransaction transactions;
+        JISBookInventoryTransaction transactions;
 
         select sum(Qty) from transactions
             where transactions.Book == this.RecId
@@ -118,42 +77,32 @@ public class JISBookTable extends common
         return transactions.Qty;
     }
 
-]]></Source>
-			</Method>
-			<Method>
-				<Name>AuthorTableLookup</Name>
-				<Source><![CDATA[
     public Common AuthorTableLookup(FormReferenceControl _formReferenceControl)
     {
-        SysReferenceTableLookup refTableLookup = SysReferenceTableLookup::newParameters(tableNum(FTDAuthorTable), _formReferenceControl);
+        SysReferenceTableLookup refTableLookup = SysReferenceTableLookup::newParameters(tableNum(JISAuthorTable), _formReferenceControl);
 
         refTableLookup.parmQuery(this.getLookupQuery());
-        refTableLookup.addLookupfield(fieldNum(FTDAuthorTable, Id));
-        refTableLookup.addLookupfield(fieldNum(FTDAuthorTable, FirstName));
-        refTableLookup.addLookupfield(fieldNum(FTDAuthorTable, LastName));
-        refTableLookup.addLookupfield(fieldNum(FTDAuthorTable, IsDead));
+        refTableLookup.addLookupfield(fieldNum(JISAuthorTable, Id));
+        refTableLookup.addLookupfield(fieldNum(JISAuthorTable, FirstName));
+        refTableLookup.addLookupfield(fieldNum(JISAuthorTable, LastName));
+        refTableLookup.addLookupfield(fieldNum(JISAuthorTable, IsDead));
                 
         return refTableLookup.performFormLookup();
     }
 
-]]></Source>
-			</Method>
-			<Method>
-				<Name>getLookupQuery</Name>
-				<Source><![CDATA[
     private Query getLookupQuery()
     {
         Query               q = new Query();
-        QuerybuildDataSource qbds = q.addDataSource(tableNum(FTDAuthorTable));
+        QuerybuildDataSource qbds = q.addDataSource(tableNum(JISAuthorTable));
                 
-        qbds.addRange(fieldNum(FTDAuthorTable, IsDead)).value(queryValue(NoYes::No));
+        qbds.addRange(fieldNum(JISAuthorTable, IsDead)).value(queryValue(NoYes::No));
 
         return q;
     }
 
-]]></Source>
-			</Method>
-		</Methods>
+}
+
+]]></UnparsableSource>
 	</SourceCode>
 	<FormRef>JISBook</FormRef>
 	<Label>@ITFormacion:BookTable</Label>
@@ -260,7 +209,7 @@ public class JISBookTable extends common
 			<Name>AuthorTable</Name>
 			<Cardinality>ZeroMore</Cardinality>
 			<OnDelete>Restricted</OnDelete>
-			<RelatedTable>FTDAuthorTable</RelatedTable>
+			<RelatedTable>JISAuthorTable</RelatedTable>
 			<RelatedTableCardinality>ExactlyOne</RelatedTableCardinality>
 			<RelationshipType>Association</RelationshipType>
 			<Constraints>

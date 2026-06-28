@@ -10,18 +10,19 @@ public class JISBookEntity extends common
 ]]></Declaration>
 		<Methods />
 	</SourceCode>
-	<FormRef>FTDBook</FormRef>
+	<FormRef>JISBook</FormRef>
 	<Label>@ITFormacion:BookTable</Label>
 	<SubscriberAccessLevel>
 		<Read>Allow</Read>
 	</SubscriberAccessLevel>
 	<DataManagementEnabled>Yes</DataManagementEnabled>
-	<DataManagementStagingTable>FTDBookStaging</DataManagementStagingTable>
+	<DataManagementStagingTable>JISBookStaging</DataManagementStagingTable>
 	<IsPublic>Yes</IsPublic>
 	<PrimaryCompanyContext>DataAreaId</PrimaryCompanyContext>
 	<PrimaryKey>EntityKey</PrimaryKey>
-	<PublicCollectionName>FTDBookTables</PublicCollectionName>
-	<PublicEntityName>FTDBookTable</PublicEntityName>
+	<PublicCollectionName>JISBookTables</PublicCollectionName>
+	<PublicEntityName>JISBookTable</PublicEntityName>
+	<SupportsSetBasedSqlOperations>Yes</SupportsSetBasedSqlOperations>
 	<DeleteActions />
 	<FieldGroups>
 		<AxTableFieldGroup>
@@ -119,7 +120,7 @@ public class Metadata extends QueryRun
 						<Name>AuthorTable</Name>
 						<DynamicFields>Yes</DynamicFields>
 						<IsReadOnly>Yes</IsReadOnly>
-						<Table>FTDAuthorTable</Table>
+						<Table>JISAuthorTable</Table>
 						<DataSources />
 						<DerivedDataSources />
 						<Fields />
@@ -127,7 +128,7 @@ public class Metadata extends QueryRun
 						<Relations>
 							<AxQuerySimpleDataSourceRelation>
 								<Name>AuthorTable</Name>
-								<JoinRelationName>FTDAuthorTable</JoinRelationName>
+								<JoinRelationName>JISAuthorTable</JoinRelationName>
 							</AxQuerySimpleDataSourceRelation>
 						</Relations>
 					</AxQuerySimpleEmbeddedDataSource>

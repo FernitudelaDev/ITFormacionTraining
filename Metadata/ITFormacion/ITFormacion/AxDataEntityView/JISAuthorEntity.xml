@@ -10,18 +10,18 @@ public class JISAuthorEntity extends common
 ]]></Declaration>
 		<Methods />
 	</SourceCode>
-	<FormRef>FTDAuthor</FormRef>
+	<FormRef>JISAuthor</FormRef>
 	<Label>@ITFormacion:Author</Label>
 	<SubscriberAccessLevel>
 		<Read>Allow</Read>
 	</SubscriberAccessLevel>
 	<DataManagementEnabled>Yes</DataManagementEnabled>
-	<DataManagementStagingTable>FTDAuthorStaging</DataManagementStagingTable>
+	<DataManagementStagingTable>JISAuthorStaging</DataManagementStagingTable>
 	<IsPublic>Yes</IsPublic>
 	<PrimaryCompanyContext>DataAreaId</PrimaryCompanyContext>
 	<PrimaryKey>EntityKey</PrimaryKey>
-	<PublicCollectionName>FTDAuthors</PublicCollectionName>
-	<PublicEntityName>FTDAuthor</PublicEntityName>
+	<PublicCollectionName>JISAuthors</PublicCollectionName>
+	<PublicEntityName>JISAuthor</PublicEntityName>
 	<SupportsSetBasedSqlOperations>Yes</SupportsSetBasedSqlOperations>
 	<DeleteActions />
 	<FieldGroups>

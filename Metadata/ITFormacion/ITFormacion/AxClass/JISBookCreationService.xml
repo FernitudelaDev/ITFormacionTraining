@@ -12,7 +12,7 @@ internal final class JISBookCreationService
 				<Name>findBook</Name>
 				<Source><![CDATA[
     [AifCollectionTypeAttribute('return', Types::Record, tableStr(JISBookTable))]
-	public JISBookTable findBook(FTDId _id)
+	public JISBookTable findBook(JISId _id)
     {
         return JISBookTable::find(_id);
     }

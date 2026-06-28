@@ -6,7 +6,6 @@
 public class JISBookInventoryTransaction extends common
 {
 }
-
 ]]></Declaration>
 		<Methods>
 			<Method>
@@ -46,7 +45,7 @@ public class JISBookInventoryTransaction extends common
 				<Source><![CDATA[
     private boolean validateTotalQtyIsNotBelowZero()
     {
-        Qty totalSavedPerBook = FTDBookTable::findRecId(this.Book).currentInventory(this.RecId);
+        Qty totalSavedPerBook = JISBookTable::findRecId(this.Book).currentInventory(this.RecId);
 
         if ((totalSavedPerBook + this.Qty) < 0)
         {

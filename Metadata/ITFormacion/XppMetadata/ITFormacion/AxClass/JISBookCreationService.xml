@@ -48,7 +48,7 @@
 				<AxMethodParameter>
 					<Tags></Tags>
 					<Type>ExtendedDataType</Type>
-					<TypeName>FTDId</TypeName>
+					<TypeName>JISId</TypeName>
 					<Name>_id</Name>
 				</AxMethodParameter>
 			</Parameters>

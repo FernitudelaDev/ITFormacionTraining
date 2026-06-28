@@ -6,6 +6,7 @@
 			<Name>shouldThrowExceptionOnZeroDelete</Name>
 			<Visibility>Public</Visibility>
 			<ReturnType>
+				<Tags></Tags>
 				<Type>Enum</Type>
 				<TypeName>boolean</TypeName>
 			</ReturnType>
@@ -14,21 +15,16 @@
 			<Name>validateWrite</Name>
 			<Visibility>Public</Visibility>
 			<ReturnType>
+				<Tags></Tags>
 				<Type>Enum</Type>
 				<TypeName>boolean</TypeName>
 			</ReturnType>
-			<Variables>
-				<AxMethodVariable>
-					<Type>Enum</Type>
-					<TypeName>boolean</TypeName>
-					<Name>ret</Name>
-				</AxMethodVariable>
-			</Variables>
 		</Method>
 		<Method>
 			<Name>validateBirthAndDeathDate</Name>
 			<Visibility>Public</Visibility>
 			<ReturnType>
+				<Tags></Tags>
 				<Type>Enum</Type>
 				<TypeName>boolean</TypeName>
 			</ReturnType>
@@ -38,12 +34,14 @@
 			<Visibility>Public</Visibility>
 			<Parameters>
 				<AxMethodParameter>
+					<Tags></Tags>
 					<Type>ExtendedDataType</Type>
 					<TypeName>FieldId</TypeName>
 					<Name>_fieldId</Name>
 				</AxMethodParameter>
 			</Parameters>
 			<ReturnType>
+				<Tags></Tags>
 				<TypeName></TypeName>
 			</ReturnType>
 		</Method>
@@ -51,6 +49,7 @@
 			<Name>modifiedIsDead</Name>
 			<Visibility>Public</Visibility>
 			<ReturnType>
+				<Tags></Tags>
 				<TypeName></TypeName>
 			</ReturnType>
 		</Method>
@@ -58,27 +57,23 @@
 			<Name>setDeathDateEditableInForm</Name>
 			<Visibility>Public</Visibility>
 			<ReturnType>
+				<Tags></Tags>
 				<TypeName></TypeName>
 			</ReturnType>
-			<Variables>
-				<AxMethodVariable>
-					<Type>Class</Type>
-					<TypeName>FormDataSource</TypeName>
-					<Name>formDatasource</Name>
-				</AxMethodVariable>
-			</Variables>
 		</Method>
 		<Method>
 			<Name>initFromAuthorTable</Name>
 			<Visibility>Public</Visibility>
 			<Parameters>
 				<AxMethodParameter>
-					<Type>ExtendedDataType</Type>
-					<TypeName>FTDAuthorTable</TypeName>
+					<Tags></Tags>
+					<Type>Record</Type>
+					<TypeName>JISAuthorTable</TypeName>
 					<Name>_authorTable</Name>
 				</AxMethodParameter>
 			</Parameters>
 			<ReturnType>
+				<Tags></Tags>
 				<TypeName></TypeName>
 			</ReturnType>
 		</Method>

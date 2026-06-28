@@ -6,7 +6,6 @@
 public class JISAuthorTable extends common
 {
 }
-
 ]]></Declaration>
 		<Methods>
 			<Method>
@@ -65,10 +64,10 @@ public class JISAuthorTable extends common
 
         switch (_fieldId)
         {
-            case fieldNum(FTDAuthorTable, IsDead):
+            case fieldNum(JISAuthorTable, IsDead):
                 this.modifiedIsDead();
                 break;
-            case fieldNum (FTDAuthorTable, BirthDate):
+            case fieldNum (JISAuthorTable, BirthDate):
                 //this.modifiedBirthDate();
                 //break
         }
@@ -101,7 +100,7 @@ public class JISAuthorTable extends common
 
         if (formDataSource)
         {
-            formDataSource.object(fieldNum(FTDAuthorTable, DeathDate)).allowEdit(this.IsDead);
+            formDataSource.object(fieldNum(JISAuthorTable, DeathDate)).allowEdit(this.IsDead);
         }    
     }
 
@@ -110,9 +109,9 @@ public class JISAuthorTable extends common
 			<Method>
 				<Name>findRecId</Name>
 				<Source><![CDATA[
-    public static FTDAuthorTable findRecId(RefRecId _refRecId)
+    public static JISAuthorTable findRecId(RefRecId _refRecId)
     {
-        FTDAuthorTable author;
+        JISAuthorTable author;
 
         select firstonly author
             where author.RecId == _refRecId;
@@ -127,13 +126,13 @@ public class JISAuthorTable extends common
 				<Source><![CDATA[
     public static void sqlQueryinXpp()
     {
-        //select * from FTDBOOKTABLE t1
-        //    inner join FTDAUTHORTABLE t2
+        //select * from JISBOOKTABLE t1
+        //    inner join JISAUTHORTABLE t2
         //    on t1.AUTHOR = t2.RECID and t1.DATAAREAID = t2.DATAAREAID
         //    where t1.DATAAREAID = 'usrt'
 
-        FTDBookTable bookTable;
-        FTDAuthorTable authorTable;
+        JISBookTable bookTable;
+        JISAuthorTable authorTable;
 
         while select Id, Name, Genre from bookTable
             join Id, FirstName, LastName from authorTable
@@ -148,9 +147,9 @@ public class JISAuthorTable extends common
 			<Method>
 				<Name>firstBookGenre</Name>
 				<Source><![CDATA[
-    public FTDGenreEnum firstBookGenre()
+    public JISGenreEnum firstBookGenre()
     {
-        FTDBookTable book;
+        JISBookTable book;
 
         select firstonly Genre 
             from book
