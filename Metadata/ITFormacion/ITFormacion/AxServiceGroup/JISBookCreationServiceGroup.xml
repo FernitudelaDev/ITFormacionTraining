@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<AxServiceGroup xmlns:i="http://www.w3.org/2001/XMLSchema-instance">
+	<Name>JISBookCreationServiceGroup</Name>
+	<Services>
+		<AxServiceGroupService>
+			<Name>JISBookCreationService</Name>
+			<Service>JISBookCreationService</Service>
+		</AxServiceGroupService>
+	</Services>
+</AxServiceGroup>

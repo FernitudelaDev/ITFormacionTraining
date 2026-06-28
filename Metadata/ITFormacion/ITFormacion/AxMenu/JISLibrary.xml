@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<AxMenu xmlns:i="http://www.w3.org/2001/XMLSchema-instance" xmlns="Microsoft.Dynamics.AX.Metadata.V1">
+	<Name>JISLibrary</Name>
+	<Label>@ITFormacion:Library</Label>
+	<Elements>
+		<AxMenuElement xmlns=""
+			i:type="AxMenuElementSubMenu">
+			<Name>Master</Name>
+			<Label>@ITFormacion:Master</Label>
+			<Elements>
+				<AxMenuElement xmlns=""
+					i:type="AxMenuElementMenuItem">
+					<Name>FTDBook</Name>
+					<MenuItemName>FTDBook</MenuItemName>
+				</AxMenuElement>
+				<AxMenuElement xmlns=""
+					i:type="AxMenuElementMenuItem">
+					<Name>FTDAuthor</Name>
+					<MenuItemName>FTDAuthor</MenuItemName>
+				</AxMenuElement>
+			</Elements>
+		</AxMenuElement>
+		<AxMenuElement xmlns=""
+			i:type="AxMenuElementSubMenu">
+			<Name>Transanctions</Name>
+			<Label>@ITFormacion:Transactions</Label>
+			<Elements>
+				<AxMenuElement xmlns=""
+					i:type="AxMenuElementMenuItem">
+					<Name>FTDBookTransactions</Name>
+					<MenuItemName>FTDBookTransactions</MenuItemName>
+				</AxMenuElement>
+			</Elements>
+		</AxMenuElement>
+		<AxMenuElement xmlns=""
+			i:type="AxMenuElementSubMenu">
+			<Name>Processes</Name>
+			<Label>@ITFormacion:Processes</Label>
+			<Elements>
+				<AxMenuElement xmlns=""
+					i:type="AxMenuElementMenuItem">
+					<Name>BookInventoryUpdationController</Name>
+					<MenuItemName>FTDBookInventoryUpdationController</MenuItemName>
+					<MenuItemType>Action</MenuItemType>
+				</AxMenuElement>
+			</Elements>
+		</AxMenuElement>
+	</Elements>
+</AxMenu>

@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<AxClass xmlns:i="http://www.w3.org/2001/XMLSchema-instance">
+	<Name>JISRunnableClassExample</Name>
+	<SourceCode>
+		<Declaration><![CDATA[
+internal final class JISRunnableClassExample
+{
+    ///// <summary>
+    ///// Class entry point. The system will call this method when a designated menu 
+    ///// is selected or when execution starts and this class is set as the startup class.
+    ///// </summary>
+    ///// <param name = "_args">The specified arguments.</param>
+    //public static void main(Args _args)
+    //{
+    //    int fantasyBooks = FTDBookTable::selectCountByGenre(FTDGenreEnum::Fantasy);
+    //    int historyBooks = FTDBookTable::selectCountByGenre(FTDGenreEnum::HistoryNovel);
+    //    int scienceBooks = FTDBookTable::selectCountByGenre(FTDGenreEnum::Science);
+
+    //    Info(strFmt("@ITFormacion:NumberOfBooksByGenre", fantasyBooks, historyBooks, scienceBooks));
+    //}
+
+    //public static void main(Args _args)
+    //{
+    //    FTDQueryVSSelect queryVsSelect = new FTDQueryVSSelect();
+
+    //    if (Box::yesNo('Do you want to run the select using the query', DialogButton::Yes) == DialogButton::Yes)
+    //    {
+    //        //queryVsSelect.reuseExistingQuery();
+    //        queryVsSelect.buildQueryFromCode();
+    //    }
+    //    else
+    //    {
+    //        queryVsSelect.selectExample();
+    //    }
+    //}
+
+    //Force exception.
+    //public static void Main(Args _args)
+    //{
+    //    FormRun formRun = _args.caller();
+
+    //    try
+    //    {
+    //        info(strFmt("Esta clase ha sido llamada por el formulario %1 - %2", 
+    //            formRun.name(), 
+    //            formRun.design().caption()));
+    //    }
+    //    catch (Exception::DuplicateKeyException)
+    //    {
+
+    //    }
+    //    catch
+    //    {
+    //        if (!formRun)
+    //        {
+    //            error("el proceso se ha llamdo sin formulario");
+    //        }
+    //    }
+
+    //}
+
+}
+
+]]></Declaration>
+		<Methods>
+			<Method>
+				<Name>Main</Name>
+				<Source><![CDATA[
+    public static void Main(Args _args)
+    {
+
+    }
+
+]]></Source>
+			</Method>
+		</Methods>
+	</SourceCode>
+</AxClass>

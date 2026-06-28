@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="utf-8"?>
+<AxClass xmlns:i="http://www.w3.org/2001/XMLSchema-instance">
+	<Name>JISBookInventoryUpdationController</Name>
+	<SourceCode>
+		<Declaration><![CDATA[
+final class JISBookInventoryUpdationController extends SysOperationServiceController
+{
+}
+]]></Declaration>
+		<Methods>
+			<Method>
+				<Name>Main</Name>
+				<Source><![CDATA[
+	public static void Main(Args _args)
+    {
+        JISBookInventoryUpdationController controller = JISBookInventoryUpdationController::Construct();
+
+        controller.initFromBookFormIfNeeded(_args);
+
+        if(controller.prompt())
+        {
+            controller.runOperation();
+        }
+    }
+
+]]></Source>
+			</Method>
+			<Method>
+				<Name>new</Name>
+				<Source><![CDATA[
+    protected void new(IdentifierName _className = '', 
+        IdentifierName _methodName = '', 
+        SysOperationExecutionMode _executionMode = SysOperationExecutionMode::Asynchronous)
+    {
+        super(_className, _methodName, _executionMode);
+    }
+
+]]></Source>
+			</Method>
+			<Method>
+				<Name>initFromBookFormIfNeeded</Name>
+				<Source><![CDATA[
+    public void initFromBookFormIfNeeded(Args _args)
+    {
+        FormRun callerFormRun = _args.caller();
+
+        if (callerFormRun
+            && callerFormRun.name() == formStr(JISBook))
+        {
+            //recupera el registro activo del formulario
+            JISBookTable bookActiveRecord = callerFormRun
+                .dataSource(formDataSourceStr(JISBook, JISBookTable))
+                .cursor();
+
+            JISBookInventoryUpdationDataContract contract = this.getDatacontract();
+            
+            contract.parmBookId(bookActiveRecord.Id);
+        }
+    }
+
+]]></Source>
+			</Method>
+			<Method>
+				<Name>Construct</Name>
+				<Source><![CDATA[
+    public static JISBookInventoryUpdationController Construct(SysOperationExecutionMode _executionMode = SysOperationExecutionMode::Asynchronous)
+    {
+        JISBookInventoryUpdationController controller =  new JISBookInventoryUpdationController(classStr(JISBookInventoryUpdationService),
+            methodStr(JISBookInventoryUpdationService, runProcess),
+            _executionMode);
+        
+        controller.parmDialogCaption("@ITFormacion:UpdateBookInventory");
+
+        return controller;
+    }
+
+]]></Source>
+			</Method>
+			<Method>
+				<Name>validateParameters</Name>
+				<Source><![CDATA[
+    public boolean validateParameters()
+    {
+        boolean ret = super();
+
+        if (ret)
+        {
+            JISBookInventoryUpdationDataContract dataContract = this.getDatacontract();
+            ret = this.validateBook(dataContract.parmBookId()) 
+                && this.validateNewQty(dataContract.parmNewQty());
+        }
+
+        return ret;
+    }
+
+]]></Source>
+			</Method>
+			<Method>
+				<Name>validateBook</Name>
+				<Source><![CDATA[
+    public boolean validateBook(JISId _bookId)
+    {
+        if (!JISBookTable::exist(_bookId))
+        {
+            return checkFailed(strFmt("@ITFormacion:Book1DoesNotExists", _bookId));
+        }
+
+        return true;
+    }
+
+]]></Source>
+			</Method>
+			<Method>
+				<Name>validateNewQty</Name>
+				<Source><![CDATA[
+    public boolean validateNewQty(Qty _newQty)
+    {
+        if (_newQty < 0)
+        {
+            return checkfailed("@ITFormacion:TransactionWouldMakeTheTotalNegative");
+        }
+
+        return true;
+    }
+
+]]></Source>
+			</Method>
+			<Method>
+				<Name>getDatacontract</Name>
+				<Source><![CDATA[
+    public JISBookInventoryUpdationDataContract getDatacontract()
+    {
+        return this.getDataContractObject(identifierStr(_dataContract));
+    }
+
+]]></Source>
+			</Method>
+		</Methods>
+	</SourceCode>
+</AxClass>

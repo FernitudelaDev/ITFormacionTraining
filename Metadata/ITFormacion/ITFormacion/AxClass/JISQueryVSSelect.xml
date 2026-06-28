@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<AxClass xmlns:i="http://www.w3.org/2001/XMLSchema-instance">
+	<Name>JISQueryVSSelect</Name>
+	<SourceCode>
+		<Declaration><![CDATA[
+internal final class JISQueryVSSelect
+{
+	//Ejercicio, query vs select: vamos a mostrar en un info, el id y nombre de los libros, 
+	//y el nombre y apellido de los autores de los libros de fantasía.
+
+}
+]]></Declaration>
+		<Methods>
+			<Method>
+				<Name>selectExample</Name>
+				<Source><![CDATA[
+	public void selectExample()
+    {
+        JISAuthorTable authorTable;
+        JISBookTable bookTable;
+
+        while select FirstName, LastName from authorTable
+            join Id, Name from bookTable
+            where authorTable.RecId == bookTable.Author
+            && bookTable.Genre == JISGenreEnum::Fantasy
+        {
+            info(strFmt('%1 %2 - %3 %4', 
+                bookTable.Id, 
+                bookTable.Name, 
+                authorTable.FirstName, 
+                authorTable.LastName));
+        }
+    }
+
+]]></Source>
+			</Method>
+			<Method>
+				<Name>reuseExistingQuery</Name>
+				<Source><![CDATA[
+	public void reuseExistingQuery()
+    {
+        Query jisBookAuthorFantasyQuery = new Query(queryStr(jisBookAuthorFantasyQuery));
+
+        this.runQuery(jisBookAuthorFantasyQuery);
+    }
+
+]]></Source>
+			</Method>
+			<Method>
+				<Name>buildQueryFromCode</Name>
+				<Source><![CDATA[
+    public void buildQueryFromCode()
+    {
+        Query jisBookAuthorFantasyQuery = new Query();
+
+        QueryBuildDataSource qbdsAuthorTable = jisBookAuthorFantasyQuery.addDataSource(tableNum(JISAuthorTable));
+        QueryBuildDataSource qbdsBookTable = qbdsAuthorTable.addDataSource(tableNum(JISBookTable));
+
+        qbdsBookTable.joinMode(JoinMode::InnerJoin);
+        //qbdsBookTable.relations(true);
+
+        qbdsBookTable.addLink(fieldNum(JISAuthorTable, RecId), 
+            fieldNum(JISBookTable, Author), 
+            qbdsAuthorTable.name());
+
+        QueryBuildRange qbrGenre = qbdsBookTable.addRange(fieldNum(JISBookTable, Genre));
+        qbrGenre.value(queryValue(JISGenreEnum::Fantasy));
+        //si queremos anadir un valor nuevo a un rango existente
+        qbrGenre.value(queryRangeConcat(qbrGenre.value(), queryValue(JISGenreEnum::HistoryNovel)));
+
+        this.runQuery(jisBookAuthorFantasyQuery);
+    }
+
+]]></Source>
+			</Method>
+			<Method>
+				<Name>runQuery</Name>
+				<Source><![CDATA[
+    public void runQuery(Query _q)
+    {
+        QueryRun qr = new QueryRun(_q);
+
+        while(qr.next())
+        {
+            JISBookTable bookTable = qr.get(tableNum(JISBookTable));
+            JISAuthorTable authorTable = qr.get(tableNum(JISAuthorTable));
+
+            info(strFmt('%1 %2 - %3 %4',
+                bookTable.Id,
+                bookTable.Name,
+                authorTable.FirstName,
+                authorTable.LastName));
+        }
+    }
+
+]]></Source>
+			</Method>
+		</Methods>
+	</SourceCode>
+</AxClass>

@@ -55,95 +55,95 @@
     <Folder Include="Views\" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="AxClass\FTDBookCreationService">
+    <Content Include="AxClass\JISBookCreationService">
       <SubType>Content</SubType>
-      <Name>FTDBookCreationService</Name>
-      <Link>Classes\FTDBookCreationService</Link>
+      <Name>JISBookCreationService</Name>
+      <Link>Classes\JISBookCreationService</Link>
     </Content>
-    <Content Include="AxClass\FTDBookInventoryUpdationController">
+    <Content Include="AxClass\JISBookInventoryUpdationController">
       <SubType>Content</SubType>
-      <Name>FTDBookInventoryUpdationController</Name>
-      <Link>Classes\FTDBookInventoryUpdationController</Link>
+      <Name>JISBookInventoryUpdationController</Name>
+      <Link>Classes\JISBookInventoryUpdationController</Link>
     </Content>
-    <Content Include="AxClass\FTDBookInventoryUpdationDataContract">
+    <Content Include="AxClass\JISBookInventoryUpdationDataContract">
       <SubType>Content</SubType>
-      <Name>FTDBookInventoryUpdationDataContract</Name>
-      <Link>Classes\FTDBookInventoryUpdationDataContract</Link>
+      <Name>JISBookInventoryUpdationDataContract</Name>
+      <Link>Classes\JISBookInventoryUpdationDataContract</Link>
     </Content>
-    <Content Include="AxClass\FTDBookInventoryUpdationService">
+    <Content Include="AxClass\JISBookInventoryUpdationService">
       <SubType>Content</SubType>
-      <Name>FTDBookInventoryUpdationService</Name>
-      <Link>Classes\FTDBookInventoryUpdationService</Link>
+      <Name>JISBookInventoryUpdationService</Name>
+      <Link>Classes\JISBookInventoryUpdationService</Link>
     </Content>
-    <Content Include="AxClass\FTDQueryVSSelect">
+    <Content Include="AxClass\JISQueryVSSelect">
       <SubType>Content</SubType>
-      <Name>FTDQueryVSSelect</Name>
-      <Link>Classes\FTDQueryVSSelect</Link>
+      <Name>JISQueryVSSelect</Name>
+      <Link>Classes\JISQueryVSSelect</Link>
     </Content>
-    <Content Include="AxClass\FTDRunnableClassExample">
+    <Content Include="AxClass\JISRunnableClassExample">
       <SubType>Content</SubType>
-      <Name>FTDRunnableClassExample</Name>
-      <Link>Classes\FTDRunnableClassExample</Link>
+      <Name>JISRunnableClassExample</Name>
+      <Link>Classes\JISRunnableClassExample</Link>
     </Content>
-    <Content Include="AxDataEntityView\FTDAuthorEntity">
+    <Content Include="AxDataEntityView\JISAuthorEntity">
       <SubType>Content</SubType>
-      <Name>FTDAuthorEntity</Name>
-      <Link>Data Entities\FTDAuthorEntity</Link>
+      <Name>JISAuthorEntity</Name>
+      <Link>Data Entities\JISAuthorEntity</Link>
     </Content>
-    <Content Include="AxDataEntityView\FTDBookEntity">
+    <Content Include="AxDataEntityView\JISBookEntity">
       <SubType>Content</SubType>
-      <Name>FTDBookEntity</Name>
-      <Link>Data Entities\FTDBookEntity</Link>
+      <Name>JISBookEntity</Name>
+      <Link>Data Entities\JISBookEntity</Link>
     </Content>
-    <Content Include="AxEdt\FTDAuthorFullName">
+    <Content Include="AxEdt\JISAuthorFullName">
       <SubType>Content</SubType>
-      <Name>FTDAuthorFullName</Name>
-      <Link>EDT Strings\FTDAuthorFullName</Link>
+      <Name>JISAuthorFullName</Name>
+      <Link>EDT Strings\JISAuthorFullName</Link>
     </Content>
-    <Content Include="AxEdt\FTDDeathDate">
+    <Content Include="AxEdt\JISDeathDate">
       <SubType>Content</SubType>
-      <Name>FTDDeathDate</Name>
-      <Link>EDT Dates\FTDDeathDate</Link>
+      <Name>JISDeathDate</Name>
+      <Link>EDT Dates\JISDeathDate</Link>
     </Content>
-    <Content Include="AxEdt\FTDId">
+    <Content Include="AxEdt\JISId">
       <SubType>Content</SubType>
-      <Name>FTDId</Name>
-      <Link>EDT Strings\FTDId</Link>
+      <Name>JISId</Name>
+      <Link>EDT Strings\JISId</Link>
     </Content>
-    <Content Include="AxEdt\FTDInventoryQty">
+    <Content Include="AxEdt\JISInventoryQty">
       <SubType>Content</SubType>
-      <Name>FTDInventoryQty</Name>
-      <Link>EDT Reals\FTDInventoryQty</Link>
+      <Name>JISInventoryQty</Name>
+      <Link>EDT Reals\JISInventoryQty</Link>
     </Content>
-    <Content Include="AxEdt\FTDInventTransId">
+    <Content Include="AxEdt\JISInventTransId">
       <SubType>Content</SubType>
-      <Name>FTDInventTransId</Name>
-      <Link>EDT Strings\FTDInventTransId</Link>
+      <Name>JISInventTransId</Name>
+      <Link>EDT Strings\JISInventTransId</Link>
     </Content>
-    <Content Include="AxEnum\FTDGenreEnum">
+    <Content Include="AxEnum\JISGenreEnum">
       <SubType>Content</SubType>
-      <Name>FTDGenreEnum</Name>
-      <Link>Base Enums\FTDGenreEnum</Link>
+      <Name>JISGenreEnum</Name>
+      <Link>Base Enums\JISGenreEnum</Link>
     </Content>
-    <Content Include="AxForm\FTDAuthor">
+    <Content Include="AxForm\JISAuthor">
       <SubType>Content</SubType>
-      <Name>FTDAuthor</Name>
-      <Link>Forms\FTDAuthor</Link>
+      <Name>JISAuthor</Name>
+      <Link>Forms\JISAuthor</Link>
     </Content>
-    <Content Include="AxForm\FTDBook">
+    <Content Include="AxForm\JISBook">
       <SubType>Content</SubType>
-      <Name>FTDBook</Name>
-      <Link>Forms\FTDBook</Link>
+      <Name>JISBook</Name>
+      <Link>Forms\JISBook</Link>
     </Content>
-    <Content Include="AxForm\FTDBookTransactions">
+    <Content Include="AxForm\JISBookTransactions">
       <SubType>Content</SubType>
-      <Name>FTDBookTransactions</Name>
-      <Link>Forms\FTDBookTransactions</Link>
+      <Name>JISBookTransactions</Name>
+      <Link>Forms\JISBookTransactions</Link>
     </Content>
-    <Content Include="AxForm\FTDtmpAuthor">
+    <Content Include="AxForm\JIStmpAuthor">
       <SubType>Content</SubType>
-      <Name>FTDtmpAuthor</Name>
-      <Link>Forms\FTDtmpAuthor</Link>
+      <Name>JIStmpAuthor</Name>
+      <Link>Forms\JIStmpAuthor</Link>
     </Content>
     <Content Include="AxLabelFile\ITFormacion_en-US">
       <SubType>Content</SubType>
@@ -160,180 +160,180 @@
       <Name>MainMenu.ITFormacion</Name>
       <Link>Menu Extensions\MainMenu.ITFormacion</Link>
     </Content>
-    <Content Include="AxMenuItemAction\FTDBookInventoryUpdationController">
+    <Content Include="AxMenuItemAction\JISBookInventoryUpdationController">
       <SubType>Content</SubType>
-      <Name>FTDBookInventoryUpdationController</Name>
-      <Link>Action Menu Items\FTDBookInventoryUpdationController</Link>
+      <Name>JISBookInventoryUpdationController</Name>
+      <Link>Action Menu Items\JISBookInventoryUpdationController</Link>
     </Content>
-    <Content Include="AxMenuItemDisplay\FTDAuthor">
+    <Content Include="AxMenuItemDisplay\JISAuthor">
       <SubType>Content</SubType>
-      <Name>FTDAuthor</Name>
-      <Link>Display Menu Items\FTDAuthor</Link>
+      <Name>JISAuthor</Name>
+      <Link>Display Menu Items\JISAuthor</Link>
     </Content>
-    <Content Include="AxMenuItemDisplay\FTDBook">
+    <Content Include="AxMenuItemDisplay\JISBook">
       <SubType>Content</SubType>
-      <Name>FTDBook</Name>
-      <Link>Display Menu Items\FTDBook</Link>
+      <Name>JISBook</Name>
+      <Link>Display Menu Items\JISBook</Link>
     </Content>
-    <Content Include="AxMenuItemDisplay\FTDBookGenreFiltered">
+    <Content Include="AxMenuItemDisplay\JISBookGenreFiltered">
       <SubType>Content</SubType>
-      <Name>FTDBookGenreFiltered</Name>
-      <Link>Display Menu Items\FTDBookGenreFiltered</Link>
+      <Name>JISBookGenreFiltered</Name>
+      <Link>Display Menu Items\JISBookGenreFiltered</Link>
     </Content>
-    <Content Include="AxMenuItemDisplay\FTDBookTransactions">
+    <Content Include="AxMenuItemDisplay\JISBookTransactions">
       <SubType>Content</SubType>
-      <Name>FTDBookTransactions</Name>
-      <Link>Display Menu Items\FTDBookTransactions</Link>
+      <Name>JISBookTransactions</Name>
+      <Link>Display Menu Items\JISBookTransactions</Link>
     </Content>
-    <Content Include="AxMenuItemDisplay\FTDtmpAuthor">
+    <Content Include="AxMenuItemDisplay\JIStmpAuthor">
       <SubType>Content</SubType>
-      <Name>FTDtmpAuthor</Name>
-      <Link>Display Menu Items\FTDtmpAuthor</Link>
+      <Name>JIStmpAuthor</Name>
+      <Link>Display Menu Items\JIStmpAuthor</Link>
     </Content>
-    <Content Include="AxMenu\FTDLibrary">
+    <Content Include="AxMenu\JISLibrary">
       <SubType>Content</SubType>
-      <Name>FTDLibrary</Name>
-      <Link>Menus\FTDLibrary</Link>
+      <Name>JISLibrary</Name>
+      <Link>Menus\JISLibrary</Link>
     </Content>
-    <Content Include="AxQuery\FTDBookAuthorFantasyQuery">
+    <Content Include="AxQuery\JISBookAuthorFantasyQuery">
       <SubType>Content</SubType>
-      <Name>FTDBookAuthorFantasyQuery</Name>
-      <Link>Simple Queries\FTDBookAuthorFantasyQuery</Link>
+      <Name>JISBookAuthorFantasyQuery</Name>
+      <Link>Simple Queries\JISBookAuthorFantasyQuery</Link>
     </Content>
-    <Content Include="AxSecurityDuty\FTDLibraryFormsMaintain">
+    <Content Include="AxSecurityDuty\JISLibraryFormsMaintain">
       <SubType>Content</SubType>
-      <Name>FTDLibraryFormsMaintain</Name>
-      <Link>Security Duties\FTDLibraryFormsMaintain</Link>
+      <Name>JISLibraryFormsMaintain</Name>
+      <Link>Security Duties\JISLibraryFormsMaintain</Link>
     </Content>
-    <Content Include="AxSecurityDuty\FTDLibraryFormsView">
+    <Content Include="AxSecurityDuty\JISLibraryFormsView">
       <SubType>Content</SubType>
-      <Name>FTDLibraryFormsView</Name>
-      <Link>Security Duties\FTDLibraryFormsView</Link>
+      <Name>JISLibraryFormsView</Name>
+      <Link>Security Duties\JISLibraryFormsView</Link>
     </Content>
-    <Content Include="AxSecurityDuty\FTDLibraryProcessesMaintain">
+    <Content Include="AxSecurityDuty\JISLibraryProcessesMaintain">
       <SubType>Content</SubType>
-      <Name>FTDLibraryProcessesMaintain</Name>
-      <Link>Security Duties\FTDLibraryProcessesMaintain</Link>
+      <Name>JISLibraryProcessesMaintain</Name>
+      <Link>Security Duties\JISLibraryProcessesMaintain</Link>
     </Content>
-    <Content Include="AxSecurityPrivilege\FTDAuthorEntityMaintain">
+    <Content Include="AxSecurityPrivilege\JISAuthorEntityMaintain">
       <SubType>Content</SubType>
-      <Name>FTDAuthorEntityMaintain</Name>
-      <Link>Security Privileges\FTDAuthorEntityMaintain</Link>
+      <Name>JISAuthorEntityMaintain</Name>
+      <Link>Security Privileges\JISAuthorEntityMaintain</Link>
     </Content>
-    <Content Include="AxSecurityPrivilege\FTDAuthorEntityView">
+    <Content Include="AxSecurityPrivilege\JISAuthorEntityView">
       <SubType>Content</SubType>
-      <Name>FTDAuthorEntityView</Name>
-      <Link>Security Privileges\FTDAuthorEntityView</Link>
+      <Name>JISAuthorEntityView</Name>
+      <Link>Security Privileges\JISAuthorEntityView</Link>
     </Content>
-    <Content Include="AxSecurityPrivilege\FTDAuthorMaintain">
+    <Content Include="AxSecurityPrivilege\JISAuthorMaintain">
       <SubType>Content</SubType>
-      <Name>FTDAuthorMaintain</Name>
-      <Link>Security Privileges\FTDAuthorMaintain</Link>
+      <Name>JISAuthorMaintain</Name>
+      <Link>Security Privileges\JISAuthorMaintain</Link>
     </Content>
-    <Content Include="AxSecurityPrivilege\FTDAuthorView">
+    <Content Include="AxSecurityPrivilege\JISAuthorView">
       <SubType>Content</SubType>
-      <Name>FTDAuthorView</Name>
-      <Link>Security Privileges\FTDAuthorView</Link>
+      <Name>JISAuthorView</Name>
+      <Link>Security Privileges\JISAuthorView</Link>
     </Content>
-    <Content Include="AxSecurityPrivilege\FTDBookGenreFilteredMaintain">
+    <Content Include="AxSecurityPrivilege\JISBookGenreFilteredMaintain">
       <SubType>Content</SubType>
-      <Name>FTDBookGenreFilteredMaintain</Name>
-      <Link>Security Privileges\FTDBookGenreFilteredMaintain</Link>
+      <Name>JISBookGenreFilteredMaintain</Name>
+      <Link>Security Privileges\JISBookGenreFilteredMaintain</Link>
     </Content>
-    <Content Include="AxSecurityPrivilege\FTDBookGenreFilteredView">
+    <Content Include="AxSecurityPrivilege\JISBookGenreFilteredView">
       <SubType>Content</SubType>
-      <Name>FTDBookGenreFilteredView</Name>
-      <Link>Security Privileges\FTDBookGenreFilteredView</Link>
+      <Name>JISBookGenreFilteredView</Name>
+      <Link>Security Privileges\JISBookGenreFilteredView</Link>
     </Content>
-    <Content Include="AxSecurityPrivilege\FTDBookInventoryUpdationController">
+    <Content Include="AxSecurityPrivilege\JISBookInventoryUpdationController">
       <SubType>Content</SubType>
-      <Name>FTDBookInventoryUpdationController</Name>
-      <Link>Security Privileges\FTDBookInventoryUpdationController</Link>
+      <Name>JISBookInventoryUpdationController</Name>
+      <Link>Security Privileges\JISBookInventoryUpdationController</Link>
     </Content>
-    <Content Include="AxSecurityPrivilege\FTDBookMaintain">
+    <Content Include="AxSecurityPrivilege\JISBookMaintain">
       <SubType>Content</SubType>
-      <Name>FTDBookMaintain</Name>
-      <Link>Security Privileges\FTDBookMaintain</Link>
+      <Name>JISBookMaintain</Name>
+      <Link>Security Privileges\JISBookMaintain</Link>
     </Content>
-    <Content Include="AxSecurityPrivilege\FTDBookTableEntityMaintain">
+    <Content Include="AxSecurityPrivilege\JISBookTableEntityMaintain">
       <SubType>Content</SubType>
-      <Name>FTDBookTableEntityMaintain</Name>
-      <Link>Security Privileges\FTDBookTableEntityMaintain</Link>
+      <Name>JISBookTableEntityMaintain</Name>
+      <Link>Security Privileges\JISBookTableEntityMaintain</Link>
     </Content>
-    <Content Include="AxSecurityPrivilege\FTDBookTableEntityView">
+    <Content Include="AxSecurityPrivilege\JISBookTableEntityView">
       <SubType>Content</SubType>
-      <Name>FTDBookTableEntityView</Name>
-      <Link>Security Privileges\FTDBookTableEntityView</Link>
+      <Name>JISBookTableEntityView</Name>
+      <Link>Security Privileges\JISBookTableEntityView</Link>
     </Content>
-    <Content Include="AxSecurityPrivilege\FTDBookTransactionsMaintain">
+    <Content Include="AxSecurityPrivilege\JISBookTransactionsMaintain">
       <SubType>Content</SubType>
-      <Name>FTDBookTransactionsMaintain</Name>
-      <Link>Security Privileges\FTDBookTransactionsMaintain</Link>
+      <Name>JISBookTransactionsMaintain</Name>
+      <Link>Security Privileges\JISBookTransactionsMaintain</Link>
     </Content>
-    <Content Include="AxSecurityPrivilege\FTDBookTransactionsView">
+    <Content Include="AxSecurityPrivilege\JISBookTransactionsView">
       <SubType>Content</SubType>
-      <Name>FTDBookTransactionsView</Name>
-      <Link>Security Privileges\FTDBookTransactionsView</Link>
+      <Name>JISBookTransactionsView</Name>
+      <Link>Security Privileges\JISBookTransactionsView</Link>
     </Content>
-    <Content Include="AxSecurityPrivilege\FTDBookView">
+    <Content Include="AxSecurityPrivilege\JISBookView">
       <SubType>Content</SubType>
-      <Name>FTDBookView</Name>
-      <Link>Security Privileges\FTDBookView</Link>
+      <Name>JISBookView</Name>
+      <Link>Security Privileges\JISBookView</Link>
     </Content>
-    <Content Include="AxSecurityRole\FTDLibraryMaintain">
+    <Content Include="AxSecurityRole\JISLibraryMaintain">
       <SubType>Content</SubType>
-      <Name>FTDLibraryMaintain</Name>
-      <Link>Security Roles\FTDLibraryMaintain</Link>
+      <Name>JISLibraryMaintain</Name>
+      <Link>Security Roles\JISLibraryMaintain</Link>
     </Content>
-    <Content Include="AxSecurityRole\FTDLibraryView">
+    <Content Include="AxSecurityRole\JISLibraryView">
       <SubType>Content</SubType>
-      <Name>FTDLibraryView</Name>
-      <Link>Security Roles\FTDLibraryView</Link>
+      <Name>JISLibraryView</Name>
+      <Link>Security Roles\JISLibraryView</Link>
     </Content>
-    <Content Include="AxServiceGroup\FTDBookCreationServiceGroup">
+    <Content Include="AxServiceGroup\JISBookCreationServiceGroup">
       <SubType>Content</SubType>
-      <Name>FTDBookCreationServiceGroup</Name>
-      <Link>Service Groups\FTDBookCreationServiceGroup</Link>
+      <Name>JISBookCreationServiceGroup</Name>
+      <Link>Service Groups\JISBookCreationServiceGroup</Link>
     </Content>
-    <Content Include="AxService\FTDBookCreationService">
+    <Content Include="AxService\JISBookCreationService">
       <SubType>Content</SubType>
-      <Name>FTDBookCreationService</Name>
-      <Link>Services\FTDBookCreationService</Link>
+      <Name>JISBookCreationService</Name>
+      <Link>Services\JISBookCreationService</Link>
     </Content>
-    <Content Include="AxTable\FTDAuthorStaging">
+    <Content Include="AxTable\JISAuthorStaging">
       <SubType>Content</SubType>
-      <Name>FTDAuthorStaging</Name>
-      <Link>Tables\FTDAuthorStaging</Link>
+      <Name>JISAuthorStaging</Name>
+      <Link>Tables\JISAuthorStaging</Link>
     </Content>
-    <Content Include="AxTable\FTDAuthorTable">
+    <Content Include="AxTable\JISAuthorTable">
       <SubType>Content</SubType>
-      <Name>FTDAuthorTable</Name>
-      <Link>Tables\FTDAuthorTable</Link>
+      <Name>JISAuthorTable</Name>
+      <Link>Tables\JISAuthorTable</Link>
     </Content>
-    <Content Include="AxTable\FTDBookInventoryTransaction">
+    <Content Include="AxTable\JISBookInventoryTransaction">
       <SubType>Content</SubType>
-      <Name>FTDBookInventoryTransaction</Name>
-      <Link>Tables\FTDBookInventoryTransaction</Link>
+      <Name>JISBookInventoryTransaction</Name>
+      <Link>Tables\JISBookInventoryTransaction</Link>
     </Content>
-    <Content Include="AxTable\FTDBookStaging">
+    <Content Include="AxTable\JISBookStaging">
       <SubType>Content</SubType>
-      <Name>FTDBookStaging</Name>
-      <Link>Tables\FTDBookStaging</Link>
+      <Name>JISBookStaging</Name>
+      <Link>Tables\JISBookStaging</Link>
     </Content>
-    <Content Include="AxTable\FTDBookTable">
+    <Content Include="AxTable\JISBookTable">
       <SubType>Content</SubType>
-      <Name>FTDBookTable</Name>
-      <Link>Tables\FTDBookTable</Link>
+      <Name>JISBookTable</Name>
+      <Link>Tables\JISBookTable</Link>
     </Content>
-    <Content Include="AxTable\FTDtmpAuthorTable">
+    <Content Include="AxTable\JIStmpAuthorTable">
       <SubType>Content</SubType>
-      <Name>FTDtmpAuthorTable</Name>
-      <Link>Tables\FTDtmpAuthorTable</Link>
+      <Name>JIStmpAuthorTable</Name>
+      <Link>Tables\JIStmpAuthorTable</Link>
     </Content>
-    <Content Include="AxView\FTDBookAuthorFantasyView">
+    <Content Include="AxView\JISBookAuthorFantasyView">
       <SubType>Content</SubType>
-      <Name>FTDBookAuthorFantasyView</Name>
-      <Link>Views\FTDBookAuthorFantasyView</Link>
+      <Name>JISBookAuthorFantasyView</Name>
+      <Link>Views\JISBookAuthorFantasyView</Link>
     </Content>
     <Content Include="ITFormacion.en-US.label.txt">
       <SubType>Content</SubType>
