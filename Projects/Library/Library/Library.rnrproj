@@ -49,6 +49,7 @@
     <Folder Include="Service Groups\" />
     <Folder Include="Services\" />
     <Folder Include="Simple Queries\" />
+    <Folder Include="Table Extensions\" />
     <Folder Include="Tables\" />
   </ItemGroup>
   <ItemGroup>
@@ -211,6 +212,11 @@
       <SubType>Content</SubType>
       <Name>SMHBookCreationService</Name>
       <Link>Services\SMHBookCreationService</Link>
+    </Content>
+    <Content Include="AxTableExtension\SalesTable.ITFormacion">
+      <SubType>Content</SubType>
+      <Name>SalesTable.ITFormacion</Name>
+      <Link>Table Extensions\SalesTable.ITFormacion</Link>
     </Content>
     <Content Include="AxTable\FTDBookStaging">
       <SubType>Content</SubType>

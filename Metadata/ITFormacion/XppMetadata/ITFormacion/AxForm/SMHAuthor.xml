@@ -18,6 +18,13 @@
 						<Type>Int32</Type>
 						<TypeName></TypeName>
 					</ReturnType>
+					<Variables>
+						<AxMethodVariable>
+							<Type>Int32</Type>
+							<TypeName></TypeName>
+							<Name>ret</Name>
+						</AxMethodVariable>
+					</Variables>
 				</Method>
 				<Method>
 					<Name>init</Name>
@@ -25,6 +32,13 @@
 					<ReturnType>
 						<TypeName></TypeName>
 					</ReturnType>
+					<Variables>
+						<AxMethodVariable>
+							<Type>Class</Type>
+							<TypeName>QueryBuildDataSource</TypeName>
+							<Name>qbds</Name>
+						</AxMethodVariable>
+					</Variables>
 				</Method>
 			</Methods>
 			<Fields />
@@ -42,6 +56,18 @@
 						<Type>Enum</Type>
 						<TypeName>boolean</TypeName>
 					</ReturnType>
+					<Variables>
+						<AxMethodVariable>
+							<Type>Enum</Type>
+							<TypeName>boolean</TypeName>
+							<Name>ret</Name>
+						</AxMethodVariable>
+						<AxMethodVariable>
+							<Type>Date</Type>
+							<TypeName></TypeName>
+							<Name>filterDate</Name>
+						</AxMethodVariable>
+					</Variables>
 				</Method>
 			</Methods>
 		</Control>
