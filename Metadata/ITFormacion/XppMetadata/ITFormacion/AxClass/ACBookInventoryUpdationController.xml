@@ -40,7 +40,7 @@
 		</Method>
 		<Method>
 			<Name>new</Name>
-			<Visibility>Public</Visibility>
+			<Visibility>Protected</Visibility>
 			<Parameters>
 				<AxMethodParameter>
 					<Tags></Tags>
@@ -70,7 +70,7 @@
 			</ReturnType>
 		</Method>
 		<Method>
-			<Name>construct</Name>
+			<Name>Construct</Name>
 			<IsStatic>true</IsStatic>
 			<Visibility>Public</Visibility>
 			<Parameters>

@@ -5,9 +5,20 @@
 		<Declaration><![CDATA[
 public class ACAuthorTable extends common
 {
+
 }
 ]]></Declaration>
 		<Methods>
+			<Method>
+				<Name>shouldThrowExceptionOnZeroDelete</Name>
+				<Source><![CDATA[
+    public boolean shouldThrowExceptionOnZeroDelete()
+    {
+        return true;
+    }
+
+]]></Source>
+			</Method>
 			<Method>
 				<Name>validateWrite</Name>
 				<Source><![CDATA[

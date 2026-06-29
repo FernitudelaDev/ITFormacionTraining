@@ -15,6 +15,8 @@ final class ACBookInventoryUpdationController extends SysOperationServiceControl
     {
         ACBookInventoryUpdationController controller = ACBookInventoryUpdationController::construct();
 
+        controller.initFromBookFormIfNeeded(_args);
+
         if (controller.prompt())
         {
             controller.runOperation();
@@ -46,7 +48,7 @@ final class ACBookInventoryUpdationController extends SysOperationServiceControl
 			<Method>
 				<Name>new</Name>
 				<Source><![CDATA[
-    public void new(
+    protected void new(
         IdentifierName             _className     = '',
         IdentifierName             _methodName    = '',
         SysOperationExecutionMode  _executionMode = SysOperationExecutionMode::Asynchronous)
@@ -57,13 +59,13 @@ final class ACBookInventoryUpdationController extends SysOperationServiceControl
 ]]></Source>
 			</Method>
 			<Method>
-				<Name>construct</Name>
+				<Name>Construct</Name>
 				<Source><![CDATA[
-    public static ACBookInventoryUpdationController construct(
+    public static ACBookInventoryUpdationController Construct(
         SysOperationExecutionMode _executionMode = SysOperationExecutionMode::Asynchronous)
     {
         ACBookInventoryUpdationController controller = new ACBookInventoryUpdationController(
-            classStr(ACBookInventoryUpdationController),
+            classStr(ACBookInventoryUpdationService),
             methodStr(ACBookInventoryUpdationService, runProcess),
             _executionMode);
 
@@ -79,18 +81,17 @@ final class ACBookInventoryUpdationController extends SysOperationServiceControl
 				<Source><![CDATA[
     public boolean validateParameters()
     {
-        boolean ret;
+        boolean ret = super();
 
-        ret = super();
         if(ret)
         {
             ACBookInventoryUpdationDataContract dataContract = this.getDataContract();
             ret = this.validateBook(dataContract.parmBookId())
-                && this.validateNewQty(dataContract.parmNewQty());
-
+        && this.validateNewQty(dataContract.parmNewQty());
         }
 
         return ret;
+
     }
 
 ]]></Source>
@@ -100,7 +101,7 @@ final class ACBookInventoryUpdationController extends SysOperationServiceControl
 				<Source><![CDATA[
     public boolean validateBook(ACId _bookId)
     {
-        if(!ACBookTable::exists(_bookId))
+        if(!ACBookTable::exist(_bookId))
         {
             return checkFailed(strFmt("@ACItFormacionLabels:BookDoesNotExist", _bookId));
         }

@@ -105,7 +105,24 @@ public class ACBook extends FormRun
 				<Fields />
 			</DataSource>
 		</DataSources>
-		<DataControls xmlns="" />
+		<DataControls xmlns="">
+			<Control>
+				<Name>GroupGrid_Author</Name>
+				<Type>ReferenceGroup</Type>
+				<Methods>
+					<Method>
+						<Name>lookupReference</Name>
+						<Source><![CDATA[
+        public Common lookupReference(FormReferenceControl _formReferenceControl = null)
+        {
+            return ACBookTable.AuthorTableLookup(this); 
+        }
+
+]]></Source>
+					</Method>
+				</Methods>
+			</Control>
+		</DataControls>
 		<Members xmlns="" />
 	</SourceCode>
 	<DataSources>

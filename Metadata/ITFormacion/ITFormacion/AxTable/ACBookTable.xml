@@ -25,9 +25,9 @@ public class ACBookTable extends common
 ]]></Source>
 			</Method>
 			<Method>
-				<Name>exists</Name>
+				<Name>exist</Name>
 				<Source><![CDATA[
-    public static boolean exists(ACId _id)
+    public static boolean exist(ACId _id)
     {
         ACBookTable booktable;
 
@@ -113,6 +113,39 @@ public class ACBookTable extends common
     public display ACInventoryQty dispCurrentInventory()
     {
         return this.currentInventory();
+    }
+
+]]></Source>
+			</Method>
+			<Method>
+				<Name>AuthorTableLookup</Name>
+				<Source><![CDATA[
+    public Common AuthorTableLookup(FormReferenceControl _formReferenceControl)
+    {
+        SysReferenceTableLookup refTableLookup = SysReferenceTableLookup::newParameters(tableNum(ACAuthorTable), _formReferenceControl);
+
+        refTableLookup.parmQuery(this.getLookupQuery());
+        refTableLookup.addLookupfield(fieldNum(ACAuthorTable, Id));
+        refTableLookup.addLookupfield(fieldNum(ACAuthorTable, FirstName));
+        refTableLookup.addLookupfield(fieldNum(ACAuthorTable, LastName));
+        refTableLookup.addLookupfield(fieldNum(ACAuthorTable, IsDead));
+
+        return refTableLookup.performFormLookup();
+    }
+
+]]></Source>
+			</Method>
+			<Method>
+				<Name>getLookupQuery</Name>
+				<Source><![CDATA[
+    private Query getLookupQuery()
+    {
+        Query q = new Query();
+        QueryBuildDataSource qbds = q.addDataSource(tableNum(ACAuthorTable));
+
+        qbds.addRange(fieldNum(ACAuthorTable, IsDead)).value(queryValue(NoYes::No));
+
+        return q;
     }
 
 ]]></Source>

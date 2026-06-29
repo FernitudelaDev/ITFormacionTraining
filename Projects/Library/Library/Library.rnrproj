@@ -220,10 +220,10 @@
       <Name>ACBookAuthorFantasyQuery</Name>
       <Link>Simple Queries\ACBookAuthorFantasyQuery</Link>
     </Content>
-    <Content Include="AxSecurityDuty\ACLibraryFormsMantain">
+    <Content Include="AxSecurityDuty\ACLibraryFormsMaintain">
       <SubType>Content</SubType>
-      <Name>ACLibraryFormsMantain</Name>
-      <Link>Security Duties\ACLibraryFormsMantain</Link>
+      <Name>ACLibraryFormsMaintain</Name>
+      <Link>Security Duties\ACLibraryFormsMaintain</Link>
     </Content>
     <Content Include="AxSecurityDuty\ACLibraryFormsView">
       <SubType>Content</SubType>
@@ -304,6 +304,11 @@
       <SubType>Content</SubType>
       <Name>ACLibraryMaintain</Name>
       <Link>Security Roles\ACLibraryMaintain</Link>
+    </Content>
+    <Content Include="AxSecurityRole\ACLibraryView">
+      <SubType>Content</SubType>
+      <Name>ACLibraryView</Name>
+      <Link>Security Roles\ACLibraryView</Link>
     </Content>
     <Content Include="AxServiceGroup\ACBookCreationServiceGroup">
       <SubType>Content</SubType>

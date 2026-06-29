@@ -70,11 +70,15 @@ public class ACBookInventoryTransaction extends common
 			</Method>
 		</Methods>
 	</SourceCode>
+	<FormRef>ACBookTransactions</FormRef>
 	<Label>@ACItFormacionLabels:InventoryTransaction</Label>
 	<SubscriberAccessLevel>
 		<Read>Allow</Read>
 	</SubscriberAccessLevel>
+	<TitleField1>Book</TitleField1>
+	<TitleField2>InventoryQty</TitleField2>
 	<AllowRowVersionChangeTracking>Yes</AllowRowVersionChangeTracking>
+	<ReplacementKey>BookInventoryTransactionIdx</ReplacementKey>
 	<DeleteActions />
 	<FieldGroups>
 		<AxTableFieldGroup>
@@ -88,7 +92,14 @@ public class ACBookInventoryTransaction extends common
 		<AxTableFieldGroup>
 			<Name>AutoIdentification</Name>
 			<AutoPopulate>Yes</AutoPopulate>
-			<Fields />
+			<Fields>
+				<AxTableFieldGroupField>
+					<DataField>InventTransId</DataField>
+				</AxTableFieldGroupField>
+				<AxTableFieldGroupField>
+					<DataField>Book</DataField>
+				</AxTableFieldGroupField>
+			</Fields>
 		</AxTableFieldGroup>
 		<AxTableFieldGroup>
 			<Name>AutoSummary</Name>
@@ -103,8 +114,10 @@ public class ACBookInventoryTransaction extends common
 		<AxTableField xmlns=""
 			i:type="AxTableFieldString">
 			<Name>InventTransId</Name>
+			<AllowEdit>No</AllowEdit>
 			<ExtendedDataType>ACInventTransId</ExtendedDataType>
 			<IgnoreEDTRelation>Yes</IgnoreEDTRelation>
+			<Mandatory>Yes</Mandatory>
 		</AxTableField>
 		<AxTableField xmlns=""
 			i:type="AxTableFieldReal">
@@ -128,6 +141,9 @@ public class ACBookInventoryTransaction extends common
 			<Fields>
 				<AxTableIndexField>
 					<DataField>InventTransId</DataField>
+				</AxTableIndexField>
+				<AxTableIndexField>
+					<DataField>Book</DataField>
 				</AxTableIndexField>
 			</Fields>
 		</AxTableIndex>

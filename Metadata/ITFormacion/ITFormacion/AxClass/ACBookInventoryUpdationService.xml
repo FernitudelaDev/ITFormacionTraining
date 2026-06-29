@@ -19,6 +19,7 @@ final class ACBookInventoryUpdationService extends SysOperationServiceBase
 
         ACBookInventoryTransaction inventoryTransaction;
 
+        inventoryTransaction.InventTransId = guid2Str(newGuid());
         inventoryTransaction.Book = book.RecId;
         inventoryTransaction.InventoryQty = newTransactionQtyNeeded;
 
