@@ -34,13 +34,16 @@
   </PropertyGroup>
   <ItemGroup>
     <Folder Include="Action Menu Items\" />
+    <Folder Include="Base Enum Extensions\" />
     <Folder Include="Base Enums\" />
     <Folder Include="Classes\" />
     <Folder Include="Data Entities\" />
+    <Folder Include="Data Entity Extensions\" />
     <Folder Include="Display Menu Items\" />
     <Folder Include="EDT Dates\" />
     <Folder Include="EDT Reals\" />
     <Folder Include="EDT Strings\" />
+    <Folder Include="Form Extensions\" />
     <Folder Include="Forms\" />
     <Folder Include="Label Files\" />
     <Folder Include="Menu Extensions\" />
@@ -51,6 +54,8 @@
     <Folder Include="Service Groups\" />
     <Folder Include="Services\" />
     <Folder Include="Simple Queries\" />
+    <Folder Include="Simple Query Extensions\" />
+    <Folder Include="Table Extensions\" />
     <Folder Include="Tables\" />
     <Folder Include="Views\" />
   </ItemGroup>
@@ -84,6 +89,41 @@
       <SubType>Content</SubType>
       <Name>FTDRunnableClassExample</Name>
       <Link>Classes\FTDRunnableClassExample</Link>
+    </Content>
+    <Content Include="AxClass\SalesLine_ITFormacion_Extension">
+      <SubType>Content</SubType>
+      <Name>SalesLine_ITFormacion_Extension</Name>
+      <Link>Classes\SalesLine_ITFormacion_Extension</Link>
+    </Content>
+    <Content Include="AxClass\SalesTableForm_ITFormacion_EventHandler">
+      <SubType>Content</SubType>
+      <Name>SalesTableForm_ITFormacion_EventHandler</Name>
+      <Link>Classes\SalesTableForm_ITFormacion_EventHandler</Link>
+    </Content>
+    <Content Include="AxClass\SalesTableForm_ITFormacion_Extension">
+      <SubType>Content</SubType>
+      <Name>SalesTableForm_ITFormacion_Extension</Name>
+      <Link>Classes\SalesTableForm_ITFormacion_Extension</Link>
+    </Content>
+    <Content Include="AxClass\SalesTable_ITFormacion_Extension">
+      <SubType>Content</SubType>
+      <Name>SalesTable_ITFormacion_Extension</Name>
+      <Link>Classes\SalesTable_ITFormacion_Extension</Link>
+    </Content>
+    <Content Include="AxClass\SalesTable_SalesTable_FTDBookTable_ITFormacion_Extension">
+      <SubType>Content</SubType>
+      <Name>SalesTable_SalesTable_FTDBookTable_ITFormacion_Extension</Name>
+      <Link>Classes\SalesTable_SalesTable_FTDBookTable_ITFormacion_Extension</Link>
+    </Content>
+    <Content Include="AxClass\SalesTable_SalesTable_ITFormacion_Extension">
+      <SubType>Content</SubType>
+      <Name>SalesTable_SalesTable_ITFormacion_Extension</Name>
+      <Link>Classes\SalesTable_SalesTable_ITFormacion_Extension</Link>
+    </Content>
+    <Content Include="AxDataEntityViewExtension\SalesOrderHeaderV4Entity.ITFormacion">
+      <SubType>Content</SubType>
+      <Name>SalesOrderHeaderV4Entity.ITFormacion</Name>
+      <Link>Data Entity Extensions\SalesOrderHeaderV4Entity.ITFormacion</Link>
     </Content>
     <Content Include="AxDataEntityView\FTDAuthorEntity">
       <SubType>Content</SubType>
@@ -125,6 +165,11 @@
       <Name>FTDGenreEnum</Name>
       <Link>Base Enums\FTDGenreEnum</Link>
     </Content>
+    <Content Include="AxFormExtension\SalesTable.ITFormacion">
+      <SubType>Content</SubType>
+      <Name>SalesTable.ITFormacion</Name>
+      <Link>Form Extensions\SalesTable.ITFormacion</Link>
+    </Content>
     <Content Include="AxForm\FTDAuthor">
       <SubType>Content</SubType>
       <Name>FTDAuthor</Name>
@@ -154,6 +199,11 @@
       <SubType>Content</SubType>
       <Name>ITFormacion_es-ES</Name>
       <Link>Label Files\ITFormacion_es-ES</Link>
+    </Content>
+    <Content Include="AxMenuExtension\AccountsReceivable.ITFormacion">
+      <SubType>Content</SubType>
+      <Name>AccountsReceivable.ITFormacion</Name>
+      <Link>Menu Extensions\AccountsReceivable.ITFormacion</Link>
     </Content>
     <Content Include="AxMenuExtension\MainMenu.ITFormacion">
       <SubType>Content</SubType>
@@ -185,6 +235,11 @@
       <Name>FTDBookTransactions</Name>
       <Link>Display Menu Items\FTDBookTransactions</Link>
     </Content>
+    <Content Include="AxMenuItemDisplay\FTDCustTableListPage">
+      <SubType>Content</SubType>
+      <Name>FTDCustTableListPage</Name>
+      <Link>Display Menu Items\FTDCustTableListPage</Link>
+    </Content>
     <Content Include="AxMenuItemDisplay\FTDtmpAuthor">
       <SubType>Content</SubType>
       <Name>FTDtmpAuthor</Name>
@@ -194,6 +249,11 @@
       <SubType>Content</SubType>
       <Name>FTDLibrary</Name>
       <Link>Menus\FTDLibrary</Link>
+    </Content>
+    <Content Include="AxQuerySimpleExtension\AssetBalances.ITFormacion">
+      <SubType>Content</SubType>
+      <Name>AssetBalances.ITFormacion</Name>
+      <Link>Simple Query Extensions\AssetBalances.ITFormacion</Link>
     </Content>
     <Content Include="AxQuery\FTDBookAuthorFantasyQuery">
       <SubType>Content</SubType>
@@ -299,6 +359,21 @@
       <SubType>Content</SubType>
       <Name>FTDBookCreationService</Name>
       <Link>Services\FTDBookCreationService</Link>
+    </Content>
+    <Content Include="AxTableExtension\SalesLine.ITFormacion">
+      <SubType>Content</SubType>
+      <Name>SalesLine.ITFormacion</Name>
+      <Link>Table Extensions\SalesLine.ITFormacion</Link>
+    </Content>
+    <Content Include="AxTableExtension\SalesOrderHeaderV4Staging.ITFormacion">
+      <SubType>Content</SubType>
+      <Name>SalesOrderHeaderV4Staging.ITFormacion</Name>
+      <Link>Table Extensions\SalesOrderHeaderV4Staging.ITFormacion</Link>
+    </Content>
+    <Content Include="AxTableExtension\SalesTable.ITFormacion">
+      <SubType>Content</SubType>
+      <Name>SalesTable.ITFormacion</Name>
+      <Link>Table Extensions\SalesTable.ITFormacion</Link>
     </Content>
     <Content Include="AxTable\FTDAuthorStaging">
       <SubType>Content</SubType>

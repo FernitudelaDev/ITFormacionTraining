@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<AxFormExtension xmlns:i="http://www.w3.org/2001/XMLSchema-instance" xmlns="Microsoft.Dynamics.AX.Metadata.V6">
+	<Name>SalesTable.ITFormacion</Name>
+	<ControlModifications />
+	<Controls>
+		<AxFormExtensionControl xmlns="">
+			<Name>FormExtensionControlbbl430mk1</Name>
+			<FormControl xmlns=""
+				i:type="AxFormGroupControl">
+				<Name>FTDLibraryGroup</Name>
+				<Type>Group</Type>
+				<FormControlExtension
+					i:nil="true" />
+				<Controls>
+					<AxFormControl xmlns=""
+						i:type="AxFormReferenceGroupControl">
+						<Name>SalesTable_FTDBookTable</Name>
+						<Type>ReferenceGroup</Type>
+						<FormControlExtension
+							i:nil="true" />
+						<Controls />
+						<DataSource>SalesTable</DataSource>
+						<ReferenceField>FTDBookTable</ReferenceField>
+					</AxFormControl>
+					<AxFormControl xmlns=""
+						i:type="AxFormStringControl">
+						<Name>SalesTable_FTDdispAuthorFullName</Name>
+						<Type>String</Type>
+						<FormControlExtension
+							i:nil="true" />
+						<DataMethod>SalesTable_ITFormacion_Extension.ftdDispAuthorFullName</DataMethod>
+						<DataSource>SalesTable</DataSource>
+					</AxFormControl>
+				</Controls>
+				<Caption>@ITFormacion:Library</Caption>
+			</FormControl>
+			<Parent>LineViewHeader</Parent>
+		</AxFormExtensionControl>
+		<AxFormExtensionControl xmlns="">
+			<Name>FormExtensionControlh0wkunmw1</Name>
+			<FormControl xmlns=""
+				i:type="AxFormReferenceGroupControl">
+				<Name>SalesLine_FTDBookTable</Name>
+				<Type>ReferenceGroup</Type>
+				<FormControlExtension
+					i:nil="true" />
+				<Controls />
+				<DataSource>SalesLine</DataSource>
+				<ReferenceField>FTDBookTable</ReferenceField>
+			</FormControl>
+			<Parent>SalesLineGrid</Parent>
+			<PositionType>AfterItem</PositionType>
+			<PreviousSibling>InventDistinctProductExpanded_DisplayProductNumber</PreviousSibling>
+		</AxFormExtensionControl>
+		<AxFormExtensionControl xmlns="">
+			<Name>FormExtensionControlrgszlwze1</Name>
+			<FormControl xmlns=""
+				i:type="AxFormMenuFunctionButtonControl">
+				<Name>FTDBook</Name>
+				<Type>MenuFunctionButton</Type>
+				<FormControlExtension
+					i:nil="true" />
+				<DataSource>SalesTable</DataSource>
+				<MenuItemName>FTDBook</MenuItemName>
+				<NeedsRecord>Yes</NeedsRecord>
+			</FormControl>
+			<Parent>GeneralRelatedInfo</Parent>
+		</AxFormExtensionControl>
+	</Controls>
+	<DataSourceModifications />
+	<DataSourceReferences />
+	<DataSources />
+	<Parts />
+	<PropertyModifications />
+</AxFormExtension>

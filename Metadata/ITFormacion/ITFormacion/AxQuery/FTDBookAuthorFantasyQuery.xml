@@ -44,6 +44,7 @@ public class FTDBookAuthorFantasyQuery extends QueryRun
 				<AxQuerySimpleDataSourceRange>
 					<Name>Genre</Name>
 					<Field>Genre</Field>
+					<Status>Locked</Status>
 					<Value>Fantasy</Value>
 				</AxQuerySimpleDataSourceRange>
 			</Ranges>

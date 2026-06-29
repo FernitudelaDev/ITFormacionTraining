@@ -15,6 +15,21 @@
 		<d2p1:string>ApplicationFoundation</d2p1:string>
 		<d2p1:string>ApplicationPlatform</d2p1:string>
 		<d2p1:string>ApplicationSuite</d2p1:string>
+		<d2p1:string>ContactPerson</d2p1:string>
+		<d2p1:string>Dimensions</d2p1:string>
+		<d2p1:string>Directory</d2p1:string>
+		<d2p1:string>FinTag</d2p1:string>
+		<d2p1:string>FiscalBooks</d2p1:string>
+		<d2p1:string>Ledger</d2p1:string>
+		<d2p1:string>Personnel</d2p1:string>
+		<d2p1:string>PersonnelBusinessProcess</d2p1:string>
+		<d2p1:string>PersonnelCore</d2p1:string>
+		<d2p1:string>PersonnelManagement</d2p1:string>
+		<d2p1:string>PersonnelMobile</d2p1:string>
+		<d2p1:string>PersonnelUpgrade</d2p1:string>
+		<d2p1:string>Retail</d2p1:string>
+		<d2p1:string>SourceDocumentationTypes</d2p1:string>
+		<d2p1:string>Tax</d2p1:string>
 	</ModuleReferences>
 	<Name>ITFormacion</Name>
 	<Publisher>Fernando Tudela</Publisher>

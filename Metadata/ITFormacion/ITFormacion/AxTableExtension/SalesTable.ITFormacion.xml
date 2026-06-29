@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<AxTableExtension xmlns:i="http://www.w3.org/2001/XMLSchema-instance">
+	<Name>SalesTable.ITFormacion</Name>
+	<FieldGroupExtensions />
+	<FieldGroups />
+	<FieldModifications />
+	<Fields>
+		<AxTableField xmlns=""
+			i:type="AxTableFieldInt64">
+			<Name>FTDBookTable</Name>
+			<ExtendedDataType>RefRecId</ExtendedDataType>
+			<IgnoreEDTRelation>Yes</IgnoreEDTRelation>
+			<Label>@ITFormacion:BookTable</Label>
+		</AxTableField>
+	</Fields>
+	<FullTextIndexes />
+	<Indexes>
+		<AxTableIndex>
+			<Name>FTDBookTableIdx</Name>
+			<AllowDuplicates>Yes</AllowDuplicates>
+			<Fields>
+				<AxTableIndexField>
+					<DataField>FTDBookTable</DataField>
+				</AxTableIndexField>
+			</Fields>
+		</AxTableIndex>
+	</Indexes>
+	<Mappings />
+	<PropertyModifications />
+	<RelationExtensions />
+	<RelationModifications />
+	<Relations>
+		<AxTableRelation xmlns=""
+			i:type="AxTableRelationForeignKey">
+			<Name>FTDBookTable</Name>
+			<Cardinality>ZeroMore</Cardinality>
+			<OnDelete>Restricted</OnDelete>
+			<RelatedTable>FTDBookTable</RelatedTable>
+			<RelatedTableCardinality>ZeroOne</RelatedTableCardinality>
+			<RelationshipType>Association</RelationshipType>
+			<Constraints>
+				<AxTableRelationConstraint xmlns=""
+					i:type="AxTableRelationConstraintField">
+					<Name>FTDBookTable</Name>
+					<Field>FTDBookTable</Field>
+					<RelatedField>RecId</RelatedField>
+				</AxTableRelationConstraint>
+			</Constraints>
+			<Index>RecId</Index>
+		</AxTableRelation>
+	</Relations>
+</AxTableExtension>

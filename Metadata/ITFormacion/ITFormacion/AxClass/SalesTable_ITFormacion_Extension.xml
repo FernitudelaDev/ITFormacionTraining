@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8"?>
+<AxClass xmlns:i="http://www.w3.org/2001/XMLSchema-instance">
+	<Name>SalesTable_ITFormacion_Extension</Name>
+	<SourceCode>
+		<Declaration><![CDATA[
+[ExtensionOf(tableStr(SalesTable))]
+public final class SalesTable_ITFormacion_Extension
+{
+}
+]]></Declaration>
+		<Methods>
+			<Method>
+				<Name>ftdDispAuthorFullName</Name>
+				<Source><![CDATA[
+    [SysClientCacheDataMethod(true)]
+    public display FTDAuthorFullName ftdDispAuthorFullName()
+    {
+        return FTDBookTable::findRecId(this.FTDBookTable).dispAuthorFullName();
+    }
+
+]]></Source>
+			</Method>
+			<Method>
+				<Name>modifiedField</Name>
+				<Source><![CDATA[
+    public void modifiedField(FieldId _fieldId)
+    {
+        next modifiedField(_fieldId);
+
+        switch (_fieldId)
+        {
+            case fieldNum(SalesTable, FTDBookTable):
+                this.ftdUpdateLinesBook();
+                break;
+
+        }
+    }
+
+]]></Source>
+			</Method>
+			<Method>
+				<Name>ftdUpdateLinesBook</Name>
+				<Source><![CDATA[
+    public void ftdUpdateLinesBook()
+    {
+        SalesLine salesLine;
+
+        while select forupdate salesLine
+                    where salesLine.SalesId == this.SalesId
+        {
+            salesLine.FTDBookTable = this.FTDBookTable;
+            ttsbegin;
+            if (salesLine.validateWrite())
+            {
+                salesLine.update();
+            }
+            ttscommit;
+        }
+
+        this.ftdResearchIfNeeded();
+    }
+
+]]></Source>
+			</Method>
+			<Method>
+				<Name>ftdResearchIfNeeded</Name>
+				<Source><![CDATA[
+    public void ftdResearchIfNeeded()
+    {
+        FormDataSource formDataSource = FormDataUtil::getFormDataSource(this);
+
+        if (formDataSource)
+        {
+            formDataSource.research(true);
+        }
+    }
+
+]]></Source>
+			</Method>
+			<Method>
+				<Name>ftdFantasyBookLookup</Name>
+				<Source><![CDATA[
+    public Common ftdFantasyBookLookup(FormReferenceControl _formReferenceControl)
+    {
+        SysReferenceTableLookup refTableLookup = SysReferenceTableLookup::newParameters(tableNum(FTDBookTable), _formReferenceControl);
+
+        refTableLookup.parmQuery(this.ftdGetFantasyBookLookupQuery());
+        refTableLookup.addLookupfield(fieldNum(FTDBookTable, Id));
+        refTableLookup.addLookupfield(fieldNum(FTDBookTable, Name));
+        refTableLookup.addLookupfield(fieldNum(FTDBookTable, Genre));
+        refTableLookup.addLookupfield(fieldNum(FTDBookTable, Author));
+                
+        return refTableLookup.performFormLookup();
+    }
+
+]]></Source>
+			</Method>
+			<Method>
+				<Name>ftdGetFantasyBookLookupQuery</Name>
+				<Source><![CDATA[
+    private Query ftdGetFantasyBookLookupQuery()
+    {
+        return new Query(queryStr(FTDBookAuthorFantasyQuery));
+    }
+
+]]></Source>
+			</Method>
+		</Methods>
+	</SourceCode>
+</AxClass>

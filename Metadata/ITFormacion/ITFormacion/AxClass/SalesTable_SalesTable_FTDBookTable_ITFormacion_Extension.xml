@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<AxClass xmlns:i="http://www.w3.org/2001/XMLSchema-instance">
+	<Name>SalesTable_SalesTable_FTDBookTable_ITFormacion_Extension</Name>
+	<SourceCode>
+		<Declaration><![CDATA[
+[ExtensionOf(formDataFieldStr(SalesTable, SalesTable, FTDBookTable))]
+public final class SalesTable_SalesTable_FTDBookTable_ITFormacion_Extension
+{
+    /// <summary>
+    /// Aqui, al usar CoC, no podemos evitar la ejecucion del Next. y por tanto el lookup estandar seguira ejecutandose
+    /// lo cual es un error
+    /// </summary>
+    /// <param name = "_formReferenceControl"></param>
+    /// <returns></returns>
+    //public Common lookupReference(FormReferenceControl _formReferenceControl)
+    //{
+    //    Common ret = next lookupReference(_formReferenceControl);
+
+    //    SalesTable salesTable = this.dataSource().cursor();
+
+    //    ret = salesTable.ftdFantasyBookLookup(_formReferenceControl);
+
+    //    return ret;
+    //}
+
+}
+]]></Declaration>
+		<Methods>
+			<Method>
+				<Name>validate</Name>
+				<Source><![CDATA[
+    public boolean validate()
+    {
+        boolean ret;
+            
+        ret = next validate()
+            && this.ftdIsFantasyBook();
+            
+        return ret;
+    }
+
+]]></Source>
+			</Method>
+			<Method>
+				<Name>ftdIsFantasyBook</Name>
+				<Source><![CDATA[
+    private boolean ftdIsFantasyBook()
+    {
+        SalesTable salesTable = this.dataSource().cursor();
+
+        if (FTDBookTable::findRecId(salesTable.FTDBookTable).Genre != FTDGenreEnum::Fantasy)
+        {
+            return checkFailed("@ITFormacion:YouMustSelectFantasyBooks");
+        }
+
+        return true;
+    }
+
+]]></Source>
+			</Method>
+		</Methods>
+	</SourceCode>
+</AxClass>

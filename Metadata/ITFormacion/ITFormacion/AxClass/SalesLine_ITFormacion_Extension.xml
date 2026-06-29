@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<AxClass xmlns:i="http://www.w3.org/2001/XMLSchema-instance">
+	<Name>SalesLine_ITFormacion_Extension</Name>
+	<SourceCode>
+		<Declaration><![CDATA[
+[ExtensionOf(tableStr(SalesLine))]
+public final class SalesLine_ITFormacion_Extension
+{
+}
+]]></Declaration>
+		<Methods>
+			<Method>
+				<Name>initValue</Name>
+				<Source><![CDATA[
+    //chain of command
+    void initValue(SalesType _salesType)
+    {
+        next initValue(_salesType);
+
+        this.FTDBookTable = this.salesTable().FTDBookTable;
+    }
+
+]]></Source>
+			</Method>
+			<Method>
+				<Name>ftdFantasyBookLookup</Name>
+				<Source><![CDATA[
+    public Common ftdFantasyBookLookup(FormReferenceControl _formReferenceControl)
+    {
+        SysReferenceTableLookup refTableLookup = SysReferenceTableLookup::newParameters(tableNum(FTDBookTable), _formReferenceControl);
+
+        refTableLookup.parmQuery(this.ftdGetFantasyBookLookupQuery());
+        refTableLookup.addLookupfield(fieldNum(FTDBookTable, Id));
+        refTableLookup.addLookupfield(fieldNum(FTDBookTable, Name));
+        refTableLookup.addLookupfield(fieldNum(FTDBookTable, Genre));
+        refTableLookup.addLookupfield(fieldNum(FTDBookTable, Author));
+                
+        return refTableLookup.performFormLookup();
+    }
+
+]]></Source>
+			</Method>
+			<Method>
+				<Name>ftdGetFantasyBookLookupQuery</Name>
+				<Source><![CDATA[
+    private Query ftdGetFantasyBookLookupQuery()
+    {
+        return new Query(queryStr(FTDBookAuthorFantasyQuery));
+    }
+
+]]></Source>
+			</Method>
+		</Methods>
+	</SourceCode>
+</AxClass>
