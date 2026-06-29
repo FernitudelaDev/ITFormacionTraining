@@ -19,18 +19,6 @@
 			<ReturnType>
 				<TypeName></TypeName>
 			</ReturnType>
-			<Variables>
-				<AxMethodVariable>
-					<Type>Record</Type>
-					<TypeName>Common</TypeName>
-					<Name>callerRecord</Name>
-				</AxMethodVariable>
-				<AxMethodVariable>
-					<Type>ExtendedDataType</Type>
-					<TypeName>MenuItemName</TypeName>
-					<Name>callerItemName</Name>
-				</AxMethodVariable>
-			</Variables>
 		</Method>
 	</Methods>
 	<DataSources>
@@ -49,18 +37,6 @@
 					<ReturnType>
 						<TypeName></TypeName>
 					</ReturnType>
-					<Variables>
-						<AxMethodVariable>
-							<Type>Class</Type>
-							<TypeName>QueryBuildDataSource</TypeName>
-							<Name>qbds</Name>
-						</AxMethodVariable>
-						<AxMethodVariable>
-							<Type>Class</Type>
-							<TypeName>QueryBuildRange</TypeName>
-							<Name>qbrGenre</Name>
-						</AxMethodVariable>
-					</Variables>
 				</Method>
 				<Method>
 					<Name>executeQuery</Name>

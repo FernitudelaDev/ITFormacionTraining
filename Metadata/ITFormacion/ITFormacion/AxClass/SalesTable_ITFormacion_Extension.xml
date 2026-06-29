@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<AxClass xmlns:i="http://www.w3.org/2001/XMLSchema-instance">
+	<Name>SalesTable_ITFormacion_Extension</Name>
+	<SourceCode>
+		<Declaration><![CDATA[
+[ExtensionOf(tableStr(SalesTable))]
+public final class SalesTable_ITFormacion_Extension
+{
+}
+]]></Declaration>
+		<Methods>
+			<Method>
+				<Name>aibDispAuthorFullName</Name>
+				<Source><![CDATA[
+    [SysClientCacheDataMethod(true)]
+    public display AIBAuthorFullName aibDispAuthorFullName()
+    {
+        return AIBBookTable::findRecId(this.AIBBookTable).dispAuthorFullName();
+    }
+
+]]></Source>
+			</Method>
+		</Methods>
+	</SourceCode>
+</AxClass>

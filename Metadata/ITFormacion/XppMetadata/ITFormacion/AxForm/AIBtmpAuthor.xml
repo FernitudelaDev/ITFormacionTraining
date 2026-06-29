@@ -18,18 +18,6 @@
 			<ReturnType>
 				<TypeName></TypeName>
 			</ReturnType>
-			<Variables>
-				<AxMethodVariable>
-					<Type>Record</Type>
-					<TypeName>AIBtmpAuthorTable</TypeName>
-					<Name>tmpAuthorTable</Name>
-				</AxMethodVariable>
-				<AxMethodVariable>
-					<Type>Record</Type>
-					<TypeName>AIBAuthorTable</TypeName>
-					<Name>authorTable</Name>
-				</AxMethodVariable>
-			</Variables>
 		</Method>
 	</Methods>
 	<DataSources />

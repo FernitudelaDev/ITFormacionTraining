@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<AxFormExtension xmlns:i="http://www.w3.org/2001/XMLSchema-instance" xmlns="Microsoft.Dynamics.AX.Metadata.V6">
+	<Name>SalesTable.ITFormacion</Name>
+	<ControlModifications />
+	<Controls>
+		<AxFormExtensionControl xmlns="">
+			<Name>FormExtensionControlpqf5y4xt1</Name>
+			<FormControl xmlns=""
+				i:type="AxFormGroupControl">
+				<Name>AIBLibraryGroup</Name>
+				<Type>Group</Type>
+				<FormControlExtension
+					i:nil="true" />
+				<Controls>
+					<AxFormControl xmlns=""
+						i:type="AxFormReferenceGroupControl">
+						<Name>SalesTable_AIBBookTable</Name>
+						<Type>ReferenceGroup</Type>
+						<FormControlExtension
+							i:nil="true" />
+						<Controls />
+						<DataSource>SalesTable</DataSource>
+						<ReferenceField>AIBBookTable</ReferenceField>
+					</AxFormControl>
+					<AxFormControl xmlns=""
+						i:type="AxFormStringControl">
+						<Name>SalesTable_AIBdispAuthorFullName</Name>
+						<Type>String</Type>
+						<FormControlExtension
+							i:nil="true" />
+						<DataMethod>SalesTable_ITFormacion_Extension.aibDispAuthorFullName</DataMethod>
+						<DataSource>SalesTable</DataSource>
+					</AxFormControl>
+				</Controls>
+				<Caption>@ITFormacion:Library</Caption>
+			</FormControl>
+			<Parent>LineViewHeader</Parent>
+		</AxFormExtensionControl>
+	</Controls>
+	<DataSourceModifications />
+	<DataSourceReferences />
+	<DataSources />
+	<Parts />
+	<PropertyModifications />
+</AxFormExtension>

@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Diagnostics
-  GenerationTime="2026-06-26T07:12:31.7413911+00:00">
+  GenerationTime="2026-06-29T09:02:53.5217745+00:00">
   <Items>
     <Diagnostic>
       <DiagnosticType>Generation</DiagnosticType>
@@ -32,18 +32,11 @@
       <Path>dynamics://Table/AIBBookTable/Method/selectCountByGenre</Path>
       <ElementType>Table Method</ElementType>
       <Moniker>TypeConversionLosesRange</Moniker>
-      <Line>36</Line>
+      <Line>41</Line>
       <Column>9</Column>
-      <EndLine>36</EndLine>
+      <EndLine>41</EndLine>
       <EndColumn>32</EndColumn>
       <Message>The type conversion from 'int64' to 'int' loses range.</Message>
-    </Diagnostic>
-    <Diagnostic>
-      <DiagnosticType>FormPatternValidation</DiagnosticType>
-      <Severity>Error</Severity>
-      <Path>AxForm/AIBBookTransactions/Design/Controls/DetailsTab/TransactionTabPage</Path>
-      <Moniker>PatternControlNotAllowed</Moniker>
-      <Message>Control 'AxForm/AIBBookTransactions/Design/Controls/DetailsTab/TransactionTabPage' has child 'TransactionActionPane' which is not allowed at its current location by pattern 'Toolbar and List'.</Message>
     </Diagnostic>
   </Items>
   <Aliases />

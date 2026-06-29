@@ -2,8 +2,7 @@
 Generation Information: View dynamics://View/AIBAuthorEntity: Is Runtime Services mode: False
 ExternalReference Warning: dynamics://Reference/Microsoft.Dynamics___vices.PricingEngine: Assembly 'Microsoft.Dynamics.Commerce.Runtime.Entities.AttributeBasedPricing, Version=7.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35' failed to load because it was not found.
 ExternalReference Warning: dynamics://Reference/Azure.Core: Assembly 'System.Memory.Data, Version=1.0.2.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51' failed to load because it was not found.
-Compile Warning: Table Method dynamics://Table/AIBBookTable/Method/selectCountByGenre: [(36,9),(36,32)]: The type conversion from 'int64' to 'int' loses range.
-FormPatternValidation Error: AxForm/AIBBookTransactions/Design/Controls/DetailsTab/TransactionTabPage: Control 'AxForm/AIBBookTransactions/Design/Controls/DetailsTab/TransactionTabPage' has child 'TransactionActionPane' which is not allowed at its current location by pattern 'Toolbar and List'.
+Compile Warning: Table Method dynamics://Table/AIBBookTable/Method/selectCountByGenre: [(41,9),(41,32)]: The type conversion from 'int64' to 'int' loses range.
 ==================================
-Errors: 1
+Errors: 0
 Warnings: 3
