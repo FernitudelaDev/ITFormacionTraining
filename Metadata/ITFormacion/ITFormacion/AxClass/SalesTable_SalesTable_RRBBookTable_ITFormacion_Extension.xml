@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<AxClass xmlns:i="http://www.w3.org/2001/XMLSchema-instance">
+	<Name>SalesTable_SalesTable_RRBBookTable_ITFormacion_Extension</Name>
+	<SourceCode>
+		<Declaration><![CDATA[
+[ExtensionOf(formDataFieldStr(SalesTable, SalesTable, RRBBookTable))]
+public final class SalesTable_SalesTable_RRBBookTable_ITFormacion_Extension
+{
+    //Aqui al usar Coc, no podemos evitar la ejecucion del Next.Y por lo tanto el lookup estandar seguira ejecutandose lo cual es un error
+    //public Common lookupReference(FormReferenceControl _formReferenceControl)
+    //{
+    //    Common ret = next lookupReference(_formReferenceControl);
+
+    //    SalesTable salesTable = this.datasource().cursor();
+
+    //    ret = salesTable.RRBFantasyBookLookup(_formReferenceControl);
+
+    //    return ret;
+    //}
+
+}
+]]></Declaration>
+		<Methods>
+			<Method>
+				<Name>validate</Name>
+				<Source><![CDATA[
+    public boolean validate()
+    {
+        boolean ret;
+            
+        ret = next validate()
+            && this.RRBIsFantasyBook();
+            
+        return ret;
+    }
+
+]]></Source>
+			</Method>
+			<Method>
+				<Name>RRBIsFantasyBook</Name>
+				<Source><![CDATA[
+    private boolean RRBIsFantasyBook()
+    {
+        SalesTable salesTable = this.dataSource().cursor();
+
+        if(RRBBookTable::findRecId(salesTable.RRBBookTable).Genre != RRBGenreEnum::Fantasy)
+        {
+            return checkFailed("@ITFormacion:YouMustSelectFantasyBooks");
+        }
+
+        return true;
+    }
+
+]]></Source>
+			</Method>
+		</Methods>
+	</SourceCode>
+</AxClass>

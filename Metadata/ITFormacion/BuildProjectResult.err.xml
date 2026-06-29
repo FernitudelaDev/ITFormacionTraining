@@ -1,18 +1,42 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Diagnostics
-  GenerationTime="2026-06-26T12:11:51.4105961+00:00">
+  GenerationTime="2026-06-29T11:06:38.333721+00:00">
   <Items>
     <Diagnostic>
       <DiagnosticType>Compile</DiagnosticType>
       <Severity>Error</Severity>
-      <Path>dynamics://Form/RRBtmpAuthor/Method/loadtmpData</Path>
-      <ElementType>Form Method</ElementType>
-      <Moniker>ParameterExtra</Moniker>
-      <Line>26</Line>
-      <Column>9</Column>
-      <EndLine>26</EndLine>
-      <EndColumn>43</EndColumn>
-      <Message>'RRBtmpAuthorTable.refresh' expects 0 argument(s), but 1 specified.</Message>
+      <Path>dynamics://Class/SalesTable_SalesTable_ITFormacion_Extension/Method/init</Path>
+      <ElementType>Class Method</ElementType>
+      <Moniker>InvalidTypeNameAsQualifier</Moniker>
+      <Line>9</Line>
+      <Column>64</Column>
+      <EndLine>9</EndLine>
+      <EndColumn>74</EndColumn>
+      <Message>The qualifier 'SalesTable' is not valid in this context. Use a variable of this type instead. </Message>
+    </Diagnostic>
+    <Diagnostic>
+      <DiagnosticType>Compile</DiagnosticType>
+      <Severity>Error</Severity>
+      <Path>dynamics://Class/SalesTable_SalesTable_ITFormacion_Extension/Method/init</Path>
+      <ElementType>Class Method</ElementType>
+      <Moniker>InvalidTypeNameAsQualifier</Moniker>
+      <Line>9</Line>
+      <Column>76</Column>
+      <EndLine>9</EndLine>
+      <EndColumn>88</EndColumn>
+      <Message>The qualifier 'RRBBookTable' is not valid in this context. Use a variable of this type instead. </Message>
+    </Diagnostic>
+    <Diagnostic>
+      <DiagnosticType>Compile</DiagnosticType>
+      <Severity>Error</Severity>
+      <Path>dynamics://Class/SalesTable_SalesTable_ITFormacion_Extension/Method/init</Path>
+      <ElementType>Class Method</ElementType>
+      <Moniker>NoSuchFunction</Moniker>
+      <Line>9</Line>
+      <Column>56</Column>
+      <EndLine>9</EndLine>
+      <EndColumn>89</EndColumn>
+      <Message>The name 'fielNum' does not denote a predefined function,  a static method on the Global class nor a previously defined local function.</Message>
     </Diagnostic>
   </Items>
   <Aliases />

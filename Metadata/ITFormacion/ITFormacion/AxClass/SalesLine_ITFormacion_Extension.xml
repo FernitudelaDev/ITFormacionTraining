@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<AxClass xmlns:i="http://www.w3.org/2001/XMLSchema-instance">
+	<Name>SalesLine_ITFormacion_Extension</Name>
+	<SourceCode>
+		<Declaration><![CDATA[
+[ExtensionOf(tableStr(SalesLine))]
+public final class SalesLine_ITFormacion_Extension
+{
+    
+
+}
+]]></Declaration>
+		<Methods>
+			<Method>
+				<Name>initValue</Name>
+				<Source><![CDATA[
+    //chain of command
+    void initValue(SalesType _salesType)
+    {
+        next initValue(_salesType);
+
+        this.RRBBookTable = this.salesTable().RRBBookTable;
+    }
+
+]]></Source>
+			</Method>
+			<Method>
+				<Name>RRBFantasyBookLookup</Name>
+				<Source><![CDATA[
+    public Common RRBFantasyBookLookup(FormReferenceControl _formReferenceControl)
+    {
+        SysReferenceTableLookup refTableLookup = SysReferenceTableLookup::newParameters(tableNum(RRBBookTable), _formReferenceControl);
+        
+        refTableLookup.parmQuery(this.RRBGetFantasyBookLookupQuery());
+        refTableLookup.addLookupfield(fieldNum(RRBBookTable, Id));
+        refTableLookup.addLookupfield(fieldNum(RRBBookTable, Name));
+        refTableLookup.addLookupfield(fieldNum(RRBBookTable, Genre));
+        refTableLookup.addLookupfield(fieldNum(RRBBookTable, Author));
+  
+        return refTableLookup.performFormLookup();
+    }
+
+]]></Source>
+			</Method>
+			<Method>
+				<Name>RRBGetFantasyBookLookupQuery</Name>
+				<Source><![CDATA[
+    private Query RRBGetFantasyBookLookupQuery()
+    {
+        return new Query(queryStr(RRBBookAuthorFantasyQuery));
+    }
+
+]]></Source>
+			</Method>
+		</Methods>
+	</SourceCode>
+</AxClass>

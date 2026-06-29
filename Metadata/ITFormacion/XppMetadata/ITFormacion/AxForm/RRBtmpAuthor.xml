@@ -18,23 +18,6 @@
 			<ReturnType>
 				<TypeName></TypeName>
 			</ReturnType>
-			<Variables>
-				<AxMethodVariable>
-					<Type>Record</Type>
-					<TypeName>RRBtmpAuthorTable</TypeName>
-					<Name>tmpAuthorTable</Name>
-				</AxMethodVariable>
-				<AxMethodVariable>
-					<Type>Record</Type>
-					<TypeName>RRBtmpAuthorTable</TypeName>
-					<Name>tmpAuthorTable2</Name>
-				</AxMethodVariable>
-				<AxMethodVariable>
-					<Type>Record</Type>
-					<TypeName>RRBAuthorTable</TypeName>
-					<Name>authorTable</Name>
-				</AxMethodVariable>
-			</Variables>
 		</Method>
 	</Methods>
 	<DataSources />

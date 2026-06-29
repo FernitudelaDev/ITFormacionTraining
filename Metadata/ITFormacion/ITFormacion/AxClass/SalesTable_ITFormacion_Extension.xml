@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8"?>
+<AxClass xmlns:i="http://www.w3.org/2001/XMLSchema-instance">
+	<Name>SalesTable_ITFormacion_Extension</Name>
+	<SourceCode>
+		<Declaration><![CDATA[
+[ExtensionOf(tableStr(SalesTable))]
+public final class SalesTable_ITFormacion_Extension
+{
+}
+]]></Declaration>
+		<Methods>
+			<Method>
+				<Name>RRBdispAuthorFullName</Name>
+				<Source><![CDATA[
+    [SysClientCacheDataMethod(true)]
+    public display RRBAuthorFullName RRBdispAuthorFullName()
+    {
+        return RRBBookTable::findRecId(this.RRBBookTable).dispAuthorFullName();
+    }
+
+]]></Source>
+			</Method>
+			<Method>
+				<Name>modifiedField</Name>
+				<Source><![CDATA[
+    public void modifiedField(FieldId _fieldId)
+    {
+        next modifiedField(_fieldId);
+
+        switch(_fieldId)
+        {
+            case fieldNum(SalesTable, RRBBookTable):
+                this.RRBUpdateBookSalesLine();
+                break;
+        }
+    }
+
+]]></Source>
+			</Method>
+			<Method>
+				<Name>RRBUpdateBookSalesLine</Name>
+				<Source><![CDATA[
+    public void RRBUpdateBookSalesLine()
+    {
+        SalesLine salesLine;
+
+        while select forupdate salesLine
+                    where salesLine.SalesId == this.SalesId
+        {
+            salesLine.RRBBookTable = this.RRBBookTable;
+            ttsbegin;
+            if(salesLine.validateWrite())
+            {
+                salesLine.update();
+            }
+            ttscommit;
+        }
+
+        this.RRBReseachIfNeeded();
+
+    }
+
+]]></Source>
+			</Method>
+			<Method>
+				<Name>RRBReseachIfNeeded</Name>
+				<Source><![CDATA[
+    public void RRBReseachIfNeeded()
+    {
+        FormDataSource formDataSource = FormDataUtil::getFormDataSource(this);
+
+        if(formDataSource)
+        {
+            formDataSource.research(true);
+        }
+    }
+
+]]></Source>
+			</Method>
+			<Method>
+				<Name>RRBFantasyBookLookup</Name>
+				<Source><![CDATA[
+    public Common RRBFantasyBookLookup(FormReferenceControl _formReferenceControl)
+    {
+        SysReferenceTableLookup refTableLookup = SysReferenceTableLookup::newParameters(tableNum(RRBBookTable), _formReferenceControl);
+        
+        refTableLookup.parmQuery(this.RRBGetFantasyBookLookupQuery());
+        refTableLookup.addLookupfield(fieldNum(RRBBookTable, Id));
+        refTableLookup.addLookupfield(fieldNum(RRBBookTable, Name));
+        refTableLookup.addLookupfield(fieldNum(RRBBookTable, Genre));
+        refTableLookup.addLookupfield(fieldNum(RRBBookTable, Author));
+
+        return refTableLookup.performFormLookup();
+    }
+
+]]></Source>
+			</Method>
+			<Method>
+				<Name>RRBGetFantasyBookLookupQuery</Name>
+				<Source><![CDATA[
+    private Query RRBGetFantasyBookLookupQuery()
+    {
+        return new Query(queryStr(RRBBookAuthorFantasyQuery));
+    }
+
+]]></Source>
+			</Method>
+		</Methods>
+	</SourceCode>
+</AxClass>

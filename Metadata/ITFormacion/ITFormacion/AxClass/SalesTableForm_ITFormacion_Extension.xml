@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<AxClass xmlns:i="http://www.w3.org/2001/XMLSchema-instance">
+	<Name>SalesTableForm_ITFormacion_Extension</Name>
+	<SourceCode>
+		<Declaration><![CDATA[
+[ExtensionOf(formStr(SalesTable))]
+public final class SalesTableForm_ITFormacion_Extension
+{
+}
+]]></Declaration>
+		<Methods>
+			<Method>
+				<Name>init</Name>
+				<Source><![CDATA[
+    //No es la mejor manera, pero a veces no hay mas remedio. es peligroso porque usa reflection
+    public void init()
+    {
+        next Init();
+
+        FormDataObject fieldRRBBookTable = SalesTable_ds.Object(fieldNum(SalesTable, RRBBookTable));
+            
+        fieldRRBBookTable.registerOverrideMethod(
+            methodStr(FormDataObject, lookupReference), //metodo a sobreescribir del campo
+            formMethodStr(SalesTable, RRBFantasyBookLookup), //metodo por el que lo sobreescribimos
+            this); //objeto donde esta el metodo por el que sobreescribimos
+    }
+
+]]></Source>
+			</Method>
+			<Method>
+				<Name>RRBFantasyBookLookup</Name>
+				<Source><![CDATA[
+    public Common RRBFantasyBookLookup(FormReferenceControl _formReferenceControl)
+    {
+        return SalesTable.RRBFantasyBookLookup(_formReferenceControl);
+    }
+
+]]></Source>
+			</Method>
+		</Methods>
+	</SourceCode>
+</AxClass>

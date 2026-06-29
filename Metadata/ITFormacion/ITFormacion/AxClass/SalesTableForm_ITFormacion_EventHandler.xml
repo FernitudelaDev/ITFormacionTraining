@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<AxClass xmlns:i="http://www.w3.org/2001/XMLSchema-instance">
+	<Name>SalesTableForm_ITFormacion_EventHandler</Name>
+	<SourceCode>
+		<Declaration><![CDATA[
+internal final class SalesTableForm_ITFormacion_EventHandler
+{
+}
+]]></Declaration>
+		<Methods>
+			<Method>
+				<Name>SalesLine_RRBBookTable_OnLookup</Name>
+				<Source><![CDATA[
+    [FormControlEventHandler(formControlStr(SalesTable, SalesLine_RRBBookTable), FormControlEventType::Lookup)]
+    public static void SalesLine_RRBBookTable_OnLookup(FormControl _sender, FormControlEventArgs _e)
+    {
+        FormControlCancelableSuperEventArgs ce = _e;
+
+        ce.CancelSuperCall();
+
+        SalesLine salesLine = _sender.formRun().dataSource(formDataSourceStr(SalesTable, SalesLine)).cursor();
+
+        Common ret = salesLine.RRBFantasyBookLookup(_sender);
+    }
+
+]]></Source>
+			</Method>
+		</Methods>
+	</SourceCode>
+</AxClass>
