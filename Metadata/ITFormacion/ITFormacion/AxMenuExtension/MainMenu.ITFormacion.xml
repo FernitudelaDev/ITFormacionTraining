@@ -6,8 +6,8 @@
 		<AxMenuExtensionElement xmlns="">
 			<MenuElement xmlns=""
 				i:type="AxMenuElementMenuReference">
-				<Name>FTDLibrary</Name>
-				<MenuName>FTDLibrary</MenuName>
+				<Name>JISLibrary</Name>
+				<MenuName>JISLibrary</MenuName>
 			</MenuElement>
 		</AxMenuExtensionElement>
 	</Elements>

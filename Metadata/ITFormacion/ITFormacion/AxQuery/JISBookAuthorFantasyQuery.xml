@@ -23,9 +23,9 @@ public class JISBookAuthorFantasyQuery extends QueryRun
 			<Table>JISBookTable</Table>
 			<DataSources>
 				<AxQuerySimpleEmbeddedDataSource>
-					<Name>FTDAuthorTable</Name>
+					<Name>JISAuthorTable</Name>
 					<DynamicFields>Yes</DynamicFields>
-					<Table>FTDAuthorTable</Table>
+					<Table>JISAuthorTable</Table>
 					<DataSources />
 					<DerivedDataSources />
 					<Fields />
@@ -34,7 +34,7 @@ public class JISBookAuthorFantasyQuery extends QueryRun
 						<AxQuerySimpleDataSourceRelation>
 							<Name>QueryDataSourceRelation1</Name>
 							<JoinDataSource>JISBookTable</JoinDataSource>
-							<JoinRelationName>FTDAuthorTable</JoinRelationName>
+							<JoinRelationName>JISAuthorTable</JoinRelationName>
 						</AxQuerySimpleDataSourceRelation>
 					</Relations>
 				</AxQuerySimpleEmbeddedDataSource>

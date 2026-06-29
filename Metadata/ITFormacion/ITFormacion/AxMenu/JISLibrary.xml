@@ -10,8 +10,8 @@
 			<Elements>
 				<AxMenuElement xmlns=""
 					i:type="AxMenuElementMenuItem">
-					<Name>FTDBook</Name>
-					<MenuItemName>FTDBook</MenuItemName>
+					<Name>JISBook</Name>
+					<MenuItemName>JISBook</MenuItemName>
 				</AxMenuElement>
 				<AxMenuElement xmlns=""
 					i:type="AxMenuElementMenuItem">
@@ -27,8 +27,8 @@
 			<Elements>
 				<AxMenuElement xmlns=""
 					i:type="AxMenuElementMenuItem">
-					<Name>FTDBookTransactions</Name>
-					<MenuItemName>FTDBookTransactions</MenuItemName>
+					<Name>JISBookTransactions</Name>
+					<MenuItemName>JISBookTransactions</MenuItemName>
 				</AxMenuElement>
 			</Elements>
 		</AxMenuElement>

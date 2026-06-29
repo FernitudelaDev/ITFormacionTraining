@@ -9,10 +9,9 @@
 [Form]
 public class JISBook extends FormRun
 {
-    FTDGenreEnum    genreFilter;
+    JISGenreEnum    genreFilter;
     boolean         needGenreFilter;
 }
-
 ]]></Source>
 			</Method>
 			<Method>
@@ -37,10 +36,10 @@ public class JISBook extends FormRun
         Common          callerRecord = element.args().record();
         MenuItemName    callerItemName = element.args().menuItemName();
 
-        if (callerItemName == menuItemDisplayStr(FTDBookGenreFiltered)
-            && callerRecord.TableId == tableNum(FTDAuthorTable))
+        if (callerItemName == menuItemDisplayStr(JISBookGenreFiltered)
+            && callerRecord.TableId == tableNum(JISAuthorTable))
         {
-            FTDAuthorTable authorTable  = callerRecord;
+            JISAuthorTable authorTable  = callerRecord;
             genreFilter                 = authorTable.firstBookGenre();
             needGenreFilter             = true;
         }
@@ -51,7 +50,7 @@ public class JISBook extends FormRun
 		</Methods>
 		<DataSources xmlns="">
 			<DataSource>
-				<Name>FTDBookTable</Name>
+				<Name>JISBookTable</Name>
 				<Methods>
 					<Method>
 						<Name>init</Name>
@@ -73,11 +72,11 @@ public class JISBook extends FormRun
 						<Source><![CDATA[
         private void clearExistingLinksAndAddGenreRange()
         {
-            QueryBuildDataSource qbds = FTDBookTable_q.dataSourceTable(tableNum(FTDBookTable));
+            QueryBuildDataSource qbds = JISBookTable_q.dataSourceTable(tableNum(JISBookTable));
 
             qbds.clearDynalinks();
 
-            QuerybuildRange qbrGenre = qbds.addRange(fieldNum(FTDBookTable, Genre));
+            QuerybuildRange qbrGenre = qbds.addRange(fieldNum(JISBookTable, Genre));
 
             qbrGenre.status(RangeStatus::Locked);
             qbrGenre.value(queryValue(genreFilter));
@@ -96,43 +95,7 @@ public class JISBook extends FormRun
 ]]></Source>
 					</Method>
 				</Methods>
-				<Fields>
-					<Field>
-						<DataField>Author</DataField>
-						<Methods>
-							<Method>
-								<Name>lookupReference</Name>
-								<Source><![CDATA[
-            /// <summary>
-            ///
-            /// </summary>
-            /// <param name = "_formReferenceControl"></param>
-            /// <returns></returns>
-            public Common lookupReference(FormReferenceControl _formReferenceControl)
-            {
-                return FTDBookTable.AuthorTableLookup(_formReferenceControl);
-            }
-
-]]></Source>
-							</Method>
-							<Method>
-								<Name>validate</Name>
-								<Source><![CDATA[
-            public boolean validate()
-            {
-                boolean ret;
-            
-                ret = super()
-                    && FTDAuthorTable::findRecId(FTDBookTable.Author).IsDead == NoYes::No;
-            
-                return ret;
-            }
-
-]]></Source>
-							</Method>
-						</Methods>
-					</Field>
-				</Fields>
+				<Fields />
 			</DataSource>
 		</DataSources>
 		<DataControls xmlns="" />
@@ -140,8 +103,8 @@ public class JISBook extends FormRun
 	</SourceCode>
 	<DataSources>
 		<AxFormDataSource xmlns="">
-			<Name>FTDBookTable</Name>
-			<Table>FTDBookTable</Table>
+			<Name>JISBookTable</Name>
+			<Table>JISBookTable</Table>
 			<Fields>
 				<AxFormDataSourceField>
 					<DataField>Author</DataField>
@@ -202,7 +165,7 @@ public class JISBook extends FormRun
 								<Type>MenuFunctionButton</Type>
 								<FormControlExtension
 									i:nil="true" />
-								<DataSource>FTDBookTable</DataSource>
+								<DataSource>JISBookTable</DataSource>
 								<MenuItemName>FTDBookTransactions</MenuItemName>
 							</AxFormControl>
 							<AxFormControl xmlns=""
@@ -279,7 +242,7 @@ public class JISBook extends FormRun
 								<FormControlExtension
 									i:nil="true" />
 								<DataField>Id</DataField>
-								<DataSource>FTDBookTable</DataSource>
+								<DataSource>JISBookTable</DataSource>
 							</AxFormControl>
 							<AxFormControl xmlns=""
 								i:type="AxFormStringControl">
@@ -288,7 +251,7 @@ public class JISBook extends FormRun
 								<FormControlExtension
 									i:nil="true" />
 								<DataField>Name</DataField>
-								<DataSource>FTDBookTable</DataSource>
+								<DataSource>JISBookTable</DataSource>
 							</AxFormControl>
 							<AxFormControl xmlns=""
 								i:type="AxFormComboBoxControl">
@@ -297,7 +260,7 @@ public class JISBook extends FormRun
 								<FormControlExtension
 									i:nil="true" />
 								<DataField>Genre</DataField>
-								<DataSource>FTDBookTable</DataSource>
+								<DataSource>JISBookTable</DataSource>
 								<Items />
 							</AxFormControl>
 							<AxFormControl xmlns=""
@@ -307,7 +270,7 @@ public class JISBook extends FormRun
 								<FormControlExtension
 									i:nil="true" />
 								<Controls />
-								<DataSource>FTDBookTable</DataSource>
+								<DataSource>JISBookTable</DataSource>
 								<ReferenceField>Author</ReferenceField>
 							</AxFormControl>
 							<AxFormControl xmlns=""
@@ -317,7 +280,7 @@ public class JISBook extends FormRun
 								<FormControlExtension
 									i:nil="true" />
 								<DataMethod>dispAuthorFullName</DataMethod>
-								<DataSource>FTDBookTable</DataSource>
+								<DataSource>JISBookTable</DataSource>
 							</AxFormControl>
 							<AxFormControl xmlns=""
 								i:type="AxFormRealControl">
@@ -326,23 +289,23 @@ public class JISBook extends FormRun
 								<FormControlExtension
 									i:nil="true" />
 								<DataMethod>dispCurrentInventory</DataMethod>
-								<DataSource>FTDBookTable</DataSource>
+								<DataSource>JISBookTable</DataSource>
 							</AxFormControl>
 						</Controls>
 						<DataGroup>Grid</DataGroup>
-						<DataSource>FTDBookTable</DataSource>
+						<DataSource>JISBookTable</DataSource>
 					</AxFormControl>
 					<AxFormControl xmlns=""
 						i:type="AxFormDateTimeControl">
-						<Name>FTDBookTable_ModifiedDateTime</Name>
+						<Name>JISBookTable_ModifiedDateTime</Name>
 						<Type>DateTime</Type>
 						<FormControlExtension
 							i:nil="true" />
 						<DataField>ModifiedDateTime</DataField>
-						<DataSource>FTDBookTable</DataSource>
+						<DataSource>JISBookTable</DataSource>
 					</AxFormControl>
 				</Controls>
-				<DataSource>FTDBookTable</DataSource>
+				<DataSource>JISBookTable</DataSource>
 				<Style>Tabular</Style>
 			</AxFormControl>
 		</Controls>

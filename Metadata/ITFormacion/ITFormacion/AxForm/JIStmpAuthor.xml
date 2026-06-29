@@ -11,7 +11,6 @@ public class JIStmpAuthor extends FormRun
 {
 
 }
-
 ]]></Source>
 			</Method>
 			<Method>
@@ -31,8 +30,8 @@ public class JIStmpAuthor extends FormRun
 				<Source><![CDATA[
     private void loadtmpData()
     {
-        FTDtmpAuthorTable tmpAuthorTable, tmpAuthorTable2;
-        FTDAuthorTable authorTable;
+        JIStmpAuthorTable tmpAuthorTable, tmpAuthorTable2;
+        JISAuthorTable authorTable;
 
         while select authorTable
         {
@@ -43,7 +42,7 @@ public class JIStmpAuthor extends FormRun
             }
         }
 
-        FTDtmpAuthorTable.setTmpData(tmpAuthorTable);
+        JIStmpAuthorTable.setTmpData(tmpAuthorTable);
 
         //while select tmpAuthorTable
         //{
@@ -67,8 +66,8 @@ public class JIStmpAuthor extends FormRun
 	</SourceCode>
 	<DataSources>
 		<AxFormDataSource xmlns="">
-			<Name>FTDtmpAuthorTable</Name>
-			<Table>FTDtmpAuthorTable</Table>
+			<Name>JIStmpAuthorTable</Name>
+			<Table>JIStmpAuthorTable</Table>
 			<Fields>
 				<AxFormDataSourceField>
 					<DataField>BirthDate</DataField>
@@ -170,7 +169,7 @@ public class JIStmpAuthor extends FormRun
 						<FormControlExtension
 							i:nil="true" />
 						<DataField>Id</DataField>
-						<DataSource>FTDtmpAuthorTable</DataSource>
+						<DataSource>JIStmpAuthorTable</DataSource>
 					</AxFormControl>
 					<AxFormControl xmlns=""
 						i:type="AxFormStringControl">
@@ -179,7 +178,7 @@ public class JIStmpAuthor extends FormRun
 						<FormControlExtension
 							i:nil="true" />
 						<DataField>FirstName</DataField>
-						<DataSource>FTDtmpAuthorTable</DataSource>
+						<DataSource>JIStmpAuthorTable</DataSource>
 					</AxFormControl>
 					<AxFormControl xmlns=""
 						i:type="AxFormStringControl">
@@ -188,7 +187,7 @@ public class JIStmpAuthor extends FormRun
 						<FormControlExtension
 							i:nil="true" />
 						<DataField>LastName</DataField>
-						<DataSource>FTDtmpAuthorTable</DataSource>
+						<DataSource>JIStmpAuthorTable</DataSource>
 					</AxFormControl>
 					<AxFormControl xmlns=""
 						i:type="AxFormDateControl">
@@ -197,7 +196,7 @@ public class JIStmpAuthor extends FormRun
 						<FormControlExtension
 							i:nil="true" />
 						<DataField>BirthDate</DataField>
-						<DataSource>FTDtmpAuthorTable</DataSource>
+						<DataSource>JIStmpAuthorTable</DataSource>
 					</AxFormControl>
 					<AxFormControl xmlns=""
 						i:type="AxFormCheckBoxControl">
@@ -206,7 +205,7 @@ public class JIStmpAuthor extends FormRun
 						<FormControlExtension
 							i:nil="true" />
 						<DataField>IsDead</DataField>
-						<DataSource>FTDtmpAuthorTable</DataSource>
+						<DataSource>JIStmpAuthorTable</DataSource>
 					</AxFormControl>
 					<AxFormControl xmlns=""
 						i:type="AxFormDateControl">
@@ -215,11 +214,11 @@ public class JIStmpAuthor extends FormRun
 						<FormControlExtension
 							i:nil="true" />
 						<DataField>DeathDate</DataField>
-						<DataSource>FTDtmpAuthorTable</DataSource>
+						<DataSource>JIStmpAuthorTable</DataSource>
 					</AxFormControl>
 				</Controls>
 				<DataGroup>Grid</DataGroup>
-				<DataSource>FTDtmpAuthorTable</DataSource>
+				<DataSource>JIStmpAuthorTable</DataSource>
 				<Style>Tabular</Style>
 			</AxFormControl>
 		</Controls>

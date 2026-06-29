@@ -123,7 +123,7 @@ public class JIStmpAuthorTable extends common
 			</Method>
 		</Methods>
 	</SourceCode>
-	<FormRef>FTDAuthor</FormRef>
+	<FormRef>JISAuthor</FormRef>
 	<Label>@ITFormacion:Author</Label>
 	<SubscriberAccessLevel>
 		<Read>Allow</Read>

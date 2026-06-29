@@ -1,0 +1,1535 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Diagnostics
+  GenerationTime="2026-06-29T07:24:56.672251+00:00">
+  <Items>
+    <Diagnostic>
+      <DiagnosticType>Compile</DiagnosticType>
+      <Severity>Error</Severity>
+      <Path>dynamics://Table/JISBookTable</Path>
+      <ElementType>Table</ElementType>
+      <Moniker>ModelElementWithUnparsableSource</Moniker>
+      <Line>0</Line>
+      <Column>0</Column>
+      <Message>The model element was saved with unparsable source code and cannot be used. Please edit the element in Visual Studio to fix the errors.</Message>
+    </Diagnostic>
+    <Diagnostic>
+      <DiagnosticType>Unspecified</DiagnosticType>
+      <Severity>Error</Severity>
+      <Path>dynamics://Table/JISBookTable</Path>
+      <ElementType>Table</ElementType>
+      <Moniker>TableNotFoundOrUnParsable</Moniker>
+      <Message>Table 'JISBookTable' was not found or cannot be parsed.</Message>
+    </Diagnostic>
+    <Diagnostic>
+      <DiagnosticType>Compile</DiagnosticType>
+      <Severity>Error</Severity>
+      <Path>dynamics://Form/JISAuthor</Path>
+      <ElementType>Form</ElementType>
+      <Moniker>InvalidFormDataSourceTable</Moniker>
+      <Line>0</Line>
+      <Column>0</Column>
+      <Message>Form 'JISAuthor' datasource 'FTDAuthorTable' refers to table 'FTDAuthorTable' which does not exist.</Message>
+    </Diagnostic>
+    <Diagnostic>
+      <DiagnosticType>Compile</DiagnosticType>
+      <Severity>Error</Severity>
+      <Path>dynamics://Form/JISBook</Path>
+      <ElementType>Form</ElementType>
+      <Moniker>InvalidFormDataSourceTable</Moniker>
+      <Line>0</Line>
+      <Column>0</Column>
+      <Message>Form 'JISBook' datasource 'FTDBookTable' refers to table 'FTDBookTable' which does not exist.</Message>
+    </Diagnostic>
+    <Diagnostic>
+      <DiagnosticType>Compile</DiagnosticType>
+      <Severity>Error</Severity>
+      <Path>dynamics://Form/JIStmpAuthor</Path>
+      <ElementType>Form</ElementType>
+      <Moniker>InvalidFormDataSourceTable</Moniker>
+      <Line>0</Line>
+      <Column>0</Column>
+      <Message>Form 'JIStmpAuthor' datasource 'FTDtmpAuthorTable' refers to table 'FTDtmpAuthorTable' which does not exist.</Message>
+    </Diagnostic>
+    <Diagnostic>
+      <DiagnosticType>Compile</DiagnosticType>
+      <Severity>Error</Severity>
+      <Path>dynamics://Form/JISBookTransactions</Path>
+      <ElementType>Form</ElementType>
+      <Moniker>InvalidFormDataSourceTable</Moniker>
+      <Line>0</Line>
+      <Column>0</Column>
+      <Message>Form 'JISBookTransactions' datasource 'FTDBookTable' refers to table 'FTDBookTable' which does not exist.</Message>
+    </Diagnostic>
+    <Diagnostic>
+      <DiagnosticType>Compile</DiagnosticType>
+      <Severity>Error</Severity>
+      <Path>dynamics://Form/JISBookTransactions</Path>
+      <ElementType>Form</ElementType>
+      <Moniker>InvalidFormDataSourceTable</Moniker>
+      <Line>0</Line>
+      <Column>0</Column>
+      <Message>Form 'JISBookTransactions' datasource 'FTDBookInventoryTransaction' refers to table 'FTDBookInventoryTransaction' which does not exist.</Message>
+    </Diagnostic>
+    <Diagnostic>
+      <DiagnosticType>Compile</DiagnosticType>
+      <Severity>Error</Severity>
+      <Path>dynamics://Table/JISBookStaging</Path>
+      <ElementType>Table</ElementType>
+      <Moniker>UnderlyingFieldTypeNotFound</Moniker>
+      <Line>1</Line>
+      <Column>14</Column>
+      <EndLine>1</EndLine>
+      <EndColumn>28</EndColumn>
+      <Message>The underlying type 'FTDId ' or its base type for table 'JISBookStaging' field 'AuthorTable_Id' does not exist.</Message>
+    </Diagnostic>
+    <Diagnostic>
+      <DiagnosticType>Compile</DiagnosticType>
+      <Severity>Error</Severity>
+      <Path>dynamics://Form/JISBook</Path>
+      <ElementType>Form</ElementType>
+      <Moniker>TypeNotFound</Moniker>
+      <Line>4</Line>
+      <Column>5</Column>
+      <EndLine>4</EndLine>
+      <EndColumn>33</EndColumn>
+      <Message>The name 'FTDGenreEnum' does not denote a class, a table, or an extended data type.</Message>
+    </Diagnostic>
+    <Diagnostic>
+      <DiagnosticType>Compile</DiagnosticType>
+      <Severity>Error</Severity>
+      <Path>dynamics://Class/__Persister__</Path>
+      <ElementType>Class</ElementType>
+      <Moniker>TypeNotFound</Moniker>
+      <Line>9</Line>
+      <Column>5</Column>
+      <EndLine>9</EndLine>
+      <EndColumn>33</EndColumn>
+      <Message>The name 'JISBookTable' does not denote a class, a table, or an extended data type.</Message>
+    </Diagnostic>
+    <Diagnostic>
+      <DiagnosticType>Compile</DiagnosticType>
+      <Severity>Error</Severity>
+      <Path>dynamics://Class/JISBookCreationService/Method/findBook</Path>
+      <ElementType>Class Method</ElementType>
+      <Moniker>TypeNotFound</Moniker>
+      <Line>4</Line>
+      <Column>2</Column>
+      <EndLine>4</EndLine>
+      <EndColumn>30</EndColumn>
+      <Message>The name 'JISBookTable' does not denote a class, a table, or an extended data type.</Message>
+    </Diagnostic>
+    <Diagnostic>
+      <DiagnosticType>Compile</DiagnosticType>
+      <Severity>Error</Severity>
+      <Path>dynamics://Class/JISBookCreationService/Method/findBook</Path>
+      <ElementType>Class Method</ElementType>
+      <Moniker>IntrinsicArgDoesNotDenoteExistingMetadata</Moniker>
+      <Line>3</Line>
+      <Column>58</Column>
+      <EndLine>3</EndLine>
+      <EndColumn>80</EndColumn>
+      <Message>The 'JISBookTable' argument of the 'tableStr' compile-time function does not specify a known table/map/view/data entity.</Message>
+    </Diagnostic>
+    <Diagnostic>
+      <DiagnosticType>Compile</DiagnosticType>
+      <Severity>Error</Severity>
+      <Path>dynamics://Class/__Persister__/Method/foreignKeyPropagation_DS1</Path>
+      <ElementType>Class Method</ElementType>
+      <Moniker>TypeNotFound</Moniker>
+      <Line>33</Line>
+      <Column>81</Column>
+      <EndLine>33</EndLine>
+      <EndColumn>107</EndColumn>
+      <Message>The name 'JISBookTable' does not denote a class, a table, or an extended data type.</Message>
+    </Diagnostic>
+    <Diagnostic>
+      <DiagnosticType>Compile</DiagnosticType>
+      <Severity>Error</Severity>
+      <Path>dynamics://Class/__Persister__/Method/foreignKeyPropagation_DS1</Path>
+      <ElementType>Class Method</ElementType>
+      <Moniker>InvalidQualifier</Moniker>
+      <Line>37</Line>
+      <Column>12</Column>
+      <EndLine>37</EndLine>
+      <EndColumn>25</EndColumn>
+      <Message>The qualifier '_jISBookTable' is not valid for field 'Author'.</Message>
+    </Diagnostic>
+    <Diagnostic>
+      <DiagnosticType>Compile</DiagnosticType>
+      <Severity>Error</Severity>
+      <Path>dynamics://Class/__Persister__/Method/foreignKeyPropagation_DS1</Path>
+      <ElementType>Class Method</ElementType>
+      <Moniker>InvalidQualifier</Moniker>
+      <Line>39</Line>
+      <Column>13</Column>
+      <EndLine>39</EndLine>
+      <EndColumn>33</EndColumn>
+      <Message>The qualifier '_jISBookTable' is not valid for field 'Author'.</Message>
+    </Diagnostic>
+    <Diagnostic>
+      <DiagnosticType>Compile</DiagnosticType>
+      <Severity>Error</Severity>
+      <Path>dynamics://Class/__Persister__/Method/foreignKeyPropagation_DS1</Path>
+      <ElementType>Class Method</ElementType>
+      <Moniker>TableNotFound</Moniker>
+      <Line>49</Line>
+      <Column>107</Column>
+      <EndLine>49</EndLine>
+      <EndColumn>137</EndColumn>
+      <Message>Table 'JISBookTable' is not found.</Message>
+    </Diagnostic>
+    <Diagnostic>
+      <DiagnosticType>Compile</DiagnosticType>
+      <Severity>Error</Severity>
+      <Path>dynamics://Class/__Persister__/Method/mapToDataSource_DS1</Path>
+      <ElementType>Class Method</ElementType>
+      <Moniker>TypeNotFound</Moniker>
+      <Line>168</Line>
+      <Column>126</Column>
+      <EndLine>168</EndLine>
+      <EndColumn>152</EndColumn>
+      <Message>The name 'JISBookTable' does not denote a class, a table, or an extended data type.</Message>
+    </Diagnostic>
+    <Diagnostic>
+      <DiagnosticType>Compile</DiagnosticType>
+      <Severity>Error</Severity>
+      <Path>dynamics://Class/__Persister__/Method/mapToDataSource_DS1</Path>
+      <ElementType>Class Method</ElementType>
+      <Moniker>TableNotFound</Moniker>
+      <Line>170</Line>
+      <Column>145</Column>
+      <EndLine>170</EndLine>
+      <EndColumn>171</EndColumn>
+      <Message>Table 'JISBookTable' is not found.</Message>
+    </Diagnostic>
+    <Diagnostic>
+      <DiagnosticType>Compile</DiagnosticType>
+      <Severity>Error</Severity>
+      <Path>dynamics://Class/__Persister__/Method/mapToDataSource_DS1</Path>
+      <ElementType>Class Method</ElementType>
+      <Moniker>TableNotFound</Moniker>
+      <Line>171</Line>
+      <Column>147</Column>
+      <EndLine>171</EndLine>
+      <EndColumn>175</EndColumn>
+      <Message>Table 'JISBookTable' is not found.</Message>
+    </Diagnostic>
+    <Diagnostic>
+      <DiagnosticType>Compile</DiagnosticType>
+      <Severity>Error</Severity>
+      <Path>dynamics://Class/__Persister__/Method/mapToDataSource_DS1</Path>
+      <ElementType>Class Method</ElementType>
+      <Moniker>TableNotFound</Moniker>
+      <Line>172</Line>
+      <Column>148</Column>
+      <EndLine>172</EndLine>
+      <EndColumn>177</EndColumn>
+      <Message>Table 'JISBookTable' is not found.</Message>
+    </Diagnostic>
+    <Diagnostic>
+      <DiagnosticType>Compile</DiagnosticType>
+      <Severity>Error</Severity>
+      <Path>dynamics://Class/__Persister__/Method/mapToDataSource_DS1</Path>
+      <ElementType>Class Method</ElementType>
+      <Moniker>TableNotFound</Moniker>
+      <Line>173</Line>
+      <Column>149</Column>
+      <EndLine>173</EndLine>
+      <EndColumn>179</EndColumn>
+      <Message>Table 'JISBookTable' is not found.</Message>
+    </Diagnostic>
+    <Diagnostic>
+      <DiagnosticType>Compile</DiagnosticType>
+      <Severity>Error</Severity>
+      <Path>dynamics://Class/__Persister__/Method/mapFromDataSource_DS1</Path>
+      <ElementType>Class Method</ElementType>
+      <Moniker>TypeNotFound</Moniker>
+      <Line>200</Line>
+      <Column>91</Column>
+      <EndLine>200</EndLine>
+      <EndColumn>117</EndColumn>
+      <Message>The name 'JISBookTable' does not denote a class, a table, or an extended data type.</Message>
+    </Diagnostic>
+    <Diagnostic>
+      <DiagnosticType>Compile</DiagnosticType>
+      <Severity>Error</Severity>
+      <Path>dynamics://Class/__Persister__/Method/mapFromDataSource_DS1</Path>
+      <ElementType>Class Method</ElementType>
+      <Moniker>TableNotFound</Moniker>
+      <Line>202</Line>
+      <Column>61</Column>
+      <EndLine>202</EndLine>
+      <EndColumn>87</EndColumn>
+      <Message>Table 'JISBookTable' is not found.</Message>
+    </Diagnostic>
+    <Diagnostic>
+      <DiagnosticType>Compile</DiagnosticType>
+      <Severity>Error</Severity>
+      <Path>dynamics://Class/__Persister__/Method/mapFromDataSource_DS1</Path>
+      <ElementType>Class Method</ElementType>
+      <Moniker>TableNotFound</Moniker>
+      <Line>203</Line>
+      <Column>61</Column>
+      <EndLine>203</EndLine>
+      <EndColumn>89</EndColumn>
+      <Message>Table 'JISBookTable' is not found.</Message>
+    </Diagnostic>
+    <Diagnostic>
+      <DiagnosticType>Compile</DiagnosticType>
+      <Severity>Error</Severity>
+      <Path>dynamics://Class/__Persister__/Method/mapFromDataSource_DS1</Path>
+      <ElementType>Class Method</ElementType>
+      <Moniker>TableNotFound</Moniker>
+      <Line>204</Line>
+      <Column>61</Column>
+      <EndLine>204</EndLine>
+      <EndColumn>90</EndColumn>
+      <Message>Table 'JISBookTable' is not found.</Message>
+    </Diagnostic>
+    <Diagnostic>
+      <DiagnosticType>Compile</DiagnosticType>
+      <Severity>Error</Severity>
+      <Path>dynamics://Class/__Persister__/Method/mapFromDataSource_DS1</Path>
+      <ElementType>Class Method</ElementType>
+      <Moniker>TableNotFound</Moniker>
+      <Line>205</Line>
+      <Column>61</Column>
+      <EndLine>205</EndLine>
+      <EndColumn>91</EndColumn>
+      <Message>Table 'JISBookTable' is not found.</Message>
+    </Diagnostic>
+    <Diagnostic>
+      <DiagnosticType>Compile</DiagnosticType>
+      <Severity>Error</Severity>
+      <Path>dynamics://Class/__Persister__/Method/doFindDataSource</Path>
+      <ElementType>Class Method</ElementType>
+      <Moniker>TypeNotFound</Moniker>
+      <Line>238</Line>
+      <Column>24</Column>
+      <EndLine>238</EndLine>
+      <EndColumn>112</EndColumn>
+      <Message>The name 'JISBookTable' does not denote a class, a table, or an extended data type.</Message>
+    </Diagnostic>
+    <Diagnostic>
+      <DiagnosticType>Compile</DiagnosticType>
+      <Severity>Error</Severity>
+      <Path>dynamics://Class/__Persister__/Method/validateDataSource_DS1</Path>
+      <ElementType>Class Method</ElementType>
+      <Moniker>TypeNotFound</Moniker>
+      <Line>298</Line>
+      <Column>162</Column>
+      <EndLine>298</EndLine>
+      <EndColumn>188</EndColumn>
+      <Message>The name 'JISBookTable' does not denote a class, a table, or an extended data type.</Message>
+    </Diagnostic>
+    <Diagnostic>
+      <DiagnosticType>Compile</DiagnosticType>
+      <Severity>Error</Severity>
+      <Path>dynamics://Class/__Persister__/Method/validateDataSource_DS1</Path>
+      <ElementType>Class Method</ElementType>
+      <Moniker>TableNotFound</Moniker>
+      <Line>301</Line>
+      <Column>178</Column>
+      <EndLine>301</EndLine>
+      <EndColumn>204</EndColumn>
+      <Message>Table 'JISBookTable' is not found.</Message>
+    </Diagnostic>
+    <Diagnostic>
+      <DiagnosticType>Compile</DiagnosticType>
+      <Severity>Error</Severity>
+      <Path>dynamics://Class/__Persister__/Method/validateDataSource_DS1</Path>
+      <ElementType>Class Method</ElementType>
+      <Moniker>TableNotFound</Moniker>
+      <Line>302</Line>
+      <Column>182</Column>
+      <EndLine>302</EndLine>
+      <EndColumn>210</EndColumn>
+      <Message>Table 'JISBookTable' is not found.</Message>
+    </Diagnostic>
+    <Diagnostic>
+      <DiagnosticType>Compile</DiagnosticType>
+      <Severity>Error</Severity>
+      <Path>dynamics://Class/__Persister__/Method/validateDataSource_DS1</Path>
+      <ElementType>Class Method</ElementType>
+      <Moniker>TableNotFound</Moniker>
+      <Line>303</Line>
+      <Column>184</Column>
+      <EndLine>303</EndLine>
+      <EndColumn>213</EndColumn>
+      <Message>Table 'JISBookTable' is not found.</Message>
+    </Diagnostic>
+    <Diagnostic>
+      <DiagnosticType>Compile</DiagnosticType>
+      <Severity>Error</Severity>
+      <Path>dynamics://Class/__Persister__/Method/mapToMatchingRecord_DS1</Path>
+      <ElementType>Class Method</ElementType>
+      <Moniker>TypeNotFound</Moniker>
+      <Line>321</Line>
+      <Column>93</Column>
+      <EndLine>321</EndLine>
+      <EndColumn>119</EndColumn>
+      <Message>The name 'JISBookTable' does not denote a class, a table, or an extended data type.</Message>
+    </Diagnostic>
+    <Diagnostic>
+      <DiagnosticType>Compile</DiagnosticType>
+      <Severity>Error</Severity>
+      <Path>dynamics://Class/__Persister__/Method/mapToMatchingRecord_DS1</Path>
+      <ElementType>Class Method</ElementType>
+      <Moniker>TypeNotFound</Moniker>
+      <Line>321</Line>
+      <Column>121</Column>
+      <EndLine>321</EndLine>
+      <EndColumn>149</EndColumn>
+      <Message>The name 'JISBookTable' does not denote a class, a table, or an extended data type.</Message>
+    </Diagnostic>
+    <Diagnostic>
+      <DiagnosticType>Compile</DiagnosticType>
+      <Severity>Error</Severity>
+      <Path>dynamics://Class/__Persister__/Method/mapToMatchingRecord_DS1</Path>
+      <ElementType>Class Method</ElementType>
+      <Moniker>TableNotFound</Moniker>
+      <Line>324</Line>
+      <Column>100</Column>
+      <EndLine>324</EndLine>
+      <EndColumn>126</EndColumn>
+      <Message>Table 'JISBookTable' is not found.</Message>
+    </Diagnostic>
+    <Diagnostic>
+      <DiagnosticType>Compile</DiagnosticType>
+      <Severity>Error</Severity>
+      <Path>dynamics://Class/__Persister__/Method/mapToMatchingRecord_DS1</Path>
+      <ElementType>Class Method</ElementType>
+      <Moniker>TableNotFound</Moniker>
+      <Line>324</Line>
+      <Column>145</Column>
+      <EndLine>324</EndLine>
+      <EndColumn>171</EndColumn>
+      <Message>Table 'JISBookTable' is not found.</Message>
+    </Diagnostic>
+    <Diagnostic>
+      <DiagnosticType>Compile</DiagnosticType>
+      <Severity>Error</Severity>
+      <Path>dynamics://Class/__Persister__/Method/mapToMatchingRecord_DS1</Path>
+      <ElementType>Class Method</ElementType>
+      <Moniker>TableNotFound</Moniker>
+      <Line>325</Line>
+      <Column>100</Column>
+      <EndLine>325</EndLine>
+      <EndColumn>128</EndColumn>
+      <Message>Table 'JISBookTable' is not found.</Message>
+    </Diagnostic>
+    <Diagnostic>
+      <DiagnosticType>Compile</DiagnosticType>
+      <Severity>Error</Severity>
+      <Path>dynamics://Class/__Persister__/Method/mapToMatchingRecord_DS1</Path>
+      <ElementType>Class Method</ElementType>
+      <Moniker>TableNotFound</Moniker>
+      <Line>325</Line>
+      <Column>147</Column>
+      <EndLine>325</EndLine>
+      <EndColumn>175</EndColumn>
+      <Message>Table 'JISBookTable' is not found.</Message>
+    </Diagnostic>
+    <Diagnostic>
+      <DiagnosticType>Compile</DiagnosticType>
+      <Severity>Error</Severity>
+      <Path>dynamics://Class/__Persister__/Method/mapToMatchingRecord_DS1</Path>
+      <ElementType>Class Method</ElementType>
+      <Moniker>TableNotFound</Moniker>
+      <Line>326</Line>
+      <Column>100</Column>
+      <EndLine>326</EndLine>
+      <EndColumn>129</EndColumn>
+      <Message>Table 'JISBookTable' is not found.</Message>
+    </Diagnostic>
+    <Diagnostic>
+      <DiagnosticType>Compile</DiagnosticType>
+      <Severity>Error</Severity>
+      <Path>dynamics://Class/__Persister__/Method/mapToMatchingRecord_DS1</Path>
+      <ElementType>Class Method</ElementType>
+      <Moniker>TableNotFound</Moniker>
+      <Line>326</Line>
+      <Column>148</Column>
+      <EndLine>326</EndLine>
+      <EndColumn>177</EndColumn>
+      <Message>Table 'JISBookTable' is not found.</Message>
+    </Diagnostic>
+    <Diagnostic>
+      <DiagnosticType>Compile</DiagnosticType>
+      <Severity>Error</Severity>
+      <Path>dynamics://Class/__Persister__/Method/mapToMatchingRecord_DS1</Path>
+      <ElementType>Class Method</ElementType>
+      <Moniker>TableNotFound</Moniker>
+      <Line>327</Line>
+      <Column>100</Column>
+      <EndLine>327</EndLine>
+      <EndColumn>130</EndColumn>
+      <Message>Table 'JISBookTable' is not found.</Message>
+    </Diagnostic>
+    <Diagnostic>
+      <DiagnosticType>Compile</DiagnosticType>
+      <Severity>Error</Severity>
+      <Path>dynamics://Class/__Persister__/Method/mapToMatchingRecord_DS1</Path>
+      <ElementType>Class Method</ElementType>
+      <Moniker>TableNotFound</Moniker>
+      <Line>327</Line>
+      <Column>149</Column>
+      <EndLine>327</EndLine>
+      <EndColumn>179</EndColumn>
+      <Message>Table 'JISBookTable' is not found.</Message>
+    </Diagnostic>
+    <Diagnostic>
+      <DiagnosticType>Compile</DiagnosticType>
+      <Severity>Error</Severity>
+      <Path>dynamics://Class/__Persister__/Method/LookForUniqueKeyMatch_DS1</Path>
+      <ElementType>Class Method</ElementType>
+      <Moniker>TypeNotFound</Moniker>
+      <Line>382</Line>
+      <Column>5</Column>
+      <EndLine>382</EndLine>
+      <EndColumn>51</EndColumn>
+      <Message>The name 'JISBookTable' does not denote a class, a table, or an extended data type.</Message>
+    </Diagnostic>
+    <Diagnostic>
+      <DiagnosticType>Compile</DiagnosticType>
+      <Severity>Error</Severity>
+      <Path>dynamics://Class/__Persister__/Method/LookForUniqueKeyMatch_DS1</Path>
+      <ElementType>Class Method</ElementType>
+      <Moniker>TypeNotFound</Moniker>
+      <Line>382</Line>
+      <Column>82</Column>
+      <EndLine>382</EndLine>
+      <EndColumn>108</EndColumn>
+      <Message>The name 'JISBookTable' does not denote a class, a table, or an extended data type.</Message>
+    </Diagnostic>
+    <Diagnostic>
+      <DiagnosticType>Compile</DiagnosticType>
+      <Severity>Error</Severity>
+      <Path>dynamics://Class/__Persister__/Method/LookForUniqueKeyMatch_DS1</Path>
+      <ElementType>Class Method</ElementType>
+      <Moniker>TypeNotFound</Moniker>
+      <Line>384</Line>
+      <Column>9</Column>
+      <EndLine>384</EndLine>
+      <EndColumn>21</EndColumn>
+      <Message>The name 'JISBookTable' does not denote a class, a table, or an extended data type.</Message>
+    </Diagnostic>
+    <Diagnostic>
+      <DiagnosticType>Compile</DiagnosticType>
+      <Severity>Error</Severity>
+      <Path>dynamics://Class/__Persister__/Method/LookForUniqueKeyMatch_DS1</Path>
+      <ElementType>Class Method</ElementType>
+      <Moniker>NotDeclared</Moniker>
+      <Line>386</Line>
+      <Column>9</Column>
+      <EndLine>391</EndLine>
+      <EndColumn>55</EndColumn>
+      <Message>'jISBookTable_' is not declared.</Message>
+    </Diagnostic>
+    <Diagnostic>
+      <DiagnosticType>Compile</DiagnosticType>
+      <Severity>Error</Severity>
+      <Path>dynamics://Form/JISAuthor/FormDataSourceRoot/FTDAuthorTable/Method/active</Path>
+      <ElementType>Form DataSource Method</ElementType>
+      <Moniker>VariableNotFound</Moniker>
+      <Line>28</Line>
+      <Column>13</Column>
+      <EndLine>28</EndLine>
+      <EndColumn>28</EndColumn>
+      <Message>Variable 'FTDAuthorTable' is not found in scope.</Message>
+    </Diagnostic>
+    <Diagnostic>
+      <DiagnosticType>Compile</DiagnosticType>
+      <Severity>Error</Severity>
+      <Path>dynamics://Form/JISAuthor/FormDataSourceRoot/FTDAuthorTable/Method/init</Path>
+      <ElementType>Form DataSource Method</ElementType>
+      <Moniker>NotDeclared</Moniker>
+      <Line>40</Line>
+      <Column>52</Column>
+      <EndLine>40</EndLine>
+      <EndColumn>68</EndColumn>
+      <Message>'FTDAuthorTable_q' is not declared.</Message>
+    </Diagnostic>
+    <Diagnostic>
+      <DiagnosticType>Compile</DiagnosticType>
+      <Severity>Error</Severity>
+      <Path>dynamics://Form/JISAuthor/FormDataSourceRoot/FTDAuthorTable/Method/init</Path>
+      <ElementType>Form DataSource Method</ElementType>
+      <Moniker>IntrinsicArgDoesNotDenoteExistingMetadata</Moniker>
+      <Line>40</Line>
+      <Column>85</Column>
+      <EndLine>40</EndLine>
+      <EndColumn>109</EndColumn>
+      <Message>The 'FTDAuthorTable' argument of the 'tableNum' compile-time function does not specify a known table/map/view/data entity.</Message>
+    </Diagnostic>
+    <Diagnostic>
+      <DiagnosticType>Compile</DiagnosticType>
+      <Severity>Error</Severity>
+      <Path>dynamics://Form/JISAuthor/FormDataSourceRoot/FTDAuthorTable/Method/init</Path>
+      <ElementType>Form DataSource Method</ElementType>
+      <Moniker>TableNotFound</Moniker>
+      <Line>41</Line>
+      <Column>53</Column>
+      <EndLine>41</EndLine>
+      <EndColumn>88</EndColumn>
+      <Message>Table 'FTDAuthorTable' is not found.</Message>
+    </Diagnostic>
+    <Diagnostic>
+      <DiagnosticType>Compile</DiagnosticType>
+      <Severity>Error</Severity>
+      <Path>dynamics://Form/JISAuthor/FormDataSourceRoot/FTDAuthorTable/Method/init</Path>
+      <ElementType>Form DataSource Method</ElementType>
+      <Moniker>TableNotFound</Moniker>
+      <Line>42</Line>
+      <Column>53</Column>
+      <EndLine>42</EndLine>
+      <EndColumn>88</EndColumn>
+      <Message>Table 'FTDAuthorTable' is not found.</Message>
+    </Diagnostic>
+    <Diagnostic>
+      <DiagnosticType>Compile</DiagnosticType>
+      <Severity>Error</Severity>
+      <Path>dynamics://Form/JISAuthor/FormDataSourceRoot/FTDAuthorTable/Method/init</Path>
+      <ElementType>Form DataSource Method</ElementType>
+      <Moniker>TableNotFound</Moniker>
+      <Line>43</Line>
+      <Column>61</Column>
+      <EndLine>43</EndLine>
+      <EndColumn>96</EndColumn>
+      <Message>Table 'FTDAuthorTable' is not found.</Message>
+    </Diagnostic>
+    <Diagnostic>
+      <DiagnosticType>Compile</DiagnosticType>
+      <Severity>Error</Severity>
+      <Path>dynamics://Form/JISAuthor/FormDesign/AxFormDesign/FormGroupControl/CustomFilterGroup/FormDateControl/FilterDateAlive/Method/modified</Path>
+      <ElementType>Form Control Method</ElementType>
+      <Moniker>VariableNotFound</Moniker>
+      <Line>82</Line>
+      <Column>13</Column>
+      <EndLine>82</EndLine>
+      <EndColumn>31</EndColumn>
+      <Message>Variable 'FTDAuthorTable_ds' is not found in scope.</Message>
+    </Diagnostic>
+    <Diagnostic>
+      <DiagnosticType>Compile</DiagnosticType>
+      <Severity>Error</Severity>
+      <Path>dynamics://Class/JISQueryVSSelect/Method/selectExample</Path>
+      <ElementType>Class Method</ElementType>
+      <Moniker>TypeNotFound</Moniker>
+      <Line>9</Line>
+      <Column>9</Column>
+      <EndLine>9</EndLine>
+      <EndColumn>21</EndColumn>
+      <Message>The name 'JISBookTable' does not denote a class, a table, or an extended data type.</Message>
+    </Diagnostic>
+    <Diagnostic>
+      <DiagnosticType>Compile</DiagnosticType>
+      <Severity>Error</Severity>
+      <Path>dynamics://Class/JISQueryVSSelect/Method/selectExample</Path>
+      <ElementType>Class Method</ElementType>
+      <Moniker>NotDeclared</Moniker>
+      <Line>12</Line>
+      <Column>13</Column>
+      <EndLine>12</EndLine>
+      <EndColumn>41</EndColumn>
+      <Message>'bookTable' is not declared.</Message>
+    </Diagnostic>
+    <Diagnostic>
+      <DiagnosticType>Compile</DiagnosticType>
+      <Severity>Error</Severity>
+      <Path>dynamics://Class/JISQueryVSSelect/Method/selectExample</Path>
+      <ElementType>Class Method</ElementType>
+      <Moniker>InvalidQualifier</Moniker>
+      <Line>17</Line>
+      <Column>17</Column>
+      <EndLine>17</EndLine>
+      <EndColumn>26</EndColumn>
+      <Message>The qualifier 'bookTable' is not valid for field 'Id'.</Message>
+    </Diagnostic>
+    <Diagnostic>
+      <DiagnosticType>Compile</DiagnosticType>
+      <Severity>Error</Severity>
+      <Path>dynamics://Class/JISQueryVSSelect/Method/selectExample</Path>
+      <ElementType>Class Method</ElementType>
+      <Moniker>InvalidQualifier</Moniker>
+      <Line>18</Line>
+      <Column>17</Column>
+      <EndLine>18</EndLine>
+      <EndColumn>26</EndColumn>
+      <Message>The qualifier 'bookTable' is not valid for field 'Name'.</Message>
+    </Diagnostic>
+    <Diagnostic>
+      <DiagnosticType>Compile</DiagnosticType>
+      <Severity>Error</Severity>
+      <Path>dynamics://Class/JISQueryVSSelect/Method/buildQueryFromCode</Path>
+      <ElementType>Class Method</ElementType>
+      <Moniker>IntrinsicArgDoesNotDenoteExistingMetadata</Moniker>
+      <Line>36</Line>
+      <Column>76</Column>
+      <EndLine>36</EndLine>
+      <EndColumn>98</EndColumn>
+      <Message>The 'JISBookTable' argument of the 'tableNum' compile-time function does not specify a known table/map/view/data entity.</Message>
+    </Diagnostic>
+    <Diagnostic>
+      <DiagnosticType>Compile</DiagnosticType>
+      <Severity>Error</Severity>
+      <Path>dynamics://Class/JISQueryVSSelect/Method/buildQueryFromCode</Path>
+      <ElementType>Class Method</ElementType>
+      <Moniker>TableNotFound</Moniker>
+      <Line>42</Line>
+      <Column>13</Column>
+      <EndLine>42</EndLine>
+      <EndColumn>43</EndColumn>
+      <Message>Table 'JISBookTable' is not found.</Message>
+    </Diagnostic>
+    <Diagnostic>
+      <DiagnosticType>Compile</DiagnosticType>
+      <Severity>Error</Severity>
+      <Path>dynamics://Class/JISQueryVSSelect/Method/buildQueryFromCode</Path>
+      <ElementType>Class Method</ElementType>
+      <Moniker>TableNotFound</Moniker>
+      <Line>45</Line>
+      <Column>59</Column>
+      <EndLine>45</EndLine>
+      <EndColumn>88</EndColumn>
+      <Message>Table 'JISBookTable' is not found.</Message>
+    </Diagnostic>
+    <Diagnostic>
+      <DiagnosticType>Compile</DiagnosticType>
+      <Severity>Error</Severity>
+      <Path>dynamics://Class/JISQueryVSSelect/Method/runQuery</Path>
+      <ElementType>Class Method</ElementType>
+      <Moniker>TypeNotFound</Moniker>
+      <Line>59</Line>
+      <Column>13</Column>
+      <EndLine>59</EndLine>
+      <EndColumn>25</EndColumn>
+      <Message>The name 'JISBookTable' does not denote a class, a table, or an extended data type.</Message>
+    </Diagnostic>
+    <Diagnostic>
+      <DiagnosticType>Compile</DiagnosticType>
+      <Severity>Error</Severity>
+      <Path>dynamics://Class/JISQueryVSSelect/Method/runQuery</Path>
+      <ElementType>Class Method</ElementType>
+      <Moniker>IntrinsicArgDoesNotDenoteExistingMetadata</Moniker>
+      <Line>59</Line>
+      <Column>45</Column>
+      <EndLine>59</EndLine>
+      <EndColumn>67</EndColumn>
+      <Message>The 'JISBookTable' argument of the 'tableNum' compile-time function does not specify a known table/map/view/data entity.</Message>
+    </Diagnostic>
+    <Diagnostic>
+      <DiagnosticType>Compile</DiagnosticType>
+      <Severity>Error</Severity>
+      <Path>dynamics://Class/JISQueryVSSelect/Method/runQuery</Path>
+      <ElementType>Class Method</ElementType>
+      <Moniker>InvalidQualifier</Moniker>
+      <Line>63</Line>
+      <Column>17</Column>
+      <EndLine>63</EndLine>
+      <EndColumn>26</EndColumn>
+      <Message>The qualifier 'bookTable' is not valid for field 'Id'.</Message>
+    </Diagnostic>
+    <Diagnostic>
+      <DiagnosticType>Compile</DiagnosticType>
+      <Severity>Error</Severity>
+      <Path>dynamics://Class/JISQueryVSSelect/Method/runQuery</Path>
+      <ElementType>Class Method</ElementType>
+      <Moniker>InvalidQualifier</Moniker>
+      <Line>64</Line>
+      <Column>17</Column>
+      <EndLine>64</EndLine>
+      <EndColumn>26</EndColumn>
+      <Message>The qualifier 'bookTable' is not valid for field 'Name'.</Message>
+    </Diagnostic>
+    <Diagnostic>
+      <DiagnosticType>Compile</DiagnosticType>
+      <Severity>Error</Severity>
+      <Path>dynamics://Form/JISBook/Method/getParamsFromArgs</Path>
+      <ElementType>Form Method</ElementType>
+      <Moniker>IntrinsicArgDoesNotDenoteExistingMetadata</Moniker>
+      <Line>20</Line>
+      <Column>31</Column>
+      <EndLine>20</EndLine>
+      <EndColumn>71</EndColumn>
+      <Message>The 'FTDBookGenreFiltered' argument of the 'menuItemDisplayStr' compile-time function does not specify a known menu item display.</Message>
+    </Diagnostic>
+    <Diagnostic>
+      <DiagnosticType>Compile</DiagnosticType>
+      <Severity>Error</Severity>
+      <Path>dynamics://Form/JISBook/Method/getParamsFromArgs</Path>
+      <ElementType>Form Method</ElementType>
+      <Moniker>IntrinsicArgDoesNotDenoteExistingMetadata</Moniker>
+      <Line>21</Line>
+      <Column>40</Column>
+      <EndLine>21</EndLine>
+      <EndColumn>64</EndColumn>
+      <Message>The 'FTDAuthorTable' argument of the 'tableNum' compile-time function does not specify a known table/map/view/data entity.</Message>
+    </Diagnostic>
+    <Diagnostic>
+      <DiagnosticType>Compile</DiagnosticType>
+      <Severity>Error</Severity>
+      <Path>dynamics://Form/JISBook/Method/getParamsFromArgs</Path>
+      <ElementType>Form Method</ElementType>
+      <Moniker>TypeNotFound</Moniker>
+      <Line>23</Line>
+      <Column>13</Column>
+      <EndLine>23</EndLine>
+      <EndColumn>27</EndColumn>
+      <Message>The name 'FTDAuthorTable' does not denote a class, a table, or an extended data type.</Message>
+    </Diagnostic>
+    <Diagnostic>
+      <DiagnosticType>Compile</DiagnosticType>
+      <Severity>Error</Severity>
+      <Path>dynamics://Form/JISBook/FormDataSourceRoot/FTDBookTable/Method/clearExistingLinksAndAddGenreRange</Path>
+      <ElementType>Form DataSource Method</ElementType>
+      <Moniker>NotDeclared</Moniker>
+      <Line>44</Line>
+      <Column>41</Column>
+      <EndLine>44</EndLine>
+      <EndColumn>55</EndColumn>
+      <Message>'FTDBookTable_q' is not declared.</Message>
+    </Diagnostic>
+    <Diagnostic>
+      <DiagnosticType>Compile</DiagnosticType>
+      <Severity>Error</Severity>
+      <Path>dynamics://Form/JISBook/FormDataSourceRoot/FTDBookTable/Method/clearExistingLinksAndAddGenreRange</Path>
+      <ElementType>Form DataSource Method</ElementType>
+      <Moniker>IntrinsicArgDoesNotDenoteExistingMetadata</Moniker>
+      <Line>44</Line>
+      <Column>72</Column>
+      <EndLine>44</EndLine>
+      <EndColumn>94</EndColumn>
+      <Message>The 'FTDBookTable' argument of the 'tableNum' compile-time function does not specify a known table/map/view/data entity.</Message>
+    </Diagnostic>
+    <Diagnostic>
+      <DiagnosticType>Compile</DiagnosticType>
+      <Severity>Error</Severity>
+      <Path>dynamics://Form/JISBook/FormDataSourceRoot/FTDBookTable/Method/clearExistingLinksAndAddGenreRange</Path>
+      <ElementType>Form DataSource Method</ElementType>
+      <Moniker>TableNotFound</Moniker>
+      <Line>48</Line>
+      <Column>54</Column>
+      <EndLine>48</EndLine>
+      <EndColumn>83</EndColumn>
+      <Message>Table 'FTDBookTable' is not found.</Message>
+    </Diagnostic>
+    <Diagnostic>
+      <DiagnosticType>Compile</DiagnosticType>
+      <Severity>Error</Severity>
+      <Path>dynamics://Form/JISBook/FormDataSourceRoot/FTDBookTable/FormDataSourceField/Author/Method/lookupReference</Path>
+      <ElementType>Form DataSource DataField Method</ElementType>
+      <Moniker>NotDeclared</Moniker>
+      <Line>69</Line>
+      <Column>24</Column>
+      <EndLine>69</EndLine>
+      <EndColumn>36</EndColumn>
+      <Message>'FTDBookTable' is not declared.</Message>
+    </Diagnostic>
+    <Diagnostic>
+      <DiagnosticType>Compile</DiagnosticType>
+      <Severity>Error</Severity>
+      <Path>dynamics://Form/JISBook/FormDataSourceRoot/FTDBookTable/FormDataSourceField/Author/Method/validate</Path>
+      <ElementType>Form DataSource DataField Method</ElementType>
+      <Moniker>NotDeclared</Moniker>
+      <Line>77</Line>
+      <Column>50</Column>
+      <EndLine>77</EndLine>
+      <EndColumn>62</EndColumn>
+      <Message>'FTDBookTable' is not declared.</Message>
+    </Diagnostic>
+    <Diagnostic>
+      <DiagnosticType>Compile</DiagnosticType>
+      <Severity>Error</Severity>
+      <Path>dynamics://Form/JISBook/FormDataSourceRoot/FTDBookTable/FormDataSourceField/Author/Method/validate</Path>
+      <ElementType>Form DataSource DataField Method</ElementType>
+      <Moniker>InvalidQualifier</Moniker>
+      <Line>77</Line>
+      <Column>50</Column>
+      <EndLine>77</EndLine>
+      <EndColumn>62</EndColumn>
+      <Message>The qualifier 'FTDBookTable' is not valid for field 'Author'.</Message>
+    </Diagnostic>
+    <Diagnostic>
+      <DiagnosticType>Compile</DiagnosticType>
+      <Severity>Error</Severity>
+      <Path>dynamics://Form/JISBook/FormDataSourceRoot/FTDBookTable/FormDataSourceField/Author/Method/validate</Path>
+      <ElementType>Form DataSource DataField Method</ElementType>
+      <Moniker>ClassOrTableNotFound</Moniker>
+      <Line>77</Line>
+      <Column>24</Column>
+      <EndLine>77</EndLine>
+      <EndColumn>70</EndColumn>
+      <Message>The name 'FTDAuthorTable' does not designate a class or table.</Message>
+    </Diagnostic>
+    <Diagnostic>
+      <DiagnosticType>Compile</DiagnosticType>
+      <Severity>Error</Severity>
+      <Path>dynamics://Form/JISBook/FormDataSourceRoot/FTDBookTable/FormDataSourceField/Author/Method/validate</Path>
+      <ElementType>Form DataSource DataField Method</ElementType>
+      <Moniker>InvalidQualifier</Moniker>
+      <Line>77</Line>
+      <Column>24</Column>
+      <EndLine>77</EndLine>
+      <EndColumn>70</EndColumn>
+      <Message>The qualifier 'FTDAuthorTable::findRecId(FTDBookTable.Author)' is not valid for field 'IsDead'.</Message>
+    </Diagnostic>
+    <Diagnostic>
+      <DiagnosticType>Compile</DiagnosticType>
+      <Severity>Error</Severity>
+      <Path>dynamics://Class/JISBookInventoryUpdationService/Method/runProcess</Path>
+      <ElementType>Class Method</ElementType>
+      <Moniker>TypeNotFound</Moniker>
+      <Line>5</Line>
+      <Column>9</Column>
+      <EndLine>5</EndLine>
+      <EndColumn>21</EndColumn>
+      <Message>The name 'JISBookTable' does not denote a class, a table, or an extended data type.</Message>
+    </Diagnostic>
+    <Diagnostic>
+      <DiagnosticType>Compile</DiagnosticType>
+      <Severity>Error</Severity>
+      <Path>dynamics://Class/JISBookInventoryUpdationService/Method/runProcess</Path>
+      <ElementType>Class Method</ElementType>
+      <Moniker>ClassOrTableNotFound</Moniker>
+      <Line>5</Line>
+      <Column>29</Column>
+      <EndLine>5</EndLine>
+      <EndColumn>75</EndColumn>
+      <Message>The name 'JISBookTable' does not designate a class or table.</Message>
+    </Diagnostic>
+    <Diagnostic>
+      <DiagnosticType>Compile</DiagnosticType>
+      <Severity>Error</Severity>
+      <Path>dynamics://Class/JISBookInventoryUpdationService/Method/runProcess</Path>
+      <ElementType>Class Method</ElementType>
+      <Moniker>InvalidQualifier</Moniker>
+      <Line>14</Line>
+      <Column>37</Column>
+      <EndLine>14</EndLine>
+      <EndColumn>41</EndColumn>
+      <Message>The qualifier 'book' is not valid for field 'RecId'.</Message>
+    </Diagnostic>
+    <Diagnostic>
+      <DiagnosticType>Compile</DiagnosticType>
+      <Severity>Error</Severity>
+      <Path>dynamics://Form/JIStmpAuthor/Method/loadtmpData</Path>
+      <ElementType>Form Method</ElementType>
+      <Moniker>TypeNotFound</Moniker>
+      <Line>14</Line>
+      <Column>9</Column>
+      <EndLine>14</EndLine>
+      <EndColumn>26</EndColumn>
+      <Message>The name 'FTDtmpAuthorTable' does not denote a class, a table, or an extended data type.</Message>
+    </Diagnostic>
+    <Diagnostic>
+      <DiagnosticType>Compile</DiagnosticType>
+      <Severity>Error</Severity>
+      <Path>dynamics://Form/JIStmpAuthor/Method/loadtmpData</Path>
+      <ElementType>Form Method</ElementType>
+      <Moniker>TypeNotFound</Moniker>
+      <Line>15</Line>
+      <Column>9</Column>
+      <EndLine>15</EndLine>
+      <EndColumn>23</EndColumn>
+      <Message>The name 'FTDAuthorTable' does not denote a class, a table, or an extended data type.</Message>
+    </Diagnostic>
+    <Diagnostic>
+      <DiagnosticType>Compile</DiagnosticType>
+      <Severity>Error</Severity>
+      <Path>dynamics://Form/JIStmpAuthor/Method/loadtmpData</Path>
+      <ElementType>Form Method</ElementType>
+      <Moniker>NotDeclared</Moniker>
+      <Line>17</Line>
+      <Column>15</Column>
+      <EndLine>17</EndLine>
+      <EndColumn>33</EndColumn>
+      <Message>'authorTable' is not declared.</Message>
+    </Diagnostic>
+    <Diagnostic>
+      <DiagnosticType>Compile</DiagnosticType>
+      <Severity>Error</Severity>
+      <Path>dynamics://Form/JIStmpAuthor/Method/loadtmpData</Path>
+      <ElementType>Form Method</ElementType>
+      <Moniker>VariableNotFound</Moniker>
+      <Line>26</Line>
+      <Column>9</Column>
+      <EndLine>26</EndLine>
+      <EndColumn>27</EndColumn>
+      <Message>Variable 'FTDtmpAuthorTable' is not found in scope.</Message>
+    </Diagnostic>
+    <Diagnostic>
+      <DiagnosticType>Compile</DiagnosticType>
+      <Severity>Error</Severity>
+      <Path>dynamics://Form/JISBookTransactions/FormDesign/AxFormDesign/FormTabControl/DetailsTab/FormTabPageControl/TransactionTabPage/FormActionPaneControl/TransactionActionPane/FormButtonGroupControl/TransactionActionPaneGroup/FormButtonControl/Add/Method/clicked</Path>
+      <ElementType>Form Control Method</ElementType>
+      <Moniker>VariableNotFound</Moniker>
+      <Line>14</Line>
+      <Column>13</Column>
+      <EndLine>14</EndLine>
+      <EndColumn>44</EndColumn>
+      <Message>Variable 'FTDBookInventoryTransaction_ds' is not found in scope.</Message>
+    </Diagnostic>
+    <Diagnostic>
+      <DiagnosticType>Compile</DiagnosticType>
+      <Severity>Error</Severity>
+      <Path>dynamics://Form/JISBookTransactions/FormDesign/AxFormDesign/FormTabControl/DetailsTab/FormTabPageControl/TransactionTabPage/FormActionPaneControl/TransactionActionPane/FormButtonGroupControl/TransactionActionPaneGroup/FormButtonControl/Delete/Method/clicked</Path>
+      <ElementType>Form Control Method</ElementType>
+      <Moniker>NotDeclared</Moniker>
+      <Line>29</Line>
+      <Column>17</Column>
+      <EndLine>29</EndLine>
+      <EndColumn>47</EndColumn>
+      <Message>'FTDBookInventoryTransaction_ds' is not declared.</Message>
+    </Diagnostic>
+    <Diagnostic>
+      <DiagnosticType>Compile</DiagnosticType>
+      <Severity>Error</Severity>
+      <Path>dynamics://Form/JISBookTransactions/FormDesign/AxFormDesign/FormTabControl/DetailsTab/FormTabPageControl/TransactionTabPage/FormActionPaneControl/TransactionActionPane/FormButtonGroupControl/TransactionActionPaneGroup/FormButtonControl/Delete/Method/clicked</Path>
+      <ElementType>Form Control Method</ElementType>
+      <Moniker>VariableNotFound</Moniker>
+      <Line>31</Line>
+      <Column>17</Column>
+      <EndLine>31</EndLine>
+      <EndColumn>45</EndColumn>
+      <Message>Variable 'FTDBookInventoryTransaction' is not found in scope.</Message>
+    </Diagnostic>
+    <Diagnostic>
+      <DiagnosticType>Compile</DiagnosticType>
+      <Severity>Error</Severity>
+      <Path>dynamics://Form/JISBookTransactions/FormDesign/AxFormDesign/FormTabControl/DetailsTab/FormTabPageControl/TransactionTabPage/FormActionPaneControl/TransactionActionPane/FormButtonGroupControl/TransactionActionPaneGroup/FormButtonControl/Delete/Method/clicked</Path>
+      <ElementType>Form Control Method</ElementType>
+      <Moniker>VariableNotFound</Moniker>
+      <Line>34</Line>
+      <Column>13</Column>
+      <EndLine>34</EndLine>
+      <EndColumn>44</EndColumn>
+      <Message>Variable 'FTDBookInventoryTransaction_ds' is not found in scope.</Message>
+    </Diagnostic>
+    <Diagnostic>
+      <DiagnosticType>Compile</DiagnosticType>
+      <Severity>Error</Severity>
+      <Path>dynamics://Class/JISBookInventoryUpdationController/Method/initFromBookFormIfNeeded</Path>
+      <ElementType>Class Method</ElementType>
+      <Moniker>TypeNotFound</Moniker>
+      <Line>30</Line>
+      <Column>13</Column>
+      <EndLine>30</EndLine>
+      <EndColumn>25</EndColumn>
+      <Message>The name 'JISBookTable' does not denote a class, a table, or an extended data type.</Message>
+    </Diagnostic>
+    <Diagnostic>
+      <DiagnosticType>Compile</DiagnosticType>
+      <Severity>Error</Severity>
+      <Path>dynamics://Class/JISBookInventoryUpdationController/Method/initFromBookFormIfNeeded</Path>
+      <ElementType>Class Method</ElementType>
+      <Moniker>FormDataSourceNotFound</Moniker>
+      <Line>31</Line>
+      <Column>29</Column>
+      <EndLine>31</EndLine>
+      <EndColumn>69</EndColumn>
+      <Message>Form data source 'JISBookTable' is not found in 'JISBook'</Message>
+    </Diagnostic>
+    <Diagnostic>
+      <DiagnosticType>Compile</DiagnosticType>
+      <Severity>Error</Severity>
+      <Path>dynamics://Class/JISBookInventoryUpdationController/Method/initFromBookFormIfNeeded</Path>
+      <ElementType>Class Method</ElementType>
+      <Moniker>InvalidQualifier</Moniker>
+      <Line>36</Line>
+      <Column>33</Column>
+      <EndLine>36</EndLine>
+      <EndColumn>49</EndColumn>
+      <Message>The qualifier 'bookActiveRecord' is not valid for field 'Id'.</Message>
+    </Diagnostic>
+    <Diagnostic>
+      <DiagnosticType>Compile</DiagnosticType>
+      <Severity>Error</Severity>
+      <Path>dynamics://Class/JISBookInventoryUpdationController/Method/validateBook</Path>
+      <ElementType>Class Method</ElementType>
+      <Moniker>ClassOrTableNotFound</Moniker>
+      <Line>67</Line>
+      <Column>14</Column>
+      <EndLine>67</EndLine>
+      <EndColumn>42</EndColumn>
+      <Message>The name 'JISBookTable' does not designate a class or table.</Message>
+    </Diagnostic>
+    <Diagnostic>
+      <DiagnosticType>Metadata</DiagnosticType>
+      <Severity>Error</Severity>
+      <Path>AxTable/JIStmpAuthorTable/FormRef</Path>
+      <Moniker>MenuItemDisplayDoesNotExist</Moniker>
+      <Message>Menu item display 'FTDAuthor' does not exist.</Message>
+    </Diagnostic>
+    <Diagnostic>
+      <DiagnosticType>Metadata</DiagnosticType>
+      <Severity>Error</Severity>
+      <Path>AxTable/JISBookStaging/Fields/AuthorTable_Id/ExtendedDataType</Path>
+      <Moniker>EdtDoesNotExist</Moniker>
+      <Message>Extended data type 'FTDId' does not exist.</Message>
+    </Diagnostic>
+    <Diagnostic>
+      <DiagnosticType>Metadata</DiagnosticType>
+      <Severity>Error</Severity>
+      <Path>AxTable/JIStmpAuthorTable/Indexes/AuthorIdx</Path>
+      <Moniker>IndexMustContainOneNonIncludedColumn</Moniker>
+      <Message>Index must contain at least 1 non-included column.</Message>
+    </Diagnostic>
+    <Diagnostic>
+      <DiagnosticType>Metadata</DiagnosticType>
+      <Severity>Error</Severity>
+      <Path>AxTable/JISBookTable/Indexes/BookTableIdx</Path>
+      <Moniker>IndexMustContainOneNonIncludedColumn</Moniker>
+      <Message>Index must contain at least 1 non-included column.</Message>
+    </Diagnostic>
+    <Diagnostic>
+      <DiagnosticType>Metadata</DiagnosticType>
+      <Severity>Error</Severity>
+      <Path>AxTable/JISAuthorTable/Indexes/AuthorIdx</Path>
+      <Moniker>IndexMustContainOneNonIncludedColumn</Moniker>
+      <Message>Index must contain at least 1 non-included column.</Message>
+    </Diagnostic>
+    <Diagnostic>
+      <DiagnosticType>Metadata</DiagnosticType>
+      <Severity>Error</Severity>
+      <Path>AxForm/JISBookTransactions/DataSources/FTDBookTable/Table</Path>
+      <Moniker>TableDoesNotExist</Moniker>
+      <Message>Table 'FTDBookTable' does not exist.</Message>
+    </Diagnostic>
+    <Diagnostic>
+      <DiagnosticType>Metadata</DiagnosticType>
+      <Severity>Error</Severity>
+      <Path>AxForm/JISAuthor/DataSources/FTDAuthorTable/Table</Path>
+      <Moniker>TableDoesNotExist</Moniker>
+      <Message>Table 'FTDAuthorTable' does not exist.</Message>
+    </Diagnostic>
+    <Diagnostic>
+      <DiagnosticType>Metadata</DiagnosticType>
+      <Severity>Error</Severity>
+      <Path>AxForm/JIStmpAuthor/DataSources/FTDtmpAuthorTable/Table</Path>
+      <Moniker>TableDoesNotExist</Moniker>
+      <Message>Table 'FTDtmpAuthorTable' does not exist.</Message>
+    </Diagnostic>
+    <Diagnostic>
+      <DiagnosticType>Metadata</DiagnosticType>
+      <Severity>Error</Severity>
+      <Path>AxForm/JISBookTransactions/DataSources/FTDBookInventoryTransaction/Table</Path>
+      <Moniker>TableDoesNotExist</Moniker>
+      <Message>Table 'FTDBookInventoryTransaction' does not exist.</Message>
+    </Diagnostic>
+    <Diagnostic>
+      <DiagnosticType>Metadata</DiagnosticType>
+      <Severity>Error</Severity>
+      <Path>AxForm/JISBook/DataSources/FTDBookTable/Table</Path>
+      <Moniker>TableDoesNotExist</Moniker>
+      <Message>Table 'FTDBookTable' does not exist.</Message>
+    </Diagnostic>
+    <Diagnostic>
+      <DiagnosticType>Metadata</DiagnosticType>
+      <Severity>Error</Severity>
+      <Path>AxTable/JISBookInventoryTransaction/Relations/Book/RelatedTable</Path>
+      <Moniker>TableDoesNotExist</Moniker>
+      <Message>Table 'FTDBookTable' does not exist.</Message>
+    </Diagnostic>
+    <Diagnostic>
+      <DiagnosticType>Metadata</DiagnosticType>
+      <Severity>Error</Severity>
+      <Path>AxTable/JISBookStaging/Relations/AuthorTable/RelatedTable</Path>
+      <Moniker>TableDoesNotExist</Moniker>
+      <Message>Table 'FTDAuthorTable' does not exist.</Message>
+    </Diagnostic>
+    <Diagnostic>
+      <DiagnosticType>Metadata</DiagnosticType>
+      <Severity>Error</Severity>
+      <Path>AxTable/JISBookTable/FieldGroups/Grid/Fields/dispAuthorFullName/DataField</Path>
+      <Moniker>FieldDoesNotExist</Moniker>
+      <Message>Field 'dispAuthorFullName' does not exist.</Message>
+    </Diagnostic>
+    <Diagnostic>
+      <DiagnosticType>Metadata</DiagnosticType>
+      <Severity>Error</Severity>
+      <Path>AxTable/JISBookTable/FieldGroups/Grid/Fields/dispCurrentInventory/DataField</Path>
+      <Moniker>FieldDoesNotExist</Moniker>
+      <Message>Field 'dispCurrentInventory' does not exist.</Message>
+    </Diagnostic>
+    <Diagnostic>
+      <DiagnosticType>Metadata</DiagnosticType>
+      <Severity>Error</Severity>
+      <Path>AxForm/JISAuthor/Design/Controls/ApplicationBar/Controls/ApplicationBarButtonGroup/Controls/Book/MenuItemName</Path>
+      <Moniker>MenuItemDisplayDoesNotExist</Moniker>
+      <Message>Menu item display 'FTDBook' does not exist.</Message>
+    </Diagnostic>
+    <Diagnostic>
+      <DiagnosticType>Metadata</DiagnosticType>
+      <Severity>Error</Severity>
+      <Path>AxForm/JISAuthor/Design/Controls/ApplicationBar/Controls/ApplicationBarButtonGroup/Controls/BookGenreFiltered/MenuItemName</Path>
+      <Moniker>MenuItemDisplayDoesNotExist</Moniker>
+      <Message>Menu item display 'FTDBookGenreFiltered' does not exist.</Message>
+    </Diagnostic>
+    <Diagnostic>
+      <DiagnosticType>Metadata</DiagnosticType>
+      <Severity>Error</Severity>
+      <Path>AxForm/JISBook/Design/Controls/ApplicationBar/Controls/ButtonGroup/Controls/BookTransactions/MenuItemName</Path>
+      <Moniker>MenuItemDisplayDoesNotExist</Moniker>
+      <Message>Menu item display 'FTDBookTransactions' does not exist.</Message>
+    </Diagnostic>
+    <Diagnostic>
+      <DiagnosticType>Metadata</DiagnosticType>
+      <Severity>Error</Severity>
+      <Path>AxForm/JISBook/Design/Controls/ApplicationBar/Controls/ButtonGroup/Controls/BookInventoryUpdationController/MenuItemName</Path>
+      <Moniker>MenuItemActionDoesNotExist</Moniker>
+      <Message>Menu item action 'FTDBookInventoryUpdationController' does not exist.</Message>
+    </Diagnostic>
+    <Diagnostic>
+      <DiagnosticType>Metadata</DiagnosticType>
+      <Severity>Error</Severity>
+      <Path>AxForm/JIStmpAuthor/Design/Controls/SimpleListGrid/DataGroup</Path>
+      <Moniker>FieldGroupDoesNotExist</Moniker>
+      <Message>Field group 'Grid' does not exist.</Message>
+    </Diagnostic>
+    <Diagnostic>
+      <DiagnosticType>Metadata</DiagnosticType>
+      <Severity>Error</Severity>
+      <Path>AxForm/JISBook/Design/Controls/SimpleListGrid/Controls/GroupGrid/DataGroup</Path>
+      <Moniker>FieldGroupDoesNotExist</Moniker>
+      <Message>Field group 'Grid' does not exist.</Message>
+    </Diagnostic>
+    <Diagnostic>
+      <DiagnosticType>Metadata</DiagnosticType>
+      <Severity>Error</Severity>
+      <Path>AxForm/JISAuthor/Design/Controls/SimpleListGrid/DataGroup</Path>
+      <Moniker>FieldGroupDoesNotExist</Moniker>
+      <Message>Field group 'Grid' does not exist.</Message>
+    </Diagnostic>
+    <Diagnostic>
+      <DiagnosticType>Metadata</DiagnosticType>
+      <Severity>Error</Severity>
+      <Path>AxForm/JISBook/Design/Controls/SimpleListGrid/Controls/GroupGrid/Controls/Grid_Id/DataField</Path>
+      <Moniker>DataSourceFieldDoesNotExist</Moniker>
+      <Message>Field 'Id' does not exist on data source 'FTDBookTable'.</Message>
+    </Diagnostic>
+    <Diagnostic>
+      <DiagnosticType>Metadata</DiagnosticType>
+      <Severity>Error</Severity>
+      <Path>AxForm/JISBookTransactions/Design/Controls/NavigationListGroup/Controls/NavigationListGrid/Controls/FTDBookTable_Id/DataField</Path>
+      <Moniker>DataSourceFieldDoesNotExist</Moniker>
+      <Message>Field 'Id' does not exist on data source 'FTDBookTable'.</Message>
+    </Diagnostic>
+    <Diagnostic>
+      <DiagnosticType>Metadata</DiagnosticType>
+      <Severity>Error</Severity>
+      <Path>AxForm/JIStmpAuthor/Design/Controls/SimpleListGrid/Controls/SimpleListGrid_Id/DataField</Path>
+      <Moniker>DataSourceFieldDoesNotExist</Moniker>
+      <Message>Field 'Id' does not exist on data source 'FTDtmpAuthorTable'.</Message>
+    </Diagnostic>
+    <Diagnostic>
+      <DiagnosticType>Metadata</DiagnosticType>
+      <Severity>Error</Severity>
+      <Path>AxForm/JISBook/Design/Controls/SimpleListGrid/Controls/GroupGrid/Controls/Grid_Name/DataField</Path>
+      <Moniker>DataSourceFieldDoesNotExist</Moniker>
+      <Message>Field 'Name' does not exist on data source 'FTDBookTable'.</Message>
+    </Diagnostic>
+    <Diagnostic>
+      <DiagnosticType>Metadata</DiagnosticType>
+      <Severity>Error</Severity>
+      <Path>AxForm/JISBookTransactions/Design/Controls/NavigationListGroup/Controls/NavigationListGrid/Controls/FTDBookTable_Name/DataField</Path>
+      <Moniker>DataSourceFieldDoesNotExist</Moniker>
+      <Message>Field 'Name' does not exist on data source 'FTDBookTable'.</Message>
+    </Diagnostic>
+    <Diagnostic>
+      <DiagnosticType>Metadata</DiagnosticType>
+      <Severity>Error</Severity>
+      <Path>AxForm/JIStmpAuthor/Design/Controls/SimpleListGrid/Controls/SimpleListGrid_FirstName/DataField</Path>
+      <Moniker>DataSourceFieldDoesNotExist</Moniker>
+      <Message>Field 'FirstName' does not exist on data source 'FTDtmpAuthorTable'.</Message>
+    </Diagnostic>
+    <Diagnostic>
+      <DiagnosticType>Metadata</DiagnosticType>
+      <Severity>Error</Severity>
+      <Path>AxForm/JIStmpAuthor/Design/Controls/SimpleListGrid/Controls/SimpleListGrid_LastName/DataField</Path>
+      <Moniker>DataSourceFieldDoesNotExist</Moniker>
+      <Message>Field 'LastName' does not exist on data source 'FTDtmpAuthorTable'.</Message>
+    </Diagnostic>
+    <Diagnostic>
+      <DiagnosticType>Metadata</DiagnosticType>
+      <Severity>Error</Severity>
+      <Path>AxForm/JIStmpAuthor/Design/Controls/SimpleListGrid/Controls/SimpleListGrid_BirthDate/DataField</Path>
+      <Moniker>DataSourceFieldDoesNotExist</Moniker>
+      <Message>Field 'BirthDate' does not exist on data source 'FTDtmpAuthorTable'.</Message>
+    </Diagnostic>
+    <Diagnostic>
+      <DiagnosticType>Metadata</DiagnosticType>
+      <Severity>Error</Severity>
+      <Path>AxForm/JISAuthor/Design/Controls/SimpleListGrid/Controls/SimpleListGrid_Id/DataField</Path>
+      <Moniker>DataSourceFieldDoesNotExist</Moniker>
+      <Message>Field 'Id' does not exist on data source 'FTDAuthorTable'.</Message>
+    </Diagnostic>
+    <Diagnostic>
+      <DiagnosticType>Metadata</DiagnosticType>
+      <Severity>Error</Severity>
+      <Path>AxForm/JISAuthor/Design/Controls/SimpleListGrid/Controls/SimpleListGrid_FirstName/DataField</Path>
+      <Moniker>DataSourceFieldDoesNotExist</Moniker>
+      <Message>Field 'FirstName' does not exist on data source 'FTDAuthorTable'.</Message>
+    </Diagnostic>
+    <Diagnostic>
+      <DiagnosticType>Metadata</DiagnosticType>
+      <Severity>Error</Severity>
+      <Path>AxForm/JISAuthor/Design/Controls/SimpleListGrid/Controls/SimpleListGrid_LastName/DataField</Path>
+      <Moniker>DataSourceFieldDoesNotExist</Moniker>
+      <Message>Field 'LastName' does not exist on data source 'FTDAuthorTable'.</Message>
+    </Diagnostic>
+    <Diagnostic>
+      <DiagnosticType>Metadata</DiagnosticType>
+      <Severity>Error</Severity>
+      <Path>AxForm/JISAuthor/Design/Controls/SimpleListGrid/Controls/SimpleListGrid_BirthDate/DataField</Path>
+      <Moniker>DataSourceFieldDoesNotExist</Moniker>
+      <Message>Field 'BirthDate' does not exist on data source 'FTDAuthorTable'.</Message>
+    </Diagnostic>
+    <Diagnostic>
+      <DiagnosticType>Metadata</DiagnosticType>
+      <Severity>Error</Severity>
+      <Path>AxForm/JIStmpAuthor/Design/Controls/SimpleListGrid/Controls/SimpleListGrid_IsDead/DataField</Path>
+      <Moniker>DataSourceFieldDoesNotExist</Moniker>
+      <Message>Field 'IsDead' does not exist on data source 'FTDtmpAuthorTable'.</Message>
+    </Diagnostic>
+    <Diagnostic>
+      <DiagnosticType>Metadata</DiagnosticType>
+      <Severity>Error</Severity>
+      <Path>AxForm/JIStmpAuthor/Design/Controls/SimpleListGrid/Controls/SimpleListGrid_DeathDate/DataField</Path>
+      <Moniker>DataSourceFieldDoesNotExist</Moniker>
+      <Message>Field 'DeathDate' does not exist on data source 'FTDtmpAuthorTable'.</Message>
+    </Diagnostic>
+    <Diagnostic>
+      <DiagnosticType>Metadata</DiagnosticType>
+      <Severity>Error</Severity>
+      <Path>AxForm/JISAuthor/Design/Controls/SimpleListGrid/Controls/SimpleListGrid_IsDead/DataField</Path>
+      <Moniker>DataSourceFieldDoesNotExist</Moniker>
+      <Message>Field 'IsDead' does not exist on data source 'FTDAuthorTable'.</Message>
+    </Diagnostic>
+    <Diagnostic>
+      <DiagnosticType>Metadata</DiagnosticType>
+      <Severity>Error</Severity>
+      <Path>AxForm/JISAuthor/Design/Controls/SimpleListGrid/Controls/SimpleListGrid_DeathDate/DataField</Path>
+      <Moniker>DataSourceFieldDoesNotExist</Moniker>
+      <Message>Field 'DeathDate' does not exist on data source 'FTDAuthorTable'.</Message>
+    </Diagnostic>
+    <Diagnostic>
+      <DiagnosticType>Metadata</DiagnosticType>
+      <Severity>Error</Severity>
+      <Path>AxForm/JISBook/Design/Controls/SimpleListGrid/Controls/GroupGrid/Controls/GroupGrid_Genre/DataField</Path>
+      <Moniker>DataSourceFieldDoesNotExist</Moniker>
+      <Message>Field 'Genre' does not exist on data source 'FTDBookTable'.</Message>
+    </Diagnostic>
+    <Diagnostic>
+      <DiagnosticType>Metadata</DiagnosticType>
+      <Severity>Error</Severity>
+      <Path>AxForm/JISBookTransactions/Design/Controls/NavigationListGroup/Controls/NavigationListGrid/Controls/FTDBookTable_Author/ReferenceField</Path>
+      <Moniker>DataSourceFieldDoesNotExist</Moniker>
+      <Message>Field 'Author' does not exist on data source 'FTDBookTable'.</Message>
+    </Diagnostic>
+    <Diagnostic>
+      <DiagnosticType>Metadata</DiagnosticType>
+      <Severity>Error</Severity>
+      <Path>AxForm/JISBook/Design/Controls/SimpleListGrid/Controls/GroupGrid/Controls/GroupGrid_Author/ReferenceField</Path>
+      <Moniker>DataSourceFieldDoesNotExist</Moniker>
+      <Message>Field 'Author' does not exist on data source 'FTDBookTable'.</Message>
+    </Diagnostic>
+    <Diagnostic>
+      <DiagnosticType>Metadata</DiagnosticType>
+      <Severity>Error</Severity>
+      <Path>AxForm/JISBookTransactions/Design/Controls/DetailsHeader/Controls/BookDetailsGroup/DataGroup</Path>
+      <Moniker>FieldGroupDoesNotExist</Moniker>
+      <Message>Field group 'Grid' does not exist.</Message>
+    </Diagnostic>
+    <Diagnostic>
+      <DiagnosticType>Metadata</DiagnosticType>
+      <Severity>Error</Severity>
+      <Path>AxForm/JISBookTransactions/Design/Controls/DetailsHeader/Controls/BookDetailsGroup/Controls/BookDetailsGroup_Id/DataField</Path>
+      <Moniker>DataSourceFieldDoesNotExist</Moniker>
+      <Message>Field 'Id' does not exist on data source 'FTDBookTable'.</Message>
+    </Diagnostic>
+    <Diagnostic>
+      <DiagnosticType>Metadata</DiagnosticType>
+      <Severity>Error</Severity>
+      <Path>AxForm/JISBookTransactions/Design/Controls/DetailsHeader/Controls/BookDetailsGroup/Controls/BookDetailsGroup_Name/DataField</Path>
+      <Moniker>DataSourceFieldDoesNotExist</Moniker>
+      <Message>Field 'Name' does not exist on data source 'FTDBookTable'.</Message>
+    </Diagnostic>
+    <Diagnostic>
+      <DiagnosticType>Metadata</DiagnosticType>
+      <Severity>Error</Severity>
+      <Path>AxForm/JISBookTransactions/Design/Controls/DetailsHeader/Controls/BookDetailsGroup/Controls/BookDetailsGroup_Genre/DataField</Path>
+      <Moniker>DataSourceFieldDoesNotExist</Moniker>
+      <Message>Field 'Genre' does not exist on data source 'FTDBookTable'.</Message>
+    </Diagnostic>
+    <Diagnostic>
+      <DiagnosticType>Metadata</DiagnosticType>
+      <Severity>Error</Severity>
+      <Path>AxForm/JISBook/Design/Controls/SimpleListGrid/Controls/GroupGrid/Controls/GroupGrid_dispAuthorFullName/DataMethod</Path>
+      <Moniker>DataMethodNotFoundOnDataSource</Moniker>
+      <Message>The data method 'dispAuthorFullName' was not found on the data source 'FTDBookTable' or its base table/view.</Message>
+    </Diagnostic>
+    <Diagnostic>
+      <DiagnosticType>Metadata</DiagnosticType>
+      <Severity>Error</Severity>
+      <Path>AxForm/JISBookTransactions/Design/Controls/DetailsHeader/Controls/BookDetailsGroup/Controls/BookDetailsGroup_Author/ReferenceField</Path>
+      <Moniker>DataSourceFieldDoesNotExist</Moniker>
+      <Message>Field 'Author' does not exist on data source 'FTDBookTable'.</Message>
+    </Diagnostic>
+    <Diagnostic>
+      <DiagnosticType>Metadata</DiagnosticType>
+      <Severity>Error</Severity>
+      <Path>AxForm/JISBookTransactions/Design/Controls/DetailsHeader/Controls/BookDetailsGroup/Controls/BookDetailsGroup_dispAuthorFullName/DataMethod</Path>
+      <Moniker>DataMethodNotFoundOnDataSource</Moniker>
+      <Message>The data method 'dispAuthorFullName' was not found on the data source 'FTDBookTable' or its base table/view.</Message>
+    </Diagnostic>
+    <Diagnostic>
+      <DiagnosticType>Metadata</DiagnosticType>
+      <Severity>Error</Severity>
+      <Path>AxForm/JISBookTransactions/Design/Controls/DetailsTab/Controls/TransactionTabPage/Controls/TransactionGrid/Controls/FTDBookInventoryTransaction_TransId/DataField</Path>
+      <Moniker>DataSourceFieldDoesNotExist</Moniker>
+      <Message>Field 'TransId' does not exist on data source 'FTDBookInventoryTransaction'.</Message>
+    </Diagnostic>
+    <Diagnostic>
+      <DiagnosticType>Metadata</DiagnosticType>
+      <Severity>Error</Severity>
+      <Path>AxForm/JISBook/Design/Controls/SimpleListGrid/Controls/GroupGrid/Controls/GroupGrid_dispCurrentInventory/DataMethod</Path>
+      <Moniker>DataMethodNotFoundOnDataSource</Moniker>
+      <Message>The data method 'dispCurrentInventory' was not found on the data source 'FTDBookTable' or its base table/view.</Message>
+    </Diagnostic>
+    <Diagnostic>
+      <DiagnosticType>Metadata</DiagnosticType>
+      <Severity>Error</Severity>
+      <Path>AxForm/JISBookTransactions/Design/Controls/DetailsTab/Controls/TransactionTabPage/Controls/TransactionGrid/Controls/FTDBookInventoryTransaction_Qty/DataField</Path>
+      <Moniker>DataSourceFieldDoesNotExist</Moniker>
+      <Message>Field 'Qty' does not exist on data source 'FTDBookInventoryTransaction'.</Message>
+    </Diagnostic>
+    <Diagnostic>
+      <DiagnosticType>Metadata</DiagnosticType>
+      <Severity>Error</Severity>
+      <Path>AxForm/JISBook/Design/Controls/SimpleListGrid/Controls/FTDBookTable_ModifiedDateTime/DataField</Path>
+      <Moniker>DataSourceFieldDoesNotExist</Moniker>
+      <Message>Field 'ModifiedDateTime' does not exist on data source 'FTDBookTable'.</Message>
+    </Diagnostic>
+    <Diagnostic>
+      <DiagnosticType>Metadata</DiagnosticType>
+      <Severity>Error</Severity>
+      <Path>AxMenuExtension/MainMenu.ITFormacion/FTDLibrary/MenuName</Path>
+      <Moniker>MenuDoesNotExist</Moniker>
+      <Message>Menu 'FTDLibrary' does not exist.</Message>
+    </Diagnostic>
+    <Diagnostic>
+      <DiagnosticType>Metadata</DiagnosticType>
+      <Severity>Error</Severity>
+      <Path>AxMenu/JISLibrary/Master/FTDBook/MenuItemName</Path>
+      <Moniker>MenuItemDisplayDoesNotExist</Moniker>
+      <Message>Menu item display 'FTDBook' does not exist.</Message>
+    </Diagnostic>
+    <Diagnostic>
+      <DiagnosticType>Metadata</DiagnosticType>
+      <Severity>Error</Severity>
+      <Path>AxMenu/JISLibrary/Master/FTDAuthor/MenuItemName</Path>
+      <Moniker>MenuItemDisplayDoesNotExist</Moniker>
+      <Message>Menu item display 'FTDAuthor' does not exist.</Message>
+    </Diagnostic>
+    <Diagnostic>
+      <DiagnosticType>Metadata</DiagnosticType>
+      <Severity>Error</Severity>
+      <Path>AxMenu/JISLibrary/Transanctions/FTDBookTransactions/MenuItemName</Path>
+      <Moniker>MenuItemDisplayDoesNotExist</Moniker>
+      <Message>Menu item display 'FTDBookTransactions' does not exist.</Message>
+    </Diagnostic>
+    <Diagnostic>
+      <DiagnosticType>Metadata</DiagnosticType>
+      <Severity>Error</Severity>
+      <Path>AxMenu/JISLibrary/Processes/BookInventoryUpdationController/MenuItemName</Path>
+      <Moniker>MenuItemActionDoesNotExist</Moniker>
+      <Message>Menu item action 'FTDBookInventoryUpdationController' does not exist.</Message>
+    </Diagnostic>
+    <Diagnostic>
+      <DiagnosticType>Compile</DiagnosticType>
+      <Severity>Error</Severity>
+      <Path>dynamics://Table/JISBookInventoryTransaction/Method/validateTotalQtyIsNotBelowZero</Path>
+      <ElementType>Table Method</ElementType>
+      <Moniker>ClassOrTableNotFound</Moniker>
+      <Line>27</Line>
+      <Column>33</Column>
+      <EndLine>27</EndLine>
+      <EndColumn>67</EndColumn>
+      <Message>The name 'JISBookTable' does not designate a class or table.</Message>
+    </Diagnostic>
+    <Diagnostic>
+      <DiagnosticType>Compile</DiagnosticType>
+      <Severity>Error</Severity>
+      <Path>dynamics://Table/JISAuthorTable/Method/sqlQueryinXpp</Path>
+      <ElementType>Table Method</ElementType>
+      <Moniker>TypeNotFound</Moniker>
+      <Line>88</Line>
+      <Column>9</Column>
+      <EndLine>88</EndLine>
+      <EndColumn>21</EndColumn>
+      <Message>The name 'JISBookTable' does not denote a class, a table, or an extended data type.</Message>
+    </Diagnostic>
+    <Diagnostic>
+      <DiagnosticType>Compile</DiagnosticType>
+      <Severity>Error</Severity>
+      <Path>dynamics://Table/JISAuthorTable/Method/sqlQueryinXpp</Path>
+      <ElementType>Table Method</ElementType>
+      <Moniker>NotDeclared</Moniker>
+      <Line>91</Line>
+      <Column>15</Column>
+      <EndLine>93</EndLine>
+      <EndColumn>56</EndColumn>
+      <Message>'bookTable' is not declared.</Message>
+    </Diagnostic>
+    <Diagnostic>
+      <DiagnosticType>Compile</DiagnosticType>
+      <Severity>Error</Severity>
+      <Path>dynamics://Table/JISAuthorTable/Method/firstBookGenre</Path>
+      <ElementType>Table Method</ElementType>
+      <Moniker>TypeNotFound</Moniker>
+      <Line>101</Line>
+      <Column>9</Column>
+      <EndLine>101</EndLine>
+      <EndColumn>21</EndColumn>
+      <Message>The name 'JISBookTable' does not denote a class, a table, or an extended data type.</Message>
+    </Diagnostic>
+    <Diagnostic>
+      <DiagnosticType>Compile</DiagnosticType>
+      <Severity>Error</Severity>
+      <Path>dynamics://Table/JISAuthorTable/Method/firstBookGenre</Path>
+      <ElementType>Table Method</ElementType>
+      <Moniker>NotDeclared</Moniker>
+      <Line>103</Line>
+      <Column>9</Column>
+      <EndLine>105</EndLine>
+      <EndColumn>44</EndColumn>
+      <Message>'book' is not declared.</Message>
+    </Diagnostic>
+    <Diagnostic>
+      <DiagnosticType>Compile</DiagnosticType>
+      <Severity>Error</Severity>
+      <Path>dynamics://Table/JISAuthorTable/Method/firstBookGenre</Path>
+      <ElementType>Table Method</ElementType>
+      <Moniker>InvalidQualifier</Moniker>
+      <Line>107</Line>
+      <Column>16</Column>
+      <EndLine>107</EndLine>
+      <EndColumn>20</EndColumn>
+      <Message>The qualifier 'book' is not valid for field 'Genre'.</Message>
+    </Diagnostic>
+    <Diagnostic>
+      <DiagnosticType>Compile</DiagnosticType>
+      <Severity>Error</Severity>
+      <Path>dynamics://Class/JISBookCreationService/Method/findBook</Path>
+      <ElementType>Class Method</ElementType>
+      <Moniker>ClassOrTableNotFound</Moniker>
+      <Line>6</Line>
+      <Column>16</Column>
+      <EndLine>6</EndLine>
+      <EndColumn>39</EndColumn>
+      <Message>The name 'JISBookTable' does not designate a class or table.</Message>
+    </Diagnostic>
+  </Items>
+  <Aliases />
+</Diagnostics>

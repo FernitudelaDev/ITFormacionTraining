@@ -9,7 +9,7 @@
 	</Methods>
 	<DataSources>
 		<DataSource>
-			<Name>FTDAuthorTable</Name>
+			<Name>JISAuthorTable</Name>
 			<Methods>
 				<Method>
 					<Name>active</Name>

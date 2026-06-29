@@ -106,14 +106,6 @@
 		</AxTableField>
 		<AxTableField xmlns=""
 			i:type="AxTableFieldString">
-			<Name>AuthorTable_Id</Name>
-			<AllowEdit>No</AllowEdit>
-			<ExtendedDataType>FTDId</ExtendedDataType>
-			<IsSystemGenerated>Yes</IsSystemGenerated>
-			<Mandatory>Yes</Mandatory>
-		</AxTableField>
-		<AxTableField xmlns=""
-			i:type="AxTableFieldString">
 			<Name>Id</Name>
 			<ExtendedDataType>JISId</ExtendedDataType>
 			<IgnoreEDTRelation>Yes</IgnoreEDTRelation>
@@ -137,23 +129,6 @@
 		</AxTableIndex>
 	</Indexes>
 	<Mappings />
-	<Relations>
-		<AxTableRelation>
-			<Name>AuthorTable</Name>
-			<Cardinality>ZeroMore</Cardinality>
-			<IsSystemGenerated>Yes</IsSystemGenerated>
-			<RelatedTable>FTDAuthorTable</RelatedTable>
-			<RelatedTableCardinality>ExactlyOne</RelatedTableCardinality>
-			<RelationshipType>Association</RelationshipType>
-			<Constraints>
-				<AxTableRelationConstraint xmlns=""
-					i:type="AxTableRelationConstraintField">
-					<Name>Id</Name>
-					<Field>AuthorTable_Id</Field>
-					<RelatedField>Id</RelatedField>
-				</AxTableRelationConstraint>
-			</Constraints>
-		</AxTableRelation>
-	</Relations>
+	<Relations />
 	<StateMachines />
 </AxTable>

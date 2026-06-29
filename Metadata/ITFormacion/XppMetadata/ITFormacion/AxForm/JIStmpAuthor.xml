@@ -20,18 +20,18 @@
 			</ReturnType>
 			<Variables>
 				<AxMethodVariable>
-					<Type>ExtendedDataType</Type>
-					<TypeName>FTDtmpAuthorTable</TypeName>
+					<Type>Record</Type>
+					<TypeName>JIStmpAuthorTable</TypeName>
 					<Name>tmpAuthorTable</Name>
 				</AxMethodVariable>
 				<AxMethodVariable>
-					<Type>ExtendedDataType</Type>
-					<TypeName>FTDtmpAuthorTable</TypeName>
+					<Type>Record</Type>
+					<TypeName>JIStmpAuthorTable</TypeName>
 					<Name>tmpAuthorTable2</Name>
 				</AxMethodVariable>
 				<AxMethodVariable>
-					<Type>ExtendedDataType</Type>
-					<TypeName>FTDAuthorTable</TypeName>
+					<Type>Record</Type>
+					<TypeName>JISAuthorTable</TypeName>
 					<Name>authorTable</Name>
 				</AxMethodVariable>
 			</Variables>

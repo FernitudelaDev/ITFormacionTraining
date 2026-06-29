@@ -161,7 +161,7 @@ public class JISBookInventoryTransaction extends common
 			<Name>Book</Name>
 			<Cardinality>ZeroMore</Cardinality>
 			<OnDelete>Restricted</OnDelete>
-			<RelatedTable>FTDBookTable</RelatedTable>
+			<RelatedTable>JISBookTable</RelatedTable>
 			<RelatedTableCardinality>ExactlyOne</RelatedTableCardinality>
 			<RelationshipType>Association</RelationshipType>
 			<Constraints>

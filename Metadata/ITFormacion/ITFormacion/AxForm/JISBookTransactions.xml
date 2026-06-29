@@ -10,7 +10,6 @@
 public class JISBookTransactions extends FormRun
 {
 }
-
 ]]></Source>
 			</Method>
 		</Methods>
@@ -30,7 +29,7 @@ public class JISBookTransactions extends FormRun
         {
             super();
 
-            FTDBookInventoryTransaction_ds.create();
+            JISBookInventoryTransaction_ds.create();
         }
 
 ]]></Source>
@@ -51,12 +50,12 @@ public class JISBookTransactions extends FormRun
         {
             super();
 
-            if (FTDBookInventoryTransaction_ds.validateDelete())
+            if (JISBookInventoryTransaction_ds.validateDelete())
             {
-                FTDBookInventoryTransaction.delete();
+                JISBookInventoryTransaction.delete();
             }
 
-            FTDBookInventoryTransaction_ds.research(true);
+            JISBookInventoryTransaction_ds.research(true);
         }
 
 ]]></Source>
@@ -68,8 +67,8 @@ public class JISBookTransactions extends FormRun
 	</SourceCode>
 	<DataSources>
 		<AxFormDataSource xmlns="">
-			<Name>FTDBookTable</Name>
-			<Table>FTDBookTable</Table>
+			<Name>JISBookTable</Name>
+			<Table>JISBookTable</Table>
 			<Fields>
 				<AxFormDataSourceField>
 					<DataField>Author</DataField>
@@ -107,8 +106,8 @@ public class JISBookTransactions extends FormRun
 			<DerivedDataSources />
 		</AxFormDataSource>
 		<AxFormDataSource xmlns="">
-			<Name>FTDBookInventoryTransaction</Name>
-			<Table>FTDBookInventoryTransaction</Table>
+			<Name>JISBookInventoryTransaction</Name>
+			<Table>JISBookInventoryTransaction</Table>
 			<Fields>
 				<AxFormDataSourceField>
 					<DataField>Book</DataField>
@@ -133,7 +132,7 @@ public class JISBookTransactions extends FormRun
 				</AxFormDataSourceField>
 			</Fields>
 			<ReferencedDataSources />
-			<JoinSource>FTDBookTable</JoinSource>
+			<JoinSource>JISBookTable</JoinSource>
 			<InsertIfEmpty>No</InsertIfEmpty>
 			<DataSourceLinks />
 			<DerivedDataSources />
@@ -201,7 +200,7 @@ public class JISBookTransactions extends FormRun
 								<FormControlExtension
 									i:nil="true" />
 								<DataField>Id</DataField>
-								<DataSource>FTDBookTable</DataSource>
+								<DataSource>JISBookTable</DataSource>
 							</AxFormControl>
 							<AxFormControl xmlns=""
 								i:type="AxFormStringControl">
@@ -210,7 +209,7 @@ public class JISBookTransactions extends FormRun
 								<FormControlExtension
 									i:nil="true" />
 								<DataField>Name</DataField>
-								<DataSource>FTDBookTable</DataSource>
+								<DataSource>JISBookTable</DataSource>
 							</AxFormControl>
 							<AxFormControl xmlns=""
 								i:type="AxFormReferenceGroupControl">
@@ -219,11 +218,11 @@ public class JISBookTransactions extends FormRun
 								<FormControlExtension
 									i:nil="true" />
 								<Controls />
-								<DataSource>FTDBookTable</DataSource>
+								<DataSource>JISBookTable</DataSource>
 								<ReferenceField>Author</ReferenceField>
 							</AxFormControl>
 						</Controls>
-						<DataSource>FTDBookTable</DataSource>
+						<DataSource>JISBookTable</DataSource>
 						<MultiSelect>No</MultiSelect>
 						<ShowRowLabels>No</ShowRowLabels>
 						<Style>List</Style>
@@ -256,7 +255,7 @@ public class JISBookTransactions extends FormRun
 								<FormControlExtension
 									i:nil="true" />
 								<DataField>Id</DataField>
-								<DataSource>FTDBookTable</DataSource>
+								<DataSource>JISBookTable</DataSource>
 							</AxFormControl>
 							<AxFormControl xmlns=""
 								i:type="AxFormStringControl">
@@ -265,7 +264,7 @@ public class JISBookTransactions extends FormRun
 								<FormControlExtension
 									i:nil="true" />
 								<DataField>Name</DataField>
-								<DataSource>FTDBookTable</DataSource>
+								<DataSource>JISBookTable</DataSource>
 							</AxFormControl>
 							<AxFormControl xmlns=""
 								i:type="AxFormComboBoxControl">
@@ -274,7 +273,7 @@ public class JISBookTransactions extends FormRun
 								<FormControlExtension
 									i:nil="true" />
 								<DataField>Genre</DataField>
-								<DataSource>FTDBookTable</DataSource>
+								<DataSource>JISBookTable</DataSource>
 								<Items />
 							</AxFormControl>
 							<AxFormControl xmlns=""
@@ -284,7 +283,7 @@ public class JISBookTransactions extends FormRun
 								<FormControlExtension
 									i:nil="true" />
 								<Controls />
-								<DataSource>FTDBookTable</DataSource>
+								<DataSource>JISBookTable</DataSource>
 								<ReferenceField>Author</ReferenceField>
 							</AxFormControl>
 							<AxFormControl xmlns=""
@@ -294,11 +293,11 @@ public class JISBookTransactions extends FormRun
 								<FormControlExtension
 									i:nil="true" />
 								<DataMethod>dispAuthorFullName</DataMethod>
-								<DataSource>FTDBookTable</DataSource>
+								<DataSource>JISBookTable</DataSource>
 							</AxFormControl>
 						</Controls>
 						<DataGroup>Grid</DataGroup>
-						<DataSource>FTDBookTable</DataSource>
+						<DataSource>JISBookTable</DataSource>
 					</AxFormControl>
 				</Controls>
 				<ColumnsMode>Fill</ColumnsMode>
@@ -354,7 +353,7 @@ public class JISBookTransactions extends FormRun
 												<Text>@SYS112458</Text>
 											</AxFormControl>
 										</Controls>
-										<DataSource>FTDBookInventoryTransaction</DataSource>
+										<DataSource>JISBookInventoryTransaction</DataSource>
 									</AxFormControl>
 								</Controls>
 								<Style>Strip</Style>
@@ -373,7 +372,7 @@ public class JISBookTransactions extends FormRun
 										<FormControlExtension
 											i:nil="true" />
 										<DataField>TransId</DataField>
-										<DataSource>FTDBookInventoryTransaction</DataSource>
+										<DataSource>JISBookInventoryTransaction</DataSource>
 									</AxFormControl>
 									<AxFormControl xmlns=""
 										i:type="AxFormRealControl">
@@ -382,10 +381,10 @@ public class JISBookTransactions extends FormRun
 										<FormControlExtension
 											i:nil="true" />
 										<DataField>Qty</DataField>
-										<DataSource>FTDBookInventoryTransaction</DataSource>
+										<DataSource>JISBookInventoryTransaction</DataSource>
 									</AxFormControl>
 								</Controls>
-								<DataSource>FTDBookInventoryTransaction</DataSource>
+								<DataSource>JISBookInventoryTransaction</DataSource>
 							</AxFormControl>
 						</Controls>
 						<Caption>@ITFormacion:Transactions</Caption>

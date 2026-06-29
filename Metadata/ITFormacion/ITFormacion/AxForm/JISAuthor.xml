@@ -13,25 +13,24 @@ public class JISAuthor extends FormRun
     //public void setDeathDateEditable(boolean _isEditable)
     //{
     //    //navegando desde el ds
-    //    //FormControl deathDateControl = this.formRun().design().controlName(formControlStr(FTDAuthor, SimpleListGrid_DeathDate));
+    //    //FormControl deathDateControl = this.formRun().design().controlName(formControlStr(JISAuthor, SimpleListGrid_DeathDate));
 
     //    //yendo desde element
-    //    //FormControl deathDateControl = element.design().controlName(formControlStr(FTDAuthor, SimpleListGrid_DeathDate));
+    //    //FormControl deathDateControl = element.design().controlName(formControlStr(JISAuthor, SimpleListGrid_DeathDate));
 
     //    //deathDateControl.allowEdit(_isEditable);
 
-    //    FTDAuthorTable_ds.object(fieldNum(FTDAuthorTable, DeathDate)).allowEdit(_isEditable);
+    //    JISAuthorTable_ds.object(fieldNum(JISAuthorTable, DeathDate)).allowEdit(_isEditable);
 
     //}
 
 }
-
 ]]></Source>
 			</Method>
 		</Methods>
 		<DataSources xmlns="">
 			<DataSource>
-				<Name>FTDAuthorTable</Name>
+				<Name>JISAuthorTable</Name>
 				<Methods>
 					<Method>
 						<Name>active</Name>
@@ -42,7 +41,7 @@ public class JISAuthor extends FormRun
         
             ret = super();
 
-            FTDAuthorTable.setDeathDateEditableInForm();
+            JISAuthorTable.setDeathDateEditableInForm();
 
             return ret;
         }
@@ -59,10 +58,10 @@ public class JISAuthor extends FormRun
         {
             super();
             
-            QueryBuildDataSource qbdsAuthorTable = FTDAuthorTable_q.dataSourceTable(tableNum(FTDAuthorTable));
-            qbrBirthDate = qbdsAuthorTable.addRange(fieldNum(FTDAuthorTable, BirthDate));
-            qbrDeathDate = qbdsAuthorTable.addRange(fieldNum(FTDAuthorTable, DeathDate));
-            qbrDeatDateNullCheck = qbdsAuthorTable.addRange(fieldNum(FTDAuthorTable, DeathDate));
+            QueryBuildDataSource qbdsAuthorTable = JISAuthorTable_q.dataSourceTable(tableNum(JISAuthorTable));
+            qbrBirthDate = qbdsAuthorTable.addRange(fieldNum(JISAuthorTable, BirthDate));
+            qbrDeathDate = qbdsAuthorTable.addRange(fieldNum(JISAuthorTable, DeathDate));
+            qbrDeatDateNullCheck = qbdsAuthorTable.addRange(fieldNum(JISAuthorTable, DeathDate));
 
             qbrBirthDate.status(RangeStatus::Hidden);
             qbrDeathDate.status(RangeStatus::Hidden);
@@ -110,7 +109,7 @@ public class JISAuthor extends FormRun
                 qbrDeatDateNullCheck.value('');
             }
                
-            FTDAuthorTable_ds.executeQuery();
+            JISAuthorTable_ds.executeQuery();
     
             return ret;
         }
@@ -124,8 +123,8 @@ public class JISAuthor extends FormRun
 	</SourceCode>
 	<DataSources>
 		<AxFormDataSource xmlns="">
-			<Name>FTDAuthorTable</Name>
-			<Table>FTDAuthorTable</Table>
+			<Name>JISAuthorTable</Name>
+			<Table>JISAuthorTable</Table>
 			<Fields>
 				<AxFormDataSourceField>
 					<DataField>BirthDate</DataField>
@@ -190,7 +189,7 @@ public class JISAuthor extends FormRun
 								<Type>MenuFunctionButton</Type>
 								<FormControlExtension
 									i:nil="true" />
-								<DataSource>FTDAuthorTable</DataSource>
+								<DataSource>JISAuthorTable</DataSource>
 								<MenuItemName>FTDBook</MenuItemName>
 								<NeedsRecord>Yes</NeedsRecord>
 							</AxFormControl>
@@ -200,7 +199,7 @@ public class JISAuthor extends FormRun
 								<Type>MenuFunctionButton</Type>
 								<FormControlExtension
 									i:nil="true" />
-								<DataSource>FTDAuthorTable</DataSource>
+								<DataSource>JISAuthorTable</DataSource>
 								<MenuItemName>FTDBookGenreFiltered</MenuItemName>
 							</AxFormControl>
 						</Controls>
@@ -267,7 +266,7 @@ public class JISAuthor extends FormRun
 						<FormControlExtension
 							i:nil="true" />
 						<DataField>Id</DataField>
-						<DataSource>FTDAuthorTable</DataSource>
+						<DataSource>JISAuthorTable</DataSource>
 					</AxFormControl>
 					<AxFormControl xmlns=""
 						i:type="AxFormStringControl">
@@ -276,7 +275,7 @@ public class JISAuthor extends FormRun
 						<FormControlExtension
 							i:nil="true" />
 						<DataField>FirstName</DataField>
-						<DataSource>FTDAuthorTable</DataSource>
+						<DataSource>JISAuthorTable</DataSource>
 					</AxFormControl>
 					<AxFormControl xmlns=""
 						i:type="AxFormStringControl">
@@ -285,7 +284,7 @@ public class JISAuthor extends FormRun
 						<FormControlExtension
 							i:nil="true" />
 						<DataField>LastName</DataField>
-						<DataSource>FTDAuthorTable</DataSource>
+						<DataSource>JISAuthorTable</DataSource>
 					</AxFormControl>
 					<AxFormControl xmlns=""
 						i:type="AxFormDateControl">
@@ -294,7 +293,7 @@ public class JISAuthor extends FormRun
 						<FormControlExtension
 							i:nil="true" />
 						<DataField>BirthDate</DataField>
-						<DataSource>FTDAuthorTable</DataSource>
+						<DataSource>JISAuthorTable</DataSource>
 					</AxFormControl>
 					<AxFormControl xmlns=""
 						i:type="AxFormCheckBoxControl">
@@ -303,7 +302,7 @@ public class JISAuthor extends FormRun
 						<FormControlExtension
 							i:nil="true" />
 						<DataField>IsDead</DataField>
-						<DataSource>FTDAuthorTable</DataSource>
+						<DataSource>JISAuthorTable</DataSource>
 					</AxFormControl>
 					<AxFormControl xmlns=""
 						i:type="AxFormDateControl">
@@ -313,11 +312,11 @@ public class JISAuthor extends FormRun
 						<FormControlExtension
 							i:nil="true" />
 						<DataField>DeathDate</DataField>
-						<DataSource>FTDAuthorTable</DataSource>
+						<DataSource>JISAuthorTable</DataSource>
 					</AxFormControl>
 				</Controls>
 				<DataGroup>Grid</DataGroup>
-				<DataSource>FTDAuthorTable</DataSource>
+				<DataSource>JISAuthorTable</DataSource>
 				<Style>Tabular</Style>
 			</AxFormControl>
 		</Controls>
