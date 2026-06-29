@@ -26,3 +26,4 @@ Transactions=Transactions
 TransactionWouldMakeTheTotalNegative=Adding this transacition would make it negative
 UpdateBookInventory=Update book inventory
 ValidateDeathDateError=Death date must be greater than birth date
+YouMustSelectFantasyBooks=You must select fantasy books

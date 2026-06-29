@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<AxClass xmlns:i="http://www.w3.org/2001/XMLSchema-instance">
+	<Name>SalesTableForm_ITFormacion_Extension</Name>
+	<SourceCode>
+		<Declaration><![CDATA[
+[ExtensionOf(formStr(SalesTable))]
+public final class SalesTableForm_ITFormacion_Extension
+{
+
+}
+]]></Declaration>
+		<Methods>
+			<Method>
+				<Name>init</Name>
+				<Source><![CDATA[
+    public void init()
+    {
+        next init();
+
+        FormDataObject fieldAIBBookTable = SalesTable_ds.Object(fieldNum(SalesTable, AIBBookTable));
+        fieldAIBBookTable.registerOverrideMethod(
+            methodStr(FormDataObject, lookupReference),
+            formMethodStr(SalesTable, AIBFantasyBookLookup),
+            this);
+    }
+
+]]></Source>
+			</Method>
+			<Method>
+				<Name>AIBFantasyBookLookup</Name>
+				<Source><![CDATA[
+    public Common AIBFantasyBookLookup(FormReferenceControl _formReferenceControl)
+        {
+            return SalesTable.AIBFantasyBookLookup(_formReferenceControl);
+        }
+
+]]></Source>
+			</Method>
+		</Methods>
+	</SourceCode>
+</AxClass>

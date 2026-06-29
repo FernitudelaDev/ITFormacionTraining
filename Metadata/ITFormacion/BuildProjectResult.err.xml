@@ -1,18 +1,18 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Diagnostics
-  GenerationTime="2026-06-26T11:51:24.5751415+00:00">
+  GenerationTime="2026-06-29T11:39:38.3372695+00:00">
   <Items>
     <Diagnostic>
       <DiagnosticType>Compile</DiagnosticType>
       <Severity>Error</Severity>
-      <Path>dynamics://Form/AIBtmpAuthor/Method/loadtmpData</Path>
-      <ElementType>Form Method</ElementType>
-      <Moniker>ParameterMismatch</Moniker>
+      <Path>dynamics://Class/SalesTable_SalesTable_AIBBookTable_ITFormacion_Extension/Method/valdiate</Path>
+      <ElementType>Class Method</ElementType>
+      <Moniker>InvalidNextCall</Moniker>
       <Line>20</Line>
-      <Column>17</Column>
+      <Column>15</Column>
       <EndLine>20</EndLine>
-      <EndColumn>64</EndColumn>
-      <Message>Type mismatch in 'AIBtmpAuthorTable.initFromAuthorTable' argument 1. The expected type is 'AIBtmpAuthorTable', but the actual type is 'AIBAuthorTable'.</Message>
+      <EndColumn>30</EndColumn>
+      <Message>The next method cannot be invoked in method 'valdiate' because it's not a Chain Of Command Method. </Message>
     </Diagnostic>
   </Items>
   <Aliases />

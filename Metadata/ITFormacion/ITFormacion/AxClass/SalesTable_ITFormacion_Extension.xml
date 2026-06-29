@@ -20,6 +20,91 @@ public final class SalesTable_ITFormacion_Extension
 
 ]]></Source>
 			</Method>
+			<Method>
+				<Name>modifiedField</Name>
+				<Source><![CDATA[
+    public void modifiedField(FieldId _fieldId)
+    {
+        next modifiedField(_fieldId);
+
+        switch(_fieldId)
+        {
+            case fieldNum(SalesTable, AIBBookTable):
+                this.AIBUpdateBookSalesLine();
+                break;
+        }
+    }
+
+]]></Source>
+			</Method>
+			<Method>
+				<Name>AIBUpdateBookSalesLine</Name>
+				<Source><![CDATA[
+    public void AIBUpdateBookSalesLine()
+    {
+        SalesLine SalesLine;
+
+        while select forupdate salesLine
+                    where salesLine.SalesId == this.SalesId
+        {
+            salesLine.AIBBookTable = this.AIBBookTable;
+            if(salesLine.validateWrite())
+            {
+                salesLine.update();
+            }
+            ttscommit;
+                    
+        }
+
+        this.AIBResearchIfNeeded();
+    }
+
+]]></Source>
+			</Method>
+			<Method>
+				<Name>AIBResearchIfNeeded</Name>
+				<Source><![CDATA[
+    public void AIBResearchIfNeeded()
+    {
+        FormDataSource formDataSource = FormDataUtil::getFormDataSource(this);
+  
+        if(formDataSource)
+        {
+            formDataSource.research(true);
+        }
+       
+    }
+
+]]></Source>
+			</Method>
+			<Method>
+				<Name>AIBFantasyBookLookup</Name>
+				<Source><![CDATA[
+    public Common AIBFantasyBookLookup(FormReferenceControl _formReferenceControl)
+    {
+        SysReferenceTableLookup refTableLookup = SysReferenceTableLookup::newParameters(tableNum(AIBBookTable), _formReferenceControl);
+
+        refTableLookup.parmQuery(this.AIBGetFantasyBookLookupQuery());
+        refTableLookup.addLookupfield(fieldNum(AIBBookTable, Id));
+        refTableLookup.addLookupfield(fieldNum(AIBBookTable, Name));
+        refTableLookup.addLookupfield(fieldNum(AIBBookTable, Genre));
+        refTableLookup.addLookupfield(fieldNum(AIBBookTable, Author));
+
+        return refTableLookup.performFormLookup();
+    }
+
+]]></Source>
+			</Method>
+			<Method>
+				<Name>AIBGetFantasyBookLookupQuery</Name>
+				<Source><![CDATA[
+    private Query AIBGetFantasyBookLookupQuery()
+    {
+        return new  Query(queryStr(AIBBookAuthorFantasyQuery));
+    }
+
+]]></Source>
+			</Method>
 		</Methods>
 	</SourceCode>
 </AxClass>

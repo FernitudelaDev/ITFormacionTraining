@@ -12,7 +12,7 @@
 					<TypeValue>tableStr</TypeValue>
 					<AdditionalData>
 						<AxAttributeParameter>
-							<TypeValue>SalesTable</TypeValue>
+							<TypeValue>SalesLine</TypeValue>
 							<AdditionalData />
 						</AxAttributeParameter>
 						<AxAttributeParameter>
@@ -28,54 +28,16 @@
 	</Attributes>
 	<Methods>
 		<Method>
-			<Name>aibDispAuthorFullName</Name>
-			<IsDisplay>true</IsDisplay>
-			<Visibility>Public</Visibility>
-			<Attributes>
-				<AxAttribute>
-					<Name>SysClientCacheDataMethod</Name>
-					<Parameters>
-						<AxAttributeParameter>
-							<Type>Boolean</Type>
-							<TypeValue>True</TypeValue>
-							<AdditionalData />
-						</AxAttributeParameter>
-					</Parameters>
-				</AxAttribute>
-			</Attributes>
-			<ReturnType>
-				<Tags></Tags>
-				<Type>ExtendedDataType</Type>
-				<TypeName>AIBAuthorFullName</TypeName>
-			</ReturnType>
-		</Method>
-		<Method>
-			<Name>modifiedField</Name>
+			<Name>initValue</Name>
 			<Visibility>Public</Visibility>
 			<Parameters>
 				<AxMethodParameter>
 					<Tags></Tags>
-					<Type>ExtendedDataType</Type>
-					<TypeName>FieldId</TypeName>
-					<Name>_fieldId</Name>
+					<Type>Enum</Type>
+					<TypeName>SalesType</TypeName>
+					<Name>_salesType</Name>
 				</AxMethodParameter>
 			</Parameters>
-			<ReturnType>
-				<Tags></Tags>
-				<TypeName></TypeName>
-			</ReturnType>
-		</Method>
-		<Method>
-			<Name>AIBUpdateBookSalesLine</Name>
-			<Visibility>Public</Visibility>
-			<ReturnType>
-				<Tags></Tags>
-				<TypeName></TypeName>
-			</ReturnType>
-		</Method>
-		<Method>
-			<Name>AIBResearchIfNeeded</Name>
-			<Visibility>Public</Visibility>
 			<ReturnType>
 				<Tags></Tags>
 				<TypeName></TypeName>

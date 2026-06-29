@@ -9,7 +9,7 @@
 			<Parameters>
 				<AxAttributeParameter>
 					<Type>Intrinsic</Type>
-					<TypeValue>tableStr</TypeValue>
+					<TypeValue>formStr</TypeValue>
 					<AdditionalData>
 						<AxAttributeParameter>
 							<TypeValue>SalesTable</TypeValue>
@@ -28,53 +28,7 @@
 	</Attributes>
 	<Methods>
 		<Method>
-			<Name>aibDispAuthorFullName</Name>
-			<IsDisplay>true</IsDisplay>
-			<Visibility>Public</Visibility>
-			<Attributes>
-				<AxAttribute>
-					<Name>SysClientCacheDataMethod</Name>
-					<Parameters>
-						<AxAttributeParameter>
-							<Type>Boolean</Type>
-							<TypeValue>True</TypeValue>
-							<AdditionalData />
-						</AxAttributeParameter>
-					</Parameters>
-				</AxAttribute>
-			</Attributes>
-			<ReturnType>
-				<Tags></Tags>
-				<Type>ExtendedDataType</Type>
-				<TypeName>AIBAuthorFullName</TypeName>
-			</ReturnType>
-		</Method>
-		<Method>
-			<Name>modifiedField</Name>
-			<Visibility>Public</Visibility>
-			<Parameters>
-				<AxMethodParameter>
-					<Tags></Tags>
-					<Type>ExtendedDataType</Type>
-					<TypeName>FieldId</TypeName>
-					<Name>_fieldId</Name>
-				</AxMethodParameter>
-			</Parameters>
-			<ReturnType>
-				<Tags></Tags>
-				<TypeName></TypeName>
-			</ReturnType>
-		</Method>
-		<Method>
-			<Name>AIBUpdateBookSalesLine</Name>
-			<Visibility>Public</Visibility>
-			<ReturnType>
-				<Tags></Tags>
-				<TypeName></TypeName>
-			</ReturnType>
-		</Method>
-		<Method>
-			<Name>AIBResearchIfNeeded</Name>
+			<Name>init</Name>
 			<Visibility>Public</Visibility>
 			<ReturnType>
 				<Tags></Tags>
@@ -96,14 +50,6 @@
 				<Tags></Tags>
 				<Type>Record</Type>
 				<TypeName>Common</TypeName>
-			</ReturnType>
-		</Method>
-		<Method>
-			<Name>AIBGetFantasyBookLookupQuery</Name>
-			<ReturnType>
-				<Tags></Tags>
-				<Type>Class</Type>
-				<TypeName>Query</TypeName>
 			</ReturnType>
 		</Method>
 	</Methods>

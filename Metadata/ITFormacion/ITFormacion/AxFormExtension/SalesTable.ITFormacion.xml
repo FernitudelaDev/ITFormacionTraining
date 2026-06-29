@@ -36,6 +36,37 @@
 			</FormControl>
 			<Parent>LineViewHeader</Parent>
 		</AxFormExtensionControl>
+		<AxFormExtensionControl xmlns="">
+			<Name>FormExtensionControlxmc4cwom1</Name>
+			<FormControl xmlns=""
+				i:type="AxFormReferenceGroupControl">
+				<Name>SalesLine_AIBBookTable</Name>
+				<Type>ReferenceGroup</Type>
+				<FormControlExtension
+					i:nil="true" />
+				<Controls />
+				<DataSource>SalesLine</DataSource>
+				<ReferenceField>AIBBookTable</ReferenceField>
+			</FormControl>
+			<Parent>SalesLineGrid</Parent>
+			<PositionType>AfterItem</PositionType>
+			<PreviousSibling>InventDistinctProductExpanded_DisplayProductNumber</PreviousSibling>
+		</AxFormExtensionControl>
+		<AxFormExtensionControl xmlns="">
+			<Name>FormExtensionControlmiiqi0kc1</Name>
+			<FormControl xmlns=""
+				i:type="AxFormMenuFunctionButtonControl">
+				<Name>AIBBook</Name>
+				<AutoDeclaration>Yes</AutoDeclaration>
+				<Type>MenuFunctionButton</Type>
+				<FormControlExtension
+					i:nil="true" />
+				<DataSource>SalesTable</DataSource>
+				<MenuItemName>AIBBook</MenuItemName>
+				<NeedsRecord>Yes</NeedsRecord>
+			</FormControl>
+			<Parent>GeneralRelatedInfo</Parent>
+		</AxFormExtensionControl>
 	</Controls>
 	<DataSourceModifications />
 	<DataSourceReferences />

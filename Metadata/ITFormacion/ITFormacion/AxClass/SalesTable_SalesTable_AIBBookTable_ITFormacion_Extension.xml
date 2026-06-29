@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<AxClass xmlns:i="http://www.w3.org/2001/XMLSchema-instance">
+	<Name>SalesTable_SalesTable_AIBBookTable_ITFormacion_Extension</Name>
+	<SourceCode>
+		<Declaration><![CDATA[
+[ExtensionOf(FormDataFieldStr(SalesTable, SalesTable, AIBBookTable))]
+public final class SalesTable_SalesTable_AIBBookTable_ITFormacion_Extension
+{
+    //public Common lookupReference(FormReferenceControl _formReferenceControl)
+    //{
+    //    Common ret = next lookupReference(_formReferenceControl);
+
+    //    SalesTable salesTable = this.datasource().cursor();
+
+    //    ret = salesTable.AIBFantasyBookLookup(_formReferenceControl);
+
+    //    return ret;
+
+    //}
+
+}
+]]></Declaration>
+		<Methods>
+			<Method>
+				<Name>validate</Name>
+				<Source><![CDATA[
+    public boolean validate()
+    {
+        boolean ret;
+
+        ret = next validate()
+            && this.AIBIsFantasyBook();
+
+            return ret;
+    }
+
+]]></Source>
+			</Method>
+			<Method>
+				<Name>AIBIsFantasyBook</Name>
+				<Source><![CDATA[
+    private boolean AIBIsFantasyBook()
+    {
+        SalesTable salesTable = this.dataSource().cursor();
+
+        if(AIBBookTable::findRecId(salesTable.AIBBookTable).Genre != AIBGenreEnum::Fantasy)
+        {
+            return checkFailed("@ITFormacion:YouMustSelectFantasyBooks");
+        }
+        return true;
+
+    }
+
+]]></Source>
+			</Method>
+		</Methods>
+	</SourceCode>
+</AxClass>

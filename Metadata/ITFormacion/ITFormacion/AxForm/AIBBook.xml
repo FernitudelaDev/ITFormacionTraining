@@ -124,10 +124,19 @@ public class AIBBook extends FormRun
 			<Table>AIBBookTable</Table>
 			<Fields>
 				<AxFormDataSourceField>
+					<DataField>Author</DataField>
+				</AxFormDataSourceField>
+				<AxFormDataSourceField>
 					<DataField>DataAreaId</DataField>
 				</AxFormDataSourceField>
 				<AxFormDataSourceField>
+					<DataField>Genre</DataField>
+				</AxFormDataSourceField>
+				<AxFormDataSourceField>
 					<DataField>Id</DataField>
+				</AxFormDataSourceField>
+				<AxFormDataSourceField>
+					<DataField>ModifiedDateTime</DataField>
 				</AxFormDataSourceField>
 				<AxFormDataSourceField>
 					<DataField>Name</DataField>

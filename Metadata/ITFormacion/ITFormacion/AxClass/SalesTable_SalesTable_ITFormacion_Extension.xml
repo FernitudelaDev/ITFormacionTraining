@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<AxClass xmlns:i="http://www.w3.org/2001/XMLSchema-instance">
+	<Name>SalesTable_SalesTable_ITFormacion_Extension</Name>
+	<SourceCode>
+		<Declaration><![CDATA[
+[ExtensionOf(FormDataSourceStr(SalesTable, SalesTable))]
+public final class SalesTable_SalesTable_ITFormacion_Extension
+{
+
+
+}
+]]></Declaration>
+		<Methods>
+			<Method>
+				<Name>active</Name>
+				<Source><![CDATA[
+    int active()
+    {
+        int ret = true;
+        ret = next active();
+
+        FormMenuButtonControl control = this.formRun().design().controlName(formControlStr(SalesTable, AIBBook));
+        SalesTable activeSalesTable = this.cursor();
+
+        control.enabled(activeSalesTable.AIBBookTable != 0);
+
+        return ret;
+    }
+
+]]></Source>
+			</Method>
+		</Methods>
+	</SourceCode>
+</AxClass>
