@@ -165,6 +165,11 @@
       <Name>FTDGenreEnum</Name>
       <Link>Base Enums\FTDGenreEnum</Link>
     </Content>
+    <Content Include="AxFormExtension\CustTable.ITFormacion">
+      <SubType>Content</SubType>
+      <Name>CustTable.ITFormacion</Name>
+      <Link>Form Extensions\CustTable.ITFormacion</Link>
+    </Content>
     <Content Include="AxFormExtension\SalesTable.ITFormacion">
       <SubType>Content</SubType>
       <Name>SalesTable.ITFormacion</Name>
@@ -359,6 +364,11 @@
       <SubType>Content</SubType>
       <Name>FTDBookCreationService</Name>
       <Link>Services\FTDBookCreationService</Link>
+    </Content>
+    <Content Include="AxTableExtension\CustTable.ITFormacion">
+      <SubType>Content</SubType>
+      <Name>CustTable.ITFormacion</Name>
+      <Link>Table Extensions\CustTable.ITFormacion</Link>
     </Content>
     <Content Include="AxTableExtension\SalesLine.ITFormacion">
       <SubType>Content</SubType>
