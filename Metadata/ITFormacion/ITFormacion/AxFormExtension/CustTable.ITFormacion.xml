@@ -27,6 +27,19 @@
 			</FormControl>
 			<Parent>OtherInformation</Parent>
 		</AxFormExtensionControl>
+		<AxFormExtensionControl xmlns="">
+			<Name>FormExtensionControlyzsioc1u1</Name>
+			<FormControl xmlns=""
+				i:type="AxFormInt64Control">
+				<Name>CustTable_FTDBookTable</Name>
+				<Type>Int64</Type>
+				<FormControlExtension
+					i:nil="true" />
+				<DataField>FTDBookTable</DataField>
+				<DataSource>CustTable</DataSource>
+			</FormControl>
+			<Parent>OtherInformation</Parent>
+		</AxFormExtensionControl>
 	</Controls>
 	<DataSourceModifications />
 	<DataSourceReferences />
