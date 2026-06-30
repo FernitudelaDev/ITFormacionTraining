@@ -57,15 +57,15 @@ public final class SalesTable_ITFormacion_Extension
             }
             ttscommit;
         }
-        this.researchIfNeeded();
+        this.ACResearchIfNeeded();
     }
 
 ]]></Source>
 			</Method>
 			<Method>
-				<Name>researchIfNeeded</Name>
+				<Name>ACResearchIfNeeded</Name>
 				<Source><![CDATA[
-    public void researchIfNeeded()
+    public void ACResearchIfNeeded()
     {
         FormDataSource formDataSource = FormDataUtil::getFormDataSource(this);
 

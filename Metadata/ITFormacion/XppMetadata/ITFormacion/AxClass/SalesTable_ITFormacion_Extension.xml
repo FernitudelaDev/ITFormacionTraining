@@ -74,7 +74,7 @@
 			</ReturnType>
 		</Method>
 		<Method>
-			<Name>researchIfNeeded</Name>
+			<Name>ACResearchIfNeeded</Name>
 			<Visibility>Public</Visibility>
 			<ReturnType>
 				<Tags></Tags>
