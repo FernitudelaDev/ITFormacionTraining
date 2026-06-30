@@ -32,6 +32,29 @@
 			</FormControl>
 			<Parent>PersonGroup3</Parent>
 		</AxFormExtensionControl>
+		<AxFormExtensionControl xmlns="">
+			<Name>FormExtensionControlhgt4twaf1</Name>
+			<FormControl xmlns=""
+				i:type="AxFormButtonGroupControl">
+				<Name>AIBLibraryButtonGroup</Name>
+				<Type>ButtonGroup</Type>
+				<FormControlExtension
+					i:nil="true" />
+				<Controls>
+					<AxFormControl xmlns=""
+						i:type="AxFormMenuFunctionButtonControl">
+						<Name>AIBBook</Name>
+						<Type>MenuFunctionButton</Type>
+						<FormControlExtension
+							i:nil="true" />
+						<MenuItemName>FTDBook</MenuItemName>
+						<Text>@ITFormacion:Books</Text>
+					</AxFormControl>
+				</Controls>
+				<Caption>@ITFormacion:Library</Caption>
+			</FormControl>
+			<Parent>aptabGeneral</Parent>
+		</AxFormExtensionControl>
 	</Controls>
 	<DataSourceModifications />
 	<DataSourceReferences />

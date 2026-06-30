@@ -20,6 +20,22 @@ final class CustTableForm_Extension
 
 ]]></Source>
 			</Method>
+			<Method>
+				<Name>CustTable_OnActivated</Name>
+				<Source><![CDATA[
+    [FormDataSourceEventHandler(formDataSourceStr(CustTable, CustTable), FormDataSourceEventType::Activated)]
+    public static void CustTable_OnActivated(FormDataSource _sender, FormDataSourceEventArgs _e)
+    {
+        CustTable custTable = _sender.cursor();
+        FormFunctionButtonControl bookButton = _sender.formRun().design().controlName(formControlStr(CustTable, AIBBook));
+        if (bookButton)
+        {
+            bookButton.enabled(custTable.AIBBookTable == 0);
+        }
+    }
+
+]]></Source>
+			</Method>
 		</Methods>
 	</SourceCode>
 </AxClass>
