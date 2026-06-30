@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<AxClass xmlns:i="http://www.w3.org/2001/XMLSchema-instance">
+	<Name>CustTable_ITFormacion_Extension</Name>
+	<SourceCode>
+		<Declaration><![CDATA[
+[ExtensionOf(tableStr(CustTable))]
+public final class CustTable_ITFormacion_Extension
+{
+}
+]]></Declaration>
+		<Methods>
+			<Method>
+				<Name>ftddispGenreEnum</Name>
+				<Source><![CDATA[
+    [SysClientCacheDataMethod(true)]
+	public display FTDGenreEnum ftddispGenreEnum()
+    {
+        if (this.FTDBookTable)
+        {
+            return FTDBookTable::findRecId(this.FTDBookTable).Genre;
+        }
+
+        return FTDGenreEnum::None;
+    }
+
+]]></Source>
+			</Method>
+		</Methods>
+	</SourceCode>
+</AxClass>
