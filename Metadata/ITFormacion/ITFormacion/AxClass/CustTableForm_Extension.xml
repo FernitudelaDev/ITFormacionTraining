@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<AxClass xmlns:i="http://www.w3.org/2001/XMLSchema-instance">
+	<Name>CustTableForm_Extension</Name>
+	<SourceCode>
+		<Declaration><![CDATA[
+[ExtensionOf(formStr(CustTable))]
+final class CustTableForm_Extension
+{
+}
+]]></Declaration>
+		<Methods>
+			<Method>
+				<Name>AIBBookTable_OnModified</Name>
+				<Source><![CDATA[
+    [FormDataFieldEventHandler(formDataFieldStr(CustTable, CustTable, AIBBookTable), FormDataFieldEventType::Modified)]
+    public static void AIBBookTable_OnModified(FormDataObject _sender, FormDataFieldEventArgs _e)
+    {
+        _sender.dataSource().research(true);
+    }
+
+]]></Source>
+			</Method>
+		</Methods>
+	</SourceCode>
+</AxClass>

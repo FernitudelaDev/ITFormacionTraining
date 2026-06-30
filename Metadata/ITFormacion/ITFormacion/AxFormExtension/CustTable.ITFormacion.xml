@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<AxFormExtension xmlns:i="http://www.w3.org/2001/XMLSchema-instance" xmlns="Microsoft.Dynamics.AX.Metadata.V6">
+	<Name>CustTable.ITFormacion</Name>
+	<ControlModifications />
+	<Controls>
+		<AxFormExtensionControl xmlns="">
+			<Name>FormExtensionControloeje4rio1</Name>
+			<FormControl xmlns=""
+				i:type="AxFormReferenceGroupControl">
+				<Name>AIBBookTable</Name>
+				<Type>ReferenceGroup</Type>
+				<FormControlExtension
+					i:nil="true" />
+				<Controls />
+				<DataSource>CustTable</DataSource>
+				<Label>@ITFormacion:BookTable</Label>
+				<ReferenceField>AIBBookTable</ReferenceField>
+			</FormControl>
+			<Parent>PersonGroup3</Parent>
+		</AxFormExtensionControl>
+		<AxFormExtensionControl xmlns="">
+			<Name>FormExtensionControltrgjh5cp1</Name>
+			<FormControl xmlns=""
+				i:type="AxFormStringControl">
+				<Name>BookGenreString</Name>
+				<Type>String</Type>
+				<FormControlExtension
+					i:nil="true" />
+				<DataMethod>CustTable_Extension.AIBdisplayBookGenre</DataMethod>
+				<DataSource>CustTable</DataSource>
+				<Label>@ITFormacion:Genre</Label>
+			</FormControl>
+			<Parent>PersonGroup3</Parent>
+		</AxFormExtensionControl>
+	</Controls>
+	<DataSourceModifications />
+	<DataSourceReferences />
+	<DataSources />
+	<Parts />
+	<PropertyModifications />
+</AxFormExtension>
