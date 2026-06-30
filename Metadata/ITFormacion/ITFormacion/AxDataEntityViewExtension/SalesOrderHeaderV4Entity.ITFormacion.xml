@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<AxDataEntityViewExtension xmlns:i="http://www.w3.org/2001/XMLSchema-instance">
+	<Name>SalesOrderHeaderV4Entity.ITFormacion</Name>
+	<DataSources>
+		<AxQueryExtensionEmbeddedDataSource>
+			<Parent>SalesTable</Parent>
+			<DataSource>
+				<Name>ACBookTable</Name>
+				<DynamicFields>Yes</DynamicFields>
+				<IsReadOnly>Yes</IsReadOnly>
+				<Table>ACBookTable</Table>
+				<DataSources />
+				<DerivedDataSources />
+				<Fields />
+				<Ranges />
+				<JoinMode>OuterJoin</JoinMode>
+				<Relations>
+					<AxQuerySimpleDataSourceRelation>
+						<Name>QueryDataSourceRelation1</Name>
+						<Field>ACBookTable</Field>
+						<JoinDataSource>SalesTable</JoinDataSource>
+						<RelatedField>RecId</RelatedField>
+					</AxQuerySimpleDataSourceRelation>
+				</Relations>
+			</DataSource>
+		</AxQueryExtensionEmbeddedDataSource>
+	</DataSources>
+	<FieldGroupExtensions />
+	<FieldGroups />
+	<FieldModifications />
+	<Fields>
+		<AxDataEntityViewField xmlns=""
+			i:type="AxDataEntityViewMappedField">
+			<Name>ACBookTable</Name>
+			<AccessModifier>Private</AccessModifier>
+			<DataField>ACBookTable</DataField>
+			<DataSource>SalesTable</DataSource>
+		</AxDataEntityViewField>
+		<AxDataEntityViewField xmlns=""
+			i:type="AxDataEntityViewMappedField">
+			<Name>ACBook_Id</Name>
+			<AllowEdit>Yes</AllowEdit>
+			<Mandatory>No</Mandatory>
+			<DataField>Id</DataField>
+			<DataSource>ACBookTable</DataSource>
+		</AxDataEntityViewField>
+	</Fields>
+	<Mappings />
+	<PropertyModifications />
+	<Relations />
+</AxDataEntityViewExtension>

@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<AxClass xmlns:i="http://www.w3.org/2001/XMLSchema-instance">
+	<Name>SalesTable_SalesTable_ACBookTable_ITFormacion_Extension</Name>
+	<SourceCode>
+		<Declaration><![CDATA[
+[ExtensionOf(formDataFieldStr(SalesTable, SalesTable, ACBookTable))]
+final class SalesTable_SalesTable_ACBookTable_ITFormacion_Extension
+{
+}
+]]></Declaration>
+		<Methods>
+			<Method>
+				<Name>validate</Name>
+				<Source><![CDATA[
+    public boolean validate()
+    {
+        boolean ret;
+
+        ret = next validate()
+            && this.ACIsFantasyBook();
+
+        return ret;
+    }
+
+]]></Source>
+			</Method>
+			<Method>
+				<Name>ACIsFantasyBook</Name>
+				<Source><![CDATA[
+    private boolean ACIsFantasyBook()
+    {
+        SalesTable salesTable = this.dataSource().cursor();
+
+        if(ACBookTable::findRecId(salesTable.ACBookTable).Genre != ACGenreEnum::Fantasy)
+        {
+            return checkFailed("@ACItFormacionLabels:YouMustSelectFantasyBooks");
+        }
+
+        return true;
+    }
+
+]]></Source>
+			</Method>
+		</Methods>
+	</SourceCode>
+</AxClass>
