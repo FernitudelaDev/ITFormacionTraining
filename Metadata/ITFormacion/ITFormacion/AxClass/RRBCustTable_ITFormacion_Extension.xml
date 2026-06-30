@@ -29,6 +29,25 @@ final class RRBCustTable_ITFormacion_Extension
 
 ]]></Source>
 			</Method>
+			<Method>
+				<Name>RRBdisplayBookGenreCombo</Name>
+				<Source><![CDATA[
+    [SysClientCacheDataMethodAttribute(true)]
+    public display FTDGenreEnum RRBdisplayBookGenreCombo()
+    {
+        FTDBookTable book;
+
+        if (this.RRBBookTable)
+        {
+            select firstonly Genre from book
+                where book.RecId == this.RRBBookTable;
+        }
+
+        return book.Genre;
+    }
+
+]]></Source>
+			</Method>
 		</Methods>
 	</SourceCode>
 </AxClass>

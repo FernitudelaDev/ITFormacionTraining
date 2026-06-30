@@ -54,6 +54,20 @@
 			</FormControl>
 			<Parent>aptabGeneral</Parent>
 		</AxFormExtensionControl>
+		<AxFormExtensionControl xmlns="">
+			<Name>FormExtensionControlckhvxx421</Name>
+			<FormControl xmlns=""
+				i:type="AxFormComboBoxControl">
+				<Name>CustTable_RRBdisplayBookGenreCombo</Name>
+				<Type>ComboBox</Type>
+				<FormControlExtension
+					i:nil="true" />
+				<DataMethod>RRBCustTable_ITFormacion_Extension.RRBdisplayBookGenreCombo</DataMethod>
+				<DataSource>CustTable</DataSource>
+				<Items />
+			</FormControl>
+			<Parent>OtherInformation</Parent>
+		</AxFormExtensionControl>
 	</Controls>
 	<DataSourceModifications />
 	<DataSourceReferences />
