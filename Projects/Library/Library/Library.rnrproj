@@ -41,6 +41,7 @@
     <Folder Include="EDT Reals\" />
     <Folder Include="EDT Strings\" />
     <Folder Include="Extended Data Types\" />
+    <Folder Include="Form Extensions\" />
     <Folder Include="Forms\" />
     <Folder Include="Label Files\" />
     <Folder Include="Menu Extensions\" />
@@ -51,6 +52,7 @@
     <Folder Include="Service Groups\" />
     <Folder Include="Services\" />
     <Folder Include="Simple Queries\" />
+    <Folder Include="Table Extensions\" />
     <Folder Include="Tables\" />
     <Folder Include="Views\" />
   </ItemGroup>
@@ -95,6 +97,16 @@
       <Name>ACRunnableClassExample</Name>
       <Link>Classes\ACRunnableClassExample</Link>
     </Content>
+    <Content Include="AxClass\SalesLine_ITFormacion_Extension">
+      <SubType>Content</SubType>
+      <Name>SalesLine_ITFormacion_Extension</Name>
+      <Link>Classes\SalesLine_ITFormacion_Extension</Link>
+    </Content>
+    <Content Include="AxClass\SalesTable_ITFormacion_Extension">
+      <SubType>Content</SubType>
+      <Name>SalesTable_ITFormacion_Extension</Name>
+      <Link>Classes\SalesTable_ITFormacion_Extension</Link>
+    </Content>
     <Content Include="AxDataEntityView\ACAuthorEntity">
       <SubType>Content</SubType>
       <Name>ACAuthorEntity</Name>
@@ -134,6 +146,11 @@
       <SubType>Content</SubType>
       <Name>ACGenreEnum</Name>
       <Link>Base Enums\ACGenreEnum</Link>
+    </Content>
+    <Content Include="AxFormExtension\SalesTable.ITFormacion">
+      <SubType>Content</SubType>
+      <Name>SalesTable.ITFormacion</Name>
+      <Link>Form Extensions\SalesTable.ITFormacion</Link>
     </Content>
     <Content Include="AxForm\ACAuthor">
       <SubType>Content</SubType>
@@ -319,6 +336,16 @@
       <SubType>Content</SubType>
       <Name>ACBookCreationService</Name>
       <Link>Services\ACBookCreationService</Link>
+    </Content>
+    <Content Include="AxTableExtension\SalesLine.ITFormacion">
+      <SubType>Content</SubType>
+      <Name>SalesLine.ITFormacion</Name>
+      <Link>Table Extensions\SalesLine.ITFormacion</Link>
+    </Content>
+    <Content Include="AxTableExtension\SalesTable.ITFormacion">
+      <SubType>Content</SubType>
+      <Name>SalesTable.ITFormacion</Name>
+      <Link>Table Extensions\SalesTable.ITFormacion</Link>
     </Content>
     <Content Include="AxTable\ACAuthorStaging">
       <SubType>Content</SubType>

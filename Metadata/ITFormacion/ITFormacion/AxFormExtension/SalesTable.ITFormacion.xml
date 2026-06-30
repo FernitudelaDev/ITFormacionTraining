@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<AxFormExtension xmlns:i="http://www.w3.org/2001/XMLSchema-instance" xmlns="Microsoft.Dynamics.AX.Metadata.V6">
+	<Name>SalesTable.ITFormacion</Name>
+	<ControlModifications />
+	<Controls>
+		<AxFormExtensionControl xmlns="">
+			<Name>FormExtensionControlxwrrg5q51</Name>
+			<FormControl xmlns=""
+				i:type="AxFormGroupControl">
+				<Name>ACLibraryGroup</Name>
+				<Type>Group</Type>
+				<FormControlExtension
+					i:nil="true" />
+				<Controls>
+					<AxFormControl xmlns=""
+						i:type="AxFormReferenceGroupControl">
+						<Name>SalesTable_ACBookTable</Name>
+						<Type>ReferenceGroup</Type>
+						<FormControlExtension
+							i:nil="true" />
+						<Controls />
+						<DataSource>SalesTable</DataSource>
+						<ReferenceField>ACBookTable</ReferenceField>
+					</AxFormControl>
+					<AxFormControl xmlns=""
+						i:type="AxFormStringControl">
+						<Name>SalesTable_ACdispAuthorFullName</Name>
+						<Type>String</Type>
+						<FormControlExtension
+							i:nil="true" />
+						<DataMethod>SalesTable_ITFormacion_Extension.ACdispAuthorFullName</DataMethod>
+						<DataSource>SalesTable</DataSource>
+					</AxFormControl>
+				</Controls>
+				<Caption>Library</Caption>
+			</FormControl>
+			<Parent>LineViewHeader</Parent>
+		</AxFormExtensionControl>
+		<AxFormExtensionControl xmlns="">
+			<Name>FormExtensionControlcxjtpusd1</Name>
+			<FormControl xmlns=""
+				i:type="AxFormReferenceGroupControl">
+				<Name>SalesLine_ACBookTable</Name>
+				<Type>ReferenceGroup</Type>
+				<FormControlExtension
+					i:nil="true" />
+				<Controls />
+				<DataSource>SalesLine</DataSource>
+				<ReferenceField>ACBookTable</ReferenceField>
+			</FormControl>
+			<Parent>SalesLineGrid</Parent>
+			<PositionType>AfterItem</PositionType>
+			<PreviousSibling>InventDistinctProductExpanded_DisplayProductNumber</PreviousSibling>
+		</AxFormExtensionControl>
+	</Controls>
+	<DataSourceModifications />
+	<DataSourceReferences />
+	<DataSources />
+	<Parts />
+	<PropertyModifications />
+</AxFormExtension>

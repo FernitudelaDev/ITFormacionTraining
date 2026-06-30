@@ -1,90 +1,18 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Diagnostics
-  GenerationTime="2026-06-29T21:35:13.8146545+00:00">
+  GenerationTime="2026-06-30T00:59:47.5680862+00:00">
   <Items>
     <Diagnostic>
       <DiagnosticType>Compile</DiagnosticType>
       <Severity>Error</Severity>
-      <Path>dynamics://Table/ACBookTable/Method/AuthorTablelookUp</Path>
-      <ElementType>Table Method</ElementType>
-      <Moniker>ExpectedToken</Moniker>
-      <Line>74</Line>
-      <Column>134</Column>
-      <EndLine>74</EndLine>
-      <EndColumn>135</EndColumn>
-      <Message>';' expected.</Message>
-    </Diagnostic>
-    <Diagnostic>
-      <DiagnosticType>Compile</DiagnosticType>
-      <Severity>Error</Severity>
-      <Path>dynamics://Table/ACBookTable/Method/AuthorTablelookUp</Path>
-      <ElementType>Table Method</ElementType>
-      <Moniker>VariableNotFound</Moniker>
-      <Line>76</Line>
-      <Column>9</Column>
-      <EndLine>76</EndLine>
-      <EndColumn>24</EndColumn>
-      <Message>Variable 'refTableLookup' is not found in scope.</Message>
-    </Diagnostic>
-    <Diagnostic>
-      <DiagnosticType>Compile</DiagnosticType>
-      <Severity>Error</Severity>
-      <Path>dynamics://Table/ACBookTable/Method/AuthorTablelookUp</Path>
-      <ElementType>Table Method</ElementType>
-      <Moniker>VariableNotFound</Moniker>
-      <Line>77</Line>
-      <Column>9</Column>
-      <EndLine>77</EndLine>
-      <EndColumn>24</EndColumn>
-      <Message>Variable 'refTableLookup' is not found in scope.</Message>
-    </Diagnostic>
-    <Diagnostic>
-      <DiagnosticType>Compile</DiagnosticType>
-      <Severity>Error</Severity>
-      <Path>dynamics://Table/ACBookTable/Method/AuthorTablelookUp</Path>
-      <ElementType>Table Method</ElementType>
-      <Moniker>VariableNotFound</Moniker>
-      <Line>78</Line>
-      <Column>9</Column>
-      <EndLine>78</EndLine>
-      <EndColumn>24</EndColumn>
-      <Message>Variable 'refTableLookup' is not found in scope.</Message>
-    </Diagnostic>
-    <Diagnostic>
-      <DiagnosticType>Compile</DiagnosticType>
-      <Severity>Error</Severity>
-      <Path>dynamics://Table/ACBookTable/Method/AuthorTablelookUp</Path>
-      <ElementType>Table Method</ElementType>
-      <Moniker>VariableNotFound</Moniker>
-      <Line>79</Line>
-      <Column>9</Column>
-      <EndLine>79</EndLine>
-      <EndColumn>24</EndColumn>
-      <Message>Variable 'refTableLookup' is not found in scope.</Message>
-    </Diagnostic>
-    <Diagnostic>
-      <DiagnosticType>Compile</DiagnosticType>
-      <Severity>Error</Severity>
-      <Path>dynamics://Table/ACBookTable/Method/AuthorTablelookUp</Path>
-      <ElementType>Table Method</ElementType>
-      <Moniker>VariableNotFound</Moniker>
-      <Line>80</Line>
-      <Column>9</Column>
-      <EndLine>80</EndLine>
-      <EndColumn>24</EndColumn>
-      <Message>Variable 'refTableLookup' is not found in scope.</Message>
-    </Diagnostic>
-    <Diagnostic>
-      <DiagnosticType>Compile</DiagnosticType>
-      <Severity>Error</Severity>
-      <Path>dynamics://Table/ACBookTable/Method/AuthorTablelookUp</Path>
-      <ElementType>Table Method</ElementType>
-      <Moniker>NotDeclared</Moniker>
-      <Line>82</Line>
-      <Column>16</Column>
-      <EndLine>82</EndLine>
+      <Path>dynamics://Class/SalesTable_ITFormacion_Extension/Method/modifiedField</Path>
+      <ElementType>Class Method</ElementType>
+      <Moniker>AssemblyMustBeReferenced</Moniker>
+      <Line>11</Line>
+      <Column>5</Column>
+      <EndLine>11</EndLine>
       <EndColumn>30</EndColumn>
-      <Message>'refTableLookup' is not declared.</Message>
+      <Message>A reference to 'Dynamics.AX.Tax, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null' is required to compile this module.</Message>
     </Diagnostic>
   </Items>
   <Aliases />

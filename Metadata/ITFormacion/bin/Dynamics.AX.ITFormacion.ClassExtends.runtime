@@ -1,6 +1,8 @@
 ﻿ACBookInventoryUpdationController	SysOperationServiceController
+SalesLine_ITFormacion_Extension	
 ACBookCreationService	
 ACBookInventoryUpdationService	SysOperationServiceBase
 ACQueryVSSelect	
+SalesTable_ITFormacion_Extension	
 ACRunnableClassExample	
 ACBookInventoryUpdationDataContract	

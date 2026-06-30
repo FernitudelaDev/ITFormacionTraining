@@ -1,1 +1,4 @@
-<ExtensionClasses />
+<ExtensionClasses>
+  <ExtensionClass ExtensionClassName="SalesLine_ITFormacion_Extension" ExtensionTargetName="SalesLine" ExtensionTargetTypeId="TableTypeId" ExtensionNestedTargetName="" />
+  <ExtensionClass ExtensionClassName="SalesTable_ITFormacion_Extension" ExtensionTargetName="SalesTable" ExtensionTargetTypeId="TableTypeId" ExtensionNestedTargetName="" />
+</ExtensionClasses>

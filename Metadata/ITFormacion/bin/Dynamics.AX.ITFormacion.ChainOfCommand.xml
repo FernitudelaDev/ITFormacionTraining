@@ -1,1 +1,8 @@
-<ChainOfCommand />
+<ChainOfCommand>
+  <ExtensionClass Name="SalesLine_ITFormacion_Extension" ExtensionTarget="SalesLine" ExtensionTargetType="TableTypeId">
+    <Method ActualExtensionTarget="SalesLine" IsStatic="False" CocMethodDelegateElementOwner="SalesLine" IsFormNestedTargetConcept="False" CoCRootFormName="" CoCNestedElementKind="Class" IsCommonBaseMethodTarget="False" SupportsLazyInit="False">initValue</Method>
+  </ExtensionClass>
+  <ExtensionClass Name="SalesTable_ITFormacion_Extension" ExtensionTarget="SalesTable" ExtensionTargetType="TableTypeId">
+    <Method ActualExtensionTarget="SalesTable" IsStatic="False" CocMethodDelegateElementOwner="SalesTable" IsFormNestedTargetConcept="False" CoCRootFormName="" CoCNestedElementKind="Class" IsCommonBaseMethodTarget="False" SupportsLazyInit="False">modifiedField</Method>
+  </ExtensionClass>
+</ChainOfCommand>

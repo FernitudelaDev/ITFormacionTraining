@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<AxClass xmlns:i="http://www.w3.org/2001/XMLSchema-instance">
+	<Name>SalesTable_ITFormacion_Extension</Name>
+	<SourceCode>
+		<Declaration><![CDATA[
+[ExtensionOf(tableStr(SalesTable))]
+
+public final class SalesTable_ITFormacion_Extension
+{
+}
+]]></Declaration>
+		<Methods>
+			<Method>
+				<Name>ACdispAuthorFullName</Name>
+				<Source><![CDATA[
+    [SysClientCacheDataMethod(true)]
+    public display ACAuthorFullName ACdispAuthorFullName()
+    {
+        return ACBookTable::findRecId(this.ACBookTable).dispAuthorFullName();
+    }
+
+]]></Source>
+			</Method>
+			<Method>
+				<Name>modifiedField</Name>
+				<Source><![CDATA[
+    public void modifiedField(FieldId _fieldId)
+    {
+        next modifiedField(_fieldId);
+ 
+        switch(_fieldId)
+        {
+            case fieldNum(SalesTable, ACBookTable):
+                this.ACUpdateBookSalesLine();
+                break;
+        }
+    }
+
+]]></Source>
+			</Method>
+			<Method>
+				<Name>ACUpdateBookSalesLine</Name>
+				<Source><![CDATA[
+    public void ACUpdateBookSalesLine()
+    {
+        SalesLine salesLine;
+                
+        while select forupdate salesLine
+                    where salesLine.SalesId == this.SalesId
+        {
+            salesLine.ACBookTable = this.ACBookTable;
+            ttsbegin;
+            if(salesLine.validateWrite())
+            {
+                salesLine.update();
+                
+            }
+            ttscommit;
+        }
+        this.researchIfNeeded();
+    }
+
+]]></Source>
+			</Method>
+			<Method>
+				<Name>researchIfNeeded</Name>
+				<Source><![CDATA[
+    public void researchIfNeeded()
+    {
+        FormDataSource formDataSource = FormDataUtil::getFormDataSource(this);
+
+        if(formDataSource)
+        {
+            formDataSource.research(true);
+        }
+    }
+
+]]></Source>
+			</Method>
+		</Methods>
+	</SourceCode>
+</AxClass>
