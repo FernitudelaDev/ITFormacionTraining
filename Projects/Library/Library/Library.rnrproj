@@ -90,6 +90,16 @@
       <Name>FTDRunnableClassExample</Name>
       <Link>Classes\FTDRunnableClassExample</Link>
     </Content>
+    <Content Include="AxClass\RRBCustTableForm_ITFormacion_Extension">
+      <SubType>Content</SubType>
+      <Name>RRBCustTableForm_ITFormacion_Extension</Name>
+      <Link>Classes\RRBCustTableForm_ITFormacion_Extension</Link>
+    </Content>
+    <Content Include="AxClass\RRBCustTable_ITFormacion_Extension">
+      <SubType>Content</SubType>
+      <Name>RRBCustTable_ITFormacion_Extension</Name>
+      <Link>Classes\RRBCustTable_ITFormacion_Extension</Link>
+    </Content>
     <Content Include="AxClass\SalesLine_ITFormacion_Extension">
       <SubType>Content</SubType>
       <Name>SalesLine_ITFormacion_Extension</Name>
@@ -164,6 +174,11 @@
       <SubType>Content</SubType>
       <Name>FTDGenreEnum</Name>
       <Link>Base Enums\FTDGenreEnum</Link>
+    </Content>
+    <Content Include="AxFormExtension\CustTable.ITFormacion">
+      <SubType>Content</SubType>
+      <Name>CustTable.ITFormacion</Name>
+      <Link>Form Extensions\CustTable.ITFormacion</Link>
     </Content>
     <Content Include="AxFormExtension\SalesTable.ITFormacion">
       <SubType>Content</SubType>
@@ -359,6 +374,11 @@
       <SubType>Content</SubType>
       <Name>FTDBookCreationService</Name>
       <Link>Services\FTDBookCreationService</Link>
+    </Content>
+    <Content Include="AxTableExtension\CustTable.ITFormacion">
+      <SubType>Content</SubType>
+      <Name>CustTable.ITFormacion</Name>
+      <Link>Table Extensions\CustTable.ITFormacion</Link>
     </Content>
     <Content Include="AxTableExtension\SalesLine.ITFormacion">
       <SubType>Content</SubType>

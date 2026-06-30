@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<AxClass xmlns:i="http://www.w3.org/2001/XMLSchema-instance">
+	<Name>RRBCustTableForm_ITFormacion_Extension</Name>
+	<SourceCode>
+		<Declaration><![CDATA[
+[ExtensionOf(formStr(CustTable))]
+final class RRBCustTableForm_ITFormacion_Extension
+{
+
+}
+]]></Declaration>
+		<Methods>
+			<Method>
+				<Name>CustTable_OnActivated</Name>
+				<Source><![CDATA[
+    [FormDataSourceEventHandler(formDataSourceStr(CustTable, CustTable), FormDataSourceEventType::Activated)]
+    public static void CustTable_OnActivated(FormDataSource _sender, FormDataSourceEventArgs _e)
+    {
+        FormRun formRun = _sender.formRun();
+        CustTable custTable = _sender.cursor();
+        
+        FormFunctionButtonControl bookButton = formRun.design().controlName(formControlStr(CustTable, RRBBook));
+
+        if (bookButton)
+        {
+            bookButton.enabled(custTable.RRBBookTable != 0);
+        }
+    }
+
+]]></Source>
+			</Method>
+		</Methods>
+	</SourceCode>
+</AxClass>

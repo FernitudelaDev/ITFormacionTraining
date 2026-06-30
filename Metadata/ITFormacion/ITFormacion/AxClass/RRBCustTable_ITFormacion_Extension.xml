@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<AxClass xmlns:i="http://www.w3.org/2001/XMLSchema-instance">
+	<Name>RRBCustTable_ITFormacion_Extension</Name>
+	<SourceCode>
+		<Declaration><![CDATA[
+[ExtensionOf(tableStr(CustTable))]
+final class RRBCustTable_ITFormacion_Extension
+{
+
+}
+]]></Declaration>
+		<Methods>
+			<Method>
+				<Name>RRBdisplayBookGenre</Name>
+				<Source><![CDATA[
+    [SysClientCacheDataMethodAttribute(true)]
+    public display str RRBdisplayBookGenre()
+    {
+        FTDBookTable book;
+
+        if (this.RRBBookTable)
+        {
+            select firstonly Genre from book
+                where book.RecId == this.RRBBookTable;
+        }
+
+        return enum2Str(book.Genre);
+    }
+
+]]></Source>
+			</Method>
+		</Methods>
+	</SourceCode>
+</AxClass>

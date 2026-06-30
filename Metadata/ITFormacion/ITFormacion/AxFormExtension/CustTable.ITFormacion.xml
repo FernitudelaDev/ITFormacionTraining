@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<AxFormExtension xmlns:i="http://www.w3.org/2001/XMLSchema-instance" xmlns="Microsoft.Dynamics.AX.Metadata.V6">
+	<Name>CustTable.ITFormacion</Name>
+	<ControlModifications />
+	<Controls>
+		<AxFormExtensionControl xmlns="">
+			<Name>FormExtensionControliwhdebyf1</Name>
+			<FormControl xmlns=""
+				i:type="AxFormReferenceGroupControl">
+				<Name>CustTable_RRBBookTable</Name>
+				<Type>ReferenceGroup</Type>
+				<FormControlExtension
+					i:nil="true" />
+				<Controls />
+				<DataSource>CustTable</DataSource>
+				<ReferenceField>RRBBookTable</ReferenceField>
+			</FormControl>
+			<Parent>OtherInformation</Parent>
+		</AxFormExtensionControl>
+		<AxFormExtensionControl xmlns="">
+			<Name>FormExtensionControl5zuo1eko1</Name>
+			<FormControl xmlns=""
+				i:type="AxFormStringControl">
+				<Name>CustTable_RRBdisplayBookGenre</Name>
+				<Type>String</Type>
+				<FormControlExtension
+					i:nil="true" />
+				<DataMethod>RRBCustTable_ITFormacion_Extension::RRBdisplayBookGenre</DataMethod>
+				<DataSource>CustTable</DataSource>
+				<Text>@ITFormacion:Genre</Text>
+			</FormControl>
+			<Parent>OtherInformation</Parent>
+		</AxFormExtensionControl>
+		<AxFormExtensionControl xmlns="">
+			<Name>FormExtensionControlvgedx0c11</Name>
+			<FormControl xmlns=""
+				i:type="AxFormButtonGroupControl">
+				<Name>RRBBooks</Name>
+				<Type>ButtonGroup</Type>
+				<FormControlExtension
+					i:nil="true" />
+				<Controls>
+					<AxFormControl xmlns=""
+						i:type="AxFormMenuFunctionButtonControl">
+						<Name>RRBBook</Name>
+						<Type>MenuFunctionButton</Type>
+						<FormControlExtension
+							i:nil="true" />
+						<MenuItemName>FTDBook</MenuItemName>
+						<Text>@ITFormacion:BookTable</Text>
+					</AxFormControl>
+				</Controls>
+				<Caption>@ITFormacion:Books</Caption>
+			</FormControl>
+			<Parent>aptabGeneral</Parent>
+		</AxFormExtensionControl>
+	</Controls>
+	<DataSourceModifications />
+	<DataSourceReferences />
+	<DataSources />
+	<Parts />
+	<PropertyModifications />
+</AxFormExtension>
