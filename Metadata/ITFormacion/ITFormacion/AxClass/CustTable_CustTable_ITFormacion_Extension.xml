@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<AxClass xmlns:i="http://www.w3.org/2001/XMLSchema-instance">
+	<Name>CustTable_CustTable_ITFormacion_Extension</Name>
+	<SourceCode>
+		<Declaration><![CDATA[
+[ExtensionOf(formDataSourceStr(CustTable, CustTable))]
+public final class CustTable_CustTable_ITFormacion_Extension
+{
+}
+]]></Declaration>
+		<Methods>
+			<Method>
+				<Name>active</Name>
+				<Source><![CDATA[
+    public int active()
+    {
+        int ret = true;
+
+        ret = next active();
+
+        FormFunctionButtonControl control = this.formRun().design().controlName(formControlStr(CustTable, FTDBookMenuItemButton));
+        CustTable activeCustTable = this.cursor();
+
+        control.enabled(activeCustTable.FTDBookTable != 0);
+
+        return ret;
+    }
+
+]]></Source>
+			</Method>
+		</Methods>
+	</SourceCode>
+</AxClass>

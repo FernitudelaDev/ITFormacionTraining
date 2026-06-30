@@ -60,6 +60,11 @@
     <Folder Include="Views\" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="AxClass\CustTable_CustTable_ITFormacion_Extension">
+      <SubType>Content</SubType>
+      <Name>CustTable_CustTable_ITFormacion_Extension</Name>
+      <Link>Classes\CustTable_CustTable_ITFormacion_Extension</Link>
+    </Content>
     <Content Include="AxClass\FTDBookCreationService">
       <SubType>Content</SubType>
       <Name>FTDBookCreationService</Name>
