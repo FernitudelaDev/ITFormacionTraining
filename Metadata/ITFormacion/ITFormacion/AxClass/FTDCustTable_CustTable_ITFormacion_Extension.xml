@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <AxClass xmlns:i="http://www.w3.org/2001/XMLSchema-instance">
-	<Name>SalesTable_SalesTable_ITFormacion_Extension</Name>
+	<Name>FTDCustTable_CustTable_ITFormacion_Extension</Name>
 	<SourceCode>
 		<Declaration><![CDATA[
-[ExtensionOf(formDataSourceStr(SalesTable, SalesTable))]
-public final class SalesTable_SalesTable_ITFormacion_Extension
+[ExtensionOf(formDataSourceStr(CustTable, CustTable))]
+public final class FTDCustTable_CustTable_ITFormacion_Extension
 {
 }
 ]]></Declaration>
@@ -18,8 +18,8 @@ public final class SalesTable_SalesTable_ITFormacion_Extension
 
         ret = next active();
 
-        FormFunctionButtonControl control   = this.formRun().design().controlName(formControlStr(SalesTable, FTDBook));
-        SalesTable activeCustTable     = this.cursor();
+        FormFunctionButtonControl control   = this.formRun().design().controlName(formControlStr(CustTable, FTDBook));
+        CustTable activeCustTable     = this.cursor();
 
         control.enabled(activeCustTable.FTDBookTable != 0);
 

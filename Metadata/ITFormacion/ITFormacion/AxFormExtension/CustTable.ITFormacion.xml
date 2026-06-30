@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<AxFormExtension xmlns:i="http://www.w3.org/2001/XMLSchema-instance" xmlns="Microsoft.Dynamics.AX.Metadata.V6">
+	<Name>CustTable.ITFormacion</Name>
+	<ControlModifications />
+	<Controls>
+		<AxFormExtensionControl xmlns="">
+			<Name>FormExtensionControltfedvfr31</Name>
+			<FormControl xmlns=""
+				i:type="AxFormButtonGroupControl">
+				<Name>FTDBookTableGButtonGroup</Name>
+				<Type>ButtonGroup</Type>
+				<FormControlExtension
+					i:nil="true" />
+				<Controls>
+					<AxFormControl xmlns=""
+						i:type="AxFormMenuFunctionButtonControl">
+						<Name>FTDBook</Name>
+						<Type>MenuFunctionButton</Type>
+						<FormControlExtension
+							i:nil="true" />
+						<DataSource>CustTable</DataSource>
+						<MenuItemName>FTDBook</MenuItemName>
+						<NeedsRecord>Yes</NeedsRecord>
+					</AxFormControl>
+				</Controls>
+			</FormControl>
+			<Parent>aptabGeneral</Parent>
+		</AxFormExtensionControl>
+		<AxFormExtensionControl xmlns="">
+			<Name>FormExtensionControlpuwxzls31</Name>
+			<FormControl xmlns=""
+				i:type="AxFormGroupControl">
+				<Name>FTDBookTable</Name>
+				<Type>Group</Type>
+				<FormControlExtension
+					i:nil="true" />
+				<Controls>
+					<AxFormControl xmlns=""
+						i:type="AxFormReferenceGroupControl">
+						<Name>FTDBookTableReferenceGroup</Name>
+						<Type>ReferenceGroup</Type>
+						<FormControlExtension
+							i:nil="true" />
+						<Controls />
+						<DataSource>CustTable</DataSource>
+						<ReferenceField>FTDBookTable</ReferenceField>
+					</AxFormControl>
+					<AxFormControl xmlns=""
+						i:type="AxFormComboBoxControl">
+						<Name>FTDBookGenre</Name>
+						<Type>ComboBox</Type>
+						<FormControlExtension
+							i:nil="true" />
+						<DataMethod>FTDCustTable_ITFormacion_Extension.FTDdispBookGenre</DataMethod>
+						<DataSource>CustTable</DataSource>
+						<Items />
+					</AxFormControl>
+				</Controls>
+				<DataSource>CustTable</DataSource>
+			</FormControl>
+			<Parent>UpperGroup</Parent>
+		</AxFormExtensionControl>
+	</Controls>
+	<DataSourceModifications />
+	<DataSourceReferences />
+	<DataSources />
+	<Parts />
+	<PropertyModifications />
+</AxFormExtension>

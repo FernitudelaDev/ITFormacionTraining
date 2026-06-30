@@ -80,6 +80,16 @@
       <Name>FTDBookInventoryUpdationService</Name>
       <Link>Classes\FTDBookInventoryUpdationService</Link>
     </Content>
+    <Content Include="AxClass\FTDCustTable_CustTable_ITFormacion_Extension">
+      <SubType>Content</SubType>
+      <Name>FTDCustTable_CustTable_ITFormacion_Extension</Name>
+      <Link>Classes\FTDCustTable_CustTable_ITFormacion_Extension</Link>
+    </Content>
+    <Content Include="AxClass\FTDCustTable_ITFormacion_Extension">
+      <SubType>Content</SubType>
+      <Name>FTDCustTable_ITFormacion_Extension</Name>
+      <Link>Classes\FTDCustTable_ITFormacion_Extension</Link>
+    </Content>
     <Content Include="AxClass\FTDQueryVSSelect">
       <SubType>Content</SubType>
       <Name>FTDQueryVSSelect</Name>
@@ -164,6 +174,11 @@
       <SubType>Content</SubType>
       <Name>FTDGenreEnum</Name>
       <Link>Base Enums\FTDGenreEnum</Link>
+    </Content>
+    <Content Include="AxFormExtension\CustTable.ITFormacion">
+      <SubType>Content</SubType>
+      <Name>CustTable.ITFormacion</Name>
+      <Link>Form Extensions\CustTable.ITFormacion</Link>
     </Content>
     <Content Include="AxFormExtension\SalesTable.ITFormacion">
       <SubType>Content</SubType>
@@ -359,6 +374,11 @@
       <SubType>Content</SubType>
       <Name>FTDBookCreationService</Name>
       <Link>Services\FTDBookCreationService</Link>
+    </Content>
+    <Content Include="AxTableExtension\CustTable.ITFormacion">
+      <SubType>Content</SubType>
+      <Name>CustTable.ITFormacion</Name>
+      <Link>Table Extensions\CustTable.ITFormacion</Link>
     </Content>
     <Content Include="AxTableExtension\SalesLine.ITFormacion">
       <SubType>Content</SubType>
