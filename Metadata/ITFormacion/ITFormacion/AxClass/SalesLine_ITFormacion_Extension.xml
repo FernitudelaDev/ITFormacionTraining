@@ -23,6 +23,34 @@ public final class SalesLine_ITFormacion_Extension
 
 ]]></Source>
 			</Method>
+			<Method>
+				<Name>ACFantasyBookLookup</Name>
+				<Source><![CDATA[
+    public Common ACFantasyBookLookup(FormReferenceControl _formReferenceControl)
+    {
+        SysReferenceTableLookup refTableLookup = SysReferenceTableLookup::newParameters(tableNum(ACBookTable), _formReferenceControl);
+
+        refTableLookup.parmQuery(this.ACGetFantasyBookLookupQuery());
+        refTableLookup.addLookupfield(fieldNum(ACBookTable, Id));
+        refTableLookup.addLookupfield(fieldNum(ACBookTable, Name));
+        refTableLookup.addLookupfield(fieldNum(ACBookTable, Genre));
+        refTableLookup.addLookupfield(fieldNum(ACBookTable, Author));
+
+        return refTableLookup.performFormLookup();
+    }
+
+]]></Source>
+			</Method>
+			<Method>
+				<Name>ACGetFantasyBookLookupQuery</Name>
+				<Source><![CDATA[
+    private Query ACGetFantasyBookLookupQuery()
+    {
+        return new Query(queryStr(ACBookAuthorFantasyQuery));
+    }
+
+]]></Source>
+			</Method>
 		</Methods>
 	</SourceCode>
 </AxClass>

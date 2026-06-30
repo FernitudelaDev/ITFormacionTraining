@@ -1,8 +1,18 @@
 <ChainOfCommand>
+  <ExtensionClass Name="SalesTable_SalesTable_ITFormacion_Extension" ExtensionTarget="SalesTable" ExtensionTargetType="ClassTypeId">
+    <Method ActualExtensionTarget="SalesTable" IsStatic="False" CocMethodDelegateElementOwner="FormDataSource" IsFormNestedTargetConcept="True" CoCRootFormName="SalesTable" CoCNestedElementKind="FormDataSource" IsCommonBaseMethodTarget="False" SupportsLazyInit="False">active</Method>
+  </ExtensionClass>
   <ExtensionClass Name="SalesLine_ITFormacion_Extension" ExtensionTarget="SalesLine" ExtensionTargetType="TableTypeId">
     <Method ActualExtensionTarget="SalesLine" IsStatic="False" CocMethodDelegateElementOwner="SalesLine" IsFormNestedTargetConcept="False" CoCRootFormName="" CoCNestedElementKind="Class" IsCommonBaseMethodTarget="False" SupportsLazyInit="False">initValue</Method>
   </ExtensionClass>
+  <ExtensionClass Name="SalesTable_SalesTable_ACBookTable_ITFormacion_Extension" ExtensionTarget="SalesTable.ACBookTable" ExtensionTargetType="ClassTypeId">
+    <Method ActualExtensionTarget="SalesTable.ACBookTable" IsStatic="False" CocMethodDelegateElementOwner="FormDataObject" IsFormNestedTargetConcept="True" CoCRootFormName="SalesTable" CoCNestedElementKind="FormDataField" IsCommonBaseMethodTarget="False" SupportsLazyInit="False">validate</Method>
+    <Method ActualExtensionTarget="SalesTable.ACBookTable" IsStatic="False" CocMethodDelegateElementOwner="FormDataObject" IsFormNestedTargetConcept="True" CoCRootFormName="SalesTable" CoCNestedElementKind="FormDataField" IsCommonBaseMethodTarget="False" SupportsLazyInit="False">ACIsFantasyBook</Method>
+  </ExtensionClass>
   <ExtensionClass Name="SalesTable_ITFormacion_Extension" ExtensionTarget="SalesTable" ExtensionTargetType="TableTypeId">
     <Method ActualExtensionTarget="SalesTable" IsStatic="False" CocMethodDelegateElementOwner="SalesTable" IsFormNestedTargetConcept="False" CoCRootFormName="" CoCNestedElementKind="Class" IsCommonBaseMethodTarget="False" SupportsLazyInit="False">modifiedField</Method>
+  </ExtensionClass>
+  <ExtensionClass Name="SalesTableForm_ITFormacion_Extension" ExtensionTarget="Form.SalesTable" ExtensionTargetType="FormTypeId">
+    <Method ActualExtensionTarget="Form.SalesTable" IsStatic="False" CocMethodDelegateElementOwner="SalesTable" IsFormNestedTargetConcept="False" CoCRootFormName="" CoCNestedElementKind="Class" IsCommonBaseMethodTarget="False" SupportsLazyInit="False">init</Method>
   </ExtensionClass>
 </ChainOfCommand>

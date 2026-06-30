@@ -43,5 +43,30 @@
 				<TypeName></TypeName>
 			</ReturnType>
 		</Method>
+		<Method>
+			<Name>ACFantasyBookLookup</Name>
+			<Visibility>Public</Visibility>
+			<Parameters>
+				<AxMethodParameter>
+					<Tags></Tags>
+					<Type>Class</Type>
+					<TypeName>FormReferenceControl</TypeName>
+					<Name>_formReferenceControl</Name>
+				</AxMethodParameter>
+			</Parameters>
+			<ReturnType>
+				<Tags></Tags>
+				<Type>Record</Type>
+				<TypeName>Common</TypeName>
+			</ReturnType>
+		</Method>
+		<Method>
+			<Name>ACGetFantasyBookLookupQuery</Name>
+			<ReturnType>
+				<Tags></Tags>
+				<Type>Class</Type>
+				<TypeName>Query</TypeName>
+			</ReturnType>
+		</Method>
 	</Methods>
 </z:anyType>

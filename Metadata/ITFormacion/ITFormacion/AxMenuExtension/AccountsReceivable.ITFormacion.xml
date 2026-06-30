@@ -7,7 +7,17 @@
 			<Visible>No</Visible>
 		</AxMenuCustomizationElement>
 	</Customizations>
-	<Elements />
+	<Elements>
+		<AxMenuExtensionElement xmlns="">
+			<Parent>Customers</Parent>
+			<PositionType>Begin</PositionType>
+			<MenuElement xmlns=""
+				i:type="AxMenuElementMenuItem">
+				<Name>ACCustTableListPage</Name>
+				<MenuItemName>ACCustTableListPage</MenuItemName>
+			</MenuElement>
+		</AxMenuExtensionElement>
+	</Elements>
 	<MenuElementModifications />
 	<PropertyModifications />
 </AxMenuExtension>

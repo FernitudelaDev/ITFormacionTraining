@@ -253,6 +253,11 @@
       <Name>ACBookTransactions</Name>
       <Link>Display Menu Items\ACBookTransactions</Link>
     </Content>
+    <Content Include="AxMenuItemDisplay\ACCustTableListPage">
+      <SubType>Content</SubType>
+      <Name>ACCustTableListPage</Name>
+      <Link>Display Menu Items\ACCustTableListPage</Link>
+    </Content>
     <Content Include="AxMenuItemDisplay\ACtmpAuthor">
       <SubType>Content</SubType>
       <Name>ACtmpAuthor</Name>

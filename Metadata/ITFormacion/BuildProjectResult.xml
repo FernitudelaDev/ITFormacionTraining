@@ -1,17 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Diagnostics
-  GenerationTime="2026-06-30T01:01:10.6713529+00:00">
+  GenerationTime="2026-06-30T02:12:41.6922311+00:00">
   <Items>
-    <Diagnostic>
-      <DiagnosticType>Generation</DiagnosticType>
-      <Severity>Informational</Severity>
-      <Path>dynamics://View/ACAuthorEntity</Path>
-      <ElementType>View</ElementType>
-      <Moniker>IsRuntimeServicesMode</Moniker>
-      <Line>0</Line>
-      <Column>0</Column>
-      <Message>Is Runtime Services mode: False</Message>
-    </Diagnostic>
     <Diagnostic>
       <DiagnosticType>ExternalReference</DiagnosticType>
       <Severity>Warning</Severity>

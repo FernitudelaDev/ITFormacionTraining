@@ -1,5 +1,4 @@
 ==================================
-Generation Information: View dynamics://View/ACAuthorEntity: Is Runtime Services mode: False
 ExternalReference Warning: dynamics://Reference/System.IO.Compression.ZipFile: Assembly 'System.IO.Compression.ZipFile, Version=4.0.3.0, Culture=neutral, PublicKeyToken=b77a5c561934e089' failed to load because it was not found.
 ExternalReference Warning: dynamics://Reference/Microsoft.Dynamics.Commerce.Runtime.Services.PricingEngine: Assembly 'Microsoft.Dynamics.Commerce.Runtime.Entities.AttributeBasedPricing, Version=7.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35' failed to load because it was not found.
 ExternalReference Warning: dynamics://Reference/RetailCommerceRuntimeFramework: Assembly 'Microsoft.Extensions.Caching.Abstractions, Version=1.1.2.0, Culture=neutral, PublicKeyToken=adb9793829ddae60' failed to load because it was not found.

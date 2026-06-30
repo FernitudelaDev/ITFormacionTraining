@@ -1,0 +1,10 @@
+<EventHandlers>
+  <BusinessEventHandlers />
+  <DataEventHandlers />
+  <FormEventHandlers />
+  <FormControlEventHandlers>
+    <FormControlEventHandler formName="SalesTable" formControlName="SalesLine_ACBookTable" formControlEventType="Lookup" eventHandlerElementName="SalesTableForm_ITFormacion_EventHandler" eventHandlerElementTypeId="ClassTypeId" eventHandlerMethodName="SalesLine_ACBookTable_OnLookup" />
+  </FormControlEventHandlers>
+  <FormDataSourceEventHandler />
+  <FormDataFieldEventHandler />
+</EventHandlers>

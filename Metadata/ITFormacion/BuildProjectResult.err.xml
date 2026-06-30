@@ -1,19 +1,54 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Diagnostics
-  GenerationTime="2026-06-30T00:59:47.5680862+00:00">
+  GenerationTime="2026-06-30T02:09:30.8819495+00:00">
   <Items>
     <Diagnostic>
       <DiagnosticType>Compile</DiagnosticType>
       <Severity>Error</Severity>
-      <Path>dynamics://Class/SalesTable_ITFormacion_Extension/Method/modifiedField</Path>
-      <ElementType>Class Method</ElementType>
-      <Moniker>AssemblyMustBeReferenced</Moniker>
-      <Line>11</Line>
+      <Path>dynamics://Class/SalesTableForm_ITFormacion_Extension</Path>
+      <ElementType>Class</ElementType>
+      <Moniker>ModelElementWithUnparsableSource</Moniker>
+      <Line>0</Line>
+      <Column>0</Column>
+      <Message>The model element was saved with unparsable source code and cannot be used. Please edit the element in Visual Studio to fix the errors.</Message>
+    </Diagnostic>
+    <Diagnostic>
+      <DiagnosticType>Compile</DiagnosticType>
+      <Severity>Fatal</Severity>
+      <Path>dynamics://Class/SalesTableForm_ITFormacion_Extension</Path>
+      <ElementType>Class</ElementType>
+      <Moniker>AlreadyDefined</Moniker>
+      <Line>20</Line>
       <Column>5</Column>
-      <EndLine>11</EndLine>
-      <EndColumn>30</EndColumn>
-      <Message>A reference to 'Dynamics.AX.Tax, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null' is required to compile this module.</Message>
+      <EndLine>31</EndLine>
+      <EndColumn>6</EndColumn>
+      <Message>The name 'ACFantasyBookLookup' denotes a method, and cannot be reused in this context.</Message>
+    </Diagnostic>
+    <Diagnostic>
+      <DiagnosticType>Compile</DiagnosticType>
+      <Severity>Error</Severity>
+      <Path>dynamics://Class/SalesTableForm_ITFormacion_Extension/Method/ACFantasyBookLookup</Path>
+      <ElementType>Class Method</ElementType>
+      <Moniker>ClassDoesNotContainMethod</Moniker>
+      <Line>18</Line>
+      <Column>16</Column>
+      <EndLine>18</EndLine>
+      <EndColumn>69</EndColumn>
+      <Message>ClassDoesNotContainMethod: Table 'SalesTable' does not contain a definition for method 'ACFantasyBookLookup' and no extension method 'ACFantasyBookLookup' accepting a first argument of type 'SalesTable' is found on any extension class.</Message>
+      <ItemSpecific>
+        <OriginatorType
+          alias="0">ClassDoesNotContainMethod</OriginatorType>
+        <Fields>
+          <elementTypeName>Table</elementTypeName>
+          <elementName>SalesTable</elementName>
+          <methodName>ACFantasyBookLookup</methodName>
+        </Fields>
+      </ItemSpecific>
     </Diagnostic>
   </Items>
-  <Aliases />
+  <Aliases>
+    <Alias
+      assembly="Microsoft.Dynamics.AX.Framework.Xlnt.XppParser.Pass2, Version=7.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35"
+      ns="Microsoft.Dynamics.AX.Framework.Xlnt.XppParser.Pass2">0</Alias>
+  </Aliases>
 </Diagnostics>

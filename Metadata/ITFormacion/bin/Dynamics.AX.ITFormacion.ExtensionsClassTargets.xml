@@ -1,4 +1,7 @@
 <ExtensionClasses>
+  <ExtensionClass ExtensionClassName="SalesTable_SalesTable_ITFormacion_Extension" ExtensionTargetName="SalesTable" ExtensionTargetTypeId="FormDataSourceTypeId" ExtensionNestedTargetName="SalesTable" />
   <ExtensionClass ExtensionClassName="SalesLine_ITFormacion_Extension" ExtensionTargetName="SalesLine" ExtensionTargetTypeId="TableTypeId" ExtensionNestedTargetName="" />
+  <ExtensionClass ExtensionClassName="SalesTable_SalesTable_ACBookTable_ITFormacion_Extension" ExtensionTargetName="SalesTable" ExtensionTargetTypeId="FormDataFieldTypeId" ExtensionNestedTargetName="SalesTable" />
+  <ExtensionClass ExtensionClassName="SalesTableForm_ITFormacion_Extension" ExtensionTargetName="SalesTable" ExtensionTargetTypeId="FormTypeId" ExtensionNestedTargetName="" />
   <ExtensionClass ExtensionClassName="SalesTable_ITFormacion_Extension" ExtensionTargetName="SalesTable" ExtensionTargetTypeId="TableTypeId" ExtensionNestedTargetName="" />
 </ExtensionClasses>
