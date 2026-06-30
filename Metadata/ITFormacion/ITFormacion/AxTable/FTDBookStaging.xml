@@ -119,6 +119,10 @@
 			<IsSystemGenerated>Yes</IsSystemGenerated>
 			<Mandatory>Yes</Mandatory>
 		</AxTableField>
+		<AxTableField xmlns=""
+			i:type="AxTableFieldString">
+			<Name>Libro</Name>
+		</AxTableField>
 	</Fields>
 	<FullTextIndexes />
 	<Indexes>

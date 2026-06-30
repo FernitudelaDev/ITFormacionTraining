@@ -202,6 +202,14 @@ public class FTDAuthor extends FormRun
 								<DataSource>FTDAuthorTable</DataSource>
 								<MenuItemName>FTDBookGenreFiltered</MenuItemName>
 							</AxFormControl>
+							<AxFormControl xmlns=""
+								i:type="AxFormButtonControl">
+								<Name>JGLibro</Name>
+								<Enabled>No</Enabled>
+								<Type>Button</Type>
+								<FormControlExtension
+									i:nil="true" />
+							</AxFormControl>
 						</Controls>
 					</AxFormControl>
 				</Controls>
