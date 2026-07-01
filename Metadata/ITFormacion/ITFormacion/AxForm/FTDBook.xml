@@ -11,6 +11,7 @@ public class FTDBook extends FormRun
 {
     FTDGenreEnum    genreFilter;
     boolean         needGenreFilter;
+    NumberSeqFormHandler numberSeqNumBookId;
 }
 ]]></Source>
 			</Method>
@@ -90,6 +91,26 @@ public class FTDBook extends FormRun
         public void executeQuery()
         {
             super();
+        }
+
+]]></Source>
+					</Method>
+					<Method>
+						<Name>numberSeqNumBookId</Name>
+						<Source><![CDATA[
+        NumberSeqFormHandler numberSeqNumBookId()
+        {
+            if (!numberSeqNumBookId)
+            {
+                numberSeqNumBookId = NumberSeqFormHandler::newForm(
+            CustParameters::ftdNumRefBookId().NumberSequenceId,
+            element,
+            FTDBookTable_ds,
+            fieldNum(FTDBookTable, Id)
+        );
+            }
+
+            return numberSeqNumBookId;
         }
 
 ]]></Source>
