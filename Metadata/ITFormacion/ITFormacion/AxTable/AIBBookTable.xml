@@ -145,6 +145,18 @@ public class AIBBookTable extends common
 
 ]]></Source>
 			</Method>
+			<Method>
+				<Name>initValue</Name>
+				<Source><![CDATA[
+    public void initValue()
+    {
+        super();
+
+        this.Author = CustParameters::find().AIBAuthorTable;
+    }
+
+]]></Source>
+			</Method>
 		</Methods>
 	</SourceCode>
 	<FormRef>AIBBook</FormRef>

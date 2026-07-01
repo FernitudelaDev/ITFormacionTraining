@@ -5,6 +5,7 @@ BookFilteredByGenre=Books filtered by genre
 Books=Books
 BookTable=Book
 DeathDate=DeathDate
+DefaultAuthor=Default Author
 Fantasy=Fantasy
 FieldQtyCannotBeZero=Field quantity cant be zero
 Genre=Genre

@@ -163,6 +163,11 @@
       <Name>AIBGenreEnum</Name>
       <Link>Base Enums\AIBGenreEnum</Link>
     </Content>
+    <Content Include="AxFormExtension\CustParameters.ITFormacion">
+      <SubType>Content</SubType>
+      <Name>CustParameters.ITFormacion</Name>
+      <Link>Form Extensions\CustParameters.ITFormacion</Link>
+    </Content>
     <Content Include="AxFormExtension\SalesTable.ITFormacion">
       <SubType>Content</SubType>
       <Name>SalesTable.ITFormacion</Name>
@@ -352,6 +357,11 @@
       <SubType>Content</SubType>
       <Name>AIBBookCreationService</Name>
       <Link>Services\AIBBookCreationService</Link>
+    </Content>
+    <Content Include="AxTableExtension\CustParameters.ITFormacion">
+      <SubType>Content</SubType>
+      <Name>CustParameters.ITFormacion</Name>
+      <Link>Table Extensions\CustParameters.ITFormacion</Link>
     </Content>
     <Content Include="AxTableExtension\SalesLine.ITFormacion">
       <SubType>Content</SubType>
