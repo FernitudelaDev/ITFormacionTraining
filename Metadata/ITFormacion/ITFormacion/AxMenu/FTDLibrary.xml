@@ -45,5 +45,18 @@
 				</AxMenuElement>
 			</Elements>
 		</AxMenuElement>
+		<AxMenuElement xmlns=""
+			i:type="AxMenuElementSubMenu">
+			<Name>Reports</Name>
+			<Label>@ITFormacion:Reports</Label>
+			<Elements>
+				<AxMenuElement xmlns=""
+					i:type="AxMenuElementMenuItem">
+					<Name>FTDBookReportController</Name>
+					<MenuItemName>FTDBookReportController</MenuItemName>
+					<MenuItemType>Output</MenuItemType>
+				</AxMenuElement>
+			</Elements>
+		</AxMenuElement>
 	</Elements>
 </AxMenu>

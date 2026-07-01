@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<AxClass xmlns:i="http://www.w3.org/2001/XMLSchema-instance">
+	<Name>FTDBookReportController</Name>
+	<SourceCode>
+		<Declaration><![CDATA[
+final class FTDBookReportController extends SrsReportRunController
+{
+}
+]]></Declaration>
+		<Methods>
+			<Method>
+				<Name>main</Name>
+				<Source><![CDATA[
+    public static client void main(Args args)
+
+    {
+        //define the new object for controller class
+        FTDBookReportController controller;
+
+        controller = new FTDBookReportController();
+
+        //pass the caller args to the controller
+        controller.parmArgs(args);
+
+        //set the report name and report design to run
+        controller.parmReportName(ssrsReportStr(FTDBookReport, PrecisionDesign1));
+
+        //execute the report
+        //ssrsDemoController.preRunModifyContract();
+        controller.parmShowDialog(false);
+
+        controller.startOperation();
+    }
+
+]]></Source>
+			</Method>
+			<Method>
+				<Name>preRunModifyContract</Name>
+				<Source><![CDATA[
+    /// <summary>
+    ///
+    /// </summary>
+    protected void preRunModifyContract()
+    {
+        super();
+        //get the reference of the current contract object
+        FTDBookReportContract   contract    = this.parmReportContract().parmRdpContract();
+        FTDAuthorTable          author      = Args.record();
+
+        contract.parmAuthorId(author.Id);
+    }
+
+]]></Source>
+			</Method>
+		</Methods>
+	</SourceCode>
+</AxClass>

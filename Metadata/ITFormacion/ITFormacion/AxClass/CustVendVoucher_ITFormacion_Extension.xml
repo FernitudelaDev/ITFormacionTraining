@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<AxClass xmlns:i="http://www.w3.org/2001/XMLSchema-instance">
+	<Name>CustVendVoucher_ITFormacion_Extension</Name>
+	<SourceCode>
+		<Declaration><![CDATA[
+[ExtensionOf(classStr(CustVendVoucher))]
+final class CustVendVoucher_ITFormacion_Extension
+{
+    public RefRecId ftdBookTable;
+
+}
+]]></Declaration>
+		<Methods>
+			<Method>
+				<Name>parmftdBookTable</Name>
+				<Source><![CDATA[
+    public RefRecId parmftdBookTable(RefRecId _ftdBookTable = ftdBookTable)
+    {
+        ftdBookTable = _ftdBookTable;
+        return ftdBookTable;
+    }
+
+]]></Source>
+			</Method>
+			<Method>
+				<Name>initCustVendTrans</Name>
+				<Source><![CDATA[
+    protected void initCustVendTrans(
+        CustVendTrans custVendTrans,
+        LedgerVoucher _ledgerPostingJournal,
+        boolean _useSubLedger)
+    {
+        next initCustVendTrans(custVendTrans, _ledgerPostingJournal, _useSubLedger);
+
+        if (custVendTrans.TableId == tableNum(CustTrans)
+            && this.parmftdBookTable())
+        {
+            CustTrans custTrans = custVendTrans;
+
+            custTrans.FTDBookTable = this.parmftdBookTable();
+        }
+    }
+
+]]></Source>
+			</Method>
+		</Methods>
+	</SourceCode>
+</AxClass>

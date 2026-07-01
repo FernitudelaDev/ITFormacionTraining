@@ -10,21 +10,29 @@
 public class FTDAuthor extends FormRun
 {
     QueryBuildRange qbrBirthDate, qbrDeathDate, qbrDeatDateNullCheck;
-    //public void setDeathDateEditable(boolean _isEditable)
-    //{
-    //    //navegando desde el ds
-    //    //FormControl deathDateControl = this.formRun().design().controlName(formControlStr(FTDAuthor, SimpleListGrid_DeathDate));
 
-    //    //yendo desde element
-    //    //FormControl deathDateControl = element.design().controlName(formControlStr(FTDAuthor, SimpleListGrid_DeathDate));
-
-    //    //deathDateControl.allowEdit(_isEditable);
-
-    //    FTDAuthorTable_ds.object(fieldNum(FTDAuthorTable, DeathDate)).allowEdit(_isEditable);
-
-    //}
-
+    NumberSeqFormHandler numberSeqNumAuthorId;
+ 
 }
+]]></Source>
+			</Method>
+			<Method>
+				<Name>numberSeqNumAuthorId</Name>
+				<Source><![CDATA[
+    NumberSeqFormHandler numberSeqNumAuthorId()
+    {
+        if (!numberSeqNumAuthorId)
+        {
+            numberSeqNumAuthorId = numberSeqFormHandler::newForm(CustParameters::ftdNumRefAuthorId().NumberSequenceId,
+                                                         element,
+                                                         FTDAuthorTable_ds,
+                                                         fieldNum(FTDAuthorTable, Id)
+                                                         );
+        }
+  
+        return numberSeqNumAuthorId;
+    }
+
 ]]></Source>
 			</Method>
 		</Methods>
@@ -44,6 +52,72 @@ public class FTDAuthor extends FormRun
             FTDAuthorTable.setDeathDateEditableInForm();
 
             return ret;
+        }
+
+]]></Source>
+					</Method>
+					<Method>
+						<Name>create</Name>
+						<Source><![CDATA[
+        public void create(boolean _append = false)
+        {
+            element.numberSeqNumAuthorId().formMethodDataSourceCreatePre();
+ 
+            super(_append);
+ 
+            element.numberSeqNumAuthorId().formMethodDataSourceCreate();
+         
+        }
+
+]]></Source>
+					</Method>
+					<Method>
+						<Name>linkActive</Name>
+						<Source><![CDATA[
+        public void linkActive()
+        {
+ 
+            element.numberSeqNumAuthorId().formMethodDataSourceLinkActive();
+ 
+            super();
+        }
+
+]]></Source>
+					</Method>
+					<Method>
+						<Name>delete</Name>
+						<Source><![CDATA[
+        public void delete()
+        {
+            ttsbegin;
+ 
+            element.numberSeqNumAuthorId().formMethodDataSourceDelete();
+ 
+            super();
+  
+            ttscommit;
+        }
+
+]]></Source>
+					</Method>
+					<Method>
+						<Name>write</Name>
+						<Source><![CDATA[
+        public void write()
+        {
+            element.numberSeqNumAuthorId().formMethodDataSourceWrite();
+  
+            super();
+        }
+
+]]></Source>
+					</Method>
+					<Method>
+						<Name>validateWrite</Name>
+						<Source><![CDATA[
+        public boolean validateWrite()
+        {
+            return element.numberSeqNumAuthorId().formMethodDataSourceValidateWrite(super());
         }
 
 ]]></Source>
@@ -201,6 +275,15 @@ public class FTDAuthor extends FormRun
 									i:nil="true" />
 								<DataSource>FTDAuthorTable</DataSource>
 								<MenuItemName>FTDBookGenreFiltered</MenuItemName>
+							</AxFormControl>
+							<AxFormControl xmlns=""
+								i:type="AxFormMenuFunctionButtonControl">
+								<Name>BookReportFromAuthorController</Name>
+								<Type>MenuFunctionButton</Type>
+								<FormControlExtension
+									i:nil="true" />
+								<MenuItemName>FTDBookReportFromAuthorController</MenuItemName>
+								<MenuItemType>Action</MenuItemType>
 							</AxFormControl>
 						</Controls>
 					</AxFormControl>

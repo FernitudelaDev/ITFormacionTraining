@@ -1,0 +1,403 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Diagnostics
+  GenerationTime="2026-07-01T08:37:15.6447986+00:00">
+  <Items>
+    <Diagnostic>
+      <DiagnosticType>Compile</DiagnosticType>
+      <Severity>Error</Severity>
+      <Path>dynamics://Class/FTDCustOrderDP</Path>
+      <ElementType>Class</ElementType>
+      <Moniker>TypeNotFound</Moniker>
+      <Line>4</Line>
+      <Column>5</Column>
+      <EndLine>4</EndLine>
+      <EndColumn>47</EndColumn>
+      <Message>The name 'FTDCustOrderReporttmp' does not denote a class, a table, or an extended data type.</Message>
+    </Diagnostic>
+    <Diagnostic>
+      <DiagnosticType>Compile</DiagnosticType>
+      <Severity>Error</Severity>
+      <Path>dynamics://Class/FTDCustOrderDP/Method/getTmpCustTransOpen</Path>
+      <ElementType>Class Method</ElementType>
+      <Moniker>TypeNotFound</Moniker>
+      <Line>8</Line>
+      <Column>5</Column>
+      <EndLine>8</EndLine>
+      <EndColumn>53</EndColumn>
+      <Message>The name 'FTDCustOrderReporttmp' does not denote a class, a table, or an extended data type.</Message>
+    </Diagnostic>
+    <Diagnostic>
+      <DiagnosticType>Compile</DiagnosticType>
+      <Severity>Error</Severity>
+      <Path>dynamics://Class/FTDCustOrderDC/Method/parmIdOrder</Path>
+      <ElementType>Class Method</ElementType>
+      <Moniker>TypeNotFound</Moniker>
+      <Line>7</Line>
+      <Column>9</Column>
+      <EndLine>7</EndLine>
+      <EndColumn>41</EndColumn>
+      <Message>The name 'FTDOrderIdEDT' does not denote a class, a table, or an extended data type.</Message>
+    </Diagnostic>
+    <Diagnostic>
+      <DiagnosticType>Compile</DiagnosticType>
+      <Severity>Error</Severity>
+      <Path>dynamics://Class/FTDCustOrderDC/Method/parmIdOrder</Path>
+      <ElementType>Class Method</ElementType>
+      <Moniker>TypeNotFound</Moniker>
+      <Line>7</Line>
+      <Column>42</Column>
+      <EndLine>7</EndLine>
+      <EndColumn>74</EndColumn>
+      <Message>The name 'FTDOrderIdEDT' does not denote a class, a table, or an extended data type.</Message>
+    </Diagnostic>
+    <Diagnostic>
+      <DiagnosticType>Compile</DiagnosticType>
+      <Severity>Error</Severity>
+      <Path>dynamics://Class/FTDCustOrderDC</Path>
+      <ElementType>Class</ElementType>
+      <Moniker>TypeNotFound</Moniker>
+      <Line>4</Line>
+      <Column>9</Column>
+      <EndLine>4</EndLine>
+      <EndColumn>31</EndColumn>
+      <Message>The name 'FTDOrderIdEDT' does not denote a class, a table, or an extended data type.</Message>
+    </Diagnostic>
+    <Diagnostic>
+      <DiagnosticType>Compile</DiagnosticType>
+      <Severity>Error</Severity>
+      <Path>dynamics://Class/FTDCustOrderDP/Method/getTmpCustTransOpen</Path>
+      <ElementType>Class Method</ElementType>
+      <Moniker>NotDeclared</Moniker>
+      <Line>10</Line>
+      <Column>9</Column>
+      <EndLine>10</EndLine>
+      <EndColumn>41</EndColumn>
+      <Message>'tmpCustOrderReport' is not declared.</Message>
+    </Diagnostic>
+    <Diagnostic>
+      <DiagnosticType>Compile</DiagnosticType>
+      <Severity>Error</Severity>
+      <Path>dynamics://Class/FTDCustOrderDP/Method/processReport</Path>
+      <ElementType>Class Method</ElementType>
+      <Moniker>TypeNotFound</Moniker>
+      <Line>18</Line>
+      <Column>9</Column>
+      <EndLine>18</EndLine>
+      <EndColumn>32</EndColumn>
+      <Message>The name 'FTDCustOrderHeaderTable' does not denote a class, a table, or an extended data type.</Message>
+    </Diagnostic>
+    <Diagnostic>
+      <DiagnosticType>Compile</DiagnosticType>
+      <Severity>Error</Severity>
+      <Path>dynamics://Class/FTDCustOrderDP/Method/processReport</Path>
+      <ElementType>Class Method</ElementType>
+      <Moniker>TypeNotFound</Moniker>
+      <Line>19</Line>
+      <Column>9</Column>
+      <EndLine>19</EndLine>
+      <EndColumn>30</EndColumn>
+      <Message>The name 'FTDCustOrderLineTable' does not denote a class, a table, or an extended data type.</Message>
+    </Diagnostic>
+    <Diagnostic>
+      <DiagnosticType>Compile</DiagnosticType>
+      <Severity>Error</Severity>
+      <Path>dynamics://Class/FTDCustOrderDP/Method/processReport</Path>
+      <ElementType>Class Method</ElementType>
+      <Moniker>TypeNotFound</Moniker>
+      <Line>21</Line>
+      <Column>9</Column>
+      <EndLine>21</EndLine>
+      <EndColumn>22</EndColumn>
+      <Message>The name 'FTDOrderIdEDT' does not denote a class, a table, or an extended data type.</Message>
+    </Diagnostic>
+    <Diagnostic>
+      <DiagnosticType>Compile</DiagnosticType>
+      <Severity>Error</Severity>
+      <Path>dynamics://Class/FTDCustOrderDP/Method/processReport</Path>
+      <ElementType>Class Method</ElementType>
+      <Moniker>TypeNotFound</Moniker>
+      <Line>21</Line>
+      <Column>57</Column>
+      <EndLine>21</EndLine>
+      <EndColumn>82</EndColumn>
+      <Message>The name 'FTDOrderIdEDT' does not denote a class, a table, or an extended data type.</Message>
+    </Diagnostic>
+    <Diagnostic>
+      <DiagnosticType>Compile</DiagnosticType>
+      <Severity>Error</Severity>
+      <Path>dynamics://Class/FTDCustOrderDP/Method/processReport</Path>
+      <ElementType>Class Method</ElementType>
+      <Moniker>NotDeclared</Moniker>
+      <Line>25</Line>
+      <Column>19</Column>
+      <EndLine>29</EndLine>
+      <EndColumn>73</EndColumn>
+      <Message>'custOrderHeader' is not declared.</Message>
+    </Diagnostic>
+    <Diagnostic>
+      <DiagnosticType>Compile</DiagnosticType>
+      <Severity>Error</Severity>
+      <Path>dynamics://Class/FTDCustOrderDP/Method/processReport</Path>
+      <ElementType>Class Method</ElementType>
+      <Moniker>InvalidQualifier</Moniker>
+      <Line>33</Line>
+      <Column>17</Column>
+      <EndLine>33</EndLine>
+      <EndColumn>43</EndColumn>
+      <Message>The qualifier 'tmpCustOrderReport' is not valid for field 'IdOrder'.</Message>
+    </Diagnostic>
+    <Diagnostic>
+      <DiagnosticType>Compile</DiagnosticType>
+      <Severity>Error</Severity>
+      <Path>dynamics://Class/FTDCustOrderDP/Method/processReport</Path>
+      <ElementType>Class Method</ElementType>
+      <Moniker>InvalidQualifier</Moniker>
+      <Line>33</Line>
+      <Column>51</Column>
+      <EndLine>33</EndLine>
+      <EndColumn>66</EndColumn>
+      <Message>The qualifier 'custOrderHeader' is not valid for field 'IdOrder'.</Message>
+    </Diagnostic>
+    <Diagnostic>
+      <DiagnosticType>Compile</DiagnosticType>
+      <Severity>Error</Severity>
+      <Path>dynamics://Class/FTDCustOrderDP/Method/processReport</Path>
+      <ElementType>Class Method</ElementType>
+      <Moniker>InvalidQualifier</Moniker>
+      <Line>34</Line>
+      <Column>17</Column>
+      <EndLine>34</EndLine>
+      <EndColumn>44</EndColumn>
+      <Message>The qualifier 'tmpCustOrderReport' is not valid for field 'CustName'.</Message>
+    </Diagnostic>
+    <Diagnostic>
+      <DiagnosticType>Compile</DiagnosticType>
+      <Severity>Error</Severity>
+      <Path>dynamics://Class/FTDCustOrderDP/Method/processReport</Path>
+      <ElementType>Class Method</ElementType>
+      <Moniker>InvalidQualifier</Moniker>
+      <Line>35</Line>
+      <Column>17</Column>
+      <EndLine>35</EndLine>
+      <EndColumn>45</EndColumn>
+      <Message>The qualifier 'tmpCustOrderReport' is not valid for field 'OrderDate'.</Message>
+    </Diagnostic>
+    <Diagnostic>
+      <DiagnosticType>Compile</DiagnosticType>
+      <Severity>Error</Severity>
+      <Path>dynamics://Class/FTDCustOrderDP/Method/processReport</Path>
+      <ElementType>Class Method</ElementType>
+      <Moniker>InvalidQualifier</Moniker>
+      <Line>35</Line>
+      <Column>51</Column>
+      <EndLine>35</EndLine>
+      <EndColumn>66</EndColumn>
+      <Message>The qualifier 'custOrderHeader' is not valid for field 'OrderDate'.</Message>
+    </Diagnostic>
+    <Diagnostic>
+      <DiagnosticType>Compile</DiagnosticType>
+      <Severity>Error</Severity>
+      <Path>dynamics://Class/FTDCustOrderDP/Method/processReport</Path>
+      <ElementType>Class Method</ElementType>
+      <Moniker>InvalidQualifier</Moniker>
+      <Line>36</Line>
+      <Column>17</Column>
+      <EndLine>36</EndLine>
+      <EndColumn>47</EndColumn>
+      <Message>The qualifier 'tmpCustOrderReport' is not valid for field 'CustAccount'.</Message>
+    </Diagnostic>
+    <Diagnostic>
+      <DiagnosticType>Compile</DiagnosticType>
+      <Severity>Error</Severity>
+      <Path>dynamics://Class/FTDCustOrderDP/Method/processReport</Path>
+      <ElementType>Class Method</ElementType>
+      <Moniker>InvalidQualifier</Moniker>
+      <Line>36</Line>
+      <Column>51</Column>
+      <EndLine>36</EndLine>
+      <EndColumn>66</EndColumn>
+      <Message>The qualifier 'custOrderHeader' is not valid for field 'CustAccount'.</Message>
+    </Diagnostic>
+    <Diagnostic>
+      <DiagnosticType>Compile</DiagnosticType>
+      <Severity>Error</Severity>
+      <Path>dynamics://Class/FTDCustOrderDP/Method/processReport</Path>
+      <ElementType>Class Method</ElementType>
+      <Moniker>InvalidQualifier</Moniker>
+      <Line>37</Line>
+      <Column>17</Column>
+      <EndLine>37</EndLine>
+      <EndColumn>42</EndColumn>
+      <Message>The qualifier 'tmpCustOrderReport' is not valid for field 'ItemId'.</Message>
+    </Diagnostic>
+    <Diagnostic>
+      <DiagnosticType>Compile</DiagnosticType>
+      <Severity>Error</Severity>
+      <Path>dynamics://Class/FTDCustOrderDP/Method/processReport</Path>
+      <ElementType>Class Method</ElementType>
+      <Moniker>InvalidQualifier</Moniker>
+      <Line>37</Line>
+      <Column>51</Column>
+      <EndLine>37</EndLine>
+      <EndColumn>64</EndColumn>
+      <Message>The qualifier 'custOrderLine' is not valid for field 'ItemId'.</Message>
+    </Diagnostic>
+    <Diagnostic>
+      <DiagnosticType>Compile</DiagnosticType>
+      <Severity>Error</Severity>
+      <Path>dynamics://Class/FTDCustOrderDP/Method/processReport</Path>
+      <ElementType>Class Method</ElementType>
+      <Moniker>InvalidQualifier</Moniker>
+      <Line>38</Line>
+      <Column>17</Column>
+      <EndLine>38</EndLine>
+      <EndColumn>43</EndColumn>
+      <Message>The qualifier 'tmpCustOrderReport' is not valid for field 'LineNum'.</Message>
+    </Diagnostic>
+    <Diagnostic>
+      <DiagnosticType>Compile</DiagnosticType>
+      <Severity>Error</Severity>
+      <Path>dynamics://Class/FTDCustOrderDP/Method/processReport</Path>
+      <ElementType>Class Method</ElementType>
+      <Moniker>InvalidQualifier</Moniker>
+      <Line>38</Line>
+      <Column>51</Column>
+      <EndLine>38</EndLine>
+      <EndColumn>64</EndColumn>
+      <Message>The qualifier 'custOrderLine' is not valid for field 'LineNum'.</Message>
+    </Diagnostic>
+    <Diagnostic>
+      <DiagnosticType>Compile</DiagnosticType>
+      <Severity>Error</Severity>
+      <Path>dynamics://Class/FTDCustOrderDP/Method/processReport</Path>
+      <ElementType>Class Method</ElementType>
+      <Moniker>InvalidQualifier</Moniker>
+      <Line>39</Line>
+      <Column>17</Column>
+      <EndLine>39</EndLine>
+      <EndColumn>39</EndColumn>
+      <Message>The qualifier 'tmpCustOrderReport' is not valid for field 'Qty'.</Message>
+    </Diagnostic>
+    <Diagnostic>
+      <DiagnosticType>Compile</DiagnosticType>
+      <Severity>Error</Severity>
+      <Path>dynamics://Class/FTDCustOrderDP/Method/processReport</Path>
+      <ElementType>Class Method</ElementType>
+      <Moniker>InvalidQualifier</Moniker>
+      <Line>39</Line>
+      <Column>51</Column>
+      <EndLine>39</EndLine>
+      <EndColumn>64</EndColumn>
+      <Message>The qualifier 'custOrderLine' is not valid for field 'Qty'.</Message>
+    </Diagnostic>
+    <Diagnostic>
+      <DiagnosticType>Compile</DiagnosticType>
+      <Severity>Error</Severity>
+      <Path>dynamics://Class/FTDCustOrderDP/Method/processReport</Path>
+      <ElementType>Class Method</ElementType>
+      <Moniker>InvalidQualifier</Moniker>
+      <Line>40</Line>
+      <Column>17</Column>
+      <EndLine>40</EndLine>
+      <EndColumn>45</EndColumn>
+      <Message>The qualifier 'tmpCustOrderReport' is not valid for field 'UnitPrice'.</Message>
+    </Diagnostic>
+    <Diagnostic>
+      <DiagnosticType>Compile</DiagnosticType>
+      <Severity>Error</Severity>
+      <Path>dynamics://Class/FTDCustOrderDP/Method/processReport</Path>
+      <ElementType>Class Method</ElementType>
+      <Moniker>InvalidQualifier</Moniker>
+      <Line>40</Line>
+      <Column>51</Column>
+      <EndLine>40</EndLine>
+      <EndColumn>64</EndColumn>
+      <Message>The qualifier 'custOrderLine' is not valid for field 'UnitPrice'.</Message>
+    </Diagnostic>
+    <Diagnostic>
+      <DiagnosticType>Compile</DiagnosticType>
+      <Severity>Error</Severity>
+      <Path>dynamics://Class/FTDCustOrderDP/Method/processReport</Path>
+      <ElementType>Class Method</ElementType>
+      <Moniker>InvalidQualifier</Moniker>
+      <Line>41</Line>
+      <Column>17</Column>
+      <EndLine>41</EndLine>
+      <EndColumn>44</EndColumn>
+      <Message>The qualifier 'tmpCustOrderReport' is not valid for field 'FTDTotal'.</Message>
+    </Diagnostic>
+    <Diagnostic>
+      <DiagnosticType>Compile</DiagnosticType>
+      <Severity>Error</Severity>
+      <Path>dynamics://Class/FTDCustOrderDP/Method/processReport</Path>
+      <ElementType>Class Method</ElementType>
+      <Moniker>InvalidQualifier</Moniker>
+      <Line>41</Line>
+      <Column>51</Column>
+      <EndLine>41</EndLine>
+      <EndColumn>64</EndColumn>
+      <Message>The qualifier 'custOrderLine' is not valid for field 'Qty'.</Message>
+    </Diagnostic>
+    <Diagnostic>
+      <DiagnosticType>Compile</DiagnosticType>
+      <Severity>Error</Severity>
+      <Path>dynamics://Class/FTDCustOrderDP/Method/processReport</Path>
+      <ElementType>Class Method</ElementType>
+      <Moniker>InvalidQualifier</Moniker>
+      <Line>41</Line>
+      <Column>71</Column>
+      <EndLine>41</EndLine>
+      <EndColumn>84</EndColumn>
+      <Message>The qualifier 'custOrderLine' is not valid for field 'UnitPrice'.</Message>
+    </Diagnostic>
+    <Diagnostic>
+      <DiagnosticType>Compile</DiagnosticType>
+      <Severity>Error</Severity>
+      <Path>dynamics://Class/FTDSSRSController/Method/preRunModifyContract</Path>
+      <ElementType>Class Method</ElementType>
+      <Moniker>TypeNotFound</Moniker>
+      <Line>12</Line>
+      <Column>9</Column>
+      <EndLine>12</EndLine>
+      <EndColumn>32</EndColumn>
+      <Message>The name 'FTDCustOrderHeaderTable' does not denote a class, a table, or an extended data type.</Message>
+    </Diagnostic>
+    <Diagnostic>
+      <DiagnosticType>Compile</DiagnosticType>
+      <Severity>Error</Severity>
+      <Path>dynamics://Class/FTDSSRSController/Method/preRunModifyContract</Path>
+      <ElementType>Class Method</ElementType>
+      <Moniker>InvalidQualifier</Moniker>
+      <Line>19</Line>
+      <Column>30</Column>
+      <EndLine>19</EndLine>
+      <EndColumn>36</EndColumn>
+      <Message>The qualifier 'Header' is not valid for field 'IIBMContractLinedOrder'.</Message>
+    </Diagnostic>
+    <Diagnostic>
+      <DiagnosticType>Compile</DiagnosticType>
+      <Severity>Error</Severity>
+      <Path>dynamics://Class/FTDSSRSController/Method/preRunModifyContract</Path>
+      <ElementType>Class Method</ElementType>
+      <Moniker>TypeNotFound</Moniker>
+      <Line>19</Line>
+      <Column>9</Column>
+      <EndLine>19</EndLine>
+      <EndColumn>60</EndColumn>
+      <Message>The name 'FTDOrderIdEDT' does not denote a class, a table, or an extended data type.</Message>
+    </Diagnostic>
+    <Diagnostic>
+      <DiagnosticType>Compile</DiagnosticType>
+      <Severity>Error</Severity>
+      <Path>dynamics://Class/FTDSSRSController/Method/main</Path>
+      <ElementType>Class Method</ElementType>
+      <Moniker>IntrinsicArgDoesNotDenoteExistingMetadata</Moniker>
+      <Line>42</Line>
+      <Column>43</Column>
+      <EndLine>42</EndLine>
+      <EndColumn>99</EndColumn>
+      <Message>The 'FTDCustOrderReport' argument of the 'ssrsReportStr' compile-time function does not specify a known report.</Message>
+    </Diagnostic>
+  </Items>
+  <Aliases />
+</Diagnostics>

@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <BuildTasksDirectory Condition=" '$(BuildTasksDirectory)' == ''">$(MSBuildProgramFiles32)\MSBuild\Microsoft\Dynamics\AX</BuildTasksDirectory>
+    <Model>ITFormacion</Model>
+    <TargetFrameworkVersion>v4.6</TargetFrameworkVersion>
+    <OutputPath>bin</OutputPath>
+    <SchemaVersion>2.0</SchemaVersion>
+    <GenerateCrossReferences>True</GenerateCrossReferences>
+    <RunAppCheckerRules>False</RunAppCheckerRules>
+    <LogAppcheckerDiagsAsErrors>False</LogAppcheckerDiagsAsErrors>
+    <DeployOnline>False</DeployOnline>
+    <ProjectGuid>{98bae8af-53a6-44d8-ad6f-a2d41bda4a17}</ProjectGuid>
+    <Name>LibraryNumberSequences</Name>
+    <RootNamespace>LibraryNumberSequences</RootNamespace>
+    <StartupType>Class</StartupType>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|AnyCPU'">
+    <Configuration>Debug</Configuration>
+    <DBSyncInBuild>False</DBSyncInBuild>
+    <GenerateFormAdaptors>False</GenerateFormAdaptors>
+    <Company>
+    </Company>
+    <Partition>initial</Partition>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DataEntityExpandParentChildRelations>False</DataEntityExpandParentChildRelations>
+    <DataEntityUseLabelTextAsFieldName>False</DataEntityUseLabelTextAsFieldName>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Debug' ">
+    <DebugSymbols>true</DebugSymbols>
+    <EnableUnmanagedDebugging>false</EnableUnmanagedDebugging>
+  </PropertyGroup>
+  <ItemGroup>
+    <Folder Include="Classes\" />
+    <Folder Include="Extended Data Types\" />
+    <Folder Include="Forms\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="AxClass\FTDRunnableClassExample">
+      <SubType>Content</SubType>
+      <Name>FTDRunnableClassExample</Name>
+      <Link>Classes\FTDRunnableClassExample</Link>
+    </Content>
+    <Content Include="AxClass\NumberSeqModuleCustomer_ITFormacion_Extension">
+      <SubType>Content</SubType>
+      <Name>NumberSeqModuleCustomer_ITFormacion_Extension</Name>
+      <Link>Classes\NumberSeqModuleCustomer_ITFormacion_Extension</Link>
+    </Content>
+    <Content Include="AxEdt\FTDAuthorId">
+      <SubType>Content</SubType>
+      <Name>FTDAuthorId</Name>
+      <Link>Extended Data Types\FTDAuthorId</Link>
+    </Content>
+    <Content Include="AxEdt\FTDBookId">
+      <SubType>Content</SubType>
+      <Name>FTDBookId</Name>
+      <Link>Extended Data Types\FTDBookId</Link>
+    </Content>
+    <Content Include="AxForm\FTDAuthor">
+      <SubType>Content</SubType>
+      <Name>FTDAuthor</Name>
+      <Link>Forms\FTDAuthor</Link>
+    </Content>
+    <Content Include="AxForm\FTDBook">
+      <SubType>Content</SubType>
+      <Name>FTDBook</Name>
+      <Link>Forms\FTDBook</Link>
+    </Content>
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.Common.targets" />
+  <Import Project="$(BuildTasksDirectory)\Microsoft.Dynamics.Framework.Tools.BuildTasks.17.0.targets" />
+</Project>

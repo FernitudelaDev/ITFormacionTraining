@@ -10,6 +10,18 @@ public final class SalesTable_ITFormacion_Extension
 ]]></Declaration>
 		<Methods>
 			<Method>
+				<Name>initFromCustTable</Name>
+				<Source><![CDATA[
+    void initFromCustTable()
+    {
+        next initFromCustTable();
+
+        this.FTDBookTable = this.custTable_CustAccount().FTDBookTable;
+    }
+
+]]></Source>
+			</Method>
+			<Method>
 				<Name>ftdDispAuthorFullName</Name>
 				<Source><![CDATA[
     [SysClientCacheDataMethod(true)]
