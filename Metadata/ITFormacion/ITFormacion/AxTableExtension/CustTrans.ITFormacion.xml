@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <AxTableExtension xmlns:i="http://www.w3.org/2001/XMLSchema-instance">
-	<Name>CustTable.ITFormacion</Name>
+	<Name>CustTrans.ITFormacion</Name>
 	<FieldGroupExtensions />
 	<FieldGroups />
 	<FieldModifications />
@@ -8,6 +8,8 @@
 		<AxTableField xmlns=""
 			i:type="AxTableFieldInt64">
 			<Name>FTDBookTable</Name>
+			<AllowEdit>No</AllowEdit>
+			<AllowEditOnCreate>No</AllowEditOnCreate>
 			<ExtendedDataType>RefRecId</ExtendedDataType>
 			<IgnoreEDTRelation>Yes</IgnoreEDTRelation>
 			<Label>@ITFormacion:BookTable</Label>

@@ -6,6 +6,14 @@
 			<Name>classDeclaration</Name>
 			<ReturnType />
 		</Method>
+		<Method>
+			<Name>numberSeqNumAuthorId</Name>
+			<Visibility>Public</Visibility>
+			<ReturnType>
+				<Type>Class</Type>
+				<TypeName>NumberSeqFormHandler</TypeName>
+			</ReturnType>
+		</Method>
 	</Methods>
 	<DataSources>
 		<DataSource>
@@ -25,6 +33,50 @@
 							<Name>ret</Name>
 						</AxMethodVariable>
 					</Variables>
+				</Method>
+				<Method>
+					<Name>create</Name>
+					<Visibility>Public</Visibility>
+					<Parameters>
+						<AxMethodParameter>
+							<Type>Enum</Type>
+							<TypeName>boolean</TypeName>
+							<DefaultValue>false</DefaultValue>
+							<Name>_append</Name>
+						</AxMethodParameter>
+					</Parameters>
+					<ReturnType>
+						<TypeName></TypeName>
+					</ReturnType>
+				</Method>
+				<Method>
+					<Name>linkActive</Name>
+					<Visibility>Public</Visibility>
+					<ReturnType>
+						<TypeName></TypeName>
+					</ReturnType>
+				</Method>
+				<Method>
+					<Name>delete</Name>
+					<Visibility>Public</Visibility>
+					<ReturnType>
+						<TypeName></TypeName>
+					</ReturnType>
+				</Method>
+				<Method>
+					<Name>write</Name>
+					<Visibility>Public</Visibility>
+					<ReturnType>
+						<TypeName></TypeName>
+					</ReturnType>
+				</Method>
+				<Method>
+					<Name>validateWrite</Name>
+					<Visibility>Public</Visibility>
+					<ReturnType>
+						<Type>Enum</Type>
+						<TypeName>boolean</TypeName>
+					</ReturnType>
 				</Method>
 				<Method>
 					<Name>init</Name>
@@ -89,6 +141,12 @@
 			<Type>Class</Type>
 			<TypeName>QueryBuildRange</TypeName>
 			<Name>qbrDeatDateNullCheck</Name>
+			<Attributes />
+		</AxClassMemberVariable>
+		<AxClassMemberVariable>
+			<Type>Class</Type>
+			<TypeName>NumberSeqFormHandler</TypeName>
+			<Name>numberSeqNumAuthorId</Name>
 			<Attributes />
 		</AxClassMemberVariable>
 	</Members>

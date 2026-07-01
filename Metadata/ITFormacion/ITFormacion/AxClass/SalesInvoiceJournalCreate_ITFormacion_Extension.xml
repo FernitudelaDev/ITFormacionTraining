@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<AxClass xmlns:i="http://www.w3.org/2001/XMLSchema-instance">
+	<Name>SalesInvoiceJournalCreate_ITFormacion_Extension</Name>
+	<SourceCode>
+		<Declaration><![CDATA[
+[ExtensionOf(classStr(SalesInvoiceJournalCreate))]
+final class SalesInvoiceJournalCreate_ITFormacion_Extension
+{
+}
+]]></Declaration>
+		<Methods>
+			<Method>
+				<Name>initJournalHeader</Name>
+				<Source><![CDATA[
+    protected void initJournalHeader()
+    {
+        next initJournalHeader();
+
+        CustInvoiceJour custInvoiceJourDestinationTable = this.custInvoiceJour;
+        SalesTable salesTableOriginTable = this.salesTable;
+        
+        custInvoiceJourDestinationTable.FTDBookTable = salesTableOriginTable.FTDBookTable;
+    }
+
+]]></Source>
+			</Method>
+		</Methods>
+	</SourceCode>
+</AxClass>

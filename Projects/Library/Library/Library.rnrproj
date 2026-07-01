@@ -48,6 +48,8 @@
     <Folder Include="Label Files\" />
     <Folder Include="Menu Extensions\" />
     <Folder Include="Menus\" />
+    <Folder Include="Output Menu Items\" />
+    <Folder Include="Reports\" />
     <Folder Include="Security Duties\" />
     <Folder Include="Security Privileges\" />
     <Folder Include="Security Roles\" />
@@ -60,15 +62,15 @@
     <Folder Include="Views\" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="AxClass\CMGCustTableFormITFormacionExtension">
+    <Content Include="AxClass\CustParameters_ITFormacion_Extension">
       <SubType>Content</SubType>
-      <Name>CMGCustTableFormITFormacionExtension</Name>
-      <Link>Classes\CMGCustTableFormITFormacionExtension</Link>
+      <Name>CustParameters_ITFormacion_Extension</Name>
+      <Link>Classes\CustParameters_ITFormacion_Extension</Link>
     </Content>
-    <Content Include="AxClass\CMGCustTableITFormacionExtension">
+    <Content Include="AxClass\CustVendVoucher_ITFormacion_Extension">
       <SubType>Content</SubType>
-      <Name>CMGCustTableITFormacionExtension</Name>
-      <Link>Classes\CMGCustTableITFormacionExtension</Link>
+      <Name>CustVendVoucher_ITFormacion_Extension</Name>
+      <Link>Classes\CustVendVoucher_ITFormacion_Extension</Link>
     </Content>
     <Content Include="AxClass\FTDBookCreationService">
       <SubType>Content</SubType>
@@ -90,6 +92,21 @@
       <Name>FTDBookInventoryUpdationService</Name>
       <Link>Classes\FTDBookInventoryUpdationService</Link>
     </Content>
+    <Content Include="AxClass\FTDBookReportContract">
+      <SubType>Content</SubType>
+      <Name>FTDBookReportContract</Name>
+      <Link>Classes\FTDBookReportContract</Link>
+    </Content>
+    <Content Include="AxClass\FTDBookReportController">
+      <SubType>Content</SubType>
+      <Name>FTDBookReportController</Name>
+      <Link>Classes\FTDBookReportController</Link>
+    </Content>
+    <Content Include="AxClass\FTDBookReportDataProvider">
+      <SubType>Content</SubType>
+      <Name>FTDBookReportDataProvider</Name>
+      <Link>Classes\FTDBookReportDataProvider</Link>
+    </Content>
     <Content Include="AxClass\FTDQueryVSSelect">
       <SubType>Content</SubType>
       <Name>FTDQueryVSSelect</Name>
@@ -99,6 +116,21 @@
       <SubType>Content</SubType>
       <Name>FTDRunnableClassExample</Name>
       <Link>Classes\FTDRunnableClassExample</Link>
+    </Content>
+    <Content Include="AxClass\NumberSeqModuleCustomer_ITFormacion_Extension">
+      <SubType>Content</SubType>
+      <Name>NumberSeqModuleCustomer_ITFormacion_Extension</Name>
+      <Link>Classes\NumberSeqModuleCustomer_ITFormacion_Extension</Link>
+    </Content>
+    <Content Include="AxClass\SalesInvoiceJournalCreate_ITFormacion_Extension">
+      <SubType>Content</SubType>
+      <Name>SalesInvoiceJournalCreate_ITFormacion_Extension</Name>
+      <Link>Classes\SalesInvoiceJournalCreate_ITFormacion_Extension</Link>
+    </Content>
+    <Content Include="AxClass\SalesInvoiceJournalPost_ITFormacion_Extension">
+      <SubType>Content</SubType>
+      <Name>SalesInvoiceJournalPost_ITFormacion_Extension</Name>
+      <Link>Classes\SalesInvoiceJournalPost_ITFormacion_Extension</Link>
     </Content>
     <Content Include="AxClass\SalesLine_ITFormacion_Extension">
       <SubType>Content</SubType>
@@ -150,6 +182,16 @@
       <Name>FTDAuthorFullName</Name>
       <Link>EDT Strings\FTDAuthorFullName</Link>
     </Content>
+    <Content Include="AxEdt\FTDAuthorId">
+      <SubType>Content</SubType>
+      <Name>FTDAuthorId</Name>
+      <Link>EDT Strings\FTDAuthorId</Link>
+    </Content>
+    <Content Include="AxEdt\FTDBookId">
+      <SubType>Content</SubType>
+      <Name>FTDBookId</Name>
+      <Link>EDT Strings\FTDBookId</Link>
+    </Content>
     <Content Include="AxEdt\FTDDeathDate">
       <SubType>Content</SubType>
       <Name>FTDDeathDate</Name>
@@ -175,10 +217,25 @@
       <Name>FTDGenreEnum</Name>
       <Link>Base Enums\FTDGenreEnum</Link>
     </Content>
-    <Content Include="AxFormExtension\CustTable.ITFormacion1">
+    <Content Include="AxFormExtension\CustInvoiceJournal.ITFormacion">
       <SubType>Content</SubType>
-      <Name>CustTable.ITFormacion1</Name>
-      <Link>Form Extensions\CustTable.ITFormacion1</Link>
+      <Name>CustInvoiceJournal.ITFormacion</Name>
+      <Link>Form Extensions\CustInvoiceJournal.ITFormacion</Link>
+    </Content>
+    <Content Include="AxFormExtension\CustParameters.ITFormacion">
+      <SubType>Content</SubType>
+      <Name>CustParameters.ITFormacion</Name>
+      <Link>Form Extensions\CustParameters.ITFormacion</Link>
+    </Content>
+    <Content Include="AxFormExtension\CustTable.ITFormacion">
+      <SubType>Content</SubType>
+      <Name>CustTable.ITFormacion</Name>
+      <Link>Form Extensions\CustTable.ITFormacion</Link>
+    </Content>
+    <Content Include="AxFormExtension\CustTrans.ITFormacion">
+      <SubType>Content</SubType>
+      <Name>CustTrans.ITFormacion</Name>
+      <Link>Form Extensions\CustTrans.ITFormacion</Link>
     </Content>
     <Content Include="AxFormExtension\SalesTable.ITFormacion">
       <SubType>Content</SubType>
@@ -230,6 +287,11 @@
       <Name>FTDBookInventoryUpdationController</Name>
       <Link>Action Menu Items\FTDBookInventoryUpdationController</Link>
     </Content>
+    <Content Include="AxMenuItemAction\FTDBookReportFromAuthorController">
+      <SubType>Content</SubType>
+      <Name>FTDBookReportFromAuthorController</Name>
+      <Link>Action Menu Items\FTDBookReportFromAuthorController</Link>
+    </Content>
     <Content Include="AxMenuItemDisplay\FTDAuthor">
       <SubType>Content</SubType>
       <Name>FTDAuthor</Name>
@@ -260,6 +322,11 @@
       <Name>FTDtmpAuthor</Name>
       <Link>Display Menu Items\FTDtmpAuthor</Link>
     </Content>
+    <Content Include="AxMenuItemOutput\FTDBookReportController">
+      <SubType>Content</SubType>
+      <Name>FTDBookReportController</Name>
+      <Link>Output Menu Items\FTDBookReportController</Link>
+    </Content>
     <Content Include="AxMenu\FTDLibrary">
       <SubType>Content</SubType>
       <Name>FTDLibrary</Name>
@@ -274,6 +341,11 @@
       <SubType>Content</SubType>
       <Name>FTDBookAuthorFantasyQuery</Name>
       <Link>Simple Queries\FTDBookAuthorFantasyQuery</Link>
+    </Content>
+    <Content Include="AxReport\FTDBookReport">
+      <SubType>Content</SubType>
+      <Name>FTDBookReport</Name>
+      <Link>Reports\FTDBookReport</Link>
     </Content>
     <Content Include="AxSecurityDuty\FTDLibraryFormsMaintain">
       <SubType>Content</SubType>
@@ -375,10 +447,25 @@
       <Name>FTDBookCreationService</Name>
       <Link>Services\FTDBookCreationService</Link>
     </Content>
-    <Content Include="AxTableExtension\CustTable.ITFormacion1">
+    <Content Include="AxTableExtension\CustInvoiceJour.ITFormacion">
       <SubType>Content</SubType>
-      <Name>CustTable.ITFormacion1</Name>
-      <Link>Table Extensions\CustTable.ITFormacion1</Link>
+      <Name>CustInvoiceJour.ITFormacion</Name>
+      <Link>Table Extensions\CustInvoiceJour.ITFormacion</Link>
+    </Content>
+    <Content Include="AxTableExtension\CustParameters.ITFormacion">
+      <SubType>Content</SubType>
+      <Name>CustParameters.ITFormacion</Name>
+      <Link>Table Extensions\CustParameters.ITFormacion</Link>
+    </Content>
+    <Content Include="AxTableExtension\CustTable.ITFormacion">
+      <SubType>Content</SubType>
+      <Name>CustTable.ITFormacion</Name>
+      <Link>Table Extensions\CustTable.ITFormacion</Link>
+    </Content>
+    <Content Include="AxTableExtension\CustTrans.ITFormacion">
+      <SubType>Content</SubType>
+      <Name>CustTrans.ITFormacion</Name>
+      <Link>Table Extensions\CustTrans.ITFormacion</Link>
     </Content>
     <Content Include="AxTableExtension\SalesLine.ITFormacion">
       <SubType>Content</SubType>
@@ -424,6 +511,11 @@
       <SubType>Content</SubType>
       <Name>FTDtmpAuthorTable</Name>
       <Link>Tables\FTDtmpAuthorTable</Link>
+    </Content>
+    <Content Include="AxTable\FTDtmpBookTable">
+      <SubType>Content</SubType>
+      <Name>FTDtmpBookTable</Name>
+      <Link>Tables\FTDtmpBookTable</Link>
     </Content>
     <Content Include="AxView\FTDBookAuthorFantasyView">
       <SubType>Content</SubType>

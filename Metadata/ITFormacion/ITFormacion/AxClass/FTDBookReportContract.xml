@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<AxClass xmlns:i="http://www.w3.org/2001/XMLSchema-instance">
+	<Name>FTDBookReportContract</Name>
+	<SourceCode>
+		<Declaration><![CDATA[
+[DataContract] 
+public class FTDBookReportContract
+{
+    FTDId authorId;
+
+}
+]]></Declaration>
+		<Methods>
+			<Method>
+				<Name>parmAuthorId</Name>
+				<Source><![CDATA[
+    [DataMember]
+	public FTDId parmAuthorId(FTDId _authorId = authorId)
+    {
+        authorId = _authorId;
+        return authorId;
+    }
+
+]]></Source>
+			</Method>
+		</Methods>
+	</SourceCode>
+</AxClass>

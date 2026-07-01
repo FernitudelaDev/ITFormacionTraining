@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <AxTable xmlns:i="http://www.w3.org/2001/XMLSchema-instance">
-	<Name>FTDBookTable</Name>
+	<Name>FTDtmpBookTable</Name>
 	<SourceCode>
 		<Declaration><![CDATA[
-public class FTDBookTable extends common
+public class FTDtmpBookTable extends common
 {
 }
 ]]></Declaration>
@@ -23,63 +23,6 @@ public class FTDBookTable extends common
 ]]></Source>
 			</Method>
 			<Method>
-				<Name>exist</Name>
-				<Source><![CDATA[
-    public static boolean exist(FTDId _id)
-    {
-        return (select firstonly RecId from FTDBookTable
-            where FTDBookTable.Id == _id).RecId != 0;
-    }
-
-]]></Source>
-			</Method>
-			<Method>
-				<Name>find</Name>
-				<Source><![CDATA[
-    public static FTDBookTable find(FTDId _id)
-    {
-        FTDBookTable bookTable;
-
-        select firstonly bookTable
-            where bookTable.Id == _id;
-
-        return bookTable;
-    }
-
-]]></Source>
-			</Method>
-			<Method>
-				<Name>findRecId</Name>
-				<Source><![CDATA[
-    public static FTDBookTable findRecId(RecId _recId)
-    {
-        FTDBookTable bookTable;
-
-        select firstonly bookTable
-            where bookTable.RecId == _recId;
-
-        return bookTable;
-    }
-
-]]></Source>
-			</Method>
-			<Method>
-				<Name>selectCountByGenre</Name>
-				<Source><![CDATA[
-    public static int selectCountByGenre(FTDGenreEnum _genre)
-    {
-        FTDBookTable bookTable;
-
-        select count(RecId) from bookTable
-            group by Genre
-            where bookTable.Genre == _genre;
-
-        return bookTable.RecId;
-    }
-
-]]></Source>
-			</Method>
-			<Method>
 				<Name>dispAuthorFullName</Name>
 				<Source><![CDATA[
     [SysClientCacheDataMethod(true)]
@@ -88,33 +31,6 @@ public class FTDBookTable extends common
         FTDAuthorTable authorTable = FTDAuthorTable::findRecId(this.Author);
 
         return authorTable.FirstName + ' ' + authorTable.LastName;
-    }
-
-]]></Source>
-			</Method>
-			<Method>
-				<Name>dispCurrentInventory</Name>
-				<Source><![CDATA[
-    [SysClientCacheDataMethod(true)]
-    public display FTDInventoryQty dispCurrentInventory()
-    {
-        return this.currentInventory();
-    }
-
-]]></Source>
-			</Method>
-			<Method>
-				<Name>currentInventory</Name>
-				<Source><![CDATA[
-    public Qty currentInventory(RecId _excludeTransactionRecId = 0)
-    {
-        FTDBookInventoryTransaction transactions;
-
-        select sum(Qty) from transactions
-            where transactions.Book == this.RecId
-            && transactions.RecId != _excludeTransactionRecId;
-
-        return transactions.Qty;
     }
 
 ]]></Source>
@@ -153,15 +69,14 @@ public class FTDBookTable extends common
 ]]></Source>
 			</Method>
 			<Method>
-				<Name>initValue</Name>
+				<Name>initFromtmpBookTable</Name>
 				<Source><![CDATA[
-    public void initValue()
+    public void initFromtmpBookTable(FTDBookTable _bookTable)
     {
-        super();
-
-        //this.Author = 5637147578;//hardcode, está prohibido!! Parametrizar es la solución.
-        //así sí:
-        this.Author = CustParameters::find().FTDDefaultAuthor;
+        this.Author  = _bookTable.Author;
+        this.Genre   = _bookTable.Genre;
+        this.Id      = _bookTable.Id;
+        this.Name    = _bookTable.Name;
     }
 
 ]]></Source>
@@ -175,9 +90,9 @@ public class FTDBookTable extends common
 	</SubscriberAccessLevel>
 	<TitleField1>Id</TitleField1>
 	<TitleField2>Name</TitleField2>
-	<AllowRowVersionChangeTracking>Yes</AllowRowVersionChangeTracking>
 	<ModifiedDateTime>Yes</ModifiedDateTime>
 	<ReplacementKey>BookTableIdx</ReplacementKey>
+	<TableType>InMemory</TableType>
 	<DeleteActions />
 	<FieldGroups>
 		<AxTableFieldGroup>
@@ -223,9 +138,6 @@ public class FTDBookTable extends common
 				<AxTableFieldGroupField>
 					<DataField>dispAuthorFullName</DataField>
 				</AxTableFieldGroupField>
-				<AxTableFieldGroupField>
-					<DataField>dispCurrentInventory</DataField>
-				</AxTableFieldGroupField>
 			</Fields>
 		</AxTableFieldGroup>
 	</FieldGroups>
@@ -234,7 +146,7 @@ public class FTDBookTable extends common
 			i:type="AxTableFieldString">
 			<Name>Id</Name>
 			<AllowEdit>No</AllowEdit>
-			<ExtendedDataType>FTDBookId</ExtendedDataType>
+			<ExtendedDataType>FTDId</ExtendedDataType>
 			<IgnoreEDTRelation>Yes</IgnoreEDTRelation>
 			<Mandatory>Yes</Mandatory>
 		</AxTableField>

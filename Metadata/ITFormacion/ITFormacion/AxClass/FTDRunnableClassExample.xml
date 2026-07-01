@@ -67,7 +67,9 @@ internal final class FTDRunnableClassExample
 				<Source><![CDATA[
     public static void Main(Args _args)
     {
+        NumberSeqModuleCustomer numseqModCustomer = new NumberSeqModuleCustomer();
 
+        numseqModCustomer.load();
     }
 
 ]]></Source>

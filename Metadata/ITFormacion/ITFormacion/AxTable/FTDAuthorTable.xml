@@ -109,14 +109,45 @@ public class FTDAuthorTable extends common
 			<Method>
 				<Name>findRecId</Name>
 				<Source><![CDATA[
-    public static FTDAuthorTable findRecId(RefRecId _refRecId)
+    public static FTDAuthorTable findRecId(RefRecId _refRecId, boolean _forUpdate = false)
     {
-        FTDAuthorTable author;
+        FTDAuthorTable authorTable;
 
-        select firstonly author
-            where author.RecId == _refRecId;
+        if (_refRecId)
+        {
+            if (_forUpdate)
+            {
+                authorTable.selectForUpdate(_forUpdate);
+            }
 
-        return author;
+            select firstonly authorTable
+                where authorTable.RecId == _refRecId;
+        }
+
+        return authorTable;
+    }
+
+]]></Source>
+			</Method>
+			<Method>
+				<Name>find</Name>
+				<Source><![CDATA[
+    public static FTDAuthorTable find(FTDId _id, boolean _forUpdate = false)
+    {
+        FTDAuthorTable authorTable;
+
+        if (_id)
+        {
+            if (_forUpdate)
+            {
+                authorTable.selectForUpdate(_forUpdate);
+            }
+
+            select firstonly authorTable
+                where authorTable.Id == _id;
+        }
+
+        return authorTable;
     }
 
 ]]></Source>
@@ -237,7 +268,7 @@ public class FTDAuthorTable extends common
 			i:type="AxTableFieldString">
 			<Name>Id</Name>
 			<AllowEdit>No</AllowEdit>
-			<ExtendedDataType>FTDId</ExtendedDataType>
+			<ExtendedDataType>FTDAuthorId</ExtendedDataType>
 			<IgnoreEDTRelation>Yes</IgnoreEDTRelation>
 			<Mandatory>Yes</Mandatory>
 		</AxTableField>

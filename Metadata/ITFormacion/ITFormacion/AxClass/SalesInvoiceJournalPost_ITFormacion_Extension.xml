@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<AxClass xmlns:i="http://www.w3.org/2001/XMLSchema-instance">
+	<Name>SalesInvoiceJournalPost_ITFormacion_Extension</Name>
+	<SourceCode>
+		<Declaration><![CDATA[
+[ExtensionOf(classStr(SalesInvoiceJournalPost))]
+final class SalesInvoiceJournalPost_ITFormacion_Extension
+{
+}
+]]></Declaration>
+		<Methods>
+			<Method>
+				<Name>postCustVoucher</Name>
+				<Source><![CDATA[
+    protected void postCustVoucher(CustVoucher _custVoucher, CustTrans _custTrans)
+    {
+        //Esto no sirve porque se hace un clear de la CustTrans mas adelante (initCustVendTrans de la CustVendVoucher)
+        //_custTrans.FTDBookTable = this.salesTable.FTDBookTable;
+
+        _custVoucher.parmftdBookTable(this.salesTable.FTDBookTable);
+
+        next postCustVoucher(_custVoucher, _custTrans);
+    }
+
+]]></Source>
+			</Method>
+		</Methods>
+	</SourceCode>
+</AxClass>

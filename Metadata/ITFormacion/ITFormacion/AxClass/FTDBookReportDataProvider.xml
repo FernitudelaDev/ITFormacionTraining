@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="utf-8"?>
+<AxClass xmlns:i="http://www.w3.org/2001/XMLSchema-instance">
+	<Name>FTDBookReportDataProvider</Name>
+	<SourceCode>
+		<Declaration><![CDATA[
+[SrsReportParameterAttribute(classStr(FTDBookReportContract))]
+public class FTDBookReportDataProvider extends SRSReportDataProviderBase
+{
+    FTDtmpAuthorTable headerAuthorInfo;
+    FTDtmpBookTable lineBooksInfo;
+
+}
+]]></Declaration>
+		<Methods>
+			<Method>
+				<Name>getHeaderAuthorInfo</Name>
+				<Source><![CDATA[
+    [SRSReportDataSetAttribute("headerAuthorInfo")] //Aquí indicamos la tabla temporal que usaremos como data para el controller
+    public FTDtmpAuthorTable getHeaderAuthorInfo()
+    {
+        select * from headerAuthorInfo;
+        return headerAuthorInfo;
+    }
+
+]]></Source>
+			</Method>
+			<Method>
+				<Name>getLineBooksInfo</Name>
+				<Source><![CDATA[
+    [SRSReportDataSetAttribute("lineBooksInfo")] //Aquí indicamos la tabla temporal que usaremos como data para el controller
+    public FTDtmpBookTable getLineBooksInfo()
+    {
+        select * from lineBooksInfo;
+        return lineBooksInfo;
+    }
+
+]]></Source>
+			</Method>
+			<Method>
+				<Name>processReport</Name>
+				<Source><![CDATA[
+    public void processReport()
+    {
+        FTDBookReportContract bookReportContract = this.parmDataContract();
+
+        super();
+
+        FTDAuthorTable authorTable = FTDAuthorTable::find(bookReportContract.parmAuthorId());
+
+        if (authorTable)
+        {
+            this.insertHeaderData(authorTable);
+            this.insertLinesData(authorTable);
+        }
+        else
+        {
+            throw error("@ITFormacion:InvalidAuthor");
+        }
+    }
+
+]]></Source>
+			</Method>
+			<Method>
+				<Name>insertHeaderData</Name>
+				<Source><![CDATA[
+    private void insertHeaderData(FTDAuthorTable _author)
+    {
+        headerAuthorInfo.clear();
+
+        headerAuthorInfo.initFromAuthorTable(_author);
+
+        if (headerAuthorInfo.validateWrite())
+        {
+            headerAuthorInfo.insert();
+        }
+        else
+        {
+            throw Exception::Error;
+        }
+    }
+
+]]></Source>
+			</Method>
+			<Method>
+				<Name>insertLinesData</Name>
+				<Source><![CDATA[
+    private void insertLinesData(FTDAuthorTable _author)
+    {
+        FTDBookTable book;
+
+        while select book
+            where book.Author == _author.RecId
+        {
+            this.insertLineData(book);
+        }
+    }
+
+]]></Source>
+			</Method>
+			<Method>
+				<Name>insertLineData</Name>
+				<Source><![CDATA[
+    private void insertLineData(FTDBookTable _book)
+    {
+        lineBooksInfo.clear();
+
+        lineBooksInfo.initFromtmpBookTable(_book);
+
+        if (lineBooksInfo.validateWrite())
+        {
+            lineBooksInfo.insert();
+        }
+        else
+        {
+            throw Exception::Error;
+        }
+    }
+
+]]></Source>
+			</Method>
+		</Methods>
+	</SourceCode>
+</AxClass>

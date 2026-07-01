@@ -1,21 +1,23 @@
 <?xml version="1.0" encoding="utf-8"?>
 <AxFormExtension xmlns:i="http://www.w3.org/2001/XMLSchema-instance" xmlns="Microsoft.Dynamics.AX.Metadata.V6">
-	<Name>CustTable.ITFormacion</Name>
+	<Name>CustTrans.ITFormacion</Name>
 	<ControlModifications />
 	<Controls>
 		<AxFormExtensionControl xmlns="">
-			<Name>FormExtensionControljndhatyo1</Name>
+			<Name>FormExtensionControlzzj454hj1</Name>
 			<FormControl xmlns=""
 				i:type="AxFormReferenceGroupControl">
-				<Name>CustTable_FTDBookTable</Name>
+				<Name>CustTrans_FTDBookTable</Name>
 				<Type>ReferenceGroup</Type>
 				<FormControlExtension
 					i:nil="true" />
 				<Controls />
-				<DataSource>CustTable</DataSource>
+				<DataSource>CustTrans</DataSource>
 				<ReferenceField>FTDBookTable</ReferenceField>
 			</FormControl>
-			<Parent>OtherInformation</Parent>
+			<Parent>Grid</Parent>
+			<PositionType>AfterItem</PositionType>
+			<PreviousSibling>AccountName</PreviousSibling>
 		</AxFormExtensionControl>
 	</Controls>
 	<DataSourceModifications />

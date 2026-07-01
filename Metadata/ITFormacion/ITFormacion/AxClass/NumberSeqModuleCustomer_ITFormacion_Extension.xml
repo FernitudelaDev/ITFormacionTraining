@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<AxClass xmlns:i="http://www.w3.org/2001/XMLSchema-instance">
+	<Name>NumberSeqModuleCustomer_ITFormacion_Extension</Name>
+	<SourceCode>
+		<Declaration><![CDATA[
+[ExtensionOf(classStr(NumberSeqModuleCustomer))]
+final class NumberSeqModuleCustomer_ITFormacion_Extension
+{
+}
+]]></Declaration>
+		<Methods>
+			<Method>
+				<Name>loadModule</Name>
+				<Source><![CDATA[
+    protected void loadModule()
+    {
+        next loadModule();
+  
+        this.ftdAddLibraryNumSeqs();
+    }
+
+]]></Source>
+			</Method>
+			<Method>
+				<Name>ftdAddLibraryNumSeqs</Name>
+				<Source><![CDATA[
+    private void ftdAddLibraryNumSeqs()
+    {
+        this.ftdAddNumberSequence(extendedTypeNum(FTDBookId),
+            true,
+            literalStr("@ITFormacion:BookId"),
+            literalStr("@ITFormacion:BookId"));
+
+        this.ftdAddNumberSequence(extendedTypeNum(FTDAuthorId),
+            true,
+            literalStr("@ITFormacion:AuthorId"),
+            literalStr("@ITFormacion:AuthorId"));
+ 
+    }
+
+]]></Source>
+			</Method>
+			<Method>
+				<Name>ftdAddNumberSequence</Name>
+				<Source><![CDATA[
+    private void ftdAddNumberSequence(ExtendedTypeId _edtId,
+        boolean _perCompany = true,
+        NumberSequenceRefLabel _numberSeqRefLabel = "",
+        NumberSequenceRefHelp _numberSeqRefHelp = "",
+        int _sortField = 1,
+        boolean _wizardIsContinuous = false,
+        NoYes _wizardIsManual = NoYes::No,
+        int _fetchAheadQty = 10,
+        NoYes _wizardIsChangeDownAllowed = NoYes::No,
+        NoYes _wizardIsChangeUpAllowed = NoYes::No)
+    {
+        NumberSeqDatatype dataType = NumberSeqDatatype::construct();
+  
+        dataType.parmDatatypeId(_edtId);
+        if (_numberSeqRefLabel)
+        {
+            dataType.parmReferenceLabel(_numberSeqRefLabel);
+        }
+  
+        if (_numberSeqRefHelp)
+        {
+            dataType.parmReferenceHelp(_numberSeqRefHelp);
+        }
+  
+        dataType.parmWizardIsContinuous(_wizardIsContinuous);
+        dataType.parmWizardIsManual(_wizardIsManual);
+        datatype.parmWizardfetchAheadQty(_fetchAheadQty);
+        dataType.parmWizardIsChangeDownAllowed(_wizardIsChangeDownAllowed);
+        dataType.parmWizardIsChangeUpAllowed(_wizardIsChangeUpAllowed);
+        dataType.parmSortField(_sortField);
+  
+        if (_perCompany)
+        {
+            dataType.addParameterType(NumberSeqParameterType::DataArea);
+  
+ 
+        }
+  
+        this.create(dataType);
+    }
+
+]]></Source>
+			</Method>
+		</Methods>
+	</SourceCode>
+</AxClass>
