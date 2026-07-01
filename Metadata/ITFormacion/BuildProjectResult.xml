@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Diagnostics
-  GenerationTime="2026-06-30T02:12:41.6922311+00:00">
+  GenerationTime="2026-07-01T11:57:46.1059498+00:00">
   <Items>
     <Diagnostic>
       <DiagnosticType>ExternalReference</DiagnosticType>
@@ -41,6 +41,54 @@
       <EndLine>11</EndLine>
       <EndColumn>32</EndColumn>
       <Message>The type conversion from 'int64' to 'int' loses range.</Message>
+    </Diagnostic>
+    <Diagnostic>
+      <DiagnosticType>Compile</DiagnosticType>
+      <Severity>Error</Severity>
+      <Path>dynamics://Form/ACAuthor/Method/numberSeqNumSeqAuthorId</Path>
+      <ElementType>Form Method</ElementType>
+      <Moniker>InvalidField</Moniker>
+      <Line>12</Line>
+      <Column>69</Column>
+      <EndLine>12</EndLine>
+      <EndColumn>121</EndColumn>
+      <Message>Class 'CustParameters_ITFormacion_Extension' does not contain a field named 'acNumRefBookId'.</Message>
+    </Diagnostic>
+    <Diagnostic>
+      <DiagnosticType>Compile</DiagnosticType>
+      <Severity>Error</Severity>
+      <Path>dynamics://Form/ACAuthor/Method/numberSeqNumSeqAuthorId</Path>
+      <ElementType>Form Method</ElementType>
+      <Moniker>InvalidQualifier</Moniker>
+      <Line>12</Line>
+      <Column>69</Column>
+      <EndLine>12</EndLine>
+      <EndColumn>121</EndColumn>
+      <Message>The qualifier 'CustParameters_ITFormacion_Extension::acNumRefBookId' is not valid for field 'NumberSequenceId'.</Message>
+    </Diagnostic>
+    <Diagnostic>
+      <DiagnosticType>Compile</DiagnosticType>
+      <Severity>Error</Severity>
+      <Path>dynamics://Form/ACAuthor/Method/numberSeqNumSeqAuthorId</Path>
+      <ElementType>Form Method</ElementType>
+      <Moniker>NotDeclared</Moniker>
+      <Line>14</Line>
+      <Column>58</Column>
+      <EndLine>14</EndLine>
+      <EndColumn>77</EndColumn>
+      <Message>'FTDNumSeqExample_ds' is not declared.</Message>
+    </Diagnostic>
+    <Diagnostic>
+      <DiagnosticType>Compile</DiagnosticType>
+      <Severity>Error</Severity>
+      <Path>dynamics://Form/ACAuthor/Method/numberSeqNumSeqAuthorId</Path>
+      <ElementType>Form Method</ElementType>
+      <Moniker>TableNotFound</Moniker>
+      <Line>15</Line>
+      <Column>58</Column>
+      <EndLine>15</EndLine>
+      <EndColumn>88</EndColumn>
+      <Message>Table 'FTDNumSeqExample' is not found.</Message>
     </Diagnostic>
   </Items>
   <Aliases />

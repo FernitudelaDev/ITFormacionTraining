@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<AxClass xmlns:i="http://www.w3.org/2001/XMLSchema-instance">
+	<Name>CustParameters_ITFormacion_Extension</Name>
+	<SourceCode>
+		<Declaration><![CDATA[
+[ExtensionOf(tableStr(CustParameters))]
+final class CustParameters_ITFormacion_Extension
+{
+}
+]]></Declaration>
+		<Methods>
+			<Method>
+				<Name>acNumRefBookId</Name>
+				<Source><![CDATA[
+    public NumberSequenceReference acNumRefBookId()
+    {
+        return NumberSeqReference::findReference(extendedTypeNum(ACBookId));
+    }
+
+]]></Source>
+			</Method>
+			<Method>
+				<Name>acNumRefAuthorId</Name>
+				<Source><![CDATA[
+    public NumberSequenceReference acNumRefAuthorId()
+    {
+        return NumberSeqReference::findReference(extendedTypeNum(ACAuthorId));
+    }
+
+]]></Source>
+			</Method>
+		</Methods>
+	</SourceCode>
+</AxClass>

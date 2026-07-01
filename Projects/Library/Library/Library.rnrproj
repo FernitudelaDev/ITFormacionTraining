@@ -98,6 +98,11 @@
       <Name>ACRunnableClassExample</Name>
       <Link>Classes\ACRunnableClassExample</Link>
     </Content>
+    <Content Include="AxClass\CustParameters_ITFormacion_Extension">
+      <SubType>Content</SubType>
+      <Name>CustParameters_ITFormacion_Extension</Name>
+      <Link>Classes\CustParameters_ITFormacion_Extension</Link>
+    </Content>
     <Content Include="AxClass\SalesLine_ITFormacion_Extension">
       <SubType>Content</SubType>
       <Name>SalesLine_ITFormacion_Extension</Name>
@@ -147,6 +152,16 @@
       <SubType>Content</SubType>
       <Name>ACAuthorFullName</Name>
       <Link>EDT Strings\ACAuthorFullName</Link>
+    </Content>
+    <Content Include="AxEdt\ACAuthorId">
+      <SubType>Content</SubType>
+      <Name>ACAuthorId</Name>
+      <Link>EDT Strings\ACAuthorId</Link>
+    </Content>
+    <Content Include="AxEdt\ACBookId">
+      <SubType>Content</SubType>
+      <Name>ACBookId</Name>
+      <Link>EDT Strings\ACBookId</Link>
     </Content>
     <Content Include="AxEdt\ACDeathDate">
       <SubType>Content</SubType>

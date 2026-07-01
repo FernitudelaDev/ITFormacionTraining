@@ -11,8 +11,28 @@ public class ACAuthor extends FormRun
 {
     QueryBuildRange qbrBirthdate,qbrDeathdate, qbrDeathDateNullCheck;
 
-
+    NumberSeqFormHandler numberSeqNumSeqAuthorId;
+ 
 }
+]]></Source>
+			</Method>
+			<Method>
+				<Name>numberSeqNumSeqAuthorId</Name>
+				<Source><![CDATA[
+    NumberSeqFormHandler numberSeqNumSeqAuthorId()
+    {
+        if (!numberSeqNumSeqAuthorId)
+        {
+            numberSeqNumSeqAuthorId = numberSeqFormHandler::newForm(CustParameters_ITFormacion_Extension::acNumRefBookId.NumberSequenceId,
+                                                         element,
+                                                         FTDNumSeqExample_ds,
+                                                         fieldNum(FTDNumSeqExample, Id)
+                                                         );
+        }
+  
+        return numberSeqNumSeqAuthorId;
+    }
+
 ]]></Source>
 			</Method>
 			<Method>

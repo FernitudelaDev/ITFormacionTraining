@@ -7,6 +7,14 @@
 			<ReturnType />
 		</Method>
 		<Method>
+			<Name>numberSeqNumSeqAuthorId</Name>
+			<Visibility>Public</Visibility>
+			<ReturnType>
+				<Type>Class</Type>
+				<TypeName>NumberSeqFormHandler</TypeName>
+			</ReturnType>
+		</Method>
+		<Method>
 			<Name>setDeathDateEditable</Name>
 			<Visibility>Public</Visibility>
 			<Parameters>
@@ -90,6 +98,12 @@
 			<Type>Class</Type>
 			<TypeName>QueryBuildRange</TypeName>
 			<Name>qbrDeathDateNullCheck</Name>
+			<Attributes />
+		</AxClassMemberVariable>
+		<AxClassMemberVariable>
+			<Type>Class</Type>
+			<TypeName>NumberSeqFormHandler</TypeName>
+			<Name>numberSeqNumSeqAuthorId</Name>
 			<Attributes />
 		</AxClassMemberVariable>
 	</Members>

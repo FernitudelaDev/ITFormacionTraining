@@ -4,6 +4,10 @@ ExternalReference Warning: dynamics://Reference/Microsoft.Dynamics.Commerce.Runt
 ExternalReference Warning: dynamics://Reference/RetailCommerceRuntimeFramework: Assembly 'Microsoft.Extensions.Caching.Abstractions, Version=1.1.2.0, Culture=neutral, PublicKeyToken=adb9793829ddae60' failed to load because it was not found.
 ExternalReference Warning: dynamics://Reference/Azure.Core: Assembly 'System.Memory.Data, Version=1.0.2.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51' failed to load because it was not found.
 Compile Warning: Table Method dynamics://Table/ACBookTable/Method/selectCountByGenre: [(11,9),(11,32)]: The type conversion from 'int64' to 'int' loses range.
+Compile Error: Form Method dynamics://Form/ACAuthor/Method/numberSeqNumSeqAuthorId: [(12,69),(12,121)]: Class 'CustParameters_ITFormacion_Extension' does not contain a field named 'acNumRefBookId'.
+Compile Error: Form Method dynamics://Form/ACAuthor/Method/numberSeqNumSeqAuthorId: [(12,69),(12,121)]: The qualifier 'CustParameters_ITFormacion_Extension::acNumRefBookId' is not valid for field 'NumberSequenceId'.
+Compile Error: Form Method dynamics://Form/ACAuthor/Method/numberSeqNumSeqAuthorId: [(14,58),(14,77)]: 'FTDNumSeqExample_ds' is not declared.
+Compile Error: Form Method dynamics://Form/ACAuthor/Method/numberSeqNumSeqAuthorId: [(15,58),(15,88)]: Table 'FTDNumSeqExample' is not found.
 ==================================
-Errors: 0
+Errors: 4
 Warnings: 5
