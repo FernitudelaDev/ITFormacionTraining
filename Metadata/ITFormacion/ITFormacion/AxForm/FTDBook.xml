@@ -11,7 +11,28 @@ public class FTDBook extends FormRun
 {
     FTDGenreEnum    genreFilter;
     boolean         needGenreFilter;
+    NumberSeqFormHandler numberSeqNumBookId;
+
 }
+]]></Source>
+			</Method>
+			<Method>
+				<Name>numberSeqNumBookId</Name>
+				<Source><![CDATA[
+    NumberSeqFormHandler numberSeqNumBookId()
+    {
+        if (!numberSeqNumBookId)
+        {
+            numberSeqNumBookId = NumberSeqFormHandler::newForm(
+            CustParameters::ftdNumRefBookId().NumberSequenceId,
+            element,
+            FTDBookTable_ds,
+            fieldNum(FTDBookTable, Id)
+        );
+        }
+        return numberSeqNumBookId;
+    }
+
 ]]></Source>
 			</Method>
 			<Method>
@@ -89,6 +110,56 @@ public class FTDBook extends FormRun
 						<Source><![CDATA[
         public void executeQuery()
         {
+            super();
+        }
+
+]]></Source>
+					</Method>
+					<Method>
+						<Name>create</Name>
+						<Source><![CDATA[
+        /// <summary>
+        ///
+        /// </summary>
+        public void create(boolean _append = false)
+        {
+            element.numberSeqNumBookId().formMethodDataSourceCreatePre();
+            super(_append);
+            element.numberSeqNumBookId().formMethodDataSourceCreate();
+        }
+
+]]></Source>
+					</Method>
+					<Method>
+						<Name>linkActive</Name>
+						<Source><![CDATA[
+        public void linkActive()
+        {
+            element.numberSeqNumBookId().formMethodDataSourceLinkActive();
+            super();
+        }
+
+]]></Source>
+					</Method>
+					<Method>
+						<Name>delete</Name>
+						<Source><![CDATA[
+        public void delete()
+        {
+            ttsbegin;
+            element.numberSeqNumBookId().formMethodDataSourceDelete();
+            super();
+            ttscommit;
+        }
+
+]]></Source>
+					</Method>
+					<Method>
+						<Name>write</Name>
+						<Source><![CDATA[
+        public void write()
+        {
+            element.numberSeqNumBookId().formMethodDataSourceWrite();
             super();
         }
 
