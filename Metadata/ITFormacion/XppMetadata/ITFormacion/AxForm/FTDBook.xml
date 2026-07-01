@@ -7,6 +7,14 @@
 			<ReturnType />
 		</Method>
 		<Method>
+			<Name>numberSeqNumBookId</Name>
+			<Visibility>Public</Visibility>
+			<ReturnType>
+				<Type>Class</Type>
+				<TypeName>NumberSeqFormHandler</TypeName>
+			</ReturnType>
+		</Method>
+		<Method>
 			<Name>init</Name>
 			<Visibility>Public</Visibility>
 			<ReturnType>
@@ -18,18 +26,6 @@
 			<ReturnType>
 				<TypeName></TypeName>
 			</ReturnType>
-			<Variables>
-				<AxMethodVariable>
-					<Type>Record</Type>
-					<TypeName>Common</TypeName>
-					<Name>callerRecord</Name>
-				</AxMethodVariable>
-				<AxMethodVariable>
-					<Type>ExtendedDataType</Type>
-					<TypeName>MenuItemName</TypeName>
-					<Name>callerItemName</Name>
-				</AxMethodVariable>
-			</Variables>
 		</Method>
 	</Methods>
 	<DataSources>
@@ -48,18 +44,6 @@
 					<ReturnType>
 						<TypeName></TypeName>
 					</ReturnType>
-					<Variables>
-						<AxMethodVariable>
-							<Type>Class</Type>
-							<TypeName>QueryBuildDataSource</TypeName>
-							<Name>qbds</Name>
-						</AxMethodVariable>
-						<AxMethodVariable>
-							<Type>Class</Type>
-							<TypeName>QuerybuildRange</TypeName>
-							<Name>qbrGenre</Name>
-						</AxMethodVariable>
-					</Variables>
 				</Method>
 				<Method>
 					<Name>executeQuery</Name>
@@ -69,11 +53,47 @@
 					</ReturnType>
 				</Method>
 				<Method>
-					<Name>numberSeqNumBookId</Name>
+					<Name>create</Name>
+					<Visibility>Public</Visibility>
+					<Parameters>
+						<AxMethodParameter>
+							<Type>Enum</Type>
+							<TypeName>boolean</TypeName>
+							<DefaultValue>false</DefaultValue>
+							<Name>_append</Name>
+						</AxMethodParameter>
+					</Parameters>
+					<ReturnType>
+						<TypeName></TypeName>
+					</ReturnType>
+				</Method>
+				<Method>
+					<Name>write</Name>
 					<Visibility>Public</Visibility>
 					<ReturnType>
-						<Type>Class</Type>
-						<TypeName>NumberSeqFormHandler</TypeName>
+						<TypeName></TypeName>
+					</ReturnType>
+				</Method>
+				<Method>
+					<Name>delete</Name>
+					<Visibility>Public</Visibility>
+					<ReturnType>
+						<TypeName></TypeName>
+					</ReturnType>
+				</Method>
+				<Method>
+					<Name>validateWrite</Name>
+					<Visibility>Public</Visibility>
+					<ReturnType>
+						<Type>Enum</Type>
+						<TypeName>boolean</TypeName>
+					</ReturnType>
+				</Method>
+				<Method>
+					<Name>linkActive</Name>
+					<Visibility>Public</Visibility>
+					<ReturnType>
+						<TypeName></TypeName>
 					</ReturnType>
 				</Method>
 			</Methods>
@@ -103,13 +123,6 @@
 								<Type>Enum</Type>
 								<TypeName>boolean</TypeName>
 							</ReturnType>
-							<Variables>
-								<AxMethodVariable>
-									<Type>Enum</Type>
-									<TypeName>boolean</TypeName>
-									<Name>ret</Name>
-								</AxMethodVariable>
-							</Variables>
 						</Method>
 					</Methods>
 				</Field>
