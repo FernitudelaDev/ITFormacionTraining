@@ -6,9 +6,22 @@
 [ExtensionOf(tableStr(SalesTable))]
 public final class SalesTable_ITFormacion_Extension
 {
+
 }
 ]]></Declaration>
 		<Methods>
+			<Method>
+				<Name>initFromCustTable</Name>
+				<Source><![CDATA[
+    void initFromCustTable()
+    {
+        next initFromCustTable();
+
+        this.RRBBookTable = this.custTable_CustAccount().RRBBookTable;
+    }
+
+]]></Source>
+			</Method>
 			<Method>
 				<Name>RRBdispAuthorFullName</Name>
 				<Source><![CDATA[

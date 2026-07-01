@@ -6,6 +6,14 @@
 			<Name>classDeclaration</Name>
 			<ReturnType />
 		</Method>
+		<Method>
+			<Name>numberSeqNumAuthorId</Name>
+			<Visibility>Public</Visibility>
+			<ReturnType>
+				<Type>Class</Type>
+				<TypeName>NumberSeqFormHandler</TypeName>
+			</ReturnType>
+		</Method>
 	</Methods>
 	<DataSources>
 		<DataSource>
@@ -63,6 +71,12 @@
 			<Type>Class</Type>
 			<TypeName>QueryBuildRange</TypeName>
 			<Name>qbrDeathDateNullCheck</Name>
+			<Attributes />
+		</AxClassMemberVariable>
+		<AxClassMemberVariable>
+			<Type>Class</Type>
+			<TypeName>NumberSeqFormHandler</TypeName>
+			<Name>numberSeqNumAuthorId</Name>
 			<Attributes />
 		</AxClassMemberVariable>
 	</Members>

@@ -11,8 +11,28 @@ public class RRBAuthor extends FormRun
 {
     QueryBuildRange qbrBirthDate, qbrDeathDate, qbrDeathDateNullCheck;
 
-
+    NumberSeqFormHandler numberSeqNumAuthorId;
+ 
 }
+]]></Source>
+			</Method>
+			<Method>
+				<Name>numberSeqNumAuthorId</Name>
+				<Source><![CDATA[
+    NumberSeqFormHandler numberSeqNumAuthorId()
+    {
+        if (!numberSeqNumAuthorId)
+        {
+            numberSeqNumAuthorId = numberSeqFormHandler::newForm(CustParameters::ftdNumRefAuthorId().NumberSequenceId,
+                                                         element,
+                                                         RRBAuthorTable_ds,
+                                                         fieldNum(RRBAuthorTable, Id)
+                                                         );
+        }
+  
+        return numberSeqNumAuthorId;
+    }
+
 ]]></Source>
 			</Method>
 		</Methods>

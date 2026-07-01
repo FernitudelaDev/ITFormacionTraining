@@ -232,7 +232,7 @@ public class RRBAuthorTable extends common
 			i:type="AxTableFieldString">
 			<Name>Id</Name>
 			<AllowEdit>No</AllowEdit>
-			<ExtendedDataType>RRBId</ExtendedDataType>
+			<ExtendedDataType>RRBAuthorId</ExtendedDataType>
 			<IgnoreEDTRelation>Yes</IgnoreEDTRelation>
 			<Mandatory>Yes</Mandatory>
 		</AxTableField>

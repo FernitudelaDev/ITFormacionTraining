@@ -28,6 +28,14 @@
 	</Attributes>
 	<Methods>
 		<Method>
+			<Name>initFromCustTable</Name>
+			<Visibility>Public</Visibility>
+			<ReturnType>
+				<Tags></Tags>
+				<TypeName></TypeName>
+			</ReturnType>
+		</Method>
+		<Method>
 			<Name>RRBdispAuthorFullName</Name>
 			<IsDisplay>true</IsDisplay>
 			<Visibility>Public</Visibility>

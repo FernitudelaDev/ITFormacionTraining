@@ -141,6 +141,20 @@ public class RRBBookTable extends common
 
 ]]></Source>
 			</Method>
+			<Method>
+				<Name>initValue</Name>
+				<Source><![CDATA[
+    public void initValue()
+    {
+        super();
+
+        //this.Author = 123456789; //hardcode, está prohibido usar esto
+        //así si:
+        this.Author = CustParameters::find().RRBDefaultAuthor;
+    }
+
+]]></Source>
+			</Method>
 		</Methods>
 	</SourceCode>
 	<FormRef>RRBBook</FormRef>
@@ -209,7 +223,7 @@ public class RRBBookTable extends common
 			i:type="AxTableFieldString">
 			<Name>Id</Name>
 			<AllowEdit>No</AllowEdit>
-			<ExtendedDataType>RRBId</ExtendedDataType>
+			<ExtendedDataType>RRBBookId</ExtendedDataType>
 			<IgnoreEDTRelation>Yes</IgnoreEDTRelation>
 			<Mandatory>Yes</Mandatory>
 		</AxTableField>

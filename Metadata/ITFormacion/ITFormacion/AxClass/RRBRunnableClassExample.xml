@@ -70,7 +70,8 @@ internal final class RRBRunnableClassExample
 				<Source><![CDATA[
     public static void Main(Args _args)
     {
-        
+        NumberSeqModuleCustomer numseqModCustomer = new NumberSeqModuleCustomer();
+        numseqModCustomer.load();
     }
 
 ]]></Source>

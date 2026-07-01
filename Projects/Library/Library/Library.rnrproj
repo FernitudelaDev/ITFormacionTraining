@@ -58,6 +58,16 @@
     <Folder Include="Views\" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="AxClass\CustParameters_ITFormacion_Extension">
+      <SubType>Content</SubType>
+      <Name>CustParameters_ITFormacion_Extension</Name>
+      <Link>Classes\CustParameters_ITFormacion_Extension</Link>
+    </Content>
+    <Content Include="AxClass\NumberSeqModuleCustomer_ITFormacion_Extension">
+      <SubType>Content</SubType>
+      <Name>NumberSeqModuleCustomer_ITFormacion_Extension</Name>
+      <Link>Classes\NumberSeqModuleCustomer_ITFormacion_Extension</Link>
+    </Content>
     <Content Include="AxClass\RRBBookCreationService">
       <SubType>Content</SubType>
       <Name>RRBBookCreationService</Name>
@@ -87,6 +97,11 @@
       <SubType>Content</SubType>
       <Name>RRBRunnableClassExample</Name>
       <Link>Classes\RRBRunnableClassExample</Link>
+    </Content>
+    <Content Include="AxClass\SalesInvoiceJournalCreate_ITFormacion_Extension">
+      <SubType>Content</SubType>
+      <Name>SalesInvoiceJournalCreate_ITFormacion_Extension</Name>
+      <Link>Classes\SalesInvoiceJournalCreate_ITFormacion_Extension</Link>
     </Content>
     <Content Include="AxClass\SalesLine_ITFormacion_Extension">
       <SubType>Content</SubType>
@@ -138,6 +153,16 @@
       <Name>RRBAuthorFullName</Name>
       <Link>EDT Strings\RRBAuthorFullName</Link>
     </Content>
+    <Content Include="AxEdt\RRBAuthorId">
+      <SubType>Content</SubType>
+      <Name>RRBAuthorId</Name>
+      <Link>EDT Strings\RRBAuthorId</Link>
+    </Content>
+    <Content Include="AxEdt\RRBBookId">
+      <SubType>Content</SubType>
+      <Name>RRBBookId</Name>
+      <Link>EDT Strings\RRBBookId</Link>
+    </Content>
     <Content Include="AxEdt\RRBDeathDate">
       <SubType>Content</SubType>
       <Name>RRBDeathDate</Name>
@@ -162,6 +187,21 @@
       <SubType>Content</SubType>
       <Name>RRBGenreEnum</Name>
       <Link>Base Enums\RRBGenreEnum</Link>
+    </Content>
+    <Content Include="AxFormExtension\CustInvoiceJournal.ITFormacion">
+      <SubType>Content</SubType>
+      <Name>CustInvoiceJournal.ITFormacion</Name>
+      <Link>Form Extensions\CustInvoiceJournal.ITFormacion</Link>
+    </Content>
+    <Content Include="AxFormExtension\CustParameters.ITFormacion">
+      <SubType>Content</SubType>
+      <Name>CustParameters.ITFormacion</Name>
+      <Link>Form Extensions\CustParameters.ITFormacion</Link>
+    </Content>
+    <Content Include="AxFormExtension\CustTable.ITFormacion">
+      <SubType>Content</SubType>
+      <Name>CustTable.ITFormacion</Name>
+      <Link>Form Extensions\CustTable.ITFormacion</Link>
     </Content>
     <Content Include="AxFormExtension\SalesTable.ITFormacion">
       <SubType>Content</SubType>
@@ -352,6 +392,21 @@
       <SubType>Content</SubType>
       <Name>RRBBookCreationService</Name>
       <Link>Services\RRBBookCreationService</Link>
+    </Content>
+    <Content Include="AxTableExtension\CustInvoiceJour.ITFormacion">
+      <SubType>Content</SubType>
+      <Name>CustInvoiceJour.ITFormacion</Name>
+      <Link>Table Extensions\CustInvoiceJour.ITFormacion</Link>
+    </Content>
+    <Content Include="AxTableExtension\CustParameters.ITFormacion">
+      <SubType>Content</SubType>
+      <Name>CustParameters.ITFormacion</Name>
+      <Link>Table Extensions\CustParameters.ITFormacion</Link>
+    </Content>
+    <Content Include="AxTableExtension\CustTable.ITFormacion">
+      <SubType>Content</SubType>
+      <Name>CustTable.ITFormacion</Name>
+      <Link>Table Extensions\CustTable.ITFormacion</Link>
     </Content>
     <Content Include="AxTableExtension\SalesLine.ITFormacion">
       <SubType>Content</SubType>

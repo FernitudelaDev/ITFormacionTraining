@@ -1,10 +1,13 @@
 ﻿Author=Author
 AuthorFullName=Author full name
+AuthorId=Author id
 Book1DoesNotExist=Book %1 ,does not exist
+BookId=Book id
 Books=Books
 BooksFilteredByGenre=Books filtered by genre
 BookTable=Book
 DeathDate=Death date
+DefaultAuthor=Default author
 Fantasy=Fantasy
 FieldQtyCannotBeZero=Field quantity can not be zero
 Genre=Genre

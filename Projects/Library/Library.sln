@@ -1,9 +1,11 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
-VisualStudioVersion = 17.13.36105.23 d17.13
+VisualStudioVersion = 17.13.36105.23
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FC65038C-1B2F-41E1-A629-BED71D161FFF}") = "Library (VAR) [ITFormacion]", "Library\Library.rnrproj", "{8BA7E476-089C-455A-8113-93D0D5298B28}"
+EndProject
+Project("{FC65038C-1B2F-41E1-A629-BED71D161FFF}") = "LibraryNumberSequences (VAR) [ITFormacion]", "LibraryNumberSequences\LibraryNumberSequences.rnrproj", "{52E3C5B4-8F85-460C-A77A-3DE8370A6FDA}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -12,6 +14,8 @@ Global
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
 		{8BA7E476-089C-455A-8113-93D0D5298B28}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{8BA7E476-089C-455A-8113-93D0D5298B28}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{52E3C5B4-8F85-460C-A77A-3DE8370A6FDA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{52E3C5B4-8F85-460C-A77A-3DE8370A6FDA}.Debug|Any CPU.Build.0 = Debug|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
