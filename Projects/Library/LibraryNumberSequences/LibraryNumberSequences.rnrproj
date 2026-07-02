@@ -35,7 +35,9 @@
   <ItemGroup>
     <Folder Include="Classes\" />
     <Folder Include="Extended Data Types\" />
+    <Folder Include="Form Extensions\" />
     <Folder Include="Forms\" />
+    <Folder Include="Table Extensions\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="AxClass\FTDRunnableClassExample">
