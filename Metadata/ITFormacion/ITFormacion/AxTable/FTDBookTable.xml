@@ -166,6 +166,24 @@ public class FTDBookTable extends common
 
 ]]></Source>
 			</Method>
+			<Method>
+				<Name>insert</Name>
+				<Source><![CDATA[
+    /// <summary>
+    ///
+    /// </summary>
+    public void insert()
+    {
+        if (this.Id == '')
+        {
+            this.Id = NumberSeq::newGetNum(CustParameters::ftdNumRefBookId()).num();
+        }
+
+        super();
+    }
+
+]]></Source>
+			</Method>
 		</Methods>
 	</SourceCode>
 	<FormRef>FTDBook</FormRef>

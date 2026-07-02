@@ -61,22 +61,6 @@ final class FTDBookInventoryUpdationController extends SysOperationServiceContro
 ]]></Source>
 			</Method>
 			<Method>
-				<Name>Construct</Name>
-				<Source><![CDATA[
-    public static FTDBookInventoryUpdationController Construct(SysOperationExecutionMode _executionMode = SysOperationExecutionMode::Asynchronous)
-    {
-        FTDBookInventoryUpdationController controller =  new FTDBookInventoryUpdationController(classStr(FTDBookInventoryUpdationService),
-            methodStr(FTDBookInventoryUpdationService, runProcess),
-            _executionMode);
-        
-        controller.parmDialogCaption("@ITFormacion:UpdateBookInventory");
-
-        return controller;
-    }
-
-]]></Source>
-			</Method>
-			<Method>
 				<Name>validateParameters</Name>
 				<Source><![CDATA[
     public boolean validateParameters()
@@ -131,6 +115,22 @@ final class FTDBookInventoryUpdationController extends SysOperationServiceContro
     public FTDBookInventoryUpdationDataContract getDatacontract()
     {
         return this.getDataContractObject(identifierStr(_dataContract));
+    }
+
+]]></Source>
+			</Method>
+			<Method>
+				<Name>Construct</Name>
+				<Source><![CDATA[
+    public static FTDBookInventoryUpdationController Construct(SysOperationExecutionMode _executionMode = SysOperationExecutionMode::Asynchronous)
+    {
+        FTDBookInventoryUpdationController controller =  new FTDBookInventoryUpdationController(classStr(FTDBookInventoryUpdationService),
+            methodStr(FTDBookInventoryUpdationService, runProcess),
+            _executionMode);
+        
+        controller.parmDialogCaption("@ITFormacion:UpdateBookInventory");
+
+        return controller;
     }
 
 ]]></Source>

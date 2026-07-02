@@ -59,6 +59,22 @@ internal final class FTDRunnableClassExample
 
     //}
 
+    //Inicializacion de las referencias a EDTs de las secuencias numericas.
+    //public static void Main(Args _args)
+    //{
+    //    NumberSeqModuleCustomer numseqModCustomer = new NumberSeqModuleCustomer();
+
+    //    numseqModCustomer.load();
+    //}
+
+    //public static void Main(Args _args)
+    //{
+    //    FTDExamplesOfInsertsUpdatesAndDeletes runnableClass = new FTDExamplesOfInsertsUpdatesAndDeletes();
+
+    //    //runnableClass.WhileSelectePlusInsertVSInsertRecordset();
+    //    runnableClass.whileSelectplusDoInsertVSInsertRecordSet();
+    //}
+
 }
 ]]></Declaration>
 		<Methods>
@@ -67,9 +83,13 @@ internal final class FTDRunnableClassExample
 				<Source><![CDATA[
     public static void Main(Args _args)
     {
-        NumberSeqModuleCustomer numseqModCustomer = new NumberSeqModuleCustomer();
+        FTDBookTable bookTable = FTDWorkingWithGenerics::genericFindRecId(tableNum(FTDBookTable), 5637146076);
 
-        numseqModCustomer.load();
+        Info(bookTable.Id);
+
+        FTDAuthorTable author = FTDWorkingWithGenerics::genericFindByField(tableNum(FTDAuthorTable), fieldNum(FTDAuthorTable, Id), 'A001');
+
+        Info(author.FirstName +' '+ author.LastName);
     }
 
 ]]></Source>

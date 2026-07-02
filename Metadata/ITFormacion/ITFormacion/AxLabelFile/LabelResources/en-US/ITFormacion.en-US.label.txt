@@ -7,6 +7,7 @@ BookId=Book Id
 Books=Books
 BooksFilteredByGenre=Books filtered by genre
 BookTable=Book
+BulkUpdateInventory=Bulk update book inventory
 DeathDate=Death date
 DeathDateMustBeLaterThanBirthDate=Death date must be later than Birth date
 DefaultAuthor=Default author

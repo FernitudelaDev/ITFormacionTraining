@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<AxClass xmlns:i="http://www.w3.org/2001/XMLSchema-instance">
+	<Name>FTDExamplesOfListsAndContainers</Name>
+	<SourceCode>
+		<Declaration><![CDATA[
+internal final class FTDExamplesOfListsAndContainers
+{
+
+
+}
+]]></Declaration>
+		<Methods>
+			<Method>
+				<Name>useOfListorSets</Name>
+				<Source><![CDATA[
+    public void useOfListorSets()
+    {
+        List listOfStrings = new List(Types::String);
+
+        listOfStrings.addEnd('manolo');
+        listOfStrings.addEnd('Pongo');
+
+        ListIterator literator = new ListIterator(listOfStrings);
+
+        while(literator.more())
+        {
+            Info(literator.value());
+            literator.next();
+        }
+
+        Set setOfStrings = new Set(Types::String);
+
+        setOfStrings.add('manolo');
+        setOfStrings.add('pongo');
+
+        SetIterator siterator = new SetIterator(setOfStrings);
+
+        while (siterator.more())
+        {
+            info(siterator.value());
+            siterator.next();
+        }
+
+    }
+
+]]></Source>
+			</Method>
+			<Method>
+				<Name>UseOfContainers</Name>
+				<Source><![CDATA[
+    //containers empiezan en uno
+	public void UseOfContainers()
+    {
+        container fieldsCon;
+        FTDBookTable book;
+        int i = 1;
+
+        while select book
+        {
+            fieldsCon = conIns(fieldsCon, i, book);
+            fieldsCon = conIns(fieldsCon, i+1, book.Name);
+
+            i+=2;
+        }
+
+        book = conPeek(fieldsCon, 3);
+        Name name = conPeek(fieldsCon, 4);
+    }
+
+]]></Source>
+			</Method>
+			<Method>
+				<Name>UseOfContainers2</Name>
+				<Source><![CDATA[
+    public void UseOfContainers2()
+    {
+        container fieldsCon;
+        FTDBookTable book;
+        int i = 1;
+
+        while select book
+        {
+            fieldsCon += book;
+            fieldsCon += book.Name;
+
+            i+=2;
+        }
+
+        container containerDe0 = ['manolo', 5 , 35];
+
+        fieldsCon += containerDe0;//añade los 3 valores al final del container fieldscon
+        fieldsCon += [containerDe0];//añade el container entero containerDe0 al container fieldsCon
+
+        str manolo;
+        int numero1, numero2;
+
+        [manolo, numero1, numero2] = containerDe0;
+    }
+
+]]></Source>
+			</Method>
+		</Methods>
+	</SourceCode>
+</AxClass>

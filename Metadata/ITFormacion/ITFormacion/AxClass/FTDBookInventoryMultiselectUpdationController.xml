@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="utf-8"?>
+<AxClass xmlns:i="http://www.w3.org/2001/XMLSchema-instance">
+	<Name>FTDBookInventoryMultiselectUpdationController</Name>
+	<SourceCode>
+		<Declaration><![CDATA[
+final class FTDBookInventoryMultiselectUpdationController extends SysOperationServiceController
+{
+}
+]]></Declaration>
+		<Methods>
+			<Method>
+				<Name>Main</Name>
+				<Source><![CDATA[
+	public static void Main(Args _args)
+    {
+        FTDBookInventoryMultiselectUpdationController controller = FTDBookInventoryMultiselectUpdationController::Construct();
+
+        controller.initFromBookFormIfNeeded(_args);
+
+        if(controller.prompt())
+        {
+            controller.runOperation();
+        }
+    }
+
+]]></Source>
+			</Method>
+			<Method>
+				<Name>new</Name>
+				<Source><![CDATA[
+    protected void new(IdentifierName _className = '', 
+        IdentifierName _methodName = '', 
+        SysOperationExecutionMode _executionMode = SysOperationExecutionMode::Asynchronous)
+    {
+        super(_className, _methodName, _executionMode);
+    }
+
+]]></Source>
+			</Method>
+			<Method>
+				<Name>initFromBookFormIfNeeded</Name>
+				<Source><![CDATA[
+    public void initFromBookFormIfNeeded(Args _args)
+    {
+        FormRun callerFormRun = _args.caller();
+
+        if (callerFormRun
+            && callerFormRun.name() == formStr(FTDBook))
+        {
+            FTDBookInventoryMultiselectUpdationDataContract contract = this.getDatacontract();
+            
+            //recupera el los registros activos del formulario
+            contract.parmBookRecIdList(this.getBookActiveRecordsRecIdList(callerFormRun));
+        }
+    }
+
+]]></Source>
+			</Method>
+			<Method>
+				<Name>getBookActiveRecordsRecIdList</Name>
+				<Source><![CDATA[
+    //Multiselect en formDataSource
+    private List getBookActiveRecordsRecIdList(FormRun _callerFormRun)
+    {
+        List            retList = new List(Types::Int64);
+        FormDataSource  book_ds = _callerFormRun.dataSource(formDataSourceStr(FTDBook, FTDBookTable));
+        
+        //Recorrer registros del data source
+        //alternativa usando el helper
+        MultiSelectionHelper multiSelectionHelper = MultiSelectionHelper::construct();
+        multiSelectionHelper.parmDatasource(book_ds);
+        
+        FTDBookTable book = multiSelectionHelper.getFirst();
+
+        while(book)
+        {
+            retList.addEnd(book.RecId);
+
+            book = multiSelectionHelper.getNext();
+        }
+
+
+        //alternativa usando el DS
+        //for (FTDBookTable book = book_ds.getFirst(true) ? book_ds.getFirst(true) : book_ds.cursor();
+        //book;
+        //book = book_ds.getNext())
+        //{
+
+        //}
+        return retList;
+    }
+
+]]></Source>
+			</Method>
+			<Method>
+				<Name>Construct</Name>
+				<Source><![CDATA[
+    public static FTDBookInventoryMultiselectUpdationController Construct(SysOperationExecutionMode _executionMode = SysOperationExecutionMode::Asynchronous)
+    {
+        FTDBookInventoryMultiselectUpdationController controller =  new FTDBookInventoryMultiselectUpdationController(classStr(FTDBookInventoryMultiselectUpdationService),
+            methodStr(FTDBookInventoryMultiselectUpdationService, runProcess),
+            _executionMode);
+        
+        controller.parmDialogCaption("@ITFormacion:BulkUpdateInventory");
+
+        return controller;
+    }
+
+]]></Source>
+			</Method>
+			<Method>
+				<Name>validateParameters</Name>
+				<Source><![CDATA[
+    public boolean validateParameters()
+    {
+        boolean ret = super();
+
+        if (ret)
+        {
+            FTDBookInventoryMultiselectUpdationDataContract dataContract = this.getDatacontract();
+            ret = this.validateNewQty(dataContract.parmNewQty());
+        }
+
+        return ret;
+    }
+
+]]></Source>
+			</Method>
+			<Method>
+				<Name>validateNewQty</Name>
+				<Source><![CDATA[
+    public boolean validateNewQty(Qty _newQty)
+    {
+        if (_newQty < 0)
+        {
+            return checkfailed("@ITFormacion:TransactionWouldMakeTheTotalNegative");
+        }
+
+        return true;
+    }
+
+]]></Source>
+			</Method>
+			<Method>
+				<Name>getDatacontract</Name>
+				<Source><![CDATA[
+    public FTDBookInventoryMultiselectUpdationDataContract getDatacontract()
+    {
+        return this.getDataContractObject(identifierStr(_dataContract));
+    }
+
+]]></Source>
+			</Method>
+		</Methods>
+	</SourceCode>
+</AxClass>

@@ -129,5 +129,13 @@
 				<TypeName>FTDGenreEnum</TypeName>
 			</ReturnType>
 		</Method>
+		<Method>
+			<Name>insert</Name>
+			<Visibility>Public</Visibility>
+			<ReturnType>
+				<Tags></Tags>
+				<TypeName></TypeName>
+			</ReturnType>
+		</Method>
 	</Methods>
 </z:anyType>

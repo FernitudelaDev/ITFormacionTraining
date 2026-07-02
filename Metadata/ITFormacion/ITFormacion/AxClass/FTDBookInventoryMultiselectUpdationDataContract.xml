@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<AxClass xmlns:i="http://www.w3.org/2001/XMLSchema-instance">
+	<Name>FTDBookInventoryMultiselectUpdationDataContract</Name>
+	<SourceCode>
+		<Declaration><![CDATA[
+[DataContract, SysOperationAlwaysInitialize]
+final class FTDBookInventoryMultiselectUpdationDataContract
+{
+    List            bookRecIdList;
+    FTDInventoryQty newQty;
+
+}
+]]></Declaration>
+		<Methods>
+			<Method>
+				<Name>parmBookRecIdList</Name>
+				<Source><![CDATA[
+    //[DataMember, SysOperationControlVisibility(false)]
+    [DataMember,
+        AifCollectionType('_bookRecIdList', Types :: Int64, extendedTypeStr(RecId)),
+        SysOperationControlVisibility(false)]
+    public List parmBookRecIdList(List _bookRecIdList = bookRecIdList)
+    {
+        bookRecIdList = _bookRecIdList;
+        return bookRecIdList;
+    }
+
+]]></Source>
+			</Method>
+			<Method>
+				<Name>parmNewQty</Name>
+				<Source><![CDATA[
+    [DataMember]
+    public FTDInventoryQty parmNewQty(FTDInventoryQty _newQty = newQty)
+    {
+        newQty = _newQty;
+        return newQty;
+    }
+
+]]></Source>
+			</Method>
+		</Methods>
+	</SourceCode>
+</AxClass>

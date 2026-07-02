@@ -1,0 +1,187 @@
+<?xml version="1.0" encoding="utf-8"?>
+<AxClass xmlns:i="http://www.w3.org/2001/XMLSchema-instance">
+	<Name>FTDExamplesOfInsertsUpdatesAndDeletes</Name>
+	<SourceCode>
+		<Declaration><![CDATA[
+internal final class FTDExamplesOfInsertsUpdatesAndDeletes
+{
+}
+]]></Declaration>
+		<Methods>
+			<Method>
+				<Name>WhileSelectePlusInsertVSInsertRecordset</Name>
+				<Source><![CDATA[
+    public void WhileSelectePlusInsertVSInsertRecordset()
+    {
+        FTDBookTable bookTable;
+        FTDBookTableAlternate altBookTable;
+
+        while select bookTable
+        {
+            altBookTable.Author  = bookTable.Author;
+            altBookTable.Genre   = bookTable.Genre;
+            altBookTable.Id      = bookTable.Id;
+            altBookTable.Name    = bookTable.Name;
+            altBookTable.insert();
+        }
+
+        insert_recordset altBookTable (Id, Author, Genre, Name)
+            select Id, Author, Genre, Name from bookTable;
+    }
+
+]]></Source>
+			</Method>
+			<Method>
+				<Name>whileSelectplusDoInsertVSInsertRecordSet</Name>
+				<Source><![CDATA[
+    //Malas practicas, no ejecuta el Insert
+    public void whileSelectplusDoInsertVSInsertRecordSet()
+    {
+        FTDBookTable bookTable;
+        FTDBookTableAlternate altBookTable;
+        int recordsInsertedDoInsert;
+
+        while select bookTable
+        {
+            altBookTable.Author  = bookTable.Author;
+            altBookTable.Genre   = bookTable.Genre;
+            altBookTable.Id      = bookTable.Id;
+            altBookTable.Name    = bookTable.Name;
+            altBookTable.doInsert();
+
+            recordsInsertedDoInsert++;
+        }
+
+        altBookTable.skipDataMethods(true);
+
+        insert_recordset altBookTable (Id, Author, Genre, Name)
+            select Id, Author, Genre, Name from bookTable;
+
+        Info(strFmt("%1 records inserted using DoInsert, %2 records inserted using insertRecordset", recordsInsertedDoInsert, altBookTable.RowCount()));
+    }
+
+]]></Source>
+			</Method>
+			<Method>
+				<Name>whileSelectUpdateVSUpdateRecordset</Name>
+				<Source><![CDATA[
+    public void whileSelectUpdateVSUpdateRecordset()
+    {
+        //aquí sí ejecutaran el método update:
+
+        FTDAuthorTable authorTable;
+
+        ttsbegin;
+        while select forupdate authorTable
+            where authorTable.IsDead == NoYes::No
+            && authorTable.DeathDate > dateNull()
+        {
+            authorTable.DeathDate = dateNull();
+            //no llamamos al validate write, porque estamos haciendo identico al update recordset, pero se deberia hacer
+            authorTable.update();
+        }
+        ttscommit;
+
+        ttsbegin;
+        update_recordset authorTable
+            setting DeathDate = dateNull()
+            where authorTable.IsDead == NoYes::No
+            && authorTable.DeathDate > dateNull();
+        ttscommit;
+    }
+
+]]></Source>
+			</Method>
+			<Method>
+				<Name>whileSelectDoUpdateVSUpdateRecordsetSkipDataMethods</Name>
+				<Source><![CDATA[
+    //borrando la fecha de muerte de aquellos autores vivos
+    public void whileSelectDoUpdateVSUpdateRecordsetSkipDataMethods()
+    {
+        //aquí sí ejecutaran el método update:
+
+        FTDAuthorTable authorTable;
+
+        ttsbegin;
+        while select forupdate authorTable
+            where authorTable.IsDead == NoYes::No
+            && authorTable.DeathDate > dateNull()
+        {
+            authorTable.DeathDate = dateNull();
+            //no llamamos al validate write, porque estamos haciendo identico al update recordset, pero se deberia hacer
+            authorTable.doUpdate();
+        }
+        ttscommit;
+
+        ttsbegin;
+        authorTable.skipDataMethods(true);
+        update_recordset authorTable
+            setting DeathDate = dateNull()
+            where authorTable.IsDead == NoYes::No
+            && authorTable.DeathDate > dateNull();
+        ttscommit;
+    }
+
+]]></Source>
+			</Method>
+			<Method>
+				<Name>whileSelectPlusDeleteVsDelete_From</Name>
+				<Source><![CDATA[
+    //eliminar los registros de libros que tengan autores ya fallecidos
+    public void whileSelectPlusDeleteVsDelete_From()
+    {
+        FTDBookTable book;
+        FTDAuthorTable author;
+
+        ttsbegin;
+        while select forupdate book
+            exists join author
+            where book.Author == author.RecId
+            && author.IsDead == NoYes::Yes
+        {
+            book.delete();
+        }
+        ttscommit;
+
+        ttsbegin;
+        delete_from book
+            exists join author
+             where book.Author == author.RecId
+            && author.IsDead == NoYes::Yes;
+        ttscommit;
+    }
+
+]]></Source>
+			</Method>
+			<Method>
+				<Name>whileSelectButInsertInSet</Name>
+				<Source><![CDATA[
+    public void whileSelectButInsertInSet()
+    {
+        RecordInsertList recordInsertList = new RecordInsertList(tableNum(FTDBookTableAlternate));
+
+        FTDBookTable bookTable;
+
+        //si son de fantasía, los queremos insertar en mayúsculas y si no, en minúsculas.
+        while select bookTable
+        {
+            FTDBookTableAlternate altBookTable;
+            Name bookName = (bookTable.Genre == FTDGenreEnum::Fantasy) ? str2Capital(bookTable.Name) : strLwr(bookTable.name);
+            
+            altBookTable.Author = bookTable.Author;
+            altBookTable.Name = bookName;
+            altBookTable.Genre = bookTable.Genre;
+            altBookTable.Id = bookTable.Id;
+
+            //en lugar de hacer altBookTable.Insert()
+            recordInsertList.add(altBookTable);
+        }
+
+        recordInsertList.insertDatabase();
+    }
+
+]]></Source>
+			</Method>
+		</Methods>
+	</SourceCode>
+</AxClass>

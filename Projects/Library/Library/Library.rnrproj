@@ -77,6 +77,21 @@
       <Name>FTDBookCreationService</Name>
       <Link>Classes\FTDBookCreationService</Link>
     </Content>
+    <Content Include="AxClass\FTDBookInventoryMultiselectUpdationController">
+      <SubType>Content</SubType>
+      <Name>FTDBookInventoryMultiselectUpdationController</Name>
+      <Link>Classes\FTDBookInventoryMultiselectUpdationController</Link>
+    </Content>
+    <Content Include="AxClass\FTDBookInventoryMultiselectUpdationDataContract">
+      <SubType>Content</SubType>
+      <Name>FTDBookInventoryMultiselectUpdationDataContract</Name>
+      <Link>Classes\FTDBookInventoryMultiselectUpdationDataContract</Link>
+    </Content>
+    <Content Include="AxClass\FTDBookInventoryMultiselectUpdationService">
+      <SubType>Content</SubType>
+      <Name>FTDBookInventoryMultiselectUpdationService</Name>
+      <Link>Classes\FTDBookInventoryMultiselectUpdationService</Link>
+    </Content>
     <Content Include="AxClass\FTDBookInventoryUpdationController">
       <SubType>Content</SubType>
       <Name>FTDBookInventoryUpdationController</Name>
@@ -107,6 +122,16 @@
       <Name>FTDBookReportDataProvider</Name>
       <Link>Classes\FTDBookReportDataProvider</Link>
     </Content>
+    <Content Include="AxClass\FTDExamplesOfInsertsUpdatesAndDeletes">
+      <SubType>Content</SubType>
+      <Name>FTDExamplesOfInsertsUpdatesAndDeletes</Name>
+      <Link>Classes\FTDExamplesOfInsertsUpdatesAndDeletes</Link>
+    </Content>
+    <Content Include="AxClass\FTDExamplesOfListsAndContainers">
+      <SubType>Content</SubType>
+      <Name>FTDExamplesOfListsAndContainers</Name>
+      <Link>Classes\FTDExamplesOfListsAndContainers</Link>
+    </Content>
     <Content Include="AxClass\FTDQueryVSSelect">
       <SubType>Content</SubType>
       <Name>FTDQueryVSSelect</Name>
@@ -116,6 +141,11 @@
       <SubType>Content</SubType>
       <Name>FTDRunnableClassExample</Name>
       <Link>Classes\FTDRunnableClassExample</Link>
+    </Content>
+    <Content Include="AxClass\FTDWorkingWithGenerics">
+      <SubType>Content</SubType>
+      <Name>FTDWorkingWithGenerics</Name>
+      <Link>Classes\FTDWorkingWithGenerics</Link>
     </Content>
     <Content Include="AxClass\NumberSeqModuleCustomer_ITFormacion_Extension">
       <SubType>Content</SubType>
@@ -281,6 +311,11 @@
       <SubType>Content</SubType>
       <Name>MainMenu.ITFormacion</Name>
       <Link>Menu Extensions\MainMenu.ITFormacion</Link>
+    </Content>
+    <Content Include="AxMenuItemAction\FTDBookInventoryMultiselectUpdationController">
+      <SubType>Content</SubType>
+      <Name>FTDBookInventoryMultiselectUpdationController</Name>
+      <Link>Action Menu Items\FTDBookInventoryMultiselectUpdationController</Link>
     </Content>
     <Content Include="AxMenuItemAction\FTDBookInventoryUpdationController">
       <SubType>Content</SubType>
@@ -506,6 +541,11 @@
       <SubType>Content</SubType>
       <Name>FTDBookTable</Name>
       <Link>Tables\FTDBookTable</Link>
+    </Content>
+    <Content Include="AxTable\FTDBookTableAlternate">
+      <SubType>Content</SubType>
+      <Name>FTDBookTableAlternate</Name>
+      <Link>Tables\FTDBookTableAlternate</Link>
     </Content>
     <Content Include="AxTable\FTDtmpAuthorTable">
       <SubType>Content</SubType>

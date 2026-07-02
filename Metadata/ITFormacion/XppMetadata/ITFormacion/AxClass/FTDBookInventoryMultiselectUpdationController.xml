@@ -70,25 +70,43 @@
 			</ReturnType>
 		</Method>
 		<Method>
-			<Name>validateParameters</Name>
-			<Visibility>Public</Visibility>
+			<Name>getBookActiveRecordsRecIdList</Name>
+			<Parameters>
+				<AxMethodParameter>
+					<Tags></Tags>
+					<Type>Class</Type>
+					<TypeName>FormRun</TypeName>
+					<Name>_callerFormRun</Name>
+				</AxMethodParameter>
+			</Parameters>
 			<ReturnType>
 				<Tags></Tags>
-				<Type>Enum</Type>
-				<TypeName>boolean</TypeName>
+				<Type>Class</Type>
+				<TypeName>List</TypeName>
 			</ReturnType>
 		</Method>
 		<Method>
-			<Name>validateBook</Name>
+			<Name>Construct</Name>
+			<IsStatic>true</IsStatic>
 			<Visibility>Public</Visibility>
 			<Parameters>
 				<AxMethodParameter>
 					<Tags></Tags>
-					<Type>ExtendedDataType</Type>
-					<TypeName>FTDId</TypeName>
-					<Name>_bookId</Name>
+					<Type>Enum</Type>
+					<TypeName>SysOperationExecutionMode</TypeName>
+					<DefaultValue>SysOperationExecutionMode::Asynchronous</DefaultValue>
+					<Name>_executionMode</Name>
 				</AxMethodParameter>
 			</Parameters>
+			<ReturnType>
+				<Tags></Tags>
+				<Type>Class</Type>
+				<TypeName>FTDBookInventoryMultiselectUpdationController</TypeName>
+			</ReturnType>
+		</Method>
+		<Method>
+			<Name>validateParameters</Name>
+			<Visibility>Public</Visibility>
 			<ReturnType>
 				<Tags></Tags>
 				<Type>Enum</Type>
@@ -118,26 +136,7 @@
 			<ReturnType>
 				<Tags></Tags>
 				<Type>Class</Type>
-				<TypeName>FTDBookInventoryUpdationDataContract</TypeName>
-			</ReturnType>
-		</Method>
-		<Method>
-			<Name>Construct</Name>
-			<IsStatic>true</IsStatic>
-			<Visibility>Public</Visibility>
-			<Parameters>
-				<AxMethodParameter>
-					<Tags></Tags>
-					<Type>Enum</Type>
-					<TypeName>SysOperationExecutionMode</TypeName>
-					<DefaultValue>SysOperationExecutionMode::Asynchronous</DefaultValue>
-					<Name>_executionMode</Name>
-				</AxMethodParameter>
-			</Parameters>
-			<ReturnType>
-				<Tags></Tags>
-				<Type>Class</Type>
-				<TypeName>FTDBookInventoryUpdationController</TypeName>
+				<TypeName>FTDBookInventoryMultiselectUpdationDataContract</TypeName>
 			</ReturnType>
 		</Method>
 	</Methods>
