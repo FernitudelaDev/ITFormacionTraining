@@ -63,6 +63,21 @@
       <Name>AIBBookCreationService</Name>
       <Link>Classes\AIBBookCreationService</Link>
     </Content>
+    <Content Include="AxClass\AIBBookInventoryMultiselectUpdationController">
+      <SubType>Content</SubType>
+      <Name>AIBBookInventoryMultiselectUpdationController</Name>
+      <Link>Classes\AIBBookInventoryMultiselectUpdationController</Link>
+    </Content>
+    <Content Include="AxClass\AIBBookInventoryMultiselectUpdationDataContract">
+      <SubType>Content</SubType>
+      <Name>AIBBookInventoryMultiselectUpdationDataContract</Name>
+      <Link>Classes\AIBBookInventoryMultiselectUpdationDataContract</Link>
+    </Content>
+    <Content Include="AxClass\AIBBookInventoryMultiselectUpdationService">
+      <SubType>Content</SubType>
+      <Name>AIBBookInventoryMultiselectUpdationService</Name>
+      <Link>Classes\AIBBookInventoryMultiselectUpdationService</Link>
+    </Content>
     <Content Include="AxClass\AIBBookInventoryUpdationController">
       <SubType>Content</SubType>
       <Name>AIBBookInventoryUpdationController</Name>
@@ -78,6 +93,16 @@
       <Name>AIBBookInventoryUpdationService</Name>
       <Link>Classes\AIBBookInventoryUpdationService</Link>
     </Content>
+    <Content Include="AxClass\AIBExampleOfListAndContainers">
+      <SubType>Content</SubType>
+      <Name>AIBExampleOfListAndContainers</Name>
+      <Link>Classes\AIBExampleOfListAndContainers</Link>
+    </Content>
+    <Content Include="AxClass\AIBExamplesOfInsertUpdateAndDelete">
+      <SubType>Content</SubType>
+      <Name>AIBExamplesOfInsertUpdateAndDelete</Name>
+      <Link>Classes\AIBExamplesOfInsertUpdateAndDelete</Link>
+    </Content>
     <Content Include="AxClass\AIBQueryVSSelect">
       <SubType>Content</SubType>
       <Name>AIBQueryVSSelect</Name>
@@ -87,6 +112,11 @@
       <SubType>Content</SubType>
       <Name>AIBRunnableClassExample</Name>
       <Link>Classes\AIBRunnableClassExample</Link>
+    </Content>
+    <Content Include="AxClass\AIBWorkingWithGenerics">
+      <SubType>Content</SubType>
+      <Name>AIBWorkingWithGenerics</Name>
+      <Link>Classes\AIBWorkingWithGenerics</Link>
     </Content>
     <Content Include="AxClass\SalesLine_ITFormacion_Extension">
       <SubType>Content</SubType>
@@ -403,10 +433,20 @@
       <Name>AIBBookTable</Name>
       <Link>Tables\AIBBookTable</Link>
     </Content>
+    <Content Include="AxTable\AIBBookTableAlternate">
+      <SubType>Content</SubType>
+      <Name>AIBBookTableAlternate</Name>
+      <Link>Tables\AIBBookTableAlternate</Link>
+    </Content>
     <Content Include="AxTable\AIBtmpAuthorTable">
       <SubType>Content</SubType>
       <Name>AIBtmpAuthorTable</Name>
       <Link>Tables\AIBtmpAuthorTable</Link>
+    </Content>
+    <Content Include="AxTable\AIBtmpBookTable">
+      <SubType>Content</SubType>
+      <Name>AIBtmpBookTable</Name>
+      <Link>Tables\AIBtmpBookTable</Link>
     </Content>
     <Content Include="AxView\AIBBookAuthorFantasyView">
       <SubType>Content</SubType>

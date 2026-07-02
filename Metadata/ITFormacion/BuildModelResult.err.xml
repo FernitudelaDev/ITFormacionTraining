@@ -1,13 +1,520 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Diagnostics
-  GenerationTime="2026-06-26T07:12:31.7453746+00:00">
+  GenerationTime="2026-07-02T11:52:47.4289783+00:00">
   <Items>
     <Diagnostic>
-      <DiagnosticType>FormPatternValidation</DiagnosticType>
+      <DiagnosticType>MetadataProvider</DiagnosticType>
       <Severity>Error</Severity>
-      <Path>AxForm/AIBBookTransactions/Design/Controls/DetailsTab/TransactionTabPage</Path>
-      <Moniker>PatternControlNotAllowed</Moniker>
-      <Message>Control 'AxForm/AIBBookTransactions/Design/Controls/DetailsTab/TransactionTabPage' has child 'TransactionActionPane' which is not allowed at its current location by pattern 'Toolbar and List'.</Message>
+      <Path>dynamics://View/RetailSalesTableChannelAttributeView</Path>
+      <ElementType>View</ElementType>
+      <Moniker>FieldEnumTypeNotFound</Moniker>
+      <Line>0</Line>
+      <Column>0</Column>
+      <Message>Enum type 'RetailChannelAttributeModifier' for the field 'Modifier' is not found.</Message>
+    </Diagnostic>
+    <Diagnostic>
+      <DiagnosticType>Metadata</DiagnosticType>
+      <Severity>Error</Severity>
+      <Path>AxDataEntityViewExtension/SalesOrderHeaderV4Entity.ITFormacion/Relations/DefaultDimensionDimensionSet/RelatedDataEntity</Path>
+      <Moniker>TableDoesNotExist</Moniker>
+      <Message>Table 'DimensionSetEntity' does not exist.</Message>
+    </Diagnostic>
+    <Diagnostic>
+      <DiagnosticType>Metadata</DiagnosticType>
+      <Severity>Error</Severity>
+      <Path>AxDataEntityViewExtension/SalesOrderHeaderV4Entity.ITFormacion/ViewMetadata/DataSources/SalesTable/DataSources/HcmWorker_OrderResponsible/Table</Path>
+      <Moniker>TableDoesNotExist</Moniker>
+      <Message>Table 'HcmWorker' does not exist.</Message>
+    </Diagnostic>
+    <Diagnostic>
+      <DiagnosticType>Metadata</DiagnosticType>
+      <Severity>Error</Severity>
+      <Path>AxDataEntityViewExtension/SalesOrderHeaderV4Entity.ITFormacion/ViewMetadata/DataSources/SalesTable/DataSources/HcmWorker_OrderTaker/Table</Path>
+      <Moniker>TableDoesNotExist</Moniker>
+      <Message>Table 'HcmWorker' does not exist.</Message>
+    </Diagnostic>
+    <Diagnostic>
+      <DiagnosticType>Metadata</DiagnosticType>
+      <Severity>Error</Severity>
+      <Path>AxDataEntityViewExtension/SalesOrderHeaderV4Entity.ITFormacion/ViewMetadata/DataSources/SalesTable/DataSources/DefaultDimensionDAVS/Table</Path>
+      <Moniker>TableDoesNotExist</Moniker>
+      <Message>Table 'DimensionSetEntity' does not exist.</Message>
+    </Diagnostic>
+    <Diagnostic>
+      <DiagnosticType>Metadata</DiagnosticType>
+      <Severity>Error</Severity>
+      <Path>AxDataEntityViewExtension/SalesOrderHeaderV4Entity.ITFormacion/ViewMetadata/DataSources/SalesTable/DataSources/LogisticsPostalAddressBaseEntity/Table</Path>
+      <Moniker>TableDoesNotExist</Moniker>
+      <Message>Table 'LogisticsPostalAddressBaseEntity' does not exist.</Message>
+    </Diagnostic>
+    <Diagnostic>
+      <DiagnosticType>Metadata</DiagnosticType>
+      <Severity>Error</Severity>
+      <Path>AxDataEntityViewExtension/SalesOrderHeaderV4Entity.ITFormacion/ViewMetadata/DataSources/SalesTable/DataSources/CreditNoteReasonTableRef/Table</Path>
+      <Moniker>TableDoesNotExist</Moniker>
+      <Message>Table 'ReasonTableRef' does not exist.</Message>
+    </Diagnostic>
+    <Diagnostic>
+      <DiagnosticType>Metadata</DiagnosticType>
+      <Severity>Error</Severity>
+      <Path>AxDataEntityViewExtension/SalesOrderHeaderV4Entity.ITFormacion/ViewMetadata/DataSources/SalesTable/DataSources/FinTag/Table</Path>
+      <Moniker>TableDoesNotExist</Moniker>
+      <Message>Table 'FinTag' does not exist.</Message>
+    </Diagnostic>
+    <Diagnostic>
+      <DiagnosticType>Metadata</DiagnosticType>
+      <Severity>Error</Severity>
+      <Path>AxDataEntityViewExtension/SalesOrderHeaderV4Entity.ITFormacion/ViewMetadata/DataSources/LogisticsPostalAddressBaseEntity/DataField</Path>
+      <Moniker>DataSourceDoesNotExistOrMissingReference</Moniker>
+      <Message>Data source 'LogisticsPostalAddressBaseEntity' does not exist or missing data source reference.</Message>
+    </Diagnostic>
+    <Diagnostic>
+      <DiagnosticType>Metadata</DiagnosticType>
+      <Severity>Error</Severity>
+      <Path>AxDataEntityViewExtension/SalesOrderHeaderV4Entity.ITFormacion/Fields/ValidFrom/DataField</Path>
+      <Moniker>UnableToResolveFieldType</Moniker>
+      <Message>Unable to resolve field type.</Message>
+    </Diagnostic>
+    <Diagnostic>
+      <DiagnosticType>Metadata</DiagnosticType>
+      <Severity>Error</Severity>
+      <Path>AxDataEntityViewExtension/SalesOrderHeaderV4Entity.ITFormacion/Fields/ValidTo/DataField</Path>
+      <Moniker>UnableToResolveFieldType</Moniker>
+      <Message>Unable to resolve field type.</Message>
+    </Diagnostic>
+    <Diagnostic>
+      <DiagnosticType>Metadata</DiagnosticType>
+      <Severity>Error</Severity>
+      <Path>AxDataEntityViewExtension/SalesOrderHeaderV4Entity.ITFormacion/Fields/OrderResponsiblePersonnelNumber/DataField</Path>
+      <Moniker>DataSourceFieldDoesNotExist</Moniker>
+      <Message>Field 'PersonnelNumber' does not exist on data source 'HcmWorker_OrderResponsible'.</Message>
+    </Diagnostic>
+    <Diagnostic>
+      <DiagnosticType>Metadata</DiagnosticType>
+      <Severity>Error</Severity>
+      <Path>AxDataEntityViewExtension/SalesOrderHeaderV4Entity.ITFormacion/Fields/OrderTakerPersonnelNumber/DataField</Path>
+      <Moniker>DataSourceFieldDoesNotExist</Moniker>
+      <Message>Field 'PersonnelNumber' does not exist on data source 'HcmWorker_OrderTaker'.</Message>
+    </Diagnostic>
+    <Diagnostic>
+      <DiagnosticType>Metadata</DiagnosticType>
+      <Severity>Error</Severity>
+      <Path>AxDataEntityViewExtension/SalesOrderHeaderV4Entity.ITFormacion/Fields/DefaultLedgerDimensionDisplayValue/DataField</Path>
+      <Moniker>DataSourceFieldDoesNotExist</Moniker>
+      <Message>Field 'DisplayValue' does not exist on data source 'DefaultDimensionDAVS'.</Message>
+    </Diagnostic>
+    <Diagnostic>
+      <DiagnosticType>Metadata</DiagnosticType>
+      <Severity>Error</Severity>
+      <Path>AxDataEntityViewExtension/SalesOrderHeaderV4Entity.ITFormacion/Fields/DeliveryPostalAddressRecId/DataField</Path>
+      <Moniker>DataSourceFieldDoesNotExist</Moniker>
+      <Message>Field 'AddressRecId' does not exist on data source 'LogisticsPostalAddressBaseEntity'.</Message>
+    </Diagnostic>
+    <Diagnostic>
+      <DiagnosticType>Metadata</DiagnosticType>
+      <Severity>Error</Severity>
+      <Path>AxDataEntityViewExtension/SalesOrderHeaderV4Entity.ITFormacion/Fields/FormattedDelveryAddress/DataField</Path>
+      <Moniker>DataSourceFieldDoesNotExist</Moniker>
+      <Message>Field 'FormattedDeliveryAddress' does not exist on data source 'LogisticsPostalAddressBaseEntity'.</Message>
+    </Diagnostic>
+    <Diagnostic>
+      <DiagnosticType>Metadata</DiagnosticType>
+      <Severity>Error</Severity>
+      <Path>AxDataEntityViewExtension/SalesOrderHeaderV4Entity.ITFormacion/Fields/DeliveryBuildingCompliment/DataField</Path>
+      <Moniker>DataSourceFieldDoesNotExist</Moniker>
+      <Message>Field 'BuildingCompliment' does not exist on data source 'LogisticsPostalAddressBaseEntity'.</Message>
+    </Diagnostic>
+    <Diagnostic>
+      <DiagnosticType>Metadata</DiagnosticType>
+      <Severity>Error</Severity>
+      <Path>AxDataEntityViewExtension/SalesOrderHeaderV4Entity.ITFormacion/Fields/DeliveryAddressCity/DataField</Path>
+      <Moniker>DataSourceFieldDoesNotExist</Moniker>
+      <Message>Field 'City' does not exist on data source 'LogisticsPostalAddressBaseEntity'.</Message>
+    </Diagnostic>
+    <Diagnostic>
+      <DiagnosticType>Metadata</DiagnosticType>
+      <Severity>Error</Severity>
+      <Path>AxDataEntityViewExtension/SalesOrderHeaderV4Entity.ITFormacion/Fields/DeliveryAddressCountryRegionId/DataField</Path>
+      <Moniker>DataSourceFieldDoesNotExist</Moniker>
+      <Message>Field 'CountryRegionId' does not exist on data source 'LogisticsPostalAddressBaseEntity'.</Message>
+    </Diagnostic>
+    <Diagnostic>
+      <DiagnosticType>Metadata</DiagnosticType>
+      <Severity>Error</Severity>
+      <Path>AxDataEntityViewExtension/SalesOrderHeaderV4Entity.ITFormacion/Fields/DeliveryAddressCountryRegionISOCode/DataField</Path>
+      <Moniker>DataSourceFieldDoesNotExist</Moniker>
+      <Message>Field 'CountryRegionISOCode' does not exist on data source 'LogisticsPostalAddressBaseEntity'.</Message>
+    </Diagnostic>
+    <Diagnostic>
+      <DiagnosticType>Metadata</DiagnosticType>
+      <Severity>Error</Severity>
+      <Path>AxDataEntityViewExtension/SalesOrderHeaderV4Entity.ITFormacion/Fields/DeliveryAddressCountyId/DataField</Path>
+      <Moniker>DataSourceFieldDoesNotExist</Moniker>
+      <Message>Field 'County' does not exist on data source 'LogisticsPostalAddressBaseEntity'.</Message>
+    </Diagnostic>
+    <Diagnostic>
+      <DiagnosticType>Metadata</DiagnosticType>
+      <Severity>Error</Severity>
+      <Path>AxDataEntityViewExtension/SalesOrderHeaderV4Entity.ITFormacion/Fields/DeliveryAddressDescription/DataField</Path>
+      <Moniker>DataSourceFieldDoesNotExist</Moniker>
+      <Message>Field 'Description' does not exist on data source 'LogisticsPostalAddressBaseEntity'.</Message>
+    </Diagnostic>
+    <Diagnostic>
+      <DiagnosticType>Metadata</DiagnosticType>
+      <Severity>Error</Severity>
+      <Path>AxDataEntityViewExtension/SalesOrderHeaderV4Entity.ITFormacion/Fields/DeliveryAddressDistrictName/DataField</Path>
+      <Moniker>DataSourceFieldDoesNotExist</Moniker>
+      <Message>Field 'DistrictName' does not exist on data source 'LogisticsPostalAddressBaseEntity'.</Message>
+    </Diagnostic>
+    <Diagnostic>
+      <DiagnosticType>Metadata</DiagnosticType>
+      <Severity>Error</Severity>
+      <Path>AxDataEntityViewExtension/SalesOrderHeaderV4Entity.ITFormacion/Fields/DeliveryAddressDunsNumber/DataField</Path>
+      <Moniker>DataSourceFieldDoesNotExist</Moniker>
+      <Message>Field 'DunsNumber' does not exist on data source 'LogisticsPostalAddressBaseEntity'.</Message>
+    </Diagnostic>
+    <Diagnostic>
+      <DiagnosticType>Metadata</DiagnosticType>
+      <Severity>Error</Severity>
+      <Path>AxDataEntityViewExtension/SalesOrderHeaderV4Entity.ITFormacion/Fields/IsDeliveryAddressPrivate/DataField</Path>
+      <Moniker>DataSourceFieldDoesNotExist</Moniker>
+      <Message>Field 'IsPrivate' does not exist on data source 'LogisticsPostalAddressBaseEntity'.</Message>
+    </Diagnostic>
+    <Diagnostic>
+      <DiagnosticType>Metadata</DiagnosticType>
+      <Severity>Error</Severity>
+      <Path>AxDataEntityViewExtension/SalesOrderHeaderV4Entity.ITFormacion/Fields/DeliveryAddressLatitude/DataField</Path>
+      <Moniker>DataSourceFieldDoesNotExist</Moniker>
+      <Message>Field 'Latitude' does not exist on data source 'LogisticsPostalAddressBaseEntity'.</Message>
+    </Diagnostic>
+    <Diagnostic>
+      <DiagnosticType>Metadata</DiagnosticType>
+      <Severity>Error</Severity>
+      <Path>AxDataEntityViewExtension/SalesOrderHeaderV4Entity.ITFormacion/Fields/DeliveryAddressLocationId/DataField</Path>
+      <Moniker>DataSourceFieldDoesNotExist</Moniker>
+      <Message>Field 'LocationId' does not exist on data source 'LogisticsPostalAddressBaseEntity'.</Message>
+    </Diagnostic>
+    <Diagnostic>
+      <DiagnosticType>Metadata</DiagnosticType>
+      <Severity>Error</Severity>
+      <Path>AxDataEntityViewExtension/SalesOrderHeaderV4Entity.ITFormacion/Fields/DeliveryAddressLongitude/DataField</Path>
+      <Moniker>DataSourceFieldDoesNotExist</Moniker>
+      <Message>Field 'Longitude' does not exist on data source 'LogisticsPostalAddressBaseEntity'.</Message>
+    </Diagnostic>
+    <Diagnostic>
+      <DiagnosticType>Metadata</DiagnosticType>
+      <Severity>Error</Severity>
+      <Path>AxDataEntityViewExtension/SalesOrderHeaderV4Entity.ITFormacion/Fields/DeliveryAddressPostBox/DataField</Path>
+      <Moniker>DataSourceFieldDoesNotExist</Moniker>
+      <Message>Field 'PostBox' does not exist on data source 'LogisticsPostalAddressBaseEntity'.</Message>
+    </Diagnostic>
+    <Diagnostic>
+      <DiagnosticType>Metadata</DiagnosticType>
+      <Severity>Error</Severity>
+      <Path>AxDataEntityViewExtension/SalesOrderHeaderV4Entity.ITFormacion/Fields/DeliveryAddressStateId/DataField</Path>
+      <Moniker>DataSourceFieldDoesNotExist</Moniker>
+      <Message>Field 'State' does not exist on data source 'LogisticsPostalAddressBaseEntity'.</Message>
+    </Diagnostic>
+    <Diagnostic>
+      <DiagnosticType>Metadata</DiagnosticType>
+      <Severity>Error</Severity>
+      <Path>AxDataEntityViewExtension/SalesOrderHeaderV4Entity.ITFormacion/Fields/DeliveryAddressStreet/DataField</Path>
+      <Moniker>DataSourceFieldDoesNotExist</Moniker>
+      <Message>Field 'Street' does not exist on data source 'LogisticsPostalAddressBaseEntity'.</Message>
+    </Diagnostic>
+    <Diagnostic>
+      <DiagnosticType>Metadata</DiagnosticType>
+      <Severity>Error</Severity>
+      <Path>AxDataEntityViewExtension/SalesOrderHeaderV4Entity.ITFormacion/Fields/DeliveryAddressStreetNumber/DataField</Path>
+      <Moniker>DataSourceFieldDoesNotExist</Moniker>
+      <Message>Field 'StreetNumber' does not exist on data source 'LogisticsPostalAddressBaseEntity'.</Message>
+    </Diagnostic>
+    <Diagnostic>
+      <DiagnosticType>Metadata</DiagnosticType>
+      <Severity>Error</Severity>
+      <Path>AxDataEntityViewExtension/SalesOrderHeaderV4Entity.ITFormacion/Fields/DeliveryValidFrom/DataField</Path>
+      <Moniker>DataSourceFieldDoesNotExist</Moniker>
+      <Message>Field 'ValidFrom' does not exist on data source 'LogisticsPostalAddressBaseEntity'.</Message>
+    </Diagnostic>
+    <Diagnostic>
+      <DiagnosticType>Metadata</DiagnosticType>
+      <Severity>Error</Severity>
+      <Path>AxDataEntityViewExtension/SalesOrderHeaderV4Entity.ITFormacion/Fields/DeliveryValidTo/DataField</Path>
+      <Moniker>DataSourceFieldDoesNotExist</Moniker>
+      <Message>Field 'ValidTo' does not exist on data source 'LogisticsPostalAddressBaseEntity'.</Message>
+    </Diagnostic>
+    <Diagnostic>
+      <DiagnosticType>Metadata</DiagnosticType>
+      <Severity>Error</Severity>
+      <Path>AxDataEntityViewExtension/SalesOrderHeaderV4Entity.ITFormacion/Fields/DeliveryAddressTimeZone/DataField</Path>
+      <Moniker>DataSourceFieldDoesNotExist</Moniker>
+      <Message>Field 'TimeZone' does not exist on data source 'LogisticsPostalAddressBaseEntity'.</Message>
+    </Diagnostic>
+    <Diagnostic>
+      <DiagnosticType>Metadata</DiagnosticType>
+      <Severity>Error</Severity>
+      <Path>AxDataEntityViewExtension/SalesOrderHeaderV4Entity.ITFormacion/Fields/DeliveryAddressZipCode/DataField</Path>
+      <Moniker>DataSourceFieldDoesNotExist</Moniker>
+      <Message>Field 'ZipCode' does not exist on data source 'LogisticsPostalAddressBaseEntity'.</Message>
+    </Diagnostic>
+    <Diagnostic>
+      <DiagnosticType>Metadata</DiagnosticType>
+      <Severity>Error</Severity>
+      <Path>AxDataEntityViewExtension/SalesOrderHeaderV4Entity.ITFormacion/Fields/DeliveryAddressCityInKana/DataField</Path>
+      <Moniker>DataSourceFieldDoesNotExist</Moniker>
+      <Message>Field 'CityInKana' does not exist on data source 'LogisticsPostalAddressBaseEntity'.</Message>
+    </Diagnostic>
+    <Diagnostic>
+      <DiagnosticType>Metadata</DiagnosticType>
+      <Severity>Error</Severity>
+      <Path>AxDataEntityViewExtension/SalesOrderHeaderV4Entity.ITFormacion/Fields/DeliveryAddressStreetInKana/DataField</Path>
+      <Moniker>DataSourceFieldDoesNotExist</Moniker>
+      <Message>Field 'StreetInKana' does not exist on data source 'LogisticsPostalAddressBaseEntity'.</Message>
+    </Diagnostic>
+    <Diagnostic>
+      <DiagnosticType>Metadata</DiagnosticType>
+      <Severity>Error</Severity>
+      <Path>AxDataEntityViewExtension/SalesOrderHeaderV4Entity.ITFormacion/Fields/CreditNoteReasonCode/DataField</Path>
+      <Moniker>DataSourceFieldDoesNotExist</Moniker>
+      <Message>Field 'Reason' does not exist on data source 'CreditNoteReasonTableRef'.</Message>
+    </Diagnostic>
+    <Diagnostic>
+      <DiagnosticType>Metadata</DiagnosticType>
+      <Severity>Error</Severity>
+      <Path>AxDataEntityViewExtension/SalesOrderHeaderV4Entity.ITFormacion/Fields/InvoiceAddressStreet/DataField</Path>
+      <Moniker>DataSourceFieldDoesNotExist</Moniker>
+      <Message>Field 'Street' does not exist on data source 'CustDefaultInvoiceAddress'.</Message>
+    </Diagnostic>
+    <Diagnostic>
+      <DiagnosticType>Metadata</DiagnosticType>
+      <Severity>Error</Severity>
+      <Path>AxDataEntityViewExtension/SalesOrderHeaderV4Entity.ITFormacion/Fields/FormattedInvoiceAddress/DataField</Path>
+      <Moniker>DataSourceFieldDoesNotExist</Moniker>
+      <Message>Field 'Address' does not exist on data source 'CustDefaultInvoiceAddress'.</Message>
+    </Diagnostic>
+    <Diagnostic>
+      <DiagnosticType>Metadata</DiagnosticType>
+      <Severity>Error</Severity>
+      <Path>AxDataEntityViewExtension/SalesOrderHeaderV4Entity.ITFormacion/Fields/InvoiceBuildingCompliment/DataField</Path>
+      <Moniker>DataSourceFieldDoesNotExist</Moniker>
+      <Message>Field 'BuildingCompliment' does not exist on data source 'CustDefaultInvoiceAddress'.</Message>
+    </Diagnostic>
+    <Diagnostic>
+      <DiagnosticType>Metadata</DiagnosticType>
+      <Severity>Error</Severity>
+      <Path>AxDataEntityViewExtension/SalesOrderHeaderV4Entity.ITFormacion/Fields/InvoiceAddressCity/DataField</Path>
+      <Moniker>DataSourceFieldDoesNotExist</Moniker>
+      <Message>Field 'City' does not exist on data source 'CustDefaultInvoiceAddress'.</Message>
+    </Diagnostic>
+    <Diagnostic>
+      <DiagnosticType>Metadata</DiagnosticType>
+      <Severity>Error</Severity>
+      <Path>AxDataEntityViewExtension/SalesOrderHeaderV4Entity.ITFormacion/Fields/InvoiceAddressCountryRegionId/DataField</Path>
+      <Moniker>DataSourceFieldDoesNotExist</Moniker>
+      <Message>Field 'CountryRegionId' does not exist on data source 'CustDefaultInvoiceAddress'.</Message>
+    </Diagnostic>
+    <Diagnostic>
+      <DiagnosticType>Metadata</DiagnosticType>
+      <Severity>Error</Severity>
+      <Path>AxDataEntityViewExtension/SalesOrderHeaderV4Entity.ITFormacion/Fields/InvoiceAddressCountyId/DataField</Path>
+      <Moniker>DataSourceFieldDoesNotExist</Moniker>
+      <Message>Field 'County' does not exist on data source 'CustDefaultInvoiceAddress'.</Message>
+    </Diagnostic>
+    <Diagnostic>
+      <DiagnosticType>Metadata</DiagnosticType>
+      <Severity>Error</Severity>
+      <Path>AxDataEntityViewExtension/SalesOrderHeaderV4Entity.ITFormacion/Fields/InvoiceAddressDistrictName/DataField</Path>
+      <Moniker>DataSourceFieldDoesNotExist</Moniker>
+      <Message>Field 'DistrictName' does not exist on data source 'CustDefaultInvoiceAddress'.</Message>
+    </Diagnostic>
+    <Diagnostic>
+      <DiagnosticType>Metadata</DiagnosticType>
+      <Severity>Error</Severity>
+      <Path>AxDataEntityViewExtension/SalesOrderHeaderV4Entity.ITFormacion/Fields/IsInvoiceAddressPrivate/DataField</Path>
+      <Moniker>DataSourceFieldDoesNotExist</Moniker>
+      <Message>Field 'IsPrivate' does not exist on data source 'CustDefaultInvoiceAddress'.</Message>
+    </Diagnostic>
+    <Diagnostic>
+      <DiagnosticType>Metadata</DiagnosticType>
+      <Severity>Error</Severity>
+      <Path>AxDataEntityViewExtension/SalesOrderHeaderV4Entity.ITFormacion/Fields/InvoiceAddressLatitude/DataField</Path>
+      <Moniker>DataSourceFieldDoesNotExist</Moniker>
+      <Message>Field 'Latitude' does not exist on data source 'CustDefaultInvoiceAddress'.</Message>
+    </Diagnostic>
+    <Diagnostic>
+      <DiagnosticType>Metadata</DiagnosticType>
+      <Severity>Error</Severity>
+      <Path>AxDataEntityViewExtension/SalesOrderHeaderV4Entity.ITFormacion/Fields/InvoiceAddressLongitude/DataField</Path>
+      <Moniker>DataSourceFieldDoesNotExist</Moniker>
+      <Message>Field 'Longitude' does not exist on data source 'CustDefaultInvoiceAddress'.</Message>
+    </Diagnostic>
+    <Diagnostic>
+      <DiagnosticType>Metadata</DiagnosticType>
+      <Severity>Error</Severity>
+      <Path>AxDataEntityViewExtension/SalesOrderHeaderV4Entity.ITFormacion/Fields/InvoiceAddressPostBox/DataField</Path>
+      <Moniker>DataSourceFieldDoesNotExist</Moniker>
+      <Message>Field 'PostBox' does not exist on data source 'CustDefaultInvoiceAddress'.</Message>
+    </Diagnostic>
+    <Diagnostic>
+      <DiagnosticType>Metadata</DiagnosticType>
+      <Severity>Error</Severity>
+      <Path>AxDataEntityViewExtension/SalesOrderHeaderV4Entity.ITFormacion/Fields/InvoiceAddressStateId/DataField</Path>
+      <Moniker>DataSourceFieldDoesNotExist</Moniker>
+      <Message>Field 'State' does not exist on data source 'CustDefaultInvoiceAddress'.</Message>
+    </Diagnostic>
+    <Diagnostic>
+      <DiagnosticType>Metadata</DiagnosticType>
+      <Severity>Error</Severity>
+      <Path>AxDataEntityViewExtension/SalesOrderHeaderV4Entity.ITFormacion/Fields/InvoiceAddressStreetNumber/DataField</Path>
+      <Moniker>DataSourceFieldDoesNotExist</Moniker>
+      <Message>Field 'StreetNumber' does not exist on data source 'CustDefaultInvoiceAddress'.</Message>
+    </Diagnostic>
+    <Diagnostic>
+      <DiagnosticType>Metadata</DiagnosticType>
+      <Severity>Error</Severity>
+      <Path>AxDataEntityViewExtension/SalesOrderHeaderV4Entity.ITFormacion/Fields/InvoiceAddressTimeZone/DataField</Path>
+      <Moniker>DataSourceFieldDoesNotExist</Moniker>
+      <Message>Field 'TimeZone' does not exist on data source 'CustDefaultInvoiceAddress'.</Message>
+    </Diagnostic>
+    <Diagnostic>
+      <DiagnosticType>Metadata</DiagnosticType>
+      <Severity>Error</Severity>
+      <Path>AxDataEntityViewExtension/SalesOrderHeaderV4Entity.ITFormacion/Fields/InvoiceAddressZipCode/DataField</Path>
+      <Moniker>DataSourceFieldDoesNotExist</Moniker>
+      <Message>Field 'ZipCode' does not exist on data source 'CustDefaultInvoiceAddress'.</Message>
+    </Diagnostic>
+    <Diagnostic>
+      <DiagnosticType>Metadata</DiagnosticType>
+      <Severity>Error</Severity>
+      <Path>AxDataEntityViewExtension/SalesOrderHeaderV4Entity.ITFormacion/Fields/InvoiceAddressCityInKana/DataField</Path>
+      <Moniker>DataSourceFieldDoesNotExist</Moniker>
+      <Message>Field 'CityInKana' does not exist on data source 'CustDefaultInvoiceAddress'.</Message>
+    </Diagnostic>
+    <Diagnostic>
+      <DiagnosticType>Metadata</DiagnosticType>
+      <Severity>Error</Severity>
+      <Path>AxDataEntityViewExtension/SalesOrderHeaderV4Entity.ITFormacion/Fields/InvoiceAddressStreetInKana/DataField</Path>
+      <Moniker>DataSourceFieldDoesNotExist</Moniker>
+      <Message>Field 'StreetInKana' does not exist on data source 'CustDefaultInvoiceAddress'.</Message>
+    </Diagnostic>
+    <Diagnostic>
+      <DiagnosticType>Metadata</DiagnosticType>
+      <Severity>Error</Severity>
+      <Path>AxDataEntityViewExtension/SalesOrderHeaderV4Entity.ITFormacion/Fields/InvoiceValidTo/DataField</Path>
+      <Moniker>DataSourceFieldDoesNotExist</Moniker>
+      <Message>Field 'ValidTo' does not exist on data source 'CustDefaultInvoiceAddress'.</Message>
+    </Diagnostic>
+    <Diagnostic>
+      <DiagnosticType>Metadata</DiagnosticType>
+      <Severity>Error</Severity>
+      <Path>AxDataEntityViewExtension/SalesOrderHeaderV4Entity.ITFormacion/Fields/InvoiceValidFrom/DataField</Path>
+      <Moniker>DataSourceFieldDoesNotExist</Moniker>
+      <Message>Field 'ValidFrom' does not exist on data source 'CustDefaultInvoiceAddress'.</Message>
+    </Diagnostic>
+    <Diagnostic>
+      <DiagnosticType>Metadata</DiagnosticType>
+      <Severity>Error</Severity>
+      <Path>AxDataEntityViewExtension/SalesOrderHeaderV4Entity.ITFormacion/Fields/InvoiceAddressCountryRegionISOCode/DataField</Path>
+      <Moniker>DataSourceFieldDoesNotExist</Moniker>
+      <Message>Field 'CountryRegionISOCode' does not exist on data source 'CustDefaultInvoiceAddress'.</Message>
+    </Diagnostic>
+    <Diagnostic>
+      <DiagnosticType>Metadata</DiagnosticType>
+      <Severity>Error</Severity>
+      <Path>AxDataEntityViewExtension/SalesOrderHeaderV4Entity.ITFormacion/Fields/ExcludeFromMasterPlanning/ConfigurationKey</Path>
+      <Moniker>ConfigurationKeyDoesNotExist</Moniker>
+      <Message>Configuration key 'Req' does not exist.</Message>
+    </Diagnostic>
+    <Diagnostic>
+      <DiagnosticType>Metadata</DiagnosticType>
+      <Severity>Error</Severity>
+      <Path>AxDataEntityViewExtension/SalesOrderHeaderV4Entity.ITFormacion/Fields/FinTagDisplayValue/DataField</Path>
+      <Moniker>DataSourceFieldDoesNotExist</Moniker>
+      <Message>Field 'DisplayValue' does not exist on data source 'FinTag'.</Message>
+    </Diagnostic>
+    <Diagnostic>
+      <DiagnosticType>Metadata</DiagnosticType>
+      <Severity>Error</Severity>
+      <Path>AxDataEntityView/SalesOrderHeaderV4Entity/Metadata/SalesTable/DataSources/HcmWorker_OrderResponsible/Relations/QueryDataSourceRelation1/TableField</Path>
+      <Moniker>MissingTableField</Moniker>
+      <Message>Failed to locate table field for HcmWorker.RecId.</Message>
+    </Diagnostic>
+    <Diagnostic>
+      <DiagnosticType>Metadata</DiagnosticType>
+      <Severity>Error</Severity>
+      <Path>AxDataEntityView/SalesOrderHeaderV4Entity/Metadata/SalesTable/DataSources/HcmWorker_OrderResponsible</Path>
+      <Moniker>CouldNotFindTableOrViewOrDataEntity</Moniker>
+      <Message>The table/view/data entity 'HcmWorker_OrderResponsible' could not be found.</Message>
+    </Diagnostic>
+    <Diagnostic>
+      <DiagnosticType>Metadata</DiagnosticType>
+      <Severity>Error</Severity>
+      <Path>AxDataEntityView/SalesOrderHeaderV4Entity/Metadata/SalesTable/DataSources/HcmWorker_OrderTaker/Relations/QueryDataSourceRelation1/TableField</Path>
+      <Moniker>MissingTableField</Moniker>
+      <Message>Failed to locate table field for HcmWorker.RecId.</Message>
+    </Diagnostic>
+    <Diagnostic>
+      <DiagnosticType>Metadata</DiagnosticType>
+      <Severity>Error</Severity>
+      <Path>AxDataEntityView/SalesOrderHeaderV4Entity/Metadata/SalesTable/DataSources/HcmWorker_OrderTaker</Path>
+      <Moniker>CouldNotFindTableOrViewOrDataEntity</Moniker>
+      <Message>The table/view/data entity 'HcmWorker_OrderTaker' could not be found.</Message>
+    </Diagnostic>
+    <Diagnostic>
+      <DiagnosticType>Metadata</DiagnosticType>
+      <Severity>Error</Severity>
+      <Path>AxDataEntityView/SalesOrderHeaderV4Entity/Metadata/SalesTable/DataSources/DefaultDimensionDAVS/Relations/DefaultDimensionDAVS/TableField</Path>
+      <Moniker>MissingTableField</Moniker>
+      <Message>Failed to locate table field for DimensionSetEntity.RecId.</Message>
+    </Diagnostic>
+    <Diagnostic>
+      <DiagnosticType>Metadata</DiagnosticType>
+      <Severity>Error</Severity>
+      <Path>AxDataEntityView/SalesOrderHeaderV4Entity/Metadata/SalesTable/DataSources/DefaultDimensionDAVS</Path>
+      <Moniker>CouldNotFindTableOrViewOrDataEntity</Moniker>
+      <Message>The table/view/data entity 'DefaultDimensionDAVS' could not be found.</Message>
+    </Diagnostic>
+    <Diagnostic>
+      <DiagnosticType>Metadata</DiagnosticType>
+      <Severity>Error</Severity>
+      <Path>AxDataEntityView/SalesOrderHeaderV4Entity/Metadata/SalesTable/DataSources/LogisticsPostalAddressBaseEntity/Relations/QueryDataSourceRelation1/TableField</Path>
+      <Moniker>MissingTableField</Moniker>
+      <Message>Failed to locate table field for LogisticsPostalAddressBaseEntity.AddressRecId.</Message>
+    </Diagnostic>
+    <Diagnostic>
+      <DiagnosticType>Metadata</DiagnosticType>
+      <Severity>Error</Severity>
+      <Path>AxDataEntityView/SalesOrderHeaderV4Entity/Metadata/SalesTable/DataSources/LogisticsPostalAddressBaseEntity</Path>
+      <Moniker>CouldNotFindTableOrViewOrDataEntity</Moniker>
+      <Message>The table/view/data entity 'LogisticsPostalAddressBaseEntity' could not be found.</Message>
+    </Diagnostic>
+    <Diagnostic>
+      <DiagnosticType>Metadata</DiagnosticType>
+      <Severity>Error</Severity>
+      <Path>AxDataEntityView/SalesOrderHeaderV4Entity/Metadata/SalesTable/DataSources/CreditNoteReasonTableRef/Relations/QueryDataSourceRelation1/RelationHolderEntity</Path>
+      <Moniker>CouldNotFindTableOrViewOrDataEntity</Moniker>
+      <Message>The table/view/data entity 'ReasonTableRef' could not be found.</Message>
+    </Diagnostic>
+    <Diagnostic>
+      <DiagnosticType>Metadata</DiagnosticType>
+      <Severity>Error</Severity>
+      <Path>AxDataEntityView/SalesOrderHeaderV4Entity/Metadata/SalesTable/DataSources/CreditNoteReasonTableRef</Path>
+      <Moniker>CouldNotFindTableOrViewOrDataEntity</Moniker>
+      <Message>The table/view/data entity 'CreditNoteReasonTableRef' could not be found.</Message>
+    </Diagnostic>
+    <Diagnostic>
+      <DiagnosticType>Metadata</DiagnosticType>
+      <Severity>Error</Severity>
+      <Path>AxDataEntityView/SalesOrderHeaderV4Entity/Metadata/SalesTable/DataSources/FinTag/Relations/QueryDataSourceRelation1/TableField</Path>
+      <Moniker>MissingTableField</Moniker>
+      <Message>Failed to locate table field for FinTag.RecId.</Message>
+    </Diagnostic>
+    <Diagnostic>
+      <DiagnosticType>Metadata</DiagnosticType>
+      <Severity>Error</Severity>
+      <Path>AxDataEntityView/SalesOrderHeaderV4Entity/Metadata/SalesTable/DataSources/FinTag</Path>
+      <Moniker>CouldNotFindTableOrViewOrDataEntity</Moniker>
+      <Message>The table/view/data entity 'FinTag' could not be found.</Message>
     </Diagnostic>
   </Items>
   <Aliases />

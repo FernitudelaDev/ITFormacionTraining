@@ -1,11 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <AxTable xmlns:i="http://www.w3.org/2001/XMLSchema-instance">
-	<Name>AIBBookTable</Name>
+	<Name>AIBBookTableAlternate</Name>
 	<SourceCode>
 		<Declaration><![CDATA[
-public class AIBBookTable extends common
+public class AIBBookTableAlternate extends common
 {
 }
+
 ]]></Declaration>
 		<Methods>
 			<Method>
@@ -155,16 +156,18 @@ public class AIBBookTable extends common
         this.Author = CustParameters::find().AIBAuthorTable;
     }
 
-    /// <summary>
-    ///
-    /// </summary>
-    //public void insert()
-    //{
-    //    if(this.Id == '')
-    //    {
-    //        this.Id = NumberSeq::newGetNum(CustParameters::aibNumRefBookId()).num();
-    //    }
-    //}
+]]></Source>
+			</Method>
+			<Method>
+				<Name>initFromBookTable</Name>
+				<Source><![CDATA[
+    public void initFromBookTable(AIBBookTable _authorBook)
+    {
+        this.Id = _authorBook.Id;
+        this.Name = _authorBook.Name;
+        this.Genre = _authorBook.Genre;
+        this.Author = _authorBook.Author;
+    }
 
 ]]></Source>
 			</Method>
@@ -177,8 +180,6 @@ public class AIBBookTable extends common
 	</SubscriberAccessLevel>
 	<TitleField1>Id</TitleField1>
 	<TitleField2>Name</TitleField2>
-	<AllowRowVersionChangeTracking>Yes</AllowRowVersionChangeTracking>
-	<ModifiedDateTime>Yes</ModifiedDateTime>
 	<ReplacementKey>BookTableIdx</ReplacementKey>
 	<DeleteActions />
 	<FieldGroups>

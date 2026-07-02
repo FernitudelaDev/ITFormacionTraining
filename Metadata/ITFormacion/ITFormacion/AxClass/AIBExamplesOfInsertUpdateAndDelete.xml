@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="utf-8"?>
+<AxClass xmlns:i="http://www.w3.org/2001/XMLSchema-instance">
+	<Name>AIBExamplesOfInsertUpdateAndDelete</Name>
+	<SourceCode>
+		<Declaration><![CDATA[
+internal final class AIBExamplesOfInsertUpdateAndDelete
+{
+}
+]]></Declaration>
+		<Methods>
+			<Method>
+				<Name>whileSelectPlusInsertVSInsertRecordSet</Name>
+				<Source><![CDATA[
+    public void whileSelectPlusInsertVSInsertRecordSet()
+    {
+        AIBBookTable bookTable;
+        AIBtmpBookTable tmpBookTable;
+  
+        //while select bookTable
+        //{
+        //    tmpBookTable.Id = bookTable.Id;
+        //    tmpBookTable.Author = bookTable.Author;
+        //    tmpBookTable.Genre = bookTable.Genre;
+        //    tmpBookTable.Name = bookTable.Name;
+        //    tmpBookTable.insert();
+        //}
+        insert_recordset tmpBookTable (Id, Author, Genre, Name)
+            select Id, Author, Genre, Name from bookTable;
+    }
+
+]]></Source>
+			</Method>
+			<Method>
+				<Name>whileSelectPlusDoInsertVSInsertRecordSet</Name>
+				<Source><![CDATA[
+    //Mala practica
+    public void whileSelectPlusDoInsertVSInsertRecordSet()
+    {
+        AIBBookTable bookTable;
+        AIBBookTableAlternate bookTableAlt;
+        int recordsInsertedDoInsert;
+        while select booktable
+        {
+            bookTableAlt.id = booktable.id;
+            bookTableAlt.author = booktable.author;
+            bookTableAlt.genre = booktable.genre;
+            bookTableAlt.name = booktable.name;
+            bookTableAlt.doInsert();
+            recordsInsertedDoInsert++;
+        }
+        bookTableAlt.skipDataMethods(true);
+        insert_recordset bookTableAlt (Id, Author, Genre, Name)
+            select Id, Author, Genre, Name from bookTable;
+
+        info(strFmt("%1 records inserted using DoInsert, %2 records inserted using insertRecordSet", recordsInsertedDoInsert, bookTableAlt.RowCount()));
+        
+    }
+
+]]></Source>
+			</Method>
+			<Method>
+				<Name>whileSelectUpdateVSUpdateRecordSet</Name>
+				<Source><![CDATA[
+    public void whileSelectUpdateVSUpdateRecordSet()
+    {
+        AIBAuthorTable authorTable;
+
+        ttsbegin;
+        while select forupdate authorTable
+            where authorTable.IsDead == NoYes::No
+            && authorTable.DeathDate > dateNull()
+        {
+            authorTable.DeathDate = dateNull();
+            authorTable.update();
+        }
+        ttscommit;
+
+        ttsbegin;
+        update_recordset authorTable
+            setting DeathDate = dateNull()
+            where authorTable.IsDead == NoYes::No
+            && authorTable.DeathDate > dateNull();
+        ttscommit;
+    }
+
+]]></Source>
+			</Method>
+			<Method>
+				<Name>shileSelectPlusDeleteVSDelete_From</Name>
+				<Source><![CDATA[
+    public void shileSelectPlusDeleteVSDelete_From()
+    {
+        AIBAuthorTable authorTable;
+        AIBBookTable bookTable;
+
+        ttsbegin;
+        while select forupdate bookTable
+            exists join authorTable
+            where authorTable.RecId == bookTable.Author
+            && authorTable.IsDead == NoYes::Yes
+        {
+            bookTable.delete();
+        }
+        ttscommit;
+
+        ttsbegin;
+        delete_from bookTable
+            exists join authorTable
+            where authorTable.RecId == bookTable.Author
+            && authorTable.IsDead == NoYes::Yes;
+        ttscommit;
+    }
+
+]]></Source>
+			</Method>
+			<Method>
+				<Name>whileSelectButInsertInSet</Name>
+				<Source><![CDATA[
+    public void whileSelectButInsertInSet()
+    {
+        RecordInsertList recordInsertList = new RecordInsertList(tableNum(AIBBookTableAlternate));
+        AIBBookTable bookTable;
+
+        while select bookTable
+        {
+            AIBBookTableAlternate altBookTable;
+            Name bookName =  (bookTable.Genre == AIBGenreEnum::Fantasy) ? str2Capital(bookTable.Name) : strLwr(bookTable.Name);
+            altBookTable.Author = bookTable.Author;
+            altBookTable.Name = bookTable.Name;
+            altBookTable.Genre = bookTable.Genre;
+            altBookTable.Id = bookTable.Id;
+
+            recordInsertList.add(altBookTable);
+        }
+    }
+
+]]></Source>
+			</Method>
+		</Methods>
+	</SourceCode>
+</AxClass>

@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<AxClass xmlns:i="http://www.w3.org/2001/XMLSchema-instance">
+	<Name>AIBExampleOfListAndContainers</Name>
+	<SourceCode>
+		<Declaration><![CDATA[
+internal final class AIBExampleOfListAndContainers
+{
+
+}
+]]></Declaration>
+		<Methods>
+			<Method>
+				<Name>useOfListOrSets</Name>
+				<Source><![CDATA[
+    public void useOfListOrSets()
+    {
+        List listOfStrings = new List(Types::String);
+        listOfStrings.addEnd('manolo');
+        listOfStrings.addEnd('Pongo');
+
+        ListIterator literator = new ListIterator(listOfStrings);
+        while(literator.more())
+        {
+            literator.value();
+            literator.next();
+        }
+
+        Set setOfStrings = new Set(Types::String);
+
+        setOfStrings.add('manolo');
+        setOfStrings.add('Pongo');
+
+        SetIterator siterator = new SetIterator(setOfStrings);
+
+        while(siterator.more())
+        {
+            siterator.value();
+            siterator.next();
+        }
+    }
+
+]]></Source>
+			</Method>
+			<Method>
+				<Name>UseOfContainers</Name>
+				<Source><![CDATA[
+    //Empiezan en 1
+    public void UseOfContainers()
+    {
+        container fieldsCon;
+        AIBBookTable bookTable;
+        int i = 1;
+
+        while select bookTable
+        {
+            fieldsCon = conIns(fieldsCon, i, bookTable);
+            fieldsCon = conIns(fieldsCon, i+1, bookTable.Name);
+
+            i+=2;
+        }
+        
+        bookTable = conPeek(fieldsCon, 3);
+        Name name = conPeek(fieldsCon, 4);
+    }
+
+]]></Source>
+			</Method>
+			<Method>
+				<Name>UseOfContainers2</Name>
+				<Source><![CDATA[
+    public void UseOfContainers2()
+    {
+        container fieldsCon;
+        AIBBookTable bookTable;
+        int i = 1;
+
+        while select bookTable
+        {
+            fieldsCon += bookTable;
+            fieldsCon += bookTable.Name;
+            
+
+            i+=2;
+        }
+        
+        container containerDe0 = ['manolo', 5, 35];
+
+        fieldsCon += containerDe0;
+        fieldsCon += [containerDe0];
+
+        str manolo;
+        int num1, num2;
+        [manolo, num1, num2] = containerDe0;
+    }
+
+]]></Source>
+			</Method>
+		</Methods>
+	</SourceCode>
+</AxClass>

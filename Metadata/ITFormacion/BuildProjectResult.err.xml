@@ -1,18 +1,30 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Diagnostics
-  GenerationTime="2026-07-01T07:53:03.0930129+00:00">
+  GenerationTime="2026-07-02T12:17:10.4004473+00:00">
   <Items>
     <Diagnostic>
       <DiagnosticType>Compile</DiagnosticType>
       <Severity>Error</Severity>
-      <Path>dynamics://Table/AIBBookTable/Method/initValue</Path>
-      <ElementType>Table Method</ElementType>
-      <Moniker>TableDoesNotContainField</Moniker>
-      <Line>94</Line>
-      <Column>23</Column>
-      <EndLine>94</EndLine>
-      <EndColumn>45</EndColumn>
-      <Message>Table 'CustParameters' does not contain a field named 'AIBDefaultAuthor'.</Message>
+      <Path>dynamics://Class/SalesTableForm_ITFormacion_Extension/Method/AIBFantasyBookLookup</Path>
+      <ElementType>Class Method</ElementType>
+      <Moniker>AssemblyMustBeReferenced</Moniker>
+      <Line>16</Line>
+      <Column>5</Column>
+      <EndLine>16</EndLine>
+      <EndColumn>39</EndColumn>
+      <Message>A reference to 'Dynamics.AX.Tax, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null' is required to compile this module.</Message>
+    </Diagnostic>
+    <Diagnostic>
+      <DiagnosticType>Compile</DiagnosticType>
+      <Severity>Error</Severity>
+      <Path>dynamics://Class/SalesTable_ITFormacion_Extension/Method/modifiedField</Path>
+      <ElementType>Class Method</ElementType>
+      <Moniker>AssemblyMustBeReferenced</Moniker>
+      <Line>10</Line>
+      <Column>5</Column>
+      <EndLine>10</EndLine>
+      <EndColumn>30</EndColumn>
+      <Message>A reference to 'Dynamics.AX.Tax, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null' is required to compile this module.</Message>
     </Diagnostic>
   </Items>
   <Aliases />

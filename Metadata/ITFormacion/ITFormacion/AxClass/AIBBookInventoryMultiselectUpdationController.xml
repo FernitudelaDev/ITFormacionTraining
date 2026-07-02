@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<AxClass xmlns:i="http://www.w3.org/2001/XMLSchema-instance">
+	<Name>AIBBookInventoryMultiselectUpdationController</Name>
+	<SourceCode>
+		<Declaration><![CDATA[
+final class AIBBookInventoryMultiselectUpdationController extends SysOperationServiceController
+{
+    // No se ha podido copiar
+//    public static void Main(Args _args)
+//    {
+//        AIBBookInventoryUpdationController controller = AIBBookInventoryUpdationController::Construct();
+
+//        controller.initFromBookFormIfNeeded(_args);
+
+//        if(controller.prompt())
+//        {
+//            controller.runOperation();
+//        }
+//    }
+
+//    public void new(IdentifierName _className = '', IdentifierName _methodName = '', SysOperationExecutionMode _executionMode = SysOperationExecutionMode::Asynchronous)
+//    {
+//        super(_className, _methodName, _executionMode);
+//    }
+
+//    public void initFromBookFormIfNeeded(Args _args)
+//    {
+//        FormRun callerFormRun = _args.caller();
+
+//        if(callerFormRun && callerFormRun.name() == formStr(AIBBook))
+//        {
+//            AIBBookTable bookActiveRecord = callerFormRun.dataSource(FormDataSourceStr(AIBBook, AIBBookTable)).cursor();
+
+//            AIBBookInventoryMultiselectUpdationDataContract contract = this.getDataContract();
+
+//            contract.parmBookId(bookActiveRecord.Id);
+//        }
+//    }
+
+//    private List getActiveRecordsRecIdList(FormRun _callerFormRun)
+//    {
+//        List retList = new List(Types::Int64);
+//        FormDataSource book_ds = _callerFormRun.dataSource(formDataSourceStr(AIBBook, AIBBookTable));
+//        MultiSelectionHelper multiSelectionHelper = MultiSelectionHelper::contruct();
+//        multiSelectionHelper.parmDatasource(book_ds);
+
+//    }
+
+//    public static AIBBookInventoryUpdationController Construct(SysOperationExecutionMode _executionMode = SysOperationExecutionMode::Asynchronous)
+//    {
+//        AIBBookInventoryUpdationController controller = new AIBBookInventoryUpdationController(classStr(AIBBookInventoryUpdationService), methodStr(AIBBookInventoryUpdationService, runProcess), _executionMode);
+
+//        controller.parmDialogCaption("@ITFormacion:UpdateBookInventory");
+
+//        return controller;
+//    }
+
+//    public boolean validateParameters()
+//    {
+//        boolean ret;
+
+//        ret = super();
+
+//        if(ret)
+//        {
+//            AIBBookInventoryMultiselectUpdationDataContract dataContract = this.getDataContract();
+//            ret = this.validateBook(dataContract.parmBookId())
+//                    && this.validateNewQty(dataContract.parmNewQty());
+//        }
+
+//        return ret;
+//    }
+
+//    public boolean validateBook(AIBId _bookId)
+//    {
+//        if(!AIBBookTable::exist(_bookId))
+//        {
+//            return checkFailed(strFmt("@ITFormacion:Book1DoesNotExists", _bookId));
+//        }
+//        return true;
+//    }
+
+//    public boolean validateNewQty(Qty _newQty)
+//    {
+//        if(_newQty < 0)
+//        {
+//            return checkFailed("@ITFormacion:TransactionWouldMakeTheTotalNegative");
+//        }
+//        return true;
+//    }
+
+//    public AIBBookInventoryMultiselectUpdationDataContract getDataContract()
+//    {
+//        return this.getDataContractObject(identifierStr(_dataContract));
+//    }
+
+}
+]]></Declaration>
+		<Methods />
+	</SourceCode>
+</AxClass>

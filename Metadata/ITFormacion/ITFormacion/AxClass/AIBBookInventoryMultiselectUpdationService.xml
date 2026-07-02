@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<AxClass xmlns:i="http://www.w3.org/2001/XMLSchema-instance">
+	<Name>AIBBookInventoryMultiselectUpdationService</Name>
+	<SourceCode>
+		<Declaration><![CDATA[
+final class AIBBookInventoryMultiselectUpdationService extends SysOperationServiceBase
+{
+}
+]]></Declaration>
+		<Methods>
+			<Method>
+				<Name>runProcess</Name>
+				<Source><![CDATA[
+    public void runProcess(AIBBookInventoryMultiselectUpdationDataContract _dataContract)
+    {
+        ListIterator literator = new ListIterator(_dataContract.parmBookRecIdList());
+
+        while (literator.more())
+        {
+            this.runRecord(
+                AIBBookTable::findRecId(literator.value()),
+                _dataContract.parmNewQty()
+            );
+
+            literator.next();
+        }
+    }
+
+]]></Source>
+			</Method>
+			<Method>
+				<Name>runRecord</Name>
+				<Source><![CDATA[
+    private void runRecord(AIBBookTable _book, Qty _newQty)
+    {
+        Qty currentInventory = _book.currentInventory();
+        Qty newTransactionQtyNeeded = _newQty - currentInventory;
+
+        if (newTransactionQtyNeeded == 0)
+        {
+            return;
+        }
+
+        AIBBookInventoryTransaction inventoryTransaction;
+
+        inventoryTransaction.InventTransId = guid2Str(newGuid());
+        inventoryTransaction.Book = _book.RecId;
+        inventoryTransaction.Qty = newTransactionQtyNeeded;
+
+        if (inventoryTransaction.validateWrite())
+        {
+            inventoryTransaction.insert();
+        }
+        else
+        {
+            throw Exception::Error;
+        }
+    }
+
+]]></Source>
+			</Method>
+		</Methods>
+	</SourceCode>
+</AxClass>

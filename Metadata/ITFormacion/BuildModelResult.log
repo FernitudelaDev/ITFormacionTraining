@@ -1,10 +1,84 @@
 ==================================
 Generation Information: View dynamics://View/AIBAuthorEntity: Is Runtime Services mode: False
-ExternalReference Warning: dynamics://Reference/System.IO.Compression.ZipFile: Assembly 'System.IO.Compression.ZipFile, Version=4.0.3.0, Culture=neutral, PublicKeyToken=b77a5c561934e089' failed to load because it was not found.
-ExternalReference Warning: dynamics://Reference/RetailCommerceRuntimeFramework: Assembly 'Microsoft.Extensions.Caching.Abstractions, Version=1.1.2.0, Culture=neutral, PublicKeyToken=adb9793829ddae60' failed to load because it was not found.
+ExternalReference Warning: dynamics://Reference/Microsoft.Commerce.Flighting.Common: Assembly 'Microsoft.Xbox.Experimentation.Contracts, Version=1.0.0.0, Culture=neutral, PublicKeyToken=d91bba2b903dc20f' failed to load because it was not found.
+ExternalReference Warning: dynamics://Reference/Microsoft.Dynamics___vices.PricingEngine: Assembly 'Microsoft.Dynamics.Commerce.Runtime.Entities.AttributeBasedPricing, Version=7.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35' failed to load because it was not found.
+MetadataProvider Error: View dynamics://View/RetailSalesTableChannelAttributeView: Enum type 'RetailChannelAttributeModifier' for the field 'Modifier' is not found.
 ExternalReference Warning: dynamics://Reference/Azure.Core: Assembly 'System.Memory.Data, Version=1.0.2.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51' failed to load because it was not found.
-ExternalReference Warning: dynamics://Reference/Microsoft.Dynamics.Commerce.Runtime.Services.PricingEngine: Assembly 'Microsoft.Dynamics.Commerce.Runtime.Entities.AttributeBasedPricing, Version=7.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35' failed to load because it was not found.
+Compile Warning: Table Method dynamics://Table/AIBtmpBookTable/Method/selectCountByGenre: [(41,9),(41,32)]: The type conversion from 'int64' to 'int' loses range.
+Metadata Error: AxDataEntityViewExtension/SalesOrderHeaderV4Entity.ITFormacion/Relations/DefaultDimensionDimensionSet/RelatedDataEntity: Table 'DimensionSetEntity' does not exist.
+Metadata Error: AxDataEntityViewExtension/SalesOrderHeaderV4Entity.ITFormacion/ViewMetadata/DataSources/SalesTable/DataSources/HcmWorker_OrderResponsible/Table: Table 'HcmWorker' does not exist.
+Metadata Error: AxDataEntityViewExtension/SalesOrderHeaderV4Entity.ITFormacion/ViewMetadata/DataSources/SalesTable/DataSources/HcmWorker_OrderTaker/Table: Table 'HcmWorker' does not exist.
+Metadata Error: AxDataEntityViewExtension/SalesOrderHeaderV4Entity.ITFormacion/ViewMetadata/DataSources/SalesTable/DataSources/DefaultDimensionDAVS/Table: Table 'DimensionSetEntity' does not exist.
+Metadata Error: AxDataEntityViewExtension/SalesOrderHeaderV4Entity.ITFormacion/ViewMetadata/DataSources/SalesTable/DataSources/LogisticsPostalAddressBaseEntity/Table: Table 'LogisticsPostalAddressBaseEntity' does not exist.
+Metadata Error: AxDataEntityViewExtension/SalesOrderHeaderV4Entity.ITFormacion/ViewMetadata/DataSources/SalesTable/DataSources/CreditNoteReasonTableRef/Table: Table 'ReasonTableRef' does not exist.
+Metadata Error: AxDataEntityViewExtension/SalesOrderHeaderV4Entity.ITFormacion/ViewMetadata/DataSources/SalesTable/DataSources/FinTag/Table: Table 'FinTag' does not exist.
+Metadata Error: AxDataEntityViewExtension/SalesOrderHeaderV4Entity.ITFormacion/ViewMetadata/DataSources/LogisticsPostalAddressBaseEntity/DataField: Data source 'LogisticsPostalAddressBaseEntity' does not exist or missing data source reference.
+Metadata Error: AxDataEntityViewExtension/SalesOrderHeaderV4Entity.ITFormacion/Fields/ValidFrom/DataField: Unable to resolve field type.
+Metadata Error: AxDataEntityViewExtension/SalesOrderHeaderV4Entity.ITFormacion/Fields/ValidTo/DataField: Unable to resolve field type.
+Metadata Error: AxDataEntityViewExtension/SalesOrderHeaderV4Entity.ITFormacion/Fields/OrderResponsiblePersonnelNumber/DataField: Field 'PersonnelNumber' does not exist on data source 'HcmWorker_OrderResponsible'.
+Metadata Error: AxDataEntityViewExtension/SalesOrderHeaderV4Entity.ITFormacion/Fields/OrderTakerPersonnelNumber/DataField: Field 'PersonnelNumber' does not exist on data source 'HcmWorker_OrderTaker'.
+Metadata Error: AxDataEntityViewExtension/SalesOrderHeaderV4Entity.ITFormacion/Fields/DefaultLedgerDimensionDisplayValue/DataField: Field 'DisplayValue' does not exist on data source 'DefaultDimensionDAVS'.
+Metadata Error: AxDataEntityViewExtension/SalesOrderHeaderV4Entity.ITFormacion/Fields/DeliveryPostalAddressRecId/DataField: Field 'AddressRecId' does not exist on data source 'LogisticsPostalAddressBaseEntity'.
+Metadata Error: AxDataEntityViewExtension/SalesOrderHeaderV4Entity.ITFormacion/Fields/FormattedDelveryAddress/DataField: Field 'FormattedDeliveryAddress' does not exist on data source 'LogisticsPostalAddressBaseEntity'.
+Metadata Error: AxDataEntityViewExtension/SalesOrderHeaderV4Entity.ITFormacion/Fields/DeliveryBuildingCompliment/DataField: Field 'BuildingCompliment' does not exist on data source 'LogisticsPostalAddressBaseEntity'.
+Metadata Error: AxDataEntityViewExtension/SalesOrderHeaderV4Entity.ITFormacion/Fields/DeliveryAddressCity/DataField: Field 'City' does not exist on data source 'LogisticsPostalAddressBaseEntity'.
+Metadata Error: AxDataEntityViewExtension/SalesOrderHeaderV4Entity.ITFormacion/Fields/DeliveryAddressCountryRegionId/DataField: Field 'CountryRegionId' does not exist on data source 'LogisticsPostalAddressBaseEntity'.
+Metadata Error: AxDataEntityViewExtension/SalesOrderHeaderV4Entity.ITFormacion/Fields/DeliveryAddressCountryRegionISOCode/DataField: Field 'CountryRegionISOCode' does not exist on data source 'LogisticsPostalAddressBaseEntity'.
+Metadata Error: AxDataEntityViewExtension/SalesOrderHeaderV4Entity.ITFormacion/Fields/DeliveryAddressCountyId/DataField: Field 'County' does not exist on data source 'LogisticsPostalAddressBaseEntity'.
+Metadata Error: AxDataEntityViewExtension/SalesOrderHeaderV4Entity.ITFormacion/Fields/DeliveryAddressDescription/DataField: Field 'Description' does not exist on data source 'LogisticsPostalAddressBaseEntity'.
+Metadata Error: AxDataEntityViewExtension/SalesOrderHeaderV4Entity.ITFormacion/Fields/DeliveryAddressDistrictName/DataField: Field 'DistrictName' does not exist on data source 'LogisticsPostalAddressBaseEntity'.
+Metadata Error: AxDataEntityViewExtension/SalesOrderHeaderV4Entity.ITFormacion/Fields/DeliveryAddressDunsNumber/DataField: Field 'DunsNumber' does not exist on data source 'LogisticsPostalAddressBaseEntity'.
+Metadata Error: AxDataEntityViewExtension/SalesOrderHeaderV4Entity.ITFormacion/Fields/IsDeliveryAddressPrivate/DataField: Field 'IsPrivate' does not exist on data source 'LogisticsPostalAddressBaseEntity'.
+Metadata Error: AxDataEntityViewExtension/SalesOrderHeaderV4Entity.ITFormacion/Fields/DeliveryAddressLatitude/DataField: Field 'Latitude' does not exist on data source 'LogisticsPostalAddressBaseEntity'.
+Metadata Error: AxDataEntityViewExtension/SalesOrderHeaderV4Entity.ITFormacion/Fields/DeliveryAddressLocationId/DataField: Field 'LocationId' does not exist on data source 'LogisticsPostalAddressBaseEntity'.
+Metadata Error: AxDataEntityViewExtension/SalesOrderHeaderV4Entity.ITFormacion/Fields/DeliveryAddressLongitude/DataField: Field 'Longitude' does not exist on data source 'LogisticsPostalAddressBaseEntity'.
+Metadata Error: AxDataEntityViewExtension/SalesOrderHeaderV4Entity.ITFormacion/Fields/DeliveryAddressPostBox/DataField: Field 'PostBox' does not exist on data source 'LogisticsPostalAddressBaseEntity'.
+Metadata Error: AxDataEntityViewExtension/SalesOrderHeaderV4Entity.ITFormacion/Fields/DeliveryAddressStateId/DataField: Field 'State' does not exist on data source 'LogisticsPostalAddressBaseEntity'.
+Metadata Error: AxDataEntityViewExtension/SalesOrderHeaderV4Entity.ITFormacion/Fields/DeliveryAddressStreet/DataField: Field 'Street' does not exist on data source 'LogisticsPostalAddressBaseEntity'.
+Metadata Error: AxDataEntityViewExtension/SalesOrderHeaderV4Entity.ITFormacion/Fields/DeliveryAddressStreetNumber/DataField: Field 'StreetNumber' does not exist on data source 'LogisticsPostalAddressBaseEntity'.
+Metadata Error: AxDataEntityViewExtension/SalesOrderHeaderV4Entity.ITFormacion/Fields/DeliveryValidFrom/DataField: Field 'ValidFrom' does not exist on data source 'LogisticsPostalAddressBaseEntity'.
+Metadata Error: AxDataEntityViewExtension/SalesOrderHeaderV4Entity.ITFormacion/Fields/DeliveryValidTo/DataField: Field 'ValidTo' does not exist on data source 'LogisticsPostalAddressBaseEntity'.
+Metadata Error: AxDataEntityViewExtension/SalesOrderHeaderV4Entity.ITFormacion/Fields/DeliveryAddressTimeZone/DataField: Field 'TimeZone' does not exist on data source 'LogisticsPostalAddressBaseEntity'.
+Metadata Error: AxDataEntityViewExtension/SalesOrderHeaderV4Entity.ITFormacion/Fields/DeliveryAddressZipCode/DataField: Field 'ZipCode' does not exist on data source 'LogisticsPostalAddressBaseEntity'.
+Metadata Error: AxDataEntityViewExtension/SalesOrderHeaderV4Entity.ITFormacion/Fields/DeliveryAddressCityInKana/DataField: Field 'CityInKana' does not exist on data source 'LogisticsPostalAddressBaseEntity'.
+Metadata Error: AxDataEntityViewExtension/SalesOrderHeaderV4Entity.ITFormacion/Fields/DeliveryAddressStreetInKana/DataField: Field 'StreetInKana' does not exist on data source 'LogisticsPostalAddressBaseEntity'.
+Metadata Error: AxDataEntityViewExtension/SalesOrderHeaderV4Entity.ITFormacion/Fields/CreditNoteReasonCode/DataField: Field 'Reason' does not exist on data source 'CreditNoteReasonTableRef'.
+Metadata Error: AxDataEntityViewExtension/SalesOrderHeaderV4Entity.ITFormacion/Fields/InvoiceAddressStreet/DataField: Field 'Street' does not exist on data source 'CustDefaultInvoiceAddress'.
+Metadata Error: AxDataEntityViewExtension/SalesOrderHeaderV4Entity.ITFormacion/Fields/FormattedInvoiceAddress/DataField: Field 'Address' does not exist on data source 'CustDefaultInvoiceAddress'.
+Metadata Error: AxDataEntityViewExtension/SalesOrderHeaderV4Entity.ITFormacion/Fields/InvoiceBuildingCompliment/DataField: Field 'BuildingCompliment' does not exist on data source 'CustDefaultInvoiceAddress'.
+Metadata Error: AxDataEntityViewExtension/SalesOrderHeaderV4Entity.ITFormacion/Fields/InvoiceAddressCity/DataField: Field 'City' does not exist on data source 'CustDefaultInvoiceAddress'.
+Metadata Error: AxDataEntityViewExtension/SalesOrderHeaderV4Entity.ITFormacion/Fields/InvoiceAddressCountryRegionId/DataField: Field 'CountryRegionId' does not exist on data source 'CustDefaultInvoiceAddress'.
+Metadata Error: AxDataEntityViewExtension/SalesOrderHeaderV4Entity.ITFormacion/Fields/InvoiceAddressCountyId/DataField: Field 'County' does not exist on data source 'CustDefaultInvoiceAddress'.
+Metadata Error: AxDataEntityViewExtension/SalesOrderHeaderV4Entity.ITFormacion/Fields/InvoiceAddressDistrictName/DataField: Field 'DistrictName' does not exist on data source 'CustDefaultInvoiceAddress'.
+Metadata Error: AxDataEntityViewExtension/SalesOrderHeaderV4Entity.ITFormacion/Fields/IsInvoiceAddressPrivate/DataField: Field 'IsPrivate' does not exist on data source 'CustDefaultInvoiceAddress'.
+Metadata Error: AxDataEntityViewExtension/SalesOrderHeaderV4Entity.ITFormacion/Fields/InvoiceAddressLatitude/DataField: Field 'Latitude' does not exist on data source 'CustDefaultInvoiceAddress'.
+Metadata Error: AxDataEntityViewExtension/SalesOrderHeaderV4Entity.ITFormacion/Fields/InvoiceAddressLongitude/DataField: Field 'Longitude' does not exist on data source 'CustDefaultInvoiceAddress'.
+Metadata Error: AxDataEntityViewExtension/SalesOrderHeaderV4Entity.ITFormacion/Fields/InvoiceAddressPostBox/DataField: Field 'PostBox' does not exist on data source 'CustDefaultInvoiceAddress'.
+Metadata Error: AxDataEntityViewExtension/SalesOrderHeaderV4Entity.ITFormacion/Fields/InvoiceAddressStateId/DataField: Field 'State' does not exist on data source 'CustDefaultInvoiceAddress'.
+Metadata Error: AxDataEntityViewExtension/SalesOrderHeaderV4Entity.ITFormacion/Fields/InvoiceAddressStreetNumber/DataField: Field 'StreetNumber' does not exist on data source 'CustDefaultInvoiceAddress'.
+Metadata Error: AxDataEntityViewExtension/SalesOrderHeaderV4Entity.ITFormacion/Fields/InvoiceAddressTimeZone/DataField: Field 'TimeZone' does not exist on data source 'CustDefaultInvoiceAddress'.
+Metadata Error: AxDataEntityViewExtension/SalesOrderHeaderV4Entity.ITFormacion/Fields/InvoiceAddressZipCode/DataField: Field 'ZipCode' does not exist on data source 'CustDefaultInvoiceAddress'.
+Metadata Error: AxDataEntityViewExtension/SalesOrderHeaderV4Entity.ITFormacion/Fields/InvoiceAddressCityInKana/DataField: Field 'CityInKana' does not exist on data source 'CustDefaultInvoiceAddress'.
+Metadata Error: AxDataEntityViewExtension/SalesOrderHeaderV4Entity.ITFormacion/Fields/InvoiceAddressStreetInKana/DataField: Field 'StreetInKana' does not exist on data source 'CustDefaultInvoiceAddress'.
+Metadata Error: AxDataEntityViewExtension/SalesOrderHeaderV4Entity.ITFormacion/Fields/InvoiceValidTo/DataField: Field 'ValidTo' does not exist on data source 'CustDefaultInvoiceAddress'.
+Metadata Error: AxDataEntityViewExtension/SalesOrderHeaderV4Entity.ITFormacion/Fields/InvoiceValidFrom/DataField: Field 'ValidFrom' does not exist on data source 'CustDefaultInvoiceAddress'.
+Metadata Error: AxDataEntityViewExtension/SalesOrderHeaderV4Entity.ITFormacion/Fields/InvoiceAddressCountryRegionISOCode/DataField: Field 'CountryRegionISOCode' does not exist on data source 'CustDefaultInvoiceAddress'.
+Metadata Error: AxDataEntityViewExtension/SalesOrderHeaderV4Entity.ITFormacion/Fields/ExcludeFromMasterPlanning/ConfigurationKey: Configuration key 'Req' does not exist.
+Metadata Error: AxDataEntityViewExtension/SalesOrderHeaderV4Entity.ITFormacion/Fields/FinTagDisplayValue/DataField: Field 'DisplayValue' does not exist on data source 'FinTag'.
+Metadata Error: AxDataEntityView/SalesOrderHeaderV4Entity/Metadata/SalesTable/DataSources/HcmWorker_OrderResponsible/Relations/QueryDataSourceRelation1/TableField: Failed to locate table field for HcmWorker.RecId.
+Metadata Error: AxDataEntityView/SalesOrderHeaderV4Entity/Metadata/SalesTable/DataSources/HcmWorker_OrderResponsible: The table/view/data entity 'HcmWorker_OrderResponsible' could not be found.
+Metadata Error: AxDataEntityView/SalesOrderHeaderV4Entity/Metadata/SalesTable/DataSources/HcmWorker_OrderTaker/Relations/QueryDataSourceRelation1/TableField: Failed to locate table field for HcmWorker.RecId.
+Metadata Error: AxDataEntityView/SalesOrderHeaderV4Entity/Metadata/SalesTable/DataSources/HcmWorker_OrderTaker: The table/view/data entity 'HcmWorker_OrderTaker' could not be found.
+Metadata Error: AxDataEntityView/SalesOrderHeaderV4Entity/Metadata/SalesTable/DataSources/DefaultDimensionDAVS/Relations/DefaultDimensionDAVS/TableField: Failed to locate table field for DimensionSetEntity.RecId.
+Metadata Error: AxDataEntityView/SalesOrderHeaderV4Entity/Metadata/SalesTable/DataSources/DefaultDimensionDAVS: The table/view/data entity 'DefaultDimensionDAVS' could not be found.
+Metadata Error: AxDataEntityView/SalesOrderHeaderV4Entity/Metadata/SalesTable/DataSources/LogisticsPostalAddressBaseEntity/Relations/QueryDataSourceRelation1/TableField: Failed to locate table field for LogisticsPostalAddressBaseEntity.AddressRecId.
+Metadata Error: AxDataEntityView/SalesOrderHeaderV4Entity/Metadata/SalesTable/DataSources/LogisticsPostalAddressBaseEntity: The table/view/data entity 'LogisticsPostalAddressBaseEntity' could not be found.
+Metadata Error: AxDataEntityView/SalesOrderHeaderV4Entity/Metadata/SalesTable/DataSources/CreditNoteReasonTableRef/Relations/QueryDataSourceRelation1/RelationHolderEntity: The table/view/data entity 'ReasonTableRef' could not be found.
+Metadata Error: AxDataEntityView/SalesOrderHeaderV4Entity/Metadata/SalesTable/DataSources/CreditNoteReasonTableRef: The table/view/data entity 'CreditNoteReasonTableRef' could not be found.
+Metadata Error: AxDataEntityView/SalesOrderHeaderV4Entity/Metadata/SalesTable/DataSources/FinTag/Relations/QueryDataSourceRelation1/TableField: Failed to locate table field for FinTag.RecId.
+Metadata Error: AxDataEntityView/SalesOrderHeaderV4Entity/Metadata/SalesTable/DataSources/FinTag: The table/view/data entity 'FinTag' could not be found.
 Compile Warning: Table Method dynamics://Table/AIBBookTable/Method/selectCountByGenre: [(41,9),(41,32)]: The type conversion from 'int64' to 'int' loses range.
+Compile Warning: Table Method dynamics://Table/AIBBookTableAlternate/Method/selectCountByGenre: [(41,9),(41,32)]: The type conversion from 'int64' to 'int' loses range.
 ==================================
-Errors: 0
-Warnings: 5
+Errors: 73
+Warnings: 6

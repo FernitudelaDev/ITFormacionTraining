@@ -45,6 +45,15 @@ internal final class AIBRunnableClassExample
     //    }
     //}
 
+    
+
+    //public static void Main(Args _args)
+    //{
+    //    AIBExamplesOfInsertUpdateAndDelete runnableClass =  new AIBExamplesOfInsertUpdateAndDelete();
+
+    //    runnableClass.whileSelectPlusInsertVSInsertRecordSet();
+    //}
+
 }
 ]]></Declaration>
 		<Methods>
@@ -53,7 +62,9 @@ internal final class AIBRunnableClassExample
 				<Source><![CDATA[
     public static void Main(Args _args)
     {
-        
+        AIBExampleOfListAndContainers runnableClass =  new AIBExampleOfListAndContainers();
+
+        runnableClass.UseOfContainers();
     }
 
 ]]></Source>

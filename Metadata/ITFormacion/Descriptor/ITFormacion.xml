@@ -12,6 +12,7 @@
 	<ModelReferences xmlns:d2p1="http://schemas.microsoft.com/2003/10/Serialization/Arrays"
 		i:nil="true" />
 	<ModuleReferences xmlns:d2p1="http://schemas.microsoft.com/2003/10/Serialization/Arrays">
+		<d2p1:string>ApplicationCommon</d2p1:string>
 		<d2p1:string>ApplicationFoundation</d2p1:string>
 		<d2p1:string>ApplicationPlatform</d2p1:string>
 		<d2p1:string>ApplicationSuite</d2p1:string>
@@ -28,6 +29,7 @@
 		<d2p1:string>PersonnelMobile</d2p1:string>
 		<d2p1:string>PersonnelUpgrade</d2p1:string>
 		<d2p1:string>Retail</d2p1:string>
+		<d2p1:string>SourceDocumentation</d2p1:string>
 		<d2p1:string>SourceDocumentationTypes</d2p1:string>
 		<d2p1:string>Tax</d2p1:string>
 	</ModuleReferences>
