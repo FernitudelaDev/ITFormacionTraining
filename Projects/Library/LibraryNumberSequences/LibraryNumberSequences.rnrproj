@@ -32,6 +32,32 @@
     <DebugSymbols>true</DebugSymbols>
     <EnableUnmanagedDebugging>false</EnableUnmanagedDebugging>
   </PropertyGroup>
+  <ItemGroup>
+    <Folder Include="Classes\" />
+    <Folder Include="Forms\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="AxClass\CustParameters_ITFormacion_Extension">
+      <SubType>Content</SubType>
+      <Name>CustParameters_ITFormacion_Extension</Name>
+      <Link>Classes\CustParameters_ITFormacion_Extension</Link>
+    </Content>
+    <Content Include="AxClass\NumberSeqModuleCustomer_ITFormacion_Extension">
+      <SubType>Content</SubType>
+      <Name>NumberSeqModuleCustomer_ITFormacion_Extension</Name>
+      <Link>Classes\NumberSeqModuleCustomer_ITFormacion_Extension</Link>
+    </Content>
+    <Content Include="AxForm\RRBAuthor">
+      <SubType>Content</SubType>
+      <Name>RRBAuthor</Name>
+      <Link>Forms\RRBAuthor</Link>
+    </Content>
+    <Content Include="AxForm\RRBBook">
+      <SubType>Content</SubType>
+      <Name>RRBBook</Name>
+      <Link>Forms\RRBBook</Link>
+    </Content>
+  </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.Common.targets" />
   <Import Project="$(BuildTasksDirectory)\Microsoft.Dynamics.Framework.Tools.BuildTasks.17.0.targets" />
 </Project>

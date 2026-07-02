@@ -155,6 +155,21 @@ public class RRBAuthorTable extends common
 
 ]]></Source>
 			</Method>
+			<Method>
+				<Name>insert</Name>
+				<Source><![CDATA[
+    public void insert()
+    {
+        if(this.Id == '')
+        {
+            this.Id = NumberSeq::newGetNum(CustParameters::ftdNumRefAuthorId()).num();
+        }
+
+        super();
+    }
+
+]]></Source>
+			</Method>
 		</Methods>
 	</SourceCode>
 	<FormRef>RRBAuthor</FormRef>

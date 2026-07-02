@@ -20,6 +20,50 @@
 			<Name>RRBAuthorTable</Name>
 			<Methods>
 				<Method>
+					<Name>create</Name>
+					<Visibility>Public</Visibility>
+					<Parameters>
+						<AxMethodParameter>
+							<Type>Enum</Type>
+							<TypeName>boolean</TypeName>
+							<DefaultValue>false</DefaultValue>
+							<Name>_append</Name>
+						</AxMethodParameter>
+					</Parameters>
+					<ReturnType>
+						<TypeName></TypeName>
+					</ReturnType>
+				</Method>
+				<Method>
+					<Name>linkActive</Name>
+					<Visibility>Public</Visibility>
+					<ReturnType>
+						<TypeName></TypeName>
+					</ReturnType>
+				</Method>
+				<Method>
+					<Name>delete</Name>
+					<Visibility>Public</Visibility>
+					<ReturnType>
+						<TypeName></TypeName>
+					</ReturnType>
+				</Method>
+				<Method>
+					<Name>write</Name>
+					<Visibility>Public</Visibility>
+					<ReturnType>
+						<TypeName></TypeName>
+					</ReturnType>
+				</Method>
+				<Method>
+					<Name>validateWrite</Name>
+					<Visibility>Public</Visibility>
+					<ReturnType>
+						<Type>Enum</Type>
+						<TypeName>boolean</TypeName>
+					</ReturnType>
+				</Method>
+				<Method>
 					<Name>active</Name>
 					<Visibility>Public</Visibility>
 					<ReturnType>

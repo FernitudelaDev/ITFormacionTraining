@@ -155,6 +155,21 @@ public class RRBBookTable extends common
 
 ]]></Source>
 			</Method>
+			<Method>
+				<Name>insert</Name>
+				<Source><![CDATA[
+    public void insert()
+    {
+        if(this.Id == '')
+        {
+            this.Id = NumberSeq::newGetNum(CustParameters::ftdNumRefBookId()).num();
+        }
+
+        super();
+    }
+
+]]></Source>
+			</Method>
 		</Methods>
 	</SourceCode>
 	<FormRef>RRBBook</FormRef>

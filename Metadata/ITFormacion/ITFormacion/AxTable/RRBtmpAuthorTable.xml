@@ -113,12 +113,12 @@ public class RRBtmpAuthorTable extends common
 				<Source><![CDATA[
     public void initFromAuthorTable(RRBAuthorTable _authorTable)
     {
-        this.Id = _authorTable.Id;
-        this.BirthDate = _authorTable.BirthDate;
-        this.DeathDate = _authorTable.DeathDate;
-        this.FirstName = _authorTable.FirstName;
-        this.LastName = _authorTable.LastName;
-        this.IsDead = _authorTable.IsDead;
+        this.Id         =   _authorTable.Id;
+        this.BirthDate  =   _authorTable.BirthDate;
+        this.DeathDate  =   _authorTable.DeathDate;
+        this.FirstName  =   _authorTable.FirstName;
+        this.LastName   =   _authorTable.LastName;
+        this.IsDead     =   _authorTable.IsDead;
     }
 
 ]]></Source>

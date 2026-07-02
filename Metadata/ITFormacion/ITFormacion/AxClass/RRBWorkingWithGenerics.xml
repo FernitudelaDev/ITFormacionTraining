@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<AxClass xmlns:i="http://www.w3.org/2001/XMLSchema-instance">
+	<Name>RRBWorkingWithGenerics</Name>
+	<SourceCode>
+		<Declaration><![CDATA[
+final class RRBWorkingWithGenerics
+{
+}
+]]></Declaration>
+		<Methods>
+			<Method>
+				<Name>genericFindByField</Name>
+				<Source><![CDATA[
+    //Con estas dos clases se podrian reutilizar todos los metodos find y findRecId de todas las tablas,
+    //pero los genericos son mas recomendables para metodos mas largos.
+    public static Common genericFindByField(TableId _tableId, FieldId _fieldId, anytype _value)
+    {
+        DictTable dictTable = new DictTable(_tableId);
+
+        Common common = dictTable.makeRecord();
+
+        select firstonly common
+        where common.(_fieldId) == _value;
+
+        return common;
+    }
+
+]]></Source>
+			</Method>
+			<Method>
+				<Name>genericFindRecID</Name>
+				<Source><![CDATA[
+    public static Common genericFindRecID(TableId _tableId, RecId _recId)
+    {
+        return RRBWorkingWithGenerics::genericFindByField(_tableId, fieldNum(Common, RecId), _recId);
+
+        //DictTable dictTable = new DictTable(_tableId);
+
+        //Common common = dictTable.makeRecord();
+
+        //select firstonly common
+        //    where common.RecId == _recId;
+
+        //return common;
+    }
+
+]]></Source>
+			</Method>
+		</Methods>
+	</SourceCode>
+</AxClass>

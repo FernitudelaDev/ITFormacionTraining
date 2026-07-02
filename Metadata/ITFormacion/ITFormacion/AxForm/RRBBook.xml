@@ -12,7 +12,28 @@ public class RRBBook extends FormRun
     RRBGenreEnum genreFilter;
     boolean needGenreFilter;
 
+    NumberSeqFormHandler numberSeqNumBookId;
+ 
 }
+]]></Source>
+			</Method>
+			<Method>
+				<Name>numberSeqNumBookId</Name>
+				<Source><![CDATA[
+    NumberSeqFormHandler numberSeqNumBookId()
+    {
+        if (!numberSeqNumBookId)
+        {
+            numberSeqNumBookId = numberSeqFormHandler::newForm(CustParameters::ftdNumRefBookId().NumberSequenceId,
+                                                         element,
+                                                         RRBBookTable_ds,
+                                                         fieldNum(RRBBookTable, Id)
+                                                         );
+        }
+  
+        return numberSeqNumBookId;
+    }
+
 ]]></Source>
 			</Method>
 			<Method>

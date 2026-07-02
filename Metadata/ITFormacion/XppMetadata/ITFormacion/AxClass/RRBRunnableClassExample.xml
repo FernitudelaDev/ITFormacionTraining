@@ -21,5 +21,12 @@
 				<TypeName></TypeName>
 			</ReturnType>
 		</Method>
+		<Method>
+			<Name>whileSelectUpdateVSUpdateRecordset</Name>
+			<ReturnType>
+				<Tags></Tags>
+				<TypeName></TypeName>
+			</ReturnType>
+		</Method>
 	</Methods>
 </z:anyType>

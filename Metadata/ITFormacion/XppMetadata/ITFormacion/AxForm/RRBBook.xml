@@ -7,6 +7,14 @@
 			<ReturnType />
 		</Method>
 		<Method>
+			<Name>numberSeqNumBookId</Name>
+			<Visibility>Public</Visibility>
+			<ReturnType>
+				<Type>Class</Type>
+				<TypeName>NumberSeqFormHandler</TypeName>
+			</ReturnType>
+		</Method>
+		<Method>
 			<Name>init</Name>
 			<Visibility>Public</Visibility>
 			<ReturnType>
@@ -89,6 +97,12 @@
 			<Type>Enum</Type>
 			<TypeName>boolean</TypeName>
 			<Name>needGenreFilter</Name>
+			<Attributes />
+		</AxClassMemberVariable>
+		<AxClassMemberVariable>
+			<Type>Class</Type>
+			<TypeName>NumberSeqFormHandler</TypeName>
+			<Name>numberSeqNumBookId</Name>
 			<Attributes />
 		</AxClassMemberVariable>
 	</Members>

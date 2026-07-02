@@ -62,6 +62,14 @@ internal final class RRBRunnableClassExample
 
     //}
 
+    //Inicializacion de las referencias a EDTS de las secuencias numericas
+    //public static void Main(Args _args)
+    //{
+    //    NumberSeqModuleCustomer numseqModCustomer = new NumberSeqModuleCustomer();
+    //    numseqModCustomer.load();
+    //}
+
+    
 }
 ]]></Declaration>
 		<Methods>
@@ -70,8 +78,36 @@ internal final class RRBRunnableClassExample
 				<Source><![CDATA[
     public static void Main(Args _args)
     {
-        NumberSeqModuleCustomer numseqModCustomer = new NumberSeqModuleCustomer();
-        numseqModCustomer.load();
+        
+    }
+
+]]></Source>
+			</Method>
+			<Method>
+				<Name>whileSelectUpdateVSUpdateRecordset</Name>
+				<Source><![CDATA[
+    private void whileSelectUpdateVSUpdateRecordset()
+    {
+        //aqui si ejecutaran el metodo update
+        RRBAuthorTable authorTable;
+
+        ttsbegin;
+        while select forupdate authorTable
+            where authorTable.IsDead == NoYes::No
+            && authorTable.DeathDate > dateNull()
+        {
+            authorTable.DeathDate = dateNull();
+            //no llamos al validate write, porque estamos havciendo identico al update recordset, pero se debería hacer
+            authorTable.update();
+        }
+        ttscommit;
+
+        ttsbegin;
+        update_recordset authorTable
+            setting DeathDate = dateNull()
+            where authorTable.IsDead == NoYes::No
+            && authorTable.DeathDate > dateNull();
+        ttscommit;
     }
 
 ]]></Source>

@@ -41,6 +41,72 @@ public class RRBAuthor extends FormRun
 				<Name>RRBAuthorTable</Name>
 				<Methods>
 					<Method>
+						<Name>create</Name>
+						<Source><![CDATA[
+        public void create(boolean _append = false)
+        {
+            element.numberSeqNumAuthorId().formMethodDataSourceCreatePre();
+ 
+            super(_append);
+ 
+            element.numberSeqNumAuthorId().formMethodDataSourceCreate();
+         
+        }
+
+]]></Source>
+					</Method>
+					<Method>
+						<Name>linkActive</Name>
+						<Source><![CDATA[
+        public void linkActive()
+        {
+ 
+            element.numberSeqNumAuthorId().formMethodDataSourceLinkActive();
+ 
+            super();
+        }
+
+]]></Source>
+					</Method>
+					<Method>
+						<Name>delete</Name>
+						<Source><![CDATA[
+        public void delete()
+        {
+            ttsbegin;
+ 
+            element.numberSeqNumAuthorId().formMethodDataSourceDelete();
+ 
+            super();
+  
+            ttscommit;
+        }
+
+]]></Source>
+					</Method>
+					<Method>
+						<Name>write</Name>
+						<Source><![CDATA[
+        public void write()
+        {
+            element.numberSeqNumAuthorId().formMethodDataSourceWrite();
+  
+            super();
+        }
+
+]]></Source>
+					</Method>
+					<Method>
+						<Name>validateWrite</Name>
+						<Source><![CDATA[
+        public boolean validateWrite()
+        {
+            return element.numberSeqNumAuthorId().formMethodDataSourceValidateWrite(super());
+        }
+
+]]></Source>
+					</Method>
+					<Method>
 						<Name>active</Name>
 						<Source><![CDATA[
         public int active()

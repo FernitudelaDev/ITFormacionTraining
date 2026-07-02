@@ -58,16 +58,6 @@
     <Folder Include="Views\" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="AxClass\CustParameters_ITFormacion_Extension">
-      <SubType>Content</SubType>
-      <Name>CustParameters_ITFormacion_Extension</Name>
-      <Link>Classes\CustParameters_ITFormacion_Extension</Link>
-    </Content>
-    <Content Include="AxClass\NumberSeqModuleCustomer_ITFormacion_Extension">
-      <SubType>Content</SubType>
-      <Name>NumberSeqModuleCustomer_ITFormacion_Extension</Name>
-      <Link>Classes\NumberSeqModuleCustomer_ITFormacion_Extension</Link>
-    </Content>
     <Content Include="AxClass\RRBBookCreationService">
       <SubType>Content</SubType>
       <Name>RRBBookCreationService</Name>
@@ -97,6 +87,11 @@
       <SubType>Content</SubType>
       <Name>RRBRunnableClassExample</Name>
       <Link>Classes\RRBRunnableClassExample</Link>
+    </Content>
+    <Content Include="AxClass\RRBWorkingWithGenerics">
+      <SubType>Content</SubType>
+      <Name>RRBWorkingWithGenerics</Name>
+      <Link>Classes\RRBWorkingWithGenerics</Link>
     </Content>
     <Content Include="AxClass\SalesInvoiceJournalCreate_ITFormacion_Extension">
       <SubType>Content</SubType>
