@@ -7,7 +7,47 @@ public class AIBResponsibleTable extends common
 {
 }
 ]]></Declaration>
-		<Methods />
+		<Methods>
+			<Method>
+				<Name>validateField</Name>
+				<Source><![CDATA[
+    public boolean validateField(FieldId _fieldIdToCheck)
+    {
+        boolean ret = super(_fieldIdToCheck);
+
+        if (_fieldIdToCheck == fieldNum(AIBResponsibleTable, BirthDate))
+        {
+            if (this.BirthDate && !this.isAdult(this.BirthDate))
+            {
+                ret = checkFailed("El responsable debe ser mayor de edad.");
+            }
+        }
+
+        return ret;
+    }
+
+]]></Source>
+			</Method>
+			<Method>
+				<Name>isAdult</Name>
+				<Source><![CDATA[
+    public boolean isAdult(TransDate _birthDate)
+    {
+        date    today = DateTimeUtil::date(DateTimeUtil::getSystemDateTime());
+        int     age   = year(today) - year(_birthDate);
+
+        if (mthOfYr(today) < mthOfYr(_birthDate)
+        || (mthOfYr(today) == mthOfYr(_birthDate) && dayOfMth(today) < dayOfMth(_birthDate)))
+        {
+            age--;
+        }
+
+        return age >= 18;
+    }
+
+]]></Source>
+			</Method>
+		</Methods>
 	</SourceCode>
 	<Label>@ITFormacion:ResponsibleTable</Label>
 	<SubscriberAccessLevel>

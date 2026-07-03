@@ -21,6 +21,7 @@
 				<AxMenuElement xmlns=""
 					i:type="AxMenuElementMenuItem">
 					<Name>Responsables</Name>
+					<MenuItemName>AIBResponsible</MenuItemName>
 				</AxMenuElement>
 			</Elements>
 		</AxMenuElement>

@@ -282,6 +282,11 @@
       <Name>SalesTable.ITFormacion</Name>
       <Link>Form Extensions\SalesTable.ITFormacion</Link>
     </Content>
+    <Content Include="AxForm\AIBResponsible">
+      <SubType>Content</SubType>
+      <Name>AIBResponsible</Name>
+      <Link>Forms\AIBResponsible</Link>
+    </Content>
     <Content Include="AxForm\FTDAuthor">
       <SubType>Content</SubType>
       <Name>FTDAuthor</Name>
@@ -336,6 +341,11 @@
       <SubType>Content</SubType>
       <Name>FTDBookReportFromAuthorController</Name>
       <Link>Action Menu Items\FTDBookReportFromAuthorController</Link>
+    </Content>
+    <Content Include="AxMenuItemDisplay\AIBResponsible">
+      <SubType>Content</SubType>
+      <Name>AIBResponsible</Name>
+      <Link>Display Menu Items\AIBResponsible</Link>
     </Content>
     <Content Include="AxMenuItemDisplay\FTDAuthor">
       <SubType>Content</SubType>
