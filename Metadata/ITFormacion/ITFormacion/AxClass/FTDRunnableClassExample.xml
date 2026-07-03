@@ -5,6 +5,12 @@
 		<Declaration><![CDATA[
 internal final class FTDRunnableClassExample
 {
+}
+]]></Declaration>
+		<Methods>
+			<Method>
+				<Name>Main</Name>
+				<Source><![CDATA[
     ///// <summary>
     ///// Class entry point. The system will call this method when a designated menu 
     ///// is selected or when execution starts and this class is set as the startup class.
@@ -60,12 +66,14 @@ internal final class FTDRunnableClassExample
     //}
 
     //Inicializacion de las referencias a EDTs de las secuencias numericas.
-    //public static void Main(Args _args)
-    //{
-    //    NumberSeqModuleCustomer numseqModCustomer = new NumberSeqModuleCustomer();
+    public static void Main(Args _args)
+    {
+        NumberSeqModuleCustomer numseqModCustomer = new NumberSeqModuleCustomer();
+        NumberSeqApplicationModule::loadAll();
+        info("loadAll ejecutado correctamente.");
 
-    //    numseqModCustomer.load();
-    //}
+        numseqModCustomer.load();
+    }
 
     //public static void Main(Args _args)
     //{
@@ -75,22 +83,16 @@ internal final class FTDRunnableClassExample
     //    runnableClass.whileSelectplusDoInsertVSInsertRecordSet();
     //}
 
-}
-]]></Declaration>
-		<Methods>
-			<Method>
-				<Name>Main</Name>
-				<Source><![CDATA[
-    public static void Main(Args _args)
-    {
-        FTDBookTable bookTable = FTDWorkingWithGenerics::genericFindRecId(tableNum(FTDBookTable), 5637146076);
+    //public static void Main(Args _args)
+    //{
+    //    FTDBookTable bookTable = FTDWorkingWithGenerics::genericFindRecId(tableNum(FTDBookTable), 5637146076);
 
-        Info(bookTable.Id);
+    //    Info(bookTable.Id);
 
-        FTDAuthorTable author = FTDWorkingWithGenerics::genericFindByField(tableNum(FTDAuthorTable), fieldNum(FTDAuthorTable, Id), 'A001');
+    //    FTDAuthorTable author = FTDWorkingWithGenerics::genericFindByField(tableNum(FTDAuthorTable), fieldNum(FTDAuthorTable, Id), 'A001');
 
-        Info(author.FirstName +' '+ author.LastName);
-    }
+    //    Info(author.FirstName +' '+ author.LastName);
+    //}
 
 ]]></Source>
 			</Method>

@@ -45,6 +45,11 @@
       <Name>ACResponsableId</Name>
       <Link>EDT Strings\ACResponsableId</Link>
     </Content>
+    <Content Include="AxEdt\ACSalesId">
+      <SubType>Content</SubType>
+      <Name>ACSalesId</Name>
+      <Link>EDT Strings\ACSalesId</Link>
+    </Content>
     <Content Include="AxEnum\ACCargo">
       <SubType>Content</SubType>
       <Name>ACCargo</Name>
@@ -64,6 +69,11 @@
       <SubType>Content</SubType>
       <Name>ACResponsable</Name>
       <Link>Tables\ACResponsable</Link>
+    </Content>
+    <Content Include="AxTable\AcSalesResponsable">
+      <SubType>Content</SubType>
+      <Name>AcSalesResponsable</Name>
+      <Link>Tables\AcSalesResponsable</Link>
     </Content>
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.Common.targets" />

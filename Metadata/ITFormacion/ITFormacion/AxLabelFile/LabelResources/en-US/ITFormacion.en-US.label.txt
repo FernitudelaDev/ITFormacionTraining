@@ -37,6 +37,7 @@ NumberOfBooksByGenre=there are %1 fantasy books, %2 history books and %3 science
 Operator=Operator
 Processes=Processes
 Reports=Reports
+SalesTable=Sales table
 Science=Science
 Supervisor=Supervisor
 TeamLeader=TeamLeader
