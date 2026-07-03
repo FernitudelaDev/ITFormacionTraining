@@ -372,6 +372,11 @@
       <Name>FTDtmpAuthor</Name>
       <Link>Display Menu Items\FTDtmpAuthor</Link>
     </Content>
+    <Content Include="AxMenuItemDisplay\SMHResponsable">
+      <SubType>Content</SubType>
+      <Name>SMHResponsable</Name>
+      <Link>Display Menu Items\SMHResponsable</Link>
+    </Content>
     <Content Include="AxMenuItemOutput\FTDBookReportController">
       <SubType>Content</SubType>
       <Name>FTDBookReportController</Name>

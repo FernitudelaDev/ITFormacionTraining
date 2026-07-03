@@ -107,14 +107,14 @@ public class SMHResponsableTable extends common
 		<AxTableField xmlns=""
 			i:type="AxTableFieldString">
 			<Name>FirstName</Name>
-			<Label>@ITFormacion:ResponsibelFirstName</Label>
+			<Label>@ITFormacion:ResponsibleFirstName</Label>
 			<Mandatory>Yes</Mandatory>
 			<StringSize>60</StringSize>
 		</AxTableField>
 		<AxTableField xmlns=""
 			i:type="AxTableFieldString">
 			<Name>LastName</Name>
-			<Label>@ITFormacion:ResponsibeLastName</Label>
+			<Label>@ITFormacion:ResponsibleLastName</Label>
 			<Mandatory>Yes</Mandatory>
 			<StringSize>100</StringSize>
 		</AxTableField>
