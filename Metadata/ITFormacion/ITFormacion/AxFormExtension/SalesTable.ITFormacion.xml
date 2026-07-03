@@ -99,6 +99,7 @@
 					</AxFormControl>
 				</Controls>
 				<ColumnsMode>Fill</ColumnsMode>
+				<Caption>Responsables</Caption>
 			</FormControl>
 			<Parent>HeaderDetailsTab</Parent>
 			<PositionType>AfterItem</PositionType>

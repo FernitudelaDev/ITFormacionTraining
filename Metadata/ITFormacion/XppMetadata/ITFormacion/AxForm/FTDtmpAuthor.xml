@@ -18,23 +18,6 @@
 			<ReturnType>
 				<TypeName></TypeName>
 			</ReturnType>
-			<Variables>
-				<AxMethodVariable>
-					<Type>Record</Type>
-					<TypeName>FTDtmpAuthorTable</TypeName>
-					<Name>tmpAuthorTable</Name>
-				</AxMethodVariable>
-				<AxMethodVariable>
-					<Type>Record</Type>
-					<TypeName>FTDtmpAuthorTable</TypeName>
-					<Name>tmpAuthorTable2</Name>
-				</AxMethodVariable>
-				<AxMethodVariable>
-					<Type>Record</Type>
-					<TypeName>FTDAuthorTable</TypeName>
-					<Name>authorTable</Name>
-				</AxMethodVariable>
-			</Variables>
 		</Method>
 	</Methods>
 	<DataSources />
