@@ -207,6 +207,11 @@
       <Name>FTDBookEntity</Name>
       <Link>Data Entities\FTDBookEntity</Link>
     </Content>
+    <Content Include="AxEdt\AIBResponsibleId">
+      <SubType>Content</SubType>
+      <Name>AIBResponsibleId</Name>
+      <Link>EDT Strings\AIBResponsibleId</Link>
+    </Content>
     <Content Include="AxEdt\FTDAuthorFullName">
       <SubType>Content</SubType>
       <Name>FTDAuthorFullName</Name>
@@ -241,6 +246,11 @@
       <SubType>Content</SubType>
       <Name>FTDInventTransId</Name>
       <Link>EDT Strings\FTDInventTransId</Link>
+    </Content>
+    <Content Include="AxEnum\AIBResponsiblePositionEnum">
+      <SubType>Content</SubType>
+      <Name>AIBResponsiblePositionEnum</Name>
+      <Link>Base Enums\AIBResponsiblePositionEnum</Link>
     </Content>
     <Content Include="AxEnum\FTDGenreEnum">
       <SubType>Content</SubType>
@@ -516,6 +526,11 @@
       <SubType>Content</SubType>
       <Name>SalesTable.ITFormacion</Name>
       <Link>Table Extensions\SalesTable.ITFormacion</Link>
+    </Content>
+    <Content Include="AxTable\AIBResponsibleTable">
+      <SubType>Content</SubType>
+      <Name>AIBResponsibleTable</Name>
+      <Link>Tables\AIBResponsibleTable</Link>
     </Content>
     <Content Include="AxTable\FTDAuthorStaging">
       <SubType>Content</SubType>
