@@ -66,10 +66,84 @@
 			</FormControl>
 			<Parent>GeneralRelatedInfo</Parent>
 		</AxFormExtensionControl>
+		<AxFormExtensionControl xmlns="">
+			<Name>FormExtensionControljximil2g1</Name>
+			<FormControl xmlns=""
+				i:type="AxFormTabPageControl">
+				<Name>CMGResponsablesTabPage</Name>
+				<Type>TabPage</Type>
+				<FormControlExtension
+					i:nil="true" />
+				<Controls>
+					<AxFormControl xmlns=""
+						i:type="AxFormButtonGroupControl">
+						<Name>CMGResponsablesButtonGroup</Name>
+						<Type>ButtonGroup</Type>
+						<FormControlExtension
+							i:nil="true" />
+						<Controls>
+							<AxFormControl xmlns=""
+								i:type="AxFormButtonControl">
+								<Name>CMGAddResponsable</Name>
+								<Type>Button</Type>
+								<FormControlExtension
+									i:nil="true" />
+								<NormalImage>Add</NormalImage>
+								<Text>Add</Text>
+							</AxFormControl>
+							<AxFormControl xmlns=""
+								i:type="AxFormButtonControl">
+								<Name>CMGDeleteResponsable</Name>
+								<Type>Button</Type>
+								<FormControlExtension
+									i:nil="true" />
+								<NormalImage>Delete</NormalImage>
+								<SaveRecord>No</SaveRecord>
+								<Text>Delete</Text>
+							</AxFormControl>
+						</Controls>
+						<DataSource>CMGSalesResponsableTable</DataSource>
+					</AxFormControl>
+					<AxFormControl xmlns=""
+						i:type="AxFormGridControl">
+						<Name>FormGridControl1</Name>
+						<Type>Grid</Type>
+						<FormControlExtension
+							i:nil="true" />
+						<Controls />
+					</AxFormControl>
+				</Controls>
+			</FormControl>
+			<Parent>HeaderDetailsTab</Parent>
+		</AxFormExtensionControl>
 	</Controls>
 	<DataSourceModifications />
 	<DataSourceReferences />
-	<DataSources />
+	<DataSources>
+		<AxFormDataSource xmlns="">
+			<Name>CMGSalesResponsableTable</Name>
+			<Table>CMGSalesResponsableTable</Table>
+			<Fields>
+				<AxFormDataSourceField>
+					<DataField>DataAreaId</DataField>
+				</AxFormDataSourceField>
+				<AxFormDataSourceField>
+					<DataField>Partition</DataField>
+				</AxFormDataSourceField>
+				<AxFormDataSourceField>
+					<DataField>RecId</DataField>
+				</AxFormDataSourceField>
+				<AxFormDataSourceField>
+					<DataField>TableId</DataField>
+				</AxFormDataSourceField>
+			</Fields>
+			<ReferencedDataSources />
+			<JoinSource>SalesTable</JoinSource>
+			<Index>RecId</Index>
+			<DataSourceLinks />
+			<DerivedDataSources />
+		</AxFormDataSource>
+	</DataSources>
 	<Parts />
 	<PropertyModifications />
 </AxFormExtension>
