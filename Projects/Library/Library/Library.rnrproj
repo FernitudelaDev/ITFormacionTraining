@@ -367,6 +367,11 @@
       <Name>FTDtmpAuthor</Name>
       <Link>Display Menu Items\FTDtmpAuthor</Link>
     </Content>
+    <Content Include="AxMenuItemDisplay\JISResponsibles">
+      <SubType>Content</SubType>
+      <Name>JISResponsibles</Name>
+      <Link>Display Menu Items\JISResponsibles</Link>
+    </Content>
     <Content Include="AxMenuItemOutput\FTDBookReportController">
       <SubType>Content</SubType>
       <Name>FTDBookReportController</Name>
