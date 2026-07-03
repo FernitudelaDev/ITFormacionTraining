@@ -83,7 +83,19 @@
 						<Type>Grid</Type>
 						<FormControlExtension
 							i:nil="true" />
-						<Controls />
+						<Controls>
+							<AxFormControl xmlns=""
+								i:type="AxFormReferenceGroupControl">
+								<Name>Responsible</Name>
+								<Type>ReferenceGroup</Type>
+								<FormControlExtension
+									i:nil="true" />
+								<Controls />
+								<DataSource>JISSalesResponsibleTable</DataSource>
+								<ReferenceField>Responsible</ReferenceField>
+							</AxFormControl>
+						</Controls>
+						<DataSource>JISSalesResponsibleTable</DataSource>
 					</AxFormControl>
 				</Controls>
 				<ColumnsMode>Fill</ColumnsMode>
