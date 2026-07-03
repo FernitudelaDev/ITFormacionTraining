@@ -292,6 +292,11 @@
       <Name>FTDtmpAuthor</Name>
       <Link>Forms\FTDtmpAuthor</Link>
     </Content>
+    <Content Include="AxForm\JGResponsables">
+      <SubType>Content</SubType>
+      <Name>JGResponsables</Name>
+      <Link>Forms\JGResponsables</Link>
+    </Content>
     <Content Include="AxLabelFile\ITFormacion_en-US">
       <SubType>Content</SubType>
       <Name>ITFormacion_en-US</Name>
@@ -556,6 +561,11 @@
       <SubType>Content</SubType>
       <Name>FTDtmpBookTable</Name>
       <Link>Tables\FTDtmpBookTable</Link>
+    </Content>
+    <Content Include="AxTable\JGResponsables">
+      <SubType>Content</SubType>
+      <Name>JGResponsables</Name>
+      <Link>Tables\JGResponsables</Link>
     </Content>
     <Content Include="AxView\FTDBookAuthorFantasyView">
       <SubType>Content</SubType>
