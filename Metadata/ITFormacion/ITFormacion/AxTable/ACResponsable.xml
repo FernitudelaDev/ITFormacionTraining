@@ -141,7 +141,6 @@ public class ACResponsable extends common
 			i:type="AxTableFieldString">
 			<Name>ResponsableId</Name>
 			<AllowEdit>No</AllowEdit>
-			<AllowEditOnCreate>No</AllowEditOnCreate>
 			<ExtendedDataType>ACResponsableId</ExtendedDataType>
 			<IgnoreEDTRelation>Yes</IgnoreEDTRelation>
 			<Label>@ITFormacion:Id</Label>
