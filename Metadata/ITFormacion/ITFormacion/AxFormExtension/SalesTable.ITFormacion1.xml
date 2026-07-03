@@ -34,7 +34,7 @@
 										<Type>CommandButton</Type>
 										<FormControlExtension
 											i:nil="true" />
-										<Command>Add</Command>
+										<Command>New</Command>
 									</AxFormControl>
 									<AxFormControl xmlns=""
 										i:type="AxFormCommandButtonControl">
