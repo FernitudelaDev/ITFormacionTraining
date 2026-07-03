@@ -36,6 +36,7 @@
     <Folder Include="Base Enums\" />
     <Folder Include="Display Menu Items\" />
     <Folder Include="EDT Strings\" />
+    <Folder Include="Form Extensions\" />
     <Folder Include="Forms\" />
     <Folder Include="Tables\" />
   </ItemGroup>
@@ -54,6 +55,11 @@
       <SubType>Content</SubType>
       <Name>ACCargo</Name>
       <Link>Base Enums\ACCargo</Link>
+    </Content>
+    <Content Include="AxFormExtension\SalesTable.ITFormacion1">
+      <SubType>Content</SubType>
+      <Name>SalesTable.ITFormacion1</Name>
+      <Link>Form Extensions\SalesTable.ITFormacion1</Link>
     </Content>
     <Content Include="AxForm\ACResponsable">
       <SubType>Content</SubType>
