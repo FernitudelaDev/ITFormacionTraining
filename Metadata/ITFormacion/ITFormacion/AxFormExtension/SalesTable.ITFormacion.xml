@@ -66,10 +66,116 @@
 			</FormControl>
 			<Parent>GeneralRelatedInfo</Parent>
 		</AxFormExtensionControl>
+		<AxFormExtensionControl xmlns="">
+			<Name>FormExtensionControlpskefmz41</Name>
+			<FormControl xmlns=""
+				i:type="AxFormTabPageControl">
+				<Name>TabHeaderResponsible</Name>
+				<Pattern>Custom</Pattern>
+				<Type>TabPage</Type>
+				<FormControlExtension
+					i:nil="true" />
+				<Controls>
+					<AxFormControl xmlns=""
+						i:type="AxFormButtonGroupControl">
+						<Name>ButtonGroup</Name>
+						<Type>ButtonGroup</Type>
+						<FormControlExtension
+							i:nil="true" />
+						<Controls>
+							<AxFormControl xmlns=""
+								i:type="AxFormButtonControl">
+								<Name>AIBResponsibleAdd</Name>
+								<Type>Button</Type>
+								<FormControlExtension
+									i:nil="true" />
+								<Text>Add</Text>
+							</AxFormControl>
+							<AxFormControl xmlns=""
+								i:type="AxFormButtonControl">
+								<Name>AIBResponsibleDelete</Name>
+								<Type>Button</Type>
+								<FormControlExtension
+									i:nil="true" />
+								<Text>Delete</Text>
+							</AxFormControl>
+						</Controls>
+					</AxFormControl>
+					<AxFormControl xmlns=""
+						i:type="AxFormGridControl">
+						<Name>SalesREsponsibleGrid</Name>
+						<Type>Grid</Type>
+						<FormControlExtension
+							i:nil="true" />
+						<Controls>
+							<AxFormControl xmlns=""
+								i:type="AxFormStringControl">
+								<Name>AIBSalesResponsible_SalesId</Name>
+								<Type>String</Type>
+								<FormControlExtension
+									i:nil="true" />
+								<DataField>SalesId</DataField>
+								<DataSource>AIBSalesResponsible</DataSource>
+							</AxFormControl>
+							<AxFormControl xmlns=""
+								i:type="AxFormStringControl">
+								<Name>AIBSalesResponsible_ResponsibleId</Name>
+								<Type>String</Type>
+								<FormControlExtension
+									i:nil="true" />
+								<DataField>ResponsibleId</DataField>
+								<DataSource>AIBSalesResponsible</DataSource>
+								<Label>@ITFormacion:Responsible</Label>
+							</AxFormControl>
+						</Controls>
+						<DataSource>AIBSalesResponsible</DataSource>
+					</AxFormControl>
+				</Controls>
+				<Caption>@ITFormacion:Responsible</Caption>
+			</FormControl>
+			<Parent>HeaderDetailsTab</Parent>
+			<PositionType>AfterItem</PositionType>
+			<PreviousSibling>TabHeaderGeneral</PreviousSibling>
+		</AxFormExtensionControl>
 	</Controls>
 	<DataSourceModifications />
 	<DataSourceReferences />
-	<DataSources />
+	<DataSources>
+		<AxFormDataSource xmlns="">
+			<Name>AIBSalesResponsible</Name>
+			<Table>AIBSalesResponsible</Table>
+			<Fields>
+				<AxFormDataSourceField>
+					<DataField>AIBResponsibleTable</DataField>
+				</AxFormDataSourceField>
+				<AxFormDataSourceField>
+					<DataField>DataAreaId</DataField>
+				</AxFormDataSourceField>
+				<AxFormDataSourceField>
+					<DataField>Partition</DataField>
+				</AxFormDataSourceField>
+				<AxFormDataSourceField>
+					<DataField>RecId</DataField>
+				</AxFormDataSourceField>
+				<AxFormDataSourceField>
+					<DataField>ResponsibleId</DataField>
+				</AxFormDataSourceField>
+				<AxFormDataSourceField>
+					<DataField>SalesId</DataField>
+				</AxFormDataSourceField>
+				<AxFormDataSourceField>
+					<DataField>SalesTable</DataField>
+				</AxFormDataSourceField>
+				<AxFormDataSourceField>
+					<DataField>TableId</DataField>
+				</AxFormDataSourceField>
+			</Fields>
+			<ReferencedDataSources />
+			<JoinSource>SalesTable</JoinSource>
+			<DataSourceLinks />
+			<DerivedDataSources />
+		</AxFormDataSource>
+	</DataSources>
 	<Parts />
 	<PropertyModifications />
 </AxFormExtension>

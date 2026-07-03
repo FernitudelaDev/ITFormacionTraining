@@ -11,6 +11,7 @@ public class AIBResponsibleTable extends common
 			<Method>
 				<Name>validateField</Name>
 				<Source><![CDATA[
+    //Validar edad
     public boolean validateField(FieldId _fieldIdToCheck)
     {
         boolean ret = super(_fieldIdToCheck);
@@ -31,6 +32,7 @@ public class AIBResponsibleTable extends common
 			<Method>
 				<Name>isAdult</Name>
 				<Source><![CDATA[
+    // Comprobar edad
     public boolean isAdult(TransDate _birthDate)
     {
         date    today = DateTimeUtil::date(DateTimeUtil::getSystemDateTime());
@@ -43,6 +45,18 @@ public class AIBResponsibleTable extends common
         }
 
         return age >= 18;
+    }
+
+]]></Source>
+			</Method>
+			<Method>
+				<Name>exist</Name>
+				<Source><![CDATA[
+    // Comprobar si existe el id
+    public static boolean exist(AIBResponsibleId _responsibleId)
+    {
+        return _responsibleId && (select firstonly RecId from AIBResponsibleTable
+        where AIBResponsibleTable.Id == _responsibleId).RecId != 0;
     }
 
 ]]></Source>

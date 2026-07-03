@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<AxClass xmlns:i="http://www.w3.org/2001/XMLSchema-instance">
+	<Name>AIBSalesTable_ITFormacion_EventHandler</Name>
+	<SourceCode>
+		<Declaration><![CDATA[
+internal final class AIBSalesTable_ITFormacion_EventHandler
+{
+}
+]]></Declaration>
+		<Methods>
+			<Method>
+				<Name>AIBSalesResponsible_OnCreated</Name>
+				<Source><![CDATA[
+    // Poner automaticamente el salerOrder id
+    [FormDataSourceEventHandler(formDataSourceStr(SalesTable, AIBSalesResponsible), FormDataSourceEventType::Created)]
+    public static void AIBSalesResponsible_OnCreated(FormDataSource sender, FormDataSourceEventArgs e)
+    {
+        AIBSalesResponsible responsibleBuffer = sender.cursor();
+
+        FormDataSource salesTable_ds = sender.formRun().dataSource(formDataSourceStr(SalesTable, SalesTable));
+        SalesTable salesTable = salesTable_ds.cursor();
+
+        responsibleBuffer.SalesId = salesTable.SalesId;
+    }
+
+]]></Source>
+			</Method>
+			<Method>
+				<Name>AIBResponsibleAdd_OnClicked</Name>
+				<Source><![CDATA[
+    // Add
+    [FormControlEventHandler(formControlStr(SalesTable, AIBResponsibleAdd), FormControlEventType::Clicked)]
+    public static void AIBResponsibleAdd_OnClicked(FormControl sender, FormControlEventArgs e)
+    {
+        FormDataSource responsible_ds = sender.formRun().dataSource(formDataSourceStr(SalesTable, AIBSalesResponsible));
+        responsible_ds.create();
+    }
+
+]]></Source>
+			</Method>
+			<Method>
+				<Name>AIBResponsibleDelete_OnClicked</Name>
+				<Source><![CDATA[
+    // Delete
+    [FormControlEventHandler(formControlStr(SalesTable, AIBResponsibleDelete), FormControlEventType::Clicked)]
+    public static void AIBResponsibleDelete_OnClicked(FormControl sender, FormControlEventArgs e)
+    {
+        FormDataSource responsible_ds = sender.formRun().dataSource(formDataSourceStr(SalesTable, AIBSalesResponsible));
+        responsible_ds.delete();
+
+    }
+
+]]></Source>
+			</Method>
+		</Methods>
+	</SourceCode>
+</AxClass>
