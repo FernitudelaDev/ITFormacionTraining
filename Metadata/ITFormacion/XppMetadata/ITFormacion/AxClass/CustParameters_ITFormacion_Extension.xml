@@ -47,5 +47,15 @@
 				<TypeName>NumberSequenceReference</TypeName>
 			</ReturnType>
 		</Method>
+		<Method>
+			<Name>ftdNumRefResponsableId</Name>
+			<IsStatic>true</IsStatic>
+			<Visibility>Public</Visibility>
+			<ReturnType>
+				<Tags></Tags>
+				<Type>Record</Type>
+				<TypeName>NumberSequenceReference</TypeName>
+			</ReturnType>
+		</Method>
 	</Methods>
 </z:anyType>

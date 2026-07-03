@@ -35,6 +35,11 @@ final class NumberSeqModuleCustomer_ITFormacion_Extension
             true,
             literalStr("@ITFormacion:AuthorId"),
             literalStr("@ITFormacion:AuthorId"));
+
+        this.ftdAddNumberSequence(extendedTypeNum(ACResponsableId),
+            true,
+            literalStr("@ITFormacion:ManagerId"),
+            literalStr("@ITFormacion:ManagerId"));
  
     }
 

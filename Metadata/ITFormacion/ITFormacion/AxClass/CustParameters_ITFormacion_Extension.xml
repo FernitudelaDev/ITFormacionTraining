@@ -29,6 +29,16 @@ final class CustParameters_ITFormacion_Extension
 
 ]]></Source>
 			</Method>
+			<Method>
+				<Name>ftdNumRefResponsableId</Name>
+				<Source><![CDATA[
+    public static NumberSequenceReference ftdNumRefResponsableId()
+    {
+        return NumberSeqReference::findReference(extendedTypeNum(ACResponsableId));
+    }
+
+]]></Source>
+			</Method>
 		</Methods>
 	</SourceCode>
 </AxClass>

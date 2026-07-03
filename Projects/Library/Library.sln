@@ -7,6 +7,8 @@ Project("{FC65038C-1B2F-41E1-A629-BED71D161FFF}") = "Library (VAR) [ITFormacion]
 EndProject
 Project("{FC65038C-1B2F-41E1-A629-BED71D161FFF}") = "LibraryNumberSequences (VAR) [ITFormacion]", "LibraryNumberSequences\LibraryNumberSequences.rnrproj", "{98BAE8AF-53A6-44D8-AD6F-A2D41BDA4A17}"
 EndProject
+Project("{FC65038C-1B2F-41E1-A629-BED71D161FFF}") = "EjercicioFinal (ISV) [Fleet Management]", "EjercicioFinal\EjercicioFinal.rnrproj", "{45D86932-2685-4472-9B07-DEF7CA004838}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -16,6 +18,8 @@ Global
 		{8BA7E476-089C-455A-8113-93D0D5298B28}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{98BAE8AF-53A6-44D8-AD6F-A2D41BDA4A17}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{98BAE8AF-53A6-44D8-AD6F-A2D41BDA4A17}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{45D86932-2685-4472-9B07-DEF7CA004838}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{45D86932-2685-4472-9B07-DEF7CA004838}.Debug|Any CPU.Build.0 = Debug|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
