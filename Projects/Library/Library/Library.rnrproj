@@ -582,6 +582,11 @@
       <Name>SMHResponsableTable</Name>
       <Link>Tables\SMHResponsableTable</Link>
     </Content>
+    <Content Include="AxTable\SMHSalesResponsableTable">
+      <SubType>Content</SubType>
+      <Name>SMHSalesResponsableTable</Name>
+      <Link>Tables\SMHSalesResponsableTable</Link>
+    </Content>
     <Content Include="AxView\FTDBookAuthorFantasyView">
       <SubType>Content</SubType>
       <Name>FTDBookAuthorFantasyView</Name>

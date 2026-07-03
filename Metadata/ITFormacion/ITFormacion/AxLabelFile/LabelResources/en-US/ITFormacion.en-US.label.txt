@@ -38,6 +38,7 @@ ResponsibleId=Responsible Id
 ResponsibleLastName=Last Name
 ResponsibleMustBeAdult=The responsible person must be of legal age
 ResponsibleRole=Responsible role
+SalesResponsible=Sales Responsible
 Science=Science
 Supervisor=Supervisor
 Thriller=Thriller
