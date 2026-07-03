@@ -577,6 +577,11 @@
       <Name>JISResponsibleTable</Name>
       <Link>Tables\JISResponsibleTable</Link>
     </Content>
+    <Content Include="AxTable\JISSalesResponsibleTable">
+      <SubType>Content</SubType>
+      <Name>JISSalesResponsibleTable</Name>
+      <Link>Tables\JISSalesResponsibleTable</Link>
+    </Content>
     <Content Include="AxView\FTDBookAuthorFantasyView">
       <SubType>Content</SubType>
       <Name>FTDBookAuthorFantasyView</Name>

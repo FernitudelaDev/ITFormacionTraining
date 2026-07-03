@@ -1,20 +1,20 @@
 <?xml version="1.0" encoding="utf-8"?>
 <AxEnum xmlns:i="http://www.w3.org/2001/XMLSchema-instance">
 	<Name>JISWorkerRole</Name>
-	<UseEnumValue>No</UseEnumValue>
 	<EnumValues>
 		<AxEnumValue>
 			<Name>Operario</Name>
+			<Label>@ITFormacion:Operario</Label>
 		</AxEnumValue>
 		<AxEnumValue>
 			<Name>Encargado</Name>
+			<Label>@ITFormacion:Encargado</Label>
 			<Value>1</Value>
 		</AxEnumValue>
 		<AxEnumValue>
 			<Name>Supervisor</Name>
-			<Label>@ITFormacion:WorkerRoler</Label>
+			<Label>@ITFormacion:Supervisor</Label>
 			<Value>2</Value>
 		</AxEnumValue>
 	</EnumValues>
-	<IsExtensible>true</IsExtensible>
 </AxEnum>
