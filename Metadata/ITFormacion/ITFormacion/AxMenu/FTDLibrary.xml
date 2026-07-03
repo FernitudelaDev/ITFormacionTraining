@@ -18,6 +18,11 @@
 					<Name>FTDAuthor</Name>
 					<MenuItemName>FTDAuthor</MenuItemName>
 				</AxMenuElement>
+				<AxMenuElement xmlns=""
+					i:type="AxMenuElementMenuItem">
+					<Name>CMGResponsable</Name>
+					<MenuItemName>CMGResponsable</MenuItemName>
+				</AxMenuElement>
 			</Elements>
 		</AxMenuElement>
 		<AxMenuElement xmlns=""

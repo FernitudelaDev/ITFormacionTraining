@@ -41,6 +41,7 @@
     <Folder Include="Data Entity Extensions\" />
     <Folder Include="Display Menu Items\" />
     <Folder Include="EDT Dates\" />
+    <Folder Include="EDT Enums\" />
     <Folder Include="EDT Reals\" />
     <Folder Include="EDT Strings\" />
     <Folder Include="Form Extensions\" />
@@ -207,6 +208,11 @@
       <Name>FTDBookEntity</Name>
       <Link>Data Entities\FTDBookEntity</Link>
     </Content>
+    <Content Include="AxEdt\CMGResponsableId">
+      <SubType>Content</SubType>
+      <Name>CMGResponsableId</Name>
+      <Link>EDT Strings\CMGResponsableId</Link>
+    </Content>
     <Content Include="AxEdt\FTDAuthorFullName">
       <SubType>Content</SubType>
       <Name>FTDAuthorFullName</Name>
@@ -242,6 +248,11 @@
       <Name>FTDInventTransId</Name>
       <Link>EDT Strings\FTDInventTransId</Link>
     </Content>
+    <Content Include="AxEnum\CMGCargoEnum">
+      <SubType>Content</SubType>
+      <Name>CMGCargoEnum</Name>
+      <Link>Base Enums\CMGCargoEnum</Link>
+    </Content>
     <Content Include="AxEnum\FTDGenreEnum">
       <SubType>Content</SubType>
       <Name>FTDGenreEnum</Name>
@@ -271,6 +282,11 @@
       <SubType>Content</SubType>
       <Name>SalesTable.ITFormacion</Name>
       <Link>Form Extensions\SalesTable.ITFormacion</Link>
+    </Content>
+    <Content Include="AxForm\CMGREsponsable">
+      <SubType>Content</SubType>
+      <Name>CMGREsponsable</Name>
+      <Link>Forms\CMGREsponsable</Link>
     </Content>
     <Content Include="AxForm\FTDAuthor">
       <SubType>Content</SubType>
@@ -326,6 +342,11 @@
       <SubType>Content</SubType>
       <Name>FTDBookReportFromAuthorController</Name>
       <Link>Action Menu Items\FTDBookReportFromAuthorController</Link>
+    </Content>
+    <Content Include="AxMenuItemDisplay\CMGResponsable">
+      <SubType>Content</SubType>
+      <Name>CMGResponsable</Name>
+      <Link>Display Menu Items\CMGResponsable</Link>
     </Content>
     <Content Include="AxMenuItemDisplay\FTDAuthor">
       <SubType>Content</SubType>
@@ -516,6 +537,16 @@
       <SubType>Content</SubType>
       <Name>SalesTable.ITFormacion</Name>
       <Link>Table Extensions\SalesTable.ITFormacion</Link>
+    </Content>
+    <Content Include="AxTable\CMGResponsableTable">
+      <SubType>Content</SubType>
+      <Name>CMGResponsableTable</Name>
+      <Link>Tables\CMGResponsableTable</Link>
+    </Content>
+    <Content Include="AxTable\CMGSalesResponsableTable">
+      <SubType>Content</SubType>
+      <Name>CMGSalesResponsableTable</Name>
+      <Link>Tables\CMGSalesResponsableTable</Link>
     </Content>
     <Content Include="AxTable\FTDAuthorStaging">
       <SubType>Content</SubType>
