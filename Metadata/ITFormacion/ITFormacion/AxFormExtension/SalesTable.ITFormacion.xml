@@ -101,6 +101,8 @@
 				<ColumnsMode>Fill</ColumnsMode>
 			</FormControl>
 			<Parent>HeaderDetailsTab</Parent>
+			<PositionType>AfterItem</PositionType>
+			<PreviousSibling>TabHeaderGeneral</PreviousSibling>
 		</AxFormExtensionControl>
 	</Controls>
 	<DataSourceModifications />
