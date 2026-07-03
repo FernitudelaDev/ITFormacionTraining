@@ -33,4 +33,5 @@ Thriller=Thriller
 Transactions=Transactions
 TransactionWouldMakeTheTotalNegative=Adding this transaction would make the total qty for this book negative
 UpdateBookInventory=Update book inventory
+WorkerRoler=Worker Roler
 YouMustSelectFantasyBooks=You must select fantasy books

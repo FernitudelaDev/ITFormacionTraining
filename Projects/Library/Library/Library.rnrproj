@@ -247,6 +247,11 @@
       <Name>FTDGenreEnum</Name>
       <Link>Base Enums\FTDGenreEnum</Link>
     </Content>
+    <Content Include="AxEnum\JISWorkerRole">
+      <SubType>Content</SubType>
+      <Name>JISWorkerRole</Name>
+      <Link>Base Enums\JISWorkerRole</Link>
+    </Content>
     <Content Include="AxFormExtension\CustInvoiceJournal.ITFormacion">
       <SubType>Content</SubType>
       <Name>CustInvoiceJournal.ITFormacion</Name>
@@ -291,6 +296,11 @@
       <SubType>Content</SubType>
       <Name>FTDtmpAuthor</Name>
       <Link>Forms\FTDtmpAuthor</Link>
+    </Content>
+    <Content Include="AxForm\JISResponsible">
+      <SubType>Content</SubType>
+      <Name>JISResponsible</Name>
+      <Link>Forms\JISResponsible</Link>
     </Content>
     <Content Include="AxLabelFile\ITFormacion_en-US">
       <SubType>Content</SubType>
@@ -556,6 +566,11 @@
       <SubType>Content</SubType>
       <Name>FTDtmpBookTable</Name>
       <Link>Tables\FTDtmpBookTable</Link>
+    </Content>
+    <Content Include="AxTable\JISResponsibleTable">
+      <SubType>Content</SubType>
+      <Name>JISResponsibleTable</Name>
+      <Link>Tables\JISResponsibleTable</Link>
     </Content>
     <Content Include="AxView\FTDBookAuthorFantasyView">
       <SubType>Content</SubType>
