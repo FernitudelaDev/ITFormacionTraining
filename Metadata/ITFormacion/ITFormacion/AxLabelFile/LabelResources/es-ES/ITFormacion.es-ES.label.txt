@@ -8,9 +8,16 @@ Genre=Genero
 HistoryNovel=Novela historica
 Id=Id
 Library=Biblioteca
+Manager=Encargado
 Master=Master
 NewLabel0=Label files created on 06/19/2026 09:49:00 for label file Id ITFormacion and language es-ES
  ;Label file comment - see above label
 NumberOfBooksByGenre=Hay %1 libros de fantasia, %2 libros de historia y %3  libros de ciencia
+Operator=Operario
+Responsible=Responsables
+ResponsibleMustBeLegalAge=El responsable debe ser mayor de edad.
+ResponsibleTable=Responsable
+Role=Cargo
 Science=Ciencia
+Supervisor=Supervisor
 Thriller=Suspense
