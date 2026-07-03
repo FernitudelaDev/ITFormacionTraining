@@ -12,6 +12,7 @@ CargoEnum=CargoEnum
 DeathDate=Death date
 DeathDateMustBeLaterThanBirthDate=Death date must be later than Birth date
 DefaultAuthor=Default author
+Employee=Employee
 EmployeeBirthdate=Employee birthdate
 EmployeeFirstName=Employee first name
 EmployeeLastName=Employee last name

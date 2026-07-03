@@ -34,7 +34,9 @@
   </PropertyGroup>
   <ItemGroup>
     <Folder Include="Base Enums\" />
+    <Folder Include="Display Menu Items\" />
     <Folder Include="EDT Strings\" />
+    <Folder Include="Forms\" />
     <Folder Include="Tables\" />
   </ItemGroup>
   <ItemGroup>
@@ -47,6 +49,16 @@
       <SubType>Content</SubType>
       <Name>ACCargo</Name>
       <Link>Base Enums\ACCargo</Link>
+    </Content>
+    <Content Include="AxForm\ACResponsable">
+      <SubType>Content</SubType>
+      <Name>ACResponsable</Name>
+      <Link>Forms\ACResponsable</Link>
+    </Content>
+    <Content Include="AxMenuItemDisplay\ACResponsable">
+      <SubType>Content</SubType>
+      <Name>ACResponsable</Name>
+      <Link>Display Menu Items\ACResponsable</Link>
     </Content>
     <Content Include="AxTable\ACResponsable">
       <SubType>Content</SubType>
