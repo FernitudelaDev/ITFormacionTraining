@@ -41,6 +41,7 @@ public class JISResponsibleTable extends common
 		<Read>Allow</Read>
 	</SubscriberAccessLevel>
 	<AllowRowVersionChangeTracking>Yes</AllowRowVersionChangeTracking>
+	<ReplacementKey>ResponsibleIdx</ReplacementKey>
 	<DeleteActions />
 	<FieldGroups>
 		<AxTableFieldGroup>
@@ -54,7 +55,11 @@ public class JISResponsibleTable extends common
 		<AxTableFieldGroup>
 			<Name>AutoIdentification</Name>
 			<AutoPopulate>Yes</AutoPopulate>
-			<Fields />
+			<Fields>
+				<AxTableFieldGroupField>
+					<DataField>ResponsibleId</DataField>
+				</AxTableFieldGroupField>
+			</Fields>
 		</AxTableFieldGroup>
 		<AxTableFieldGroup>
 			<Name>AutoSummary</Name>

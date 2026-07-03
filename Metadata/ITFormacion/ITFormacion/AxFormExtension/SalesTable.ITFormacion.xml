@@ -79,14 +79,14 @@
 				<Controls>
 					<AxFormControl xmlns=""
 						i:type="AxFormGridControl">
-						<Name>FormGridControl1</Name>
+						<Name>ResponsibleGrid</Name>
 						<Type>Grid</Type>
 						<FormControlExtension
 							i:nil="true" />
 						<Controls>
 							<AxFormControl xmlns=""
 								i:type="AxFormReferenceGroupControl">
-								<Name>Responsible</Name>
+								<Name>JISSalesResponsibleTable_Responsible</Name>
 								<Type>ReferenceGroup</Type>
 								<FormControlExtension
 									i:nil="true" />
