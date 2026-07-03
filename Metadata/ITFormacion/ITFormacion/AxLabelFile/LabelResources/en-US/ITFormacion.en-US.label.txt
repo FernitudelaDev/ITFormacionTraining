@@ -30,6 +30,7 @@ NumberOfBooksByGenre=there are %1 fantasy books, %2 history books and %3 science
 Operario=Operario
 Processes=Processes
 Reports=Reports
+Responsibles=Responsibles
 Science=Science
 Supervisor=Supervisor
 Thriller=Thriller
